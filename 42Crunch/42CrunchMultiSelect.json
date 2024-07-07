@@ -1,0 +1,1130 @@
+{
+	"759d6ca7-1473-4654-80d5-8800200bba15": {
+		"index": [
+			"",
+			"/components/schemas/ConfirmationMessage/properties/_id",
+			"/components/schemas/ConfirmationMessage/properties/message",
+			"/components/schemas/PicturesList/items",
+			"/components/schemas/PicturesList/items/properties/_id",
+			"/components/schemas/PicturesList/items/properties/description",
+			"/components/schemas/PicturesList/items/properties/filename",
+			"/components/schemas/PicturesList/items/properties/image_url",
+			"/components/schemas/PicturesList/items/properties/name",
+			"/components/schemas/PicturesList/items/properties/title",
+			"/components/schemas/UserRegistrationData",
+			"/components/schemas/UserRegistrationData/properties/account_balance",
+			"/components/schemas/UserRegistrationData/properties/name",
+			"/components/schemas/UserRegistrationData/properties/pass",
+			"/components/schemas/UserRegistrationData/properties/user",
+			"/components/schemas/UserUpdateData/properties/account_balance",
+			"/components/schemas/UserUpdateData/properties/email",
+			"/components/schemas/UserUpdateData/properties/name",
+			"/components/securitySchemes/access-token",
+			"/paths/~1admin~1all_users/get/security/0/access-token",
+			"/paths/~1admin~1users~1search/get/parameters/0",
+			"/paths/~1admin~1users~1search/get/parameters/0/schema",
+			"/paths/~1admin~1users~1search/get/responses",
+			"/paths/~1admin~1users~1search/get/responses/200",
+			"/paths/~1admin~1users~1search/get/security/0/access-token",
+			"/paths/~1admin~1user~1{userid}/delete/responses",
+			"/paths/~1admin~1user~1{userid}/delete/security/0/access-token",
+			"/paths/~1picture~1upload/post",
+			"/paths/~1picture~1upload/post/requestBody/content/application~1json",
+			"/paths/~1picture~1upload/post/requestBody/content/application~1json/schema/properties/contents",
+			"/paths/~1picture~1upload/post/requestBody/content/application~1json/schema/properties/title",
+			"/paths/~1picture~1upload/post/responses",
+			"/paths/~1picture~1{id}/delete",
+			"/paths/~1picture~1{id}/delete/responses",
+			"/paths/~1picture~1{id}/delete/responses/200/content/application~1json/schema/properties/message",
+			"/paths/~1user~1edit_info/put/requestBody/content/application~1json",
+			"/paths/~1user~1edit_info/put/security/0/access-token",
+			"/paths/~1user~1info/get/security/0/access-token",
+			"/paths/~1user~1login/post",
+			"/paths/~1user~1login/post/requestBody/content/application~1json",
+			"/paths/~1user~1login/post/requestBody/content/application~1json/schema",
+			"/paths/~1user~1login/post/requestBody/content/application~1json/schema/properties/pass",
+			"/paths/~1user~1login/post/requestBody/content/application~1json/schema/properties/user",
+			"/paths/~1user~1login/post/responses",
+			"/paths/~1user~1login/post/responses/200/content/application~1json/schema/properties/_id",
+			"/paths/~1user~1login/post/responses/200/content/application~1json/schema/properties/message",
+			"/paths/~1user~1login/post/responses/200/content/application~1json/schema/properties/token",
+			"/paths/~1user~1pictures/get/security/0/access-token",
+			"/paths/~1user~1register/post",
+			"/paths/~1user~1register/post/responses",
+			"/paths/~1user~1register/post/responses/200/content/application~1json/schema/properties/_id",
+			"/paths/~1user~1register/post/responses/200/content/application~1json/schema/properties/message",
+			"/paths/~1user~1register/post/responses/200/content/application~1json/schema/properties/token"
+		],
+		"assessmentVersion": "3.1.6",
+		"assessmentReportVersion": "1.0.1",
+		"commit": "5596a4c33c266f63175ae188ea4e10f04d864949-E",
+		"oasVersion": "3.0.3",
+		"apiVersion": "4.2",
+		"fileId": "5caf7789-c1a9-46f3-b299-652351b87402",
+		"apiId": "",
+		"openapiState": "valid",
+		"score": 51.39,
+		"valid": true,
+		"criticality": 5,
+		"issueCounter": 86,
+		"warnings": {
+			"issues": {
+				"v3-warning-sample-undefined": {
+					"description": "No sample values or examples were provided for API Conformance Scan",
+					"totalIssues": 4,
+					"issues": [
+						{
+							"pointer": 20,
+							"specificDescription": "No sample defined in the 'Parameter' object",
+							"fingerprint": "de0867266a82bc5dab85a69be7cd9fc723655404"
+						},
+						{
+							"pointer": 35,
+							"specificDescription": "No sample defined in the 'Request Body' object",
+							"fingerprint": "45a8c5167ff9096b47b971f281815b7e1f3eaafe"
+						},
+						{
+							"pointer": 28,
+							"specificDescription": "No sample defined in the 'Request Body' object",
+							"fingerprint": "3a45080b1301c997fc645159fa7d1a3e2a89bdd1"
+						},
+						{
+							"pointer": 39,
+							"specificDescription": "No sample defined in the 'Request Body' object",
+							"fingerprint": "4890fc552904a9e8c8c09f500249918c2cd3124f"
+						}
+					],
+					"tooManyError": false
+				}
+			}
+		},
+		"operationsNoAuthentication": [
+			38,
+			48
+		],
+		"minimalReport": false,
+		"maxEntriesPerIssue": 30,
+		"maxImpactedPerEntry": 30,
+		"security": {
+			"issueCounter": 10,
+			"score": 15,
+			"criticality": 5,
+			"issues": {
+				"v3-global-security": {
+					"description": "Global security field is not defined",
+					"issues": [
+						{
+							"score": 0,
+							"pointer": 0,
+							"tooManyImpacted": false,
+							"pointersAffected": [
+								27,
+								32
+							],
+							"criticality": 5,
+							"request": true,
+							"fingerprint": "1635ea64eb6ac0851e6bd552ee82618586f60aa0"
+						}
+					],
+					"issueCounter": 1,
+					"score": 0,
+					"criticality": 5,
+					"tooManyError": false
+				},
+				"v3-global-securityscheme-apikey-inheader": {
+					"description": "Transporting API keys in a header over network allowed",
+					"issues": [
+						{
+							"score": 0,
+							"pointer": 18,
+							"tooManyImpacted": false,
+							"criticality": 1,
+							"request": true,
+							"fingerprint": "b6985a73fd06af7a881b72a43656e50eb021e585"
+						}
+					],
+					"issueCounter": 1,
+					"score": 0,
+					"criticality": 1,
+					"tooManyError": false
+				},
+				"v3-operation-security": {
+					"description": "Security field of the operation is not defined",
+					"issues": [
+						{
+							"score": -3,
+							"pointer": 27,
+							"tooManyImpacted": false,
+							"criticality": 5,
+							"request": true,
+							"fingerprint": "f453c0f5b33b255c6c7df844f50ef979de230dd0"
+						},
+						{
+							"score": -3,
+							"pointer": 32,
+							"tooManyImpacted": false,
+							"criticality": 5,
+							"request": true,
+							"fingerprint": "36d6f66f981b0e8b3c2a57c58cab1909e6107b1b"
+						}
+					],
+					"issueCounter": 2,
+					"score": -6,
+					"criticality": 5,
+					"tooManyError": false
+				},
+				"v3-operation-securityrequirement-apikey-inheader": {
+					"description": "Operation accepts API keys transported in a header over network",
+					"issues": [
+						{
+							"score": -1.5,
+							"pointer": 19,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "49a38cf506cc02a98ed8f80b93d658321bfe8b9a"
+						},
+						{
+							"score": -1.5,
+							"pointer": 26,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "0d1c469a05ba68747289fe7a297ad024f5399087"
+						},
+						{
+							"score": -1.5,
+							"pointer": 24,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "607cb0313516d214763f75f218f62bf16a047b60"
+						},
+						{
+							"score": -1.5,
+							"pointer": 36,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "5d554a2c5799b5e5489736c94b31865c3554dbf0"
+						},
+						{
+							"score": -1.5,
+							"pointer": 37,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "73380758a92d35a47fe5c793c08deaf6000f5802"
+						},
+						{
+							"score": -1.5,
+							"pointer": 47,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "a0e3daac109375656771d29161a875c52f45bf05"
+						}
+					],
+					"issueCounter": 6,
+					"score": -9,
+					"criticality": 3,
+					"tooManyError": false
+				}
+			},
+			"subgroupIssueCounter": {
+				"authentication": {
+					"none": 0,
+					"info": 1,
+					"low": 0,
+					"medium": 6,
+					"high": 0,
+					"critical": 3
+				},
+				"authorization": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 0,
+					"high": 0,
+					"critical": 0
+				},
+				"transport": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 0,
+					"high": 0,
+					"critical": 0
+				}
+			}
+		},
+		"data": {
+			"issueCounter": 76,
+			"score": 36.39,
+			"criticality": 3,
+			"issues": {
+				"v3-response-401": {
+					"description": "If operation has security defined, the 401 response should be defined",
+					"issues": [
+						{
+							"score": -0.07,
+							"pointer": 25,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "e4a73f29f8fdf2df697202bbacb8f42c5935d380"
+						},
+						{
+							"score": -0.07,
+							"pointer": 22,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "ee431c791c5a7ff9c9b7a055edf8ea1c567fa6f0"
+						}
+					],
+					"issueCounter": 2,
+					"score": -0.14,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-404": {
+					"description": "404 response should be defined for all GET, PUT, HEAD, and DELETE operations",
+					"issues": [
+						{
+							"score": -0.08,
+							"pointer": 33,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "bb890c6be653c335f6bf37dd739a6d35772c2888"
+						},
+						{
+							"score": -0.07,
+							"pointer": 25,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "f2531a74a61d3348e6bdc3d595d463795d9bd934"
+						},
+						{
+							"score": -0.07,
+							"pointer": 22,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "a67d8c245d778206e1ba61629cf6d85a4196cc38"
+						}
+					],
+					"issueCounter": 3,
+					"score": -0.22,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-406": {
+					"description": "406 response should be defined for all GET, POST, PUT, PATCH, and DELETE operations",
+					"issues": [
+						{
+							"score": -0.11,
+							"pointer": 49,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "e88306264d1f5d85a0dd14c4ce20f3a0925c7ba6"
+						},
+						{
+							"score": -0.08,
+							"pointer": 31,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "32a559c3fca16302bf258a156098e68563751a06"
+						},
+						{
+							"score": -0.08,
+							"pointer": 33,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "d705fd6e9a17912993ac38cb8ceca513e24d929d"
+						},
+						{
+							"score": -0.08,
+							"pointer": 43,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "2ffd6d55ab537a8f01705647bfe9145068d646a0"
+						},
+						{
+							"score": -0.07,
+							"pointer": 25,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "11fbbd24704432a854c03344ef74609c3d701909"
+						},
+						{
+							"score": -0.07,
+							"pointer": 22,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "9125755eadda3cc17459c03e926898737263e7b2"
+						}
+					],
+					"issueCounter": 6,
+					"score": -0.5,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-415": {
+					"description": "415 response should be defined for operations receiving a body (POST, PUT, PATCH)",
+					"issues": [
+						{
+							"score": -0.11,
+							"pointer": 49,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "52a781a4000f22ea8ab175bd25d33f8616c7a3c7"
+						},
+						{
+							"score": -0.08,
+							"pointer": 31,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "5b400e3d3ca586bc8678b599ce0c67d5b9ae6495"
+						},
+						{
+							"score": -0.08,
+							"pointer": 43,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "bb9413a59621fb776929371363b6ad84083ee5cc"
+						}
+					],
+					"issueCounter": 3,
+					"score": -0.27,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-429": {
+					"description": "429 response should be defined for all operations",
+					"issues": [
+						{
+							"score": -0.11,
+							"pointer": 49,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "fc58505dc1c170a2f8b9bc62a9f4b46b45e7b593"
+						},
+						{
+							"score": -0.08,
+							"pointer": 31,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "daebd60e8d979791f439e61814519f39c7b4b70b"
+						},
+						{
+							"score": -0.08,
+							"pointer": 33,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "cb6a6e98659bc4c7be124695b19a874152b63d02"
+						},
+						{
+							"score": -0.08,
+							"pointer": 43,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "bfeeb26d1c8e27fe9e7a501a206aa72e1d6a8699"
+						},
+						{
+							"score": -0.07,
+							"pointer": 25,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "fd25fa8843cc18e401c3358f2ad1fd69e6771f20"
+						},
+						{
+							"score": -0.07,
+							"pointer": 22,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "26908b0fbcb0cb3bb2bb0b89b2b661258c587f9e"
+						}
+					],
+					"issueCounter": 6,
+					"score": -0.5,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-default-undefined": {
+					"description": "No default response defined for the operation",
+					"issues": [
+						{
+							"score": -0.11,
+							"pointer": 49,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "52323b51258f8f97f402277d8466e2429793e00a"
+						},
+						{
+							"score": -0.08,
+							"pointer": 31,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "ec68dc92c9d46290261965ca23fad8b5f9f6eb41"
+						},
+						{
+							"score": -0.08,
+							"pointer": 33,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "fe725c45d5e59443ab3a1b1eaca159e08e4c2767"
+						},
+						{
+							"score": -0.08,
+							"pointer": 43,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "35c9634908626e0f5532f50b110e6848d5c086e7"
+						},
+						{
+							"score": -0.07,
+							"pointer": 25,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "a983eca0b1914f875328290046295169dfebe292"
+						},
+						{
+							"score": -0.07,
+							"pointer": 22,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "cb48d79634c83ddaa49c4bdaa37beec483956a90"
+						}
+					],
+					"issueCounter": 6,
+					"score": -0.5,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-response-schema-undefined": {
+					"description": "Response that should contain a body has no schema defined",
+					"issues": [
+						{
+							"score": -0.49,
+							"pointer": 23,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "159e6c203eab1c747d13a540921a56aa6de0fb49"
+						}
+					],
+					"issueCounter": 1,
+					"score": -0.49,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-request-numerical-max": {
+					"description": "Numeric schema in a request has no maximum defined",
+					"issues": [
+						{
+							"specificDescription": "Numeric schema of type 'number' has no maximum defined",
+							"score": -0.75,
+							"pointer": 15,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "89efb0052c2b40aad55d0f734f803a0e3711ee3a"
+						},
+						{
+							"specificDescription": "Numeric schema of type 'number' has no maximum defined",
+							"score": -0.22,
+							"pointer": 11,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "1c9f741dc4494ed1405369076b9f2d95863732fa"
+						}
+					],
+					"issueCounter": 2,
+					"score": -0.97,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-request-numerical-min": {
+					"description": "Numeric schema in a request has no minimum defined",
+					"issues": [
+						{
+							"specificDescription": "Numeric schema of type 'number' has no minimum defined",
+							"score": -0.75,
+							"pointer": 15,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "428eeb32c8326225658c0e9340f922ebe49eb5f6"
+						}
+					],
+					"issueCounter": 1,
+					"score": -0.75,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-request-object-additionalproperties-true": {
+					"description": "Schema in a request allows additional properties",
+					"issues": [
+						{
+							"score": -2.8,
+							"pointer": 40,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "1dd68469b5649ff9f32e3e78f48a6fdbada4a794"
+						},
+						{
+							"score": -2.8,
+							"pointer": 10,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "6478b4ff078b59a7f7f8e6a1dc82dca99232d480"
+						}
+					],
+					"issueCounter": 2,
+					"score": -5.6,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-request-string-maxlength": {
+					"description": "String schema in a request has no maximum length defined",
+					"issues": [
+						{
+							"score": -2.24,
+							"pointer": 21,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "c9940d86498e22f938a44b51f7d9e2c82f4e897b"
+						},
+						{
+							"score": -1.12,
+							"pointer": 30,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "ddcee8c2746e0385e1541524a23db08222f89ea4"
+						},
+						{
+							"score": -0.75,
+							"pointer": 16,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "74ba139fa15ac30510c0ac8c66a9720ecb4b993c"
+						},
+						{
+							"score": -0.75,
+							"pointer": 17,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "fcf0248e2ced784b4d0106c358959265ab12c37d"
+						},
+						{
+							"score": -0.56,
+							"pointer": 42,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "697c3e78a440923013cae9b88843de2873d386ba"
+						},
+						{
+							"score": -0.56,
+							"pointer": 41,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "887bf86e70f0ff78c06ded869f76d5846e58ca6e"
+						},
+						{
+							"score": -0.22,
+							"pointer": 14,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "66d56e004bdd23386f61dc9e729ff308e2ae8b42"
+						},
+						{
+							"score": -0.22,
+							"pointer": 13,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "4f455a2050ffd85d89b9a091c1f46c265781815c"
+						},
+						{
+							"score": -0.22,
+							"pointer": 12,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "425cfe1a89cb298863d83231b412779b869cb7dc"
+						}
+					],
+					"issueCounter": 9,
+					"score": -6.65,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-request-string-pattern": {
+					"description": "String schema in a request has no pattern defined",
+					"issues": [
+						{
+							"score": -3.36,
+							"pointer": 21,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "82df8ac9c50568b497be18ab4a86cc8f2be2e376"
+						},
+						{
+							"score": -1.68,
+							"pointer": 30,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "1488ea0cfc49eec0d7f514ea99834bfdede3fd4a"
+						},
+						{
+							"score": -1.68,
+							"pointer": 29,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "83a304802e68c09468445f09238516f814f67f8c"
+						},
+						{
+							"score": -1.12,
+							"pointer": 16,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "3e53260b0a05b84de73446332b3eada3be2e926d"
+						},
+						{
+							"score": -1.12,
+							"pointer": 17,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "1b096739ec4cef450e3bab3a23ba9e3a800a1014"
+						},
+						{
+							"score": -0.84,
+							"pointer": 42,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "2579a1861507bcb500aa9a57a7176b95b28e6cf0"
+						},
+						{
+							"score": -0.84,
+							"pointer": 41,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "6165e2d63edd65d7f98f8abe51881ac57873e196"
+						},
+						{
+							"score": -0.34,
+							"pointer": 14,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "3e369fba8df583321d06ef46d758bc5fba5b29ed"
+						},
+						{
+							"score": -0.34,
+							"pointer": 13,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "564d834ec40d214c0bd7c6fe857a7d81b51ef1a0"
+						},
+						{
+							"score": -0.34,
+							"pointer": 12,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"request": true,
+							"fingerprint": "a13b1181a722b0e892598a1585d97db354a876f3"
+						}
+					],
+					"issueCounter": 10,
+					"score": -11.65,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-response-notype": {
+					"description": "Schema in a response does not define the type of JSON values",
+					"issues": [
+						{
+							"score": -0.16,
+							"pointer": 52,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "560636d440e449dbdd397c3d09c308c530f75f30"
+						}
+					],
+					"issueCounter": 1,
+					"score": -0.16,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-response-object-additionalproperties-true": {
+					"description": "Schema in a response allows additional properties",
+					"issues": [
+						{
+							"score": -1.71,
+							"pointer": 3,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "ca3f53a0b4830b651dbf9c3c9c2f405fee2f43c6"
+						}
+					],
+					"issueCounter": 1,
+					"score": -1.71,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-response-string-maxlength": {
+					"description": "String schema in a response has no maximum length defined",
+					"issues": [
+						{
+							"score": -0.2,
+							"pointer": 1,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "0c2d11c78c6956d620b3fe85c26212bcd6c7040b"
+						},
+						{
+							"score": -0.13,
+							"pointer": 45,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "4c60f8d16d6c3b7021cf0ebfa0e218a87352fa5a"
+						},
+						{
+							"score": -0.13,
+							"pointer": 46,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "25c9ea00b86a554417d4d6cf7fc1d824130c3407"
+						},
+						{
+							"score": -0.13,
+							"pointer": 44,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "e3e8f5fb09075695358cd647569af18b410a93ea"
+						},
+						{
+							"score": -0.07,
+							"pointer": 9,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "25744354b41d8c6aebc5712c40122371274644a8"
+						},
+						{
+							"score": -0.07,
+							"pointer": 4,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "16221a732990740871e3fe36e96f09275dee33f2"
+						},
+						{
+							"score": -0.07,
+							"pointer": 7,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "a31aaeb4b5ae46831169bf31826456a4a341244c"
+						},
+						{
+							"score": -0.07,
+							"pointer": 51,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "5cbb4cb0d4cce40ea0d1d092c9e161c3f0249ca2"
+						},
+						{
+							"score": -0.07,
+							"pointer": 50,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "8727a3502aae378b01ef7881632abeef68d774c4"
+						}
+					],
+					"issueCounter": 9,
+					"score": -0.92,
+					"criticality": 3,
+					"tooManyError": false
+				},
+				"v3-schema-response-string-pattern": {
+					"description": "String schema in a response has no pattern defined",
+					"issues": [
+						{
+							"score": -0.59,
+							"pointer": 34,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "e6179f89d365584794b199a1c16e15e75f7fdb35"
+						},
+						{
+							"score": -0.29,
+							"pointer": 1,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "b352b4bd96da74e90d15eeb693594b8d06820105"
+						},
+						{
+							"score": -0.29,
+							"pointer": 2,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "9159358fb63788df9a9886704192f932ccca4c03"
+						},
+						{
+							"score": -0.2,
+							"pointer": 45,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "2999f8611decde78f1a6d01a0aab10e5d767c8ea"
+						},
+						{
+							"score": -0.2,
+							"pointer": 46,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "dd1dfbf558544b02bdf8a17f9f6751517fade389"
+						},
+						{
+							"score": -0.2,
+							"pointer": 44,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "d41010a1422f95555129dfe1cb08bd43f0988d41"
+						},
+						{
+							"score": -0.1,
+							"pointer": 9,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "8d63ee2cafe66c3a7d3b3f6641ac1c3eff3f6739"
+						},
+						{
+							"score": -0.1,
+							"pointer": 4,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "365e3415d2b8d58019887f75a6f8137e4640de0f"
+						},
+						{
+							"score": -0.1,
+							"pointer": 7,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "f27c0b87eaab3adc74ca2efc14cb8ddf9f10b074"
+						},
+						{
+							"score": -0.1,
+							"pointer": 5,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "5b6b23a754d35a1139ab29495d6d6bef48d1a24f"
+						},
+						{
+							"score": -0.1,
+							"pointer": 8,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "6c80ca8067e3876e94d0f64ab937fbd0d5d7d48d"
+						},
+						{
+							"score": -0.1,
+							"pointer": 6,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "01ad9c6aa58e7537bfdea51b1bd8e434518fc6cc"
+						},
+						{
+							"score": -0.1,
+							"pointer": 51,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "97161338b0ad5d5e7dd3f6a6d908251ad4f43028"
+						},
+						{
+							"score": -0.1,
+							"pointer": 50,
+							"tooManyImpacted": false,
+							"criticality": 3,
+							"response": true,
+							"fingerprint": "bc5d12d11753f1b1cb0346da951c4d82ded5cefb"
+						}
+					],
+					"issueCounter": 14,
+					"score": -2.58,
+					"criticality": 3,
+					"tooManyError": false
+				}
+			},
+			"subgroupIssueCounter": {
+				"parameters": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 0,
+					"high": 0,
+					"critical": 0
+				},
+				"responseHeader": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 0,
+					"high": 0,
+					"critical": 0
+				},
+				"responseDefinition": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 27,
+					"high": 0,
+					"critical": 0
+				},
+				"schema": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 49,
+					"high": 0,
+					"critical": 0
+				},
+				"paths": {
+					"none": 0,
+					"info": 0,
+					"low": 0,
+					"medium": 0,
+					"high": 0,
+					"critical": 0
+				}
+			}
+		},
+		"issuesKey": [
+			"v3-operation-security",
+			"v3-global-securityscheme-apikey-inheader",
+			"v3-schema-response-notype",
+			"v3-warning-sample-undefined",
+			"v3-operation-securityrequirement-apikey-inheader",
+			"v3-schema-response-string-pattern",
+			"v3-response-default-undefined",
+			"v3-schema-response-object-additionalproperties-true",
+			"v3-schema-request-string-pattern",
+			"v3-response-schema-undefined",
+			"v3-schema-response-string-maxlength",
+			"v3-response-401",
+			"v3-response-404",
+			"v3-response-415",
+			"v3-schema-request-numerical-min",
+			"v3-schema-request-string-maxlength",
+			"v3-schema-request-object-additionalproperties-true",
+			"v3-response-429",
+			"v3-schema-request-numerical-max",
+			"v3-global-security",
+			"v3-response-406"
+		],
+		"summary": {
+			"oasVersion": "3.0.3",
+			"apiVersion": "4.2",
+			"basepath": "",
+			"apiName": "Pixi App API UnProtected",
+			"description": "Pixi Photo Sharing API",
+			"endpoints": [
+				"https://api-protect.42crunch.cloud/api"
+			],
+			"pathCounter": 1,
+			"operationCounter": 10,
+			"parameterCounter": 3,
+			"requestBodyCounter": 4,
+			"schemesCounter": {
+				"https": 10
+			},
+			"requestContentType": {
+				"application/json": 4
+			},
+			"responseContentType": {
+				"application/json": 23
+			},
+			"securitySchemes": {
+				"access-token": {
+					"counterInsecure": 0,
+					"counterSecure": 6,
+					"type": "apiKey",
+					"apiKeyIn": "header",
+					"apiKeyName": "x-access-token"
+				}
+			},
+			"componentsSchemasCounter": 8,
+			"componentsResponsesCounter": 0,
+			"componentsParametersCounter": 0,
+			"componentsExamplesCounter": 0,
+			"componentsRequestBodiesCounter": 0,
+			"componentsHeadersCounter": 0,
+			"componentsSecuritySchemesCounter": 1,
+			"componentsLinksCounter": 0,
+			"componentsCallbacksCounter": 0
+		}
+	}
+}
