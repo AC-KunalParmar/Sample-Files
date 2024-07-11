@@ -1,0 +1,262 @@
+{
+  "entities":
+  [
+    {
+      "id": "9c9084d3-e655-451f-ad1a-4ff2b7870d07",
+      "title": "Internet-Facing API Receives Sensitive Data in Query Params",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=9c9084d3-e655-451f-ad1a-4ff2b7870d07",
+      "typeId": "36102",
+      "apiId": "65a04620f74037355f23a78ae3621c27",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v2/search",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "Open",
+      "severity": "High",
+      "owaspTags":
+      [
+        "API7:2019",
+        "API3:2023",
+        "API8:2023",
+        "API3:2019"
+      ],
+      "detectionTime": "2024-01-12T16:26:41.000Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v2/search",
+      "description": "An internet-facing API receives sensitive data through query parameters.  The sensitive data in API's query parameters:   Email ",
+      "impact": "Query parameters are not a secure location for sensitive data:  They are often stored in logs by network components that have access to the unencrypted traffic.  They are stored in browser history, which means malicious code, or other users with physical access, could retrieve the data.  Browser extensions might have permission to access them. ",
+      "remediation": "Sensitive data should not be sent in query parameters, since this increases the chances that it will be compromised.  To fix this, open a ticket for the API Developer to change the method by which data is sent to the API. Possible more secure locations  Cookie  API Body ",
+      "investigate": "Look at the request schema of the packets and validate that sensitive data is sent in the query parameters.",
+      "comments": [
+        {
+          "message": "test comment",
+          "username": "test@test.com",
+          "createdAt": "2024-04-14T08:35:57.979Z"
+        }
+      ],
+      "tickets":
+      [
+        {
+          "alias": "Test Noname",
+          "metadata":
+          {
+            "key": "FINDINGS-11111",
+            "url": "https://test.atlassian.net//browse/FINDINGS-11111",
+            "jiraId": "123456",
+            "issueId": "09b2e4bd-37ee-4d69-ac2d-d3b4c8159846"
+          }
+        }
+      ],
+      "evidence":
+      [
+        {
+          "host": "httpbin.org",
+          "method": "GET",
+          "path": "/ip",
+          "request_ts": "2024-03-03T07:13:53.044",
+          "status_code": 200
+        },
+        {
+          "host": "httpbin.org",
+          "method": "GET",
+          "path": "/ip",
+          "request_ts": "2024-03-03T07:13:55.046",
+          "status_code": 200
+        }
+      ],
+      "lastUpdate": "2024-01-12T16:26:41.000Z"
+    },
+    {
+      "id": "34eb05c4-b6a2-48fe-b729-926b4c7b1f68",
+      "title": "API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=34eb05c4-b6a2-48fe-b729-926b4c7b1f68",
+      "typeId": "36101",
+      "apiId": "65a04620f74037355f23a78ae3621c27",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v2/search",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "Resolve",
+      "severity": "Medium",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:18:50.111Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v2/search",
+      "description": "An API returns sensitive datatypes without authentication, allowing any user in the organization to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-03-18T07:11:08.608Z"
+    },
+    {
+      "id": "abf277ab-f0bc-428d-8fb4-b5c0743a6149",
+      "title": "Internet-Facing API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=abf277ab-f0bc-428d-8fb4-b5c0743a6149",
+      "typeId": "36100",
+      "apiId": "65a04620f74037355f23a78ae3621c27",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v2/search",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "In Progress",
+      "severity": "Critical",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:25:25.408Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v2/search",
+      "description": "An internet-facing API returns sensitive datatypes without authentication, allowing any user to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-03-18T08:35:43.538Z"
+    },
+    {
+      "id": "42e49b32-56ed-4d92-94f0-26b736982837",
+      "title": "Internet-Facing API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=42e49b32-56ed-4d92-94f0-26b736982837",
+      "typeId": "36100",
+      "apiId": "9d09ad669b7922430c6e4e332550ffee",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v1/messages/<string>",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "Rejected (Not a Problem)",
+      "severity": "Critical",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:25:25.408Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v1/messages/<string>",
+      "description": "An internet-facing API returns sensitive datatypes without authentication, allowing any user to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-01-18T19:03:18.713Z"
+    },
+    {
+      "id": "725522dd-ec78-494a-afc5-c30a4c2cde5a",
+      "title": "API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=725522dd-ec78-494a-afc5-c30a4c2cde5a",
+      "typeId": "36101",
+      "apiId": "9d09ad669b7922430c6e4e332550ffee",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v1/messages/<string>",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "Resolve",
+      "severity": "Medium",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:19:50.137Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v1/messages/<string>",
+      "description": "An API returns sensitive datatypes without authentication, allowing any user in the organization to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-03-18T08:37:42.012Z"
+    },
+    {
+      "id": "a0ec7bc6-8db4-4e32-ab90-02a7c07c32b7",
+      "title": "API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=a0ec7bc6-8db4-4e32-ab90-02a7c07c32b7",
+      "typeId": "36101",
+      "apiId": "a48aef4ae1007a29f4e4309f44962c0c",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v2/messages",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "Resolve",
+      "severity": "Medium",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:18:50.111Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v2/messages",
+      "description": "An API returns sensitive datatypes without authentication, allowing any user in the organization to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-03-18T07:05:08.339Z"
+    },
+    {
+      "id": "64f59145-28a0-45c0-8945-f4f441aadd0b",
+      "title": "Internet-Facing API Exposes Sensitive Data Without Authentication",
+      "url": "https://armorcode.nnsworkshop.com/dashboard/issues?r_id=64f59145-28a0-45c0-8945-f4f441aadd0b",
+      "typeId": "36100",
+      "apiId": "a48aef4ae1007a29f4e4309f44962c0c",
+      "module": "Posture",
+      "host": "armorcode-mailhog.nnsworkshop.com",
+      "path": "/api/v2/messages",
+      "method": "GET",
+      "resourceGroupName": null,
+      "status": "In Progress",
+      "severity": "Critical",
+      "owaspTags":
+      [
+        "API3:2019",
+        "API3:2023"
+      ],
+      "detectionTime": "2024-01-12T16:25:25.408Z",
+      "triggeredOn": "GET armorcode-mailhog.nnsworkshop.com/api/v2/messages",
+      "description": "An internet-facing API returns sensitive datatypes without authentication, allowing any user to access the data.  The following datatypes are sensitive:   Email ",
+      "impact": "Sensitive data should not be exposed over unauthenticated APIs. It exposes the data to access by unauthorized users and increases the odds that it will be compromised.",
+      "remediation": "In \"Evidence\", validate that the specified sensitive data is returned by the API without authentication.  Open a ticket for the API Developer requesting that the datatypes:  Are only exposed to authenticated users  Are not exposed by the API",
+      "investigate": " Look at the request schema of the packets and validate that the request is not authenticated.  Look at the response schema of the packets and validate that sensitive data was returned without authentication. ",
+      "comments":
+      [],
+      "tickets":
+      [],
+      "evidence":
+      [],
+      "lastUpdate": "2024-03-18T07:46:37.940Z"
+    }
+  ]
+}

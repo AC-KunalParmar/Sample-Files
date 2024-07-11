@@ -1,0 +1,812 @@
+[
+
+  {
+
+    "scan_id": "181775cd-f116-49c5-780c-64c8a73a099b",
+
+    "vulnerabilities": [
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2022-29526",
+
+            "cvss_v2_score": "5.0",
+
+            "cvss_v2_vector": "CVSS:2.0/AV:N/AC:L/Au:N/C:P/I:N/A:N",
+
+            "cvss_v3_score": "5.3",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+
+          }
+
+        ],
+
+        "summary": "Go before 1.17.10 and 1.18.x before 1.18.2 has Incorrect Privilege Assignment. When called with a non-zero flags parameter, the Faccessat function could incorrectly report that a file is accessible.",
+
+        "severity": "Medium",
+
+        "components": {
+
+          "go://golang.org/x/sys:0.0.0-20211116061358-0a5406a5449c": {
+
+            "fixed_versions": [
+
+              "[0.0.0-20220412211240-33da011f77ad]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://golang.org/x/sys:0.0.0-20211116061358-0a5406a5449c",
+
+                  "full_path": "golang.org/x/sys"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-229670",
+
+        "references": [
+
+          "https://groups.google.com/g/golang-announce/c/Y5qrqw_lWdU",
+
+          "https://groups.google.com/g/golang-announce",
+
+          "https://github.com/golang/go/issues/52313",
+
+          "https://security.gentoo.org/glsa/202208-02",
+
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Q6GE5EQGE4L2KRVGW4T75QVIYAXCLO5X/",
+
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZY2SLWOQR4ZURQ7UBRZ7JIX6H6F5JHJR/",
+
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z55VUVGO7E5PJFXIOVAY373NZRHBNCI5/",
+
+          "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/RQXU752ALW53OJAF5MG3WMR5CCZVLWW6/",
+
+          "https://security.netapp.com/advisory/ntap-20220729-0001/"
+
+        ]
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2022-41720",
+
+            "cvss_v3_score": "7.5",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+
+          }
+
+        ],
+
+        "summary": "On Windows, restricted files can be accessed via os.DirFS and http.Dir. The os.DirFS function and http.Dir type provide access to a tree of files rooted at a given directory. These functions permit access to Windows device files under that root. For example, os.DirFS(\"C:/tmp\").Open(\"COM1\") opens the COM1 device. Both os.DirFS and http.Dir only provide read-only filesystem access. In addition, on Windows, an os.DirFS for the directory (the root of the current drive) can permit a maliciously crafted path to escape from the drive and access any path on the system. With fix applied, the behavior of os.DirFS(\"\") has changed. Previously, an empty root was treated equivalently to \"/\", so os.DirFS(\"\").Open(\"tmp\") would open the path \"/tmp\". This now returns an error.",
+
+        "severity": "High",
+
+        "components": {
+
+          "go://github.com/golang/go:1.19.3": {
+
+            "fixed_versions": [
+
+              "[1.18.9]",
+
+              "[1.19.4]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://github.com/golang/go:1.19.3",
+
+                  "full_path": "github.com/lang/gogo"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-263271",
+
+        "references": [
+
+          "https://pkg.go.dev/vuln/GO-2022-1143",
+
+          "https://groups.google.com/g/golang-announce/c/L_3rmdT0BMU/m/yZDrXjIiBQAJ",
+
+          "https://go.dev/issue/56694",
+
+          "https://go.dev/cl/455716"
+
+        ],
+
+        "extended_information": {
+
+          "short_description": "Insufficient input validation in Golang allows attackers to perform path traversal via os.DirFS and http.dir.",
+
+          "full_description": "[Golang](https://go.dev/) is a statically typed, compiled programming language.\r\n\r\nDue to insufficient checks in `os.DirFS` and `http.dir`, an attacker can perform path traversal and access any files on the system (according to the user's access).\r\n\r\nThere are multiple ways to trigger this vulnerability -\r\n\r\nOn Linux, opening an empty directory tree (`\"\"`) will be mistakenly treated as opening the root (`/`).\r\nAn example that will mistakenly open `/tmp`:\r\n`os.DirFS(\"\").Open(\"tmp\")`\r\n\r\nOn Windows, the affected functions mistakenly permitted access to Windows-reserved device names (for example `COM1` or `NUL`).\r\nAn example that will open `COM1` (works with any argument to `DirFS`):\r\n`os.DirFS(\"C:/tmp\").Open(\"COM1\")`\r\n\r\nAnother way to trigger the issue on Windows would be using ```os.DirFS(`\\`)``` which will permit an attacker to escape from the drive and access any path on the system (including network shares).",
+
+          "jfrog_research_severity": "Medium",
+
+          "jfrog_research_severity_reasons": [
+
+            {
+
+              "name": "Exploitation of the issue is only possible when the vulnerable component is used in a specific manner. The attacker has to perform per-target research to determine the vulnerable attack vector",
+
+              "description": "The attacker must find a remote service that takes user input and specifically opens a file after calling the `os.DirFS()` or `http.dir()` functions. Refer to the full applicability conditions in the full description.",
+
+              "is_positive": true
+
+            },
+
+            {
+
+              "name": "The issue has an exploit published",
+
+              "description": "GitHub Issue contains PoC snippets with multiple ways to trigger the vulnerability."
+
+            },
+
+            {
+
+              "name": "The impact of exploiting the issue depends on the context of surrounding software. A severe impact such as RCE is not guaranteed.",
+
+              "description": "The security impact of exploiting this vulnerability highly depends on the 1st-party code that uses `os.DirFS()` or `http.dir()`.\r\nFor example, if the code uses `os.DirFS(\"\").Open(attacker_filename)` in order to create an attacker-named externally-writable file in the current directory, the attacker will actually be able to create the file in an arbitrary filepath, leading to arbitrary file overwrite",
+
+              "is_positive": true
+
+            }
+
+          ]
+
+        }
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2021-3538",
+
+            "cvss_v2_score": "7.5",
+
+            "cvss_v2_vector": "CVSS:2.0/AV:N/AC:L/Au:N/C:P/I:P/A:P",
+
+            "cvss_v3_score": "9.8",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+
+          }
+
+        ],
+
+        "summary": "A flaw was found in github.com/satori/go.uuid in versions from commit 0ef6afb2f6cdd6cdaeee3885a95099c63f18fc8c to d91630c8510268e75203009fe7daf2b8e1d60c45. Due to insecure randomness in the g.rand.Read function the generated UUIDs are predictable for an attacker.",
+
+        "severity": "Critical",
+
+        "components": {
+
+          "go://github.com/satori/go.uuid:1.2.0": {
+
+            "fixed_versions": [
+
+              "[1.2.1-0.20181016170032-d91630c85102]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://github.com/satori/go.uuid:1.2.0",
+
+                  "full_path": "github.com/satori/go.uuid"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-177255",
+
+        "references": [
+
+          "https://snyk.io/vuln/SNYK-GOLANG-GITHUBCOMSATORIGOUUID-72488",
+
+          "https://github.com/satori/go.uuid/issues/73",
+
+          "https://bugzilla.redhat.com/show_bug.cgi?id=1954376"
+
+        ]
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2022-37315",
+
+            "cvss_v3_score": "7.5",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+
+          }
+
+        ],
+
+        "summary": "graphql-go (aka GraphQL for Go) through 0.8.0 has infinite recursion in the type definition parser.",
+
+        "severity": "High",
+
+        "components": {
+
+          "go://github.com/graphql-go/graphql:0.7.9": {
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://github.com/graphql-go/graphql:0.7.9",
+
+                  "full_path": "github.com/-go/graphqlgraphql"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-246876",
+
+        "references": [
+
+          "https://github.com/graphql-go/graphql/issues/637"
+
+        ],
+
+        "extended_information": {
+
+          "short_description": "An infinite recursion in GraphQL for Go can lead to denial of service when processing a crafted query.",
+
+          "full_description": "[GraphQL](https://graphql.org/) is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. GraphQL for Go, also known as `graphql-go`, is the Go implementation of GraphQL.\r\n\r\nGraphQL for Go contains a bug in the type definition parser when parsing a query, through the `Parse` method, containing a `String` type variable, which causes an infinite recursion that leads to denial of service. The `Parse` method is called by the following API Functions: `Do` and `Subscribe`, both functions are used for queries.\r\n\r\nThe example below shows how to send a query in Go to GraphQL:\r\n```\r\n// Query\r\nquery := `\r\n\t{\r\n\t\thello\r\n\t}\r\n`\r\nparams := graphql.Params{Schema: schema, RequestString: query}\r\nr := graphql.Do(params)\r\n```\r\n\r\nThe `Do` method directly passes the parameter to the vulnerable `Parse` function.\r\nThe exploit is extremely trivial and can be triggered as follows -\r\n``` \r\nquery := `String r`\r\n```\r\nParsing it leads to an infinite recursion, crashing the Go application.",
+
+          "jfrog_research_severity": "Medium",
+
+          "jfrog_research_severity_reasons": [
+
+            {
+
+              "name": "Exploitation of the issue is only possible when the vulnerable component is used in a specific manner. The attacker has to perform per-target research to determine the vulnerable attack vector",
+
+              "description": "The attacker must find a remote input that propagates to the `Do` or `Subscribe` API functions of the GraphQL for Go package.",
+
+              "is_positive": true
+
+            },
+
+            {
+
+              "name": "The issue is trivial to exploit and does not require a published writeup or PoC",
+
+              "description": "Using a `String` defined variable is enough to trigger the vulnerability. \r\n\r\nExample from the Unit Test:\r\n```\r\nfunc TestInfiniteRecursion(t *testing.T) {\r\n\tbody := `String r`\r\n\tsource := source.NewSource(\u0026source. Source{\r\n\t\tBody: []byte(body),\r\n\t})\r\n\t_, err := Parse(\r\n\t\tParseParams{\r\n\t\t\tSource: source,\r\n\t\t\tOptions: ParseOptions{\r\n\t\t\t\tNoSource: true,\r\n\t\t\t},\r\n\t\t},\r\n\t)\r\n\tif err != nil {\r\n\t\tt.Fatalf(\"unexpected error: %v\", err)\r\n\t}\r\n}\r\n```\r\nBasically, it sends the Query containing `String r` and triggers the vulnerability"
+
+            },
+
+            {
+
+              "name": "The issue cannot result in a severe impact (such as remote code execution)",
+
+              "description": "The vulnerability only crashes the client application that runs GraphQL for Go, and will not crash the queried database server",
+
+              "is_positive": true
+
+            }
+
+          ]
+
+        }
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2022-3996",
+
+            "cvss_v3_score": "7.5",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+
+          }
+
+        ],
+
+        "summary": "If an X.509 certificate contains a malformed policy constraint and policy processing is enabled, then a write lock will be taken twice recursively. On some operating systems (most widely: Windows) this results in a denial of service when the affected process hangs. Policy processing being enabled on a publicly facing server is not considered to be a common setup. Policy processing is enabled by passing the `-policy' argument to the command line utilities or by calling either `X509_VERIFY_PARAM_add0_policy()' or `X509_VERIFY_PARAM_set1_policies()' functions.",
+
+        "severity": "High",
+
+        "components": {
+
+          "alpine://3.17:libcrypto3:3.0.7-r0": {
+
+            "fixed_versions": [
+
+              "[3.0.7-r2]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf/sha256__ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf.tar",
+
+                  "full_path": "sha256__ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf.tar"
+
+                },
+
+                {
+
+                  "component_id": "alpine://3.17:libcrypto3:3.0.7-r0",
+
+                  "full_path": "3.17:libcrypto3:3.0.7-r0"
+
+                }
+
+              ]
+
+            ]
+
+          },
+
+          "alpine://3.17:libssl3:3.0.7-r0": {
+
+            "fixed_versions": [
+
+              "[3.0.7-r2]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf/sha256__ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf.tar",
+
+                  "full_path": "sha256__ded7a220bb058e28ee3254fbba04ca90b679070424424761a53a043b93b612bf.tar"
+
+                },
+
+                {
+
+                  "component_id": "alpine://3.17:libssl3:3.0.7-r0",
+
+                  "full_path": "3.17:libssl3:3.0.7-r0"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-263552",
+
+        "references": [
+
+          "https://www.openssl.org/news/secadv/20221213.txt",
+
+          "https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7"
+
+        ],
+
+        "extended_information": {
+
+          "short_description": "A design problem in OpenSSL 3.x may lead to denial of service in Windows when processing a malformed policy.",
+
+          "full_description": "[OpenSSL](https://www.openssl.org/) is a software library for applications that provide secure communications over computer networks against eavesdropping or need to identify the party at the other end. It is widely used by Internet servers, including the majority of HTTPS websites.\r\n\r\nIt was discovered that when an X.509 certificate contains a bad policy constraint and policy processing is enabled, the write lock is acquired recursively twice.\r\nOn Windows, this results in a deadlock and a denial of service when the affected process hangs.\r\n\r\nThe issue results due to the `ossl_policy_cache_set_mapping()` obtaining the X.509 lock a second time before the `ossl_policy_cache_set()` function releases it.\r\n\r\nOn Linux using `pthreads` - the second attempt to obtain the lock simply fails without any security impact.\r\nOn Windows it seems that attempting to obtain the lock a second time hangs.\r\n\r\nTo exploit this issue, Policy Processing must be enabled, which is highly unlikely for a publicly-facing server.\r\n\r\nPolicy processing is enabled by passing the `-policy` argument to the command line utilities or by calling either `X509_VERIFY_PARAM_add0_policy()` or `X509_VERIFY_PARAM_set1_policies()` functions.\r\n\r\nThis issue only affects the Windows version of OpenSSL 3.x.",
+
+          "jfrog_research_severity": "Low",
+
+          "jfrog_research_severity_reasons": [
+
+            {
+
+              "name": "The prerequisites for exploiting the issue are extremely unlikely",
+
+              "description": "The attacker must cause OpenSSL 3.x to verify a crafted certificate containing a malformed policy constraint, and the certificate must pass OpenSSL's signature verification (either be signed by a valid CA or any certificate if the client chooses to approve self-signed certificates).\r\nAlso, the server must have Policy Processing enabled, which is highly unlikely for a publicly-facing server.",
+
+              "is_positive": true
+
+            },
+
+            {
+
+              "name": "The reported CVSS was either wrongly calculated, downgraded by other vendors, or does not reflect the vulnerability's impact",
+
+              "description": "The CVSS does not reflect the contextual prerequisites required to exploit the vulnerability.",
+
+              "is_positive": true
+
+            },
+
+            {
+
+              "name": "The issue can be exploited by attackers over the network"
+
+            }
+
+          ]
+
+        }
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2021-44716",
+
+            "cvss_v2_score": "5.0",
+
+            "cvss_v2_vector": "CVSS:2.0/AV:N/AC:L/Au:N/C:N/I:N/A:P",
+
+            "cvss_v3_score": "7.5",
+
+            "cvss_v3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+
+          }
+
+        ],
+
+        "summary": "net/http in Go before 1.16.12 and 1.17.x before 1.17.5 allows uncontrolled memory consumption in the header canonicalization cache via HTTP/2 requests.",
+
+        "severity": "High",
+
+        "components": {
+
+          "go://golang.org/x/net:0.0.0-20211112202133-69e39bad7dc2": {
+
+            "fixed_versions": [
+
+              "[0.0.0-20211209124913-491a49abca63]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://golang.org/x/net:0.0.0-20211112202133-69e39bad7dc2",
+
+                  "full_path": "golang.org/x/net"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-193463",
+
+        "references": [
+
+          "https://lists.debian.org/debian-lts-announce/2022/01/msg00017.html",
+
+          "https://lists.debian.org/debian-lts-announce/2022/01/msg00016.html",
+
+          "https://security.gentoo.org/glsa/202208-02",
+
+          "https://security.netapp.com/advisory/ntap-20220121-0002/",
+
+          "https://groups.google.com/g/golang-announce/c/hcmEScgc00k"
+
+        ]
+
+      },
+
+      {
+
+        "cves": [
+
+          {
+
+            "cve": "CVE-2022-30636"
+
+          },
+
+          {
+
+            "cvss_v2_score": "2.6",
+
+            "cvss_v2_vector": "CVSS:2.0/AV:N/AC:H/Au:N/C:P/I:N/A:N",
+
+            "cvss_v3_score": "3.7",
+
+            "cvss_v3_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+
+          }
+
+        ],
+
+        "summary": "Go Cryptography acme/autocert/cache.go Get() Function Path Traversal File Disclosure Weakness",
+
+        "severity": "Low",
+
+        "components": {
+
+          "go://golang.org/x/crypto:0.0.0-20220411220226-7b82a4e95df4": {
+
+            "fixed_versions": [
+
+              "[0.1.0]"
+
+            ],
+
+            "impact_paths": [
+
+              [
+
+                {
+
+                  "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b/sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar",
+
+                  "full_path": "sha256__d07789e192f18bf3f3c0eac0a4a593c7082b3e2ffdbacd898d32a149b3ade34b.tar"
+
+                },
+
+                {
+
+                  "component_id": "generic://sha256:638a0a2621fd1e4012f155d8048b2903031f9e026165223632aaf4a9b3921a21/dashboardsvc",
+
+                  "full_path": "dashboardsvc"
+
+                },
+
+                {
+
+                  "component_id": "go://golang.org/x/crypto:0.0.0-20220411220226-7b82a4e95df4",
+
+                  "full_path": "golang.org/x/crypto"
+
+                }
+
+              ]
+
+            ]
+
+          }
+
+        },
+
+        "issue_id": "XRAY-227851",
+
+        "references": [
+
+          "https://go.googlesource.com/crypto/+/793ad666bf5ec61392092b27061be9618e4e219b",
+
+          "https://go-review.googlesource.com/c/crypto/+/408694/",
+
+          "https://github.com/golang/go/issues/53082",
+
+          "https://github.com/golang/crypto/commit/793ad666bf5ec61392092b27061be9618e4e219b",
+
+          "https://support2.windriver.com/index.php?page=cve\u0026on=view\u0026id=CVE-2022-30636",
+
+          "http://cve.mitre.org/cgi-bin/cvename.cgi?name=2022-30636"
+
+        ]
+
+      }
+
+    ],
+
+    "component_id": "docker://infyartifactory.jfrog.io/infydtr/idp/dashboardsvc:IDP-svcdashboard-cf2ic0ve303ivj5m0msg",
+
+    "package_type": "Docker",
+
+    "status": "completed"
+
+  }
+
+]
+

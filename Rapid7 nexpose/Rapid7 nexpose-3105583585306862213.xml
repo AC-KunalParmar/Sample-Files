@@ -1,0 +1,638 @@
+<NexposeReport version="1.0">
+	<scans>
+		<scan id="2" name="VulnWeb" startTime="20230825T134852838" endTime="20230825T135429342" status="finished"/>
+	</scans>
+	<nodes>
+		<node address="44.238.29.244" status="alive">
+			<names>
+				<name>ec2-44-238-29-244.us-west-2.compute.amazonaws.com</name>
+			</names>
+			<fingerprints>
+				<os certainty="0.80" vendor="Microsoft" family="Windows" product="Windows"/>
+				<os certainty="0.80" vendor="Microsoft" family="Windows" product="Windows Server 2012 R2"/>
+				<os certainty="0.70" device-class="General" vendor="Microsoft" family="Windows" product="Windows Server 2012 R2"/>
+			</fingerprints>
+			<tests>
+				<test id="generic-icmp-timestamp" key="" status="vulnerable-exploited">
+
+					<Paragraph>
+						<Paragraph>Able to determine remote system time.</Paragraph>
+					</Paragraph>
+				</test>
+
+				<test id="generic-tcp-timestamp" key="" status="vulnerable-exploited">
+
+					<Paragraph>
+						<Paragraph>Able to determine system boot time.</Paragraph>
+					</Paragraph>
+				</test>
+			</tests>
+			<endpoints>
+				<endpoint protocol="tcp" port="80" status="open">
+					<services>
+						<service name="HTTP">
+							<fingerprints>
+								<fingerprint certainty="0.90" vendor="Microsoft" family="IIS" product="IIS" version="8.5"/>
+							</fingerprints>
+							<configuration>
+								<config name="http.banner">Microsoft-IIS/8.5</config>
+								<config name="http.banner.server">Microsoft-IIS/8.5</config>
+								<config name="http.banner.x-powered-by">ASP.NET</config>
+								<config name="verbs-1">GET</config>
+								<config name="verbs-2">HEAD</config>
+								<config name="verbs-3">OPTIONS</config>
+								<config name="verbs-4">POST</config>
+								<config name="verbs-5">TRACE</config>
+								<config name="verbs-count">5</config>
+							</configuration>
+							<tests>
+								<test id="http-iis-default-install-page" key="/" status="vulnerable-exploited">
+
+									<Paragraph>
+										<UnorderedList>
+											<ListItem>Running HTTP service</ListItem>
+											<ListItem>Product IIS exists -- Microsoft IIS 8.5</ListItem>
+										</UnorderedList>
+										<Paragraph>
+											<ContainerBlockElement>
+												<ContainerBlockElement>
+													<Paragraph>HTTP GET request to 
+														<URLLink LinkURL="http://44.238.29.244/" LinkTitle="http://44.238.29.244/"></URLLink>
+													</Paragraph>HTTP response code was an expected 200
+													<Paragraph>HTTP header &#39;Content-Location&#39; not present</Paragraph>HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200
+													<Paragraph preformat="true">1: &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://ww...
+2: &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+3: &lt;head&gt;
+4: &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-885...
+5: &lt;title&gt;IIS Windows Server&lt;/title&gt;</Paragraph>
+												</ContainerBlockElement>
+											</ContainerBlockElement>
+										</Paragraph>
+									</Paragraph>
+								</test>
+
+								<test id="http-iis-default-install-page" key="/" status="vulnerable-exploited">
+
+									<Paragraph>
+										<UnorderedList>
+											<ListItem>Running HTTP service</ListItem>
+											<ListItem>Product IIS exists -- Microsoft IIS</ListItem>
+										</UnorderedList>
+										<Paragraph>
+											<ContainerBlockElement>
+												<ContainerBlockElement>
+													<Paragraph>HTTP GET request to 
+														<URLLink LinkURL="http://44.238.29.244/" LinkTitle="http://44.238.29.244/"></URLLink>
+													</Paragraph>HTTP response code was an expected 200
+													<Paragraph>HTTP header &#39;Content-Location&#39; not present</Paragraph>HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200HTTP response code was an expected 200
+													<Paragraph preformat="true">1: &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://ww...
+2: &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+3: &lt;head&gt;
+4: &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-885...
+5: &lt;title&gt;IIS Windows Server&lt;/title&gt;</Paragraph>
+												</ContainerBlockElement>
+											</ContainerBlockElement>
+										</Paragraph>
+									</Paragraph>
+								</test>
+
+								<test id="http-generic-click-jacking" key="/" status="vulnerable-exploited">
+
+									<Paragraph>
+										<UnorderedList>
+											<ListItem>Running HTTP service</ListItem>
+										</UnorderedList>
+										<Paragraph>
+											<ContainerBlockElement>
+												<Paragraph>HTTP request to 
+													<URLLink LinkURL="http://44.238.29.244/" LinkTitle="http://44.238.29.244/"></URLLink>
+												</Paragraph>HTTP response code was an expected 200
+												<Paragraph preformat="true">1: text/html</Paragraph>
+												<Paragraph>HTTP header &#39;Content-Type&#39; was present and matched expectation</Paragraph>
+												<Paragraph>HTTP header &#39;Content-Security-Policy&#39; not present</Paragraph>
+												<Paragraph>HTTP header &#39;X-Frame-Options&#39; not present</Paragraph>
+												<ContainerBlockElement></ContainerBlockElement>
+											</ContainerBlockElement>
+										</Paragraph>
+									</Paragraph>
+								</test>
+
+								<test id="http-options-method-enabled" key="" status="vulnerable-exploited">
+
+									<Paragraph>
+										<Paragraph>OPTIONS method returned values including itself</Paragraph>
+									</Paragraph>
+								</test>
+							</tests>
+						</service>
+					</services>
+				</endpoint>
+			</endpoints>
+		</node>
+
+		<node address="44.228.249.3" status="alive">
+			<names>
+				<name>ec2-44-228-249-3.us-west-2.compute.amazonaws.com</name>
+			</names>
+			<fingerprints>
+				<os certainty="0.65" device-class="General" vendor="Linux" family="Linux" product="LINUX " version="2.6.32"/>
+				<os certainty="0.65" device-class="General" vendor="Linux" family="Linux" product="LINUX " version="4.4"/>
+				<os certainty="0.65" device-class="General" vendor="Linux" family="Linux" product="LINUX 2.6.32 OR 3.10" version="2.6.32"/>
+				<os certainty="0.63" device-class="General" vendor="Linux" family="Linux" product="LINUX 2.6.32 - 2.6.35" version="2.6.32"/>
+				<os certainty="0.62" device-class="General" vendor="Linux" family="Linux" product="LINUX 2.6.32 - 2.6.39" version="2.6.32"/>
+				<os certainty="0.61" device-class="General" vendor="Linux" family="Linux" product="LINUX 2.6.32 - 3.0" version="2.6.32"/>
+				<os certainty="0.61" device-class="General" vendor="Linux" family="Linux" product="LINUX 3.10 - 4.11" version="3.10"/>
+				<os certainty="0.61" device-class="General" vendor="Linux" family="Linux" product="LINUX 3.11 - 4.1" version="3.11"/>
+				<os certainty="0.61" device-class="General" vendor="Linux" family="Linux" product="LINUX 3.2 - 3.8" version="3.2"/>
+				<os certainty="0.61" device-class="General" vendor="Linux" family="Linux" product="LINUX 3.2 - 4.9" version="3.2"/>
+			</fingerprints>
+			<tests>
+				<test id="generic-icmp-timestamp" key="" status="vulnerable-exploited">
+
+					<Paragraph>
+						<Paragraph>Able to determine remote system time.</Paragraph>
+					</Paragraph>
+				</test>
+
+				<test id="generic-tcp-timestamp" key="" status="vulnerable-exploited">
+
+					<Paragraph>
+						<Paragraph>Able to determine system boot time.</Paragraph>
+					</Paragraph>
+				</test>
+			</tests>
+			<endpoints>
+				<endpoint protocol="tcp" port="80" status="open">
+					<services>
+						<service name="&lt;unknown&gt;">
+							<tests>
+							</tests>
+						</service>
+					</services>
+				</endpoint>
+			</endpoints>
+		</node>
+	</nodes>
+	<VulnerabilityDefinitions>
+		<vulnerability id="generic-icmp-timestamp" title="ICMP timestamp response" severity="1" pciSeverity="1" cvssScore="0.0" cvssVector="(AV:L/AC:L/Au:N/C:N/I:N/A:N)" published="19970801T000000000" added="20041101T000000000" modified="20230131T000000000">
+			<description>
+
+				<ContainerBlockElement>
+
+					<Paragraph>ICMP information such as (1) netmask and (2) timestamp is allowed from arbitrary hosts.</Paragraph>
+				</ContainerBlockElement>
+			</description>
+			<references>
+				<reference source="CVE">CVE-1999-0524</reference>
+				<reference source="OSVDB">95</reference>
+				<reference source="XF">306</reference>
+				<reference source="XF">322</reference>
+			</references>
+			<tags>
+				<tag>Network</tag>
+			</tags>
+			<solution>
+
+				<ContainerBlockElement>
+					<UnorderedList>
+						<ListItem>
+							<Paragraph>HP-UX</Paragraph>
+							<Paragraph>
+								<Paragraph>Execute the following command:</Paragraph>
+								<Paragraph preFormat="true">   ndd -set /dev/ip ip_respond_to_timestamp_broadcast 0</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Cisco IOS</Paragraph>
+							<Paragraph>
+								<Paragraph>Use ACLs to block ICMP types 13 and 14.  For example:</Paragraph>
+								<Paragraph preformat="true">   deny icmp any any 13</Paragraph>
+								<Paragraph preformat="true">   deny icmp any any 14</Paragraph>
+								<Paragraph>Note that it is generally preferable to use ACLs that block everything
+    by default and then selectively allow certain types of traffic in.  For
+    example, block everything and then only allow ICMP unreachable, ICMP
+    echo reply, ICMP time exceeded, and ICMP source quench:</Paragraph>
+								<Paragraph preformat="true">   permit icmp any any unreachable</Paragraph>
+								<Paragraph preformat="true">   permit icmp any any echo-reply</Paragraph>
+								<Paragraph preformat="true">   permit icmp any any time-exceeded</Paragraph>
+								<Paragraph preformat="true">   permit icmp any any source-quench</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>SGI Irix</Paragraph>
+							<Paragraph>
+								<Paragraph>IRIX does not offer a way to disable ICMP timestamp responses.
+    Therefore, you should block ICMP on the affected host using ipfilterd,
+    and/or block it at any external firewalls.</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Linux</Paragraph>
+							<Paragraph>
+								<Paragraph>Linux offers neither a sysctl nor a /proc/sys/net/ipv4 interface
+    to disable ICMP timestamp responses.  Therefore, you should block
+    ICMP on the affected host using iptables, and/or block it at the
+    firewall. For example:</Paragraph>
+								<Paragraph preformat="true">   ipchains -A input -p icmp --icmp-type timestamp-request -j DROP</Paragraph>
+								<Paragraph preformat="true">   ipchains -A output -p icmp --icmp-type timestamp-reply -j DROP</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows NT, Microsoft Windows NT Workstation, Microsoft Windows NT Server, Microsoft Windows NT Advanced Server, Microsoft Windows NT Server, Enterprise Edition, Microsoft Windows NT Server, Terminal Server Edition</Paragraph>
+							<Paragraph>
+								<Paragraph>Windows NT 4 does not provide a way to block ICMP packets.
+    Therefore, you should block them at the firewall.</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>OpenBSD</Paragraph>
+							<Paragraph>
+								<Paragraph>Set the &quot;net.inet.icmp.tstamprepl&quot; sysctl variable to 0.</Paragraph>
+								<Paragraph preformat="true">   sysctl -w net.inet.icmp.tstamprepl=0</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Cisco PIX</Paragraph>
+							<Paragraph>
+								<Paragraph>A properly configured PIX firewall should never respond to ICMP
+    packets on its external interface.  In PIX Software versions 4.1(6)
+    until 5.2.1, ICMP traffic to the PIX&#39;s internal interface is
+    permitted; the PIX cannot be configured to NOT respond.  Beginning in
+    PIX Software version 5.2.1, ICMP is still permitted on the internal
+    interface by default, but ICMP responses from its internal interfaces
+    can be disabled with the icmp command, as follows, where &lt;inside&gt;
+    is the name of the internal interface:</Paragraph>
+								<Paragraph preformat="true">   icmp deny any 13 &lt;inside&gt;</Paragraph>
+								<Paragraph preformat="true">   icmp deny any 14 &lt;inside&gt;</Paragraph>
+								<Paragraph>Don&#39;t forget to save the configuration when you are finished.</Paragraph>
+								<Paragraph>See Cisco&#39;s support document
+    
+									<URLLink LinkURL="http://www.cisco.com/warp/public/110/31.html" href="http://www.cisco.com/warp/public/110/31.html" LinkTitle="http://www.cisco.com/warp/public/110/31.html">Handling ICMP Pings with the PIX Firewall</URLLink>
+    for more information.</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Sun Solaris</Paragraph>
+							<Paragraph>
+								<Paragraph>Execute the following commands:</Paragraph>
+								<Paragraph preformat="true">   /usr/sbin/ndd -set /dev/ip ip_respond_to_timestamp 0</Paragraph>
+								<Paragraph preformat="true">   /usr/sbin/ndd -set /dev/ip ip_respond_to_timestamp_broadcast 0</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows 2000, Microsoft Windows 2000 Professional, Microsoft Windows 2000 Server, Microsoft Windows 2000 Advanced Server, Microsoft Windows 2000 Datacenter Server</Paragraph>
+							<Paragraph>
+								<Paragraph>Use the IPSec filter feature to define and apply an IP filter list
+    that blocks ICMP types 13 and 14.  Note that the standard TCP/IP
+    blocking capability under the &quot;Networking and Dialup
+    Connections&quot; control panel is NOT capable of blocking ICMP (only
+    TCP and UDP). The IPSec filter features, while they may seem strictly
+    related to the IPSec standards, will allow you to selectively block
+    these ICMP packets.  See
+    
+									<URLLink LinkURL="http://support.microsoft.com/kb/313190" href="http://support.microsoft.com/kb/313190" LinkTitle="http://support.microsoft.com/kb/313190"></URLLink>
+    for more information.</Paragraph>
+								<Paragraph>The easiest and most effective solution is to configure your
+    firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows XP, Microsoft Windows XP Home, Microsoft Windows XP Professional, Microsoft Windows Server 2003, Microsoft Windows Server 2003, Standard Edition, Microsoft Windows Server 2003, Enterprise Edition, Microsoft Windows Server 2003, Datacenter Edition, Microsoft Windows Server 2003, Web Edition, Microsoft Windows Small Business Server 2003</Paragraph>
+							<Paragraph>
+								<Paragraph>ICMP timestamp responses can be disabled by deselecting the &quot;allow incoming timestamp request&quot;
+       option in the ICMP configuration panel of Windows Firewall.</Paragraph>
+								<OrderedList>
+									<ListItem>Go to the Network Connections control panel.</ListItem>
+									<ListItem>Right click on the network adapter and select &quot;properties&quot;, or select the internet adapter and select File-&gt;Properties.</ListItem>
+									<ListItem>Select the &quot;Advanced&quot; tab.</ListItem>
+									<ListItem>In the Windows Firewall box, select &quot;Settings&quot;.</ListItem>
+									<ListItem>Select the &quot;General&quot; tab.</ListItem>
+									<ListItem>Enable the firewall by selecting the &quot;on (recommended)&quot; option.</ListItem>
+									<ListItem>Select the &quot;Advanced&quot; tab.</ListItem>
+									<ListItem>In the ICMP box, select &quot;Settings&quot;.</ListItem>
+									<ListItem>Deselect (uncheck) the &quot;Allow incoming timestamp request&quot; option.</ListItem>
+									<ListItem>Select &quot;OK&quot; to exit the ICMP Settings dialog and save the settings.</ListItem>
+									<ListItem>Select &quot;OK&quot; to exit the Windows Firewall dialog and save the settings.</ListItem>
+									<ListItem>Select &quot;OK&quot; to exit the internet adapter dialog.</ListItem>
+								</OrderedList>
+								<Paragraph>For more information, see:
+    
+									<URLLink LinkURL="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true" href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true" LinkTitle="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true"></URLLink>
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows Vista, Microsoft Windows Vista Home, Basic Edition, Microsoft Windows Vista Home, Basic N Edition, Microsoft Windows Vista Home, Premium Edition, Microsoft Windows Vista Ultimate Edition, Microsoft Windows Vista Enterprise Edition, Microsoft Windows Vista Business Edition, Microsoft Windows Vista Business N Edition, Microsoft Windows Vista Starter Edition, Microsoft Windows Server 2008, Microsoft Windows Server 2008 Standard Edition, Microsoft Windows Server 2008 Enterprise Edition, Microsoft Windows Server 2008 Datacenter Edition, Microsoft Windows Server 2008 HPC Edition, Microsoft Windows Server 2008 Web Edition, Microsoft Windows Server 2008 Storage Edition, Microsoft Windows Small Business Server 2008, Microsoft Windows Essential Business Server 2008</Paragraph>
+							<Paragraph>
+								<Paragraph>ICMP timestamp responses can be disabled via the netsh command line utility.</Paragraph>
+								<OrderedList>
+									<ListItem>Go to the Windows Control Panel.</ListItem>
+									<ListItem>Select &quot;Windows Firewall&quot;.</ListItem>
+									<ListItem>In the Windows Firewall box, select &quot;Change Settings&quot;.</ListItem>
+									<ListItem>Enable the firewall by selecting the &quot;on (recommended)&quot; option.</ListItem>
+									<ListItem>Open a Command Prompt.</ListItem>
+									<ListItem>Enter &quot;netsh firewall set icmpsetting 13 disable&quot;</ListItem>
+								</OrderedList>
+								<Paragraph>For more information, see:
+    
+									<URLLink LinkURL="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true" href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true" LinkTitle="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/hnw_understanding_firewall.mspx?mfr=true"></URLLink>
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>
+								<Paragraph>Disable ICMP timestamp replies for the device. If the device does not support
+    this level of configuration, the easiest and most effective solution is to
+    configure your firewall to block incoming and outgoing ICMP packets with ICMP
+    types 13 (timestamp request) and 14 (timestamp response).</Paragraph>
+							</Paragraph>
+						</ListItem>
+					</UnorderedList>
+				</ContainerBlockElement>
+			</solution>
+		</vulnerability>
+
+		<vulnerability id="generic-tcp-timestamp" title="TCP timestamp response" severity="1" pciSeverity="1" cvssScore="0.0" cvssVector="(AV:N/AC:L/Au:N/C:N/I:N/A:N)" published="19970801T000000000" added="20110401T000000000" modified="20180321T000000000">
+			<description>
+
+				<ContainerBlockElement>
+
+					<Paragraph>
+      The remote host responded with a TCP timestamp.  The TCP timestamp response
+      can be used to approximate the remote host&#39;s uptime, potentially aiding in
+      further attacks.  Additionally, some operating systems can be fingerprinted
+      based on the behavior of their TCP timestamps.
+					</Paragraph>
+				</ContainerBlockElement>
+			</description>
+			<references>
+				<reference source="URL">http://uptime.netcraft.com</reference>
+				<reference source="URL">http://www.forensicswiki.org/wiki/TCP_timestamps</reference>
+				<reference source="URL">http://www.ietf.org/rfc/rfc1323.txt</reference>
+			</references>
+			<tags>
+				<tag>Network</tag>
+			</tags>
+			<solution>
+
+				<ContainerBlockElement>
+					<UnorderedList>
+						<ListItem>
+							<Paragraph>Cisco</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      Run the following command to disable TCP timestamps:
+								</Paragraph>
+								<Paragraph preformat="true">
+      no ip tcp timestamp
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>FreeBSD</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      Set the value of net.inet.tcp.rfc1323 to 0 by running the 
+      following command:
+								</Paragraph>
+								<Paragraph preformat="true">
+      sysctl -w net.inet.tcp.rfc1323=0
+								</Paragraph>
+								<Paragraph>
+      Additionally, put the following value in the default sysctl
+      configuration file, generally sysctl.conf:
+								</Paragraph>
+								<Paragraph preformat="true"> net.inet.tcp.rfc1323=0
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Linux</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      Set the value of net.ipv4.tcp_timestamps to 0 by running the 
+      following command:
+								</Paragraph>
+								<Paragraph preformat="true">
+      sysctl -w net.ipv4.tcp_timestamps=0
+								</Paragraph>
+								<Paragraph>
+      Additionally, put the following value in the default sysctl
+      configuration file, generally sysctl.conf:
+								</Paragraph>
+								<Paragraph preformat="true"> net.ipv4.tcp_timestamps=0
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>OpenBSD</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      Set the value of net.inet.tcp.rfc1323 to 0 by running the 
+      following command:
+								</Paragraph>
+								<Paragraph preformat="true">
+      sysctl -w net.inet.tcp.rfc1323=0
+								</Paragraph>
+								<Paragraph>
+      Additionally, put the following value in the default sysctl
+      configuration file, generally sysctl.conf:
+								</Paragraph>
+								<Paragraph preformat="true"> net.inet.tcp.rfc1323=0
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows NT, Microsoft Windows NT Workstation, Microsoft Windows NT Server, Microsoft Windows NT Advanced Server, Microsoft Windows NT Server, Enterprise Edition, Microsoft Windows NT Server, Terminal Server Edition, Microsoft Windows 95, Microsoft Windows 98, Microsoft Windows 98SE, Microsoft Windows ME, Microsoft Windows 2000, Microsoft Windows 2000 Professional, Microsoft Windows 2000 Server, Microsoft Windows 2000 Advanced Server, Microsoft Windows 2000 Datacenter Server, Microsoft Windows XP, Microsoft Windows XP Home, Microsoft Windows XP Professional, Microsoft Windows XP Tablet PC Edition, Microsoft Windows CE, Microsoft Windows Server 2003, Microsoft Windows Server 2003, Standard Edition, Microsoft Windows Server 2003, Enterprise Edition, Microsoft Windows Server 2003, Datacenter Edition, Microsoft Windows Server 2003, Web Edition, Microsoft Windows Small Business Server 2003, Microsoft Windows Server 2003 R2, Microsoft Windows Server 2003 R2, Standard Edition, Microsoft Windows Server 2003 R2, Enterprise Edition, Microsoft Windows Server 2003 R2, Datacenter Edition, Microsoft Windows Server 2003 R2, Web Edition, Microsoft Windows Small Business Server 2003 R2, Microsoft Windows Server 2003 R2, Express Edition, Microsoft Windows Server 2003 R2, Workgroup Edition</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      Set the Tcp1323Opts value in the following key to 1:
+								</Paragraph>
+								<Paragraph preformat="true">
+      HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft Windows Server 2008, Microsoft Windows Server 2008 Standard Edition, Microsoft Windows Server 2008 Enterprise Edition, Microsoft Windows Server 2008 Datacenter Edition, Microsoft Windows Server 2008 HPC Edition, Microsoft Windows Server 2008 Web Edition, Microsoft Windows Server 2008 Storage Edition, Microsoft Windows Small Business Server 2008, Microsoft Windows Essential Business Server 2008, Microsoft Windows Server 2008 R2, Microsoft Windows Server 2008 R2, Standard Edition, Microsoft Windows Server 2008 R2, Enterprise Edition, Microsoft Windows Server 2008 R2, Datacenter Edition, Microsoft Windows Server 2008 R2, Web Edition, Microsoft Windows Server 2012, Microsoft Windows Server 2012 Standard Edition, Microsoft Windows Server 2012 Foundation Edition, Microsoft Windows Server 2012 Essentials Edition, Microsoft Windows Server 2012 Datacenter Edition, Microsoft Windows Storage Server 2012, Microsoft Windows Vista, Microsoft Windows Vista Home, Basic Edition, Microsoft Windows Vista Home, Basic N Edition, Microsoft Windows Vista Home, Premium Edition, Microsoft Windows Vista Ultimate Edition, Microsoft Windows Vista Enterprise Edition, Microsoft Windows Vista Business Edition, Microsoft Windows Vista Business N Edition, Microsoft Windows Vista Starter Edition, Microsoft Windows 7, Microsoft Windows 7 Home, Basic Edition, Microsoft Windows 7 Home, Basic N Edition, Microsoft Windows 7 Home, Premium Edition, Microsoft Windows 7 Home, Premium N Edition, Microsoft Windows 7 Ultimate Edition, Microsoft Windows 7 Ultimate N Edition, Microsoft Windows 7 Enterprise Edition, Microsoft Windows 7 Enterprise N Edition, Microsoft Windows 7 Professional Edition, Microsoft Windows 7 Starter Edition, Microsoft Windows 7 Starter N Edition, Microsoft Windows 8, Microsoft Windows 8 Enterprise Edition, Microsoft Windows 8 Professional Edition, Microsoft Windows 8 RT, Microsoft Windows Longhorn Server Beta</Paragraph>
+							<Paragraph>
+								<Paragraph>
+      TCP timestamps cannot be reliably disabled on this OS.  If TCP timestamps present enough of a risk, put a firewall capable of blocking TCP timestamp packets in front of the affected assets.
+								</Paragraph>
+							</Paragraph>
+						</ListItem>
+					</UnorderedList>
+				</ContainerBlockElement>
+			</solution>
+		</vulnerability>
+
+		<vulnerability id="http-generic-click-jacking" title="Click Jacking" severity="4" pciSeverity="3" cvssScore="4.3" cvssVector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" published="20080917T000000000" added="20140718T000000000" modified="20140718T000000000">
+			<description>
+
+				<ContainerBlockElement>
+
+					<Paragraph>
+      Clickjacking, also known as a UI redress attack, is a method in which an attacker uses multiple transparent or
+      opaque layers to trick a user into clicking a button or link on a page other than the one they believe they are
+      clicking. Thus, the attacker is &quot;hijacking&quot; clicks meant for one page and routing the user to an illegitimate page.
+					</Paragraph>
+				</ContainerBlockElement>
+			</description>
+			<references>
+				<reference source="URL">https://www.owasp.org/index.php/Clickjacking</reference>
+			</references>
+			<tags>
+				<tag>HTTP</tag>
+				<tag>OWASP_2010</tag>
+				<tag>OWASP_2013</tag>
+				<tag>Web</tag>
+				<tag>Web Spider</tag>
+			</tags>
+			<solution>
+
+				<ContainerBlockElement>
+					<Paragraph>
+						<Paragraph>
+         Send the HTTP response headers with X-Frame-Options that instruct the browser to restrict framing where it is not allowed.
+						</Paragraph>
+					</Paragraph>
+				</ContainerBlockElement>
+			</solution>
+		</vulnerability>
+
+		<vulnerability id="http-iis-default-install-page" title="Microsoft IIS default installation/welcome page installed" severity="5" pciSeverity="3" cvssScore="5.0" cvssVector="(AV:N/AC:L/Au:N/C:P/I:N/A:N)" published="20050421T000000000" added="20050421T000000000" modified="20131204T000000000">
+			<description>
+
+				<ContainerBlockElement>
+
+					<Paragraph>The IIS default installation or &quot;Welcome&quot; page is installed
+      on this server.  This usually indicates a newly installed server
+      which has not yet been configured properly and which may not be
+      known about.</Paragraph>
+
+
+					<Paragraph>In many cases, IIS is installed by default and the user
+      may not be aware that the web server is running.  These servers
+      are rarely patched and rarely monitored, providing hackers with
+      a convenient target that is not likely to trip any alarms.</Paragraph>
+				</ContainerBlockElement>
+			</description>
+			<references>
+				<reference source="OSVDB">2117</reference>
+			</references>
+			<tags>
+				<tag>HTTP</tag>
+				<tag>Microsoft</tag>
+				<tag>Microsoft IIS</tag>
+				<tag>Web</tag>
+			</tags>
+			<solution>
+
+				<ContainerBlockElement>
+					<Paragraph>
+						<Paragraph>
+        If this server is required to provide necessary functionality, then the
+        default page should be replaced with relevant content.  Otherwise, this
+        server should be removed from the network, following the security
+        principle of minimum complexity.
+						</Paragraph>
+						<Paragraph>
+        If the server is not needed, it can be disabled in the following way: in the
+        Services window of the Control Panel&#39;s Administrative Tools section,
+        right-click on the &#39;World Wide Web Server&#39; entry and select &#39;Stop&#39;.  Set its
+        startup type to &#39;Manual&#39; so that it does not restart if the machine is
+        rebooted (this is done by selecting &#39;Properties&#39; in the right-click menu).
+						</Paragraph>
+					</Paragraph>
+				</ContainerBlockElement>
+			</solution>
+		</vulnerability>
+
+		<vulnerability id="http-options-method-enabled" title="HTTP OPTIONS Method Enabled" severity="3" pciSeverity="2" cvssScore="2.6" cvssVector="(AV:N/AC:H/Au:N/C:P/I:N/A:N)" published="20051007T000000000" added="20180828T000000000" modified="20190115T000000000">
+			<description>
+
+				<ContainerBlockElement>
+
+					<Paragraph>Web servers that respond to the OPTIONS HTTP method expose what other methods are supported by the web server, allowing attackers to narrow and intensify their efforts.</Paragraph>
+				</ContainerBlockElement>
+			</description>
+			<references>
+				<reference source="URL">https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)</reference>
+			</references>
+			<tags>
+				<tag>HTTP</tag>
+				<tag>Web</tag>
+			</tags>
+			<solution>
+
+				<ContainerBlockElement>
+					<UnorderedList>
+						<ListItem>
+							<Paragraph>
+								<Paragraph>Disable HTTP OPTIONS method on your web server. Refer to your web server&#39;s instruction manual on how to do this.</Paragraph>
+							</Paragraph>
+							<Paragraph>
+								<Paragraph>Web servers that respond to the OPTIONS HTTP method expose what other methods are supported by the web server, allowing attackers to narrow and intensify their efforts.</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Apache HTTPD</Paragraph>
+							<Paragraph>
+								<Paragraph>Disable the OPTIONS method by including the following in the Apache configuration:</Paragraph>
+								<Paragraph preformat="true">
+&lt;Limit OPTIONS&gt;
+  Order deny,allow
+  Deny from all
+&lt;/Limit&gt;</Paragraph>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>Microsoft IIS</Paragraph>
+							<Paragraph>
+								<Paragraph>Disable the OPTIONS method by doing the following in the IIS manager</Paragraph>
+								<OrderedList>
+									<ListItem>Select relevent site</ListItem>
+									<ListItem>Select Request filtering and change to HTTP verb tab</ListItem>
+									<ListItem>Select Deny Verb from the actions pane</ListItem>
+									<ListItem>Type OPTIONS into the provided text box and press OK</ListItem>
+								</OrderedList>
+							</Paragraph>
+						</ListItem>
+						<ListItem>
+							<Paragraph>nginx nginx</Paragraph>
+							<Paragraph>
+								<Paragraph>Disable the OPTIONS method by adding the following line to your server block, you can add other HTTP methods to be allowed to run after POST</Paragraph>
+								<Paragraph preformat="true">limit_except GET POST { deny  all; }</Paragraph>
+							</Paragraph>
+						</ListItem>
+					</UnorderedList>
+				</ContainerBlockElement>
+			</solution>
+		</vulnerability>
+	</VulnerabilityDefinitions>
+</NexposeReport>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE niktoscan SYSTEM "docs/nikto.dtd">
+<niktoscan>
+<niktoscan hoststest="0" options="-h http://testphp.vulnweb.com -o /home/ubuntu/hackers_nikto0.xml" version="2.1.6" scanstart="Mon May  9 10:54:21 2022" scanend="Thu Jan  1 00:00:00 1970" scanelapsed=" seconds" nxmlversion="1.2">
+
+<scandetails targetip="44.228.249.3" targethostname="testphp.vulnweb.com" targetport="80" targetbanner="nginx/1.19.0" starttime="2022-05-09 10:54:22" sitename="http://testphp.vulnweb.com:80/" siteip="http://44.228.249.3:80/" hostheader="testphp.vulnweb.com" errors="0" checks="6955">
+
+
+<item id="999986" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[Retrieved x-powered-by header: PHP/5.6.40-38+ubuntu20.04.1+deb.sury.org+1]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+</item>
+
+<item id="999957" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[The anti-clickjacking X-Frame-Options header is not present.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+</item>
+
+<item id="999103" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type.]]></description>
+<uri><![CDATA[/]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/]]></iplink>
+</item>
+
+<item id="999982" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[/clientaccesspolicy.xml contains a full wildcard entry. See http://msdn.microsoft.com/en-us/library/cc197955(v=vs.95).aspx]]></description>
+<uri><![CDATA[/clientaccesspolicy.xml]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/clientaccesspolicy.xml]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/clientaccesspolicy.xml]]></iplink>
+</item>
+
+<item id="999981" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[/clientaccesspolicy.xml contains 12 lines which should be manually viewed for improper domains or wildcards.]]></description>
+<uri><![CDATA[/clientaccesspolicy.xml]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/clientaccesspolicy.xml]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/clientaccesspolicy.xml]]></iplink>
+</item>
+
+<item id="999975" osvdbid="0" osvdblink="" method="GET">
+<description><![CDATA[/crossdomain.xml contains a full wildcard entry. See http://jeremiahgrossman.blogspot.com/2008/05/crossdomainxml-invites-cross-site.html]]></description>
+<uri><![CDATA[/crossdomain.xml]]></uri>
+<namelink><![CDATA[http://testphp.vulnweb.com:80/crossdomain.xml]]></namelink>
+<iplink><![CDATA[http://44.228.249.3:80/crossdomain.xml]]></iplink>
+</item>
+
+<statistics elapsed="22" itemsfound="6" itemstested="6955" endtime="2022-05-09 10:54:44" />
+</scandetails>
+
+</niktoscan>
+
+
+</niktoscan>

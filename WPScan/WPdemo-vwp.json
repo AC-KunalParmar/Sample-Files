@@ -1,0 +1,330 @@
+{
+  "banner": {
+    "description": "WordPress Security Scanner by the WPScan Team",
+    "version": "3.8.25",
+    "authors": [
+      "@_WPScan_",
+      "@ethicalhack3r",
+      "@erwan_lr",
+      "@firefart"
+    ],
+    "sponsor": "Sponsored by Automattic - https://automattic.com/"
+  },
+  "start_time": 1716830197,
+  "start_memory": 52412416,
+  "target_url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/",
+  "target_ip": "40.121.45.0",
+  "effective_url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/",
+  "interesting_findings": [
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/",
+      "to_s": "Headers",
+      "type": "headers",
+      "found_by": "Headers (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+        "Server: Apache/2.4.7 (Ubuntu)",
+        "X-Powered-By: PHP/5.5.9-1ubuntu4.29",
+        "SecretHeader: SecretValue",
+        "via: Squid 1.0.0"
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/robots.txt",
+      "to_s": "robots.txt found: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/robots.txt",
+      "type": "robots_txt",
+      "found_by": "Robots Txt (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/searchreplacedb2.php",
+      "to_s": "Search Replace DB script found: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/searchreplacedb2.php",
+      "type": "search_replace_db2",
+      "found_by": "Search Replace Db2 (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "https://interconnectit.com/products/search-and-replace-for-wordpress-databases/"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/xmlrpc.php",
+      "to_s": "XML-RPC seems to be enabled: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/xmlrpc.php",
+      "type": "xmlrpc",
+      "found_by": "Headers (Passive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+        "Link Tag (Passive Detection)": {
+          "confidence": 30
+        },
+        "Direct Access (Aggressive Detection)": {
+          "confidence": 100
+        }
+      },
+      "references": {
+        "url": [
+          "http://codex.wordpress.org/XML-RPC_Pingback_API"
+        ],
+        "metasploit": [
+          "auxiliary/scanner/http/wordpress_ghost_scanner",
+          "auxiliary/dos/http/wordpress_xmlrpc_dos",
+          "auxiliary/scanner/http/wordpress_xmlrpc_login",
+          "auxiliary/scanner/http/wordpress_pingback_access"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/readme.html",
+      "to_s": "WordPress readme found: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/readme.html",
+      "type": "readme",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/debug.log",
+      "to_s": "Debug Log found: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/debug.log",
+      "type": "debug_log",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "https://codex.wordpress.org/Debugging_in_WordPress"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    },
+    {
+      "url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-cron.php",
+      "to_s": "The external WP-Cron seems to be enabled: http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-cron.php",
+      "type": "wp_cron",
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 60,
+      "confirmed_by": {
+
+      },
+      "references": {
+        "url": [
+          "https://www.iplocation.net/defend-wordpress-from-ddos",
+          "https://github.com/wpscanteam/wpscan/issues/1299"
+        ]
+      },
+      "interesting_entries": [
+
+      ]
+    }
+  ],
+  "version": {
+    "number": "4.2.37",
+    "release_date": "2024-01-30",
+    "status": "outdated",
+    "found_by": "Rss Generator (Passive Detection)",
+    "confidence": 100,
+    "interesting_entries": [
+      "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/index.php/feed/, <generator>https://wordpress.org/?v=4.2.37</generator>",
+      "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/index.php/comments/feed/, <generator>https://wordpress.org/?v=4.2.37</generator>"
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+
+    ]
+  },
+  "main_theme": {
+    "slug": "twentyfifteen",
+    "location": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/themes/twentyfifteen/",
+    "latest_version": "3.7",
+    "last_updated": "2024-04-02T00:00:00.000Z",
+    "outdated": true,
+    "readme_url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/themes/twentyfifteen/readme.txt",
+    "directory_listing": false,
+    "error_log_url": null,
+    "style_url": "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/themes/twentyfifteen/style.css?ver=4.2.37",
+    "style_name": "Twenty Fifteen",
+    "style_uri": "https://wordpress.org/themes/twentyfifteen/",
+    "description": "Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.",
+    "author": "the WordPress team",
+    "author_uri": "https://wordpress.org/",
+    "template": null,
+    "license": "GNU General Public License v2 or later",
+    "license_uri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "tags": "black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready",
+    "text_domain": "twentyfifteen",
+    "found_by": "Css Style In Homepage (Passive Detection)",
+    "confidence": 70,
+    "interesting_entries": [
+
+    ],
+    "confirmed_by": {
+
+    },
+    "vulnerabilities": [
+
+    ],
+    "version": {
+      "number": "1.1",
+      "confidence": 80,
+      "found_by": "Style (Passive Detection)",
+      "interesting_entries": [
+        "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-content/themes/twentyfifteen/style.css?ver=4.2.37, Match: 'Version: 1.1'"
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "parents": [
+
+    ]
+  },
+  "plugins": {
+
+  },
+  "themes": {
+
+  },
+  "timthumbs": {
+
+  },
+  "config_backups": {
+    "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-config.old": {
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-config.php.save": {
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-config.php~": {
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+
+      }
+    },
+    "http://ip172-18-0-35-cpabto291nsg00ab1v3g-80.direct.labs.play-with-docker.com/wp-config.txt": {
+      "found_by": "Direct Access (Aggressive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+
+      }
+    }
+  },
+  "db_exports": {
+
+  },
+  "medias": {
+
+  },
+  "users": {
+    "trh": {
+      "id": null,
+      "found_by": "Author Posts - Author Pattern (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Author Id Brute Forcing - Author Pattern (Aggressive Detection)": {
+          "confidence": 100,
+          "interesting_entries": [
+
+          ]
+        },
+        "Login Error Messages (Aggressive Detection)": {
+          "confidence": 100,
+          "interesting_entries": [
+
+          ]
+        }
+      }
+    },
+    "TRH": {
+      "id": null,
+      "found_by": "Rss Generator (Passive Detection)",
+      "confidence": 100,
+      "interesting_entries": [
+
+      ],
+      "confirmed_by": {
+        "Login Error Messages (Aggressive Detection)": {
+          "confidence": 100,
+          "interesting_entries": [
+
+          ]
+        }
+      }
+    }
+  },
+  "vuln_api": {
+    "plan": "free",
+    "requests_done_during_scan": 2,
+    "requests_remaining": "Unlimited"
+  },
+  "stop_time": 1716830475,
+  "elapsed": 278,
+  "requests_done": 3615,
+  "cached_requests": 12,
+  "data_sent": 1428735,
+  "data_sent_humanised": "1.363 MB",
+  "data_received": 844617,
+  "data_received_humanised": "824.821 KB",
+  "used_memory": 158154752,
+  "used_memory_humanised": "150.828 MB"
+}

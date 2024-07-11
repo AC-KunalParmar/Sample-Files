@@ -1,0 +1,346 @@
+{
+  "findings": [
+    {
+      "resource": {
+        "id": "vl_3sP2RCWWUajc3oRXmbQ4j9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "need_fix"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "vl_3sP2RCWWUajc3oRXmbQj9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "need_fix"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "vl_3sP2RCWWUajc3oXmbQ4j9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "fixed"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "vl_3sP2RCWjc3oRXmbQ4j9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "need_fix"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "vl_3sP2RCWWUajcoRXmbQ4j9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "need_fix"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    },
+    {
+      "resource": {
+        "id": "vl_3sP2RCWWUa3oRXmbQ4j9",
+        "tag": "#PT3334_37",
+        "title": "XSS vulnerability",
+        "description": "Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts...",
+        "type_category": "Cross-Site Scripting (XSS)",
+        "labels": [
+          {
+            "name": "Your label"
+          }
+        ],
+        "impact": 5,
+        "likelihood": 4,
+        "severity": "high",
+        "affected_targets": [
+          "https://example.com",
+          "192.168.1.1"
+        ],
+        "proof_of_concept": "Here you can see...",
+        "suggested_fix": "Ensure this...",
+        "pentest_id": "pt_PEtv4dqnwGV2efZhLw3BM5",
+        "asset_id": "as_HcChCMueiPQQgvckmZtRSd",
+        "log": [
+          {
+            "action": "created",
+            "timestamp": "2021-04-01T15:13:24.322Z"
+          },
+          {
+            "action": "likelihood_changed",
+            "value": 4,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "impact_changed",
+            "value": 5,
+            "timestamp": "2021-04-01T15:14:05.856Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:06.757Z"
+          },
+          {
+            "action": "state_changed",
+            "value": "need_fix",
+            "timestamp": "2021-04-01T15:14:57.845Z"
+          }
+        ],
+        "state": "need_fix"
+      },
+      "links": {
+        "ui": {
+          "url": "https://api.cobalt.io/links/eyJ0eXBlIjoic29tZXRoaW5nIiwib3JnU2x1ZyI6ImNvYmFsdCIsInBlbnRlc3RUYWciOiJz="
+        }
+      }
+    }
+  ]
+}

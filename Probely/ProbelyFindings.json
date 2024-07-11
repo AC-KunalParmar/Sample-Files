@@ -1,0 +1,604 @@
+{
+  "vulnerabilities": [
+    {
+      "id": 1,
+      "target": {
+        "id": "3ypmfxSXj2sj",
+        "name": "",
+        "site": {
+          "id": "2htU1mVk6rch",
+          "name": "Demo",
+          "desc": "",
+          "url": "http://zero.webappsecurity.com",
+          "host": "zero.webappsecurity.com",
+          "has_form_login": false,
+          "form_login_url": "",
+          "form_login_check_pattern": "",
+          "form_login": null,
+          "has_sequence_login": false,
+          "has_sequence_navigation": false,
+          "has_basic_auth": false,
+          "basic_auth": {
+            "username": "",
+            "password": ""
+          },
+          "headers": null,
+          "cookies": null,
+          "whitelist": [
+
+          ],
+          "blacklist": [
+
+          ],
+          "changed": "2022-09-20T09:17:58.143866Z",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "auth_enabled": true,
+          "logout_condition": "any",
+          "stack": [
+            {
+              "id": "9zDO8kOsCaq1",
+              "name": "Java",
+              "desc": ""
+            },
+            {
+              "id": "ps68s3zFWc0Q",
+              "name": "Apache Tomcat",
+              "desc": ""
+            }
+          ],
+          "verified": false,
+          "verification_token": "7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11",
+          "verification_date": "2022-09-20T03:39:55.701302Z",
+          "verification_method": "dns_cname",
+          "verification_last_error": "The DNS query name does not exist: probely-7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11.webappsecurity.com.",
+          "api_scan_settings": null
+        },
+        "type": "free",
+        "desc": "",
+        "labels": [
+
+        ],
+        "has_assets": false,
+        "report_fileformat": "pdf",
+        "scanning_agent": null,
+        "teams": [
+
+        ],
+        "blackout_period": null
+      },
+      "scans": [
+        "3ttn1ZyinxqK"
+      ],
+      "labels": [
+
+      ],
+      "fix": "This problem can be fixed by sending the header **X-Content-Type-Options** with value **nosniff**, to force browsers to disable the content-type guessing (the sniffing).\r\n\r\nThe header should look this:\r\n\r\n\tX-Content-Type-Options: nosniff\r\n\r\nIt is normally easy to enable the header in the web server configuration file, but it can also be done at application level.",
+      "requests": [
+        {
+          "request": "```\nGET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (compatible; +https://probely.com/sos) ProbelyMRKT/0.1.0\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nHost: zero.webappsecurity.com\r\n\r\n\n```",
+          "response": "```\nHTTP/1.1 200 OK\r\nDate: Tue, 20 Sep 2022 09:18:10 GMT\r\nServer: Apache-Coyote/1.1\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Language: en-US\r\nTransfer-Encoding: chunked\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Zero - Personal Banking - Loans - Credit Cards</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\r\n\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/bootstrap.min.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/font-awesome.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/main.css\"/>\r\n\r\n    <script src=\"/resources/js/jquery-1.8.2.min.js\"></script>\r\n        <script src=\"/resources/js/bootstrap.min.js\"></script>\r\n\r\n    <script src=\"/resources/js/placeholders.min.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        Placeholders.init({\r\n            live: true, // Apply to future and modified elements too\r\n            hideOnFocus: true // Hide the placeholder when the element receives focus\r\n        });\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {\r\n            if (xhr.status == 403) {\r\n                window.location.reload();\r\n            }\r\n        });\r\n    </script>\r\n</head>\r\n<body>\r\n    <div class=\"wrapper\">\r\n    <div class=\"navbar navbar-fixed-top\">\r\n        <div class=\"navbar-inner\">\r\n            <div class=\"container\">\r\n                <a href=\"/index.html\" class=\"brand\">Zero Bank</a>\r\n\r\n                <div>\r\n                    <ul class=\"nav float-right\">\r\n                        <li>    <form action=\"/search.html\"\r\n          class=\"navbar-search pull-right\" style=\"padding-right: 20px\">\r\n        <input type=\"text\" id=\"searchTerm\" name=\"searchTerm\" class=\"search-query\" placeholder=\"Search\"/>\r\n    </form>\r\n</li>\r\n                        <li>\r\n                            <button id=\"signin_button\" type=\"button\" class=\"signin btn btn-info\">\r\n                                <i class=\"icon-signin\"></i>Signin\r\n                            </button>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function() {\r\n            var path = \"/\";\r\n\r\n            $(\"#signin_button\").click(function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + \"login\" + \".html\";\r\n            });\r\n        });\r\n    </script>\r\n\r\n        <div class=\"container\">\r\n            <div class=\"top_offset\">\r\n                    <div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"nav\" class=\"clearfix\">\r\n            <ul id=\"pages-nav\">\r\n                <li id=\"homeMenu\"><div><strong>Home</strong></div></li>\r\n                <li id=\"onlineBankingMenu\"><div><strong>Online Banking</strong></div></li>\r\n                <li id=\"feedback\"><div><strong>Feedback</strong></div></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function () {\r\n            var path = \"/\";\r\n\r\n            var featureIdToName = {\r\n                \"index\": \"homeMenu\",\r\n                \"online-banking\": \"onlineBankingMenu\",\r\n                \"feedback\": \"feedback\"\r\n            };\r\n\r\n            if (document.location.href.match(\".*\" + path + \"$\") != null) {\r\n                $(\"#homeMenu\").addClass(\"active\");\r\n            } else {\r\n                $.each(featureIdToName, function(featureId, featureName) {\r\n                    if (document.location.href.indexOf(featureId + \".html\") >= 0) {\r\n                        $(\"#\" + featureName).addClass(\"active\");\r\n                    }\r\n                });\r\n            }\r\n\r\n            $.each(featureIdToName, function(featureId, featureName) {\r\n                $(\"#nav\").on(\"click\", \"li[id='\" + featureName + \"']\", function(event) {\r\n                    event.preventDefault();\r\n                    window.location.href = path + featureId + \".html\";\r\n                });\r\n            });\r\n        });\r\n    </script>\r\n                    </div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"carousel\" class=\"carousel slide\">\r\n            <div class=\"carousel-inner\">\r\n                <div class=\"active item\">\r\n                    <img src=\"/resources/img/main_carousel_1.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_2.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_3.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n             </div>\r\n            <a class=\"carousel-control custom left\" href=\"#carousel\" data-slide=\"prev\">&lsaquo;</a>\r\n            <a class=\"carousel-control custom right\" href=\"#carousel\" data-slide=\"next\">&rsaquo;</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<hr class=\"row-divider\"/>\r\n\r\n<div id=\"online_banking_features\" class=\"row divider\">\r\n    <div class=\"span3\">\r\n        <h4><i class=\"icon icon-bookmark\"></i> Online Banking</h4>\r\n         <p>Click the button below to view  online banking features.</p>\r\n        <a id=\"online-banking\" class=\"btn btn-small btn-info\">More Services</a>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"account_activity_link\"><i class=\"icon icon-user\"></i>Checking Account Activity</span></h4>\r\n            <p>Use Zero to view the most up-to-date listings of your deposits, withdrawals, interest payments, and a number of other useful transactions.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"transfer_funds_link\"><i class=\"icon icon-random\"></i>Transfer Funds</span></h4>\r\n            <p>Use Zero to safely and securely transfer funds between accounts. There is no hold placed on online money transfers, so your funds are available when you need them.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"money_map_link\"><i class=\"icon icon-list-alt\"></i>My Money Map</span></h4>\r\n             <p>Use Zero to set up and monitor your personalized money map. A money map is an easy-to-use online tool that helps you manage your finances efficiently. With Money Map, you can create a budget, sort your finances into spending and savings categories,  check the interest your accounts are earning, and gain new understanding of your patterns with the help of Zero’s clear charts and graphs.\r\n             </p>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function() {\r\n        $(\"#carousel\").carousel({ interval: false });\r\n\r\n        $(\"div\").on(\"click\", \"a[id='online-banking']\", function(event){\r\n            event.preventDefault();\r\n            window.location.href = \"/\" + \"online-banking\" + \".html\";\r\n        });\r\n\r\n        var path = \"/bank/\";\r\n        var featureIdToName = {\r\n            \"account_activity_link\": \"account-activity\",\r\n            \"transfer_funds_link\": \"transfer-funds\",\r\n            \"money_map_link\": \"money-map\"\r\n        }\r\n        $.each(featureIdToName, function(featureId, featureName) {\r\n            $(\"#online_banking_features\").on(\"click\", \"span[id='\" + featureId + \"']\", function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + featureName +\".html\";\r\n            });\r\n        });\r\n    });\r\n</script>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"clearfix push\"></div>\r\n    </div>\r\n\r\n<div class=\"extra\">\r\n    <div class=\"extra-inner\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"download_webinspect_link\">Download WebInspect</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"terms_of_use_link\">Terms of Use</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"contact_hp_link\">Contact Micro Focus</span></li>\r\n                        <li><span id=\"privacy_statement_link\">Privacy Statement</span></li>\r\n\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"disclaimer span12\">\r\n                    The Free Online Bank Web site is published by Micro Focus Fortify for the sole purpose of demonstrating\r\n                    the functionality and effectiveness of Micro Focus Fortify’s WebInspect products in detecting and reporting\r\n                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products\r\n                    and/or Web sites are purely coincidental. This site is provided \"as is\" without warranty of any kind,\r\n                    either express or implied. Micro Focus Fortify does not assume any risk in relation to your use of this Web site.\r\n                    Use of this Web site indicates that you have read and agree to Micro Focus Fortify’s Terms of Use found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>\r\n                    and Micro Focus Fortify’s Online Privacy Statement found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>.\r\n\r\n                    <br/><br/>\r\n\r\n                    Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function () {\r\n        var path = \"/\";\r\n\r\n        var attachClickHandler = function(selector, handler) {\r\n$(\".extra\").on('click', selector, handler);\r\n        }\r\n\r\n        var footerLinks = {\r\n            \"download_webinspect_link\": { absolute: true, page: \"https://software.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview\" },\r\n            \"contact_hp_link\" : { absolute: true, page: \"https://support.fortify.com\" },\r\n            \"privacy_statement_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/#privacy\" },\r\n            \"terms_of_use_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/\" }\r\n        };\r\n\r\n        $.each(footerLinks, function(linkId, link) {\r\n            attachClickHandler('span[id=\"' + linkId + '\"]', function(event) {\r\n                event.preventDefault();\r\n                if (link.absolute) {\r\n                    window.location.href = link.page;\r\n                } else {\r\n                    window.location.href = path + link.page + \".html\";\r\n                }\r\n            });\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n\n```"
+        }
+      ],
+      "evidence": "Response headers, missing the `X-Content-Type-Options` header:\n\n\n```\nDate: Tue, 20 Sep 2022 09:18:10 GMT\nServer: Apache-Coyote/1.1\nAccess-Control-Allow-Origin: *\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nTransfer-Encoding: chunked\n\n```\n\n",
+      "extra": "",
+      "definition": {
+        "id": "46qkgfaeRpHR",
+        "name": "Browser content sniffing allowed",
+        "desc": "The application allows browsers to try to mime-sniff the content-type of the responses. This means the browser may try to guess the content-type by looking at the response content, and render it in way it was not intended to. This behavior may lead to the execution of malicious code, for instance, to explore an XSS vulnerability.\r\n\r\nApplications should disable this behavior, forcing browsers to honor the content-type specified in the response. Without a specific content-type set browsers will default to render the content as text, turning XSS payloads innocuous.\r\n\r\nDisabling mime-sniffing should be seen as an extra layer of defense against XSS, and not as replacement of the recommended XSS prevention techniques."
+      },
+      "url": "http://zero.webappsecurity.com",
+      "path": "http://zero.webappsecurity.com",
+      "method": "get",
+      "insertion_point": "",
+      "parameter": "",
+      "value": "",
+      "params": {
+
+      },
+      "assignee": null,
+      "state": "notfixed",
+      "severity": 10,
+      "cvss_score": 4.7,
+      "cvss_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "last_found": "2022-09-20T09:18:16.622400Z",
+      "retesting": false,
+      "new": true,
+      "changed": "2022-09-20T09:18:16.649142Z",
+      "changed_by": {
+        "id": "fFayXxJ269nF",
+        "email": "probely@probe.ly",
+        "name": "Probely"
+      },
+      "comment": ""
+    },
+    {
+      "id": 2,
+      "target": {
+        "id": "3ypmfxSXj2sj",
+        "name": "",
+        "site": {
+          "id": "2htU1mVk6rch",
+          "name": "Demo",
+          "desc": "",
+          "url": "http://zero.webappsecurity.com",
+          "host": "zero.webappsecurity.com",
+          "has_form_login": false,
+          "form_login_url": "",
+          "form_login_check_pattern": "",
+          "form_login": null,
+          "has_sequence_login": false,
+          "has_sequence_navigation": false,
+          "has_basic_auth": false,
+          "basic_auth": {
+            "username": "",
+            "password": ""
+          },
+          "headers": null,
+          "cookies": null,
+          "whitelist": [
+
+          ],
+          "blacklist": [
+
+          ],
+          "changed": "2022-09-20T09:17:58.143866Z",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "auth_enabled": true,
+          "logout_condition": "any",
+          "stack": [
+            {
+              "id": "9zDO8kOsCaq1",
+              "name": "Java",
+              "desc": ""
+            },
+            {
+              "id": "ps68s3zFWc0Q",
+              "name": "Apache Tomcat",
+              "desc": ""
+            }
+          ],
+          "verified": false,
+          "verification_token": "7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11",
+          "verification_date": "2022-09-20T03:39:55.701302Z",
+          "verification_method": "dns_cname",
+          "verification_last_error": "The DNS query name does not exist: probely-7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11.webappsecurity.com.",
+          "api_scan_settings": null
+        },
+        "type": "free",
+        "desc": "",
+        "labels": [
+
+        ],
+        "has_assets": false,
+        "report_fileformat": "pdf",
+        "scanning_agent": null,
+        "teams": [
+
+        ],
+        "blackout_period": null
+      },
+      "scans": [
+        "3ttn1ZyinxqK"
+      ],
+      "labels": [
+
+      ],
+      "fix": "This problem can be fixed by sending the header **Referrer-Policy** with a secure and valid value.\r\nThere are different values available, but not all are considered secure. Please note that this header only supports one directive at a time. The following list explains each one and it is ordered from the safest to the least safe:\r\n\r\n* `no-referrer`: never send the header.\r\n* `same-origin`: send the full URL to requests to the same origin (exact scheme + domain)\r\n* `strict-origin`: send only the domain part of the URL, but sends nothing when downgrading to HTTP.\r\n* `origin`: similar to **strict-origin** without downgrade restriction.\r\n* `strict-origin-when-cross-origin`: send full URL within the same origin, but only the domain part when sending to another origin. It sends nothing when downgrading to HTTP.\r\n* `origin-when-cross-origin`: similar to **strict-origin-when-cross-origin** without the downgrade restriction.\r\n\r\nInsecure options:\r\n* `no-referrer-when-downgrade`: sends the full URL when the scheme does not change. It will send if both origins are, for instance, HTTP.\r\n* `unsafe-url`: always sent the full URL\r\n\r\nA possible, safe option is `strict-origin`, so the header would look like this:\r\n\r\n\tReferrer-Policy: strict-origin\r\n\r\nIt is normally easy to enable the header in the web server configuration file, but it can also be done at the application level.\r\n\r\n\r\nPlease note that the referrer header is written `referer`, with a single `r` but the referrer policy header is properly written, with `rr`: `Referrer-Policy`.",
+      "requests": [
+        {
+          "request": "```\nGET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (compatible; +https://probely.com/sos) ProbelyMRKT/0.1.0\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nHost: zero.webappsecurity.com\r\n\r\n\n```",
+          "response": "```\nHTTP/1.1 200 OK\r\nDate: Tue, 20 Sep 2022 09:18:10 GMT\r\nServer: Apache-Coyote/1.1\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Language: en-US\r\nTransfer-Encoding: chunked\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Zero - Personal Banking - Loans - Credit Cards</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\r\n\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/bootstrap.min.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/font-awesome.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/main.css\"/>\r\n\r\n    <script src=\"/resources/js/jquery-1.8.2.min.js\"></script>\r\n        <script src=\"/resources/js/bootstrap.min.js\"></script>\r\n\r\n    <script src=\"/resources/js/placeholders.min.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        Placeholders.init({\r\n            live: true, // Apply to future and modified elements too\r\n            hideOnFocus: true // Hide the placeholder when the element receives focus\r\n        });\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {\r\n            if (xhr.status == 403) {\r\n                window.location.reload();\r\n            }\r\n        });\r\n    </script>\r\n</head>\r\n<body>\r\n    <div class=\"wrapper\">\r\n    <div class=\"navbar navbar-fixed-top\">\r\n        <div class=\"navbar-inner\">\r\n            <div class=\"container\">\r\n                <a href=\"/index.html\" class=\"brand\">Zero Bank</a>\r\n\r\n                <div>\r\n                    <ul class=\"nav float-right\">\r\n                        <li>    <form action=\"/search.html\"\r\n          class=\"navbar-search pull-right\" style=\"padding-right: 20px\">\r\n        <input type=\"text\" id=\"searchTerm\" name=\"searchTerm\" class=\"search-query\" placeholder=\"Search\"/>\r\n    </form>\r\n</li>\r\n                        <li>\r\n                            <button id=\"signin_button\" type=\"button\" class=\"signin btn btn-info\">\r\n                                <i class=\"icon-signin\"></i>Signin\r\n                            </button>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function() {\r\n            var path = \"/\";\r\n\r\n            $(\"#signin_button\").click(function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + \"login\" + \".html\";\r\n            });\r\n        });\r\n    </script>\r\n\r\n        <div class=\"container\">\r\n            <div class=\"top_offset\">\r\n                    <div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"nav\" class=\"clearfix\">\r\n            <ul id=\"pages-nav\">\r\n                <li id=\"homeMenu\"><div><strong>Home</strong></div></li>\r\n                <li id=\"onlineBankingMenu\"><div><strong>Online Banking</strong></div></li>\r\n                <li id=\"feedback\"><div><strong>Feedback</strong></div></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function () {\r\n            var path = \"/\";\r\n\r\n            var featureIdToName = {\r\n                \"index\": \"homeMenu\",\r\n                \"online-banking\": \"onlineBankingMenu\",\r\n                \"feedback\": \"feedback\"\r\n            };\r\n\r\n            if (document.location.href.match(\".*\" + path + \"$\") != null) {\r\n                $(\"#homeMenu\").addClass(\"active\");\r\n            } else {\r\n                $.each(featureIdToName, function(featureId, featureName) {\r\n                    if (document.location.href.indexOf(featureId + \".html\") >= 0) {\r\n                        $(\"#\" + featureName).addClass(\"active\");\r\n                    }\r\n                });\r\n            }\r\n\r\n            $.each(featureIdToName, function(featureId, featureName) {\r\n                $(\"#nav\").on(\"click\", \"li[id='\" + featureName + \"']\", function(event) {\r\n                    event.preventDefault();\r\n                    window.location.href = path + featureId + \".html\";\r\n                });\r\n            });\r\n        });\r\n    </script>\r\n                    </div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"carousel\" class=\"carousel slide\">\r\n            <div class=\"carousel-inner\">\r\n                <div class=\"active item\">\r\n                    <img src=\"/resources/img/main_carousel_1.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_2.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_3.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n             </div>\r\n            <a class=\"carousel-control custom left\" href=\"#carousel\" data-slide=\"prev\">&lsaquo;</a>\r\n            <a class=\"carousel-control custom right\" href=\"#carousel\" data-slide=\"next\">&rsaquo;</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<hr class=\"row-divider\"/>\r\n\r\n<div id=\"online_banking_features\" class=\"row divider\">\r\n    <div class=\"span3\">\r\n        <h4><i class=\"icon icon-bookmark\"></i> Online Banking</h4>\r\n         <p>Click the button below to view  online banking features.</p>\r\n        <a id=\"online-banking\" class=\"btn btn-small btn-info\">More Services</a>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"account_activity_link\"><i class=\"icon icon-user\"></i>Checking Account Activity</span></h4>\r\n            <p>Use Zero to view the most up-to-date listings of your deposits, withdrawals, interest payments, and a number of other useful transactions.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"transfer_funds_link\"><i class=\"icon icon-random\"></i>Transfer Funds</span></h4>\r\n            <p>Use Zero to safely and securely transfer funds between accounts. There is no hold placed on online money transfers, so your funds are available when you need them.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"money_map_link\"><i class=\"icon icon-list-alt\"></i>My Money Map</span></h4>\r\n             <p>Use Zero to set up and monitor your personalized money map. A money map is an easy-to-use online tool that helps you manage your finances efficiently. With Money Map, you can create a budget, sort your finances into spending and savings categories,  check the interest your accounts are earning, and gain new understanding of your patterns with the help of Zero’s clear charts and graphs.\r\n             </p>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function() {\r\n        $(\"#carousel\").carousel({ interval: false });\r\n\r\n        $(\"div\").on(\"click\", \"a[id='online-banking']\", function(event){\r\n            event.preventDefault();\r\n            window.location.href = \"/\" + \"online-banking\" + \".html\";\r\n        });\r\n\r\n        var path = \"/bank/\";\r\n        var featureIdToName = {\r\n            \"account_activity_link\": \"account-activity\",\r\n            \"transfer_funds_link\": \"transfer-funds\",\r\n            \"money_map_link\": \"money-map\"\r\n        }\r\n        $.each(featureIdToName, function(featureId, featureName) {\r\n            $(\"#online_banking_features\").on(\"click\", \"span[id='\" + featureId + \"']\", function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + featureName +\".html\";\r\n            });\r\n        });\r\n    });\r\n</script>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"clearfix push\"></div>\r\n    </div>\r\n\r\n<div class=\"extra\">\r\n    <div class=\"extra-inner\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"download_webinspect_link\">Download WebInspect</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"terms_of_use_link\">Terms of Use</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"contact_hp_link\">Contact Micro Focus</span></li>\r\n                        <li><span id=\"privacy_statement_link\">Privacy Statement</span></li>\r\n\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"disclaimer span12\">\r\n                    The Free Online Bank Web site is published by Micro Focus Fortify for the sole purpose of demonstrating\r\n                    the functionality and effectiveness of Micro Focus Fortify’s WebInspect products in detecting and reporting\r\n                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products\r\n                    and/or Web sites are purely coincidental. This site is provided \"as is\" without warranty of any kind,\r\n                    either express or implied. Micro Focus Fortify does not assume any risk in relation to your use of this Web site.\r\n                    Use of this Web site indicates that you have read and agree to Micro Focus Fortify’s Terms of Use found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>\r\n                    and Micro Focus Fortify’s Online Privacy Statement found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>.\r\n\r\n                    <br/><br/>\r\n\r\n                    Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function () {\r\n        var path = \"/\";\r\n\r\n        var attachClickHandler = function(selector, handler) {\r\n$(\".extra\").on('click', selector, handler);\r\n        }\r\n\r\n        var footerLinks = {\r\n            \"download_webinspect_link\": { absolute: true, page: \"https://software.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview\" },\r\n            \"contact_hp_link\" : { absolute: true, page: \"https://support.fortify.com\" },\r\n            \"privacy_statement_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/#privacy\" },\r\n            \"terms_of_use_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/\" }\r\n        };\r\n\r\n        $.each(footerLinks, function(linkId, link) {\r\n            attachClickHandler('span[id=\"' + linkId + '\"]', function(event) {\r\n                event.preventDefault();\r\n                if (link.absolute) {\r\n                    window.location.href = link.page;\r\n                } else {\r\n                    window.location.href = path + link.page + \".html\";\r\n                }\r\n            });\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n\n```"
+        }
+      ],
+      "evidence": "Response headers, missing the `Referrer-Policy` header:\n\n\n```\nDate: Tue, 20 Sep 2022 09:18:10 GMT\nServer: Apache-Coyote/1.1\nAccess-Control-Allow-Origin: *\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nTransfer-Encoding: chunked\n\n```\n\n",
+      "extra": "",
+      "definition": {
+        "id": "TTmdzcaxWqxj",
+        "name": "Referrer policy not defined",
+        "desc": "The application does not prevent browsers from sending sensitive information to third party sites in the **referer** header.\r\n\r\nWithout a referrer policy, every time a user clicks a link that takes him to another origin (domain), the browser will add a **referer** header with the URL from which he is coming from. That URL may contain sensitive information, such as password recovery tokens or personal information, and it will be visible that other origin. For instance, if the user is at `example.com/password_recovery?unique_token=14f748d89d` and clicks a link to `example-analytics.com`, that origin will receive the complete password recovery URL in the headers and might be able to set the users password.\r\nThe same happens for requests made automatically by the application, such as XHR ones.\r\n\r\nApplications should set a secure referrer policy that prevents sensitive data from being sent to third party sites."
+      },
+      "url": "http://zero.webappsecurity.com",
+      "path": "http://zero.webappsecurity.com",
+      "method": "get",
+      "insertion_point": "",
+      "parameter": "",
+      "value": "",
+      "params": {
+
+      },
+      "assignee": null,
+      "state": "notfixed",
+      "severity": 10,
+      "cvss_score": 3.1,
+      "cvss_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+      "last_found": "2022-09-20T09:18:17.240184Z",
+      "retesting": false,
+      "new": true,
+      "changed": "2022-09-20T09:18:17.295228Z",
+      "changed_by": {
+        "id": "fFayXxJ269nF",
+        "email": "probely@probe.ly",
+        "name": "Probely"
+      },
+      "comment": ""
+    },
+    {
+      "id": 3,
+      "target": {
+        "id": "3ypmfxSXj2sj",
+        "name": "",
+        "site": {
+          "id": "2htU1mVk6rch",
+          "name": "Demo",
+          "desc": "",
+          "url": "http://zero.webappsecurity.com",
+          "host": "zero.webappsecurity.com",
+          "has_form_login": false,
+          "form_login_url": "",
+          "form_login_check_pattern": "",
+          "form_login": null,
+          "has_sequence_login": false,
+          "has_sequence_navigation": false,
+          "has_basic_auth": false,
+          "basic_auth": {
+            "username": "",
+            "password": ""
+          },
+          "headers": null,
+          "cookies": null,
+          "whitelist": [
+
+          ],
+          "blacklist": [
+
+          ],
+          "changed": "2022-09-20T09:17:58.143866Z",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "auth_enabled": true,
+          "logout_condition": "any",
+          "stack": [
+            {
+              "id": "9zDO8kOsCaq1",
+              "name": "Java",
+              "desc": ""
+            },
+            {
+              "id": "ps68s3zFWc0Q",
+              "name": "Apache Tomcat",
+              "desc": ""
+            }
+          ],
+          "verified": false,
+          "verification_token": "7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11",
+          "verification_date": "2022-09-20T03:39:55.701302Z",
+          "verification_method": "dns_cname",
+          "verification_last_error": "The DNS query name does not exist: probely-7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11.webappsecurity.com.",
+          "api_scan_settings": null
+        },
+        "type": "free",
+        "desc": "",
+        "labels": [
+
+        ],
+        "has_assets": false,
+        "report_fileformat": "pdf",
+        "scanning_agent": null,
+        "teams": [
+
+        ],
+        "blackout_period": null
+      },
+      "scans": [
+        "3ttn1ZyinxqK"
+      ],
+      "labels": [
+
+      ],
+      "fix": "The recommended way to prevent clickjacking is to send a header that instructs the browser to not allow arbitrary framing, typically from other domains.\r\n\r\nThe current recommendation is to use the Content-Security-Policy HTTP header (CSP) with a **frame-ancestors** directive. This header obsoletes the X-Frame-Options HTTP header.\r\n\r\nTo use CSP you need the following header:\r\n\r\n\tContent-Security-Policy: frame-ancestors 'none'\r\n\r\nThe header might contain more directives, and there are other less strict options for the **frame-ancestors** directive.\r\n\r\n<br>\r\nIf you want to use X-Frame-Options, send the proper HTTP header, with one of the following directives:\r\n\r\n\tX-Frame-Options: DENY  \r\n\tX-Frame-Options: SAMEORIGIN\r\n\r\nA third directive, **ALLOW-FROM** is no longer supported by modern browsers. \r\n\r\nIf you specify **DENY**, all attempts to load the page in a frame will fail. **SAMEORIGIN** will allow the page to be loaded in the site including it in a frame is the same as the one serving the page. \r\n\r\nThe most common option is **DENY** when there is no need to load your pages on some other site.",
+      "requests": [
+        {
+          "request": "```\nGET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (compatible; +https://probely.com/sos) ProbelyMRKT/0.1.0\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nHost: zero.webappsecurity.com\r\n\r\n\n```",
+          "response": "```\nHTTP/1.1 200 OK\r\nDate: Tue, 20 Sep 2022 09:18:10 GMT\r\nServer: Apache-Coyote/1.1\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Language: en-US\r\nTransfer-Encoding: chunked\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Zero - Personal Banking - Loans - Credit Cards</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\r\n\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/bootstrap.min.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/font-awesome.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/main.css\"/>\r\n\r\n    <script src=\"/resources/js/jquery-1.8.2.min.js\"></script>\r\n        <script src=\"/resources/js/bootstrap.min.js\"></script>\r\n\r\n    <script src=\"/resources/js/placeholders.min.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        Placeholders.init({\r\n            live: true, // Apply to future and modified elements too\r\n            hideOnFocus: true // Hide the placeholder when the element receives focus\r\n        });\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {\r\n            if (xhr.status == 403) {\r\n                window.location.reload();\r\n            }\r\n        });\r\n    </script>\r\n</head>\r\n<body>\r\n    <div class=\"wrapper\">\r\n    <div class=\"navbar navbar-fixed-top\">\r\n        <div class=\"navbar-inner\">\r\n            <div class=\"container\">\r\n                <a href=\"/index.html\" class=\"brand\">Zero Bank</a>\r\n\r\n                <div>\r\n                    <ul class=\"nav float-right\">\r\n                        <li>    <form action=\"/search.html\"\r\n          class=\"navbar-search pull-right\" style=\"padding-right: 20px\">\r\n        <input type=\"text\" id=\"searchTerm\" name=\"searchTerm\" class=\"search-query\" placeholder=\"Search\"/>\r\n    </form>\r\n</li>\r\n                        <li>\r\n                            <button id=\"signin_button\" type=\"button\" class=\"signin btn btn-info\">\r\n                                <i class=\"icon-signin\"></i>Signin\r\n                            </button>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function() {\r\n            var path = \"/\";\r\n\r\n            $(\"#signin_button\").click(function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + \"login\" + \".html\";\r\n            });\r\n        });\r\n    </script>\r\n\r\n        <div class=\"container\">\r\n            <div class=\"top_offset\">\r\n                    <div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"nav\" class=\"clearfix\">\r\n            <ul id=\"pages-nav\">\r\n                <li id=\"homeMenu\"><div><strong>Home</strong></div></li>\r\n                <li id=\"onlineBankingMenu\"><div><strong>Online Banking</strong></div></li>\r\n                <li id=\"feedback\"><div><strong>Feedback</strong></div></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function () {\r\n            var path = \"/\";\r\n\r\n            var featureIdToName = {\r\n                \"index\": \"homeMenu\",\r\n                \"online-banking\": \"onlineBankingMenu\",\r\n                \"feedback\": \"feedback\"\r\n            };\r\n\r\n            if (document.location.href.match(\".*\" + path + \"$\") != null) {\r\n                $(\"#homeMenu\").addClass(\"active\");\r\n            } else {\r\n                $.each(featureIdToName, function(featureId, featureName) {\r\n                    if (document.location.href.indexOf(featureId + \".html\") >= 0) {\r\n                        $(\"#\" + featureName).addClass(\"active\");\r\n                    }\r\n                });\r\n            }\r\n\r\n            $.each(featureIdToName, function(featureId, featureName) {\r\n                $(\"#nav\").on(\"click\", \"li[id='\" + featureName + \"']\", function(event) {\r\n                    event.preventDefault();\r\n                    window.location.href = path + featureId + \".html\";\r\n                });\r\n            });\r\n        });\r\n    </script>\r\n                    </div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"carousel\" class=\"carousel slide\">\r\n            <div class=\"carousel-inner\">\r\n                <div class=\"active item\">\r\n                    <img src=\"/resources/img/main_carousel_1.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_2.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_3.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n             </div>\r\n            <a class=\"carousel-control custom left\" href=\"#carousel\" data-slide=\"prev\">&lsaquo;</a>\r\n            <a class=\"carousel-control custom right\" href=\"#carousel\" data-slide=\"next\">&rsaquo;</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<hr class=\"row-divider\"/>\r\n\r\n<div id=\"online_banking_features\" class=\"row divider\">\r\n    <div class=\"span3\">\r\n        <h4><i class=\"icon icon-bookmark\"></i> Online Banking</h4>\r\n         <p>Click the button below to view  online banking features.</p>\r\n        <a id=\"online-banking\" class=\"btn btn-small btn-info\">More Services</a>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"account_activity_link\"><i class=\"icon icon-user\"></i>Checking Account Activity</span></h4>\r\n            <p>Use Zero to view the most up-to-date listings of your deposits, withdrawals, interest payments, and a number of other useful transactions.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"transfer_funds_link\"><i class=\"icon icon-random\"></i>Transfer Funds</span></h4>\r\n            <p>Use Zero to safely and securely transfer funds between accounts. There is no hold placed on online money transfers, so your funds are available when you need them.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"money_map_link\"><i class=\"icon icon-list-alt\"></i>My Money Map</span></h4>\r\n             <p>Use Zero to set up and monitor your personalized money map. A money map is an easy-to-use online tool that helps you manage your finances efficiently. With Money Map, you can create a budget, sort your finances into spending and savings categories,  check the interest your accounts are earning, and gain new understanding of your patterns with the help of Zero’s clear charts and graphs.\r\n             </p>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function() {\r\n        $(\"#carousel\").carousel({ interval: false });\r\n\r\n        $(\"div\").on(\"click\", \"a[id='online-banking']\", function(event){\r\n            event.preventDefault();\r\n            window.location.href = \"/\" + \"online-banking\" + \".html\";\r\n        });\r\n\r\n        var path = \"/bank/\";\r\n        var featureIdToName = {\r\n            \"account_activity_link\": \"account-activity\",\r\n            \"transfer_funds_link\": \"transfer-funds\",\r\n            \"money_map_link\": \"money-map\"\r\n        }\r\n        $.each(featureIdToName, function(featureId, featureName) {\r\n            $(\"#online_banking_features\").on(\"click\", \"span[id='\" + featureId + \"']\", function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + featureName +\".html\";\r\n            });\r\n        });\r\n    });\r\n</script>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"clearfix push\"></div>\r\n    </div>\r\n\r\n<div class=\"extra\">\r\n    <div class=\"extra-inner\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"download_webinspect_link\">Download WebInspect</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"terms_of_use_link\">Terms of Use</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"contact_hp_link\">Contact Micro Focus</span></li>\r\n                        <li><span id=\"privacy_statement_link\">Privacy Statement</span></li>\r\n\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"disclaimer span12\">\r\n                    The Free Online Bank Web site is published by Micro Focus Fortify for the sole purpose of demonstrating\r\n                    the functionality and effectiveness of Micro Focus Fortify’s WebInspect products in detecting and reporting\r\n                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products\r\n                    and/or Web sites are purely coincidental. This site is provided \"as is\" without warranty of any kind,\r\n                    either express or implied. Micro Focus Fortify does not assume any risk in relation to your use of this Web site.\r\n                    Use of this Web site indicates that you have read and agree to Micro Focus Fortify’s Terms of Use found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>\r\n                    and Micro Focus Fortify’s Online Privacy Statement found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>.\r\n\r\n                    <br/><br/>\r\n\r\n                    Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function () {\r\n        var path = \"/\";\r\n\r\n        var attachClickHandler = function(selector, handler) {\r\n$(\".extra\").on('click', selector, handler);\r\n        }\r\n\r\n        var footerLinks = {\r\n            \"download_webinspect_link\": { absolute: true, page: \"https://software.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview\" },\r\n            \"contact_hp_link\" : { absolute: true, page: \"https://support.fortify.com\" },\r\n            \"privacy_statement_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/#privacy\" },\r\n            \"terms_of_use_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/\" }\r\n        };\r\n\r\n        $.each(footerLinks, function(linkId, link) {\r\n            attachClickHandler('span[id=\"' + linkId + '\"]', function(event) {\r\n                event.preventDefault();\r\n                if (link.absolute) {\r\n                    window.location.href = link.page;\r\n                } else {\r\n                    window.location.href = path + link.page + \".html\";\r\n                }\r\n            });\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n\n```"
+        }
+      ],
+      "evidence": "Response headers, missing the `X-Frame-Options` header:\n\n\n```\nDate: Tue, 20 Sep 2022 09:18:10 GMT\nServer: Apache-Coyote/1.1\nAccess-Control-Allow-Origin: *\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nTransfer-Encoding: chunked\n\n```\n\n",
+      "extra": "",
+      "definition": {
+        "id": "ezTluRseUcvn",
+        "name": "Missing clickjacking protection",
+        "desc": "A **frameable response** occurs when one or multiple pages can be used on an iframe on any website. This allows the **clickjacking** attack to be used. \r\n\r\n**Clickjacking** is when an attacker a hidden iframe with multiple transparent or opaque layers above it, to trick a user into clicking on a button or link on the iframe when they were intending to click on the the top level page. Thus, the attacker is \"hijacking\" clicks meant for the top level page and routing them to the iframe.\r\n\r\nUsing a similar technique, keystrokes can also be hijacked. With a carefully crafted combination of stylesheets, iframes, and text boxes, a user can be led to believe they are typing in the password to their email or bank account, but are instead typing into an invisible frame controlled by the attacker."
+      },
+      "url": "http://zero.webappsecurity.com",
+      "path": "http://zero.webappsecurity.com",
+      "method": "get",
+      "insertion_point": "",
+      "parameter": "",
+      "value": "",
+      "params": {
+
+      },
+      "assignee": null,
+      "state": "notfixed",
+      "severity": 10,
+      "cvss_score": 6.5,
+      "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "last_found": "2022-09-20T09:18:17.739904Z",
+      "retesting": false,
+      "new": true,
+      "changed": "2022-09-20T09:18:17.774368Z",
+      "changed_by": {
+        "id": "fFayXxJ269nF",
+        "email": "probely@probe.ly",
+        "name": "Probely"
+      },
+      "comment": ""
+    },
+    {
+      "id": 5,
+      "target": {
+        "id": "3ypmfxSXj2sj",
+        "name": "",
+        "site": {
+          "id": "2htU1mVk6rch",
+          "name": "Demo",
+          "desc": "",
+          "url": "http://zero.webappsecurity.com",
+          "host": "zero.webappsecurity.com",
+          "has_form_login": false,
+          "form_login_url": "",
+          "form_login_check_pattern": "",
+          "form_login": null,
+          "has_sequence_login": false,
+          "has_sequence_navigation": false,
+          "has_basic_auth": false,
+          "basic_auth": {
+            "username": "",
+            "password": ""
+          },
+          "headers": null,
+          "cookies": null,
+          "whitelist": [
+
+          ],
+          "blacklist": [
+
+          ],
+          "changed": "2022-09-20T09:17:58.143866Z",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "auth_enabled": true,
+          "logout_condition": "any",
+          "stack": [
+            {
+              "id": "9zDO8kOsCaq1",
+              "name": "Java",
+              "desc": ""
+            },
+            {
+              "id": "ps68s3zFWc0Q",
+              "name": "Apache Tomcat",
+              "desc": ""
+            }
+          ],
+          "verified": false,
+          "verification_token": "7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11",
+          "verification_date": "2022-09-20T03:39:55.701302Z",
+          "verification_method": "dns_cname",
+          "verification_last_error": "The DNS query name does not exist: probely-7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11.webappsecurity.com.",
+          "api_scan_settings": null
+        },
+        "type": "free",
+        "desc": "",
+        "labels": [
+
+        ],
+        "has_assets": false,
+        "report_fileformat": "pdf",
+        "scanning_agent": null,
+        "teams": [
+
+        ],
+        "blackout_period": null
+      },
+      "scans": [
+        "3ttn1ZyinxqK"
+      ],
+      "labels": [
+
+      ],
+      "fix": "You can define a Content Security Policy by setting a header in your application. The header can look like this:\r\n\r\n\tContent-Security-Policy: frame-ancestors 'none'; default-src 'self', script-src '*://*.example.com:*'\r\n\r\nIn this example, the **frame-ancestors** directive set to **'none'** indicates that the page cannot be placed inside a frame, not even by itself.\r\nThe **default-src** defines the loading policy for all resources, in this case, they can be loaded from the current origin (protocol + domain + port). The example sets a more specific policy for scripts, through the **script-src**, restricting script loading to any subdomain of example.com.\r\n\r\nThe policy can be with different directives, and there are other less strict options for the directives above.",
+      "requests": [
+        {
+          "request": "```\nGET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (compatible; +https://probely.com/sos) ProbelyMRKT/0.1.0\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nHost: zero.webappsecurity.com\r\n\r\n\n```",
+          "response": "```\nHTTP/1.1 200 OK\r\nDate: Tue, 20 Sep 2022 09:18:10 GMT\r\nServer: Apache-Coyote/1.1\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Language: en-US\r\nTransfer-Encoding: chunked\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Zero - Personal Banking - Loans - Credit Cards</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\r\n\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/bootstrap.min.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/font-awesome.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/main.css\"/>\r\n\r\n    <script src=\"/resources/js/jquery-1.8.2.min.js\"></script>\r\n        <script src=\"/resources/js/bootstrap.min.js\"></script>\r\n\r\n    <script src=\"/resources/js/placeholders.min.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        Placeholders.init({\r\n            live: true, // Apply to future and modified elements too\r\n            hideOnFocus: true // Hide the placeholder when the element receives focus\r\n        });\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {\r\n            if (xhr.status == 403) {\r\n                window.location.reload();\r\n            }\r\n        });\r\n    </script>\r\n</head>\r\n<body>\r\n    <div class=\"wrapper\">\r\n    <div class=\"navbar navbar-fixed-top\">\r\n        <div class=\"navbar-inner\">\r\n            <div class=\"container\">\r\n                <a href=\"/index.html\" class=\"brand\">Zero Bank</a>\r\n\r\n                <div>\r\n                    <ul class=\"nav float-right\">\r\n                        <li>    <form action=\"/search.html\"\r\n          class=\"navbar-search pull-right\" style=\"padding-right: 20px\">\r\n        <input type=\"text\" id=\"searchTerm\" name=\"searchTerm\" class=\"search-query\" placeholder=\"Search\"/>\r\n    </form>\r\n</li>\r\n                        <li>\r\n                            <button id=\"signin_button\" type=\"button\" class=\"signin btn btn-info\">\r\n                                <i class=\"icon-signin\"></i>Signin\r\n                            </button>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function() {\r\n            var path = \"/\";\r\n\r\n            $(\"#signin_button\").click(function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + \"login\" + \".html\";\r\n            });\r\n        });\r\n    </script>\r\n\r\n        <div class=\"container\">\r\n            <div class=\"top_offset\">\r\n                    <div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"nav\" class=\"clearfix\">\r\n            <ul id=\"pages-nav\">\r\n                <li id=\"homeMenu\"><div><strong>Home</strong></div></li>\r\n                <li id=\"onlineBankingMenu\"><div><strong>Online Banking</strong></div></li>\r\n                <li id=\"feedback\"><div><strong>Feedback</strong></div></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function () {\r\n            var path = \"/\";\r\n\r\n            var featureIdToName = {\r\n                \"index\": \"homeMenu\",\r\n                \"online-banking\": \"onlineBankingMenu\",\r\n                \"feedback\": \"feedback\"\r\n            };\r\n\r\n            if (document.location.href.match(\".*\" + path + \"$\") != null) {\r\n                $(\"#homeMenu\").addClass(\"active\");\r\n            } else {\r\n                $.each(featureIdToName, function(featureId, featureName) {\r\n                    if (document.location.href.indexOf(featureId + \".html\") >= 0) {\r\n                        $(\"#\" + featureName).addClass(\"active\");\r\n                    }\r\n                });\r\n            }\r\n\r\n            $.each(featureIdToName, function(featureId, featureName) {\r\n                $(\"#nav\").on(\"click\", \"li[id='\" + featureName + \"']\", function(event) {\r\n                    event.preventDefault();\r\n                    window.location.href = path + featureId + \".html\";\r\n                });\r\n            });\r\n        });\r\n    </script>\r\n                    </div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"carousel\" class=\"carousel slide\">\r\n            <div class=\"carousel-inner\">\r\n                <div class=\"active item\">\r\n                    <img src=\"/resources/img/main_carousel_1.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_2.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_3.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n             </div>\r\n            <a class=\"carousel-control custom left\" href=\"#carousel\" data-slide=\"prev\">&lsaquo;</a>\r\n            <a class=\"carousel-control custom right\" href=\"#carousel\" data-slide=\"next\">&rsaquo;</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<hr class=\"row-divider\"/>\r\n\r\n<div id=\"online_banking_features\" class=\"row divider\">\r\n    <div class=\"span3\">\r\n        <h4><i class=\"icon icon-bookmark\"></i> Online Banking</h4>\r\n         <p>Click the button below to view  online banking features.</p>\r\n        <a id=\"online-banking\" class=\"btn btn-small btn-info\">More Services</a>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"account_activity_link\"><i class=\"icon icon-user\"></i>Checking Account Activity</span></h4>\r\n            <p>Use Zero to view the most up-to-date listings of your deposits, withdrawals, interest payments, and a number of other useful transactions.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"transfer_funds_link\"><i class=\"icon icon-random\"></i>Transfer Funds</span></h4>\r\n            <p>Use Zero to safely and securely transfer funds between accounts. There is no hold placed on online money transfers, so your funds are available when you need them.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"money_map_link\"><i class=\"icon icon-list-alt\"></i>My Money Map</span></h4>\r\n             <p>Use Zero to set up and monitor your personalized money map. A money map is an easy-to-use online tool that helps you manage your finances efficiently. With Money Map, you can create a budget, sort your finances into spending and savings categories,  check the interest your accounts are earning, and gain new understanding of your patterns with the help of Zero’s clear charts and graphs.\r\n             </p>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function() {\r\n        $(\"#carousel\").carousel({ interval: false });\r\n\r\n        $(\"div\").on(\"click\", \"a[id='online-banking']\", function(event){\r\n            event.preventDefault();\r\n            window.location.href = \"/\" + \"online-banking\" + \".html\";\r\n        });\r\n\r\n        var path = \"/bank/\";\r\n        var featureIdToName = {\r\n            \"account_activity_link\": \"account-activity\",\r\n            \"transfer_funds_link\": \"transfer-funds\",\r\n            \"money_map_link\": \"money-map\"\r\n        }\r\n        $.each(featureIdToName, function(featureId, featureName) {\r\n            $(\"#online_banking_features\").on(\"click\", \"span[id='\" + featureId + \"']\", function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + featureName +\".html\";\r\n            });\r\n        });\r\n    });\r\n</script>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"clearfix push\"></div>\r\n    </div>\r\n\r\n<div class=\"extra\">\r\n    <div class=\"extra-inner\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"download_webinspect_link\">Download WebInspect</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"terms_of_use_link\">Terms of Use</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"contact_hp_link\">Contact Micro Focus</span></li>\r\n                        <li><span id=\"privacy_statement_link\">Privacy Statement</span></li>\r\n\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"disclaimer span12\">\r\n                    The Free Online Bank Web site is published by Micro Focus Fortify for the sole purpose of demonstrating\r\n                    the functionality and effectiveness of Micro Focus Fortify’s WebInspect products in detecting and reporting\r\n                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products\r\n                    and/or Web sites are purely coincidental. This site is provided \"as is\" without warranty of any kind,\r\n                    either express or implied. Micro Focus Fortify does not assume any risk in relation to your use of this Web site.\r\n                    Use of this Web site indicates that you have read and agree to Micro Focus Fortify’s Terms of Use found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>\r\n                    and Micro Focus Fortify’s Online Privacy Statement found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>.\r\n\r\n                    <br/><br/>\r\n\r\n                    Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function () {\r\n        var path = \"/\";\r\n\r\n        var attachClickHandler = function(selector, handler) {\r\n$(\".extra\").on('click', selector, handler);\r\n        }\r\n\r\n        var footerLinks = {\r\n            \"download_webinspect_link\": { absolute: true, page: \"https://software.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview\" },\r\n            \"contact_hp_link\" : { absolute: true, page: \"https://support.fortify.com\" },\r\n            \"privacy_statement_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/#privacy\" },\r\n            \"terms_of_use_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/\" }\r\n        };\r\n\r\n        $.each(footerLinks, function(linkId, link) {\r\n            attachClickHandler('span[id=\"' + linkId + '\"]', function(event) {\r\n                event.preventDefault();\r\n                if (link.absolute) {\r\n                    window.location.href = link.page;\r\n                } else {\r\n                    window.location.href = path + link.page + \".html\";\r\n                }\r\n            });\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n\n```"
+        }
+      ],
+      "evidence": "Response headers, missing the `Content-Security-Policy` header:\n\n\n```\nDate: Tue, 20 Sep 2022 09:18:10 GMT\nServer: Apache-Coyote/1.1\nAccess-Control-Allow-Origin: *\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\nContent-Type: text/html;charset=UTF-8\nContent-Language: en-US\nTransfer-Encoding: chunked\n\n```\n\n",
+      "extra": "",
+      "definition": {
+        "id": "2Rz5uY5EhpNR",
+        "name": "Missing Content Security Policy header",
+        "desc": "The Content Security Policy (CSP) is an HTTP header through which site owners define a set of security rules that the browser must follow when rendering their site. \r\nThe most common usage is to define a list of approved sources of content that the browser can load. This can be used to effectively mitigate Cross-Site Scripting (XSS) and Clickjacking attacks.\r\n\r\nCSP is flexible enough for you to define from where the browser can load JavaScript, Stylesheets, images, or fonts, among other options. It can also be used in report mode only, a recommended approach before deploying strict rules in a live environment. However, please note that report mode does not protect you, it just logs policy violations."
+      },
+      "url": "http://zero.webappsecurity.com",
+      "path": "http://zero.webappsecurity.com",
+      "method": "get",
+      "insertion_point": "",
+      "parameter": "",
+      "value": "",
+      "params": {
+
+      },
+      "assignee": null,
+      "state": "notfixed",
+      "severity": 10,
+      "cvss_score": 3.7,
+      "cvss_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "last_found": "2022-09-20T09:18:23.805827Z",
+      "retesting": false,
+      "new": true,
+      "changed": "2022-09-20T09:18:23.849311Z",
+      "changed_by": {
+        "id": "fFayXxJ269nF",
+        "email": "probely@probe.ly",
+        "name": "Probely"
+      },
+      "comment": ""
+    },
+    {
+      "id": 4,
+      "target": {
+        "id": "3ypmfxSXj2sj",
+        "name": "",
+        "site": {
+          "id": "2htU1mVk6rch",
+          "name": "Demo",
+          "desc": "",
+          "url": "http://zero.webappsecurity.com",
+          "host": "zero.webappsecurity.com",
+          "has_form_login": false,
+          "form_login_url": "",
+          "form_login_check_pattern": "",
+          "form_login": null,
+          "has_sequence_login": false,
+          "has_sequence_navigation": false,
+          "has_basic_auth": false,
+          "basic_auth": {
+            "username": "",
+            "password": ""
+          },
+          "headers": null,
+          "cookies": null,
+          "whitelist": [
+
+          ],
+          "blacklist": [
+
+          ],
+          "changed": "2022-09-20T09:17:58.143866Z",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "auth_enabled": true,
+          "logout_condition": "any",
+          "stack": [
+            {
+              "id": "9zDO8kOsCaq1",
+              "name": "Java",
+              "desc": ""
+            },
+            {
+              "id": "ps68s3zFWc0Q",
+              "name": "Apache Tomcat",
+              "desc": ""
+            }
+          ],
+          "verified": false,
+          "verification_token": "7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11",
+          "verification_date": "2022-09-20T03:39:55.701302Z",
+          "verification_method": "dns_cname",
+          "verification_last_error": "The DNS query name does not exist: probely-7136a0f9-6d86-49ee-a9e7-e4aed8eb7e11.webappsecurity.com.",
+          "api_scan_settings": null
+        },
+        "type": "free",
+        "desc": "",
+        "labels": [
+
+        ],
+        "has_assets": false,
+        "report_fileformat": "pdf",
+        "scanning_agent": null,
+        "teams": [
+
+        ],
+        "blackout_period": null
+      },
+      "scans": [
+        "3ttn1ZyinxqK"
+      ],
+      "labels": [
+        {
+          "id": "22aXVj4t8ZHZ",
+          "name": "ABCD",
+          "color": "",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "changed": "2022-11-17T13:22:16.949683Z"
+        },
+        {
+          "id": "2xodN11NBNmc",
+          "name": "QWER",
+          "color": "",
+          "changed_by": {
+            "id": "21T1GhmsKGq7",
+            "email": "linish.kalbande@armorcode.io",
+            "name": "Linish Kalbande"
+          },
+          "changed": "2022-11-17T13:22:26.753158Z"
+        }
+      ],
+      "fix": "The application should be configured to use encryption in all communications. This normally means to configure the web server to use TLS with a suitable choice of ciphers, forcing all incoming requests in plaintext (without encryption) to be redirected to TLS endpoint of the application.\r\n\r\nIn HTTP this is achieved with a 301 Moved Permanently directive. It can be complemented with an HTTP Strict Transport Security header (HSTS) to force the browsers to make all requests in HTTPS even if the end user forgets to write HTTPS in the request.",
+      "requests": [
+        {
+          "request": "```\nGET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (compatible; +https://probely.com/sos) ProbelyMRKT/0.1.0\r\nAccept: */*\r\nAccept-Encoding: gzip, deflate\r\nHost: zero.webappsecurity.com\r\n\r\n\n```",
+          "response": "```\nHTTP/1.1 200 OK\r\nDate: Tue, 20 Sep 2022 09:18:10 GMT\r\nServer: Apache-Coyote/1.1\r\nAccess-Control-Allow-Origin: *\r\nCache-Control: no-cache, max-age=0, must-revalidate, no-store\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Language: en-US\r\nTransfer-Encoding: chunked\r\n\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <title>Zero - Personal Banking - Loans - Credit Cards</title>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\r\n\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/bootstrap.min.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/font-awesome.css\"/>\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"/resources/css/main.css\"/>\r\n\r\n    <script src=\"/resources/js/jquery-1.8.2.min.js\"></script>\r\n        <script src=\"/resources/js/bootstrap.min.js\"></script>\r\n\r\n    <script src=\"/resources/js/placeholders.min.js\"></script>\r\n    <script type=\"text/javascript\">\r\n        Placeholders.init({\r\n            live: true, // Apply to future and modified elements too\r\n            hideOnFocus: true // Hide the placeholder when the element receives focus\r\n        });\r\n    </script>\r\n    <script type=\"text/javascript\">\r\n        $(document).ajaxError(function errorHandler(event, xhr, ajaxOptions, thrownError) {\r\n            if (xhr.status == 403) {\r\n                window.location.reload();\r\n            }\r\n        });\r\n    </script>\r\n</head>\r\n<body>\r\n    <div class=\"wrapper\">\r\n    <div class=\"navbar navbar-fixed-top\">\r\n        <div class=\"navbar-inner\">\r\n            <div class=\"container\">\r\n                <a href=\"/index.html\" class=\"brand\">Zero Bank</a>\r\n\r\n                <div>\r\n                    <ul class=\"nav float-right\">\r\n                        <li>    <form action=\"/search.html\"\r\n          class=\"navbar-search pull-right\" style=\"padding-right: 20px\">\r\n        <input type=\"text\" id=\"searchTerm\" name=\"searchTerm\" class=\"search-query\" placeholder=\"Search\"/>\r\n    </form>\r\n</li>\r\n                        <li>\r\n                            <button id=\"signin_button\" type=\"button\" class=\"signin btn btn-info\">\r\n                                <i class=\"icon-signin\"></i>Signin\r\n                            </button>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function() {\r\n            var path = \"/\";\r\n\r\n            $(\"#signin_button\").click(function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + \"login\" + \".html\";\r\n            });\r\n        });\r\n    </script>\r\n\r\n        <div class=\"container\">\r\n            <div class=\"top_offset\">\r\n                    <div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"nav\" class=\"clearfix\">\r\n            <ul id=\"pages-nav\">\r\n                <li id=\"homeMenu\"><div><strong>Home</strong></div></li>\r\n                <li id=\"onlineBankingMenu\"><div><strong>Online Banking</strong></div></li>\r\n                <li id=\"feedback\"><div><strong>Feedback</strong></div></li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n\r\n    <script type=\"text/javascript\">\r\n        $(function () {\r\n            var path = \"/\";\r\n\r\n            var featureIdToName = {\r\n                \"index\": \"homeMenu\",\r\n                \"online-banking\": \"onlineBankingMenu\",\r\n                \"feedback\": \"feedback\"\r\n            };\r\n\r\n            if (document.location.href.match(\".*\" + path + \"$\") != null) {\r\n                $(\"#homeMenu\").addClass(\"active\");\r\n            } else {\r\n                $.each(featureIdToName, function(featureId, featureName) {\r\n                    if (document.location.href.indexOf(featureId + \".html\") >= 0) {\r\n                        $(\"#\" + featureName).addClass(\"active\");\r\n                    }\r\n                });\r\n            }\r\n\r\n            $.each(featureIdToName, function(featureId, featureName) {\r\n                $(\"#nav\").on(\"click\", \"li[id='\" + featureName + \"']\", function(event) {\r\n                    event.preventDefault();\r\n                    window.location.href = path + featureId + \".html\";\r\n                });\r\n            });\r\n        });\r\n    </script>\r\n                    </div>\r\n\r\n<div class=\"row\">\r\n    <div class=\"span12\">\r\n        <div id=\"carousel\" class=\"carousel slide\">\r\n            <div class=\"carousel-inner\">\r\n                <div class=\"active item\">\r\n                    <img src=\"/resources/img/main_carousel_1.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_2.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n\r\n                    </div>\r\n                </div>\r\n                <div class=\"item\">\r\n                    <img src=\"/resources/img/main_carousel_3.jpg\" width=\"940\" height=\"401\" alt=\"\"/>\r\n                    <div class=\"custom carousel-caption\">\r\n                        <h4>Online Banking</h4>\r\n                        <p>Welcome to Zero Online Banking. Zero provides a greener and more convenient way to manage your money. Zero enables you to check your account balances, pay your bills, transfer money, and  keep detailed records of your transactions,  wherever there is an internet connection.</p>\r\n                    </div>\r\n                </div>\r\n             </div>\r\n            <a class=\"carousel-control custom left\" href=\"#carousel\" data-slide=\"prev\">&lsaquo;</a>\r\n            <a class=\"carousel-control custom right\" href=\"#carousel\" data-slide=\"next\">&rsaquo;</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<hr class=\"row-divider\"/>\r\n\r\n<div id=\"online_banking_features\" class=\"row divider\">\r\n    <div class=\"span3\">\r\n        <h4><i class=\"icon icon-bookmark\"></i> Online Banking</h4>\r\n         <p>Click the button below to view  online banking features.</p>\r\n        <a id=\"online-banking\" class=\"btn btn-small btn-info\">More Services</a>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"account_activity_link\"><i class=\"icon icon-user\"></i>Checking Account Activity</span></h4>\r\n            <p>Use Zero to view the most up-to-date listings of your deposits, withdrawals, interest payments, and a number of other useful transactions.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"transfer_funds_link\"><i class=\"icon icon-random\"></i>Transfer Funds</span></h4>\r\n            <p>Use Zero to safely and securely transfer funds between accounts. There is no hold placed on online money transfers, so your funds are available when you need them.\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"span3\">\r\n        <div>\r\n            <h4><span class=\"headers\" id=\"money_map_link\"><i class=\"icon icon-list-alt\"></i>My Money Map</span></h4>\r\n             <p>Use Zero to set up and monitor your personalized money map. A money map is an easy-to-use online tool that helps you manage your finances efficiently. With Money Map, you can create a budget, sort your finances into spending and savings categories,  check the interest your accounts are earning, and gain new understanding of your patterns with the help of Zero’s clear charts and graphs.\r\n             </p>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function() {\r\n        $(\"#carousel\").carousel({ interval: false });\r\n\r\n        $(\"div\").on(\"click\", \"a[id='online-banking']\", function(event){\r\n            event.preventDefault();\r\n            window.location.href = \"/\" + \"online-banking\" + \".html\";\r\n        });\r\n\r\n        var path = \"/bank/\";\r\n        var featureIdToName = {\r\n            \"account_activity_link\": \"account-activity\",\r\n            \"transfer_funds_link\": \"transfer-funds\",\r\n            \"money_map_link\": \"money-map\"\r\n        }\r\n        $.each(featureIdToName, function(featureId, featureName) {\r\n            $(\"#online_banking_features\").on(\"click\", \"span[id='\" + featureId + \"']\", function(event) {\r\n                event.preventDefault();\r\n                window.location.href = path + featureName +\".html\";\r\n            });\r\n        });\r\n    });\r\n</script>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"clearfix push\"></div>\r\n    </div>\r\n\r\n<div class=\"extra\">\r\n    <div class=\"extra-inner\">\r\n        <div class=\"container\">\r\n            <div class=\"row\">\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"download_webinspect_link\">Download WebInspect</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"terms_of_use_link\">Terms of Use</span></li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\"span4\">\r\n                    <ul>\r\n                        <li><span id=\"contact_hp_link\">Contact Micro Focus</span></li>\r\n                        <li><span id=\"privacy_statement_link\">Privacy Statement</span></li>\r\n\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"row\">\r\n                <div class=\"disclaimer span12\">\r\n                    The Free Online Bank Web site is published by Micro Focus Fortify for the sole purpose of demonstrating\r\n                    the functionality and effectiveness of Micro Focus Fortify’s WebInspect products in detecting and reporting\r\n                    Web application vulnerabilities. This site is not a real banking site and any similarities to third party products\r\n                    and/or Web sites are purely coincidental. This site is provided \"as is\" without warranty of any kind,\r\n                    either express or implied. Micro Focus Fortify does not assume any risk in relation to your use of this Web site.\r\n                    Use of this Web site indicates that you have read and agree to Micro Focus Fortify’s Terms of Use found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>\r\n                    and Micro Focus Fortify’s Online Privacy Statement found at\r\n                    <a href=\"https://www.microfocus.com/about/legal/#privacy\" target=\"_blank\">https://www.microfocus.com/about/legal/#privacy</a>.\r\n\r\n                    <br/><br/>\r\n\r\n                    Copyright © 2012-2018, Micro Focus Development Company. All rights reserved.\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<script type=\"text/javascript\">\r\n    $(function () {\r\n        var path = \"/\";\r\n\r\n        var attachClickHandler = function(selector, handler) {\r\n$(\".extra\").on('click', selector, handler);\r\n        }\r\n\r\n        var footerLinks = {\r\n            \"download_webinspect_link\": { absolute: true, page: \"https://software.microfocus.com/en-us/products/webinspect-dynamic-analysis-dast/overview\" },\r\n            \"contact_hp_link\" : { absolute: true, page: \"https://support.fortify.com\" },\r\n            \"privacy_statement_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/#privacy\" },\r\n            \"terms_of_use_link\": { absolute: true, page: \"https://www.microfocus.com/about/legal/\" }\r\n        };\r\n\r\n        $.each(footerLinks, function(linkId, link) {\r\n            attachClickHandler('span[id=\"' + linkId + '\"]', function(event) {\r\n                event.preventDefault();\r\n                if (link.absolute) {\r\n                    window.location.href = link.page;\r\n                } else {\r\n                    window.location.href = path + link.page + \".html\";\r\n                }\r\n            });\r\n        });\r\n    });\r\n</script>\r\n</body>\r\n</html>\r\n\n```"
+        }
+      ],
+      "evidence": null,
+      "extra": "",
+      "definition": {
+        "id": "0fR9GA5lgbo6",
+        "name": "Unencrypted communications",
+        "desc": "The application allows clients to connect to it through an unencrypted connection, meaning that an attacker that is strategically positioned between the victim's and the applications's traffic is able to eavesdrop all communications between them, accessing any information that is being transmitted, such as the victim's credentials. In addition, the attacker can modify the communications to deliver more powerful attacks, for instance, to ask the victim for more sensitive information that hasn't been asked in the original application page.\r\n\r\nSuch attacks are more likely to occur when the victim is using an insecure Wi-Fi connection, a typical scenario in the public Wi-Fi services.\r\n\r\nUnencrypted connections may also trigger browser warnings about the insecurity of the connection, following the trend of raising awareness about privacy."
+      },
+      "url": "http://zero.webappsecurity.com",
+      "path": "http://zero.webappsecurity.com",
+      "method": "get",
+      "insertion_point": "",
+      "parameter": "",
+      "value": "",
+      "params": {
+
+      },
+      "assignee": {
+        "id": "21T1GhmsKGq7",
+        "email": "linish.kalbande@armorcode.io",
+        "name": "Linish Kalbande"
+      },
+      "state": "notfixed",
+      "severity": 20,
+      "cvss_score": 7.4,
+      "cvss_vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "last_found": "2022-09-20T09:18:22.705129Z",
+      "retesting": false,
+      "new": true,
+      "changed": "2022-11-17T13:22:26.768024Z",
+      "changed_by": {
+        "id": "21T1GhmsKGq7",
+        "email": "linish.kalbande@armorcode.io",
+        "name": "Linish Kalbande"
+      },
+      "comment": ""
+    }
+  ]
+}

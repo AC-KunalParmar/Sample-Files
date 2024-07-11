@@ -1,0 +1,1831 @@
+{
+    "meta": {
+        "application": "Dependency-Track",
+        "version": "4.2.2",
+        "timestamp": "2021-06-18T12:57:41Z"
+    },
+    "findings": [
+        {
+            "component": {
+                "name": "debug",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/debug@2.2.0",
+                "uuid": "01f3384d-aad6-4311-a217-6ffadd32246e",
+                "version": "2.2.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.227"
+            },
+            "vulnerability": {
+                "severity": "LOW",
+                "severityRank": 3,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "534",
+                "cweId": 400,
+                "subtitle": "debug",
+                "description": "Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.",
+                "recommendation": "Version 2.x.x: Update to version 2.6.9 or later.\nVersion 3.x.x: Update to version 3.1.0 or later.\n",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "e306df49-b999-4e90-b221-b286c748f34d"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:01f3384d-aad6-4311-a217-6ffadd32246e:e306df49-b999-4e90-b221-b286c748f34d"
+        },
+        {
+            "component": {
+                "name": "debug",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/debug@2.2.0",
+                "uuid": "01f3384d-aad6-4311-a217-6ffadd32246e",
+                "version": "2.2.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.237"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "a917ab55-851f-4c8b-ac82-6f988881c329",
+                "cweId": 400,
+                "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+                "source": "OSSINDEX",
+                "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+                "uuid": "fd44ab82-4013-40ef-86ad-acdb796bcaaf"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:01f3384d-aad6-4311-a217-6ffadd32246e:fd44ab82-4013-40ef-86ad-acdb796bcaaf"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@6.1.0",
+                "uuid": "9e7a1933-bf10-4a7c-a48b-780c14494a90",
+                "version": "6.1.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.844"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "1469",
+                "cweId": 471,
+                "subtitle": "qs",
+                "description": "Affected version of `qs` are vulnerable to Prototype Pollution because it is possible to bypass the protection. The `qs.parse` function fails to properly prevent an object's prototype to be altered when parsing arbitrary input. Input containing `[` or `]` may bypass the prototype pollution protection and alter the Object prototype. This allows attackers to override properties that will exist in all objects, which may lead to Denial of Service or Remote Code Execution in specific circumstances.",
+                "recommendation": "Upgrade to 6.0.4, 6.1.2, 6.2.3, 6.3.2 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution Protection Bypass",
+                "uuid": "e741ff88-763b-40ab-a56c-b28fe549d48c"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:9e7a1933-bf10-4a7c-a48b-780c14494a90:e741ff88-763b-40ab-a56c-b28fe549d48c"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@6.1.0",
+                "uuid": "9e7a1933-bf10-4a7c-a48b-780c14494a90",
+                "version": "6.1.0"
+            },
+            "attribution": {
+                "alternateIdentifier": "c99eedca-ca97-4170-a935-defaf176f412",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.563",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/c99eedca-ca97-4170-a935-defaf176f412?component-type=npm&component-name=qs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "c99eedca-ca97-4170-a935-defaf176f412",
+                "cweId": 20,
+                "description": "The product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.",
+                "source": "OSSINDEX",
+                "title": "CWE-20: Improper Input Validation",
+                "uuid": "da0d9ba1-888d-432e-92cf-34f8225ded24"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:9e7a1933-bf10-4a7c-a48b-780c14494a90:da0d9ba1-888d-432e-92cf-34f8225ded24"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@6.1.0",
+                "uuid": "9e7a1933-bf10-4a7c-a48b-780c14494a90",
+                "version": "6.1.0"
+            },
+            "attribution": {
+                "alternateIdentifier": "3b7c9a3f-0265-4435-b43d-7dbee2d6a461",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.567",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/3b7c9a3f-0265-4435-b43d-7dbee2d6a461?component-type=npm&component-name=qs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "UNASSIGNED",
+                "severityRank": 5,
+                "vulnId": "3b7c9a3f-0265-4435-b43d-7dbee2d6a461",
+                "description": "A prototype override protection bypass is possible, which allows attackers to overwrite properties and functions. A previous solution for the problem is incomplete.",
+                "source": "OSSINDEX",
+                "title": "Prototype override protection bypass",
+                "uuid": "d4f4f8e0-7ffa-4902-b6da-610c92731380"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:9e7a1933-bf10-4a7c-a48b-780c14494a90:d4f4f8e0-7ffa-4902-b6da-610c92731380"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@6.1.0",
+                "uuid": "9e7a1933-bf10-4a7c-a48b-780c14494a90",
+                "version": "6.1.0"
+            },
+            "attribution": {
+                "alternateIdentifier": "f57acfe9-36e7-427e-8f4a-d6bdfdc02024",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.57",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/f57acfe9-36e7-427e-8f4a-d6bdfdc02024?component-type=npm&component-name=qs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "CVE-2017-1000048",
+                "cweId": 20,
+                "description": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+                "source": "NVD",
+                "uuid": "cfa352bc-073b-425c-b50a-031a1a522d37"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:9e7a1933-bf10-4a7c-a48b-780c14494a90:cfa352bc-073b-425c-b50a-031a1a522d37"
+        },
+        {
+            "component": {
+                "name": "ejs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/ejs@2.4.1",
+                "uuid": "485a0567-40a3-4444-a986-2e5d3c9869a3",
+                "version": "2.4.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "aff6b261-323b-40f6-b14c-958cb77dedd9",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.587",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/aff6b261-323b-40f6-b14c-958cb77dedd9?component-type=npm&component-name=ejs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "UNASSIGNED",
+                "severityRank": 5,
+                "vulnId": "aff6b261-323b-40f6-b14c-958cb77dedd9",
+                "description": "A remote code execution vulnerability was identified in this package for versions prior to 2.5.3",
+                "source": "OSSINDEX",
+                "title": "Remoter Code Execution",
+                "uuid": "21328dcf-d9a7-497d-a4d4-d6edf6c7291a"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:485a0567-40a3-4444-a986-2e5d3c9869a3:21328dcf-d9a7-497d-a4d4-d6edf6c7291a"
+        },
+        {
+            "component": {
+                "name": "ejs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/ejs@2.4.1",
+                "uuid": "485a0567-40a3-4444-a986-2e5d3c9869a3",
+                "version": "2.4.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "40ea7e07-b5b8-4a1b-b057-e8f5a54574a0",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.59",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/40ea7e07-b5b8-4a1b-b057-e8f5a54574a0?component-type=npm&component-name=ejs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "cweName": "Improper Input Validation",
+                "vulnId": "CVE-2017-1000228",
+                "cweId": 20,
+                "description": "nodejs ejs versions older than 2.5.3 is vulnerable to remote code execution due to weak input validation in ejs.renderFile() function",
+                "source": "NVD",
+                "uuid": "18103607-9582-4d67-91b6-4cc532697805"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:485a0567-40a3-4444-a986-2e5d3c9869a3:18103607-9582-4d67-91b6-4cc532697805"
+        },
+        {
+            "component": {
+                "name": "ejs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/ejs@2.4.1",
+                "uuid": "485a0567-40a3-4444-a986-2e5d3c9869a3",
+                "version": "2.4.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "3b476909-27fb-4f59-a87e-17d04c7dcf52",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.593",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/3b476909-27fb-4f59-a87e-17d04c7dcf52?component-type=npm&component-name=ejs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "vulnId": "CVE-2017-1000188",
+                "cweId": 79,
+                "description": "nodejs ejs version older than 2.5.5 is vulnerable to a Cross-site-scripting in the ejs.renderFile() resulting in code injection",
+                "source": "NVD",
+                "uuid": "a87bea2a-064a-4a45-9bdc-c554be2bcb61"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:485a0567-40a3-4444-a986-2e5d3c9869a3:a87bea2a-064a-4a45-9bdc-c554be2bcb61"
+        },
+        {
+            "component": {
+                "name": "ejs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/ejs@2.4.1",
+                "uuid": "485a0567-40a3-4444-a986-2e5d3c9869a3",
+                "version": "2.4.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "f06e0964-6437-4220-8477-25b2e0c59d7c",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.596",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/f06e0964-6437-4220-8477-25b2e0c59d7c?component-type=npm&component-name=ejs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "CVE-2017-1000189",
+                "cweId": 20,
+                "description": "nodejs ejs version older than 2.5.5 is vulnerable to a denial-of-service due to weak input validation in the ejs.renderFile()",
+                "source": "NVD",
+                "uuid": "e68cc268-4bc3-40a4-acc8-2bb49f9c6e2a"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:485a0567-40a3-4444-a986-2e5d3c9869a3:e68cc268-4bc3-40a4-acc8-2bb49f9c6e2a"
+        },
+        {
+            "component": {
+                "name": "negotiator",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/negotiator@0.5.3",
+                "uuid": "a5429f33-b114-41c1-aff7-11b182d19a1f",
+                "version": "0.5.3"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.231"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "106",
+                "cweId": 400,
+                "subtitle": "negotiator",
+                "description": "Affected versions of `negotiator` are vulnerable to regular expression denial of service attacks, which trigger upon parsing a specially crafted `Accept-Language` header value.\n\n",
+                "recommendation": "Update to version 0.6.1 or later.",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "ed49224f-4895-499c-ab35-5e37c7f31932"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:a5429f33-b114-41c1-aff7-11b182d19a1f:ed49224f-4895-499c-ab35-5e37c7f31932"
+        },
+        {
+            "component": {
+                "name": "fresh",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/fresh@0.3.0",
+                "uuid": "25fbb5a5-116f-4e78-bf3c-aaa34be6505e",
+                "version": "0.3.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.234"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "526",
+                "cweId": 400,
+                "subtitle": "fresh",
+                "description": "Affected versions of `fresh` are vulnerable to regular expression denial of service when parsing specially crafted user input.",
+                "recommendation": "Update to version 0.5.2 or later.",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "db050628-7a05-498c-8ce9-5d57abdd4724"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:25fbb5a5-116f-4e78-bf3c-aaa34be6505e:db050628-7a05-498c-8ce9-5d57abdd4724"
+        },
+        {
+            "component": {
+                "name": "fresh",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/fresh@0.3.0",
+                "uuid": "25fbb5a5-116f-4e78-bf3c-aaa34be6505e",
+                "version": "0.3.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.242"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "4e1a10ea-4fa1-4e1e-9571-83362672b97e",
+                "cweId": 400,
+                "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+                "source": "OSSINDEX",
+                "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+                "uuid": "fd139857-6910-4a4d-8b67-2ace52dbb7ae"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:25fbb5a5-116f-4e78-bf3c-aaa34be6505e:fd139857-6910-4a4d-8b67-2ace52dbb7ae"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@4.0.0",
+                "uuid": "83feeba8-26c9-4dbf-9276-1361b5411866",
+                "version": "4.0.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.236"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "1469",
+                "cweId": 471,
+                "subtitle": "qs",
+                "description": "Affected version of `qs` are vulnerable to Prototype Pollution because it is possible to bypass the protection. The `qs.parse` function fails to properly prevent an object's prototype to be altered when parsing arbitrary input. Input containing `[` or `]` may bypass the prototype pollution protection and alter the Object prototype. This allows attackers to override properties that will exist in all objects, which may lead to Denial of Service or Remote Code Execution in specific circumstances.",
+                "recommendation": "Upgrade to 6.0.4, 6.1.2, 6.2.3, 6.3.2 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution Protection Bypass",
+                "uuid": "e741ff88-763b-40ab-a56c-b28fe549d48c"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:83feeba8-26c9-4dbf-9276-1361b5411866:e741ff88-763b-40ab-a56c-b28fe549d48c"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@4.0.0",
+                "uuid": "83feeba8-26c9-4dbf-9276-1361b5411866",
+                "version": "4.0.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.245"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "c99eedca-ca97-4170-a935-defaf176f412",
+                "cweId": 20,
+                "description": "The product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.",
+                "source": "OSSINDEX",
+                "title": "CWE-20: Improper Input Validation",
+                "uuid": "da0d9ba1-888d-432e-92cf-34f8225ded24"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:83feeba8-26c9-4dbf-9276-1361b5411866:da0d9ba1-888d-432e-92cf-34f8225ded24"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@4.0.0",
+                "uuid": "83feeba8-26c9-4dbf-9276-1361b5411866",
+                "version": "4.0.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.246"
+            },
+            "vulnerability": {
+                "severity": "UNASSIGNED",
+                "severityRank": 5,
+                "vulnId": "3b7c9a3f-0265-4435-b43d-7dbee2d6a461",
+                "description": "A prototype override protection bypass is possible, which allows attackers to overwrite properties and functions. A previous solution for the problem is incomplete.",
+                "source": "OSSINDEX",
+                "title": "Prototype override protection bypass",
+                "uuid": "d4f4f8e0-7ffa-4902-b6da-610c92731380"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:83feeba8-26c9-4dbf-9276-1361b5411866:d4f4f8e0-7ffa-4902-b6da-610c92731380"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@4.0.0",
+                "uuid": "83feeba8-26c9-4dbf-9276-1361b5411866",
+                "version": "4.0.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.247"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "CVE-2017-1000048",
+                "cweId": 20,
+                "description": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+                "source": "NVD",
+                "uuid": "cfa352bc-073b-425c-b50a-031a1a522d37"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:83feeba8-26c9-4dbf-9276-1361b5411866:cfa352bc-073b-425c-b50a-031a1a522d37"
+        },
+        {
+            "component": {
+                "name": "mime",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mime@1.3.4",
+                "uuid": "d72055f2-6ea4-498a-8253-e435b8e503db",
+                "version": "1.3.4"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.238"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "535",
+                "cweId": 400,
+                "subtitle": "mime",
+                "description": "Affected versions of `mime` are vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
+                "recommendation": "Update to version 2.0.3 or later.",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "bc116216-4761-4c2f-adc1-62e5eb575a05"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:d72055f2-6ea4-498a-8253-e435b8e503db:bc116216-4761-4c2f-adc1-62e5eb575a05"
+        },
+        {
+            "component": {
+                "name": "mime",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mime@1.3.4",
+                "uuid": "d72055f2-6ea4-498a-8253-e435b8e503db",
+                "version": "1.3.4"
+            },
+            "attribution": {
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.249"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "0fa304f3-b464-4e44-b747-1bd5b1922e06",
+                "cweId": 400,
+                "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+                "source": "OSSINDEX",
+                "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+                "uuid": "28603f6b-24d3-42ab-bc1e-0ac66de897ed"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:d72055f2-6ea4-498a-8253-e435b8e503db:28603f6b-24d3-42ab-bc1e-0ac66de897ed"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.813"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "1065",
+                "cweId": 471,
+                "subtitle": "lodash",
+                "description": "Versions of `lodash` before 4.17.12 are vulnerable to Prototype Pollution.  The function `defaultsDeep` allows a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n",
+                "recommendation": "Update to version 4.17.12 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "b38d1c76-cdd0-4c13-a489-794ffb43acf0"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:b38d1c76-cdd0-4c13-a489-794ffb43acf0"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.816"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "782",
+                "cweId": 471,
+                "subtitle": "lodash",
+                "description": "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n",
+                "recommendation": "Update to version 4.17.11 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "98ec1e73-9945-4cb1-b1c3-2a809ba3e57c"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:98ec1e73-9945-4cb1-b1c3-2a809ba3e57c"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.819"
+            },
+            "vulnerability": {
+                "severity": "LOW",
+                "severityRank": 3,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "1523",
+                "cweId": 471,
+                "subtitle": "lodash",
+                "description": "Versions of `lodash` prior to 4.17.19 are vulnerable to Prototype Pollution.  The function `zipObjectDeep` allows a malicious user to modify the prototype of `Object` if the property identifiers are user-supplied. Being affected by this issue requires zipping objects based on user-provided property arrays.  \n\nThis vulnerability causes the addition or modification of an existing property that will exist on all objects and may lead to Denial of Service or Code Execution under specific circumstances.",
+                "recommendation": "Upgrade to version 4.17.19 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "044b100b-8ee7-4942-956c-875a2501f62f"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:044b100b-8ee7-4942-956c-875a2501f62f"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.822"
+            },
+            "vulnerability": {
+                "severity": "LOW",
+                "severityRank": 3,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "577",
+                "cweId": 471,
+                "subtitle": "lodash",
+                "description": "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `__proto__` causing the addition or modification of an existing property that will exist on all objects.\n\n",
+                "recommendation": "Update to version 4.17.5 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "e046fe7d-70a8-4d12-9ff0-46024116cb52"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:e046fe7d-70a8-4d12-9ff0-46024116cb52"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.825"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+                "vulnId": "1673",
+                "cweId": 77,
+                "subtitle": "lodash",
+                "description": "`lodash` versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+                "recommendation": "Upgrade to version 4.17.21 or later",
+                "source": "NPM",
+                "title": "Command Injection",
+                "uuid": "4c62897f-9000-467e-839a-a7949e3f6bfc"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:4c62897f-9000-467e-839a-a7949e3f6bfc"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "0675c3f4-728c-47fa-96aa-1826d93ba0a0",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.623",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/0675c3f4-728c-47fa-96aa-1826d93ba0a0?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "description": "A prototype pollution vulnerability was found in lodash <4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+                "source": "NVD",
+                "vulnId": "CVE-2018-16487",
+                "uuid": "a7a8995e-f424-49f2-b54a-58acae53d7e7"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:a7a8995e-f424-49f2-b54a-58acae53d7e7"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "d375b1a8-70d1-496a-b35b-63621c78e0ec",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.626",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/d375b1a8-70d1-496a-b35b-63621c78e0ec?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Allocation of Resources Without Limits or Throttling",
+                "vulnId": "CVE-2019-1010266",
+                "cweId": 770,
+                "description": "lodash prior to 4.17.11 is affected by: CWE-400: Uncontrolled Resource Consumption. The impact is: Denial of service. The component is: Date handler. The attack vector is: Attacker provides very long strings, which the library attempts to match using a regular expression. The fixed version is: 4.17.11.",
+                "source": "NVD",
+                "uuid": "c04dee91-7f3a-432e-a2ab-15a2700a0d7e"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:c04dee91-7f3a-432e-a2ab-15a2700a0d7e"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "3fb48383-2e9e-4db1-bac5-f33cb54498ff",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.63",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/3fb48383-2e9e-4db1-bac5-f33cb54498ff?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "description": "Versions of lodash lower than 4.17.12 are vulnerable to Prototype Pollution. The function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+                "source": "NVD",
+                "vulnId": "CVE-2019-10744",
+                "uuid": "f8576a6b-160c-41e6-994c-b6bac699cabc"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:f8576a6b-160c-41e6-994c-b6bac699cabc"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "a86c2790-8c02-4fee-8d77-3366312f926b",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.635",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/a86c2790-8c02-4fee-8d77-3366312f926b?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "cweName": "Embedded Malicious Code",
+                "vulnId": "a86c2790-8c02-4fee-8d77-3366312f926b",
+                "cweId": 506,
+                "description": "The application contains code that appears to be malicious in nature.",
+                "source": "OSSINDEX",
+                "title": "CWE-506: Embedded Malicious Code",
+                "uuid": "378096dd-593d-4b94-8c4e-28ec52902692"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:378096dd-593d-4b94-8c4e-28ec52902692"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "8740216c-fea2-4998-a7c0-a687c35a2f92",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.638",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/8740216c-fea2-4998-a7c0-a687c35a2f92?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Allocation of Resources Without Limits or Throttling",
+                "vulnId": "CVE-2020-8203",
+                "cweId": 770,
+                "description": "Prototype pollution attack when using _.zipObjectDeep in lodash before 4.17.20.",
+                "source": "NVD",
+                "uuid": "cf8bc6e8-7b9c-46e3-801e-843453588803"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:cf8bc6e8-7b9c-46e3-801e-843453588803"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "1ce7eaac-c691-4996-b7ed-2a870b287f33",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.642",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/1ce7eaac-c691-4996-b7ed-2a870b287f33?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "description": "Lodash versions prior to 4.17.21 are vulnerable to Regular Expression Denial of Service (ReDoS) via the toNumber, trim and trimEnd functions.",
+                "source": "NVD",
+                "vulnId": "CVE-2020-28500",
+                "uuid": "e27c8f8c-9cea-4d8e-ab2c-d80cb3813435"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:e27c8f8c-9cea-4d8e-ab2c-d80cb3813435"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "22d2fa1f-0b1d-4240-a4c0-9954a5dc9082",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.645",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/22d2fa1f-0b1d-4240-a4c0-9954a5dc9082?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+                "vulnId": "CVE-2021-23337",
+                "cweId": 77,
+                "description": "Lodash versions prior to 4.17.21 are vulnerable to Command Injection via the template function.",
+                "source": "NVD",
+                "uuid": "4d9ede0a-9ef9-4ddd-b939-9dea4c82447d"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:4d9ede0a-9ef9-4ddd-b939-9dea4c82447d"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "2053350d-b06f-4926-88ea-871760f6e5d8",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.65",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/2053350d-b06f-4926-88ea-871760f6e5d8?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "cweName": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+                "vulnId": "2053350d-b06f-4926-88ea-871760f6e5d8",
+                "cweId": 77,
+                "description": "The software constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component.",
+                "source": "OSSINDEX",
+                "title": "CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+                "uuid": "e4b8263b-aa08-49ba-b1a5-393e71c4e2f7"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:e4b8263b-aa08-49ba-b1a5-393e71c4e2f7"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "12e63c9c-b3f9-42d3-8541-dca1b72cad69",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.654",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/12e63c9c-b3f9-42d3-8541-dca1b72cad69?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "description": "lodash node module before 4.17.5 suffers from a Modification of Assumed-Immutable Data (MAID) vulnerability via defaultsDeep, merge, and mergeWith functions, which allows a malicious user to modify the prototype of \"Object\" via __proto__, causing the addition or modification of an existing property that will exist on all objects.",
+                "source": "NVD",
+                "vulnId": "CVE-2018-3721",
+                "uuid": "4fff76f7-1d30-4cdf-8be9-9563e80ce22f"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:4fff76f7-1d30-4cdf-8be9-9563e80ce22f"
+        },
+        {
+            "component": {
+                "name": "lodash",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/lodash@3.10.1",
+                "uuid": "b47e55d4-116f-4853-8c3c-ce70e98d4e1a",
+                "version": "3.10.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "eeedfb1c-6a5e-428c-bb17-c64b66f9eced",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.659",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/eeedfb1c-6a5e-428c-bb17-c64b66f9eced?component-type=npm&component-name=lodash&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Allocation of Resources Without Limits or Throttling",
+                "vulnId": "eeedfb1c-6a5e-428c-bb17-c64b66f9eced",
+                "cweId": 770,
+                "description": "The software allocates a reusable resource or group of resources on behalf of an actor without imposing any restrictions on how many resources can be allocated, in violation of the intended security policy for that actor.",
+                "source": "OSSINDEX",
+                "title": "CWE-770: Allocation of Resources Without Limits or Throttling",
+                "uuid": "32c6f5fc-7d0d-4317-9e54-70710dee6714"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:b47e55d4-116f-4853-8c3c-ce70e98d4e1a:32c6f5fc-7d0d-4317-9e54-70710dee6714"
+        },
+        {
+            "component": {
+                "name": "base64-url",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/base64-url@1.2.1",
+                "uuid": "7a899ad1-b14f-4857-932a-f746c8f50363",
+                "version": "1.2.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.926"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Out-of-bounds Read",
+                "vulnId": "660",
+                "cweId": 125,
+                "subtitle": "base64-url",
+                "description": "Versions of `base64-url` before 2.0.0 are vulnerable to out-of-bounds read as it allocates uninitialized Buffers when number is passed in input.",
+                "recommendation": "Update to version 2.0.0 or later.",
+                "source": "NPM",
+                "title": "Out-of-bounds Read",
+                "uuid": "213eed00-7cce-41fb-8a84-9e697d02da9d"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:7a899ad1-b14f-4857-932a-f746c8f50363:213eed00-7cce-41fb-8a84-9e697d02da9d"
+        },
+        {
+            "component": {
+                "name": "base64-url",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/base64-url@1.2.1",
+                "uuid": "7a899ad1-b14f-4857-932a-f746c8f50363",
+                "version": "1.2.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "9ff2ff76-b5e1-47d4-82a5-378e088b6eb6",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.669",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/9ff2ff76-b5e1-47d4-82a5-378e088b6eb6?component-type=npm&component-name=base64-url&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Out-of-bounds Read",
+                "vulnId": "9ff2ff76-b5e1-47d4-82a5-378e088b6eb6",
+                "cweId": 125,
+                "description": "The software reads data past the end, or before the beginning, of the intended buffer.",
+                "source": "OSSINDEX",
+                "title": "CWE-125: Out-of-bounds Read",
+                "uuid": "b7f92584-1c44-4963-b9a0-184c586077ba"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:7a899ad1-b14f-4857-932a-f746c8f50363:b7f92584-1c44-4963-b9a0-184c586077ba"
+        },
+        {
+            "component": {
+                "name": "hoek",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/hoek@2.16.3",
+                "uuid": "84ee7123-52ec-481e-86d0-1ecb46b0f413",
+                "version": "2.16.3"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.936"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "566",
+                "cweId": 471,
+                "subtitle": "hoek",
+                "description": "Versions of `hoek` prior to 4.2.1 and 5.0.3 are vulnerable to prototype pollution.\n\nThe `merge` function, and the `applyToDefaults` and `applyToDefaultsWithShallow` functions which leverage `merge` behind the scenes, are vulnerable to a prototype pollution attack when provided an _unvalidated_ payload created from a JSON string containing the `__proto__` property.\n\nThis can be demonstrated like so:\n\n```javascript\nvar Hoek = require('hoek');\nvar malicious_payload = '{\"__proto__\":{\"oops\":\"It works !\"}}';\n\nvar a = {};\nconsole.log(\"Before : \" + a.oops);\nHoek.merge({}, JSON.parse(malicious_payload));\nconsole.log(\"After : \" + a.oops);\n```\n\nThis type of attack can be used to overwrite existing properties causing a potential denial of service.",
+                "recommendation": "Update to version 4.2.1, 5.0.3 or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "5216f807-8f7a-4e53-a9fc-3456eb0d2244"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:84ee7123-52ec-481e-86d0-1ecb46b0f413:5216f807-8f7a-4e53-a9fc-3456eb0d2244"
+        },
+        {
+            "component": {
+                "name": "hoek",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/hoek@2.16.3",
+                "uuid": "84ee7123-52ec-481e-86d0-1ecb46b0f413",
+                "version": "2.16.3"
+            },
+            "attribution": {
+                "alternateIdentifier": "f83875d9-0fe3-492a-a1c1-e0ed39e74001",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.675",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/f83875d9-0fe3-492a-a1c1-e0ed39e74001?component-type=npm&component-name=hoek&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "CVE-2018-3728",
+                "cweId": 471,
+                "description": "hoek node module before 4.2.0 and 5.0.x before 5.0.3 suffers from a Modification of Assumed-Immutable Data (MAID) vulnerability via 'merge' and 'applyToDefaults' functions, which allows a malicious user to modify the prototype of \"Object\" via __proto__, causing the addition or modification of an existing property that will exist on all objects.",
+                "source": "NVD",
+                "uuid": "3b72925d-af2f-4eb3-a77a-90b8c98cd70a"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:84ee7123-52ec-481e-86d0-1ecb46b0f413:3b72925d-af2f-4eb3-a77a-90b8c98cd70a"
+        },
+        {
+            "component": {
+                "name": "method-override",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/method-override@2.3.5",
+                "uuid": "2ad87c5c-6593-43e2-91ce-6d868a858f08",
+                "version": "2.3.5"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.931"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "538",
+                "cweId": 400,
+                "subtitle": "method-override",
+                "description": "Affected versions of `method-override` are vulnerable to a regular expression denial of service vulnerability when untrusted user input is passed into the `X-HTTP-Method-Override` header.",
+                "recommendation": "Update to version 2.3.10 or later",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "abfa1447-bec1-4f48-a888-fa19de82924b"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:2ad87c5c-6593-43e2-91ce-6d868a858f08:abfa1447-bec1-4f48-a888-fa19de82924b"
+        },
+        {
+            "component": {
+                "name": "method-override",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/method-override@2.3.5",
+                "uuid": "2ad87c5c-6593-43e2-91ce-6d868a858f08",
+                "version": "2.3.5"
+            },
+            "attribution": {
+                "alternateIdentifier": "014528ce-8018-41a4-9419-a37ab577a608",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.684",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/014528ce-8018-41a4-9419-a37ab577a608?component-type=npm&component-name=method-override&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "014528ce-8018-41a4-9419-a37ab577a608",
+                "cweId": 400,
+                "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+                "source": "OSSINDEX",
+                "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+                "uuid": "feb2eaa6-d4eb-412f-a0ff-32233335afb2"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:2ad87c5c-6593-43e2-91ce-6d868a858f08:feb2eaa6-d4eb-412f-a0ff-32233335afb2"
+        },
+        {
+            "component": {
+                "name": "bson",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/bson@0.4.21",
+                "uuid": "28ea4008-2395-47e1-9ce0-d9d4ba0b9294",
+                "version": "0.4.21"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.944"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Deserialization of Untrusted Data",
+                "vulnId": "1686",
+                "cweId": 502,
+                "subtitle": "bson",
+                "description": "Versions of `bson` before 1.1.4 are vulnerable to Deserialization of Untrusted Data. The package will ignore an unknown value for an object's _bsotype, leading to cases where an object is serialized as a document rather than the intended BSON type.",
+                "recommendation": "Upgrade to version 1.1.4 or later",
+                "source": "NPM",
+                "title": "Deserialization of Untrusted Data in bson",
+                "uuid": "85f8c017-7d59-45d1-a307-b430226dd11d"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:28ea4008-2395-47e1-9ce0-d9d4ba0b9294:85f8c017-7d59-45d1-a307-b430226dd11d"
+        },
+        {
+            "component": {
+                "name": "mongodb",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mongodb@2.1.10",
+                "uuid": "a3bdec99-58ea-4ced-aab4-60191f8c1844",
+                "version": "2.1.10"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.94"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncaught Exception",
+                "vulnId": "1203",
+                "cweId": 248,
+                "subtitle": "mongodb",
+                "description": "Versions of `mongodb` prior to 3.1.13 are vulnerable to Denial of Service. The package fails to properly catch an exception when a collection name is invalid and the DB does not exist, crashing the application.",
+                "recommendation": "Upgrade to version 3.1.13 or later.",
+                "source": "NPM",
+                "title": "Denial of Service",
+                "uuid": "d7526784-03fd-4bb8-b8c7-9dfcab9155c2"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:a3bdec99-58ea-4ced-aab4-60191f8c1844:d7526784-03fd-4bb8-b8c7-9dfcab9155c2"
+        },
+        {
+            "component": {
+                "name": "mpath",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mpath@0.2.1",
+                "uuid": "4af93bdb-257e-45a3-ae00-6d0d2c9d82f6",
+                "version": "0.2.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.853"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Modification of Assumed-Immutable Data (MAID)",
+                "vulnId": "779",
+                "cweId": 471,
+                "subtitle": "mpath",
+                "description": "Versions of `mpath` before 0.5.1 are vulnerable to prototype pollution. Provided certain input `mpath` can add or modify properties of the `Object` prototype. These properties will be present on all objects.",
+                "recommendation": "Update to version `0.5.1` or later.",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "cf4a6bc7-cb6a-4712-b334-d39bd145ed91"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:4af93bdb-257e-45a3-ae00-6d0d2c9d82f6:cf4a6bc7-cb6a-4712-b334-d39bd145ed91"
+        },
+        {
+            "component": {
+                "name": "mquery",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mquery@1.10.0",
+                "uuid": "8bb89afa-b659-4918-9753-821558a1aeed",
+                "version": "1.10.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.836"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')",
+                "vulnId": "1649",
+                "cweId": 1321,
+                "subtitle": "mquery",
+                "description": "In `mquery` before version 3.2.3 there is a prototype pollution vulnerability because a special property (e.g., __proto__) can be copied during a merge or clone operation.",
+                "recommendation": "Upgrade to version 3.2.3 or later",
+                "source": "NPM",
+                "title": "Prototype Pollution",
+                "uuid": "ccd2dc7d-3ef3-4849-8184-9abb8b8fb331"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:8bb89afa-b659-4918-9753-821558a1aeed:ccd2dc7d-3ef3-4849-8184-9abb8b8fb331"
+        },
+        {
+            "component": {
+                "name": "mquery",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/mquery@1.10.0",
+                "uuid": "8bb89afa-b659-4918-9753-821558a1aeed",
+                "version": "1.10.0"
+            },
+            "attribution": {
+                "alternateIdentifier": "268855a0-2312-483a-b57f-42a921e7f753",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:32.705",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/268855a0-2312-483a-b57f-42a921e7f753?component-type=npm&component-name=mquery&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Control of Generation of Code ('Code Injection')",
+                "vulnId": "268855a0-2312-483a-b57f-42a921e7f753",
+                "cweId": 94,
+                "description": "The software constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment.",
+                "source": "OSSINDEX",
+                "title": "CWE-94: Improper Control of Generation of Code ('Code Injection')",
+                "uuid": "7ed14621-836f-4598-885a-ce1482318e4f"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:8bb89afa-b659-4918-9753-821558a1aeed:7ed14621-836f-4598-885a-ce1482318e4f"
+        },
+        {
+            "component": {
+                "name": "morgan",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/morgan@1.7.0",
+                "uuid": "83d61569-4445-417f-b238-dbe555517760",
+                "version": "1.7.0"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.901"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Improper Control of Generation of Code ('Code Injection')",
+                "vulnId": "736",
+                "cweId": 94,
+                "subtitle": "morgan",
+                "description": "Verisons of `morgan` before 1.9.1 are vulnerable to code injection when user input is allowed into the filter or combined with a prototype pollution attack.",
+                "recommendation": "Update to version 1.9.1 or later.",
+                "source": "NPM",
+                "title": "Code Injection",
+                "uuid": "64c302e1-fee8-460c-9f29-32175d2c27d7"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:83d61569-4445-417f-b238-dbe555517760:64c302e1-fee8-460c-9f29-32175d2c27d7"
+        },
+        {
+            "component": {
+                "name": "bl",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/bl@1.0.3",
+                "uuid": "6842183c-1355-49df-9ade-8ceabf5f5de6",
+                "version": "1.0.3"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.875"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Buffer Over-read",
+                "vulnId": "1555",
+                "cweId": 126,
+                "subtitle": "bl",
+                "description": "A buffer over-read vulnerability exists in bl <4.0.3, <3.0.1 <2.2.1 and <1.2.3 which could allow an attacker to supply user input (even typed) that if it ends up in consume() argument and can become negative, the BufferList state can be corrupted, tricking it into exposing uninitialized memory via regular .slice() calls.",
+                "recommendation": "Upgrade to version 4.0.3, 3.0.1, 2.2.1 or 1.2.3.",
+                "source": "NPM",
+                "title": "Remote Memory Exposure",
+                "uuid": "b794ff9c-8611-40ed-b813-4813426c0fde"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:6842183c-1355-49df-9ade-8ceabf5f5de6:b794ff9c-8611-40ed-b813-4813426c0fde"
+        },
+        {
+            "component": {
+                "name": "bl",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/bl@1.0.3",
+                "uuid": "6842183c-1355-49df-9ade-8ceabf5f5de6",
+                "version": "1.0.3"
+            },
+            "attribution": {
+                "alternateIdentifier": "01fa430e-ebce-4504-bcbd-1a58bd22b168",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.011",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/01fa430e-ebce-4504-bcbd-1a58bd22b168?component-type=npm&component-name=bl&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Exposure of Sensitive Information to an Unauthorized Actor",
+                "vulnId": "01fa430e-ebce-4504-bcbd-1a58bd22b168",
+                "cweId": 200,
+                "description": "An information exposure is the intentional or unintentional disclosure of information to an actor that is not explicitly authorized to have access to that information.",
+                "source": "OSSINDEX",
+                "title": "CWE-200: Information Exposure",
+                "uuid": "4a2c04bb-10bc-4308-909f-05acddfd3c40"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:6842183c-1355-49df-9ade-8ceabf5f5de6:4a2c04bb-10bc-4308-909f-05acddfd3c40"
+        },
+        {
+            "component": {
+                "name": "cryptiles",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/cryptiles@2.0.5",
+                "uuid": "3a7284a6-458b-4f83-9041-b0b66a7f2d77",
+                "version": "2.0.5"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.861"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Insufficient Entropy",
+                "vulnId": "1464",
+                "cweId": 331,
+                "subtitle": "cryptiles",
+                "description": "Versions of `cryptiles` prior to 4.1.2 are vulnerable to Insufficient Entropy. The `randomDigits()` method does not provide sufficient entropy and its generates digits that are not evenly distributed.",
+                "recommendation": "Upgrade to version 4.1.2. The package is deprecated and has been moved to `@hapi/cryptiles` and it is strongly recommended to use the maintained package.",
+                "source": "NPM",
+                "title": "Insufficient Entropy",
+                "uuid": "60fe0e21-f9c8-4275-894e-16cc31083d85"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:3a7284a6-458b-4f83-9041-b0b66a7f2d77:60fe0e21-f9c8-4275-894e-16cc31083d85"
+        },
+        {
+            "component": {
+                "name": "cryptiles",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/cryptiles@2.0.5",
+                "uuid": "3a7284a6-458b-4f83-9041-b0b66a7f2d77",
+                "version": "2.0.5"
+            },
+            "attribution": {
+                "alternateIdentifier": "ce49648b-993b-4243-9f41-8c09fce5754d",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.041",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/ce49648b-993b-4243-9f41-8c09fce5754d?component-type=npm&component-name=cryptiles&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Use of Insufficiently Random Values",
+                "vulnId": "ce49648b-993b-4243-9f41-8c09fce5754d",
+                "cweId": 330,
+                "description": "The software may use insufficiently random numbers or values in a security context that depends on unpredictable numbers.",
+                "source": "OSSINDEX",
+                "title": "CWE-330: Use of Insufficiently Random Values",
+                "uuid": "3947f04d-96a4-495c-a321-548db2c13814"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:3a7284a6-458b-4f83-9041-b0b66a7f2d77:3947f04d-96a4-495c-a321-548db2c13814"
+        },
+        {
+            "component": {
+                "name": "cryptiles",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/cryptiles@2.0.5",
+                "uuid": "3a7284a6-458b-4f83-9041-b0b66a7f2d77",
+                "version": "2.0.5"
+            },
+            "attribution": {
+                "alternateIdentifier": "9c0a4f9f-5add-42bc-b505-29445729e2a8",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.044",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/9c0a4f9f-5add-42bc-b505-29445729e2a8?component-type=npm&component-name=cryptiles&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "cweName": "Insufficient Entropy",
+                "vulnId": "CVE-2018-1000620",
+                "cweId": 331,
+                "description": "Eran Hammer cryptiles version 4.1.1 earlier contains a CWE-331: Insufficient Entropy vulnerability in randomDigits() method that can result in An attacker is more likely to be able to brute force something that was supposed to be random.. This attack appear to be exploitable via Depends upon the calling application.. This vulnerability appears to have been fixed in 4.1.2.",
+                "source": "NVD",
+                "uuid": "ffbaccda-ddcb-40bc-88fd-92fe4dc2fe0d"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:3a7284a6-458b-4f83-9041-b0b66a7f2d77:ffbaccda-ddcb-40bc-88fd-92fe4dc2fe0d"
+        },
+        {
+            "component": {
+                "name": "cryptiles",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/cryptiles@2.0.5",
+                "uuid": "3a7284a6-458b-4f83-9041-b0b66a7f2d77",
+                "version": "2.0.5"
+            },
+            "attribution": {
+                "alternateIdentifier": "ca91ab31-0d5c-4538-aedd-dd6beda070d3",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.048",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/ca91ab31-0d5c-4538-aedd-dd6beda070d3?component-type=npm&component-name=cryptiles&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "CRITICAL",
+                "severityRank": 0,
+                "cweName": "Insufficient Entropy",
+                "vulnId": "ca91ab31-0d5c-4538-aedd-dd6beda070d3",
+                "cweId": 331,
+                "description": "The software uses an algorithm or scheme that produces insufficient entropy, leaving patterns or clusters of values that are more likely to occur than others.",
+                "source": "OSSINDEX",
+                "title": "CWE-331: Insufficient Entropy",
+                "uuid": "65c10d68-73dd-49b7-a0bc-79e5b1a616d8"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:3a7284a6-458b-4f83-9041-b0b66a7f2d77:65c10d68-73dd-49b7-a0bc-79e5b1a616d8"
+        },
+        {
+            "component": {
+                "name": "qs",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/qs@6.0.4",
+                "uuid": "d2eefc13-f855-445b-8d35-24ee5fb78dc1",
+                "version": "6.0.4"
+            },
+            "attribution": {
+                "alternateIdentifier": "3b7c9a3f-0265-4435-b43d-7dbee2d6a461",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.071",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/3b7c9a3f-0265-4435-b43d-7dbee2d6a461?component-type=npm&component-name=qs&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "UNASSIGNED",
+                "severityRank": 5,
+                "vulnId": "3b7c9a3f-0265-4435-b43d-7dbee2d6a461",
+                "description": "A prototype override protection bypass is possible, which allows attackers to overwrite properties and functions. A previous solution for the problem is incomplete.",
+                "source": "OSSINDEX",
+                "title": "Prototype override protection bypass",
+                "uuid": "d4f4f8e0-7ffa-4902-b6da-610c92731380"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:d2eefc13-f855-445b-8d35-24ee5fb78dc1:d4f4f8e0-7ffa-4902-b6da-610c92731380"
+        },
+        {
+            "component": {
+                "name": "tough-cookie",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/tough-cookie@2.2.2",
+                "uuid": "41f55367-dc63-4dcb-b4e8-14fc32a1e427",
+                "version": "2.2.2"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.866"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "130",
+                "cweId": 400,
+                "subtitle": "tough-cookie",
+                "description": "Affected versions of `tough-cookie` may be vulnerable to regular expression denial of service when long strings of semicolons exist in the `Set-Cookie` header.",
+                "recommendation": "Update to version 2.3.0 or later.",
+                "source": "NPM",
+                "title": "ReDoS via long string of semicolons",
+                "uuid": "c580bbce-a552-438a-b1de-fc244f7a4677"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:41f55367-dc63-4dcb-b4e8-14fc32a1e427:c580bbce-a552-438a-b1de-fc244f7a4677"
+        },
+        {
+            "component": {
+                "name": "tough-cookie",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/tough-cookie@2.2.2",
+                "uuid": "41f55367-dc63-4dcb-b4e8-14fc32a1e427",
+                "version": "2.2.2"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.869"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "525",
+                "cweId": 400,
+                "subtitle": "tough-cookie",
+                "description": "Affected versions of `tough-cookie` are susceptible to a regular expression denial of service.\n\nThe amplification on this vulnerability is relatively low - it takes around 2 seconds for the engine to execute on a malicious input which is 50,000 characters in length.\n\nIf node was compiled using the `-DHTTP_MAX_HEADER_SIZE` however, the impact of the vulnerability can be significant, as the primary limitation for the vulnerability is the default max HTTP header length in node.",
+                "recommendation": "Update to version 2.3.3 or later.",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "e0c00490-0f31-4e16-86a9-5c5a11be6fb0"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:41f55367-dc63-4dcb-b4e8-14fc32a1e427:e0c00490-0f31-4e16-86a9-5c5a11be6fb0"
+        },
+        {
+            "component": {
+                "name": "tough-cookie",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/tough-cookie@2.2.2",
+                "uuid": "41f55367-dc63-4dcb-b4e8-14fc32a1e427",
+                "version": "2.2.2"
+            },
+            "attribution": {
+                "alternateIdentifier": "c7f185ea-1ec3-4b0c-aa8c-2381f8e18058",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.078",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/c7f185ea-1ec3-4b0c-aa8c-2381f8e18058?component-type=npm&component-name=tough-cookie&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Incorrect Regular Expression",
+                "vulnId": "c7f185ea-1ec3-4b0c-aa8c-2381f8e18058",
+                "cweId": 185,
+                "description": "The software specifies a regular expression in a way that causes data to be improperly matched or compared.",
+                "source": "OSSINDEX",
+                "title": "CWE-185: Incorrect Regular Expression",
+                "uuid": "c8cee7e1-8a33-48ef-96f2-9845142bb71f"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:41f55367-dc63-4dcb-b4e8-14fc32a1e427:c8cee7e1-8a33-48ef-96f2-9845142bb71f"
+        },
+        {
+            "component": {
+                "name": "tunnel-agent",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/tunnel-agent@0.4.3",
+                "uuid": "62d85a9f-cfbe-4c09-b9bd-8270a57d69fb",
+                "version": "0.4.3"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.848"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Improper Input Validation",
+                "vulnId": "598",
+                "cweId": 20,
+                "subtitle": "tunnel-agent",
+                "description": "Versions of `tunnel-agent` before 0.6.0 are vulnerable to memory exposure.\n\nThis is exploitable if user supplied input is provided to the auth value and is a number.\n\nProof-of-concept:\n```js\nrequire('request')({\n  method: 'GET',\n  uri: 'http://www.example.com',\n  tunnel: true,\n  proxy:{\n    protocol: 'http:',\n    host:'127.0.0.1',\n    port:8080,\n    auth:USERSUPPLIEDINPUT // number\n  }\n});\n```",
+                "recommendation": "Update to version 0.6.0 or later.",
+                "source": "NPM",
+                "title": "Memory Exposure",
+                "uuid": "20ecdd9c-e4bd-48e4-a2cf-3019072f5d2b"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:62d85a9f-cfbe-4c09-b9bd-8270a57d69fb:20ecdd9c-e4bd-48e4-a2cf-3019072f5d2b"
+        },
+        {
+            "component": {
+                "name": "tunnel-agent",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/tunnel-agent@0.4.3",
+                "uuid": "62d85a9f-cfbe-4c09-b9bd-8270a57d69fb",
+                "version": "0.4.3"
+            },
+            "attribution": {
+                "alternateIdentifier": "a7649fc6-1468-4c8c-91af-a4fbf4320f52",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.084",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/a7649fc6-1468-4c8c-91af-a4fbf4320f52?component-type=npm&component-name=tunnel-agent&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Input Validation",
+                "vulnId": "a7649fc6-1468-4c8c-91af-a4fbf4320f52",
+                "cweId": 20,
+                "description": "The product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.",
+                "source": "OSSINDEX",
+                "title": "CWE-20: Improper Input Validation",
+                "uuid": "a8242645-3843-4369-81f3-94bfddd4232a"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:62d85a9f-cfbe-4c09-b9bd-8270a57d69fb:a8242645-3843-4369-81f3-94bfddd4232a"
+        },
+        {
+            "component": {
+                "name": "slug",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/slug@0.9.1",
+                "uuid": "bad4657f-cba7-4d50-a927-1359b15738bf",
+                "version": "0.9.1"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.908"
+            },
+            "vulnerability": {
+                "severity": "MEDIUM",
+                "severityRank": 2,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "537",
+                "cweId": 400,
+                "subtitle": "slug",
+                "description": "Affected versions of `slug` are vulnerable to a regular expression denial of service when parsing untrusted user input.\n\nThe issue is low severity, as it takes 50,000 characters to cause the event loop to block for 2 seconds,\n\nAbout 50k characters can block the event loop for 2 seconds.",
+                "recommendation": "Update to version 0.9.2 or later.",
+                "source": "NPM",
+                "title": "Regular Expression Denial of Service",
+                "uuid": "43655c2d-00ab-4c1d-a06c-dc750bee9cfe"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:bad4657f-cba7-4d50-a927-1359b15738bf:43655c2d-00ab-4c1d-a06c-dc750bee9cfe"
+        },
+        {
+            "component": {
+                "name": "slug",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/slug@0.9.1",
+                "uuid": "bad4657f-cba7-4d50-a927-1359b15738bf",
+                "version": "0.9.1"
+            },
+            "attribution": {
+                "alternateIdentifier": "85feaac7-9659-4d45-b7bb-bae5e6109d80",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.09",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/85feaac7-9659-4d45-b7bb-bae5e6109d80?component-type=npm&component-name=slug&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Uncontrolled Resource Consumption",
+                "vulnId": "85feaac7-9659-4d45-b7bb-bae5e6109d80",
+                "cweId": 400,
+                "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+                "source": "OSSINDEX",
+                "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+                "uuid": "e3520958-2865-4217-b47f-cf20b10620cf"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:bad4657f-cba7-4d50-a927-1359b15738bf:e3520958-2865-4217-b47f-cf20b10620cf"
+        },
+        {
+            "component": {
+                "name": "underscore",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/underscore@1.8.3",
+                "uuid": "498f5a00-5132-4c7c-8ca0-b3bf7ff078a9",
+                "version": "1.8.3"
+            },
+            "attribution": {
+                "analyzerIdentity": "NPM_AUDIT_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:31.89"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Control of Generation of Code ('Code Injection')",
+                "vulnId": "1674",
+                "cweId": 94,
+                "subtitle": "underscore",
+                "description": "The package `underscore` from 1.13.0-0 and before 1.13.0-2, from 1.3.2 and before 1.12.1 are vulnerable to Arbitrary Code Execution via the template function, particularly when a variable property is passed as an argument as it is not sanitized.",
+                "recommendation": "Upgrade to versions 1.12.1 or 1.13.0-2 or later",
+                "source": "NPM",
+                "title": "Arbitrary Code Execution",
+                "uuid": "d9ed658f-4c21-486d-9f42-2e84bad382ed"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:498f5a00-5132-4c7c-8ca0-b3bf7ff078a9:d9ed658f-4c21-486d-9f42-2e84bad382ed"
+        },
+        {
+            "component": {
+                "name": "underscore",
+                "project": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615",
+                "purl": "pkg:npm/underscore@1.8.3",
+                "uuid": "498f5a00-5132-4c7c-8ca0-b3bf7ff078a9",
+                "version": "1.8.3"
+            },
+            "attribution": {
+                "alternateIdentifier": "d9cd9c54-7a69-446e-a5ea-fd5f55302621",
+                "analyzerIdentity": "OSSINDEX_ANALYZER",
+                "attributedOn": "2021-06-18 12:54:33.095",
+                "referenceUrl": "https://ossindex.sonatype.org/vulnerability/d9cd9c54-7a69-446e-a5ea-fd5f55302621?component-type=npm&component-name=underscore&utm_source=dependency-track&utm_medium=integration&utm_content=v4.2.2"
+            },
+            "vulnerability": {
+                "severity": "HIGH",
+                "severityRank": 1,
+                "cweName": "Improper Control of Generation of Code ('Code Injection')",
+                "vulnId": "CVE-2021-23358",
+                "cweId": 94,
+                "description": "The package underscore from 1.13.0-0 and before 1.13.0-2, from 1.3.2 and before 1.12.1 are vulnerable to Arbitrary Code Injection via the template function, particularly when a variable property is passed as an argument as it is not sanitized.",
+                "source": "NVD",
+                "uuid": "194463b0-fb65-4267-b88b-3f84e9e7d030"
+            },
+            "analysis": {
+                "isSuppressed": false
+            },
+            "matrix": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615:498f5a00-5132-4c7c-8ca0-b3bf7ff078a9:194463b0-fb65-4267-b88b-3f84e9e7d030"
+        }
+    ],
+    "project": {
+        "name": "Example",
+        "uuid": "f4f28d51-7df5-4a38-b5cd-c39ff1d24615"
+    },
+    "version": "1.0"
+}

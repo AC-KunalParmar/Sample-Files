@@ -1,0 +1,222 @@
+[
+  {
+    "values": [
+      {
+        "key": "eventType",
+        "value": "remediation"
+      },
+      {
+        "key": "timestamp",
+        "value": "$TIMESTAMP"
+      },
+      {
+        "key": "host",
+        "value": "console.acme.com"
+      },
+      {
+        "key": "environment",
+        "value": "production"
+      },
+      {
+        "key": "integrationId",
+        "value": "UUID"
+      },
+      {
+        "key": "remediationUrl",
+        "value": "remediationUrl"
+      },
+      {
+        "key": "remediationId",
+        "value": "REM-141"
+      },
+      {
+        "key": "path",
+        "value": "v3/transactions/{transactionId}/search"
+      },
+      {
+        "key": "method",
+        "value": "GET"
+      },
+      {
+        "key": "severity",
+        "value": "HIGH"
+      }
+    ]
+  },
+  {
+    "values": [
+      {
+        "key": "eventType",
+        "value": "remediation"
+      },
+      {
+        "key": "timestamp",
+        "value": "$TIMESTAMP"
+      },
+      {
+        "key": "host",
+        "value": "console.acme.com"
+      },
+      {
+        "key": "environment",
+        "value": "production"
+      },
+      {
+        "key": "integrationId",
+        "value": "UUID"
+      },
+      {
+        "key": "remediationUrl",
+        "value": "remediationUrl"
+      },
+      {
+        "key": "remediationId",
+        "value": "REM-142"
+      },
+      {
+        "key": "path",
+        "value": "v3/transactions/{transactionId}/search"
+      },
+      {
+        "key": "method",
+        "value": "GET"
+      },
+      {
+        "key": "severity",
+        "value": "HIGH"
+      }
+    ]
+  },
+  {
+    "values": [
+      {
+        "key": "eventType",
+        "value": "remediation"
+      },
+      {
+        "key": "timestamp",
+        "value": "$TIMESTAMP"
+      },
+      {
+        "key": "host",
+        "value": "console.acme.com"
+      },
+      {
+        "key": "environment",
+        "value": "production"
+      },
+      {
+        "key": "integrationId",
+        "value": "UUID"
+      },
+      {
+        "key": "remediationUrl",
+        "value": "remediationUrl"
+      },
+      {
+        "key": "remediationId",
+        "value": "REM-143"
+      },
+      {
+        "key": "path",
+        "value": "v3/transactions/{transactionId}/search"
+      },
+      {
+        "key": "method",
+        "value": "GET"
+      },
+      {
+        "key": "severity",
+        "value": "HIGH"
+      }
+    ]
+  },
+  {
+    "values": [
+      {
+        "key": "eventType",
+        "value": "remediation"
+      },
+      {
+        "key": "timestamp",
+        "value": "$TIMESTAMP"
+      },
+      {
+        "key": "host",
+        "value": "console.acme.com"
+      },
+      {
+        "key": "environment",
+        "value": "production"
+      },
+      {
+        "key": "integrationId",
+        "value": "UUID"
+      },
+      {
+        "key": "remediationUrl",
+        "value": "remediationUrl"
+      },
+      {
+        "key": "remediationId",
+        "value": "REM-144"
+      },
+      {
+        "key": "path",
+        "value": "v3/transactions/{transactionId}/search"
+      },
+      {
+        "key": "method",
+        "value": "GET"
+      },
+      {
+        "key": "severity",
+        "value": "HIGH"
+      }
+    ]
+  },
+  {
+    "values": [
+      {
+        "key": "eventType",
+        "value": "remediation"
+      },
+      {
+        "key": "timestamp",
+        "value": "$TIMESTAMP"
+      },
+      {
+        "key": "host",
+        "value": "console.acme.com"
+      },
+      {
+        "key": "environment",
+        "value": "production"
+      },
+      {
+        "key": "integrationId",
+        "value": "UUID"
+      },
+      {
+        "key": "remediationUrl",
+        "value": "remediationUrl"
+      },
+      {
+        "key": "remediationId",
+        "value": "REM-145"
+      },
+      {
+        "key": "path",
+        "value": "v3/transactions/{transactionId}/search"
+      },
+      {
+        "key": "method",
+        "value": "GET"
+      },
+      {
+        "key": "severity",
+        "value": "LOW"
+      }
+    ]
+  }
+]

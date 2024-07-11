@@ -1,0 +1,100 @@
+{
+    "_links": {
+        "root": {
+            "href": "/"
+        },
+        "self": {
+            "href": "/scans/a912bcba-c9b5-412c-833a-37cb73cad599/findings"
+        },
+        "help": {
+            "href": "https://help.veracode.com/reader/tS9CaFwL4_lbIEWWomsJoA/ovfZGgu96UINQxIuTqRDwg"
+        }
+    },
+    "scan_id": "a912bcba-c9b5-412c-833a-37cb73cad599",
+    "scan_status": "SUCCESS",
+    "message": "Scan successful. Results size: 4396 bytes",
+    "modules": [
+        "VeracodeJavaAPI.jar"
+    ],
+    "modules_count": 1,
+    "findings": [
+        {
+            "title": "java.io.File.!operator_javanewinit",
+            "issue_id": 1001,
+            "gob": "B",
+            "severity": 3,
+            "issue_type_id": "taint",
+            "issue_type": "External Control of File Name or Path",
+            "cwe_id": "73",
+            "display_text": "\u003cspan\u003eThis call to java.io.File.!operator_javanewinit() contains a path manipulation flaw. The argument to the function is a filename constructed using untrusted input. If an attacker is allowed to specify all or part of the filename, it may be possible to gain unauthorized access to files on the server, including those outside the webroot, that would be normally be inaccessible to end users. The level of exposure depends on the effectiveness of input validation routines, if any. The first argument to !operator_javanewinit() contains tainted data from the variable DEFAULT_CREDENTIALS_FILE_PATH. The tainted data originated from an earlier call to java.lang.System.getProperty.\u003c/span\u003e \u003cspan\u003eValidate all untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible. When using blocklists, be sure that the sanitizing routine performs a sufficient number of iterations to remove all instances of disallowed characters.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/73.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://owasp.org/www-community/attacks/Path_Traversal\"\u003eOWASP\u003c/a\u003e\u003c/span\u003e",
+            "files": {
+                "source_file": {
+                    "file": "com/veracode/apiwrapper/services/impl/DefaultCredentialsService.java",
+                    "line": 72,
+                    "function_name": "createInstance",
+                    "qualified_function_name": "com.veracode.apiwrapper.services.impl.DefaultCredentialsService.createInstance",
+                    "function_prototype": "CredentialsService createInstance(void)",
+                    "scope": "com.veracode.apiwrapper.services.impl.DefaultCredentialsService"
+                }
+            },
+            "flaw_match": {
+                "procedure_hash": "600919358",
+                "prototype_hash": "4146034803",
+                "flaw_hash": "563930476",
+                "flaw_hash_count": 1,
+                "flaw_hash_ordinal": 1,
+                "cause_hash": "2866949028",
+                "cause_hash_count": 1,
+                "cause_hash_ordinal": 1,
+                "cause_hash2": "1522093433",
+                "cause_hash2_ordinal": "3"
+            },
+            "stack_dumps": {
+                "stack_dump": [
+                    {}
+                ]
+            },
+            "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/73.html"
+        },
+        {
+            "title": "java.io.File.!operator_javanewinit",
+            "issue_id": 1000,
+            "gob": "B",
+            "severity": 3,
+            "issue_type_id": "taint",
+            "issue_type": "External Control of File Name or Path",
+            "cwe_id": "73",
+            "display_text": "\u003cspan\u003eThis call to java.io.File.!operator_javanewinit() contains a path manipulation flaw. The argument to the function is a filename constructed using untrusted input. If an attacker is allowed to specify all or part of the filename, it may be possible to gain unauthorized access to files on the server, including those outside the webroot, that would be normally be inaccessible to end users. The level of exposure depends on the effectiveness of input validation routines, if any. The first argument to !operator_javanewinit() contains tainted data from the variable DEFAULT_CREDENTIALS_FILE_PATH. The tainted data originated from an earlier call to java.lang.System.getProperty.\u003c/span\u003e \u003cspan\u003eValidate all untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible. When using blocklists, be sure that the sanitizing routine performs a sufficient number of iterations to remove all instances of disallowed characters.\u003c/span\u003e \u003cspan\u003eReferences: \u003ca href\u003d\"https://cwe.mitre.org/data/definitions/73.html\"\u003eCWE\u003c/a\u003e \u003ca href\u003d\"https://owasp.org/www-community/attacks/Path_Traversal\"\u003eOWASP\u003c/a\u003e\u003c/span\u003e",
+            "files": {
+                "source_file": {
+                    "file": "com/veracode/apiwrapper/services/impl/DefaultCredentialsService.java",
+                    "line": 79,
+                    "function_name": "createInstance",
+                    "qualified_function_name": "com.veracode.apiwrapper.services.impl.DefaultCredentialsService.createInstance",
+                    "function_prototype": "CredentialsService createInstance(java.io.File)",
+                    "scope": "com.veracode.apiwrapper.services.impl.DefaultCredentialsService"
+                }
+            },
+            "flaw_match": {
+                "procedure_hash": "1265027317",
+                "prototype_hash": "900623806",
+                "flaw_hash": "693549441",
+                "flaw_hash_count": 1,
+                "flaw_hash_ordinal": 1,
+                "cause_hash": "2866949028",
+                "cause_hash_count": 1,
+                "cause_hash_ordinal": 1,
+                "cause_hash2": "1522093433",
+                "cause_hash2_ordinal": "8"
+            },
+            "stack_dumps": {
+                "stack_dump": [
+                    {}
+                ]
+            },
+            "flaw_details_link": "https://downloads.veracode.com/securityscan/cwe/v4/java/73.html"
+        }
+    ],
+    "pipeline_scan": "22.12.0-0",
+    "dev_stage": "DEVELOPMENT"
+}

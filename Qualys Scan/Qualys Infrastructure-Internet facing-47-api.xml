@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HOST_LIST_VM_DETECTION_OUTPUT>
+    <RESPONSE>
+        <DATETIME>2023-01-24T11:56:47Z</DATETIME>
+        <HOST_LIST>
+            <HOST>
+                <ID>160663804</ID>
+                <IP>52.14.175.31</IP>
+                <TRACKING_METHOD>EC2</TRACKING_METHOD>
+                <DNS>ec2-52-14-175-31.us-east-2.compute.amazonaws.com</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ec2-52-14-175-31</HOSTNAME>
+                    <DOMAIN>us-east-2.compute.amazonaws.com</DOMAIN>
+                    <FQDN>ec2-52-14-175-31.us-east-2.compute.amazonaws.com</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2021-12-23T15:00:05Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2021-12-23T13:18:44Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>608</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>38726</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.5 detected on port
+                            22 over TCP.</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:28:31Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-23T13:18:44Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>3</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-23T13:18:44Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-23T15:00:05Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-23T15:00:05Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>160663839</ID>
+                <IP>54.201.84.89</IP>
+                <TRACKING_METHOD>EC2</TRACKING_METHOD>
+                <DNS>ip-10-30-0-85.us-west-2.compute.internal</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ip-10-30-0-85</HOSTNAME>
+                    <DOMAIN>us-west-2.compute.internal</DOMAIN>
+                    <FQDN>ip-10-30-0-85.us-west-2.compute.internal</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2022-05-25T13:14:57Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2022-05-25T13:13:41Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>245</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>19058</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>4</SEVERITY>
+                        <SSL>0</SSL>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>19059</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>4</SEVERITY>
+                        <SSL>0</SSL>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38169</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>1433</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=SSL__Self__Signed__Fallback is a self signed
+                            certificate.</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38170</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>1433</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=SSL__Self__Signed__Fallback
+                            (SSL_Self_Signed_Fallback) doesn&amp;apos;t resolve</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38173</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>1433</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=SSL__Self__Signed__Fallback self signed
+                            certificate</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38685</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>1433</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=SSL__Self__Signed__Fallback is valid for more
+                            than 398 days</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>82003</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Timestamp of host (network byte ordering): 13:09:36 GMT</RESULTS>
+                        <STATUS>Active</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:12:35Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:13:41Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:13:41Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:14:57Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:14:57Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>160663845</ID>
+                <IP>3.136.27.78</IP>
+                <TRACKING_METHOD>EC2</TRACKING_METHOD>
+                <DNS>ip-10-0-19-124.us-east-2.compute.internal</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ip-10-0-19-124</HOSTNAME>
+                    <DOMAIN>us-east-2.compute.internal</DOMAIN>
+                    <FQDN>ip-10-0-19-124.us-east-2.compute.internal</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2022-05-25T13:16:51Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2022-05-25T13:15:53Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>446</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>38170</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            (localhost) doesn&amp;apos;t resolve
+                            (webserver) doesn&amp;apos;t resolve
+                            (hub-webserver) doesn&amp;apos;t resolve</RESULTS>
+                        <STATUS>Fixed</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:42:15Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-23T13:32:24Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>3</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:15:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:16:51Z</LAST_UPDATE_DATETIME>
+                        <LAST_FIXED_DATETIME>2022-05-25T07:51:54Z</LAST_FIXED_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:16:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38173</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            unable to get local issuer certificate</RESULTS>
+                        <STATUS>Fixed</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:42:15Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-23T13:32:24Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>2</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:15:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:16:51Z</LAST_UPDATE_DATETIME>
+                        <LAST_FIXED_DATETIME>2022-05-25T07:51:54Z</LAST_FIXED_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:16:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38685</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            is valid for more than 398 days</RESULTS>
+                        <STATUS>Fixed</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:42:15Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-23T13:32:24Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>3</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:15:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:16:51Z</LAST_UPDATE_DATETIME>
+                        <LAST_FIXED_DATETIME>2022-05-25T07:51:54Z</LAST_FIXED_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:16:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>160663854</ID>
+                <IP>54.188.10.97</IP>
+                <TRACKING_METHOD>EC2</TRACKING_METHOD>
+                <OS>Windows 2016/2019/10</OS>
+                <DNS>ip-10-30-0-156.us-west-2.compute.internal</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ip-10-30-0-156</HOSTNAME>
+                    <DOMAIN>us-west-2.compute.internal</DOMAIN>
+                    <FQDN>ip-10-30-0-156.us-west-2.compute.internal</FQDN>
+                </DNS_DATA>
+                <NETBIOS>CHECKMARXSERVER</NETBIOS>
+                <LAST_SCAN_DATETIME>2022-05-25T13:35:35Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2022-05-25T13:27:19Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>1132</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>11827</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>X-Content-Type-Options HTTP Header missing on port 80.
+
+                            GET / HTTP/1.0
+                            Host: ec2-54-188-10-97.us-west-2.compute.amazonaws.com
+
+
+                            HTTP/1.1 200 OK
+                            Content-Type: text/html
+                            Last-Modified: Thu, 05 Aug 2021 12:19:42 GMT
+                            Accept-Ranges: bytes
+                            ETag: &amp;quot;b7bbc22bf489d71:0&amp;quot;
+                            Server: Microsoft-IIS/10.0
+                            X-Powered-By: ASP.NET
+                            Date: Wed, 25 May 2022 13:15:44 GMT
+                            Connection: keep-alive
+                            Content-Length: 703</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>15034</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>53</PORT>
+                        <PROTOCOL>udp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Server supports recursive name resolution to IPv4 addresses.
+                            Server supports recursive name resolution to IPv6 addresses.</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>15035</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>53</PORT>
+                        <PROTOCOL>udp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Server&amp;apos;s cache timeout for IPv4 addresses is more than 3
+                            sec.
+                            Server&amp;apos;s cache timeout for IPv6 addresses is more than 3 sec.</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>15068</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>53</PORT>
+                        <PROTOCOL>udp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode: QUERY, rcode:
+                            NOERROR, id: 2754
+                            ;; flags: qr rd ra ; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 12
+                            ;; QUESTION SECTION:
+                            ;; . IN NS
+
+                            ;; ANSWER SECTION:
+                            . 86301 IN NS b.root-servers.net.
+                            . 86301 IN NS c.root-servers.net.
+                            . 86301 IN NS d.root-servers.net.
+                            . 86301 IN NS e.root-servers.net.
+                            . 86301 IN NS f.root-servers.net.
+                            . 86301 IN NS g.root-servers.net.
+                            . 86301 IN NS h.root-servers.net.
+                            . 86301 IN NS i.root-servers.net.
+                            . 86301 IN NS j.root-servers.net.
+                            . 86301 IN NS k.root-servers.net.
+                            . 86301 IN NS l.root-servers.net.
+                            . 86301 IN NS m.root-servers.net.
+                            . 86301 IN NS a.root-servers.net.
+
+                            ;; AUTHORITY SECTION:
+
+                            ;; ADDITIONAL SECTION:
+                            b.root-servers.net. 86301 IN A 199.9.14.201
+                            b.root-servers.net. 86301 IN AAAA 2001:500:200::b
+                            c.root-servers.net. 86301 IN A 192.33.4.12
+                            c.root-servers.net. 86301 IN AAAA 2001:500:2::c
+                            d.root-servers.net. 86301 IN A 199.7.91.13
+                            d.root-servers.net. 86301 IN AAAA 2001:500:2d::d
+                            e.root-servers.net. 86301 IN A 192.203.230.10
+                            e.root-servers.net. 86301 IN AAAA 2001:500:a8::e
+                            f.root-servers.net. 86301 IN A 192.5.5.241
+                            f.root-servers.net. 86301 IN AAAA 2001:500:2f::f
+                            g.root-servers.net. 86301 IN A 192.112.36.4
+                            g.root-servers.net. 86301 IN AAAA 2001:500:12::d0d
+
+                            ;; Query time: 39 msec
+                            ;; SERVER: 54.188.10.97
+                            ;; WHEN: Wed May 25 13:10:21 2022
+                            ;; MSG SIZE rcvd: 505</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>15086</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <PORT>53</PORT>
+                        <PROTOCOL>udp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>:_F8_81_80_00_01_00_00_00_00_0C_00_00_02_00_01_C0_0C_00_02_00_01_00_01N_10_00_14_01d_0Croot-servers_03net_00_C0_0C_00_02_00_01_00_01N_10_00_04_01e_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01f_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01g_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01h_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01i_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01j_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01k_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01l_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01m_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01a_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01b_C0_1F_C0_0C_00_02_00_01_00_01N_10_00_04_01c_C0_1F_C0_1D_00_01_00_01_00_01N_10_00_04_C7_07[_C0_1D_00_1C_00_01_00_01N_10_00_10
+                            _01_05_00_00-_00_00_00_00_00_00_00_00_00_C0=_00_01_00_01_00_01N_10_00_04_C0_CB_E6
+                            _C0=_00_1C_00_01_00_01N_10_00_10
+                            _01_05_00_00_A8_00_00_00_00_00_00_00_00_00_0E_C0M_00_01_00_01_00_01N_10_00_04_C0_05_05_F1_C0M_00_1C_00_01_00_01N_10_00_10
+                            _01_05_00_00/_00_00_00_00_00_00_00_00_00_0F_C0]_00_01_00_01_00_01N_10_00_04_C0p$_04_C0]_00_1C_00_01_00_01N_10_00_10
+                            _01_05_00_00_12_00_00_00_00_00_00_00_00_C0m_00_01_00_01_00_01N_10_00_04_C6a_BE5_C0m_00_1C_00_01_00_01N_10_00_10
+                            _01_05_00_00_01_00_00_00_00_00_00_00_00_00S_C0}_00_01_00_01_00_01N_10_00_04_C0$_94_11_C0}_00_1C_00_01_00_01N_10_00_10
+                            _01_07_FE_00_00_00_00_00_00_00_00_00_00_00S</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38170</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>3389</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=CheckmarxServer (CheckmarxServer)
+                            doesn&amp;apos;t resolve</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38173</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>3389</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=CheckmarxServer self signed certificate</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38628</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>3389</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>TLSv1.0 is supported</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38657</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>3389</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>CIPHER KEY-EXCHANGE AUTHENTICATION MAC ENCRYPTION(KEY-STRENGTH)
+                            GRADE
+                            TLSv1 WITH 64-BIT CBC CIPHERS IS SUPPORTED
+                            DES-CBC3-SHA RSA RSA SHA1 3DES(168) MEDIUM
+                            TLSv1.1 WITH 64-BIT CBC CIPHERS IS SUPPORTED
+                            DES-CBC3-SHA RSA RSA SHA1 3DES(168) MEDIUM
+                            TLSv1.2 WITH 64-BIT CBC CIPHERS IS SUPPORTED
+                            DES-CBC3-SHA RSA RSA SHA1 3DES(168) MEDIUM</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38794</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <PORT>3389</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>TLSv1.1 is supported</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>42432</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Service name: Unknown - Possible Scan Interference on TCP port 53.</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-05-25T13:28:49Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-05-25T13:28:49Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-05-25T13:28:49Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-05-25T13:35:34Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-05-25T13:35:34Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>160672053</ID>
+                <IP>65.61.137.117</IP>
+                <TRACKING_METHOD>IP</TRACKING_METHOD>
+                <OS>Windows Vista / Windows 2008 / Windows 7 / Windows 2012</OS>
+                <LAST_SCAN_DATETIME>2021-12-09T06:32:51Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2021-12-09T06:23:10Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>1335</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>11827</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>X-XSS-Protection HTTP Header missing on port 80.
+
+                            GET / HTTP/1.0
+                            Host: 65.61.137.117
+
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=C165BB91F13CF9F02738B8468EA9DCA8; Path=/;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:03:28 GMT
+                            Connection: close
+
+                            X-Content-Type-Options HTTP Header missing on port 80.
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=81245C9AC19E0CC2F5DE3B41A08169EF; Path=/;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:03:28 GMT
+                            Connection: close</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>11827</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>X-XSS-Protection HTTP Header missing on port 443.
+
+                            GET / HTTP/1.0
+                            Host: 65.61.137.117
+
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=BC00A9D7900FA8EE57EE49A9A75FD078; Path=/; Secure;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:09:40 GMT
+                            Connection: close
+
+                            X-Content-Type-Options HTTP Header missing on port 443.
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=A24AC1B8E7343FC0F1275520FC60A3C4; Path=/; Secure;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:09:41 GMT
+                            Connection: close
+
+                            Strict-Transport-Security HTTP Header missing on port 443.
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=A7ECC04D43A9F05EABA153F5950AC906; Path=/; Secure;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:09:41 GMT
+                            Connection: close</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>11827</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>X-XSS-Protection HTTP Header missing on port 8080.
+
+                            GET / HTTP/1.0
+                            Host: 65.61.137.117:8080
+
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=60FAFD01AA1E1B4C4C6BE5E6E1EDCBBF; Path=/;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:06:26 GMT
+                            Connection: close
+
+                            X-Content-Type-Options HTTP Header missing on port 8080.
+
+                            HTTP/1.1 200 OK
+                            Server: Apache-Coyote/1.1
+                            Set-Cookie: JSESSIONID=05430FBFE718CA5E011062DA915E3C19; Path=/;
+                            HttpOnly
+                            Content-Type: text/html;charset=ISO-8859-1
+                            Date: Thu, 09 Dec 2021 06:06:26 GMT
+                            Connection: close</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>13162</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>HTTP Cookie missing Secure attribute on port 80.
+                            Set-Cookie: JSESSIONID=5F6101A129A48A37D5763F2866882E4F; Path=/;
+                            HttpOnly
+                            GET / HTTP/1.0
+                            Host: 65.61.137.117</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>13162</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>HTTP Cookie missing Secure attribute on port 8080.
+                            Set-Cookie: JSESSIONID=BB0883660F7F59472BC1DAD566294D71; Path=/;
+                            HttpOnly
+                            GET / HTTP/1.0
+                            Host: 65.61.137.117:8080</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38173</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0 CN=demo.testfire.net unable to get local issuer
+                            certificate</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38628</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>TLSv1.0 is supported</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38794</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>TLSv1.1 is supported</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>82003</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>1</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Timestamp of host (host byte ordering): 06:00:56 GMT</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86729</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>GET /login.jsp HTTP/1.0
+                            Host: 65.61.137.117
+
+                            &amp;lt;form action=&amp;quot;doLogin&amp;quot;
+                            method=&amp;quot;post&amp;quot; name=&amp;quot;login&amp;quot;
+                            id=&amp;quot;login&amp;quot; onsubmit=&amp;quot;return
+                            (confirminput(login));&amp;quot;&amp;gt;
+                            &amp;lt;table&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Username:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;uid&amp;quot;
+                            name=&amp;quot;uid&amp;quot; value=&amp;quot;&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Password:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;password&amp;quot;
+                            id=&amp;quot;passw&amp;quot; name=&amp;quot;passw&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;submit&amp;quot;
+                            name=&amp;quot;btnSubmit&amp;quot;
+                            value=&amp;quot;Login&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;/table&amp;gt;
+                            &amp;lt;/form&amp;gt;
+
+
+                            GET /admin/login/?next=/admin/ HTTP/1.0
+                            Host: 65.61.137.117
+
+                            GET //login.jsp HTTP/1.0
+                            Host: 65.61.137.117
+
+                            GET /login.jsp?jsessionid=h2 HTTP/1.0
+                            Host: 65.61.137.117</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86729</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>GET /login.jsp HTTP/1.0
+                            Host: 65.61.137.117
+
+                            &amp;lt;form action=&amp;quot;doLogin&amp;quot;
+                            method=&amp;quot;post&amp;quot; name=&amp;quot;login&amp;quot;
+                            id=&amp;quot;login&amp;quot; onsubmit=&amp;quot;return
+                            (confirminput(login));&amp;quot;&amp;gt;
+                            &amp;lt;table&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Username:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;uid&amp;quot;
+                            name=&amp;quot;uid&amp;quot; value=&amp;quot;&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Password:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;password&amp;quot;
+                            id=&amp;quot;passw&amp;quot; name=&amp;quot;passw&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;submit&amp;quot;
+                            name=&amp;quot;btnSubmit&amp;quot;
+                            value=&amp;quot;Login&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;/table&amp;gt;
+                            &amp;lt;/form&amp;gt;
+
+
+                            GET /admin/login/?next=/admin/ HTTP/1.0
+                            Host: 65.61.137.117
+
+                            GET //login.jsp HTTP/1.0
+                            Host: 65.61.137.117
+
+                            GET /login.jsp?jsessionid=h2 HTTP/1.0
+                            Host: 65.61.137.117</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86729</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>GET /login.jsp HTTP/1.0
+                            Host: 65.61.137.117:8080
+
+                            &amp;lt;form action=&amp;quot;doLogin&amp;quot;
+                            method=&amp;quot;post&amp;quot; name=&amp;quot;login&amp;quot;
+                            id=&amp;quot;login&amp;quot; onsubmit=&amp;quot;return
+                            (confirminput(login));&amp;quot;&amp;gt;
+                            &amp;lt;table&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Username:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;uid&amp;quot;
+                            name=&amp;quot;uid&amp;quot; value=&amp;quot;&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            Password:
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;password&amp;quot;
+                            id=&amp;quot;passw&amp;quot; name=&amp;quot;passw&amp;quot;
+                            style=&amp;quot;width: 150px;&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;
+                            &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+                            &amp;lt;td&amp;gt;
+                            &amp;lt;input type=&amp;quot;submit&amp;quot;
+                            name=&amp;quot;btnSubmit&amp;quot;
+                            value=&amp;quot;Login&amp;quot;&amp;gt;
+                            &amp;lt;/td&amp;gt;
+                            &amp;lt;/tr&amp;gt;
+                            &amp;lt;/table&amp;gt;
+                            &amp;lt;/form&amp;gt;
+
+
+                            GET //login.jsp HTTP/1.0
+                            Host: 65.61.137.117:8080
+
+                            GET /login.jsp?jsessionid=h2 HTTP/1.0
+                            Host: 65.61.137.117:8080</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-09T06:23:10Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-09T06:23:10Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-09T06:23:10Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-09T06:32:51Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-09T06:32:51Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>162181720</ID>
+                <IP>3.17.59.25</IP>
+                <TRACKING_METHOD>IP</TRACKING_METHOD>
+                <OS>Linux 2.6</OS>
+                <DNS>ec2-3-17-59-25.us-east-2.compute.amazonaws.com</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ec2-3-17-59-25</HOSTNAME>
+                    <DOMAIN>us-east-2.compute.amazonaws.com</DOMAIN>
+                    <FQDN>ec2-3-17-59-25.us-east-2.compute.amazonaws.com</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2021-12-15T11:25:16Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2021-12-15T14:44:27Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>1096</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>11</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Name Program Version Protocol Port
+                            portmap/rpcbind 100000 2-4 tcp 111</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>12680</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>TRACE /QUALYS12680.html HTTP/1.1
+                            Host: ec2-3-17-59-25.us-east-2.compute.amazonaws.com:8080
+
+
+                            TRACE /QUALYS12680.html HTTP/1.1
+                            Connection: keep-alive
+                            Host: ec2-3-17-59-25.us-east-2.compute.amazonaws.com:8080
+                            Qualys-Scan: VM</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>13134</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable version of Eclipse Jetty detected on port 8080 -
+                            Jetty(9.4.24.v20191120)</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38726</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable SSH-2.0-OpenSSH_7.4 detected on port 22 over TCP.</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38739</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>22</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Type Name
+                            key exchange diffie-hellman-group1-sha1
+                            cipher blowfish-cbc
+                            cipher cast128-cbc
+                            cipher 3des-cbc</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86473</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>
+                            TRACE / HTTP/1.1
+                            Host: ec2-3-17-59-25.us-east-2.compute.amazonaws.com:8080
+                            Via:
+                            &amp;lt;script&amp;gt;alert(&amp;apos;QualysXSS&amp;apos;);&amp;lt;/script&amp;gt;
+                            TRACE / HTTP/1.1
+                            Host: ec2-3-17-59-25.us-east-2.compute.amazonaws.com:8080
+                            Qualys-Scan: VM
+                            Via:
+                            &amp;lt;script&amp;gt;alert(&amp;apos;QualysXSS&amp;apos;);&amp;lt;/script&amp;gt;
+                            TRACE / HTTP/1.0
+                            Via:
+                            &amp;lt;script&amp;gt;alert(&amp;apos;QualysXSS&amp;apos;);&amp;lt;/script&amp;gt;
+                            TRACE / HTTP/1.0
+                            Qualys-Scan: VM
+                            Via:
+                            &amp;lt;script&amp;gt;alert(&amp;apos;QualysXSS&amp;apos;);&amp;lt;/script&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730040</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable version of Eclipse Jetty detected on port 8080 -
+                            Jetty(9.4.24.v20191120)</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730265</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Eclipse Jetty XSS Vulnerability detected on port 8080 -
+                            Cache-Control: must-revalidate,no-cache,no-store
+                            Content-Type: text/html;charset=iso-8859-1
+                            Content-Length: 503
+                            Server: Jetty(9.4.24.v20191120)
+
+                            &amp;lt;html&amp;gt;
+                            &amp;lt;head&amp;gt;
+                            &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot;
+                            content=&amp;quot;text/html;charset=utf-8&amp;quot;/&amp;gt;
+                            &amp;lt;title&amp;gt;Error 404 Not Found&amp;lt;/title&amp;gt;
+                            &amp;lt;/head&amp;gt;
+                            &amp;lt;body&amp;gt;&amp;lt;h2&amp;gt;HTTP ERROR 404 Not
+                            Found&amp;lt;/h2&amp;gt;
+                            &amp;lt;table&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;URI:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;/&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;STATUS:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;404&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;MESSAGE:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;Not
+                            Found&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;SERVLET:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-491cc5c9&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;/table&amp;gt;
+                            &amp;lt;hr&amp;gt;&amp;lt;a
+                            href=&amp;quot;http://eclipse.org/jetty&amp;quot;&amp;gt;Powered by
+                            Jetty:// 9.4.24.v20191120&amp;lt;/a&amp;gt;&amp;lt;hr/&amp;gt;
+                            &amp;lt;/body&amp;gt;
+                            &amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730281</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Eclipse Jetty Directory Hijacking Vulnerability 8080 -
+                            Cache-Control: must-revalidate,no-cache,no-store
+                            Content-Type: text/html;charset=iso-8859-1
+                            Content-Length: 503
+                            Server: Jetty(9.4.24.v20191120)
+
+                            &amp;lt;html&amp;gt;
+                            &amp;lt;head&amp;gt;
+                            &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot;
+                            content=&amp;quot;text/html;charset=utf-8&amp;quot;/&amp;gt;
+                            &amp;lt;title&amp;gt;Error 404 Not Found&amp;lt;/title&amp;gt;
+                            &amp;lt;/head&amp;gt;
+                            &amp;lt;body&amp;gt;&amp;lt;h2&amp;gt;HTTP ERROR 404 Not
+                            Found&amp;lt;/h2&amp;gt;
+                            &amp;lt;table&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;URI:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;/&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;STATUS:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;404&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;MESSAGE:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;Not
+                            Found&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;SERVLET:&amp;lt;/th&amp;gt;&amp;lt;td&amp;gt;org.eclipse.jetty.servlet.ServletHandler$Default404Servlet-491cc5c9&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+                            &amp;lt;/table&amp;gt;
+                            &amp;lt;hr&amp;gt;&amp;lt;a
+                            href=&amp;quot;http://eclipse.org/jetty&amp;quot;&amp;gt;Powered by
+                            Jetty:// 9.4.24.v20191120&amp;lt;/a&amp;gt;&amp;lt;hr/&amp;gt;
+                            &amp;lt;/body&amp;gt;
+                            &amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:13:46Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:13:46Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:13:46Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:16Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:16Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>162181733</ID>
+                <IP>3.136.27.78</IP>
+                <TRACKING_METHOD>IP</TRACKING_METHOD>
+                <DNS>ec2-3-136-27-78.us-east-2.compute.amazonaws.com</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ec2-3-136-27-78</HOSTNAME>
+                    <DOMAIN>us-east-2.compute.amazonaws.com</DOMAIN>
+                    <FQDN>ec2-3-136-27-78.us-east-2.compute.amazonaws.com</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2021-12-15T11:25:17Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2021-12-15T14:44:27Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>516</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>38170</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            (localhost) doesn&amp;apos;t resolve
+                            (webserver) doesn&amp;apos;t resolve
+                            (hub-webserver) doesn&amp;apos;t resolve</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:21:32Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:21:32Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:21:32Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:17Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:17Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38173</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            unable to get local issuer certificate</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:21:32Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:21:32Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:21:32Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:17Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:17Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>38685</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>2</SEVERITY>
+                        <PORT>443</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>1</SSL>
+                        <RESULTS>Certificate #0
+                            CN=hub-webserver,OU=Engineering,O=Black_Duck_Software\,_Inc.,L=Burlington,ST=Massachusetts,C=US
+                            is valid for more than 398 days</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2021-12-15T11:21:32Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2021-12-15T11:21:32Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2021-12-15T11:21:32Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2021-12-15T11:25:17Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2021-12-15T11:25:17Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+            <HOST>
+                <ID>218228402</ID>
+                <IP>44.227.13.4</IP>
+                <TRACKING_METHOD>IP</TRACKING_METHOD>
+                <DNS>ec2-44-227-13-4.us-west-2.compute.amazonaws.com</DNS>
+                <DNS_DATA>
+                    <HOSTNAME>ec2-44-227-13-4</HOSTNAME>
+                    <DOMAIN>us-west-2.compute.amazonaws.com</DOMAIN>
+                    <FQDN>ec2-44-227-13-4.us-west-2.compute.amazonaws.com</FQDN>
+                </DNS_DATA>
+                <LAST_SCAN_DATETIME>2022-09-01T10:55:53Z</LAST_SCAN_DATETIME>
+                <LAST_VM_SCANNED_DATE>2022-09-01T10:54:53Z</LAST_VM_SCANNED_DATE>
+                <LAST_VM_SCANNED_DURATION>1976</LAST_VM_SCANNED_DURATION>
+                <DETECTION_LIST>
+                    <DETECTION>
+                        <QID>13733</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable nginx version detected on port 80 -
+                            Server: nginx/1.14.0 (Ubuntu)
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            Content-Type: text/html;charset=utf-8
+                            Content-Length: 585
+                            Connection: close
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node06hcdnzqf9ogs2ygp7rtp0sgv212572.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86728</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>GET /login HTTP/1.0
+                            Host: ec2-44-227-13-4.us-west-2.compute.amazonaws.com
+
+                            &amp;lt;form method=&amp;quot;post&amp;quot;
+                            name=&amp;quot;login&amp;quot;
+                            action=&amp;quot;j_spring_security_check&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;formRow&amp;quot;&amp;gt;&amp;lt;input
+                            autocorrect=&amp;quot;off&amp;quot; autocomplete=&amp;quot;off&amp;quot;
+                            name=&amp;quot;j_username&amp;quot; id=&amp;quot;j_username&amp;quot;
+                            placeholder=&amp;quot;Username&amp;quot; type=&amp;quot;text&amp;quot;
+                            class=&amp;quot;normal&amp;quot; autocapitalize=&amp;quot;off&amp;quot;
+                            aria-label=&amp;quot;Username&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div
+                            class=&amp;quot;formRow&amp;quot;&amp;gt;&amp;lt;input
+                            name=&amp;quot;j_password&amp;quot;
+                            placeholder=&amp;quot;Password&amp;quot;
+                            type=&amp;quot;password&amp;quot; class=&amp;quot;normal&amp;quot;
+                            aria-label=&amp;quot;Password&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;input
+                            name=&amp;quot;from&amp;quot;
+                            type=&amp;quot;hidden&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;submit formRow&amp;quot;&amp;gt;&amp;lt;input
+                            name=&amp;quot;Submit&amp;quot; type=&amp;quot;submit&amp;quot;
+                            value=&amp;quot;Sign in&amp;quot; class=&amp;quot;submit-button primary
+                            &amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script
+                            type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+                            document.getElementById(&amp;apos;j_username&amp;apos;).focus();
+                            var checkBoxClick = function(event) {
+                            document.getElementById(&amp;apos;remember_me&amp;apos;).click();
+                            }
+                            &amp;lt;/script&amp;gt;&amp;lt;div class=&amp;quot;Checkbox
+                            Checkbox-medium&amp;quot;&amp;gt;&amp;lt;label
+                            class=&amp;quot;Checkbox-wrapper&amp;quot;&amp;gt;&amp;lt;input
+                            type=&amp;quot;checkbox&amp;quot; id=&amp;quot;remember_me&amp;quot;
+                            name=&amp;quot;remember_me&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;Checkbox-indicator&amp;quot;&amp;gt;&amp;lt;svg
+                            xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;
+                            height=&amp;quot;25&amp;quot; class=&amp;quot;svg-icon check&amp;quot;
+                            focusable=&amp;quot;false&amp;quot; viewBox=&amp;quot;0 0 24
+                            24&amp;quot; width=&amp;quot;25&amp;quot;&amp;gt;&amp;lt;path
+                            d=&amp;quot;M9 16.17L4.83 12l-1.42 1.41L9 19 21
+                            7l-1.41-1.41z&amp;quot;&amp;gt;&amp;lt;/path&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div
+                            class=&amp;quot;Checkbox-text&amp;quot;&amp;gt;Keep me signed
+                            in&amp;lt;/div&amp;gt;&amp;lt;/label&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/form&amp;gt;
+                            GET /login HTTP/1.0
+                            Host: ec2-44-227-13-4.us-west-2.compute.amazonaws.com
+                            Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101
+                            Firefox/60.0
+
+                            GET /login?next=/getting-started?next%3D/ HTTP/1.0
+                            Host: ec2-44-227-13-4.us-west-2.compute.amazonaws.com</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>86728</QID>
+                        <TYPE>Confirmed</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>GET /login HTTP/1.0
+                            Host: ec2-44-227-13-4.us-west-2.compute.amazonaws.com:8080
+
+                            &amp;lt;form method=&amp;quot;post&amp;quot;
+                            name=&amp;quot;login&amp;quot;
+                            action=&amp;quot;j_spring_security_check&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;formRow&amp;quot;&amp;gt;&amp;lt;input
+                            autocorrect=&amp;quot;off&amp;quot; autocomplete=&amp;quot;off&amp;quot;
+                            name=&amp;quot;j_username&amp;quot; id=&amp;quot;j_username&amp;quot;
+                            placeholder=&amp;quot;Username&amp;quot; type=&amp;quot;text&amp;quot;
+                            class=&amp;quot;normal&amp;quot; autocapitalize=&amp;quot;off&amp;quot;
+                            aria-label=&amp;quot;Username&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div
+                            class=&amp;quot;formRow&amp;quot;&amp;gt;&amp;lt;input
+                            name=&amp;quot;j_password&amp;quot;
+                            placeholder=&amp;quot;Password&amp;quot;
+                            type=&amp;quot;password&amp;quot; class=&amp;quot;normal&amp;quot;
+                            aria-label=&amp;quot;Password&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;input
+                            name=&amp;quot;from&amp;quot;
+                            type=&amp;quot;hidden&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;submit formRow&amp;quot;&amp;gt;&amp;lt;input
+                            name=&amp;quot;Submit&amp;quot; type=&amp;quot;submit&amp;quot;
+                            value=&amp;quot;Sign in&amp;quot; class=&amp;quot;submit-button primary
+                            &amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script
+                            type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+                            document.getElementById(&amp;apos;j_username&amp;apos;).focus();
+                            var checkBoxClick = function(event) {
+                            document.getElementById(&amp;apos;remember_me&amp;apos;).click();
+                            }
+                            &amp;lt;/script&amp;gt;&amp;lt;div class=&amp;quot;Checkbox
+                            Checkbox-medium&amp;quot;&amp;gt;&amp;lt;label
+                            class=&amp;quot;Checkbox-wrapper&amp;quot;&amp;gt;&amp;lt;input
+                            type=&amp;quot;checkbox&amp;quot; id=&amp;quot;remember_me&amp;quot;
+                            name=&amp;quot;remember_me&amp;quot;&amp;gt;&amp;lt;div
+                            class=&amp;quot;Checkbox-indicator&amp;quot;&amp;gt;&amp;lt;svg
+                            xmlns=&amp;quot;http://www.w3.org/2000/svg&amp;quot;
+                            height=&amp;quot;25&amp;quot; class=&amp;quot;svg-icon check&amp;quot;
+                            focusable=&amp;quot;false&amp;quot; viewBox=&amp;quot;0 0 24
+                            24&amp;quot; width=&amp;quot;25&amp;quot;&amp;gt;&amp;lt;path
+                            d=&amp;quot;M9 16.17L4.83 12l-1.42 1.41L9 19 21
+                            7l-1.41-1.41z&amp;quot;&amp;gt;&amp;lt;/path&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div
+                            class=&amp;quot;Checkbox-text&amp;quot;&amp;gt;Keep me signed
+                            in&amp;lt;/div&amp;gt;&amp;lt;/label&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/form&amp;gt;
+                            GET /login?next=/getting-started?next%3D/ HTTP/1.0
+                            Host: ec2-44-227-13-4.us-west-2.compute.amazonaws.com:8080</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>87407</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable nginx version detected on port 80 -
+                            Server: nginx/1.14.0 (Ubuntu)
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            Content-Type: text/html;charset=utf-8
+                            Content-Length: 585
+                            Connection: close
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node06hcdnzqf9ogs2ygp7rtp0sgv212572.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>650007</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>5</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Server: nginx/1.14.0 (Ubuntu)
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            Content-Type: text/html;charset=utf-8
+                            Content-Length: 585
+                            Connection: close
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node06hcdnzqf9ogs2ygp7rtp0sgv212572.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730096</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable nginx version detected on port 80 -
+                            Server: nginx/1.14.0 (Ubuntu)
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            Content-Type: text/html;charset=utf-8
+                            Content-Length: 585
+                            Connection: close
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node06hcdnzqf9ogs2ygp7rtp0sgv212572.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730265</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>8080</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Eclipse Jetty XSS Vulnerability detected on port 8080 -
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node01mifl7970dm886xlf5h0taphh212570.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            Content-Type: text/html;charset=utf-8
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            Content-Length: 585
+                            Server: Jetty(9.4.39.v20210325)
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                    <DETECTION>
+                        <QID>730358</QID>
+                        <TYPE>Potential</TYPE>
+                        <SEVERITY>3</SEVERITY>
+                        <PORT>80</PORT>
+                        <PROTOCOL>tcp</PROTOCOL>
+                        <SSL>0</SSL>
+                        <RESULTS>Vulnerable nginx version detected on port 80 -
+                            Server: nginx/1.14.0 (Ubuntu)
+                            Date: Thu, 01 Sep 2022 10:23:54 GMT
+                            Content-Type: text/html;charset=utf-8
+                            Content-Length: 585
+                            Connection: close
+                            X-Content-Type-Options: nosniff
+                            Set-Cookie:
+                            JSESSIONID.87fd84a0=node06hcdnzqf9ogs2ygp7rtp0sgv212572.node0; Path=/;
+                            HttpOnly
+                            Expires: Thu, 01 Jan 1970 00:00:00 GMT
+                            X-Hudson: 1.395
+                            X-Jenkins: 2.289.1
+                            X-Jenkins-Session: b4ddf72c
+                            &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;meta
+                            http-equiv=&amp;apos;refresh&amp;apos;
+                            content=&amp;apos;1;url=/securityRealm/commenceLogin?from=%2F&amp;apos;/&amp;gt;&amp;lt;script&amp;gt;window.location.replace(&amp;apos;/securityRealm/commenceLogin?from=%2F&amp;apos;);&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body
+                            style=&amp;apos;background-color:white; color:white;&amp;apos;&amp;gt;
+                            Authentication required
+                            &amp;lt;!--
+                            --&amp;gt;
+
+                            &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</RESULTS>
+                        <STATUS>New</STATUS>
+                        <FIRST_FOUND_DATETIME>2022-09-01T10:54:53Z</FIRST_FOUND_DATETIME>
+                        <LAST_FOUND_DATETIME>2022-09-01T10:54:53Z</LAST_FOUND_DATETIME>
+                        <TIMES_FOUND>1</TIMES_FOUND>
+                        <LAST_TEST_DATETIME>2022-09-01T10:54:53Z</LAST_TEST_DATETIME>
+                        <LAST_UPDATE_DATETIME>2022-09-01T10:55:53Z</LAST_UPDATE_DATETIME>
+                        <IS_IGNORED>0</IS_IGNORED>
+                        <IS_DISABLED>0</IS_DISABLED>
+                        <LAST_PROCESSED_DATETIME>2022-09-01T10:55:53Z</LAST_PROCESSED_DATETIME>
+                    </DETECTION>
+                </DETECTION_LIST>
+            </HOST>
+        </HOST_LIST>
+    </RESPONSE>
+</HOST_LIST_VM_DETECTION_OUTPUT>

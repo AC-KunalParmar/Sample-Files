@@ -1,0 +1,161 @@
+{
+  "$schema" : "https://docs.oasis-open.org/sarif/sarif/v2.1.0/cos02/schemas/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "Bug Finder",
+        "fullName" : "Polyspace Bug Finder",
+        "semanticVersion" : "R2023b Update 6",
+        "organization" : "MathWorks",
+        "rules" : [ {
+          "id" : "DECL_MISMATCH",
+          "name" : "Declaration mismatch",
+          "properties" : {
+            "metaFamily" : "Defect",
+            "family" : "Defect",
+            "group" : "Programming",
+            "impact" : "High"
+          }
+        }, {
+          "id" : "USELESS_IF",
+          "name" : "Useless if",
+          "properties" : {
+            "metaFamily" : "Defect",
+            "family" : "Defect",
+            "group" : "Data flow",
+            "impact" : "Medium"
+          }
+        }, {
+          "id" : "USELESS_WRITE",
+          "name" : "Write without a further read",
+          "properties" : {
+            "metaFamily" : "Defect",
+            "family" : "Defect",
+            "group" : "Data flow",
+            "impact" : "Low"
+          }
+        } ]
+      }
+    },
+    "properties" : {
+      "language" : "C"
+    },
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "file:///C:/Users/Administrator/Downloads/C%20Code/sum.c"
+      },
+      "mimeType" : "text/x-c",
+      "sourceLanguage" : "c"
+    }, {
+      "location" : {
+        "uri" : "file:///C:/Users/Administrator/Downloads/C%20Code/add1.c"
+      },
+      "mimeType" : "text/x-c",
+      "sourceLanguage" : "c"
+    } ],
+    "results" : [ {
+      "ruleId" : "DECL_MISMATCH",
+      "ruleIndex" : 0,
+      "message" : {
+        "text" : "Global declaration of 'main' function has a type incompatible with its definition.\nThis defect occurs when linking the 2 translation units: sum.c and Angle_Triangle.c"
+      },
+      "level" : "error",
+      "baselineState" : "new",
+      "rank" : 100,
+      "kind" : "fail",
+      "properties" : {
+        "databaseId" : 1,
+        "information" : "Impact: High",
+        "color" : "Red",
+        "hasOrangeSource" : false,
+        "key" : "9A448A0D62F5A952A94D82511A8486",
+        "cwe" : "CWE-685 CWE-686",
+        "className" : "Global Scope",
+        "comment" : "",
+        "status" : "Unreviewed",
+        "severity" : "Unset",
+        "justified" : false
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "index" : 0
+          }
+        },
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "File Scope",
+          "kind" : "function"
+        } ]
+      } ]
+    }, {
+      "ruleId" : "USELESS_IF",
+      "ruleIndex" : 1,
+      "message" : {
+        "text" : "Unnecessary code, if-condition is always true."
+      },
+      "level" : "error",
+      "baselineState" : "new",
+      "rank" : 100,
+      "kind" : "fail",
+      "properties" : {
+        "databaseId" : 3,
+        "information" : "Impact: Medium",
+        "color" : "Red",
+        "hasOrangeSource" : false,
+        "key" : "260DAA538A312A356AD7A44670",
+        "cwe" : "CWE-571",
+        "className" : "Global Scope",
+        "comment" : "",
+        "status" : "Unreviewed",
+        "severity" : "Unset",
+        "justified" : false
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "index" : 0
+          }
+        },
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "main()",
+          "kind" : "function"
+        } ]
+      } ]
+    }, {
+      "ruleId" : "USELESS_WRITE",
+      "ruleIndex" : 2,
+      "message" : {
+        "text" : "Variable 'temp' is never read after this point."
+      },
+      "level" : "error",
+      "baselineState" : "unchanged",
+      "rank" : 100,
+      "kind" : "fail",
+      "properties" : {
+        "databaseId" : 2,
+        "information" : "Impact: Low",
+        "color" : "Red",
+        "hasOrangeSource" : false,
+        "key" : "3166559A548951A953BE5D92948A511A",
+        "cwe" : "CWE-398 CWE-563",
+        "className" : "Global Scope",
+        "comment" : "",
+        "status" : "Unreviewed",
+        "severity" : "Unset",
+        "justified" : false
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "index" : 1
+          }
+        },
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "main()",
+          "kind" : "function"
+        } ]
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,2624 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Docker Scout",
+          "informationUri": "https://docker.com/products/docker-scout",
+          "name": "docker scout",
+          "rules": [
+            {
+              "id": "ALPINE-13661",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "ALPINE-13661"
+              },
+              "helpUri": "https://scout.docker.com/v/ALPINE-13661?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r7",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r7                                                      |\n| Fixed version  | 1.33.1-r7                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r7",
+                "cvssV3_severity": "UNSPECIFIED",
+                "fixed_version": "1.33.1-r7",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "3.1",
+                "tags": [
+                  "UNSPECIFIED"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-4304",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-4304"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-4304?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r0",
+              "help": {
+                "text": "A timing based side channel exists in the OpenSSL RSA Decryption implementation\r\nwhich could be sufficient to recover a plaintext across a network in a\r\nBleichenbacher style attack. To achieve a successful decryption an attacker\r\nwould have to be able to send a very large number of trial messages for\r\ndecryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5,\r\nRSA-OEAP and RSASVE.\r\n\r\nFor example, in a TLS connection, RSA is commonly used by a client to send an\r\nencrypted pre-master secret to the server. An attacker that had observed a\r\ngenuine connection between a client and a server could use this flaw to send\r\ntrial messages to the server and record the time taken to process them. After a\r\nsufficiently large number of messages the attacker could recover the pre-master\r\nsecret used for the original connection and thus be able to decrypt the\r\napplication data sent over that connection.\r\n\r\nOpenSSL 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nAn initial report of a possible timing side channel was made on 14th July 2020\r\nby Hubert Kario (Red Hat). A refined report identifying a specific timing side\r\nchannel was made on 15th July 2022 by Hubert Kario.\r\nThe fix was developed by Dmitry Belyavsky (Red Hat) and Hubert Kario.\n",
+                "markdown": "> A timing based side channel exists in the OpenSSL RSA Decryption implementation\r\nwhich could be sufficient to recover a plaintext across a network in a\r\nBleichenbacher style attack. To achieve a successful decryption an attacker\r\nwould have to be able to send a very large number of trial messages for\r\ndecryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5,\r\nRSA-OEAP and RSASVE.\r\n\r\nFor example, in a TLS connection, RSA is commonly used by a client to send an\r\nencrypted pre-master secret to the server. An attacker that had observed a\r\ngenuine connection between a client and a server could use this flaw to send\r\ntrial messages to the server and record the time taken to process them. After a\r\nsufficiently large number of messages the attacker could recover the pre-master\r\nsecret used for the original connection and thus be able to decrypt the\r\napplication data sent over that connection.\r\n\r\nOpenSSL 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nAn initial report of a possible timing side channel was made on 14th July 2020\r\nby Hubert Kario (Red Hat). A refined report identifying a specific timing side\r\nchannel was made on 15th July 2022 by Hubert Kario.\r\nThe fix was developed by Dmitry Belyavsky (Red Hat) and Hubert Kario.\n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r0                                                      |\n| Fixed version  | 1.1.1t-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r0",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.1.1t-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "4.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-4450",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-4450"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-4450?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r0",
+              "help": {
+                "text": "The function PEM_read_bio_ex() reads a PEM file from a BIO and parses and\r\ndecodes the \"name\" (e.g. \"CERTIFICATE\"), any header data and the payload data.\r\nIf the function succeeds then the \"name_out\", \"header\" and \"data\" arguments are\r\npopulated with pointers to buffers containing the relevant decoded data. The\r\ncaller is responsible for freeing those buffers. It is possible to construct a\r\nPEM file that results in 0 bytes of payload data. In this case PEM_read_bio_ex()\r\nwill return a failure code but will populate the header argument with a pointer\r\nto a buffer that has already been freed. If the caller also frees this buffer\r\nthen a double free will occur. This will most likely lead to a crash. This\r\ncould be exploited by an attacker who has the ability to supply malicious PEM\r\nfiles for parsing to achieve a denial of service attack.\r\n\r\nThe functions PEM_read_bio() and PEM_read() are simple wrappers around\r\nPEM_read_bio_ex() and therefore these functions are also directly affected.\r\n\r\nThese functions are also called indirectly by a number of other OpenSSL\r\nfunctions including PEM_X509_INFO_read_bio_ex() and\r\nSSL_CTX_use_serverinfo_file() which are also vulnerable. Some OpenSSL internal\r\nuses of these functions are not vulnerable because the caller does not free the\r\nheader argument if PEM_read_bio_ex() returns a failure code. These locations\r\ninclude the PEM_read_bio_TYPE() functions as well as the decoders introduced in\r\nOpenSSL 3.0.\r\n\r\nThe OpenSSL asn1parse command line application is also impacted by this issue.\r\n\r\nOpenSSL 3.0 and 1.1.1 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\n\r\nOpenSSL 1.0.2 is not affected by this issue.\r\n\r\nThis issue was discovered by CarpetFuzz and reported on 8th December 2022 by\r\nDawei Wang. The fix was developed by Kurt Roeckx and Matt Caswell.\n",
+                "markdown": "> The function PEM_read_bio_ex() reads a PEM file from a BIO and parses and\r\ndecodes the \"name\" (e.g. \"CERTIFICATE\"), any header data and the payload data.\r\nIf the function succeeds then the \"name_out\", \"header\" and \"data\" arguments are\r\npopulated with pointers to buffers containing the relevant decoded data. The\r\ncaller is responsible for freeing those buffers. It is possible to construct a\r\nPEM file that results in 0 bytes of payload data. In this case PEM_read_bio_ex()\r\nwill return a failure code but will populate the header argument with a pointer\r\nto a buffer that has already been freed. If the caller also frees this buffer\r\nthen a double free will occur. This will most likely lead to a crash. This\r\ncould be exploited by an attacker who has the ability to supply malicious PEM\r\nfiles for parsing to achieve a denial of service attack.\r\n\r\nThe functions PEM_read_bio() and PEM_read() are simple wrappers around\r\nPEM_read_bio_ex() and therefore these functions are also directly affected.\r\n\r\nThese functions are also called indirectly by a number of other OpenSSL\r\nfunctions including PEM_X509_INFO_read_bio_ex() and\r\nSSL_CTX_use_serverinfo_file() which are also vulnerable. Some OpenSSL internal\r\nuses of these functions are not vulnerable because the caller does not free the\r\nheader argument if PEM_read_bio_ex() returns a failure code. These locations\r\ninclude the PEM_read_bio_TYPE() functions as well as the decoders introduced in\r\nOpenSSL 3.0.\r\n\r\nThe OpenSSL asn1parse command line application is also impacted by this issue.\r\n\r\nOpenSSL 3.0 and 1.1.1 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\n\r\nOpenSSL 1.0.2 is not affected by this issue.\r\n\r\nThis issue was discovered by CarpetFuzz and reported on 8th December 2022 by\r\nDawei Wang. The fix was developed by Kurt Roeckx and Matt Caswell.\n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r0                                                      |\n| Fixed version  | 1.1.1t-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r0",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.1.1t-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "4.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-0215",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2023-0215"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2023-0215?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r0",
+              "help": {
+                "text": "The public API function BIO_new_NDEF is a helper function used for streaming\r\nASN.1 data via a BIO. It is primarily used internally to OpenSSL to support the\r\nSMIME, CMS and PKCS7 streaming capabilities, but may also be called directly by\r\nend user applications.\r\n\r\nThe function receives a BIO from the caller, prepends a new BIO_f_asn1 filter\r\nBIO onto the front of it to form a BIO chain, and then returns the new head of\r\nthe BIO chain to the caller. Under certain conditions, for example if a CMS\r\nrecipient public key is invalid, the new filter BIO is freed and the function\r\nreturns a NULL result indicating a failure. However, in this case, the BIO chain\r\nis not properly cleaned up and the BIO passed by the caller still retains\r\ninternal pointers to the previously freed filter BIO. If the caller then goes on\r\nto call BIO_pop() on the BIO then a use-after-free will occur. This will most\r\nlikely result in a crash.\r\n\r\nThis scenario occurs directly in the internal function B64_write_ASN1() which\r\nmay cause BIO_new_NDEF() to be called and will subsequently call BIO_pop() on\r\nthe BIO. This internal function is in turn called by the public API functions\r\nPEM_write_bio_ASN1_stream, PEM_write_bio_CMS_stream, PEM_write_bio_PKCS7_stream,\r\nSMIME_write_ASN1, SMIME_write_CMS and SMIME_write_PKCS7.\r\n\r\nOther public API functions that may be impacted by this include\r\ni2d_ASN1_bio_stream, BIO_new_CMS, BIO_new_PKCS7, i2d_CMS_bio_stream and\r\ni2d_PKCS7_bio_stream.\r\n\r\nThe OpenSSL cms and smime command line applications are similarly affected.\r\n\r\nOpenSSL 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nThis issue was reported on 29th November 2022 by Octavio Galland and\r\nMarcel Böhme (Max Planck Institute for Security and Privacy). The fix was\r\ndeveloped by Viktor Dukhovni and Matt Caswell.\n",
+                "markdown": "> The public API function BIO_new_NDEF is a helper function used for streaming\r\nASN.1 data via a BIO. It is primarily used internally to OpenSSL to support the\r\nSMIME, CMS and PKCS7 streaming capabilities, but may also be called directly by\r\nend user applications.\r\n\r\nThe function receives a BIO from the caller, prepends a new BIO_f_asn1 filter\r\nBIO onto the front of it to form a BIO chain, and then returns the new head of\r\nthe BIO chain to the caller. Under certain conditions, for example if a CMS\r\nrecipient public key is invalid, the new filter BIO is freed and the function\r\nreturns a NULL result indicating a failure. However, in this case, the BIO chain\r\nis not properly cleaned up and the BIO passed by the caller still retains\r\ninternal pointers to the previously freed filter BIO. If the caller then goes on\r\nto call BIO_pop() on the BIO then a use-after-free will occur. This will most\r\nlikely result in a crash.\r\n\r\nThis scenario occurs directly in the internal function B64_write_ASN1() which\r\nmay cause BIO_new_NDEF() to be called and will subsequently call BIO_pop() on\r\nthe BIO. This internal function is in turn called by the public API functions\r\nPEM_write_bio_ASN1_stream, PEM_write_bio_CMS_stream, PEM_write_bio_PKCS7_stream,\r\nSMIME_write_ASN1, SMIME_write_CMS and SMIME_write_PKCS7.\r\n\r\nOther public API functions that may be impacted by this include\r\ni2d_ASN1_bio_stream, BIO_new_CMS, BIO_new_PKCS7, i2d_CMS_bio_stream and\r\ni2d_PKCS7_bio_stream.\r\n\r\nThe OpenSSL cms and smime command line applications are similarly affected.\r\n\r\nOpenSSL 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nThis issue was reported on 29th November 2022 by Octavio Galland and\r\nMarcel Böhme (Max Planck Institute for Security and Privacy). The fix was\r\ndeveloped by Viktor Dukhovni and Matt Caswell.\n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r0                                                      |\n| Fixed version  | 1.1.1t-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r0",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.1.1t-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "4.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42374",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42374"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42374?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r4",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r4                                                      |\n| Fixed version  | 1.33.1-r4                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r4",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.33.1-r4",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "5.3",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-2097",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-2097"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-2097?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1q-r0",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1q-r0                                                      |\n| Fixed version  | 1.1.1q-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1q-r0",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.1.1q-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "5.3",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-0465",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2023-0465"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2023-0465?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r2",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r2                                                      |\n| Fixed version  | 1.1.1t-r2                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r2",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.1.1t-r2",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "5.3",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42375",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42375"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42375?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r5",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r5                                                      |\n| Fixed version  | 1.33.1-r5                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r5",
+                "cvssV3_severity": "MEDIUM",
+                "fixed_version": "1.33.1-r5",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "5.5",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-29041",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2024-29041: Improper Validation of Syntactic Correctness of Input"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2024-29041?s=github&n=express&t=npm&vr=%3C4.19.2",
+              "help": {
+                "text": "### Impact\n\nVersions of Express.js prior to 4.19.2 and pre-release alpha and beta versions before 5.0.0-beta.3 are affected by an open redirect vulnerability using malformed URLs.\n\nWhen a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list.\n\nThe main method impacted is `res.location()` but this is also called from within `res.redirect()`.\n\n### Patches\n\nhttps://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd\nhttps://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94\n\nAn initial fix went out with `express@4.19.0`, we then patched a feature regression in `4.19.1` and added improved handling for the bypass in `4.19.2`.\n\n### Workarounds\n\nThe fix for this involves pre-parsing the url string with either `require('node:url').parse` or `new URL`. These are steps you can take on your own before passing the user input string to `res.location` or `res.redirect`.\n\n### References\n\nhttps://github.com/expressjs/express/pull/5539\nhttps://github.com/koajs/koa/issues/1800\nhttps://expressjs.com/en/4x/api.html#res.location\n",
+                "markdown": "> ### Impact\n\nVersions of Express.js prior to 4.19.2 and pre-release alpha and beta versions before 5.0.0-beta.3 are affected by an open redirect vulnerability using malformed URLs.\n\nWhen a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list.\n\nThe main method impacted is `res.location()` but this is also called from within `res.redirect()`.\n\n### Patches\n\nhttps://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd\nhttps://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94\n\nAn initial fix went out with `express@4.19.0`, we then patched a feature regression in `4.19.1` and added improved handling for the bypass in `4.19.2`.\n\n### Workarounds\n\nThe fix for this involves pre-parsing the url string with either `require('node:url').parse` or `new URL`. These are steps you can take on your own before passing the user input string to `res.location` or `res.redirect`.\n\n### References\n\nhttps://github.com/expressjs/express/pull/5539\nhttps://github.com/koajs/koa/issues/1800\nhttps://expressjs.com/en/4x/api.html#res.location\n\n|                |                                              |\n|----------------|----------------------------------------------|\n| Package        | pkg:npm/express@4.17.1                       |\n| Affected range | <4.19.2                                      |\n| Fixed version  | 4.19.2                                       |\n| CVSS Score     |                                          6.1 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N |\n"
+              },
+              "properties": {
+                "affected_version": "<4.19.2",
+                "cvssV3": 6.1,
+                "cvssV3_severity": "MEDIUM",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "fixed_version": "4.19.2",
+                "purls": [
+                  "pkg:npm/express@4.17.1"
+                ],
+                "security-severity": "6.1",
+                "tags": [
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-0286",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2023-0286"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2023-0286?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r0",
+              "help": {
+                "text": "There is a type confusion vulnerability relating to X.400 address processing\r\ninside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but\r\nthe public structure definition for GENERAL_NAME incorrectly specified the type\r\nof the x400Address field as ASN1_TYPE. This field is subsequently interpreted by\r\nthe OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an\r\nASN1_STRING.\r\n\r\nWhen CRL checking is enabled (i.e. the application sets the\r\nX509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass\r\narbitrary pointers to a memcmp call, enabling them to read memory contents or\r\nenact a denial of service. In most cases, the attack requires the attacker to\r\nprovide both the certificate chain and CRL, neither of which need to have a\r\nvalid signature. If the attacker only controls one of these inputs, the other\r\ninput must already contain an X.400 address as a CRL distribution point, which\r\nis uncommon. As such, this vulnerability is most likely to only affect\r\napplications which have implemented their own functionality for retrieving CRLs\r\nover a network.\r\n\r\nOpenSSL versions 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nThis issue was reported on 11th January 2023 by David Benjamin (Google).\r\nThe fix was developed by Hugo Landau.\n",
+                "markdown": "> There is a type confusion vulnerability relating to X.400 address processing\r\ninside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but\r\nthe public structure definition for GENERAL_NAME incorrectly specified the type\r\nof the x400Address field as ASN1_TYPE. This field is subsequently interpreted by\r\nthe OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an\r\nASN1_STRING.\r\n\r\nWhen CRL checking is enabled (i.e. the application sets the\r\nX509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass\r\narbitrary pointers to a memcmp call, enabling them to read memory contents or\r\nenact a denial of service. In most cases, the attack requires the attacker to\r\nprovide both the certificate chain and CRL, neither of which need to have a\r\nvalid signature. If the attacker only controls one of these inputs, the other\r\ninput must already contain an X.400 address as a CRL distribution point, which\r\nis uncommon. As such, this vulnerability is most likely to only affect\r\napplications which have implemented their own functionality for retrieving CRLs\r\nover a network.\r\n\r\nOpenSSL versions 3.0, 1.1.1 and 1.0.2 are vulnerable to this issue.\r\n\r\nOpenSSL 3.0 users should upgrade to OpenSSL 3.0.8.\r\nOpenSSL 1.1.1 users should upgrade to OpenSSL 1.1.1t.\r\nOpenSSL 1.0.2 users should upgrade to OpenSSL 1.0.2zg (premium support customers\r\nonly).\r\n\r\nThis issue was reported on 11th January 2023 by David Benjamin (Google).\r\nThe fix was developed by Hugo Landau.\n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r0                                                      |\n| Fixed version  | 1.1.1t-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r0",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.1.1t-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.1",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42378",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42378"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42378?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42379",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42379"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42379?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42380",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42380"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42380?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42381",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42381"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42381?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42382",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42382"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42382?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42383",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42383"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42383?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42384",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42384"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42384?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42385",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42385"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42385?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42386",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-42386"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-42386?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r6",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r6                                                      |\n| Fixed version  | 1.33.1-r6                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r6",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r6",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.2",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3712",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-3712"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-3712?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1l-r0",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1l-r0                                                      |\n| Fixed version  | 1.1.1l-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1l-r0",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.1.1l-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.4",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2018-25032",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2018-25032"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2018-25032?s=alpine&n=zlib&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.2.12-r0",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                              |\n|----------------|--------------------------------------------------------------|\n| Package        | pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.2.12-r0                                                   |\n| Fixed version  | 1.2.12-r0                                                    |\n"
+              },
+              "properties": {
+                "affected_version": "<1.2.12-r0",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.2.12-r0",
+                "purls": [
+                  "pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.5",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-0778",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-0778"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-0778?s=alpine&n=libretls&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C3.3.3p1-r3",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                   |\n|----------------|-------------------------------------------------------------------|\n| Package        | pkg:apk/alpine/libretls@3.3.3p1-r2?os_name=alpine&os_version=3.14 |\n| Affected range | <3.3.3p1-r3                                                       |\n| Fixed version  | 3.3.3p1-r3                                                        |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1n-r0",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.1.1n-r0",
+                "purls": [
+                  "pkg:apk/alpine/libretls@3.3.3p1-r2?os_name=alpine&os_version=3.14",
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.5",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-24999",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-24999: Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-24999?s=github&n=qs&t=npm&vr=%3E%3D6.7.0%2C%3C6.7.3",
+              "help": {
+                "text": "qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&a[__proto__]&a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.\n",
+                "markdown": "> qs before 6.10.3 allows attackers to cause a Node process hang because an `__ proto__` key can be used. In many typical web framework use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as `a[__proto__]=b&a[__proto__]&a[length]=100000000`. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4.\n\n|                |                                              |\n|----------------|----------------------------------------------|\n| Package        | pkg:npm/qs@6.7.0                             |\n| Affected range | >=6.7.0,<6.7.3                               |\n| Fixed version  | 6.7.3                                        |\n| CVSS Score     |                                          7.5 |\n| CVSS Vector    | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H |\n"
+              },
+              "properties": {
+                "affected_version": "<4.17.3",
+                "cvssV3": 7.5,
+                "cvssV3_severity": "HIGH",
+                "cvssV3_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "fixed_version": "4.17.3",
+                "purls": [
+                  "pkg:npm/express@4.17.1",
+                  "pkg:npm/qs@6.7.0"
+                ],
+                "security-severity": "7.5",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-0464",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2023-0464"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2023-0464?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1t-r1",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1t-r1                                                      |\n| Fixed version  | 1.1.1t-r1                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1t-r1",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.1.1t-r1",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "7.5",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-28391",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-28391"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-28391?s=alpine&n=busybox&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.33.1-r7",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.33.1-r7                                                      |\n| Fixed version  | 1.33.1-r7                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.33.1-r7",
+                "cvssV3_severity": "HIGH",
+                "fixed_version": "1.33.1-r7",
+                "purls": [
+                  "pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "8.8",
+                "tags": [
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-3711",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2021-3711"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2021-3711?s=alpine&n=openssl&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.1.1l-r0",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                                 |\n|----------------|-----------------------------------------------------------------|\n| Package        | pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14 |\n| Affected range | <1.1.1l-r0                                                      |\n| Fixed version  | 1.1.1l-r0                                                       |\n"
+              },
+              "properties": {
+                "affected_version": "<1.1.1l-r0",
+                "cvssV3_severity": "CRITICAL",
+                "fixed_version": "1.1.1l-r0",
+                "purls": [
+                  "pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "9.8",
+                "tags": [
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-37434",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "CVE-2022-37434"
+              },
+              "helpUri": "https://scout.docker.com/v/CVE-2022-37434?s=alpine&n=zlib&ns=alpine&t=apk&osn=alpine&osv=3.14&vr=%3C1.2.12-r2",
+              "help": {
+                "text": "\n",
+                "markdown": "> \n\n|                |                                                              |\n|----------------|--------------------------------------------------------------|\n| Package        | pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14 |\n| Affected range | <1.2.12-r2                                                   |\n| Fixed version  | 1.2.12-r2                                                    |\n"
+              },
+              "properties": {
+                "affected_version": "<1.2.12-r2",
+                "cvssV3_severity": "CRITICAL",
+                "fixed_version": "1.2.12-r2",
+                "purls": [
+                  "pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14"
+                ],
+                "security-severity": "9.8",
+                "tags": [
+                  "CRITICAL"
+                ]
+              }
+            }
+          ],
+          "version": "1.6.3"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "ALPINE-13661",
+          "ruleIndex": 0,
+          "kind": "fail",
+          "level": "none",
+          "message": {
+            "text": "  Vulnerability  : ALPINE-13661                                                     \n  Severity       : UNSPECIFIED                                                      \n  Package        : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range : <1.33.1-r7                                                       \n  Fixed version  : 1.33.1-r7                                                        \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-4304",
+          "ruleIndex": 1,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-4304                                                    \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r0                                                       \n  Fixed version   : 1.1.1t-r0                                                        \n  EPSS Score      : 0.001570                                                         \n  EPSS Percentile : 0.519090                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-4450",
+          "ruleIndex": 2,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-4450                                                    \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r0                                                       \n  Fixed version   : 1.1.1t-r0                                                        \n  EPSS Score      : 0.001220                                                         \n  EPSS Percentile : 0.462910                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-0215",
+          "ruleIndex": 3,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2023-0215                                                    \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r0                                                       \n  Fixed version   : 1.1.1t-r0                                                        \n  EPSS Score      : 0.003030                                                         \n  EPSS Percentile : 0.694750                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42374",
+          "ruleIndex": 4,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42374                                                   \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r4                                                       \n  Fixed version   : 1.33.1-r4                                                        \n  EPSS Score      : 0.001230                                                         \n  EPSS Percentile : 0.463750                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-2097",
+          "ruleIndex": 5,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-2097                                                    \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1q-r0                                                       \n  Fixed version   : 1.1.1q-r0                                                        \n  EPSS Score      : 0.003630                                                         \n  EPSS Percentile : 0.721790                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-0465",
+          "ruleIndex": 6,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2023-0465                                                    \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r2                                                       \n  Fixed version   : 1.1.1t-r2                                                        \n  EPSS Score      : 0.001250                                                         \n  EPSS Percentile : 0.467660                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42375",
+          "ruleIndex": 7,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42375                                                   \n  Severity        : MEDIUM                                                           \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r5                                                       \n  Fixed version   : 1.33.1-r5                                                        \n  EPSS Score      : 0.000450                                                         \n  EPSS Percentile : 0.135420                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-29041",
+          "ruleIndex": 8,
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "  Vulnerability   : CVE-2024-29041                                \n  Severity        : MEDIUM                                        \n  Package         : pkg:npm/express@4.17.1                        \n  Affected range  : <4.19.2                                       \n  Fixed version   : 4.19.2                                        \n  CVSS Score      : 6.1                                           \n  CVSS Vector     : CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N  \n  EPSS Score      : 0.000440                                      \n  EPSS Percentile : 0.096970                                      \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/node_modules/express/package.json"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-0286",
+          "ruleIndex": 9,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2023-0286                                                    \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r0                                                       \n  Fixed version   : 1.1.1t-r0                                                        \n  EPSS Score      : 0.002120                                                         \n  EPSS Percentile : 0.588860                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42378",
+          "ruleIndex": 10,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42378                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42379",
+          "ruleIndex": 11,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42379                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42380",
+          "ruleIndex": 12,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42380                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42381",
+          "ruleIndex": 13,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42381                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42382",
+          "ruleIndex": 14,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42382                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42383",
+          "ruleIndex": 15,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42383                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42384",
+          "ruleIndex": 16,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42384                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42385",
+          "ruleIndex": 17,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42385                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42386",
+          "ruleIndex": 18,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-42386                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r6                                                       \n  Fixed version   : 1.33.1-r6                                                        \n  EPSS Score      : 0.002360                                                         \n  EPSS Percentile : 0.614140                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3712",
+          "ruleIndex": 19,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-3712                                                    \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1l-r0                                                       \n  Fixed version   : 1.1.1l-r0                                                        \n  EPSS Score      : 0.004110                                                         \n  EPSS Percentile : 0.737300                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2018-25032",
+          "ruleIndex": 20,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2018-25032                                                \n  Severity        : HIGH                                                          \n  Package         : pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.2.12-r0                                                    \n  Fixed version   : 1.2.12-r0                                                     \n  EPSS Score      : 0.002780                                                      \n  EPSS Percentile : 0.680850                                                      \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libz.so.1.2.11"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-0778",
+          "ruleIndex": 21,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-0778                                                    \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1n-r0                                                       \n  Fixed version   : 1.1.1n-r0                                                        \n  EPSS Score      : 0.013420                                                         \n  EPSS Percentile : 0.859890                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-0778",
+          "ruleIndex": 21,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-0778                                                      \n  Severity        : HIGH                                                               \n  Package         : pkg:apk/alpine/libretls@3.3.3p1-r2?os_name=alpine&os_version=3.14  \n  Affected range  : <3.3.3p1-r3                                                        \n  Fixed version   : 3.3.3p1-r3                                                         \n  EPSS Score      : 0.013420                                                           \n  EPSS Percentile : 0.859890                                                           \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/libtls.so.2.0.3"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-24999",
+          "ruleIndex": 22,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-24999                                \n  Severity        : HIGH                                          \n  Package         : pkg:npm/express@4.17.1                        \n  Affected range  : <4.17.3                                       \n  Fixed version   : 4.17.3                                        \n  CVSS Score      : 7.5                                           \n  CVSS Vector     : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n  EPSS Score      : 0.008770                                      \n  EPSS Percentile : 0.823770                                      \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/node_modules/express/package.json"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-24999",
+          "ruleIndex": 22,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-24999                                \n  Severity        : HIGH                                          \n  Package         : pkg:npm/qs@6.7.0                              \n  Affected range  : >=6.7.0,<6.7.3                                \n  Fixed version   : 6.7.3                                         \n  CVSS Score      : 7.5                                           \n  CVSS Vector     : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  \n  EPSS Score      : 0.008770                                      \n  EPSS Percentile : 0.823770                                      \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/node_modules/qs/package.json"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-0464",
+          "ruleIndex": 23,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2023-0464                                                    \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1t-r1                                                       \n  Fixed version   : 1.1.1t-r1                                                        \n  EPSS Score      : 0.002560                                                         \n  EPSS Percentile : 0.652590                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-28391",
+          "ruleIndex": 24,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-28391                                                   \n  Severity        : HIGH                                                             \n  Package         : pkg:apk/alpine/busybox@1.33.1-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.33.1-r7                                                       \n  Fixed version   : 1.33.1-r7                                                        \n  EPSS Score      : 0.011320                                                         \n  EPSS Percentile : 0.845700                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/bin/busybox"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/logrotate.d/acpid"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/network/if-up.d/dad"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/securetty"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/udhcpd.conf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/share/udhcpc/default.script"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/bin/ssl_client"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-3711",
+          "ruleIndex": 25,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2021-3711                                                    \n  Severity        : CRITICAL                                                         \n  Package         : pkg:apk/alpine/openssl@1.1.1k-r0?os_name=alpine&os_version=3.14  \n  Affected range  : <1.1.1l-r0                                                       \n  Fixed version   : 1.1.1l-r0                                                        \n  EPSS Score      : 0.067890                                                         \n  EPSS Percentile : 0.938380                                                         \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/ct_log_list.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/CA.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/afalg.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/capi.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/usr/lib/engines-1.1/padlock.so"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/misc/tsget.pl"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/etc/ssl/openssl.cnf.dist"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libcrypto.so.1.1"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libssl.so.1.1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-37434",
+          "ruleIndex": 26,
+          "kind": "fail",
+          "level": "error",
+          "message": {
+            "text": "  Vulnerability   : CVE-2022-37434                                                \n  Severity        : CRITICAL                                                      \n  Package         : pkg:apk/alpine/zlib@1.2.11-r3?os_name=alpine&os_version=3.14  \n  Affected range  : <1.2.12-r2                                                    \n  Fixed version   : 1.2.12-r2                                                     \n  EPSS Score      : 0.003410                                                      \n  EPSS Percentile : 0.713170                                                      \n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/apk/db/installed"
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/lib/libz.so.1.2.11"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

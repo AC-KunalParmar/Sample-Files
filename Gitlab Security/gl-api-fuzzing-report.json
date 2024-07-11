@@ -1,0 +1,1828 @@
+{
+    "scan": {
+        "end_time": "2022-03-02T18:37:17",
+        "messages": [],
+        "analyzer": {
+            "id": "gitlab-api-fuzzing",
+            "name": "GitLab API Fuzzing",
+            "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+            "vendor": {
+                "name": "GitLab"
+            },
+            "version": "1.6.216"
+        },
+        "scanner": {
+            "id": "gitlab-api-security",
+            "name": "GitLab API Security",
+            "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+            "version": "1.6.216",
+            "vendor": {
+                "name": "GitLab"
+            }
+        },
+        "start_time": "2022-03-02T18:37:13",
+        "status": "success",
+        "type": "api_fuzzing",
+        "scanned_resources": [
+            {
+                "method": "DELETE",
+                "url": "http://target:7777/api/users/2",
+                "type": "url"
+            },
+            {
+                "method": "DELETE",
+                "url": "http://target:7777/api/users?user=dd",
+                "type": "url"
+            },
+            {
+                "method": "GET",
+                "url": "http://target:7777/api/users",
+                "type": "url"
+            },
+            {
+                "method": "GET",
+                "url": "http://target:7777/api/users/2",
+                "type": "url"
+            },
+            {
+                "method": "GET",
+                "url": "http://target:7777/api/users?user=dd",
+                "type": "url"
+            },
+            {
+                "method": "POST",
+                "url": "http://target:7777/api/users",
+                "type": "url"
+            },
+            {
+                "method": "PUT",
+                "url": "http://target:7777/api/users/2",
+                "type": "url"
+            }
+        ]
+    },
+    "schema": "https://gitlab.com/gitlab-org/security-products/security-report-schemas/-/raw/25c8ff885e9cd16e54dc3fc3f62aa72e71f098fe/dist/dast-report-format.json",
+    "version": "14.0.4",
+    "vulnerabilities": [
+        {
+            "id": "eda589ee-a2dd-49c9-9819-006505df8aee",
+            "category": "API Fuzzing",
+            "name": "Generic Fuzzing",
+            "message": "Fuzzing injection via '/api' on 'POST target:7777/api/users'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringCaseLower\nParameter Original Value: api\nParameter Mutated Value: api\n\n\n",
+            "cve": "bucket:param:Path: /api:check:Generic Fuzzing:check_arg::assert:Status Code:data:14c2529eb4498c5d1ffd6915d05bf58a91bdda796af59f41d480d11c099d0479",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "Generic Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Path: /api:check:Generic Fuzzing:check_arg::assert:Status Code:data:14c2529eb4498c5d1ffd6915d05bf58a91bdda796af59f41d480d11c099d0479"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Status Code",
+                    "name": "Status Code"
+                },
+                "summary": "An invalid status code '500' was detected during testing.  Invalid status codes indicate an error or unexpected event occured.\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "62"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "POST",
+                    "url": "http://target:7777/api/users",
+                    "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "170"
+                        },
+                        {
+                            "name": "Access-Control-Allow-Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Vary",
+                            "value": "Origin"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "15"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                },
+                                {
+                                    "name": "Access-Control-Allow-Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "reason_phrase": "CREATED",
+                            "status_code": 201,
+                            "body": "{\"user_id\":2}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "POST",
+                "param": "Path: /api",
+                "path": "/api/users"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_eda589ee-a2dd-49c9-9819-006505df8aee.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_eda589ee-a2dd-49c9-9819-006505df8aee_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:15.651"
+        },
+        {
+            "id": "07156913-40f3-42cc-8b5c-6181bdabc32e",
+            "category": "API Fuzzing",
+            "name": "Generic Fuzzing",
+            "message": "Fuzzing injection via '/api/users' on 'POST target:7777/api/users'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringCaseLower\nParameter Original Value: users\nParameter Mutated Value: users\n\n\n",
+            "cve": "bucket:param:Path: /api/users:check:Generic Fuzzing:check_arg::assert:Status Code:data:7dfb4cf67742cb0660305e56ef816c53fcec892cae7f6ee39b75f34e659d672c",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "Generic Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Path: /api/users:check:Generic Fuzzing:check_arg::assert:Status Code:data:7dfb4cf67742cb0660305e56ef816c53fcec892cae7f6ee39b75f34e659d672c"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Status Code",
+                    "name": "Status Code"
+                },
+                "summary": "An invalid status code '500' was detected during testing.  Invalid status codes indicate an error or unexpected event occured.\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "62"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "POST",
+                    "url": "http://target:7777/api/users",
+                    "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "170"
+                        },
+                        {
+                            "name": "Access-Control-Allow-Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Vary",
+                            "value": "Origin"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "15"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                },
+                                {
+                                    "name": "Access-Control-Allow-Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "reason_phrase": "CREATED",
+                            "status_code": 201,
+                            "body": "{\"user_id\":2}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "POST",
+                "param": "Path: /api/users",
+                "path": "/api/users"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_07156913-40f3-42cc-8b5c-6181bdabc32e.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_07156913-40f3-42cc-8b5c-6181bdabc32e_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:15.877"
+        },
+        {
+            "id": "6eb36061-e56e-4e74-81ab-e668632d8d1f",
+            "category": "API Fuzzing",
+            "name": "Generic Fuzzing",
+            "message": "Fuzzing injection via '/api/users/2' on 'GET target:7777/api/users/2'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringStatic\nParameter Original Value: 2\nParameter Mutated Value: 65576\n\n\n",
+            "cve": "bucket:param:Path: /api/users/2:check:Generic Fuzzing:check_arg::assert:Response Body Analysis:data:1113193d7e8884ae4c56395d59fafbee5c2e39a9ca672e259c25c92a5876ef69",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "Generic Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Path: /api/users/2:check:Generic Fuzzing:check_arg::assert:Response Body Analysis:data:1113193d7e8884ae4c56395d59fafbee5c2e39a9ca672e259c25c92a5876ef69"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Response Body Analysis",
+                    "name": "Response Body Analysis"
+                },
+                "summary": "During testing a Error Message type value was identified in the HTTP response message. The value is a Generic error message..\n\nInformation leaked:\n\nInternal Server Error\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "GET",
+                    "url": "http://target:7777/api/users/65576",
+                    "body": ""
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "37"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"Internal Server Error\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "GET",
+                            "url": "http://target:7777/api/users/2",
+                            "body": ""
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "GET",
+                            "url": "http://target:7777/api/users/2",
+                            "body": ""
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:14 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "37"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                }
+                            ],
+                            "reason_phrase": "INTERNAL SERVER ERROR",
+                            "status_code": 500,
+                            "body": "{\"message\":\"Internal Server Error\"}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "GET",
+                "param": "Path: /api/users/2",
+                "path": "/api/users/65576"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_6eb36061-e56e-4e74-81ab-e668632d8d1f.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_6eb36061-e56e-4e74-81ab-e668632d8d1f_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:15.046"
+        },
+        {
+            "id": "3e70bb40-fcac-407c-941a-df65a119d080",
+            "category": "API Fuzzing",
+            "name": "JSON Fuzzing",
+            "message": "Fuzzing injection via 'first' on 'POST target:7777/api/users'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringStatic\nParameter Original Value: mike\nParameter Mutated Value: 9223372036854775806\n\n\n",
+            "cve": "bucket:param:Body: first:check:JSON Fuzzing:check_arg::assert:Status Code:data:73b94a8ddf2cb06f9795f38faead5d3d3de7042f0285586efd9d75c3e53c3617",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "JSON Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Body: first:check:JSON Fuzzing:check_arg::assert:Status Code:data:73b94a8ddf2cb06f9795f38faead5d3d3de7042f0285586efd9d75c3e53c3617"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Status Code",
+                    "name": "Status Code"
+                },
+                "summary": "An invalid status code '500' was detected during testing.  Invalid status codes indicate an error or unexpected event occured.\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "77"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "POST",
+                    "url": "http://target:7777/api/users",
+                    "body": "{\"user\":\"dd\",\"first\":\"9223372036854775806\",\"last\":\"smith\",\"password\":\"hello\"}"
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:16 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "170"
+                        },
+                        {
+                            "name": "Access-Control-Allow-Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Vary",
+                            "value": "Origin"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "15"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                },
+                                {
+                                    "name": "Access-Control-Allow-Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "reason_phrase": "CREATED",
+                            "status_code": 201,
+                            "body": "{\"user_id\":2}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "POST",
+                "param": "Body: first",
+                "path": "/api/users"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_3e70bb40-fcac-407c-941a-df65a119d080.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_3e70bb40-fcac-407c-941a-df65a119d080_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:16.017"
+        },
+        {
+            "id": "a5d96ca8-dda1-4313-b6cd-10db76717b98",
+            "category": "API Fuzzing",
+            "name": "JSON Fuzzing",
+            "message": "Fuzzing injection via 'last' on 'POST target:7777/api/users'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringUnicodePlane0\nParameter Original Value: smith\nParameter Mutated Value: 鼬敞诚⟐絈ꪶঝ忲홥䄾篘ꊉ哔碣崐⛽잩䱭춍ഷ帶욇ꗙ敀Ư඿柷︸楑뤍჎ڴ鼅虹Ṅ씸雃뚗鹴튙౱ፗዕ惑넃ķ褊◜㈤䧬꒵燌鉞썈㝵葶梠한坊ﬄ໪ﰡ橖陧ܼ鞃츶㫭俓曎歈ȡඉ奖濎騴᭣搅ԏ熝≫뇼㇅拫유ጐ派竎䣷綝ɴ㹾ꔟ쁷槯ꍆ孏扜脢沊펿㒉쓥悐퀫躛஫蕶酞캶煠︞\u0014뮈瓏㄂흠﵈뢖릗绒଎⣌뉰῎⊥ᔩỜ칽ໜມ㋫냨蟣鐶ꨱ썦퓹ᬄ㣽뭃鐨㟥㪂끭䓐费롒倦첱⃵槇県葿\n\n\n",
+            "cve": "bucket:param:Body: last:check:JSON Fuzzing:check_arg::assert:Status Code:data:0533befe9c0c9f4321d99679b042da568d0f2d52a3708900682e999772d55193",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "JSON Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Body: last:check:JSON Fuzzing:check_arg::assert:Status Code:data:0533befe9c0c9f4321d99679b042da568d0f2d52a3708900682e999772d55193"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Status Code",
+                    "name": "Status Code"
+                },
+                "summary": "An invalid status code '500' was detected during testing.  Invalid status codes indicate an error or unexpected event occured.\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "515"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "POST",
+                    "url": "http://target:7777/api/users",
+                    "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"鼬敞诚⟐絈ꪶঝ忲홥䄾篘ꊉ哔碣崐⛽잩䱭춍ഷ帶욇ꗙ敀Ư඿柷︸楑뤍჎ڴ鼅虹Ṅ씸雃뚗鹴튙౱ፗዕ惑넃ķ褊◜㈤䧬꒵燌鉞썈㝵葶梠한坊ﬄ໪ﰡ橖陧ܼ鞃츶㫭俓曎歈ȡඉ奖濎騴᭣搅ԏ熝≫뇼㇅拫유ጐ派竎䣷綝ɴ㹾ꔟ쁷槯ꍆ孏扜脢沊펿㒉쓥悐퀫躛஫蕶酞캶煠︞\\u0014뮈瓏㄂흠﵈뢖릗绒଎⣌뉰῎⊥ᔩỜ칽ໜມ㋫냨蟣鐶ꨱ썦퓹ᬄ㣽뭃鐨㟥㪂끭䓐费롒倦첱⃵槇県葿\",\"password\":\"hello\"}"
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:16 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "170"
+                        },
+                        {
+                            "name": "Access-Control-Allow-Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Vary",
+                            "value": "Origin"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "15"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                },
+                                {
+                                    "name": "Access-Control-Allow-Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "reason_phrase": "CREATED",
+                            "status_code": 201,
+                            "body": "{\"user_id\":2}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "POST",
+                "param": "Body: last",
+                "path": "/api/users"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_a5d96ca8-dda1-4313-b6cd-10db76717b98.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_a5d96ca8-dda1-4313-b6cd-10db76717b98_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:16.369"
+        },
+        {
+            "id": "ca620fb2-2016-4fc7-afa4-53c6e8bf504f",
+            "category": "API Fuzzing",
+            "name": "JSON Fuzzing",
+            "message": "Fuzzing injection via 'password' on 'POST target:7777/api/users'",
+            "description": "Fuzzing performes non-specific injections into target field in an attempt to cause unexpected behaviour of the target. Fuzzing can find injection style issues, buffer overflows, memory corruption, stability issues, and others.  Fuzzing consists of sending mutated/semi-malformed data injections in an automated fashion to the target.\n\nThe 'mutator' is the data generator in use when the issue was identified.\n\nMutator: StringUtf8BomLength\nParameter Original Value: hello\nParameter Mutated Value: \n00000000   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000010   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000020   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000030   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000040   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000050   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000060   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000070   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000080   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000090   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n000000A0   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n000000B0   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n000000C0   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n000000D0   6C 6F 68 65 6C 6C 6F 68  65 6C EB BB BF 6C 6F 68   lohellohel...loh\n000000E0   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n000000F0   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000100   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000110   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000120   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000130   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000140   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000150   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000160   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000170   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000180   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000190   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n000001A0   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n000001B0   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n000001C0   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n000001D0   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n000001E0   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n000001F0   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000200   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000210   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000220   65 EB BB BF 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   e...llohellohell\n00000230   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000240   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n00000250   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000260   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000270   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n00000280   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n00000290   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n000002A0   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n000002B0   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n000002C0   6C 6F 68 65 6C 6C 6F 68  65 6C 6C 6F 68 65 6C 6C   lohellohellohell\n000002D0   6F 68 65 6C 6C 6F 68 65  6C 6C 6F 68 65 6C 6C 6F   ohellohellohello\n000002E0   68 65 6C 6C 6F 68 65 6C  6C 6F 68 65 6C 6C 6F 68   hellohellohelloh\n000002F0   65 6C 6C 6F 68 65 6C 6C  6F 68 65 6C 6C 6F 68 65   ellohellohellohe\n00000300   6C 6C 6F 68 65 6C 6C 6F  68 65 6C 6C 6F 68 65 6C   llohellohellohel\n00000310   6C 6F 68 65 6C 6C 6F 68  65                        lohellohe       \\\n\n\n",
+            "cve": "bucket:param:Body: password:check:JSON Fuzzing:check_arg::assert:Status Code:data:f6a66393ef3cea6717c9f2a71d8547d6aa37ffaac881e79c346d8bd7addb02df",
+            "severity": "Unknown",
+            "scanner": {
+                "id": "gitlab-api-security",
+                "name": "GitLab API Security"
+            },
+            "identifiers": [
+                {
+                    "type": "ApiSecurityCheck",
+                    "name": "JSON Fuzzing",
+                    "url": "https://docs.gitlab.com/ee/user/application_security/api_fuzzing/",
+                    "value": "bucket:param:Body: password:check:JSON Fuzzing:check_arg::assert:Status Code:data:f6a66393ef3cea6717c9f2a71d8547d6aa37ffaac881e79c346d8bd7addb02df"
+                }
+            ],
+            "evidence": {
+                "source": {
+                    "id": "assert:Status Code",
+                    "name": "Status Code"
+                },
+                "summary": "An invalid status code '500' was detected during testing.  Invalid status codes indicate an error or unexpected event occured.\n\n\n",
+                "request": {
+                    "headers": [
+                        {
+                            "name": "Authorization",
+                            "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                        },
+                        {
+                            "name": "Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Accept-Encoding",
+                            "value": "gzip, deflate, br"
+                        },
+                        {
+                            "name": "Host",
+                            "value": "target:7777"
+                        },
+                        {
+                            "name": "Accept-Language",
+                            "value": "en-US,en;q=0.8"
+                        },
+                        {
+                            "name": "User-Agent",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "name": "Accept",
+                            "value": "*/*"
+                        },
+                        {
+                            "name": "Referer",
+                            "value": "http://127.0.0.1:7777/"
+                        },
+                        {
+                            "name": "Cookie",
+                            "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "keep-alive"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "850"
+                        },
+                        {
+                            "name": "Via",
+                            "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                        }
+                    ],
+                    "method": "POST",
+                    "url": "http://target:7777/api/users",
+                    "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohel뻿lohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohe뻿llohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohe\"}"
+                },
+                "response": {
+                    "headers": [
+                        {
+                            "name": "Server",
+                            "value": "TwistedWeb/22.1.0"
+                        },
+                        {
+                            "name": "Date",
+                            "value": "Wed, 02 Mar 2022 18:37:16 GMT"
+                        },
+                        {
+                            "name": "Content-Type",
+                            "value": "application/json"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "170"
+                        },
+                        {
+                            "name": "Access-Control-Allow-Origin",
+                            "value": "http://127.0.0.1:7777"
+                        },
+                        {
+                            "name": "Vary",
+                            "value": "Origin"
+                        },
+                        {
+                            "name": "X-Powered-By",
+                            "value": "PHP/7.0.11"
+                        }
+                    ],
+                    "reason_phrase": "INTERNAL SERVER ERROR",
+                    "status_code": 500,
+                    "body": "{\"message\":\"The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.\"}"
+                },
+                "supporting_messages": [
+                    {
+                        "name": "Original",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        }
+                    },
+                    {
+                        "name": "Recorded",
+                        "request": {
+                            "headers": [
+                                {
+                                    "name": "Authorization",
+                                    "value": "Token b5638ae7-6e77-4585-b035-7d9de2e3f6b3"
+                                },
+                                {
+                                    "name": "Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Accept-Encoding",
+                                    "value": "gzip, deflate, br"
+                                },
+                                {
+                                    "name": "Host",
+                                    "value": "target:7777"
+                                },
+                                {
+                                    "name": "Accept-Language",
+                                    "value": "en-US,en;q=0.8"
+                                },
+                                {
+                                    "name": "User-Agent",
+                                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json; charset=UTF-8"
+                                },
+                                {
+                                    "name": "Accept",
+                                    "value": "*/*"
+                                },
+                                {
+                                    "name": "Referer",
+                                    "value": "http://127.0.0.1:7777/"
+                                },
+                                {
+                                    "name": "Cookie",
+                                    "value": ".AspNetCore.Antiforgery.a6BorKCfoC4=CfDJ8DL4GupRCDNGl_0OiAd3qWP5O9gu_LiedsgcLWhaCgn88Ru8oWwXGQvL3PXNdZ0n5TjUPody5ZI01g6DQyaaphE4U6osQ8UW4ek9hlOQX0XFvIg9G3vGuvPt1XiJkxzxEtoPMlepzIig3KblZd5YsOs"
+                                },
+                                {
+                                    "name": "Connection",
+                                    "value": "keep-alive"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "62"
+                                },
+                                {
+                                    "name": "Via",
+                                    "value": "HTTP/1.1 GitLabApiSecurity 1.6.216"
+                                }
+                            ],
+                            "method": "POST",
+                            "url": "http://target:7777/api/users",
+                            "body": "{\"user\":\"dd\",\"first\":\"mike\",\"last\":\"smith\",\"password\":\"hello\"}"
+                        },
+                        "response": {
+                            "headers": [
+                                {
+                                    "name": "Server",
+                                    "value": "TwistedWeb/22.1.0"
+                                },
+                                {
+                                    "name": "Date",
+                                    "value": "Wed, 02 Mar 2022 18:37:15 GMT"
+                                },
+                                {
+                                    "name": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "name": "Content-Length",
+                                    "value": "15"
+                                },
+                                {
+                                    "name": "X-Powered-By",
+                                    "value": "PHP/7.0.11"
+                                },
+                                {
+                                    "name": "Access-Control-Allow-Origin",
+                                    "value": "http://127.0.0.1:7777"
+                                },
+                                {
+                                    "name": "Vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "reason_phrase": "CREATED",
+                            "status_code": 201,
+                            "body": "{\"user_id\":2}"
+                        }
+                    }
+                ]
+            },
+            "location": {
+                "hostname": "http://target:7777",
+                "method": "POST",
+                "param": "Body: password",
+                "path": "/api/users"
+            },
+            "assets": [
+                {
+                    "type": "postman",
+                    "name": "Postman Collection",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_ca620fb2-2016-4fc7-afa4-53c6e8bf504f.postman_collection.json?inline=false"
+                },
+                {
+                    "type": "http_session",
+                    "name": "HTTP Messages",
+                    "url": "https://gitlab.com/gitlab-org/security-products/demos/api-fuzzing-example/-/jobs/2155588529/artifacts/file/gl-assets/vuln_ca620fb2-2016-4fc7-afa4-53c6e8bf504f_messages.zip?inline=false"
+                }
+            ],
+            "discovered_at": "2022-03-02T18:37:16.538"
+        }
+    ]
+}

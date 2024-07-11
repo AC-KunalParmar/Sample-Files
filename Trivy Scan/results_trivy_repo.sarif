@@ -1,0 +1,3779 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Vulnerability Scanner",
+          "informationUri": "https://github.com/aquasecurity/trivy",
+          "name": "Trivy",
+          "rules": [
+            {
+              "id": "CVE-2021-42550",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "logback: remote code execution through JNDI call from within its configuration file"
+              },
+              "fullDescription": {
+                "text": "In logback version 1.2.7 and prior versions, an attacker with the required privileges to edit configurations files could craft a malicious configuration allowing to execute arbitrary code loaded from LDAP servers."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-42550",
+              "help": {
+                "text": "Vulnerability CVE-2021-42550\nSeverity: MEDIUM\nPackage: ch.qos.logback:logback-core\nFixed Version: 1.2.8\nLink: [CVE-2021-42550](https://avd.aquasec.com/nvd/cve-2021-42550)\nIn logback version 1.2.7 and prior versions, an attacker with the required privileges to edit configurations files could craft a malicious configuration allowing to execute arbitrary code loaded from LDAP servers.",
+                "markdown": "**Vulnerability CVE-2021-42550**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|ch.qos.logback:logback-core|1.2.8|[CVE-2021-42550](https://avd.aquasec.com/nvd/cve-2021-42550)|\n\nIn logback version 1.2.7 and prior versions, an attacker with the required privileges to edit configurations files could craft a malicious configuration allowing to execute arbitrary code loaded from LDAP servers."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.6",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2020-36518",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "denial of service via a large depth of nested objects"
+              },
+              "fullDescription": {
+                "text": "jackson-databind before 2.13.0 allows a Java StackOverflow exception and denial of service via a large depth of nested objects."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2020-36518",
+              "help": {
+                "text": "Vulnerability CVE-2020-36518\nSeverity: HIGH\nPackage: com.fasterxml.jackson.core:jackson-databind\nFixed Version: 2.12.6.1, 2.13.2.1\nLink: [CVE-2020-36518](https://avd.aquasec.com/nvd/cve-2020-36518)\njackson-databind before 2.13.0 allows a Java StackOverflow exception and denial of service via a large depth of nested objects.",
+                "markdown": "**Vulnerability CVE-2020-36518**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|com.fasterxml.jackson.core:jackson-databind|2.12.6.1, 2.13.2.1|[CVE-2020-36518](https://avd.aquasec.com/nvd/cve-2020-36518)|\n\njackson-databind before 2.13.0 allows a Java StackOverflow exception and denial of service via a large depth of nested objects."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-46877",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Possible DoS if using JDK serialization to serialize JsonNode"
+              },
+              "fullDescription": {
+                "text": "jackson-databind 2.10.x through 2.12.x before 2.12.6 and 2.13.x before 2.13.1 allows attackers to cause a denial of service (2 GB transient heap usage per read) in uncommon situations involving JsonNode JDK serialization."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-46877",
+              "help": {
+                "text": "Vulnerability CVE-2021-46877\nSeverity: HIGH\nPackage: com.fasterxml.jackson.core:jackson-databind\nFixed Version: 2.12.6, 2.13.1\nLink: [CVE-2021-46877](https://avd.aquasec.com/nvd/cve-2021-46877)\njackson-databind 2.10.x through 2.12.x before 2.12.6 and 2.13.x before 2.13.1 allows attackers to cause a denial of service (2 GB transient heap usage per read) in uncommon situations involving JsonNode JDK serialization.",
+                "markdown": "**Vulnerability CVE-2021-46877**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|com.fasterxml.jackson.core:jackson-databind|2.12.6, 2.13.1|[CVE-2021-46877](https://avd.aquasec.com/nvd/cve-2021-46877)|\n\njackson-databind 2.10.x through 2.12.x before 2.12.6 and 2.13.x before 2.13.1 allows attackers to cause a denial of service (2 GB transient heap usage per read) in uncommon situations involving JsonNode JDK serialization."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-42003",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS"
+              },
+              "fullDescription": {
+                "text": "In FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-42003",
+              "help": {
+                "text": "Vulnerability CVE-2022-42003\nSeverity: HIGH\nPackage: com.fasterxml.jackson.core:jackson-databind\nFixed Version: 2.12.7.1, 2.13.4.1\nLink: [CVE-2022-42003](https://avd.aquasec.com/nvd/cve-2022-42003)\nIn FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1",
+                "markdown": "**Vulnerability CVE-2022-42003**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|com.fasterxml.jackson.core:jackson-databind|2.12.7.1, 2.13.4.1|[CVE-2022-42003](https://avd.aquasec.com/nvd/cve-2022-42003)|\n\nIn FasterXML jackson-databind before 2.14.0-rc1, resource exhaustion can occur because of a lack of a check in primitive value deserializers to avoid deep wrapper array nesting, when the UNWRAP_SINGLE_VALUE_ARRAYS feature is enabled. Additional fix version in 2.13.4.1 and 2.12.17.1"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-42004",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "use of deeply nested arrays"
+              },
+              "fullDescription": {
+                "text": "In FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-42004",
+              "help": {
+                "text": "Vulnerability CVE-2022-42004\nSeverity: HIGH\nPackage: com.fasterxml.jackson.core:jackson-databind\nFixed Version: 2.12.7.1, 2.13.4\nLink: [CVE-2022-42004](https://avd.aquasec.com/nvd/cve-2022-42004)\nIn FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization.",
+                "markdown": "**Vulnerability CVE-2022-42004**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|com.fasterxml.jackson.core:jackson-databind|2.12.7.1, 2.13.4|[CVE-2022-42004](https://avd.aquasec.com/nvd/cve-2022-42004)|\n\nIn FasterXML jackson-databind before 2.13.4, resource exhaustion can occur because of a lack of a check in BeanDeserializer._deserializeFromArray to prevent use of deeply nested arrays. An application is vulnerable only with certain customized choices for deserialization."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-25122",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: Request mix-up with h2c"
+              },
+              "fullDescription": {
+                "text": "When responding to new h2c connection requests, Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 could duplicate request headers and a limited amount of request body from one request to another meaning user A and user B could both see the results of user A\u0026#39;s request."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-25122",
+              "help": {
+                "text": "Vulnerability CVE-2021-25122\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.62, 9.0.42, 10.0.2\nLink: [CVE-2021-25122](https://avd.aquasec.com/nvd/cve-2021-25122)\nWhen responding to new h2c connection requests, Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 could duplicate request headers and a limited amount of request body from one request to another meaning user A and user B could both see the results of user A's request.",
+                "markdown": "**Vulnerability CVE-2021-25122**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|8.5.62, 9.0.42, 10.0.2|[CVE-2021-25122](https://avd.aquasec.com/nvd/cve-2021-25122)|\n\nWhen responding to new h2c connection requests, Apache Tomcat versions 10.0.0-M1 to 10.0.0, 9.0.0.M1 to 9.0.41 and 8.5.0 to 8.5.61 could duplicate request headers and a limited amount of request body from one request to another meaning user A and user B could both see the results of user A's request."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-30639",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: non-blocking I/O error flag is not reset between requests"
+              },
+              "fullDescription": {
+                "text": "A vulnerability in Apache Tomcat allows an attacker to remotely trigger a denial of service. An error introduced as part of a change to improve error handling during non-blocking I/O meant that the error flag associated with the Request object was not reset between requests. This meant that once a non-blocking I/O error occurred, all future requests handled by that request object would fail. Users were able to trigger non-blocking I/O errors, e.g. by dropping a connection, thereby creating the possibility of triggering a DoS. Applications that do not use non-blocking I/O are not exposed to this vulnerability. This issue affects Apache Tomcat 10.0.3 to 10.0.4; 9.0.44; 8.5.64."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-30639",
+              "help": {
+                "text": "Vulnerability CVE-2021-30639\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 10.0.5, 9.0.45, 8.5.65\nLink: [CVE-2021-30639](https://avd.aquasec.com/nvd/cve-2021-30639)\nA vulnerability in Apache Tomcat allows an attacker to remotely trigger a denial of service. An error introduced as part of a change to improve error handling during non-blocking I/O meant that the error flag associated with the Request object was not reset between requests. This meant that once a non-blocking I/O error occurred, all future requests handled by that request object would fail. Users were able to trigger non-blocking I/O errors, e.g. by dropping a connection, thereby creating the possibility of triggering a DoS. Applications that do not use non-blocking I/O are not exposed to this vulnerability. This issue affects Apache Tomcat 10.0.3 to 10.0.4; 9.0.44; 8.5.64.",
+                "markdown": "**Vulnerability CVE-2021-30639**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|10.0.5, 9.0.45, 8.5.65|[CVE-2021-30639](https://avd.aquasec.com/nvd/cve-2021-30639)|\n\nA vulnerability in Apache Tomcat allows an attacker to remotely trigger a denial of service. An error introduced as part of a change to improve error handling during non-blocking I/O meant that the error flag associated with the Request object was not reset between requests. This meant that once a non-blocking I/O error occurred, all future requests handled by that request object would fail. Users were able to trigger non-blocking I/O errors, e.g. by dropping a connection, thereby creating the possibility of triggering a DoS. Applications that do not use non-blocking I/O are not exposed to this vulnerability. This issue affects Apache Tomcat 10.0.3 to 10.0.4; 9.0.44; 8.5.64."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-41079",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: Infinite loop while reading an unexpected TLS packet when using OpenSSL JSSE engine"
+              },
+              "fullDescription": {
+                "text": "Apache Tomcat 8.5.0 to 8.5.63, 9.0.0-M1 to 9.0.43 and 10.0.0-M1 to 10.0.2 did not properly validate incoming TLS packets. When Tomcat was configured to use NIO+OpenSSL or NIO2+OpenSSL for TLS, a specially crafted packet could be used to trigger an infinite loop resulting in a denial of service."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-41079",
+              "help": {
+                "text": "Vulnerability CVE-2021-41079\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.64, 9.0.44, 10.0.4\nLink: [CVE-2021-41079](https://avd.aquasec.com/nvd/cve-2021-41079)\nApache Tomcat 8.5.0 to 8.5.63, 9.0.0-M1 to 9.0.43 and 10.0.0-M1 to 10.0.2 did not properly validate incoming TLS packets. When Tomcat was configured to use NIO+OpenSSL or NIO2+OpenSSL for TLS, a specially crafted packet could be used to trigger an infinite loop resulting in a denial of service.",
+                "markdown": "**Vulnerability CVE-2021-41079**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|8.5.64, 9.0.44, 10.0.4|[CVE-2021-41079](https://avd.aquasec.com/nvd/cve-2021-41079)|\n\nApache Tomcat 8.5.0 to 8.5.63, 9.0.0-M1 to 9.0.43 and 10.0.0-M1 to 10.0.2 did not properly validate incoming TLS packets. When Tomcat was configured to use NIO+OpenSSL or NIO2+OpenSSL for TLS, a specially crafted packet could be used to trigger an infinite loop resulting in a denial of service."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-42340",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "OutOfMemoryError caused by HTTP upgrade connection leak could lead to DoS"
+              },
+              "fullDescription": {
+                "text": "The fix for bug 63362 present in Apache Tomcat 10.1.0-M1 to 10.1.0-M5, 10.0.0-M1 to 10.0.11, 9.0.40 to 9.0.53 and 8.5.60 to 8.5.71 introduced a memory leak. The object introduced to collect metrics for HTTP upgrade connections was not released for WebSocket connections once the connection was closed. This created a memory leak that, over time, could lead to a denial of service via an OutOfMemoryError."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-42340",
+              "help": {
+                "text": "Vulnerability CVE-2021-42340\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.72, 9.0.54\nLink: [CVE-2021-42340](https://avd.aquasec.com/nvd/cve-2021-42340)\nThe fix for bug 63362 present in Apache Tomcat 10.1.0-M1 to 10.1.0-M5, 10.0.0-M1 to 10.0.11, 9.0.40 to 9.0.53 and 8.5.60 to 8.5.71 introduced a memory leak. The object introduced to collect metrics for HTTP upgrade connections was not released for WebSocket connections once the connection was closed. This created a memory leak that, over time, could lead to a denial of service via an OutOfMemoryError.",
+                "markdown": "**Vulnerability CVE-2021-42340**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|8.5.72, 9.0.54|[CVE-2021-42340](https://avd.aquasec.com/nvd/cve-2021-42340)|\n\nThe fix for bug 63362 present in Apache Tomcat 10.1.0-M1 to 10.1.0-M5, 10.0.0-M1 to 10.0.11, 9.0.40 to 9.0.53 and 8.5.60 to 8.5.71 introduced a memory leak. The object introduced to collect metrics for HTTP upgrade connections was not released for WebSocket connections once the connection was closed. This created a memory leak that, over time, could lead to a denial of service via an OutOfMemoryError."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-23181",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: local privilege escalation vulnerability"
+              },
+              "fullDescription": {
+                "text": "The fix for bug CVE-2020-9484 introduced a time of check, time of use vulnerability into Apache Tomcat 10.1.0-M1 to 10.1.0-M8, 10.0.0-M5 to 10.0.14, 9.0.35 to 9.0.56 and 8.5.55 to 8.5.73 that allowed a local attacker to perform actions with the privileges of the user that the Tomcat process is using. This issue is only exploitable when Tomcat is configured to persist sessions using the FileStore."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-23181",
+              "help": {
+                "text": "Vulnerability CVE-2022-23181\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: \nLink: [CVE-2022-23181](https://avd.aquasec.com/nvd/cve-2022-23181)\nThe fix for bug CVE-2020-9484 introduced a time of check, time of use vulnerability into Apache Tomcat 10.1.0-M1 to 10.1.0-M8, 10.0.0-M5 to 10.0.14, 9.0.35 to 9.0.56 and 8.5.55 to 8.5.73 that allowed a local attacker to perform actions with the privileges of the user that the Tomcat process is using. This issue is only exploitable when Tomcat is configured to persist sessions using the FileStore.",
+                "markdown": "**Vulnerability CVE-2022-23181**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core||[CVE-2022-23181](https://avd.aquasec.com/nvd/cve-2022-23181)|\n\nThe fix for bug CVE-2020-9484 introduced a time of check, time of use vulnerability into Apache Tomcat 10.1.0-M1 to 10.1.0-M8, 10.0.0-M5 to 10.0.14, 9.0.35 to 9.0.56 and 8.5.55 to 8.5.73 that allowed a local attacker to perform actions with the privileges of the user that the Tomcat process is using. This issue is only exploitable when Tomcat is configured to persist sessions using the FileStore."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-29885",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "EncryptInterceptor documentation mistake"
+              },
+              "fullDescription": {
+                "text": "The documentation of Apache Tomcat 10.1.0-M1 to 10.1.0-M14, 10.0.0-M1 to 10.0.20, 9.0.13 to 9.0.62 and 8.5.38 to 8.5.78 for the EncryptInterceptor incorrectly stated it enabled Tomcat clustering to run over an untrusted network. This was not correct. While the EncryptInterceptor does provide confidentiality and integrity protection, it does not protect against all risks associated with running over any untrusted network, particularly DoS risks."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-29885",
+              "help": {
+                "text": "Vulnerability CVE-2022-29885\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.79, 9.0.63, 10.0.21, 10.1.1\nLink: [CVE-2022-29885](https://avd.aquasec.com/nvd/cve-2022-29885)\nThe documentation of Apache Tomcat 10.1.0-M1 to 10.1.0-M14, 10.0.0-M1 to 10.0.20, 9.0.13 to 9.0.62 and 8.5.38 to 8.5.78 for the EncryptInterceptor incorrectly stated it enabled Tomcat clustering to run over an untrusted network. This was not correct. While the EncryptInterceptor does provide confidentiality and integrity protection, it does not protect against all risks associated with running over any untrusted network, particularly DoS risks.",
+                "markdown": "**Vulnerability CVE-2022-29885**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|8.5.79, 9.0.63, 10.0.21, 10.1.1|[CVE-2022-29885](https://avd.aquasec.com/nvd/cve-2022-29885)|\n\nThe documentation of Apache Tomcat 10.1.0-M1 to 10.1.0-M14, 10.0.0-M1 to 10.0.20, 9.0.13 to 9.0.62 and 8.5.38 to 8.5.78 for the EncryptInterceptor incorrectly stated it enabled Tomcat clustering to run over an untrusted network. This was not correct. While the EncryptInterceptor does provide confidentiality and integrity protection, it does not protect against all risks associated with running over any untrusted network, particularly DoS risks."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-42252",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "request smuggling"
+              },
+              "fullDescription": {
+                "text": "If Apache Tomcat 8.5.0 to 8.5.82, 9.0.0-M1 to 9.0.67, 10.0.0-M1 to 10.0.26 or 10.1.0-M1 to 10.1.0 was configured to ignore invalid HTTP headers via setting rejectIllegalHeader to false (the default for 8.5.x only), Tomcat did not reject a request containing an invalid Content-Length header making a request smuggling attack possible if Tomcat was located behind a reverse proxy that also failed to reject the request with the invalid header."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-42252",
+              "help": {
+                "text": "Vulnerability CVE-2022-42252\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.83, 9.0.68, 10.0.27, 10.1.1\nLink: [CVE-2022-42252](https://avd.aquasec.com/nvd/cve-2022-42252)\nIf Apache Tomcat 8.5.0 to 8.5.82, 9.0.0-M1 to 9.0.67, 10.0.0-M1 to 10.0.26 or 10.1.0-M1 to 10.1.0 was configured to ignore invalid HTTP headers via setting rejectIllegalHeader to false (the default for 8.5.x only), Tomcat did not reject a request containing an invalid Content-Length header making a request smuggling attack possible if Tomcat was located behind a reverse proxy that also failed to reject the request with the invalid header.",
+                "markdown": "**Vulnerability CVE-2022-42252**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|8.5.83, 9.0.68, 10.0.27, 10.1.1|[CVE-2022-42252](https://avd.aquasec.com/nvd/cve-2022-42252)|\n\nIf Apache Tomcat 8.5.0 to 8.5.82, 9.0.0-M1 to 9.0.67, 10.0.0-M1 to 10.0.26 or 10.1.0-M1 to 10.1.0 was configured to ignore invalid HTTP headers via setting rejectIllegalHeader to false (the default for 8.5.x only), Tomcat did not reject a request containing an invalid Content-Length header making a request smuggling attack possible if Tomcat was located behind a reverse proxy that also failed to reject the request with the invalid header."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-45143",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "JsonErrorReportValve injection"
+              },
+              "fullDescription": {
+                "text": "The JsonErrorReportValve in Apache Tomcat 8.5.83, 9.0.40 to 9.0.68 and 10.1.0-M1 to 10.1.1 did not escape the type, message or description values. In some circumstances these are constructed from user provided data and it was therefore possible for users to supply values that invalidated or manipulated the JSON output."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-45143",
+              "help": {
+                "text": "Vulnerability CVE-2022-45143\nSeverity: HIGH\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 9.0.69\nLink: [CVE-2022-45143](https://avd.aquasec.com/nvd/cve-2022-45143)\nThe JsonErrorReportValve in Apache Tomcat 8.5.83, 9.0.40 to 9.0.68 and 10.1.0-M1 to 10.1.1 did not escape the type, message or description values. In some circumstances these are constructed from user provided data and it was therefore possible for users to supply values that invalidated or manipulated the JSON output.",
+                "markdown": "**Vulnerability CVE-2022-45143**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.apache.tomcat.embed:tomcat-embed-core|9.0.69|[CVE-2022-45143](https://avd.aquasec.com/nvd/cve-2022-45143)|\n\nThe JsonErrorReportValve in Apache Tomcat 8.5.83, 9.0.40 to 9.0.68 and 10.1.0-M1 to 10.1.1 did not escape the type, message or description values. In some circumstances these are constructed from user provided data and it was therefore possible for users to supply values that invalidated or manipulated the JSON output."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-30640",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: JNDI realm authentication weakness"
+              },
+              "fullDescription": {
+                "text": "A vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to authenticate using variations of a valid user name and/or to bypass some of the protection provided by the LockOut Realm. This issue affects Apache Tomcat 10.0.0-M1 to 10.0.5; 9.0.0.M1 to 9.0.45; 8.5.0 to 8.5.65."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-30640",
+              "help": {
+                "text": "Vulnerability CVE-2021-30640\nSeverity: MEDIUM\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 7.0.109, 8.5.66, 9.0.46, 10.0.6\nLink: [CVE-2021-30640](https://avd.aquasec.com/nvd/cve-2021-30640)\nA vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to authenticate using variations of a valid user name and/or to bypass some of the protection provided by the LockOut Realm. This issue affects Apache Tomcat 10.0.0-M1 to 10.0.5; 9.0.0.M1 to 9.0.45; 8.5.0 to 8.5.65.",
+                "markdown": "**Vulnerability CVE-2021-30640**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.apache.tomcat.embed:tomcat-embed-core|7.0.109, 8.5.66, 9.0.46, 10.0.6|[CVE-2021-30640](https://avd.aquasec.com/nvd/cve-2021-30640)|\n\nA vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to authenticate using variations of a valid user name and/or to bypass some of the protection provided by the LockOut Realm. This issue affects Apache Tomcat 10.0.0-M1 to 10.0.5; 9.0.0.M1 to 9.0.45; 8.5.0 to 8.5.65."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-33037",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "tomcat: HTTP request smuggling when used with a reverse proxy"
+              },
+              "fullDescription": {
+                "text": "Apache Tomcat 10.0.0-M1 to 10.0.6, 9.0.0.M1 to 9.0.46 and 8.5.0 to 8.5.66 did not correctly parse the HTTP transfer-encoding request header in some circumstances leading to the possibility to request smuggling when used with a reverse proxy. Specifically: - Tomcat incorrectly ignored the transfer encoding header if the client declared it would only accept an HTTP/1.0 response; - Tomcat honoured the identify encoding; and - Tomcat did not ensure that, if present, the chunked encoding was the final encoding."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-33037",
+              "help": {
+                "text": "Vulnerability CVE-2021-33037\nSeverity: MEDIUM\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 10.0.6, 9.0.46, 8.5.66\nLink: [CVE-2021-33037](https://avd.aquasec.com/nvd/cve-2021-33037)\nApache Tomcat 10.0.0-M1 to 10.0.6, 9.0.0.M1 to 9.0.46 and 8.5.0 to 8.5.66 did not correctly parse the HTTP transfer-encoding request header in some circumstances leading to the possibility to request smuggling when used with a reverse proxy. Specifically: - Tomcat incorrectly ignored the transfer encoding header if the client declared it would only accept an HTTP/1.0 response; - Tomcat honoured the identify encoding; and - Tomcat did not ensure that, if present, the chunked encoding was the final encoding.",
+                "markdown": "**Vulnerability CVE-2021-33037**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.apache.tomcat.embed:tomcat-embed-core|10.0.6, 9.0.46, 8.5.66|[CVE-2021-33037](https://avd.aquasec.com/nvd/cve-2021-33037)|\n\nApache Tomcat 10.0.0-M1 to 10.0.6, 9.0.0.M1 to 9.0.46 and 8.5.0 to 8.5.66 did not correctly parse the HTTP transfer-encoding request header in some circumstances leading to the possibility to request smuggling when used with a reverse proxy. Specifically: - Tomcat incorrectly ignored the transfer encoding header if the client declared it would only accept an HTTP/1.0 response; - Tomcat honoured the identify encoding; and - Tomcat did not ensure that, if present, the chunked encoding was the final encoding."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-34305",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "XSS in examples web application"
+              },
+              "fullDescription": {
+                "text": "In Apache Tomcat 10.1.0-M1 to 10.1.0-M16, 10.0.0-M1 to 10.0.22, 9.0.30 to 9.0.64 and 8.5.50 to 8.5.81 the Form authentication example in the examples web application displayed user provided data without filtering, exposing a XSS vulnerability."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-34305",
+              "help": {
+                "text": "Vulnerability CVE-2022-34305\nSeverity: MEDIUM\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 8.5.82, 9.0.65, 10.0.23\nLink: [CVE-2022-34305](https://avd.aquasec.com/nvd/cve-2022-34305)\nIn Apache Tomcat 10.1.0-M1 to 10.1.0-M16, 10.0.0-M1 to 10.0.22, 9.0.30 to 9.0.64 and 8.5.50 to 8.5.81 the Form authentication example in the examples web application displayed user provided data without filtering, exposing a XSS vulnerability.",
+                "markdown": "**Vulnerability CVE-2022-34305**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.apache.tomcat.embed:tomcat-embed-core|8.5.82, 9.0.65, 10.0.23|[CVE-2022-34305](https://avd.aquasec.com/nvd/cve-2022-34305)|\n\nIn Apache Tomcat 10.1.0-M1 to 10.1.0-M16, 10.0.0-M1 to 10.0.22, 9.0.30 to 9.0.64 and 8.5.50 to 8.5.81 the Form authentication example in the examples web application displayed user provided data without filtering, exposing a XSS vulnerability."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-28708",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "not including the secure attribute causes information disclosure"
+              },
+              "fullDescription": {
+                "text": "When using the RemoteIpFilter with requests received from a reverse proxy via HTTP that include the X-Forwarded-Proto header set to https, session cookies created by Apache Tomcat 11.0.0-M1 to 11.0.0.-M2, 10.1.0-M1 to 10.1.5, 9.0.0-M1 to 9.0.71 and 8.5.0 to 8.5.85 did not include the secure attribute. This could result in the user agent transmitting the session cookie over an insecure channel."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-28708",
+              "help": {
+                "text": "Vulnerability CVE-2023-28708\nSeverity: MEDIUM\nPackage: org.apache.tomcat.embed:tomcat-embed-core\nFixed Version: 10.1.6, 11.0.0, 8.5.86, 9.0.72\nLink: [CVE-2023-28708](https://avd.aquasec.com/nvd/cve-2023-28708)\nWhen using the RemoteIpFilter with requests received from a reverse proxy via HTTP that include the X-Forwarded-Proto header set to https, session cookies created by Apache Tomcat 11.0.0-M1 to 11.0.0.-M2, 10.1.0-M1 to 10.1.5, 9.0.0-M1 to 9.0.71 and 8.5.0 to 8.5.85 did not include the secure attribute. This could result in the user agent transmitting the session cookie over an insecure channel.",
+                "markdown": "**Vulnerability CVE-2023-28708**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.apache.tomcat.embed:tomcat-embed-core|10.1.6, 11.0.0, 8.5.86, 9.0.72|[CVE-2023-28708](https://avd.aquasec.com/nvd/cve-2023-28708)|\n\nWhen using the RemoteIpFilter with requests received from a reverse proxy via HTTP that include the X-Forwarded-Proto header set to https, session cookies created by Apache Tomcat 11.0.0-M1 to 11.0.0.-M2, 10.1.0-M1 to 10.1.5, 9.0.0-M1 to 9.0.71 and 8.5.0 to 8.5.85 did not include the secure attribute. This could result in the user agent transmitting the session cookie over an insecure channel."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "4.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-41080",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Open Redirect vulnerability in FORM authentication"
+              },
+              "fullDescription": {
+                "text": "URL Redirection to Untrusted Site (\u0026#39;Open Redirect\u0026#39;) vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\n\nThe vulnerability is limited to the ROOT (default) web application."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-41080",
+              "help": {
+                "text": "Vulnerability CVE-2023-41080\nSeverity: MEDIUM\nPackage: org.apache.tomcat.embed:tomcat-embed-websocket\nFixed Version: 8.5.93, 9.0.80, 10.1.13\nLink: [CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)\nURL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\n\nThe vulnerability is limited to the ROOT (default) web application.",
+                "markdown": "**Vulnerability CVE-2023-41080**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.apache.tomcat.embed:tomcat-embed-websocket|8.5.93, 9.0.80, 10.1.13|[CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)|\n\nURL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\n\nThe vulnerability is limited to the ROOT (default) web application."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.1",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-43980",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Information disclosure"
+              },
+              "fullDescription": {
+                "text": "The simplified implementation of blocking reads and writes introduced in Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing (but extremely hard to trigger) concurrency bug in Apache Tomcat 10.1.0 to 10.1.0-M12, 10.0.0-M1 to 10.0.18, 9.0.0-M1 to 9.0.60 and 8.5.0 to 8.5.77 that could cause client connections to share an Http11Processor instance resulting in responses, or part responses, to be received by the wrong client."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-43980",
+              "help": {
+                "text": "Vulnerability CVE-2021-43980\nSeverity: LOW\nPackage: org.apache.tomcat.embed:tomcat-embed-websocket\nFixed Version: \nLink: [CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)\nThe simplified implementation of blocking reads and writes introduced in Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing (but extremely hard to trigger) concurrency bug in Apache Tomcat 10.1.0 to 10.1.0-M12, 10.0.0-M1 to 10.0.18, 9.0.0-M1 to 9.0.60 and 8.5.0 to 8.5.77 that could cause client connections to share an Http11Processor instance resulting in responses, or part responses, to be received by the wrong client.",
+                "markdown": "**Vulnerability CVE-2021-43980**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|org.apache.tomcat.embed:tomcat-embed-websocket||[CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)|\n\nThe simplified implementation of blocking reads and writes introduced in Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing (but extremely hard to trigger) concurrency bug in Apache Tomcat 10.1.0 to 10.1.0-M12, 10.0.0-M1 to 10.0.18, 9.0.0-M1 to 9.0.60 and 8.5.0 to 8.5.77 that could cause client connections to share an Http11Processor instance resulting in responses, or part responses, to be received by the wrong client."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "3.7",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-28170",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "jakarta-el: ELParserTokenManager enables invalid EL expressions to be evaluate"
+              },
+              "fullDescription": {
+                "text": "In the Jakarta Expression Language implementation 3.0.3 and earlier, a bug in the ELParserTokenManager enables invalid EL expressions to be evaluated as if they were valid."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-28170",
+              "help": {
+                "text": "Vulnerability CVE-2021-28170\nSeverity: MEDIUM\nPackage: org.glassfish:jakarta.el\nFixed Version: \nLink: [CVE-2021-28170](https://avd.aquasec.com/nvd/cve-2021-28170)\nIn the Jakarta Expression Language implementation 3.0.3 and earlier, a bug in the ELParserTokenManager enables invalid EL expressions to be evaluated as if they were valid.",
+                "markdown": "**Vulnerability CVE-2021-28170**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.glassfish:jakarta.el||[CVE-2021-28170](https://avd.aquasec.com/nvd/cve-2021-28170)|\n\nIn the Jakarta Expression Language implementation 3.0.3 and earlier, a bug in the ELParserTokenManager enables invalid EL expressions to be evaluated as if they were valid."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-20873",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Security Bypass With Wildcard Pattern Matching on Cloud Foundry"
+              },
+              "fullDescription": {
+                "text": "In Spring Boot versions 3.0.0 - 3.0.5, 2.7.0 - 2.7.10, and older unsupported versions, an application that is deployed to Cloud Foundry could be susceptible to a security bypass. Users of affected versions should apply the following mitigation: 3.0.x users should upgrade to 3.0.6+. 2.7.x users should upgrade to 2.7.11+. Users of older, unsupported versions should upgrade to 3.0.6+ or 2.7.11+."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-20873",
+              "help": {
+                "text": "Vulnerability CVE-2023-20873\nSeverity: CRITICAL\nPackage: org.springframework.boot:spring-boot-actuator-autoconfigure\nFixed Version: 2.7.11, 3.0.6\nLink: [CVE-2023-20873](https://avd.aquasec.com/nvd/cve-2023-20873)\nIn Spring Boot versions 3.0.0 - 3.0.5, 2.7.0 - 2.7.10, and older unsupported versions, an application that is deployed to Cloud Foundry could be susceptible to a security bypass. Users of affected versions should apply the following mitigation: 3.0.x users should upgrade to 3.0.6+. 2.7.x users should upgrade to 2.7.11+. Users of older, unsupported versions should upgrade to 3.0.6+ or 2.7.11+.",
+                "markdown": "**Vulnerability CVE-2023-20873**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|org.springframework.boot:spring-boot-actuator-autoconfigure|2.7.11, 3.0.6|[CVE-2023-20873](https://avd.aquasec.com/nvd/cve-2023-20873)|\n\nIn Spring Boot versions 3.0.0 - 3.0.5, 2.7.0 - 2.7.10, and older unsupported versions, an application that is deployed to Cloud Foundry could be susceptible to a security bypass. Users of affected versions should apply the following mitigation: 3.0.x users should upgrade to 3.0.6+. 2.7.x users should upgrade to 2.7.11+. Users of older, unsupported versions should upgrade to 3.0.6+ or 2.7.11+."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-20883",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Spring Boot Welcome Page DoS Vulnerability"
+              },
+              "fullDescription": {
+                "text": "In Spring Boot versions 3.0.0 - 3.0.6, 2.7.0 - 2.7.11, 2.6.0 - 2.6.14, 2.5.0 - 2.5.14 and older unsupported versions, there is potential for a denial-of-service (DoS) attack if Spring MVC is used together with a reverse proxy cache."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-20883",
+              "help": {
+                "text": "Vulnerability CVE-2023-20883\nSeverity: HIGH\nPackage: org.springframework.boot:spring-boot-autoconfigure\nFixed Version: 2.7.12, 3.0.7, 2.5.15, 2.6.15\nLink: [CVE-2023-20883](https://avd.aquasec.com/nvd/cve-2023-20883)\nIn Spring Boot versions 3.0.0 - 3.0.6, 2.7.0 - 2.7.11, 2.6.0 - 2.6.14, 2.5.0 - 2.5.14 and older unsupported versions, there is potential for a denial-of-service (DoS) attack if Spring MVC is used together with a reverse proxy cache.",
+                "markdown": "**Vulnerability CVE-2023-20883**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.springframework.boot:spring-boot-autoconfigure|2.7.12, 3.0.7, 2.5.15, 2.6.15|[CVE-2023-20883](https://avd.aquasec.com/nvd/cve-2023-20883)|\n\nIn Spring Boot versions 3.0.0 - 3.0.6, 2.7.0 - 2.7.11, 2.6.0 - 2.6.14, 2.5.0 - 2.5.14 and older unsupported versions, there is potential for a denial-of-service (DoS) attack if Spring MVC is used together with a reverse proxy cache."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-22965",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "RCE via Data Binding on JDK 9+"
+              },
+              "fullDescription": {
+                "text": "A Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-22965",
+              "help": {
+                "text": "Vulnerability CVE-2022-22965\nSeverity: CRITICAL\nPackage: org.springframework:spring-webmvc\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)\nA Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.",
+                "markdown": "**Vulnerability CVE-2022-22965**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|org.springframework:spring-webmvc|5.2.20, 5.3.18|[CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)|\n\nA Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-22118",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "(re)creating the temporary storage directory could result in  a privilege escalation within WebFlux application"
+              },
+              "fullDescription": {
+                "text": "In Spring Framework, versions 5.2.x prior to 5.2.15 and versions 5.3.x prior to 5.3.7, a WebFlux application is vulnerable to a privilege escalation: by (re)creating the temporary storage directory, a locally authenticated malicious user can read or modify files that have been uploaded to the WebFlux application, or overwrite arbitrary files with multipart request data."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-22118",
+              "help": {
+                "text": "Vulnerability CVE-2021-22118\nSeverity: HIGH\nPackage: org.springframework:spring-web\nFixed Version: 5.2.15, 5.3.7\nLink: [CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)\nIn Spring Framework, versions 5.2.x prior to 5.2.15 and versions 5.3.x prior to 5.3.7, a WebFlux application is vulnerable to a privilege escalation: by (re)creating the temporary storage directory, a locally authenticated malicious user can read or modify files that have been uploaded to the WebFlux application, or overwrite arbitrary files with multipart request data.",
+                "markdown": "**Vulnerability CVE-2021-22118**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.springframework:spring-web|5.2.15, 5.3.7|[CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)|\n\nIn Spring Framework, versions 5.2.x prior to 5.2.15 and versions 5.3.x prior to 5.3.7, a WebFlux application is vulnerable to a privilege escalation: by (re)creating the temporary storage directory, a locally authenticated malicious user can read or modify files that have been uploaded to the WebFlux application, or overwrite arbitrary files with multipart request data."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-22060",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "springframework: Additional Log Injection in Spring Framework (follow-up to CVE-2021-22096)"
+              },
+              "fullDescription": {
+                "text": "In Spring Framework versions 5.3.0 - 5.3.13, 5.2.0 - 5.2.18, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries. This is a follow-up to CVE-2021-22096 that protects against additional types of input and in more places of the Spring Framework codebase."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-22060",
+              "help": {
+                "text": "Vulnerability CVE-2021-22060\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.3.14, 5.3.14\nLink: [CVE-2021-22060](https://avd.aquasec.com/nvd/cve-2021-22060)\nIn Spring Framework versions 5.3.0 - 5.3.13, 5.2.0 - 5.2.18, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries. This is a follow-up to CVE-2021-22096 that protects against additional types of input and in more places of the Spring Framework codebase.",
+                "markdown": "**Vulnerability CVE-2021-22060**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.3.14, 5.3.14|[CVE-2021-22060](https://avd.aquasec.com/nvd/cve-2021-22060)|\n\nIn Spring Framework versions 5.3.0 - 5.3.13, 5.2.0 - 5.2.18, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries. This is a follow-up to CVE-2021-22096 that protects against additional types of input and in more places of the Spring Framework codebase."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "4.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2021-22096",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "springframework: malicious input leads to insertion of additional log entries"
+              },
+              "fullDescription": {
+                "text": "In Spring Framework versions 5.3.0 - 5.3.10, 5.2.0 - 5.2.17, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2021-22096",
+              "help": {
+                "text": "Vulnerability CVE-2021-22096\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.2.18, 5.3.11\nLink: [CVE-2021-22096](https://avd.aquasec.com/nvd/cve-2021-22096)\nIn Spring Framework versions 5.3.0 - 5.3.10, 5.2.0 - 5.2.17, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries.",
+                "markdown": "**Vulnerability CVE-2021-22096**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.2.18, 5.3.11|[CVE-2021-22096](https://avd.aquasec.com/nvd/cve-2021-22096)|\n\nIn Spring Framework versions 5.3.0 - 5.3.10, 5.2.0 - 5.2.17, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "4.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-22950",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "spring-expression: Denial of service via specially crafted SpEL expression"
+              },
+              "fullDescription": {
+                "text": "n Spring Framework versions 5.3.0 - 5.3.16 and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial of service condition."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-22950",
+              "help": {
+                "text": "Vulnerability CVE-2022-22950\nSeverity: MEDIUM\nPackage: org.springframework:spring-webmvc\nFixed Version: 5.2.20.RELEASE, 5.3.17\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)\nn Spring Framework versions 5.3.0 - 5.3.16 and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial of service condition.",
+                "markdown": "**Vulnerability CVE-2022-22950**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-webmvc|5.2.20.RELEASE, 5.3.17|[CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)|\n\nn Spring Framework versions 5.3.0 - 5.3.16 and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial of service condition."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-22968",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Data Binding Rules Vulnerability"
+              },
+              "fullDescription": {
+                "text": "In Spring Framework versions 5.3.0 - 5.3.18, 5.2.0 - 5.2.20, and older unsupported versions, the patterns for disallowedFields on a DataBinder are case sensitive which means a field is not effectively protected unless it is listed with both upper and lower case for the first character of the field, including upper and lower case for the first character of all nested fields within the property path."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-22968",
+              "help": {
+                "text": "Vulnerability CVE-2022-22968\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.2.21, 5.3.19\nLink: [CVE-2022-22968](https://avd.aquasec.com/nvd/cve-2022-22968)\nIn Spring Framework versions 5.3.0 - 5.3.18, 5.2.0 - 5.2.20, and older unsupported versions, the patterns for disallowedFields on a DataBinder are case sensitive which means a field is not effectively protected unless it is listed with both upper and lower case for the first character of the field, including upper and lower case for the first character of all nested fields within the property path.",
+                "markdown": "**Vulnerability CVE-2022-22968**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.2.21, 5.3.19|[CVE-2022-22968](https://avd.aquasec.com/nvd/cve-2022-22968)|\n\nIn Spring Framework versions 5.3.0 - 5.3.18, 5.2.0 - 5.2.20, and older unsupported versions, the patterns for disallowedFields on a DataBinder are case sensitive which means a field is not effectively protected unless it is listed with both upper and lower case for the first character of the field, including upper and lower case for the first character of all nested fields within the property path."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-22970",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "DoS via data binding to multipartFile or servlet part"
+              },
+              "fullDescription": {
+                "text": "In spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, applications that handle file uploads are vulnerable to DoS attack if they rely on data binding to set a MultipartFile or javax.servlet.Part to a field in a model object."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-22970",
+              "help": {
+                "text": "Vulnerability CVE-2022-22970\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22970](https://avd.aquasec.com/nvd/cve-2022-22970)\nIn spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, applications that handle file uploads are vulnerable to DoS attack if they rely on data binding to set a MultipartFile or javax.servlet.Part to a field in a model object.",
+                "markdown": "**Vulnerability CVE-2022-22970**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.2.22.RELEASE, 5.3.20|[CVE-2022-22970](https://avd.aquasec.com/nvd/cve-2022-22970)|\n\nIn spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, applications that handle file uploads are vulnerable to DoS attack if they rely on data binding to set a MultipartFile or javax.servlet.Part to a field in a model object."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.3",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-22971",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "DoS with STOMP over WebSocket"
+              },
+              "fullDescription": {
+                "text": "In spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, application with a STOMP over WebSocket endpoint is vulnerable to a denial of service attack by an authenticated user."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-22971",
+              "help": {
+                "text": "Vulnerability CVE-2022-22971\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22971](https://avd.aquasec.com/nvd/cve-2022-22971)\nIn spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, application with a STOMP over WebSocket endpoint is vulnerable to a denial of service attack by an authenticated user.",
+                "markdown": "**Vulnerability CVE-2022-22971**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.2.22.RELEASE, 5.3.20|[CVE-2022-22971](https://avd.aquasec.com/nvd/cve-2022-22971)|\n\nIn spring framework versions prior to 5.3.20+ , 5.2.22+ and old unsupported versions, application with a STOMP over WebSocket endpoint is vulnerable to a denial of service attack by an authenticated user."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-20861",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Spring Expression DoS Vulnerability"
+              },
+              "fullDescription": {
+                "text": "In Spring Framework versions 6.0.0 - 6.0.6, 5.3.0 - 5.3.25, 5.2.0.RELEASE - 5.2.22.RELEASE, and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-20861",
+              "help": {
+                "text": "Vulnerability CVE-2023-20861\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.3.26, 6.0.7, 5.2.23.RELEASE\nLink: [CVE-2023-20861](https://avd.aquasec.com/nvd/cve-2023-20861)\nIn Spring Framework versions 6.0.0 - 6.0.6, 5.3.0 - 5.3.25, 5.2.0.RELEASE - 5.2.22.RELEASE, and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition.",
+                "markdown": "**Vulnerability CVE-2023-20861**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.3.26, 6.0.7, 5.2.23.RELEASE|[CVE-2023-20861](https://avd.aquasec.com/nvd/cve-2023-20861)|\n\nIn Spring Framework versions 6.0.0 - 6.0.6, 5.3.0 - 5.3.25, 5.2.0.RELEASE - 5.2.22.RELEASE, and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-20863",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Spring Expression DoS Vulnerability"
+              },
+              "fullDescription": {
+                "text": "In spring framework versions prior to 5.2.24 release+ ,5.3.27+ and 6.0.8+ , it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-20863",
+              "help": {
+                "text": "Vulnerability CVE-2023-20863\nSeverity: MEDIUM\nPackage: org.springframework:spring-core\nFixed Version: 5.3.27, 6.0.8, 5.2.24.RELEASE\nLink: [CVE-2023-20863](https://avd.aquasec.com/nvd/cve-2023-20863)\nIn spring framework versions prior to 5.2.24 release+ ,5.3.27+ and 6.0.8+ , it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition.",
+                "markdown": "**Vulnerability CVE-2023-20863**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.springframework:spring-core|5.3.27, 6.0.8, 5.2.24.RELEASE|[CVE-2023-20863](https://avd.aquasec.com/nvd/cve-2023-20863)|\n\nIn spring framework versions prior to 5.2.24 release+ ,5.3.27+ and 6.0.8+ , it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2016-1000027",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "spring: HttpInvokerServiceExporter readRemoteInvocation method untrusted java deserialization"
+              },
+              "fullDescription": {
+                "text": "Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor\u0026#39;s position is that untrusted data is not an intended use case. The product\u0026#39;s behavior will not be changed because some users rely on deserialization of trusted data."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2016-1000027",
+              "help": {
+                "text": "Vulnerability CVE-2016-1000027\nSeverity: CRITICAL\nPackage: org.springframework:spring-web\nFixed Version: 6.0.0\nLink: [CVE-2016-1000027](https://avd.aquasec.com/nvd/cve-2016-1000027)\nPivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data.",
+                "markdown": "**Vulnerability CVE-2016-1000027**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|org.springframework:spring-web|6.0.0|[CVE-2016-1000027](https://avd.aquasec.com/nvd/cve-2016-1000027)|\n\nPivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-20860",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Security Bypass With Un-Prefixed Double Wildcard Pattern"
+              },
+              "fullDescription": {
+                "text": "Spring Framework running version 6.0.0 - 6.0.6 or 5.3.0 - 5.3.25 using \u0026#34;**\u0026#34; as a pattern in Spring Security configuration with the mvcRequestMatcher creates a mismatch in pattern matching between Spring Security and Spring MVC, and the potential for a security bypass."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-20860",
+              "help": {
+                "text": "Vulnerability CVE-2023-20860\nSeverity: HIGH\nPackage: org.springframework:spring-webmvc\nFixed Version: 5.3.26, 6.0.7\nLink: [CVE-2023-20860](https://avd.aquasec.com/nvd/cve-2023-20860)\nSpring Framework running version 6.0.0 - 6.0.6 or 5.3.0 - 5.3.25 using \"**\" as a pattern in Spring Security configuration with the mvcRequestMatcher creates a mismatch in pattern matching between Spring Security and Spring MVC, and the potential for a security bypass.",
+                "markdown": "**Vulnerability CVE-2023-20860**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.springframework:spring-webmvc|5.3.26, 6.0.7|[CVE-2023-20860](https://avd.aquasec.com/nvd/cve-2023-20860)|\n\nSpring Framework running version 6.0.0 - 6.0.6 or 5.3.0 - 5.3.25 using \"**\" as a pattern in Spring Security configuration with the mvcRequestMatcher creates a mismatch in pattern matching between Spring Security and Spring MVC, and the potential for a security bypass."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-38286",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Thymeleaf, as used in Spring Boot Admin, allows sandbox bypass via crafted HTML"
+              },
+              "fullDescription": {
+                "text": "Thymeleaf through 3.1.1.RELEASE, as used in spring-boot-admin (aka Spring Boot Admin) through 3.1.1 and other products, allows sandbox bypass via crafted HTML. This may be relevant for SSTI (Server Side Template Injection) and code execution in spring-boot-admin if MailNotifier is enabled and there is write access to environment variables via the UI."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-38286",
+              "help": {
+                "text": "Vulnerability CVE-2023-38286\nSeverity: HIGH\nPackage: org.thymeleaf:thymeleaf-spring5\nFixed Version: 3.1.2.RELEASE\nLink: [CVE-2023-38286](https://avd.aquasec.com/nvd/cve-2023-38286)\nThymeleaf through 3.1.1.RELEASE, as used in spring-boot-admin (aka Spring Boot Admin) through 3.1.1 and other products, allows sandbox bypass via crafted HTML. This may be relevant for SSTI (Server Side Template Injection) and code execution in spring-boot-admin if MailNotifier is enabled and there is write access to environment variables via the UI.",
+                "markdown": "**Vulnerability CVE-2023-38286**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.thymeleaf:thymeleaf-spring5|3.1.2.RELEASE|[CVE-2023-38286](https://avd.aquasec.com/nvd/cve-2023-38286)|\n\nThymeleaf through 3.1.1.RELEASE, as used in spring-boot-admin (aka Spring Boot Admin) through 3.1.1 and other products, allows sandbox bypass via crafted HTML. This may be relevant for SSTI (Server Side Template Injection) and code execution in spring-boot-admin if MailNotifier is enabled and there is write access to environment variables via the UI."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-1471",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Constructor Deserialization Remote Code Execution"
+              },
+              "fullDescription": {
+                "text": "SnakeYaml\u0026#39;s Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml\u0026#39;s SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.\n"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-1471",
+              "help": {
+                "text": "Vulnerability CVE-2022-1471\nSeverity: CRITICAL\nPackage: org.yaml:snakeyaml\nFixed Version: 2.0\nLink: [CVE-2022-1471](https://avd.aquasec.com/nvd/cve-2022-1471)\nSnakeYaml's Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml's SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.\n",
+                "markdown": "**Vulnerability CVE-2022-1471**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|CRITICAL|org.yaml:snakeyaml|2.0|[CVE-2022-1471](https://avd.aquasec.com/nvd/cve-2022-1471)|\n\nSnakeYaml's Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml's SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "9.8",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "CRITICAL"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-25857",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Denial of Service due to missing nested depth limitation for collections"
+              },
+              "fullDescription": {
+                "text": "The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-25857",
+              "help": {
+                "text": "Vulnerability CVE-2022-25857\nSeverity: HIGH\nPackage: org.yaml:snakeyaml\nFixed Version: 1.31\nLink: [CVE-2022-25857](https://avd.aquasec.com/nvd/cve-2022-25857)\nThe package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.",
+                "markdown": "**Vulnerability CVE-2022-25857**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|HIGH|org.yaml:snakeyaml|1.31|[CVE-2022-25857](https://avd.aquasec.com/nvd/cve-2022-25857)|\n\nThe package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "7.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "HIGH"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-38749",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncaught exception in org.yaml.snakeyaml.composer.Composer.composeSequenceNode"
+              },
+              "fullDescription": {
+                "text": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-38749",
+              "help": {
+                "text": "Vulnerability CVE-2022-38749\nSeverity: MEDIUM\nPackage: org.yaml:snakeyaml\nFixed Version: 1.31\nLink: [CVE-2022-38749](https://avd.aquasec.com/nvd/cve-2022-38749)\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+                "markdown": "**Vulnerability CVE-2022-38749**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.yaml:snakeyaml|1.31|[CVE-2022-38749](https://avd.aquasec.com/nvd/cve-2022-38749)|\n\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-38750",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncaught exception in org.yaml.snakeyaml.constructor.BaseConstructor.constructObject"
+              },
+              "fullDescription": {
+                "text": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-38750",
+              "help": {
+                "text": "Vulnerability CVE-2022-38750\nSeverity: MEDIUM\nPackage: org.yaml:snakeyaml\nFixed Version: 1.31\nLink: [CVE-2022-38750](https://avd.aquasec.com/nvd/cve-2022-38750)\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+                "markdown": "**Vulnerability CVE-2022-38750**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.yaml:snakeyaml|1.31|[CVE-2022-38750](https://avd.aquasec.com/nvd/cve-2022-38750)|\n\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-38751",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncaught exception in java.base/java.util.regex.Pattern$Ques.match"
+              },
+              "fullDescription": {
+                "text": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-38751",
+              "help": {
+                "text": "Vulnerability CVE-2022-38751\nSeverity: MEDIUM\nPackage: org.yaml:snakeyaml\nFixed Version: 1.31\nLink: [CVE-2022-38751](https://avd.aquasec.com/nvd/cve-2022-38751)\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+                "markdown": "**Vulnerability CVE-2022-38751**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.yaml:snakeyaml|1.31|[CVE-2022-38751](https://avd.aquasec.com/nvd/cve-2022-38751)|\n\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-38752",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "Uncaught exception in java.base/java.util.ArrayList.hashCode"
+              },
+              "fullDescription": {
+                "text": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-38752",
+              "help": {
+                "text": "Vulnerability CVE-2022-38752\nSeverity: MEDIUM\nPackage: org.yaml:snakeyaml\nFixed Version: 1.32\nLink: [CVE-2022-38752](https://avd.aquasec.com/nvd/cve-2022-38752)\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow.",
+                "markdown": "**Vulnerability CVE-2022-38752**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.yaml:snakeyaml|1.32|[CVE-2022-38752](https://avd.aquasec.com/nvd/cve-2022-38752)|\n\nUsing snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2022-41854",
+              "name": "LanguageSpecificPackageVulnerability",
+              "shortDescription": {
+                "text": "DoS via stack overflow"
+              },
+              "fullDescription": {
+                "text": "Those using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2022-41854",
+              "help": {
+                "text": "Vulnerability CVE-2022-41854\nSeverity: MEDIUM\nPackage: org.yaml:snakeyaml\nFixed Version: 1.32\nLink: [CVE-2022-41854](https://avd.aquasec.com/nvd/cve-2022-41854)\nThose using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack.",
+                "markdown": "**Vulnerability CVE-2022-41854**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|org.yaml:snakeyaml|1.32|[CVE-2022-41854](https://avd.aquasec.com/nvd/cve-2022-41854)|\n\nThose using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "6.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            }
+          ],
+          "version": "0.46.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2021-42550",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.2.3\nVulnerability CVE-2021-42550\nSeverity: MEDIUM\nFixed Version: 1.2.8\nLink: [CVE-2021-42550](https://avd.aquasec.com/nvd/cve-2021-42550)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: ch.qos.logback:logback-core@1.2.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-36518",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2020-36518\nSeverity: HIGH\nFixed Version: 2.12.6.1, 2.13.2.1\nLink: [CVE-2020-36518](https://avd.aquasec.com/nvd/cve-2020-36518)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-46877",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2021-46877\nSeverity: HIGH\nFixed Version: 2.12.6, 2.13.1\nLink: [CVE-2021-46877](https://avd.aquasec.com/nvd/cve-2021-46877)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42003",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2022-42003\nSeverity: HIGH\nFixed Version: 2.12.7.1, 2.13.4.1\nLink: [CVE-2022-42003](https://avd.aquasec.com/nvd/cve-2022-42003)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42004",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2022-42004\nSeverity: HIGH\nFixed Version: 2.12.7.1, 2.13.4\nLink: [CVE-2022-42004](https://avd.aquasec.com/nvd/cve-2022-42004)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-25122",
+          "ruleIndex": 5,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-25122\nSeverity: HIGH\nFixed Version: 8.5.62, 9.0.42, 10.0.2\nLink: [CVE-2021-25122](https://avd.aquasec.com/nvd/cve-2021-25122)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-30639",
+          "ruleIndex": 6,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-30639\nSeverity: HIGH\nFixed Version: 10.0.5, 9.0.45, 8.5.65\nLink: [CVE-2021-30639](https://avd.aquasec.com/nvd/cve-2021-30639)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-41079",
+          "ruleIndex": 7,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-41079\nSeverity: HIGH\nFixed Version: 8.5.64, 9.0.44, 10.0.4\nLink: [CVE-2021-41079](https://avd.aquasec.com/nvd/cve-2021-41079)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42340",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-42340\nSeverity: HIGH\nFixed Version: 8.5.72, 9.0.54\nLink: [CVE-2021-42340](https://avd.aquasec.com/nvd/cve-2021-42340)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-23181",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2022-23181\nSeverity: HIGH\nFixed Version: \nLink: [CVE-2022-23181](https://avd.aquasec.com/nvd/cve-2022-23181)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-29885",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2022-29885\nSeverity: HIGH\nFixed Version: 8.5.79, 9.0.63, 10.0.21, 10.1.1\nLink: [CVE-2022-29885](https://avd.aquasec.com/nvd/cve-2022-29885)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42252",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2022-42252\nSeverity: HIGH\nFixed Version: 8.5.83, 9.0.68, 10.0.27, 10.1.1\nLink: [CVE-2022-42252](https://avd.aquasec.com/nvd/cve-2022-42252)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-45143",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2022-45143\nSeverity: HIGH\nFixed Version: 9.0.69\nLink: [CVE-2022-45143](https://avd.aquasec.com/nvd/cve-2022-45143)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-30640",
+          "ruleIndex": 13,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-30640\nSeverity: MEDIUM\nFixed Version: 7.0.109, 8.5.66, 9.0.46, 10.0.6\nLink: [CVE-2021-30640](https://avd.aquasec.com/nvd/cve-2021-30640)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-33037",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-33037\nSeverity: MEDIUM\nFixed Version: 10.0.6, 9.0.46, 8.5.66\nLink: [CVE-2021-33037](https://avd.aquasec.com/nvd/cve-2021-33037)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-34305",
+          "ruleIndex": 15,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2022-34305\nSeverity: MEDIUM\nFixed Version: 8.5.82, 9.0.65, 10.0.23\nLink: [CVE-2022-34305](https://avd.aquasec.com/nvd/cve-2022-34305)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-28708",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2023-28708\nSeverity: MEDIUM\nFixed Version: 10.1.6, 11.0.0, 8.5.86, 9.0.72\nLink: [CVE-2023-28708](https://avd.aquasec.com/nvd/cve-2023-28708)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-41080",
+          "ruleIndex": 17,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2023-41080\nSeverity: MEDIUM\nFixed Version: 10.1.13, 11.0.0-M11, 8.5.93, 9.0.80\nLink: [CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-43980",
+          "ruleIndex": 18,
+          "level": "note",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.41\nVulnerability CVE-2021-43980\nSeverity: LOW\nFixed Version: \nLink: [CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-41080",
+          "ruleIndex": 17,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-websocket\nInstalled Version: 9.0.41\nVulnerability CVE-2023-41080\nSeverity: MEDIUM\nFixed Version: 8.5.93, 9.0.80, 10.1.13\nLink: [CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-websocket@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-43980",
+          "ruleIndex": 18,
+          "level": "note",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-websocket\nInstalled Version: 9.0.41\nVulnerability CVE-2021-43980\nSeverity: LOW\nFixed Version: \nLink: [CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.apache.tomcat.embed:tomcat-embed-websocket@9.0.41"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-28170",
+          "ruleIndex": 19,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.glassfish:jakarta.el\nInstalled Version: 3.0.3\nVulnerability CVE-2021-28170\nSeverity: MEDIUM\nFixed Version: \nLink: [CVE-2021-28170](https://avd.aquasec.com/nvd/cve-2021-28170)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.glassfish:jakarta.el@3.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20873",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-actuator-autoconfigure\nInstalled Version: 2.4.2\nVulnerability CVE-2023-20873\nSeverity: CRITICAL\nFixed Version: 2.7.11, 3.0.6\nLink: [CVE-2023-20873](https://avd.aquasec.com/nvd/cve-2023-20873)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework.boot:spring-boot-actuator-autoconfigure@2.4.2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20883",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-autoconfigure\nInstalled Version: 2.4.2\nVulnerability CVE-2023-20883\nSeverity: HIGH\nFixed Version: 2.7.12, 3.0.7, 2.5.15, 2.6.15\nLink: [CVE-2023-20883](https://avd.aquasec.com/nvd/cve-2023-20883)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework.boot:spring-boot-autoconfigure@2.4.2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-starter-web\nInstalled Version: 2.4.2\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 2.5.12, 2.6.6\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework.boot:spring-boot-starter-web@2.4.2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-beans\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-beans@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22118",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2021-22118\nSeverity: HIGH\nFixed Version: 5.2.15, 5.3.7\nLink: [CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22060",
+          "ruleIndex": 24,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2021-22060\nSeverity: MEDIUM\nFixed Version: 5.3.14, 5.3.14\nLink: [CVE-2021-22060](https://avd.aquasec.com/nvd/cve-2021-22060)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22096",
+          "ruleIndex": 25,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2021-22096\nSeverity: MEDIUM\nFixed Version: 5.2.18, 5.3.11\nLink: [CVE-2021-22096](https://avd.aquasec.com/nvd/cve-2021-22096)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20.RELEASE, 5.3.17\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22968",
+          "ruleIndex": 27,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22968\nSeverity: MEDIUM\nFixed Version: 5.2.21, 5.3.19\nLink: [CVE-2022-22968](https://avd.aquasec.com/nvd/cve-2022-22968)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22970",
+          "ruleIndex": 28,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22970\nSeverity: MEDIUM\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22970](https://avd.aquasec.com/nvd/cve-2022-22970)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22971",
+          "ruleIndex": 29,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22971\nSeverity: MEDIUM\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22971](https://avd.aquasec.com/nvd/cve-2022-22971)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20861",
+          "ruleIndex": 30,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2023-20861\nSeverity: MEDIUM\nFixed Version: 5.3.26, 6.0.7, 5.2.23.RELEASE\nLink: [CVE-2023-20861](https://avd.aquasec.com/nvd/cve-2023-20861)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20863",
+          "ruleIndex": 31,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.3\nVulnerability CVE-2023-20863\nSeverity: MEDIUM\nFixed Version: 5.3.27, 6.0.8, 5.2.24.RELEASE\nLink: [CVE-2023-20863](https://avd.aquasec.com/nvd/cve-2023-20863)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-core@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-expression\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20, 5.3.16\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-expression@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2016-1000027",
+          "ruleIndex": 32,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-web\nInstalled Version: 5.3.3\nVulnerability CVE-2016-1000027\nSeverity: CRITICAL\nFixed Version: 6.0.0\nLink: [CVE-2016-1000027](https://avd.aquasec.com/nvd/cve-2016-1000027)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-web@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22118",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-web\nInstalled Version: 5.3.3\nVulnerability CVE-2021-22118\nSeverity: HIGH\nFixed Version: 5.2.15, 5.3.7\nLink: [CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-web@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-webmvc@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20860",
+          "ruleIndex": 33,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.3\nVulnerability CVE-2023-20860\nSeverity: HIGH\nFixed Version: 5.3.26, 6.0.7\nLink: [CVE-2023-20860](https://avd.aquasec.com/nvd/cve-2023-20860)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-webmvc@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.3\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20.RELEASE, 5.3.17\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.springframework:spring-webmvc@5.3.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-38286",
+          "ruleIndex": 34,
+          "level": "error",
+          "message": {
+            "text": "Package: org.thymeleaf:thymeleaf-spring5\nInstalled Version: 3.0.12.RELEASE\nVulnerability CVE-2023-38286\nSeverity: HIGH\nFixed Version: 3.1.2.RELEASE\nLink: [CVE-2023-38286](https://avd.aquasec.com/nvd/cve-2023-38286)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.thymeleaf:thymeleaf-spring5@3.0.12.RELEASE"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-1471",
+          "ruleIndex": 35,
+          "level": "error",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-1471\nSeverity: CRITICAL\nFixed Version: 2.0\nLink: [CVE-2022-1471](https://avd.aquasec.com/nvd/cve-2022-1471)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-25857",
+          "ruleIndex": 36,
+          "level": "error",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-25857\nSeverity: HIGH\nFixed Version: 1.31\nLink: [CVE-2022-25857](https://avd.aquasec.com/nvd/cve-2022-25857)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38749",
+          "ruleIndex": 37,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38749\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38749](https://avd.aquasec.com/nvd/cve-2022-38749)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38750",
+          "ruleIndex": 38,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38750\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38750](https://avd.aquasec.com/nvd/cve-2022-38750)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38751",
+          "ruleIndex": 39,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38751\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38751](https://avd.aquasec.com/nvd/cve-2022-38751)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38752",
+          "ruleIndex": 40,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38752\nSeverity: MEDIUM\nFixed Version: 1.32\nLink: [CVE-2022-38752](https://avd.aquasec.com/nvd/cve-2022-38752)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41854",
+          "ruleIndex": 41,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-41854\nSeverity: MEDIUM\nFixed Version: 1.32\nLink: [CVE-2022-41854](https://avd.aquasec.com/nvd/cve-2022-41854)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "PetClinic/pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "PetClinic/pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42550",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: ch.qos.logback:logback-core\nInstalled Version: 1.2.3\nVulnerability CVE-2021-42550\nSeverity: MEDIUM\nFixed Version: 1.2.8\nLink: [CVE-2021-42550](https://avd.aquasec.com/nvd/cve-2021-42550)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: ch.qos.logback:logback-core@1.2.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2020-36518",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2020-36518\nSeverity: HIGH\nFixed Version: 2.12.6.1, 2.13.2.1\nLink: [CVE-2020-36518](https://avd.aquasec.com/nvd/cve-2020-36518)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-46877",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2021-46877\nSeverity: HIGH\nFixed Version: 2.12.6, 2.13.1\nLink: [CVE-2021-46877](https://avd.aquasec.com/nvd/cve-2021-46877)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42003",
+          "ruleIndex": 3,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2022-42003\nSeverity: HIGH\nFixed Version: 2.12.7.1, 2.13.4.1\nLink: [CVE-2022-42003](https://avd.aquasec.com/nvd/cve-2022-42003)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42004",
+          "ruleIndex": 4,
+          "level": "error",
+          "message": {
+            "text": "Package: com.fasterxml.jackson.core:jackson-databind\nInstalled Version: 2.11.4\nVulnerability CVE-2022-42004\nSeverity: HIGH\nFixed Version: 2.12.7.1, 2.13.4\nLink: [CVE-2022-42004](https://avd.aquasec.com/nvd/cve-2022-42004)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: com.fasterxml.jackson.core:jackson-databind@2.11.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-42340",
+          "ruleIndex": 8,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2021-42340\nSeverity: HIGH\nFixed Version: 8.5.72, 9.0.54\nLink: [CVE-2021-42340](https://avd.aquasec.com/nvd/cve-2021-42340)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-23181",
+          "ruleIndex": 9,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2022-23181\nSeverity: HIGH\nFixed Version: \nLink: [CVE-2022-23181](https://avd.aquasec.com/nvd/cve-2022-23181)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-29885",
+          "ruleIndex": 10,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2022-29885\nSeverity: HIGH\nFixed Version: 8.5.79, 9.0.63, 10.0.21, 10.1.1\nLink: [CVE-2022-29885](https://avd.aquasec.com/nvd/cve-2022-29885)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-42252",
+          "ruleIndex": 11,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2022-42252\nSeverity: HIGH\nFixed Version: 8.5.83, 9.0.68, 10.0.27, 10.1.1\nLink: [CVE-2022-42252](https://avd.aquasec.com/nvd/cve-2022-42252)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-45143",
+          "ruleIndex": 12,
+          "level": "error",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2022-45143\nSeverity: HIGH\nFixed Version: 9.0.69\nLink: [CVE-2022-45143](https://avd.aquasec.com/nvd/cve-2022-45143)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-30640",
+          "ruleIndex": 13,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2021-30640\nSeverity: MEDIUM\nFixed Version: 7.0.109, 8.5.66, 9.0.46, 10.0.6\nLink: [CVE-2021-30640](https://avd.aquasec.com/nvd/cve-2021-30640)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-33037",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2021-33037\nSeverity: MEDIUM\nFixed Version: 10.0.6, 9.0.46, 8.5.66\nLink: [CVE-2021-33037](https://avd.aquasec.com/nvd/cve-2021-33037)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-34305",
+          "ruleIndex": 15,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2022-34305\nSeverity: MEDIUM\nFixed Version: 8.5.82, 9.0.65, 10.0.23\nLink: [CVE-2022-34305](https://avd.aquasec.com/nvd/cve-2022-34305)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-28708",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2023-28708\nSeverity: MEDIUM\nFixed Version: 10.1.6, 11.0.0, 8.5.86, 9.0.72\nLink: [CVE-2023-28708](https://avd.aquasec.com/nvd/cve-2023-28708)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-41080",
+          "ruleIndex": 17,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2023-41080\nSeverity: MEDIUM\nFixed Version: 10.1.13, 11.0.0-M11, 8.5.93, 9.0.80\nLink: [CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-43980",
+          "ruleIndex": 18,
+          "level": "note",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-core\nInstalled Version: 9.0.45\nVulnerability CVE-2021-43980\nSeverity: LOW\nFixed Version: \nLink: [CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-core@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-41080",
+          "ruleIndex": 17,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-websocket\nInstalled Version: 9.0.45\nVulnerability CVE-2023-41080\nSeverity: MEDIUM\nFixed Version: 8.5.93, 9.0.80, 10.1.13\nLink: [CVE-2023-41080](https://avd.aquasec.com/nvd/cve-2023-41080)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-websocket@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-43980",
+          "ruleIndex": 18,
+          "level": "note",
+          "message": {
+            "text": "Package: org.apache.tomcat.embed:tomcat-embed-websocket\nInstalled Version: 9.0.45\nVulnerability CVE-2021-43980\nSeverity: LOW\nFixed Version: \nLink: [CVE-2021-43980](https://avd.aquasec.com/nvd/cve-2021-43980)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.apache.tomcat.embed:tomcat-embed-websocket@9.0.45"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-28170",
+          "ruleIndex": 19,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.glassfish:jakarta.el\nInstalled Version: 3.0.3\nVulnerability CVE-2021-28170\nSeverity: MEDIUM\nFixed Version: \nLink: [CVE-2021-28170](https://avd.aquasec.com/nvd/cve-2021-28170)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.glassfish:jakarta.el@3.0.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20873",
+          "ruleIndex": 20,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-actuator-autoconfigure\nInstalled Version: 2.4.5\nVulnerability CVE-2023-20873\nSeverity: CRITICAL\nFixed Version: 2.7.11, 3.0.6\nLink: [CVE-2023-20873](https://avd.aquasec.com/nvd/cve-2023-20873)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework.boot:spring-boot-actuator-autoconfigure@2.4.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20883",
+          "ruleIndex": 21,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-autoconfigure\nInstalled Version: 2.4.5\nVulnerability CVE-2023-20883\nSeverity: HIGH\nFixed Version: 2.7.12, 3.0.7, 2.5.15, 2.6.15\nLink: [CVE-2023-20883](https://avd.aquasec.com/nvd/cve-2023-20883)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework.boot:spring-boot-autoconfigure@2.4.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework.boot:spring-boot-starter-web\nInstalled Version: 2.4.5\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 2.5.12, 2.6.6\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework.boot:spring-boot-starter-web@2.4.5"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-beans\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-beans@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22118",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2021-22118\nSeverity: HIGH\nFixed Version: 5.2.15, 5.3.7\nLink: [CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22060",
+          "ruleIndex": 24,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2021-22060\nSeverity: MEDIUM\nFixed Version: 5.3.14, 5.3.14\nLink: [CVE-2021-22060](https://avd.aquasec.com/nvd/cve-2021-22060)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22096",
+          "ruleIndex": 25,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2021-22096\nSeverity: MEDIUM\nFixed Version: 5.2.18, 5.3.11\nLink: [CVE-2021-22096](https://avd.aquasec.com/nvd/cve-2021-22096)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20.RELEASE, 5.3.17\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22968",
+          "ruleIndex": 27,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22968\nSeverity: MEDIUM\nFixed Version: 5.2.21, 5.3.19\nLink: [CVE-2022-22968](https://avd.aquasec.com/nvd/cve-2022-22968)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22970",
+          "ruleIndex": 28,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22970\nSeverity: MEDIUM\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22970](https://avd.aquasec.com/nvd/cve-2022-22970)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22971",
+          "ruleIndex": 29,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22971\nSeverity: MEDIUM\nFixed Version: 5.2.22.RELEASE, 5.3.20\nLink: [CVE-2022-22971](https://avd.aquasec.com/nvd/cve-2022-22971)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20861",
+          "ruleIndex": 30,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2023-20861\nSeverity: MEDIUM\nFixed Version: 5.3.26, 6.0.7, 5.2.23.RELEASE\nLink: [CVE-2023-20861](https://avd.aquasec.com/nvd/cve-2023-20861)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20863",
+          "ruleIndex": 31,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-core\nInstalled Version: 5.3.6\nVulnerability CVE-2023-20863\nSeverity: MEDIUM\nFixed Version: 5.3.27, 6.0.8, 5.2.24.RELEASE\nLink: [CVE-2023-20863](https://avd.aquasec.com/nvd/cve-2023-20863)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-core@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-expression\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20, 5.3.16\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-expression@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2016-1000027",
+          "ruleIndex": 32,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-web\nInstalled Version: 5.3.6\nVulnerability CVE-2016-1000027\nSeverity: CRITICAL\nFixed Version: 6.0.0\nLink: [CVE-2016-1000027](https://avd.aquasec.com/nvd/cve-2016-1000027)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-web@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2021-22118",
+          "ruleIndex": 23,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-web\nInstalled Version: 5.3.6\nVulnerability CVE-2021-22118\nSeverity: HIGH\nFixed Version: 5.2.15, 5.3.7\nLink: [CVE-2021-22118](https://avd.aquasec.com/nvd/cve-2021-22118)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-web@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22965",
+          "ruleIndex": 22,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22965\nSeverity: CRITICAL\nFixed Version: 5.2.20, 5.3.18\nLink: [CVE-2022-22965](https://avd.aquasec.com/nvd/cve-2022-22965)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-webmvc@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-20860",
+          "ruleIndex": 33,
+          "level": "error",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.6\nVulnerability CVE-2023-20860\nSeverity: HIGH\nFixed Version: 5.3.26, 6.0.7\nLink: [CVE-2023-20860](https://avd.aquasec.com/nvd/cve-2023-20860)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-webmvc@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-22950",
+          "ruleIndex": 26,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.springframework:spring-webmvc\nInstalled Version: 5.3.6\nVulnerability CVE-2022-22950\nSeverity: MEDIUM\nFixed Version: 5.2.20.RELEASE, 5.3.17\nLink: [CVE-2022-22950](https://avd.aquasec.com/nvd/cve-2022-22950)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.springframework:spring-webmvc@5.3.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-38286",
+          "ruleIndex": 34,
+          "level": "error",
+          "message": {
+            "text": "Package: org.thymeleaf:thymeleaf-spring5\nInstalled Version: 3.0.12.RELEASE\nVulnerability CVE-2023-38286\nSeverity: HIGH\nFixed Version: 3.1.2.RELEASE\nLink: [CVE-2023-38286](https://avd.aquasec.com/nvd/cve-2023-38286)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.thymeleaf:thymeleaf-spring5@3.0.12.RELEASE"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-1471",
+          "ruleIndex": 35,
+          "level": "error",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-1471\nSeverity: CRITICAL\nFixed Version: 2.0\nLink: [CVE-2022-1471](https://avd.aquasec.com/nvd/cve-2022-1471)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-25857",
+          "ruleIndex": 36,
+          "level": "error",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-25857\nSeverity: HIGH\nFixed Version: 1.31\nLink: [CVE-2022-25857](https://avd.aquasec.com/nvd/cve-2022-25857)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38749",
+          "ruleIndex": 37,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38749\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38749](https://avd.aquasec.com/nvd/cve-2022-38749)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38750",
+          "ruleIndex": 38,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38750\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38750](https://avd.aquasec.com/nvd/cve-2022-38750)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38751",
+          "ruleIndex": 39,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38751\nSeverity: MEDIUM\nFixed Version: 1.31\nLink: [CVE-2022-38751](https://avd.aquasec.com/nvd/cve-2022-38751)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-38752",
+          "ruleIndex": 40,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-38752\nSeverity: MEDIUM\nFixed Version: 1.32\nLink: [CVE-2022-38752](https://avd.aquasec.com/nvd/cve-2022-38752)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2022-41854",
+          "ruleIndex": 41,
+          "level": "warning",
+          "message": {
+            "text": "Package: org.yaml:snakeyaml\nInstalled Version: 1.27\nVulnerability CVE-2022-41854\nSeverity: MEDIUM\nFixed Version: 1.32\nLink: [CVE-2022-41854](https://avd.aquasec.com/nvd/cve-2022-41854)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "pom.xml",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "pom.xml: org.yaml:snakeyaml@1.27"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "originalUriBaseIds": {
+        "ROOTPATH": {
+          "uri": "file:///"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+score,id,class,significance,file,line number,procedure,priority,state,finding,owner,url
+71,1.96,Debug Warning (Java),Reliability,app.java,11,"",P0: High,Assigned,None,"",/warninginstance/96.txt
+71,5.88,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/88.txt
+71,5.89,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/89.txt
+71,5.90,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/90.txt
+71,5.91,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/91.txt
+71,5.92,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/92.txt
+71,6.93,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/93.txt
+71,6.94,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/94.txt
+71,6.95,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/95.txt
+71,6.97,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/97.txt
+71,6.98,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/98.txt
+71,6.99,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/99.txt
+71,6.100,Debug Warning (Java),Reliability,"","","",P0: High,Fixed,Don't Know,"",/warninginstance/100.txt
+71,7.101,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/101.txt
+71,7.102,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/102.txt
+71,7.103,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/103.txt
+71,7.104,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/104.txt
+71,7.105,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/105.txt
+71,7.106,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/106.txt
+71,7.107,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/107.txt
+71,7.108,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/108.txt
+71,7.109,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/109.txt
+71,7.110,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/110.txt
+71,7.111,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/111.txt
+71,7.112,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/112.txt
+71,7.113,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/113.txt
+71,7.114,Closeable Not Closed (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/114.txt
+71,8.115,Redundant Condition (Java),Reliability,"","","",P0: High,None,None,"",/warninginstance/115.txt
+71,8.116,Redundant Condition (Java),Reliability,"","","",P0: High,None,None,"",/warninginstance/116.txt
+71,8.117,Redundant Condition (Java),Reliability,"","","",P0: High,None,None,"",/warninginstance/117.txt
+71,8.118,Redundant Condition (Java),Reliability,"","","",P0: High,None,None,"",/warninginstance/118.txt
+71,9.119,Weak Hash Algorithm (Java),Security,"","","",None,None,None,"",/warninginstance/119.txt
+71,9.120,Weak Hash Algorithm (Java),Security,"","","",None,None,None,"",/warninginstance/120.txt
+71,10.121,Null Parameter Dereference (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/121.txt
+71,10.122,Null Parameter Dereference (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/122.txt
+71,13.129,Inner Class Should be Static (Java),Reliability,"","","",None,Fixed,None,"",/warninginstance/129.txt
+71,14.130,Instanceof Always True (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/130.txt
+71,15.131,Unreachable Instruction (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/131.txt
+71,15.132,Unreachable Instruction (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/132.txt
+71,17.135,Null Pointer Dereference (Java),Reliability,"","","",None,None,Don't Care,"",/warninginstance/135.txt
+55,2.78,Closeable Not Stored (Java),Reliability,"","","",P2: Low,None,None,"",/warninginstance/78.txt
+55,2.79,Closeable Not Stored (Java),Reliability,"","","",P2: Low,None,None,"",/warninginstance/79.txt
+55,3.80,Useless Assignment to Default (Java),Reliability,"","","",None,None,None,"",/warninginstance/80.txt
+55,4.81,Field Never Read (Java),Reliability,"","","",None,None,None,"",/warninginstance/81.txt
+55,5.82,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/82.txt
+55,5.83,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/83.txt
+55,5.84,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/84.txt
+55,5.85,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/85.txt
+55,5.86,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/86.txt
+55,5.87,Hardcoded Filename (Java),Reliability,"","","",None,None,None,"",/warninginstance/87.txt
+55,10.123,Null Parameter Dereference (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/123.txt
+55,10.124,Null Parameter Dereference (Java),Reliability,"","","",None,None,False Positive,"",/warninginstance/124.txt
+55,11.125,Empty Exception Handler (Java),Reliability,"","","",None,None,None,"",/warninginstance/125.txt
+55,12.126,Generic Exception Handler (Java),Reliability,"","","",None,None,None,"",/warninginstance/126.txt
+55,12.127,Generic Exception Handler (Java),Reliability,"","","",None,None,None,"",/warninginstance/127.txt
+55,12.128,Generic Exception Handler (Java),Reliability,"","","",None,None,None,"",/warninginstance/128.txt
+55,16.133,Missing Serial Version Field (Java),Reliability,"","","",None,None,None,"",/warninginstance/133.txt
+55,16.134,Missing Serial Version Field (Java),Reliability,"","","",None,None,None,"",/warninginstance/134.txt
+55,18.136,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/136.txt
+55,18.137,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/137.txt
+55,18.138,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/138.txt
+55,18.139,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/139.txt
+55,18.140,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/140.txt
+55,18.141,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/141.txt
+55,18.142,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/142.txt
+55,18.143,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/143.txt
+55,18.144,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/144.txt
+55,18.145,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/145.txt
+55,18.146,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/146.txt
+55,18.147,Ignored Return Value (Java),Reliability,"","","",None,None,None,"",/warninginstance/147.txt
+55,19.148,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/148.txt
+55,19.149,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/149.txt
+55,19.150,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/150.txt
+55,19.151,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/151.txt
+55,19.152,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/152.txt
+55,19.153,Broad Throws Clause (Java),Reliability,"","","",None,None,None,"",/warninginstance/153.txt

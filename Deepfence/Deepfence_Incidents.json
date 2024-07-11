@@ -1,0 +1,1243 @@
+[
+  {
+    "node_id": "file--ip-172-31-18-6-",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697623678524,
+    "category": "process_anomaly",
+    "count": 25929,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/nr-integrations/com.newrelic.docker-53102eb0a6296d942de41c46f322f0e7.json",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697626478503,
+    "category": "process_anomaly",
+    "count": 308,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/nr-integrations/container_cpus.json",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697631438503,
+    "category": "process_anomaly",
+    "count": 394,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/chrony/chrony.drift.tmp",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697724258508,
+    "category": "process_anomaly",
+    "count": 27,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/dpkg.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698301078503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/unattended-upgrades/unattended-upgrades-dpkg.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698301068503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.MXyoByfVhX",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698297918503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/cache/apt/archives/vim-tiny_2%3a8.2.3995-1ubuntu2.13_amd64.deb",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698296518503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/apt/lists/partial/us-east-2.ec2.archive.ubuntu.com_ubuntu_dists_jammy-backports_InRelease",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697933048503,
+    "category": "process_anomaly",
+    "count": 3,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/ubuntu-advantage-timer.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698262218504,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.4UcnQyObZb",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698249908503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/apt/lists/partial/us-east-2.ec2.archive.ubuntu.com_ubuntu_dists_jammy-updates_InRelease",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697770768503,
+    "category": "process_anomaly",
+    "count": 5,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/unattended-upgrades/unattended-upgrades.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697695538538,
+    "category": "process_anomaly",
+    "count": 4,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.DgIl4j6IRa",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698207668503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/cache/apparmor/30d07b40.0/snap.aws-cli.aws",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698183758502,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.FAVaLH0Gwi",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698170548504,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.wC0yjdJYYA",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698128088503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.2MphIduOwW",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698083498503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.rZz45LIttP",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1698036408503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.jMfY6EcaAH",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697990048504,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.7xNur972hl",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697933498503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/syslog.1.gz",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697932808504,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.IDEPcBgJlT",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697902018503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/log/ubuntu-advantage.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697889538503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.FL4UoNDMkk",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697857748503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/backups/dpkg.arch.0.gz",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697673608506,
+    "category": "process_anomaly",
+    "count": 3,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.oXXflFVyBJ",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697830028503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/cache/apparmor/30d07b40.0/snap.kubectl.kubectl",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697799458507,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.j2Q2lF1SXG",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697795498506,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/dpkg/info/linux-libc-dev:amd64.list",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697782458503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/dpkg/info/linux-headers-6.2.0-1014-aws.list",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697782438507,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/boot/vmlinuz-6.2.0-1014-aws.dpkg-new",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697782428506,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/cache/apt/archives/linux-modules-6.2.0-1014-aws_6.2.0-1014.14~22.04.1_amd64.deb",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697770778503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/cache/man/3017659 (deleted)",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697764418506,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.N7k7BCsewH",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697741558506,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/etc/gshadow",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697708798504,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/var/lib/dpkg/status-new",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697708798504,
+    "category": "process_anomaly",
+    "count": 2,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.uoTgsypR9f",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697682248503,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/tmp/tmp.DgsW0POtXM",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697666398529,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file--ip-172-31-18-6-/home/ubuntu/.bash_history",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1698317918503,
+    "created_at": 1697640598507,
+    "category": "process_anomaly",
+    "count": 1,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file /bin/bash /snap/kubelet/3098/wrappers/run-with-config-args wrappers/kubelet-wrapper which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-501-ip-172-31-18-6-",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697618065907,
+    "created_at": 1697608179326,
+    "category": "process_anomaly",
+    "count": 60,
+    "event_type": "process_anomaly",
+    "masked": false,
+    "summary": "Executing untrusted file kubectl get pods which is modified recently",
+    "tactics": [
+      "Privilege Escalation",
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "Process Injection"
+    ],
+    "rule_id": "501",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697617425906,
+    "category": "file_anomaly",
+    "count": 2,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/tmp/minikube_profile_3bf048ec22107a4357829e2abcdf2bf36dc76199_0.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697617225907,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/tmp/minikube_24bf68e341ce0fbd9259a5d51feed79682ea4eba_0.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697617205906,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/var/log/unattended-upgrades/unattended-upgrades.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697006009325,
+    "category": "file_anomaly",
+    "count": 5,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/var/cache/apparmor/30d07b40.0/snap-update-ns.helm",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697609229325,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/var/log/dpkg.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697093479325,
+    "category": "file_anomaly",
+    "count": 2,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/tmp/minikube_version_84f1d636b598ee1640b905a06769f422f694d35e_0.log",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697608179326,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-309-ip-172-31-18-6-/home/ubuntu/minikube-linux-amd64",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697608109326,
+    "created_at": 1697608109326,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Suspicious event modify on executable file /home/ubuntu/minikube-linux-amd64",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "309",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  },
+  {
+    "node_id": "file-303-ip-172-31-18-6-/home/ubuntu/minikube-linux-amd64",
+    "host_name": "ip-172-31-18-6",
+    "updated_at": 1697617515907,
+    "created_at": 1697608109326,
+    "category": "file_anomaly",
+    "count": 1,
+    "event_type": "file_anomaly",
+    "masked": false,
+    "summary": "Process OS user unknown trying to modify file /tmp/minikube_update-context_5534f8d98eb441081780d8694c3e295d2304f35e_0.log owned by root:0",
+    "tactics": [
+      "Defense Evasion"
+    ],
+    "techniques": [
+      "File and Directory Permissions Modification"
+    ],
+    "rule_id": "303",
+    "severity": "high",
+    "container_name": "",
+    "pod_name": "",
+    "kubernetes_cluster_name": "",
+    "matched": "",
+    "geoip": ""
+  }
+]

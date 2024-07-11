@@ -1,0 +1,108 @@
+{
+  "scan": {
+    "id": "efeaed55-ec6a-4d05-aadd-e241ada89f1a",
+    "repoId": "",
+    "version": "2.8.0",
+    "applicationId": "9e26741d-8d13-4947-9eff-8629d564fa38",
+    "externalUserId": "",
+    "env": "Pre-Production",
+    "status": "COMPLETED",
+    "applicationName": "JuiceShop",
+    "timestamp": "1667313740489",
+    "envId": "d4a01674-a4fa-4227-9ff9-ffbd1d647f79",
+    "parentScanId": ""
+  },
+  "scanDuration": 116,
+  "urlCount": 11,
+  "alertStats": {
+    "totalAlerts": 3,
+    "uniqueAlerts": 0,
+    "alertStatusStats": [
+      {
+        "alertStatus": "UNKNOWN",
+        "totalCount": 13,
+        "severityStats": {
+          "Low": 2,
+          "Medium": 11
+        }
+      }
+    ]
+  },
+  "severityStats": {
+    "Low": 1,
+    "Medium": 2
+  },
+  "configHash": "1100443894",
+  "timestamp": 1667313851267,
+  "appHost": "http://18.221.116.112:3000",
+  "scanErrors": [],
+  "applicationAlerts": [
+    {
+      "pluginId": "10038",
+      "name": "Content Security Policy (CSP) Header Not Set",
+      "description": "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.",
+      "severity": "Medium",
+      "references": [
+        "https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy",
+        "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+        "http://www.w3.org/TR/CSP/",
+        "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html",
+        "http://www.html5rocks.com/en/tutorials/security/content-security-policy/",
+        "http://caniuse.com/#feat=contentsecuritypolicy",
+        "http://content-security-policy.com/"
+      ],
+      "uriCount": 2,
+      "requestMethod": "",
+      "alertStatusStats": [
+        {
+          "alertStatus": "UNKNOWN",
+          "totalCount": 2,
+          "severityStats": {
+            "Medium": 2
+          }
+        }
+      ]
+    },
+    {
+      "pluginId": "10098",
+      "name": "Cross-Domain Misconfiguration",
+      "description": "Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server",
+      "severity": "Medium",
+      "references": [
+        "http://www.hpenterprisesecurity.com/vulncat/en/vulncat/vb/html5_overly_permissive_cors_policy.html"
+      ],
+      "uriCount": 9,
+      "requestMethod": "",
+      "alertStatusStats": [
+        {
+          "alertStatus": "UNKNOWN",
+          "totalCount": 9,
+          "severityStats": {
+            "Medium": 9
+          }
+        }
+      ]
+    },
+    {
+      "pluginId": "10017",
+      "name": "Cross-Domain JavaScript Source File Inclusion",
+      "description": "The page includes one or more script files from a third-party domain.",
+      "severity": "Low",
+      "references": [
+        ""
+      ],
+      "uriCount": 2,
+      "requestMethod": "",
+      "alertStatusStats": [
+        {
+          "alertStatus": "UNKNOWN",
+          "totalCount": 2,
+          "severityStats": {
+            "Low": 2
+          }
+        }
+      ]
+    }
+  ],
+  "policyName": ""
+}

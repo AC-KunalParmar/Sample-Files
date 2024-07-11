@@ -1,0 +1,190 @@
+Policy Name,Policy Type,Policy Severity,Cloud Type,Cloud Account Name,Cloud Account Id,Cloud Account Group,Status,Failed Resource Count
+AWS EBS snapshots are accessible to public,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Amazon Machine Image (AMI) is publicly accessible,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,18
+AWS S3 bucket publicly writable,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS KMS Key policy overly permissive,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 bucket publicly readable,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM policy allows assume role permission across all services,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS CloudTrail bucket is publicly accessible,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS route table with VPC peering overly permissive to all traffic,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on FTP port (21),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM policy is overly permissive to all traffic via condition clause,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on MSQL port (4333),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on SQL Server port (1434),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront viewer protocol policy is not configured with HTTPS,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on ICMP (Ping) protocol,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+Account hijacking attempts,anomaly,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS Security Group allows all traffic on VNC Server port (5900),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SageMaker notebook instance IAM policy overly permissive to all traffic,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SQS queue access policy is overly permissive,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Security Group allows all traffic on VNC Listener port (5500),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on SSH port (22),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Security Group overly permissive to all traffic,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,24
+Internet connectivity via TCP over insecure port,network,HIGH,ALL,AWS Account,034025401910,Default Account Group,fail,3
+AWS Security Group allows all traffic on NetBIOS port (138),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS snapshots are accessible to public,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 Bucket has Global DELETE Permissions enabled via bucket policy,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,3
+AWS Security Group allows all traffic on NetBIOS port (137),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on RDP port (3389),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS S3 Bucket has Global GET Permissions enabled via bucket policy,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,4
+AWS Default Security Group does not restrict all traffic,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,7
+Instances exposed to network traffic from the internet,network,HIGH,ALL,AWS Account,034025401910,Default Account Group,fail,10
+AWS Security Group allows all traffic on FTP-Data port (20),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SNS topic is exposed to unauthorized access,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on CIFS port (445),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group Inbound rule overly permissive to all traffic on all protocols (-1),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 buckets are accessible to any authenticated user,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 Buckets Block public access setting disabled,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,12
+AWS Security Group allows all traffic on SMTP port (25),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on MYSQL port (3306),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EC2 instance is not configured with VPC,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elasticsearch IAM policy overly permissive to all traffic,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on Windows RPC port (135),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM deprecated managed policies in use by User,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront distribution is using insecure SSL protocols for HTTPS communication,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on PostgreSQL port (5432),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on SQL Server port (1433),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on Telnet port (23),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on ports which are not commonly used,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,12
+AWS CloudFront origin protocol policy does not enforce HTTPS-only,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS MFA is not enabled on Root account,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS S3 buckets are accessible to public,config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Security Group allows all traffic on DNS port (53),config,HIGH,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 bucket accessible to unmonitored cloud accounts,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS ElastiCache Redis cluster with Redis AUTH feature disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS ElastiCache cluster not associated with VPC,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFormation stack configured without SNS topic,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,18
+AWS VPC subnets should not allow automatic public IP assignment,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,9
+AWS SNS topic encrypted using default KMS key instead of CMK,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elastic File System (EFS) not encrypted using Customer Managed Key,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Elastic File System (EFS) with encryption for data at rest is disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS DB cluster encryption is disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EKS cluster security group overly permissive to all traffic,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elastic Load Balancer v2 (ELBv2) load balancer with invalid security groups,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM password policy does not have a symbol,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront web distribution that allow TLS versions 1.0 or lower,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Network ACLs with Outbound rule to allow All ICMP IPv6,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EC2 instance associated with a public IP subnet,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,8
+AWS CloudFront web distribution with default SSL certificate,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM password policy does not have password expiration period,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS ElastiCache Redis cluster with in-transit encryption disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS CloudTrail is not enabled in all regions,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS ElastiCache Redis cluster with encryption for data at rest disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+S3 buckets with configurations set to host websites,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,5
+AWS RDS DB snapshot is encrypted using default KMS key instead of CMK,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM Roles with Administrator Access Permissions,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,3
+AWS Elastic Load Balancer v2 (ELBv2) SSL negotiation policy configured with weak ciphers,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS VPC Flow Logs not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,5
+AWS IAM password policy does not have a lowercase character,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SNS topic with server-side encryption disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS EC2 Instance Scheduled Events,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS VPC not in use,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Lambda functions with tracing not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,18
+AWS IAM password policy allows password reuse,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SNS subscription is not configured with HTTPS,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Database Migration Service endpoint do not have SSL configured,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Cloudfront Distribution with S3 have Origin Access set to disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS API gateway request authorisation is not set,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,4
+AWS ElastiCache Redis cluster with Multi-AZ Automatic Failover feature set to disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Application Load Balancer (ALB) not configured with AWS Web Application Firewall v2 (AWS WAFv2),config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,4
+AWS SQS queue encryption using default KMS key instead of CMK,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS retention policy less than 7 days,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Network ACLs with Outbound rule to allow All Traffic,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,7
+AWS DynamoDB encrypted using AWS owned CMK instead of AWS managed CMK,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Certificate Manager (ACM) has unused certificates,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,5
+AWS Network ACLs with Inbound rule to allow All ICMP IPv4,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS API Gateway endpoints without client certificate authentication,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS CloudTrail logs are not encrypted using Customer Master Keys (CMKs),config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS access keys are not rotated for 90 days,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS IAM user has both Console access and Access Keys,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,6
+AWS CloudTrail logging is disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Network ACLs with Inbound rule to allow All ICMP IPv6,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Network ACLs with Inbound rule to allow All Traffic,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,7
+AWS IAM password policy does not have an uppercase character,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront Distributions with Field-Level Encryption not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Certificate Manager (ACM) has expired certificates,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS DB cluster is encrypted using default KMS key instead of CMK,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS MFA not enabled for IAM users,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+CloudTrail trail is not integrated with CloudWatch Log,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS database instance is publicly accessible,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM password policy does not have a minimum of 14 characters,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS root account configured with Virtual MFA,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Route53 Public Zone with Private Records,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 Object Versioning is disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,25
+AWS NAT Gateways are not being utilized for the default route,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS API gateway request parameter is not validated,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,4
+AWS IAM Groups with administrator access permissions,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS RDS instance not in private subnet,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM Password policy is unsecure,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EC2 instance not configured with Instance Metadata Service v2 (IMDSv2),config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,35
+AWS Access logging not enabled on S3 buckets,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,26
+AWS IAM password policy does not have a number,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Lambda Function is not assigned to access within VPC,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,16
+AWS Network ACLs allow ingress traffic to server administration ports,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,7
+AWS EBS snapshot is not encrypted,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,11
+AWS Elastic Load Balancer v2 (ELBv2) listener that allow connection requests over HTTP,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS RDS database not encrypted using Customer Managed Key,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS S3 Bucket has Global LIST Permissions enabled via bucket policy,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,3
+AWS EC2 instances with Public IP and associated with Security Groups have Internet Access,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,11
+AWS Certificate Manager (ACM) has certificates with Certificate Transparency Logging disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS instance with Multi-Availability Zone disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS access keys not used for more than 90 days,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EBS Snapshot with access for unmonitored cloud accounts,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 bucket not configured with secure data transport policy,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SNS topic policy overly permissive for publishing,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS KMS Key scheduled for deletion,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 Bucket Policy allows public access to CloudTrail logs,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS Snapshot with access for unmonitored cloud accounts,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM user has two active Access Keys,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS CloudTrail logs should integrate with CloudWatch for all regions,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM support access policy is not associated to any role,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS DB snapshot is not encrypted,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS SNS topic policy overly permissive for subscription,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront web distribution with AWS Web Application Firewall (AWS WAF) service disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Elasticsearch domain publicly accessible,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS SQS server side encryption not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,45
+AWS Customer Master Key (CMK) rotation is not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudFront distribution with access logging disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Elastic Load Balancer v2 (ELBv2) with listener TLS/SSL is not configured,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,6
+AWS KMS customer managed external key expiring in 30 days or less,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS instance is not encrypted,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 bucket having policy overly permissive to VPC endpoints,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elastic Load Balancer v2 (ELBv2) with access log disabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,6
+AWS IAM password policy does not expire in 90 days,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS EC2 Instance IAM Role not enabled,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,15
+AWS EBS Volume is unattached,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,fail,4
+AWS Network ACLs with Outbound rule to allow All ICMP IPv4,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS KMS Customer Managed Key not in use,config,MEDIUM,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 bucket has global view ACL permissions enabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS VPC Security group nearing availability limit,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 Bucket has Global PUT Permissions enabled via bucket policy,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,3
+AWS Elasticsearch domain has Index slow logs set to disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Network Load Balancer (NLB) is not using the latest predefined security policy,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Certificate Manager (ACM) contains certificate pending validation,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Certificate Manager (ACM) has invalid or failed certificate,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elasticsearch domain has Zone Awareness set to disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Inactive users for more than 30 days,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS IAM policy attached to users,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,16
+AWS Certificate Manager (ACM) has certificates expiring in 30 days or less,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudTrail S3 buckets have not enabled MFA Delete,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS CloudFormation template contains globally open resources,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elasticsearch domain has Search slow logs set to disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM role/user with unused CloudTrail delete or full permission,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS RDS instance with copy tags to snapshots disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elasticsearch domain has Dedicated master set to disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS Application Load Balancer (ALB) is not using the latest predefined security policy,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS VPC Subnets nearing availability limit,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Access key enabled on root account,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS S3 buckets do not have server side encryption,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,11
+AWS CloudFront web distribution with geo restriction disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,2
+AWS RDS instance without Automatic Backup setting,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Lambda nearing availability code storage limit,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elasticsearch domain Encryption for data at rest is disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Elastic Load Balancer v2 (ELBv2) with deletion protection feature disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,6
+AWS S3 bucket is not configured with MFA Delete,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS RDS minor upgrades not enabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS CloudTrail log validation is not enabled in all regions,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS IAM policy allows full administrative privileges,config,LOW,AWS,AWS Account,034025401910,Default Account Group,pass,0
+AWS Lambda Environment Variables not encrypted at-rest using CMK,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,18
+AWS S3 CloudTrail buckets for which access logging is disabled,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,1
+AWS ACM Certificate with wildcard domain name,config,LOW,AWS,AWS Account,034025401910,Default Account Group,fail,6

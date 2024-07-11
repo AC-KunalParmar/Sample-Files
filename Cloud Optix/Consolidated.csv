@@ -1,0 +1,2510 @@
+Report Date: 10-10-2022 04:05:43 GMT
+Customer: ArmorCode Inc
+~~~SELECTED FILTERS~~~
+~~~NOTE~~~
+Affected resource column data might be trimmed for better visibility
+* indicates the security group is unused
+State : OPEN
+Critical Count,High count,Medium Count,Low Count
+6,24,19,155
+Alert-Id,Rule-Id,Jira-Id,ServiceNow-Id,Severity,Description,Type,Compliance Tag,Alert Last Updated,Provider,Account,Affected Resources : First Seen : LastModifiedBy : SuppressNotes,Mitre Attack Technique Name,Mitre Attack Technique Id,Mitre Attack Technique Url
+A-000165,,,,LOW,Login from a new location,Anomaly,,2021-09-22 14:32:38,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 8b5d5df3-c2e7-4f82-9f27-c1b06550c56c
+			    Account Id          : 034025401910
+			    User Name           : devqa-deepak-admin
+			    Login Type          : Console
+			    Login IP            : 182.69.57.225
+			    Previous Login IP   : 203.192.212.80
+			    Login Location      : Gurgaon-Haryana-India (ISP : Bharti Airtel)
+			    Previous Location   : National Capital Territory of Delhi-India (ISP : In2cable)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36
+			    Event Time          : 2021-09-22 14:27:02 +0000
+			    Previous Event Time : 2021-09-09 07:31:20 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000167,,,,LOW,2846 % increase in outbound traffic on destination port '443',Anomaly,,2021-09-28 14:40:12,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-09-28 14:00:00 to 2021-09-28 14:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 87 MB
+Variation   : 2846 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.36.216, 172.31.33.102, 10.0.5.141, 10.0.19.124, 10.0.91.140]
+Top Destination IPs   : [104.18.123.25, 52.92.128.106, 52.218.250.193, 172.217.5.16, 52.218.197.113]: : :",,,
+A-000098,,,,LOW,Login from a new location,Anomaly,,2021-03-08 06:09:27,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : cae5f689-3a0d-4375-a2ac-4978430b7f97
+			    Account Id          : 034025401910
+			    User Name           : devqa-mp-admin
+			    Login Type          : Console
+			    Login IP            : 157.36.151.76
+			    Previous Login IP   : 157.36.147.131
+			    Login Location      : Karnal-Haryana-India (ISP : Reliance Jio Infocomm Limited)
+			    Previous Location   : National Capital Territory of Delhi-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36
+			    Event Time          : 2021-03-08 06:02:24 +0000
+			    Previous Event Time : 2021-03-08 04:25:59 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000108,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-19 13:56:14,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern. This user usually logs in from (Maharashtra-India) but recently logged in from (Portland-Oregon-United States) 2 time(s). This may be because the user has travelled from India to United States in the recent past.
+				Event Id            : aee844b4-b0dc-4a23-8a1b-168af8717718
+			    Account Id          : 034025401910
+			    User Name           : devqa-yj-admin
+			    Login Type          : Console
+			    Login IP            : 52.25.73.254
+			    Previous Login IP   : 44.233.173.77
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+			    Event Time          : 2021-03-19 13:44:47 +0000
+			    Previous Event Time : 2021-03-18 07:22:42 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000087,,,,HIGH,Login from a new location,Anomaly,,2021-02-06 18:17:08,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 10fb6bf8-6982-47be-bea1-edfd8551faf8
+				Account Id          : 034025401910
+			    Role                : devqa-gs-admin
+			    Login Type          : API
+			    Login IP            : 44.233.97.176
+			    Previous Login IP   : 122.181.125.6
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Bharti Airtel)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.11.920 Linux/4.9.230-0.1.ac.223.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.275-b01 java/1.8.0_275 vendor/Oracle_Corporation
+			    Event Time          : 2021-02-06 18:12:31 +0000
+			    Previous Event Time : 2021-02-05 09:48:49 +0000
+			    Assumed Role        : False: : :",,,
+A-000088,,,,HIGH,Login from a new location,Anomaly,,2021-02-08 09:44:14,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : d119757d-3189-4fd5-b210-5206c71170f1
+				Account Id          : 034025401910
+			    Role                : crest-dixit.kapuriya
+			    Login Type          : API
+			    Login IP            : 54.184.198.170
+			    Previous Login IP   : 49.34.15.0
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Ahmedabad-Gujarat-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : aws-cli/1.18.69 Python/3.6.9 Linux/5.4.0-1029-aws botocore/1.16.19
+			    Event Time          : 2021-02-08 09:37:09 +0000
+			    Previous Event Time : 2021-02-08 06:40:37 +0000
+			    Assumed Role        : False: : :",,,
+A-000089,,,,LOW,Login from a new location,Anomaly,,2021-02-12 13:10:01,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : ecbce4c0-3c2a-49f8-a3d3-f85834bc9165
+			    Account Id          : 034025401910
+			    User Name           : devqa-sp-admin
+			    Login Type          : Console
+			    Login IP            : 208.65.109.53
+			    Previous Login IP   : 103.215.148.104
+			    Login Location      : Palo Alto-California-United States (ISP : Telx)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Cloudnet Communications Pvt Ltd)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+			    Event Time          : 2021-02-12 13:00:56 +0000
+			    Previous Event Time : 2021-02-10 13:12:10 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000064,,,,LOW,11119 % increase in outbound traffic on destination port '443',Anomaly,,2020-12-23 15:40:01,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2020-12-23 15:00:00 to 2020-12-23 15:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 20 MB
+Variation   : 11119 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.57.144, 172.31.11.98, 172.16.1.247, 10.0.12.177]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.122.25, 140.82.113.3, 104.18.125.25]: : :",,,
+A-000063,,,,LOW,41988 % increase in outbound traffic on destination port '443',Anomaly,,2020-12-22 11:10:18,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2020-12-22 10:30:00 to 2020-12-22 11:00:00
+Total Traffic  : 24 GB
+Expected Traffic  : 57 MB
+Variation   : 41988 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.27.158, 10.0.57.144, 172.31.11.98, 172.16.1.247, 10.0.12.177]
+Top Destination IPs   : [104.18.122.25, 104.18.121.25, 104.18.125.25, 104.18.123.25, 104.18.124.25]: : :",,,
+A-000177,,,,LOW,5668 % increase in outbound traffic on destination port '443',Anomaly,,2022-01-03 12:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-01-03 12:00:00 to 2022-01-03 12:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 36 MB
+Variation   : 5668 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.33.102, 10.0.20.219, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [54.230.19.50, 99.86.57.88, 54.239.174.76, 99.86.57.67, 54.239.174.84]: : :",,,
+A-000203,,,,LOW,Login from a new location,Anomaly,,2022-02-04 05:58:52,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 4a3f39df-66a3-4d13-b4fe-35bba0a89e48
+			    Account Id          : 034025401910
+			    User Name           : devqa-darwin-admin
+			    Login Type          : Console
+			    Login IP            : 122.173.28.95
+			    Previous Login IP   : 35.155.178.84
+			    Login Location      : Chandigarh-India (ISP : BHARTI)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36
+			    Event Time          : 2022-02-04 05:58:26 +0000
+			    Previous Event Time : 2022-02-01 05:22:19 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000243,,,,LOW,2844 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-24 15:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-24 14:30:00 to 2022-03-24 15:00:00
+Total Traffic  : 9 GB
+Expected Traffic  : 305 MB
+Variation   : 2844 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.124.25, 104.18.125.25, 104.18.121.25]: : :",,,
+A-000239,,,,LOW,59383 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-16 16:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-16 16:00:00 to 2022-03-16 16:30:00
+Total Traffic  : 12 GB
+Expected Traffic  : 21 MB
+Variation   : 59383 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.121.25, 104.18.125.25, 104.18.123.25]: : :",,,
+A-000237,,,,LOW,Login from a new location,Anomaly,,2022-03-15 10:05:44,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : dbab25c8-f485-4ca4-b7c6-6401bbf025f8
+			    Account Id          : 034025401910
+			    User Name           : devqa-hs-admin
+			    Login Type          : Console
+			    Login IP            : 223.176.65.83
+			    Previous Login IP   : 117.214.102.141
+			    Login Location      : Chennai-Tamil Nadu-India (ISP : Bharti Airtel)
+			    Previous Location   : Cuttack-Oregon-India (ISP : Bharat Sanchar Nigam Ltd)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36
+			    Event Time          : 2022-03-15 10:03:36 +0000
+			    Previous Event Time : 2022-03-14 17:01:37 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000230,,,,LOW,28523 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-27 09:10:01,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-27 08:30:00 to 2022-02-27 09:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 15 MB
+Variation   : 28523 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.124.25, 104.18.121.25, 104.18.123.25, 104.18.125.25, 104.18.122.25]: : :",,,
+A-000231,,,,LOW,35519 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-28 09:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-28 08:30:00 to 2022-02-28 09:00:00
+Total Traffic  : 5 GB
+Expected Traffic  : 15 MB
+Variation   : 35519 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.124.25, 104.18.121.25, 104.18.125.25, 104.18.123.25, 104.18.122.25]: : :",,,
+A-000232,,,,LOW,35626 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-02 09:10:05,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-02 08:30:00 to 2022-03-02 09:00:00
+Total Traffic  : 7 GB
+Expected Traffic  : 20 MB
+Variation   : 35626 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.20.219, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.121.25, 104.18.122.25, 104.18.123.25, 104.18.125.25, 104.18.124.25]: : :",,,
+A-000228,,,,LOW,25450 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-24 15:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-24 15:00:00 to 2022-02-24 15:30:00
+Total Traffic  : 7 GB
+Expected Traffic  : 27 MB
+Variation   : 25450 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 10.0.20.219, 172.31.24.116, 10.0.36.216]
+Top Destination IPs   : [104.18.125.25, 104.18.124.25, 104.18.121.25, 104.18.123.25, 104.18.122.25]: : :",,,
+A-000162,,,,HIGH,Login from a new location,Anomaly,,2021-09-14 12:46:32,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 7522acf6-4179-4351-b65f-d0b0e1ce3aa8
+				Account Id          : 034025401910
+			    Role                : devqa-lk-admin
+			    Login Type          : API
+			    Login IP            : 3.142.42.188
+			    Previous Login IP   : 152.57.73.190
+			    Login Location      : Dublin-Ohio-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Nagpur-Maharashtra-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : EC2ConsoleFrontend, aws-internal/3 aws-sdk-java/1.11.1030 Linux/5.4.134-73.228.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.292-b10 java/1.8.0_292 vendor/Oracle_Corporation cfg/retry-mode/legacy
+			    Event Time          : 2021-09-14 12:44:50 +0000
+			    Previous Event Time : 2021-09-14 12:31:23 +0000
+			    Assumed Role        : False: : :",,,
+A-000141,,,,LOW,6932 % increase in outbound traffic on destination port '443',Anomaly,,2021-07-26 07:40:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-07-26 07:00:00 to 2021-07-26 07:30:00
+Total Traffic  : 4 GB
+Expected Traffic  : 57 MB
+Variation   : 6932 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.30.156, 172.31.33.102, 10.0.19.124, 10.0.5.141, 172.31.15.166]
+Top Destination IPs   : [96.7.17.140, 52.218.221.49, 52.218.193.169, 52.218.196.153, 35.224.73.200]: : :",,,
+A-000144,,,,LOW,11357 % increase in outbound traffic on destination port '443',Anomaly,,2021-08-04 13:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-08-04 13:00:00 to 2021-08-04 13:30:00
+Total Traffic  : 3 GB
+Expected Traffic  : 28 MB
+Variation   : 11357 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.33.102, 10.0.19.124, 10.0.5.141, 172.31.25.88]
+Top Destination IPs   : [44.239.193.54, 54.212.224.226, 44.238.181.16, 52.218.232.153, 35.224.73.200]: : :",,,
+A-000173,,,,LOW,Login from a new location,Anomaly,,2021-11-10 06:12:46,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : c308e565-5afc-4588-b56c-23425c709e02
+			    Account Id          : 034025401910
+			    User Name           : devqa-abhinav-admin
+			    Login Type          : Console
+			    Login IP            : 122.168.84.3
+			    Previous Login IP   : 123.201.67.213
+			    Login Location      : Indore-Madhya Pradesh-India (ISP : BHARTI)
+			    Previous Location   : Ahmedabad-Gujarat-India (ISP : YOU Broadband & Cable India Ltd)
+			    User Agent          : Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36
+			    Event Time          : 2021-11-10 06:10:32 +0000
+			    Previous Event Time : 2021-11-03 18:32:40 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000124,,,,LOW,Login from a new location,Anomaly,,2021-05-03 05:32:17,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : acdec17c-57ea-47b9-b7d2-4cb2cdf2b006
+			    Account Id          : 034025401910
+			    User Name           : devqa-hs-admin
+			    Login Type          : Console
+			    Login IP            : 106.51.233.157
+			    Previous Login IP   : 52.36.171.120
+			    Login Location      : Bengaluru-Karnataka-India (ISP : ACT Fibernet)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0
+			    Event Time          : 2021-05-03 05:25:20 +0000
+			    Previous Event Time : 2021-04-26 10:41:49 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000125,,,,CRITICAL,Login from a new location,Anomaly,,2021-05-03 10:18:19,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 5d68d349-0c3f-48aa-bd25-634224798455
+				Account Id          : 034025401910
+			    Role                : devqa-mp-admin
+			    Login Type          : API
+			    Login IP            : 49.36.144.104
+			    Previous Login IP   : 54.213.100.96
+			    Login Location      : Dehradun-Uttarakhand-India (ISP : Reliance Jio Infocomm Limited)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : console.ec2.amazonaws.com
+			    Event Time          : 2021-05-03 10:10:59 +0000
+			    Previous Event Time : 2021-05-03 10:08:49 +0000
+			    Assumed Role        : False: : :",,,
+A-000126,,,,LOW,Frequent logins from different locations,Anomaly,,2021-05-05 15:23:50,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 15b2894e-7ebb-441a-a141-dc50f7dfc9e7
+			    Account Id          : 034025401910
+			    User Name           : devqa-sp-admin
+			    Login Type          : Console
+			    Login IP            : 208.65.109.53
+			    Previous Login IP   : 103.139.56.151
+			    Login Location      : Palo Alto-California-United States (ISP : Telx)
+			    Previous Location   : Kanpur-Uttar Pradesh-India (ISP : Avjr Broadband Services)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36
+			    Event Time          : 2021-05-05 15:17:59 +0000
+			    Previous Event Time : 2021-04-29 05:29:35 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000152,,,,HIGH,Login from a new location,Anomaly,,2021-08-10 06:37:12,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 36abf2cc-639e-42bd-9095-77bff2285890
+				Account Id          : 034025401910
+			    Role                : devqa-yj-admin
+			    Login Type          : API
+			    Login IP            : 38.75.136.147
+			    Previous Login IP   : 103.115.128.190
+			    Login Location      : Los Angeles-California-United States (ISP : Cogent Communications)
+			    Previous Location   : Amravati-Maharashtra-India (ISP : Gigaline Teleservices Opc Private Limited)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.11.1030 Linux/4.9.230-0.1.ac.224.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation cfg/retry-mode/legacy
+			    Event Time          : 2021-08-10 06:34:56 +0000
+			    Previous Event Time : 2021-08-06 06:33:11 +0000
+			    Assumed Role        : False: : :",,,
+A-000102,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-10 19:26:54,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 5fe9ada4-20ce-433a-aa2f-ddc25e86348d
+			    Account Id          : 034025401910
+			    User Name           : devqa-sp-admin
+			    Login Type          : Console
+			    Login IP            : 208.65.109.53
+			    Previous Login IP   : 103.215.148.104
+			    Login Location      : Palo Alto-California-United States (ISP : Telx)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Cloudnet Communications Pvt Ltd)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36
+			    Event Time          : 2021-03-10 19:13:52 +0000
+			    Previous Event Time : 2021-03-03 17:28:27 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000104,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-16 06:42:33,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : e8f30b1a-cd41-415c-b5bf-5ac9ad992f7c
+			    Account Id          : 034025401910
+			    User Name           : devqa-mayank.pande-admin
+			    Login Type          : Console
+			    Login IP            : 44.233.173.77
+			    Previous Login IP   : 116.74.208.220
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Hathway IP over Cable Internet Access)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36
+			    Event Time          : 2021-03-16 06:36:00 +0000
+			    Previous Event Time : 2021-03-15 05:25:56 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000093,,,,LOW,Login from a new location,Anomaly,,2021-02-18 12:42:29,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 5c154db6-dbf1-45c0-8f67-0ff1c324f923
+			    Account Id          : 034025401910
+			    User Name           : devqa-mayank.pande-admin
+			    Login Type          : Console
+			    Login IP            : 44.233.97.176
+			    Previous Login IP   : 116.74.208.220
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Hathway IP over Cable Internet Access)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+			    Event Time          : 2021-02-18 12:35:16 +0000
+			    Previous Event Time : 2021-02-15 07:11:14 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000159,,,,LOW,1690 % increase in outbound traffic on destination port '443',Anomaly,,2021-08-31 12:40:41,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-08-31 12:00:00 to 2021-08-31 12:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 140 MB
+Variation   : 1690 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.33.102, 10.0.25.211, 172.31.11.115, 10.0.19.124]
+Top Destination IPs   : [54.186.194.20, 35.82.241.96, 52.33.102.20, 52.218.242.225, 52.16.49.167]: : :",,,
+A-000248,,,,LOW,Login from a new location,Anomaly,,2022-04-05 06:05:38,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 8c1bcb66-31ab-4d19-bd49-e0382487c02c
+			    Account Id          : 034025401910
+			    User Name           : devqa-deepak-admin
+			    Login Type          : Console
+			    Login IP            : 49.36.222.137
+			    Previous Login IP   : 111.223.27.187
+			    Login Location      : Dehradun-Uttarakhand-India (ISP : Reliance Jio Infocomm Limited)
+			    Previous Location   : National Capital Territory of Delhi-India (ISP : Benchmark Infotech)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36
+			    Event Time          : 2022-04-05 06:04:28 +0000
+			    Previous Event Time : 2022-03-02 05:32:41 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000255,,,,LOW,43441 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-18 08:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-18 07:30:00 to 2022-04-18 08:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 10 MB
+Variation   : 43441 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.125.25, 104.18.122.25, 104.18.123.25, 104.18.121.25, 104.18.124.25]: : :",,,
+A-000213,AR-607,,,LOW,Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer created CMKs,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Data Manipulation,T1565,https://attack.mitre.org/techniques/T1565/
+A-000227,AR-606,,,LOW,Ensure a log metric filter and alarm exist for AWS Management Console authentication failures,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:12,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000225,AR-604,,,LOW,Ensure a log metric filter and alarm exist for IAM policy changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:11,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Account Manipulation,T1098,https://attack.mitre.org/techniques/T1098/
+A-000224,AR-557,,,LOW,Ensure CloudTrail logs are encrypted at rest using KMS CMKs,Policy,CIS 1.3,2022-02-24 14:35:11,AWS,Armorcode-dev-qa,"KMS key not defined for Cloud Trail: 'CT-AvidSecure : All (Region)'.  : 2022-02-24 14:35:08 : Not Available : 
+",Data from Cloud Storage Object,T1530,https://attack.mitre.org/techniques/T1530/
+A-000214,AR-610,,,LOW,Ensure a log metric filter and alarm exist for security group changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000216,AR-611,,,LOW,Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL),Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000219,AR-614,,,LOW,Ensure a log metric filter and alarm exist for VPC changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:10,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Application Layer Protocol,T1071,https://attack.mitre.org/techniques/T1071/
+A-000220,AR-613,,,LOW,Ensure a log metric filter and alarm exist for route table changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:10,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Application Layer Protocol,T1071,https://attack.mitre.org/techniques/T1071/
+A-000065,AR-155,,,MEDIUM,Ensure VPC flow logging is enabled in all VPCs,Policy,"ACStaging,CIS 1.3,HIPAA,HIPAA final",2021-11-09 06:04:04,AWS,Armorcode-dev-qa,"vpc-0f8281e63cb4ca4bd : 2020-12-30 09:37:36 : Not Available : 
+vpc-066a955f647bc2033 : 2021-07-26 09:04:18 : Not Available : 
+vpc-02382b3af8d889343 : 2021-07-30 15:42:05 : Not Available : 
+vpc-0f66b2f7fcfba41f8 : 2021-03-08 11:19:34 : crest-keyur.barapatre : 
+vpc-0aa5f20e9a6b81297 : 2021-07-26 09:04:18 : Not Available : 
+vpc-0531ceee869a8847e : 2021-11-09 06:04:03 : devqa-dy-admin : 
+",Hide Artifacts,T1564,https://attack.mitre.org/techniques/T1564/
+A-000057,AR-514,,,LOW,"Ensure hardware MFA is enabled for the ""root"" account",Policy,CIS 1.3,2020-10-23 08:29:00,AWS,Armorcode-dev-qa,"MFA is disabled for root account  : 2020-10-23 08:28:56 : Not Available : 
+",Account Manipulation,T1098,https://attack.mitre.org/techniques/T1098/
+A-000259,,,,LOW,39063 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-23 08:10:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-23 07:30:00 to 2022-04-23 08:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 12 MB
+Variation   : 39063 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.121.25, 104.18.124.25, 104.18.125.25]: : :",,,
+A-000172,AR-1001,,,CRITICAL,Flag resource(s) with public IP and Security Group with ingress from any source on any port,Policy,ACStaging,2022-02-04 04:57:00,AWS,Armorcode-dev-qa,"checkmarx-DB (i-01dd4a7ad4e14110e) - EC2 : 2021-12-09 13:41:54 : Not Available : 
+checkmarx server (i-03ddf67e29b0a6c86) - EC2 : 2021-12-09 13:41:54 : Not Available : 
+",,,
+A-000256,,,,LOW,33799 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-19 08:40:08,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-19 08:00:00 to 2022-04-19 08:30:00
+Total Traffic  : 4 GB
+Expected Traffic  : 14 MB
+Variation   : 33799 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.121.25, 104.18.124.25, 104.18.123.25, 104.18.125.25]: : :",,,
+A-000257,,,,LOW,36377 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-20 08:40:08,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-20 08:00:00 to 2022-04-20 08:30:00
+Total Traffic  : 5 GB
+Expected Traffic  : 14 MB
+Variation   : 36377 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.123.25, 104.18.124.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000258,,,,LOW,56377 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-21 08:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-21 08:00:00 to 2022-04-21 08:30:00
+Total Traffic  : 8 GB
+Expected Traffic  : 15 MB
+Variation   : 56377 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.125.25, 104.18.121.25, 104.18.123.25, 104.18.122.25, 104.18.124.25]: : :",,,
+A-000260,,,,LOW,60451 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-24 14:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-24 14:00:00 to 2022-04-24 14:30:00
+Total Traffic  : 9 GB
+Expected Traffic  : 16 MB
+Variation   : 60451 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.123.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000266,,,,LOW,98720 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-03 12:10:08,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-03 11:30:00 to 2022-05-03 12:00:00
+Total Traffic  : 13 GB
+Expected Traffic  : 13 MB
+Variation   : 98720 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.125.25, 104.18.124.25, 104.18.123.25, 104.18.122.25, 104.18.121.25]: : :",,,
+A-000265,,,,LOW,44287 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-02 12:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-02 11:30:00 to 2022-05-02 12:00:00
+Total Traffic  : 5 GB
+Expected Traffic  : 12 MB
+Variation   : 44287 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.118, 172.31.24.116, 10.0.49.106, 172.31.15.199]
+Top Destination IPs   : [104.18.123.25, 104.18.124.25, 104.18.122.25, 104.18.125.25, 140.82.113.4]: : :",,,
+A-000269,,,,HIGH,Login from a new location,Anomaly,,2022-05-05 13:56:32,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : ba9e400e-7d81-4fd2-9ff1-ae1094cc96d7
+				Account Id          : 034025401910
+			    Role                : devqa-hs-admin
+			    Login Type          : API
+			    Login IP            : 117.214.34.114
+			    Previous Login IP   : 100.20.137.22
+			    Login Location      : Hyderabad-Telangana-India (ISP : BSNL Internet)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.12.188 Linux/5.4.176-103.347.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.322-b06 java/1.8.0_322 vendor/Oracle_Corporation cfg/retry-mode/standard
+			    Event Time          : 2022-05-05 13:56:07 +0000
+			    Previous Event Time : 2022-05-05 12:15:27 +0000
+			    Assumed Role        : False: : :",,,
+A-000272,,,,LOW,20425 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-07 11:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-07 11:00:00 to 2022-05-07 11:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 12 MB
+Variation   : 20425 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.121.25, 104.18.123.25, 104.18.124.25, 104.18.122.25, 104.18.125.25]: : :",,,
+A-000032,AR-156,,,LOW,Ensure AWS Config is enabled in all regions,Policy,"ACStaging,CIS 1.3",2021-08-05 07:11:30,AWS,Armorcode-dev-qa,"AWS Config is not monitoring all Resource in Region: 'ap-northeast-3'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'us-east-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'sa-east-1'.  : 2021-08-05 07:11:29 : Not Available : 
+Global Resource Monitoring is not enabled in any region.  : 2020-10-23 07:27:16 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ap-south-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'eu-west-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'eu-west-3'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ap-southeast-2'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ap-southeast-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'eu-north-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'us-west-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ca-central-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'eu-west-2'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'eu-central-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ap-northeast-1'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'ap-northeast-2'.  : 2021-08-05 07:11:29 : Not Available : 
+AWS Config is not monitoring all Resource in Region: 'us-east-2'.  : 2021-08-05 07:11:29 : Not Available : 
+",Impair Defenses,T1562,https://attack.mitre.org/techniques/T1562/
+A-000281,,,,LOW,48545 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-08 04:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-08 04:00:00 to 2022-06-08 04:30:00
+Total Traffic  : 5 GB
+Expected Traffic  : 12 MB
+Variation   : 48545 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.30.250, 172.31.21.62, 172.31.24.116, 10.0.49.106, 172.31.15.199]
+Top Destination IPs   : [142.250.191.238, 104.17.162.60, 142.250.191.234, 18.67.39.118, 142.250.190.78]: : :",,,
+A-000282,,,,LOW,67404 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-09 13:40:05,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-09 13:00:00 to 2022-06-09 13:30:00
+Total Traffic  : 7 GB
+Expected Traffic  : 11 MB
+Variation   : 67404 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.41.31, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [172.217.4.65, 69.192.208.24, 142.250.190.129, 13.33.3.95, 23.35.69.73]: : :",,,
+A-000284,,,,LOW,19284 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-11 06:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-11 05:30:00 to 2022-06-11 06:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 10 MB
+Variation   : 19284 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.121.25, 104.18.123.25, 104.18.122.25, 104.18.124.25, 104.18.125.25]: : :",,,
+A-000285,,,,LOW,38432 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-12 08:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-12 07:30:00 to 2022-06-12 08:00:00
+Total Traffic  : 3 GB
+Expected Traffic  : 9 MB
+Variation   : 38432 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.123.25, 104.18.124.25, 104.18.125.25, 104.18.121.25]: : :",,,
+A-000289,,,,LOW,121379 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-14 08:10:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-14 07:30:00 to 2022-06-14 08:00:00
+Total Traffic  : 11 GB
+Expected Traffic  : 9 MB
+Variation   : 121379 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.123.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000290,,,,LOW,154087 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-16 08:10:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-16 07:30:00 to 2022-06-16 08:00:00
+Total Traffic  : 14 GB
+Expected Traffic  : 9 MB
+Variation   : 154087 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 172.31.15.199, 172.31.30.250, 172.31.10.21]
+Top Destination IPs   : [104.18.121.25, 104.18.123.25, 104.18.124.25, 104.18.125.25, 104.18.122.25]: : :",,,
+A-000292,,,,LOW,2818 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-18 08:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-18 07:30:00 to 2022-06-18 08:00:00
+Total Traffic  : 13 GB
+Expected Traffic  : 464 MB
+Variation   : 2818 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 172.31.15.199, 172.31.30.250, 172.31.10.21]
+Top Destination IPs   : [104.18.123.25, 104.18.125.25, 104.18.121.25, 104.18.124.25, 104.18.122.25]: : :",,,
+A-000295,AR-703,,,LOW,"Ensure routing tables for VPC peering are ""least access"" (Unscored)",Policy,CIS 1.3,2022-06-21 11:09:42,AWS,Armorcode-dev-qa,"rtb-0794f9ef8597c6a71 : 2022-06-21 11:09:41 : Not Available : 
+rtb-0356a308e57fd0ed1 : 2022-06-21 11:09:41 : Not Available : 
+",Exploitation of Remote Services,T1210,https://attack.mitre.org/techniques/T1210/
+A-000297,,,,LOW,115226 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-23 20:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-23 19:30:00 to 2022-06-23 20:00:00
+Total Traffic  : 10 GB
+Expected Traffic  : 9 MB
+Variation   : 115226 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.122.25, 104.18.123.25, 104.18.121.25]: : :",,,
+A-000298,,,,LOW,105380 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-24 20:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-24 19:30:00 to 2022-06-24 20:00:00
+Total Traffic  : 10 GB
+Expected Traffic  : 9 MB
+Variation   : 105380 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.121.25, 104.18.124.25, 104.18.125.25]: : :",,,
+A-000143,AR-207,,,HIGH,Detect the use of secure web origins with secure protocols for CloudFront.,Policy,"ACStaging,HIPAA,HIPAA final",2021-09-24 06:34:19,AWS,Armorcode-dev-qa,"Distribution : E2MFU80YX6YBGJ, Domain : duc4e58ffj1c7.cloudfront.net, Origin : docs2.armorcode.ai.s3-website-us-west-2.amazonaws.com : 2021-09-24 06:34:17 : Not Available : 
+Distribution : EFCGA7MNK1PVB, Domain : dmywzbnshq4xv.cloudfront.net, Origin : docs2.armorcode.ai.s3-website-us-west-2.amazonaws.com : 2021-09-02 05:27:00 : Not Available : 
+",,,
+A-000116,AR-268,,,HIGH,Ensure S3 buckets do not allow public write bucket ACL permissions,Policy,ACStaging,2022-07-07 12:21:44,AWS,Armorcode-dev-qa,"qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+docs.armorcode.ai : 2021-08-02 08:27:35 : devqa-dy-admin : Accepted
+devv1.us-west-2.armorcode.ai : 2021-04-09 12:05:06 : Not Available : Accepted
+",,,
+A-000305,,,,LOW,23499 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-09 05:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-09 05:00:00 to 2022-07-09 05:30:00
+Total Traffic  : 7 GB
+Expected Traffic  : 30 MB
+Variation   : 23499 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.30.250]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.123.25, 104.18.122.25, 104.18.121.25]: : :",,,
+A-000306,,,,LOW,45644 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-10 05:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-10 05:00:00 to 2022-07-10 05:30:00
+Total Traffic  : 11 GB
+Expected Traffic  : 25 MB
+Variation   : 45644 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.30.250]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.125.25, 104.18.124.25, 104.18.121.25]: : :",,,
+A-000307,,,,LOW,32478 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-12 05:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-12 05:00:00 to 2022-07-12 05:30:00
+Total Traffic  : 9 GB
+Expected Traffic  : 28 MB
+Variation   : 32478 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.118, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.122.25, 104.18.121.25, 104.18.123.25, 104.18.125.25, 104.18.124.25]: : :",,,
+A-000077,AR-1063,,,MEDIUM,Ensure that IAM Access analyzer is enabled for all regions,Policy,CIS 1.3,2022-07-15 12:08:08,AWS,Armorcode-dev-qa,"IAM Access analyzer not enabled in Region: 'ca-central-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'us-east-2'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'us-east-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'us-west-2'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'eu-west-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'us-west-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'sa-east-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-northeast-2'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'eu-west-3'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'eu-west-2'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-northeast-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'eu-north-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-south-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-southeast-2'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-southeast-1'.  : 2021-01-25 07:16:51 : Not Available : 
+IAM Access analyzer not enabled in Region: 'ap-northeast-3'.  : 2022-07-15 12:08:06 : Not Available : 
+",Exfiltration Over Web Service,T1567,https://attack.mitre.org/techniques/T1567/
+A-000311,,,,LOW,7048 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-26 13:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-26 12:30:00 to 2022-07-26 13:00:00
+Total Traffic  : 9 GB
+Expected Traffic  : 132 MB
+Variation   : 7048 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.125.25, 104.18.124.25, 104.18.121.25, 104.18.122.25, 104.18.123.25]: : :",,,
+A-000317,,,,LOW,27639 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-03 09:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-03 08:30:00 to 2022-08-03 09:00:00
+Total Traffic  : 21 GB
+Expected Traffic  : 78 MB
+Variation   : 27639 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.125.25, 104.18.121.25, 104.18.123.25, 104.18.124.25, 104.18.122.25]: : :",,,
+A-000083,AR-1066,,,MEDIUM,Ensure that Object-level logging for read events is enabled for S3 bucket,Policy,CIS 1.3,2022-08-01 07:12:50,AWS,Armorcode-dev-qa,"dev-034025401910-efs-backup : 2021-04-13 06:58:10 : Not Available : 
+bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+armorcode-qa-documents : 2021-03-05 12:05:41 : Not Available : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:13 : devqa-gs-admin : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+runbook-s3-preprod-temp : 2022-04-01 07:47:24 : devqa-mp-admin : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+elasticbeanstalk-us-east-2-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+armorcode-034025401910-lambda-artifact : 2021-02-12 07:23:35 : Not Available : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+cf-templates-acx5aqyku34j-ap-northeast-3 : 2022-07-15 12:08:06 : bhumita : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:15 : devqa-lk-admin : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+dj.bucket.armorcode : 2021-01-25 07:16:51 : Not Available : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:49 : devqa-mayank.pande-admin : 
+am-terraformstate-034025401910-us-west-2 : 2021-01-25 07:16:51 : Not Available : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+armorcode-dev-reports : 2021-03-15 06:58:46 : Not Available : 
+runbook-s3-data-dump-preprod : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+avid-cloudtrail-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : 
+armorcode-cert-revocation-list : 2021-01-25 07:16:51 : Not Available : 
+gs-s3-data-push-test : 2021-01-25 07:16:51 : Not Available : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+elasticbeanstalk-ap-south-1-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+testbucketguardduty : 2022-05-19 06:54:11 : devqa-navin-admin : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+cf-templates-acx5aqyku34j-ap-south-1 : 2022-07-15 12:08:06 : bhumita : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:51 : Not Available : 
+armorcode-qa-reports : 2021-03-05 12:05:41 : Not Available : 
+dev-osquery.us-west-2.armorcode.ai : 2022-08-01 07:12:49 : devqa-navin-admin : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+am-users-keys : 2021-02-05 09:53:33 : Not Available : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+armorcode : 2021-09-09 04:45:09 : devqa-mp-admin : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : 
+cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:52 : bhumita : 
+hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+qa-automation-private : 2022-05-11 17:24:00 : devqa-mp-admin : 
+qa-034025401910-efs-backup : 2021-04-13 09:01:26 : devqa-navin-admin : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+armorcode-jenkins-artifacts : 2021-02-16 12:48:53 : Not Available : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+armorcode-dev-documents : 2021-03-15 06:58:46 : Not Available : 
+",Hide Artifacts,T1564,https://attack.mitre.org/techniques/T1564/
+A-000082,AR-1065,,,MEDIUM,Ensure that Object-level logging for write events is enabled for S3 bucket,Policy,CIS 1.3,2022-08-01 07:12:50,AWS,Armorcode-dev-qa,"bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+armorcode : 2021-09-09 04:45:09 : devqa-mp-admin : 
+gs-s3-data-push-test : 2021-01-25 07:16:51 : Not Available : 
+dj.bucket.armorcode : 2021-01-25 07:16:51 : Not Available : 
+qa-034025401910-efs-backup : 2021-04-13 09:01:26 : devqa-navin-admin : 
+hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+runbook-s3-preprod-temp : 2022-04-01 07:47:24 : devqa-mp-admin : 
+armorcode-qa-documents : 2021-03-05 12:05:41 : Not Available : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:52 : bhumita : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+dev-034025401910-efs-backup : 2021-04-13 06:58:10 : Not Available : 
+dev-osquery.us-west-2.armorcode.ai : 2022-08-01 07:12:49 : devqa-navin-admin : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+armorcode-034025401910-lambda-artifact : 2021-02-12 07:23:35 : Not Available : 
+armorcode-qa-reports : 2021-03-05 12:05:41 : Not Available : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+avid-cloudtrail-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : 
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : 
+armorcode-dev-reports : 2021-03-15 06:58:46 : Not Available : 
+am-terraformstate-034025401910-us-west-2 : 2021-01-25 07:16:51 : Not Available : 
+cf-templates-acx5aqyku34j-ap-northeast-3 : 2022-07-15 12:08:06 : bhumita : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:15 : devqa-lk-admin : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+armorcode-jenkins-artifacts : 2021-02-16 12:48:53 : Not Available : 
+cf-templates-acx5aqyku34j-ap-south-1 : 2022-07-15 12:08:06 : bhumita : 
+armorcode-dev-documents : 2021-03-15 06:58:46 : Not Available : 
+armorcode-cert-revocation-list : 2021-01-25 07:16:51 : Not Available : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:13 : devqa-gs-admin : 
+elasticbeanstalk-us-east-2-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+runbook-s3-data-dump-preprod : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+am-users-keys : 2021-02-05 09:53:33 : Not Available : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+qa-automation-private : 2022-05-11 17:24:00 : devqa-mp-admin : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+testbucketguardduty : 2022-05-19 06:54:11 : devqa-navin-admin : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+elasticbeanstalk-ap-south-1-034025401910 : 2021-01-25 07:16:51 : Not Available : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:49 : devqa-mayank.pande-admin : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:51 : Not Available : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : 
+",Hide Artifacts,T1564,https://attack.mitre.org/techniques/T1564/
+A-000312,AR-265,,,LOW,Review EBS Volumes that are not attached to an instance,Policy,ACStaging,2022-08-05 09:27:01,AWS,Armorcode-dev-qa,"vol-02ab98974c9eef606 : 2022-07-28 18:28:06 : Not Available : 
+vol-008796ec3513a8794 : 2022-07-28 18:28:06 : Not Available : 
+vol-097ff1d0784ea8bda : 2022-07-28 18:28:06 : Not Available : 
+vol-013d7b412bd5d05d8 : 2022-07-28 18:28:06 : Not Available : 
+vol-0608cb20979e25376 : 2022-07-28 18:28:06 : Not Available : 
+vol-0df0b1c3c49f6cc4e : 2022-07-28 18:28:06 : Not Available : 
+vol-041840bf6532ff0ac : 2022-07-28 18:28:06 : Not Available : 
+vol-03de2ea219596c0a3 : 2022-07-28 18:28:06 : Not Available : 
+vol-0f926c2dbbc28a006 : 2022-07-28 18:28:06 : Not Available : 
+vol-05838250f643eab85 : 2022-07-28 18:28:06 : Not Available : 
+",,,
+A-000318,,,,LOW,10036 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-05 14:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-05 14:00:00 to 2022-08-05 14:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 24 MB
+Variation   : 10036 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 172.31.10.21, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.121.25, 104.18.125.25, 104.18.124.25, 104.18.123.25, 34.75.54.101]: : :",,,
+A-000034,AR-1035,,,LOW,Ensure Amazon RDS database instances have deletion protection enabled,Policy,ACStaging,2022-08-08 06:56:46,AWS,Armorcode-dev-qa,"dev-aurora-node0 us-west-2 dev-aurora-node0 : 2021-03-15 06:58:45 : Not Available : 
+",,,
+A-000011,AR-203,,,LOW,Ensure there aren't an excessive number of security groups in the account,Policy,ACStaging,2022-08-09 09:29:20,AWS,Armorcode-dev-qa,"Limit the number of security groups to prevent accidental authorizations. Total 128  : 2022-08-09 09:29:19 : Not Available : 
+",,,
+A-000280,ARC-63,,,HIGH,Ensure access keys are not older than 90 days in order to reduce accidental exposures,Policy,ACStaging,2022-08-02 12:49:09,AWS,Armorcode-dev-qa,"Access key 1 is Enabled for user: es-local-access. It was created: Mon May 02 16:42:38 UTC 2022.  : 2022-07-31 16:55:52 : Not Available : 
+Access key 1 is Enabled for user: ses-devqa-us-east-2. It was created: Wed May 04 12:02:16 UTC 2022.  : 2022-08-02 12:49:09 : Not Available : 
+Access key 1 is Enabled for user: bhumita. It was created: Wed Apr 27 05:58:06 UTC 2022.  : 2022-07-26 06:00:21 : Not Available : 
+Access key 2 is Enabled for user: devqa-aditya. It was created: Wed Apr 27 07:06:32 UTC 2022.  : 2022-07-26 08:02:56 : Not Available : 
+Access key 1 is Enabled for user: ses-smtp-armorcode-devqa. It was created: Wed May 04 09:10:41 UTC 2022.  : 2022-08-02 09:45:10 : Not Available : 
+Access key 1 is Enabled for user: devqa-milind. It was created: Sat Apr 02 13:27:17 UTC 2022.  : 2022-07-01 14:18:40 : Not Available : 
+Access key 1 is Enabled for user: devqa-darwin-admin. It was created: Tue Mar 22 10:34:45 UTC 2022.  : 2022-06-20 10:41:35 : Not Available : 
+",,,
+A-000279,AR-504,,,LOW,Ensure access keys are rotated every 90 days or less,Policy,CIS 1.3,2022-08-01 12:18:35,AWS,Armorcode-dev-qa,"Access Key 1 for user ses-devqa-us-east-2 was last rotated on: Wed May 04 12:02:16 UTC 2022.  : 2022-08-01 12:18:34 : Not Available : 
+Access Key 2 for user devqa-aditya was last rotated on: Wed Apr 27 07:06:32 UTC 2022.  : 2022-07-25 07:27:54 : Not Available : 
+Access Key 1 for user devqa-darwin-admin was last rotated on: Tue Mar 22 10:34:45 UTC 2022.  : 2022-06-19 11:15:27 : Not Available : 
+Access Key 1 for user es-local-access was last rotated on: Mon May 02 16:42:38 UTC 2022.  : 2022-07-30 17:28:15 : Not Available : 
+Access Key 1 for user bhumita was last rotated on: Wed Apr 27 05:58:06 UTC 2022.  : 2022-07-25 06:26:04 : Not Available : 
+Access Key 1 for user ses-smtp-armorcode-devqa was last rotated on: Wed May 04 09:10:41 UTC 2022.  : 2022-08-01 09:15:19 : Not Available : 
+Access Key 1 for user devqa-milind was last rotated on: Sat Apr 02 13:27:17 UTC 2022.  : 2022-06-30 13:48:37 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000081,AR-1061,,,HIGH,Ensure IAM Users Receive Permissions Only Through Groups,Policy,CIS 1.3,2022-07-26 10:08:30,AWS,Armorcode-dev-qa,"Direct policies attached to user: devqa-sp-admin.  : 2021-01-25 07:16:51 : devqa-sp-admin : 
+Direct policies attached to user: ses-devqa-us-east-2.  : 2022-05-04 12:38:23 : Not Available : 
+Direct policies attached to user: devqa-mayank.pande-admin.  : 2021-01-25 07:16:51 : devqa-mayank.pande-admin : 
+Direct policies attached to user: devqa-deepak-admin.  : 2021-03-04 13:34:27 : Not Available : 
+Direct policies attached to user: es-local-access.  : 2022-01-08 04:04:09 : Not Available : 
+Direct policies attached to user: ses-smtp-armorcode-devqa.  : 2022-05-04 09:35:32 : Not Available : 
+Direct policies attached to user: devqa-mp-admin.  : 2021-01-25 07:16:51 : devqa-mp-admin : 
+Direct policies attached to user: devqa-ak-admin.  : 2021-01-25 07:16:51 : devqa-ak-admin : 
+Direct policies attached to user: devqa-rs-admin.  : 2021-01-25 07:16:51 : Not Available : 
+Direct policies attached to user: devqa-gs-admin.  : 2021-01-25 07:16:51 : Not Available : 
+Direct policies attached to user: devqa-abhinav-admin.  : 2021-01-25 07:16:51 : devqa-abhinav-admin : 
+Direct policies attached to user: devqa-sai.potdar-admin.  : 2021-04-24 13:30:09 : devqa-sai.potdar-admin : 
+Direct policies attached to user: devqa-lk-admin.  : 2021-01-25 07:16:51 : devqa-lk-admin : 
+Direct policies attached to user: osquery-test.  : 2022-07-26 10:08:30 : Not Available : 
+Direct policies attached to user: devqa-hs-admin.  : 2021-02-05 11:57:20 : Not Available : 
+Direct policies attached to user: devqa-yj-admin.  : 2021-01-25 07:16:51 : devqa-yj-admin : 
+Direct policies attached to user: devqa-sk-admin.  : 2021-01-25 07:16:51 : devqa-sk-admin : 
+",,,
+A-000004,AR-107,,,MEDIUM,Ensure IAM policies are attached only to groups or roles,Policy,ACStaging,2022-07-26 10:08:31,AWS,Armorcode-dev-qa,"osquery-test : 2022-07-26 10:08:30 : Not Available : 
+devqa-ak-admin : 2020-10-23 07:27:16 : devqa-ak-admin : 
+devqa-hs-admin : 2021-02-05 11:57:20 : Not Available : 
+devqa-deepak-admin : 2021-03-04 13:34:26 : Not Available : 
+devqa-abhinav-admin : 2020-12-14 08:03:20 : devqa-abhinav-admin : 
+ses-smtp-armorcode-devqa : 2022-05-04 09:35:31 : Not Available : 
+ses-devqa-us-east-2 : 2022-05-04 12:38:23 : Not Available : 
+devqa-sai.potdar-admin : 2021-04-24 13:30:09 : devqa-sai.potdar-admin : 
+devqa-mayank.pande-admin : 2021-01-04 07:25:39 : devqa-mayank.pande-admin : 
+devqa-lk-admin : 2020-10-23 07:27:16 : devqa-lk-admin : 
+es-local-access : 2022-01-08 04:04:08 : Not Available : 
+devqa-sk-admin : 2020-10-23 07:27:16 : devqa-sk-admin : 
+devqa-yj-admin : 2020-12-23 16:33:33 : devqa-yj-admin : 
+devqa-mp-admin : 2020-10-23 07:27:16 : devqa-mp-admin : 
+devqa-gs-admin : 2020-10-23 07:27:16 : Not Available : 
+devqa-rs-admin : 2020-11-25 13:49:57 : Not Available : 
+devqa-sp-admin : 2020-12-23 13:31:40 : devqa-sp-admin : 
+",,,
+A-000134,AR-1045,,,CRITICAL,"Flag Security Groups that allow inbound traffic on ports other than 80/443, attached to instances that are running, have a public IP, and are  in a subnet with NACLs that also allow inbound traffic on those ports",Policy,ACStaging,2022-08-12 12:02:28,AWS,Armorcode-dev-qa,"launch-wizard-27(sg-0340c4ae2a1be6432) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-08-10 10:00:05 : devqa-lk-admin : 
+launch-wizard-34(sg-067ed5b05dde4a531) contains ingress from 0.0.0.0/0 to port(s): (17472) for region us-east-2.  : 2022-07-04 10:46:32 : devqa-navin-admin : 
+launch-wizard-5(sg-00e4331cc89d1083c) contains ingress from 0.0.0.0/0 to port(s): (8080,17472,9000,17473,8081) for region us-east-2.  : 2022-08-09 08:28:11 : devqa-lk-admin : 
+launch-wizard-38(sg-0afcc110df7d1559f) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-07-11 10:12:51 : devqa-lk-admin : 
+launch-wizard-35(sg-0e7224e945821c6e6) contains ingress from 0.0.0.0/0 to port(s): (9000) for region us-east-2.  : 2022-06-28 17:50:08 : Not Available : 
+launch-wizard-18(sg-011ec47168d02f416) contains ingress from 0.0.0.0/0 to port(s): (9000) for region us-east-2.  : 2022-04-21 08:39:41 : Not Available : 
+launch-wizard-10(sg-09398d394ac865519) contains ingress from 0.0.0.0/0 to port(s): (1433(MS SQL Server),8080,445(Windows Shares)) for region us-east-2.  : 2022-08-12 12:02:27 : Not Available : 
+partner-jenkins(sg-06390d480663ec108) contains ingress from 0.0.0.0/0 to port(s): (8080,8080) for region us-west-2.  : 2021-06-22 11:50:15 : Not Available : internal testing requirement
+appsec_splunk_sg(sg-0dd28e4fa6657023b) contains ingress from 0.0.0.0/0 to port(s): (8000,8089) for region us-east-2.  : 2022-01-19 10:18:55 : Not Available : 
+qa-CxServer-sg(sg-070e706ea45769813) contains ingress from 0.0.0.0/0 to port(s): (-1) for region us-west-2.  : 2021-12-09 13:41:54 : Not Available : 
+launch-wizard-15(sg-02a753a199a65aa44) contains ingress from 0.0.0.0/0 to port(s): (17472,17473,9090) for region us-east-2.  : 2022-08-09 08:28:11 : Not Available : 
+stage-coverity(sg-026d338ff3ff588ff) contains ingress from 0.0.0.0/0 to port(s): (17472,8080,9999,22(SSH),17473) for region us-east-2.  : 2022-07-04 14:52:31 : devqa-sp-admin : 
+launch-wizard-33(sg-0b27fa8d3d19ed629) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-07-05 09:14:31 : devqa-lk-admin : 
+launch-wizard-39(sg-03862ca805bebea58) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-08-10 11:01:20 : devqa-lk-admin : 
+stage-blackduckhub(sg-07bed3d33a3f5530d) contains ingress from 0.0.0.0/0 to port(s): (17472,17473) for region us-east-2.  : 2022-07-04 14:52:31 : devqa-yj-admin : 
+",,,
+A-000022,AR-701,,,LOW,Ensure IAM instance roles are used for AWS resource access from instances(Unscored),Policy,CIS 1.3,2022-08-09 09:29:20,AWS,Armorcode-dev-qa,"i-0da6742faca07588a : 2021-04-21 11:24:04 : devqa-lk-admin : 
+i-033cf4776a13774fd : 2022-06-28 16:48:48 : Not Available : 
+i-0b7c8b9bd65bb3b09 : 2022-02-11 07:15:35 : devqa-lk-admin : 
+i-0e4725592330a9374 : 2021-12-09 13:41:54 : devqa-lk-admin : 
+i-035e1a59c05488632 : 2022-02-14 07:56:11 : Not Available : 
+i-0f1d8239942054b17 : 2021-07-26 08:02:07 : Not Available : 
+i-00c795afd79223d08 : 2021-05-25 08:09:17 : Not Available : 
+i-061005bbb0f8e111d : 2022-07-11 10:12:51 : Not Available : 
+i-002f4c45c0b7bd176 : 2022-05-11 08:15:35 : devqa-abhinav-admin : 
+i-0b9a558de63327a44 : 2022-01-27 16:42:37 : devqa-lk-admin : 
+i-08ab02cf58509dc61 : 2020-12-23 14:31:57 : Not Available : 
+i-09c2116514bc9f867 : 2021-06-22 09:44:14 : Not Available : 
+i-0bbf17ad95d9510d2 : 2021-07-27 06:51:13 : devqa-lk-admin : 
+i-0b85f0fd72f8afbc4 : 2022-06-15 12:00:51 : Not Available : 
+i-06a0c7c274fc2ef70 : 2022-06-20 06:36:59 : devqa-lk-admin : 
+i-00802b3b75f834568 : 2021-09-28 14:49:45 : devqa-dy-admin : 
+i-00f9559ebf446ae39 : 2021-09-17 16:22:36 : Not Available : 
+i-003c031563e12002b : 2021-11-11 12:02:48 : Not Available : 
+i-049ae7358b9fb0c8f : 2021-09-21 05:05:54 : devqa-abhinav-admin : 
+i-0d2449fc33e9b06b4 : 2021-08-17 13:20:29 : Not Available : 
+i-0d7e2088d5d9ab9bb : 2020-12-23 14:31:57 : devqa-navin-admin : 
+i-079d944c8820efe40 : 2022-07-25 13:38:18 : devqa-navin-admin : 
+i-0a75e2428ca05ddeb : 2021-11-08 10:40:24 : Not Available : 
+i-07b6fc8dbc46c8646 : 2022-03-04 06:08:20 : Not Available : 
+i-0066e57dc87b3eee8 : 2022-08-09 09:29:19 : Not Available : 
+i-0227be0e736534f29 : 2021-12-24 10:05:26 : Not Available : 
+i-067afc8f0842c35c0 : 2022-02-08 14:38:08 : devqa-lk-admin : 
+i-09375f1999473999f : 2021-09-22 15:46:39 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000047,AR-1003,,,MEDIUM,Flag resource(s) with public IP and Security Group with ingress from any source to one or more ports,Policy,ACStaging,2022-08-12 08:58:42,AWS,Armorcode-dev-qa,"qa-alb-pbe qa-alb-pbe-49635894.us-west-2.elb.amazonaws.com - LoadBalancer - port(s): (80) (443) : 2021-03-05 13:06:34 : Not Available : 
+stage-blackduck (i-08ab02cf58509dc61) - EC2 - port(s): (17472) (17473)... : 2022-07-04 14:52:31 : Not Available : 
+contrast-security (i-035e1a59c05488632) - EC2 - port(s): (17472) (17473)... : 2022-08-09 08:28:11 : Not Available : 
+Partner Jenkins (i-09c2116514bc9f867) - EC2 - port(s): (80) (8080)... : 2021-06-22 11:50:15 : Not Available : 
+checkmarx server (i-03ddf67e29b0a6c86) - EC2 - port(s): (80) : 2021-08-18 13:58:14 : Not Available : 
+tco-public-alb tco-public-alb-97305368.us-east-2.elb.amazonaws.com - LoadBalancer - port(s): (80) (443) : 2021-05-08 13:50:20 : Not Available : 
+Appsec-pro (i-07b6fc8dbc46c8646) - EC2 - port(s): (9000) : 2022-04-21 08:39:41 : Not Available : 
+dev-alb-pbe dev-alb-pbe-55086763.us-west-2.elb.amazonaws.com - LoadBalancer - port(s): (80) (443) : 2021-03-15 08:04:42 : am-stg-jenkins-s3(i-0d411ae3161c507c2) : 
+SonarQube_Prod (i-033cf4776a13774fd) - EC2 - port(s): (9000) : 2022-06-28 17:50:08 : Not Available : 
+Jira (i-061005bbb0f8e111d) - EC2 - port(s): (8080) : 2022-07-11 10:12:51 : Not Available : 
+grafana grafana-1644067330.us-west-2.elb.amazonaws.com - LoadBalancer - port(s): (80) (443) : 2021-03-03 09:04:40 : Not Available : 
+checkmarx-DB (i-01dd4a7ad4e14110e) - EC2 - port(s): (80) : 2021-08-18 13:58:14 : Not Available : 
+Burpsuite-entr-2022 (i-002f4c45c0b7bd176) - EC2 - port(s): (8080) : 2022-08-10 10:00:05 : devqa-abhinav-admin : 
+Tanos-Server (i-06a0c7c274fc2ef70) - EC2 - port(s): (17472) (80)... : 2022-07-04 10:46:32 : devqa-lk-admin : 
+AppSec_Test_server (i-0b9a558de63327a44) - EC2 - port(s): (8080) (443)... : 2022-08-05 09:27:00 : devqa-lk-admin : 
+Wiremock new Server (i-0b85f0fd72f8afbc4) - EC2 - port(s): (8080) : 2022-08-10 08:58:55 : Not Available : 
+traceable (i-0066e57dc87b3eee8) - EC2 - port(s): (8080) : 2022-08-10 11:01:20 : Not Available : 
+Appsec_Splunk (i-003c031563e12002b) - EC2 - port(s): (8000) (8089) : 2022-01-19 10:18:55 : Not Available : 
+Nginx-test-github (i-0ec05a0aad65c2847) - EC2 - port(s): (80) : 2022-02-16 07:18:45 : Not Available : 
+stage-coverity (i-0d7e2088d5d9ab9bb) - EC2 - port(s): (17472) (8080)... : 2022-07-04 14:52:31 : devqa-navin-admin : 
+Windows-Server-DAST_Scan (i-0bbf17ad95d9510d2) - EC2 - port(s): (1433) (8080)... : 2022-08-12 08:58:41 : devqa-lk-admin : 
+",,,
+A-000322,,,,LOW,3443 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-13 10:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-13 09:30:00 to 2022-08-13 10:00:00
+Total Traffic  : 15 GB
+Expected Traffic  : 444 MB
+Variation   : 3443 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.21.62, 172.31.24.116, 172.31.26.224, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.121.25, 104.18.123.25, 104.18.124.25, 104.18.122.25, 35.233.143.122]: : :",,,
+A-000175,ARC-64,,,MEDIUM,Review users who have not logged in within the last 60 days,Policy,ACStaging,2022-08-14 06:54:15,AWS,Armorcode-dev-qa,"ses-smtp-armorcode-devqa : 2022-07-02 09:43:13 : Not Available : 
+devqa-varsha-admin : 2022-08-13 23:45:02 : Not Available : 
+ses-devqa-us-east-2 : 2022-07-02 13:47:44 : Not Available : 
+mark.lambert : 2022-08-14 06:54:13 : Not Available : 
+devqa-rs-admin : 2021-12-27 10:05:09 : Not Available : 
+",,,
+A-000325,,,,CRITICAL,Cloud Optix API sync failed for environment: Armorcode-dev-qa,Cloud Optix System Alerts,,2022-08-16 21:34:22,AWS,Armorcode-dev-qa,: : :,,,
+A-000027,AR-1033,,,LOW,Total Number of admins is more than 10% of total users,Policy,ACStaging,2022-06-13 05:49:19,AWS,Armorcode-dev-qa,"User: devqa-priyansh-admin  : 2022-06-13 05:49:18 : devqa-priyansh-admin : 
+User: devqa-ak-admin  : 2020-10-23 07:27:19 : devqa-ak-admin : 
+User: devqa-yj-admin  : 2021-01-07 17:51:37 : devqa-yj-admin : 
+User: mark.lambert  : 2022-04-06 06:54:20 : Not Available : 
+User: devqa-mayank.pande-admin  : 2021-01-07 17:51:37 : devqa-mayank.pande-admin : 
+User: devqa-navin-admin  : 2022-04-18 09:21:17 : devqa-navin-admin : 
+User: devqa-rs-admin  : 2021-01-07 17:51:37 : Not Available : 
+User: devqa-deepak-admin  : 2021-03-04 13:34:26 : Not Available : 
+User: devqa-darwin-admin  : 2022-01-20 10:41:20 : devqa-darwin-admin : 
+User: devqa-sp-admin  : 2021-01-07 17:51:37 : devqa-sp-admin : 
+User: devqa-dy-admin  : 2021-05-10 08:45:44 : devqa-dy-admin : 
+User: dev-saqeeb-admin  : 2021-09-09 10:17:44 : Not Available : 
+User: devqa-kunal-admin  : 2022-06-13 05:49:18 : devqa-kunal-admin : 
+User: devqa-abhinav-admin  : 2021-01-07 17:51:37 : devqa-abhinav-admin : 
+User: devqa-aditya  : 2022-04-11 17:40:40 : Not Available : 
+User: devqa-milind  : 2022-02-09 06:00:10 : devqa-milind : 
+User: devqa-prasanna-admin  : 2022-04-13 10:19:52 : Not Available : 
+User: devqa-gargeyee-admin  : 2022-06-10 11:24:58 : Not Available : 
+User: devqa-sk-admin  : 2020-10-23 07:27:19 : devqa-sk-admin : 
+User: devqa-hs-admin  : 2021-02-05 11:57:20 : Not Available : 
+User: devqa-lk-admin  : 2020-10-23 07:27:19 : devqa-lk-admin : 
+User: devqa-varsha-admin  : 2022-06-13 05:49:18 : Not Available : 
+User: devqa-sai.potdar-admin  : 2021-04-24 13:30:09 : devqa-sai.potdar-admin : 
+User: devqa-gs-admin  : 2020-10-23 07:27:19 : Not Available : 
+User: devqa-mp-admin  : 2020-10-23 07:27:19 : devqa-mp-admin : 
+User: bhumita  : 2022-04-27 06:32:15 : bhumita : 
+",,,
+A-000326,,,,HIGH,Anomalous Activity by User(s),Anomaly,,2022-08-17 01:33:42,AWS,Armorcode-dev-qa,"devqa-dy-admin : Not Available : Not Available : 
+",,,
+A-000275,,,,LOW,5699 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-12 11:40:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-12 11:00:00 to 2022-05-12 11:30:00
+Total Traffic  : 3 GB
+Expected Traffic  : 67 MB
+Variation   : 5699 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.122.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000276,,,,LOW,19979 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-20 04:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-20 04:00:00 to 2022-05-20 04:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 10 MB
+Variation   : 19979 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [52.219.97.58, 107.22.181.250, 52.219.142.50, 52.95.16.182, 52.95.20.170]: : :",,,
+A-000277,,,,LOW,48878 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-24 12:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-24 12:00:00 to 2022-05-24 12:30:00
+Total Traffic  : 29 GB
+Expected Traffic  : 60 MB
+Variation   : 48878 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.123.25, 104.18.122.25, 104.18.121.25]: : :",,,
+A-000278,,,,LOW,Login from a new location,Anomaly,,2022-05-30 10:56:33,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : cad0218a-9beb-49db-b9d1-fb2452f74760
+			    Account Id          : 034025401910
+			    User Name           : devqa-prasanna-admin
+			    Login Type          : Console
+			    Login IP            : 52.42.248.140
+			    Previous Login IP   : 122.182.199.87
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Bengaluru-Karnataka-India (ISP : Bharti Airtel)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+			    Event Time          : 2022-05-30 10:55:22 +0000
+			    Previous Event Time : 2022-05-04 12:37:39 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000245,,,,LOW,207565 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-30 10:10:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-30 09:30:00 to 2022-03-30 10:00:00
+Total Traffic  : 29 GB
+Expected Traffic  : 14 MB
+Variation   : 207565 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.123.25, 104.18.121.25, 104.18.124.25, 104.18.125.25, 104.18.122.25]: : :",,,
+A-000246,,,,LOW,83512 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-01 09:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-01 09:00:00 to 2022-04-01 09:30:00
+Total Traffic  : 7 GB
+Expected Traffic  : 8 MB
+Variation   : 83512 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.125.25, 104.18.123.25, 104.18.121.25, 104.18.122.25, 104.18.124.25]: : :",,,
+A-000247,,,,LOW,2502 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-03 09:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-03 09:00:00 to 2022-04-03 09:30:00
+Total Traffic  : 12 GB
+Expected Traffic  : 463 MB
+Variation   : 2502 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.125.25, 104.18.121.25, 104.18.122.25]: : :",,,
+A-000251,,,,LOW,Login from a new location,Anomaly,,2022-04-05 20:18:57,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 827431cf-8d8c-4cf6-9928-72d803a456d1
+			    Account Id          : 034025401910
+			    User Name           : devqa-abhinav-admin
+			    Login Type          : Console
+			    Login IP            : 110.173.191.186
+			    Previous Login IP   : 61.2.224.121
+			    Login Location      : New Delhi-National Capital Territory of Delhi-India (ISP : PRIMENET)
+			    Previous Location   : Ahmedabad-Gujarat-India (ISP : BSNL Internet)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36
+			    Event Time          : 2022-04-05 20:18:30 +0000
+			    Previous Event Time : 2022-04-01 06:47:49 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000244,,,,LOW,49202 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-28 10:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-28 09:30:00 to 2022-03-28 10:00:00
+Total Traffic  : 23 GB
+Expected Traffic  : 47 MB
+Variation   : 49202 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.124.25, 104.18.125.25, 104.18.121.25]: : :",,,
+A-000240,,,,LOW,32586 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-18 14:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-18 14:00:00 to 2022-03-18 14:30:00
+Total Traffic  : 4 GB
+Expected Traffic  : 13 MB
+Variation   : 32586 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.122.25, 104.18.125.25, 104.18.124.25, 104.18.121.25, 104.18.123.25]: : :",,,
+A-000101,AR-205,,,LOW,Ensure that VPCs have multiple subnets to provide a layered architecture,Policy,ACStaging,2021-11-09 06:04:04,AWS,Armorcode-dev-qa,"vpc-0531ceee869a8847e : 2021-11-09 06:04:03 : devqa-dy-admin : 
+vpc-0f66b2f7fcfba41f8 : 2021-03-08 11:19:34 : crest-keyur.barapatre : 
+",,,
+A-000103,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-11 05:24:34,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : d31fbc0b-f552-4521-970a-f0b8865dacf5
+			    Account Id          : 034025401910
+			    User Name           : crest-lay.shah
+			    Login Type          : Console
+			    Login IP            : 52.11.179.118
+			    Previous Login IP   : 122.170.77.201
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Ahmedabad-Gujarat-India (ISP : BHARTI)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36
+			    Event Time          : 2021-03-11 05:13:40 +0000
+			    Previous Event Time : 2021-03-03 05:44:51 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000109,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-29 08:00:02,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 102629fa-dd63-4ff2-8ef9-b6946a5a696c
+			    Account Id          : 034025401910
+			    User Name           : devqa-sp-admin
+			    Login Type          : Console
+			    Login IP            : 208.65.109.53
+			    Previous Login IP   : 103.215.148.104
+			    Login Location      : Palo Alto-California-United States (ISP : Telx)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Cloudnet Communications Pvt Ltd)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36
+			    Event Time          : 2021-03-29 07:50:38 +0000
+			    Previous Event Time : 2021-03-27 08:33:13 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000110,,,,LOW,Login from a new location,Anomaly,,2021-03-30 04:42:55,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 6705e095-d5a7-449e-b640-e944b92ef3de
+			    Account Id          : 034025401910
+			    User Name           : devqa-gs-admin
+			    Login Type          : Console
+			    Login IP            : 157.37.222.11
+			    Previous Login IP   : 110.226.3.233
+			    Login Location      : National Capital Territory of Delhi-India (ISP : Reliance Jio Infocomm Limited)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Bharti Airtel)
+			    User Agent          : Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:86.0) Gecko/20100101 Firefox/86.0
+			    Event Time          : 2021-03-30 04:36:02 +0000
+			    Previous Event Time : 2021-03-26 05:13:25 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000111,,,,LOW,Frequent logins from different locations,Anomaly,,2021-04-01 04:38:53,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : cf53f1e6-ab9c-45da-a389-b7b6aa5ec153
+			    Account Id          : 034025401910
+			    User Name           : devqa-mp-admin
+			    Login Type          : Console
+			    Login IP            : 54.190.125.68
+			    Previous Login IP   : 122.177.9.134
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Ghaziabad-Uttar Pradesh-India (ISP : Bharti Airtel)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+			    Event Time          : 2021-04-01 04:32:06 +0000
+			    Previous Event Time : 2021-03-31 06:31:08 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000107,,,,LOW,Frequent logins from different locations,Anomaly,,2021-03-19 05:38:52,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : a1d5cdd5-a7a2-4007-b62d-6e6008583c6f
+			    Account Id          : 034025401910
+			    User Name           : crest-dixit.hihoriya
+			    Login Type          : Console
+			    Login IP            : 44.241.101.194
+			    Previous Login IP   : 150.107.241.142
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Surat-Gujarat-India (ISP : Gujarat Telelik Pvt Ltd)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+			    Event Time          : 2021-03-19 05:31:58 +0000
+			    Previous Event Time : 2021-03-18 13:04:08 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000112,,,,LOW,Frequent logins from different locations,Anomaly,,2021-04-06 15:25:06,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern. This user usually logs in from (Maharashtra-India) but recently logged in from (Portland-Oregon-United States) 1 time(s). This may be because the user has travelled from India to United States in the recent past.
+				Event Id            : 09efe316-fbde-491b-aeb9-3ffc80ed77b3
+			    Account Id          : 034025401910
+			    User Name           : devqa-sk-admin
+			    Login Type          : Console
+			    Login IP            : 44.234.218.144
+			    Previous Login IP   : 44.241.101.194
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+			    Event Time          : 2021-04-06 15:14:15 +0000
+			    Previous Event Time : 2021-03-23 13:21:29 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000176,,,,LOW,20278 % increase in outbound traffic on destination port '443',Anomaly,,2021-12-24 13:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-12-24 12:30:00 to 2021-12-24 13:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 12 MB
+Variation   : 20278 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.0.25, 10.0.20.219, 10.0.49.106, 172.31.11.115]
+Top Destination IPs   : [99.84.173.25, 52.85.91.50, 65.8.56.21, 99.84.173.99, 99.84.173.27]: : :",,,
+A-000178,,,,LOW,Frequent logins from different locations,Anomaly,,2022-01-05 10:22:43,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 4f882d08-3579-4612-89b5-246ec91f9f3d
+			    Account Id          : 034025401910
+			    User Name           : devqa-lk-admin
+			    Login Type          : Console
+			    Login IP            : 52.12.16.52
+			    Previous Login IP   : 152.57.14.212
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Deolāli-Maharashtra-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36
+			    Event Time          : 2022-01-05 10:20:27 +0000
+			    Previous Event Time : 2022-01-04 03:23:52 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000163,,,,LOW,1114 % increase in outbound traffic on destination port '443',Anomaly,,2021-09-21 05:40:40,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-09-21 05:00:00 to 2021-09-21 05:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 180 MB
+Variation   : 1114 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.91.140, 10.0.25.211, 172.31.33.102, 10.0.5.141, 10.0.19.124]
+Top Destination IPs   : [104.18.125.25, 99.86.61.94, 99.86.61.79, 52.218.170.98, 3.136.27.78]: : :",,,
+A-000166,,,,HIGH,Login from a new location,Anomaly,,2021-09-23 12:29:28,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : d9eabfd5-0180-4ab3-8a60-3a5769f3afef
+				Account Id          : 034025401910
+			    Role                : devqa-deepak-admin
+			    Login Type          : API
+			    Login IP            : 122.162.219.220
+			    Previous Login IP   : 203.192.212.80
+			    Login Location      : Gurgaon-Haryana-India (ISP : BHARTI)
+			    Previous Location   : National Capital Territory of Delhi-India (ISP : In2cable)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.12.64 Linux/5.4.116-64.217.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation cfg/retry-mode/standard
+			    Event Time          : 2021-09-23 12:28:00 +0000
+			    Previous Event Time : 2021-09-09 10:33:03 +0000
+			    Assumed Role        : False: : :",,,
+A-000140,,,,LOW,10491 % increase in outbound traffic on destination port '443',Anomaly,,2021-07-19 08:40:36,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-07-19 08:00:00 to 2021-07-19 08:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 25 MB
+Variation   : 10491 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.33.102, 10.0.5.141, 172.31.42.220]
+Top Destination IPs   : [96.7.17.140, 104.98.171.101, 52.218.177.113, 52.218.212.177, 35.224.73.200]: : :",,,
+A-000156,,,,LOW,931 % increase in outbound traffic on destination port '443',Anomaly,,2021-08-23 14:10:12,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-08-23 13:30:00 to 2021-08-23 14:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 211 MB
+Variation   : 931 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 10.0.25.211, 172.31.33.102, 172.31.15.199, 10.0.19.124]
+Top Destination IPs   : [54.186.194.20, 44.228.158.109, 35.82.241.96, 52.16.49.167, 52.218.153.233]: : :",,,
+A-000164,,,,HIGH,Login from a new location,Anomaly,,2021-09-21 14:40:12,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : d5e1bc00-8f6c-461a-b518-9e7320dcde36
+				Account Id          : 034025401910
+			    Role                : devqa-hs-admin
+			    Login Type          : API
+			    Login IP            : 117.212.223.152
+			    Previous Login IP   : 117.214.36.75
+			    Login Location      : Dadra and Nagar Haveli and Daman and Diu-India (ISP : BSNL Internet)
+			    Previous Location   : Cuttack-Oregon-India (ISP : BSNL Internet)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.12.64 Linux/5.4.116-64.217.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.302-b08 java/1.8.0_302 vendor/Oracle_Corporation cfg/retry-mode/standard
+			    Event Time          : 2021-09-21 14:40:06 +0000
+			    Previous Event Time : 2021-09-13 06:24:23 +0000
+			    Assumed Role        : False: : :",,,
+A-000234,,,,LOW,2487 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-04 10:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-04 10:00:00 to 2022-03-04 10:30:00
+Total Traffic  : 24 GB
+Expected Traffic  : 958 MB
+Variation   : 2487 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.118, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.125.25, 104.18.121.25, 104.18.124.25]: : :",,,
+A-000235,,,,LOW,3062 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-09 09:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-09 09:00:00 to 2022-03-09 09:30:00
+Total Traffic  : 6 GB
+Expected Traffic  : 216 MB
+Variation   : 3062 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.123.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000236,,,,LOW,7927 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-10 16:10:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-10 15:30:00 to 2022-03-10 16:00:00
+Total Traffic  : 7 GB
+Expected Traffic  : 89 MB
+Variation   : 7927 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.124.25, 104.18.122.25, 104.18.125.25, 52.84.18.128, 104.18.123.25]: : :",,,
+A-000238,,,,LOW,53587 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-16 05:07:26,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-15 16:00:00 to 2022-03-15 16:30:00
+Total Traffic  : 12 GB
+Expected Traffic  : 24 MB
+Variation   : 53587 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.125.25, 104.18.124.25, 104.18.121.25]: : :",,,
+A-000241,,,,LOW,33500 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-20 14:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-20 14:00:00 to 2022-03-20 14:30:00
+Total Traffic  : 4 GB
+Expected Traffic  : 13 MB
+Variation   : 33500 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.123.25, 104.18.124.25, 104.18.125.25, 104.18.121.25, 104.18.122.25]: : :",,,
+A-000233,,,,LOW,91306 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-03 09:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-03 09:00:00 to 2022-03-03 09:30:00
+Total Traffic  : 16 GB
+Expected Traffic  : 18 MB
+Variation   : 91306 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.125.25, 104.18.123.25, 104.18.124.25, 104.18.121.25]: : :",,,
+A-000242,,,,LOW,45305 % increase in outbound traffic on destination port '443',Anomaly,,2022-03-22 14:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-03-22 14:00:00 to 2022-03-22 14:30:00
+Total Traffic  : 6 GB
+Expected Traffic  : 14 MB
+Variation   : 45305 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.121.25, 104.18.122.25, 104.18.123.25]: : :",,,
+A-000005,AR-522,,,LOW,Ensure a support role has been created to manage incidents with AWS Support,Policy,CIS 1.3,2020-10-23 07:27:19,AWS,Armorcode-dev-qa,"AWS Support Access role is not associated with any Role, User or Group.  : 2020-10-23 07:27:16 : Not Available : 
+",,,
+A-000061,,,,LOW,8982 % increase in outbound traffic on destination port '443',Anomaly,,2020-12-18 01:40:15,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2020-12-18 01:00:00 to 2020-12-18 01:30:00
+Total Traffic  : 10 GB
+Expected Traffic  : 116 MB
+Variation   : 8982 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.27.158, 10.0.57.144, 172.31.11.98, 172.31.5.114, 172.16.1.247]
+Top Destination IPs   : [52.216.29.230, 52.216.139.21, 52.216.141.142, 52.217.14.102, 52.217.96.78]: : :",,,
+A-000074,AR-304,,,MEDIUM,Ensure use of KMS CMK customer managed keys instead of AWS managed keys,Policy,"ACStaging,HIPAA,HIPAA final",2021-01-19 12:18:19,AWS,Armorcode-dev-qa,"Service : rds Region :us-west-2 Key ID :c5d99c83-2f31-4380-976d-deb7a1a6f641 : 2021-01-19 12:18:18 : Not Available : 
+",,,
+A-000075,,,,HIGH,Login from a new location,Anomaly,,2021-01-21 09:52:21,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 03023c69-f5fb-4552-88e5-940c73e6bbf7
+				Account Id          : 034025401910
+			    Role                : crest-keyur.barapatre
+			    Login Type          : API
+			    Login IP            : 54.184.122.186
+			    Previous Login IP   : 49.36.67.36
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Ahmedabad-Gujarat-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.11.829 Linux/4.9.230-0.1.ac.223.84.332.metal1.x86_64 OpenJDK_64-Bit_Server_VM/25.262-b10 java/1.8.0_262 vendor/Oracle_Corporation
+			    Event Time          : 2021-01-21 09:46:26 +0000
+			    Previous Event Time : 2021-01-21 09:30:54 +0000
+			    Assumed Role        : False: : :",,,
+A-000090,,,,LOW,Frequent logins from different locations,Anomaly,,2021-02-15 12:11:29,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 367b0ec0-195f-41cb-9682-f40336e4c6a1
+			    Account Id          : 034025401910
+			    User Name           : devqa-gs-admin
+			    Login Type          : Console
+			    Login IP            : 44.237.11.188
+			    Previous Login IP   : 182.70.82.183
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Bharti Airtel Limited)
+			    User Agent          : Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:85.0) Gecko/20100101 Firefox/85.0
+			    Event Time          : 2021-02-15 12:03:15 +0000
+			    Previous Event Time : 2021-02-12 08:47:43 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000204,,,,LOW,12983 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-17 19:10:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-17 18:30:00 to 2022-02-17 19:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 15 MB
+Variation   : 12983 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.19.124]
+Top Destination IPs   : [65.8.49.115, 65.8.49.119, 52.85.91.119, 65.8.49.21, 13.224.39.22]: : :",,,
+A-000207,,,,LOW,40897 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-22 15:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-22 15:00:00 to 2022-02-22 15:30:00
+Total Traffic  : 9 GB
+Expected Traffic  : 24 MB
+Variation   : 40897 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.124.25, 104.18.122.25, 104.18.123.25, 104.18.121.25, 104.18.125.25]: : :",,,
+A-000205,,,,LOW,58527 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-18 19:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-18 18:30:00 to 2022-02-18 19:00:00
+Total Traffic  : 9 GB
+Expected Traffic  : 15 MB
+Variation   : 58527 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 172.31.34.184]
+Top Destination IPs   : [104.18.123.25, 104.18.124.25, 104.18.121.25, 104.18.122.25, 104.18.125.25]: : :",,,
+A-000206,,,,LOW,44676 % increase in outbound traffic on destination port '443',Anomaly,,2022-02-20 15:40:05,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-02-20 15:00:00 to 2022-02-20 15:30:00
+Total Traffic  : 9 GB
+Expected Traffic  : 20 MB
+Variation   : 44676 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 10.0.20.219, 172.31.24.116, 10.0.49.106]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.125.25, 104.18.121.25, 104.18.122.25]: : :",,,
+A-000169,,,,LOW,Login from a new location,Anomaly,,2021-10-18 09:38:21,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : eb30c2c0-9833-4e7e-a79e-9c3455444730
+			    Account Id          : 034025401910
+			    User Name           : devqa-deepak-admin
+			    Login Type          : Console
+			    Login IP            : 169.149.205.144
+			    Previous Login IP   : 111.223.26.22
+			    Login Location      : Shimla-Himachal Pradesh-India (ISP : Reliance Jio Infocomm Limited)
+			    Previous Location   : National Capital Territory of Delhi-India (ISP : Benchmark Infotech)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+			    Event Time          : 2021-10-18 09:35:59 +0000
+			    Previous Event Time : 2021-10-14 09:34:18 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000170,,,,LOW,4531 % increase in outbound traffic on destination port '443',Anomaly,,2021-10-21 15:10:19,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2021-10-21 14:30:00 to 2021-10-21 15:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 47 MB
+Variation   : 4531 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.10.21, 172.31.15.199, 10.0.5.141, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [99.84.160.74, 99.84.160.83, 99.84.160.111, 99.86.63.17, 99.86.63.12]: : :",,,
+A-000117,,,,LOW,Frequent logins from different locations,Anomaly,,2021-04-17 16:39:12,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern. This user usually logs in from (Uttar Pradesh-India) but recently logged in from (Portland-Oregon-United States) 21 time(s). This may be because the user has travelled from India to United States in the recent past.
+				Event Id            : d2f91a2b-4240-498e-b842-ea0c99ca5dee
+			    Account Id          : 034025401910
+			    User Name           : devqa-mp-admin
+			    Login Type          : Console
+			    Login IP            : 52.36.159.228
+			    Previous Login IP   : 44.241.82.82
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+			    Event Time          : 2021-04-17 16:27:41 +0000
+			    Previous Event Time : 2021-04-16 15:03:06 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000130,,,,LOW,Login from a new location,Anomaly,,2021-05-15 07:22:41,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : c43a9ecc-1d80-4800-8608-19823c119f3f
+			    Account Id          : 034025401910
+			    User Name           : devqa-deepak-admin
+			    Login Type          : Console
+			    Login IP            : 45.118.157.142
+			    Previous Login IP   : 34.214.98.86
+			    Login Location      : Noida-Uttar Pradesh-India (ISP : Excitel Broadband Private Limited)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36
+			    Event Time          : 2021-05-15 07:13:31 +0000
+			    Previous Event Time : 2021-05-14 09:22:41 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000092,,,,HIGH,Login from a new location,Anomaly,,2021-02-17 10:18:12,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 4b6047d4-fc6d-4f2e-ba72-b5db2a84842b
+				Account Id          : 034025401910
+			    Role                : devqa-kanwar-admin
+			    Login Type          : API
+			    Login IP            : 106.204.140.130
+			    Previous Login IP   : 59.91.224.169
+			    Login Location      : National Capital Territory of Delhi-India (ISP : Bharti Airtel)
+			    Previous Location   : Bhiwani-Haryana-India (ISP : BSNL Internet)
+			    User Agent          : console.ec2.amazonaws.com
+			    Event Time          : 2021-02-17 10:10:38 +0000
+			    Previous Event Time : 2021-02-03 11:54:58 +0000
+			    Assumed Role        : False: : :",,,
+A-000094,,,,LOW,Frequent logins from different locations,Anomaly,,2021-02-24 12:53:56,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : fa2d4478-17a2-4f7b-b81a-5a88944f9779
+			    Account Id          : 034025401910
+			    User Name           : crest-lay.shah
+			    Login Type          : Console
+			    Login IP            : 52.11.179.118
+			    Previous Login IP   : 103.233.171.243
+			    Login Location      : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Modasa-Gujarat-India (ISP : INPL's)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+			    Event Time          : 2021-02-24 12:47:17 +0000
+			    Previous Event Time : 2021-02-22 08:41:37 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000095,,,,LOW,Frequent logins from different locations,Anomaly,,2021-02-26 07:04:06,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : dbdd3883-850c-4a5d-849e-77ec06922301
+			    Account Id          : 034025401910
+			    User Name           : devqa-sp-admin
+			    Login Type          : Console
+			    Login IP            : 208.65.109.53
+			    Previous Login IP   : 103.215.148.104
+			    Login Location      : Palo Alto-California-United States (ISP : Telx)
+			    Previous Location   : Pune-Maharashtra-India (ISP : Cloudnet Communications Pvt Ltd)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36
+			    Event Time          : 2021-02-26 06:57:03 +0000
+			    Previous Event Time : 2021-02-17 20:32:54 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000129,,,,HIGH,Login from a new location,Anomaly,,2021-05-14 16:02:18,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : e5cf7fba-a4fb-495f-83bb-25852b4e69db
+				Account Id          : 034025401910
+			    Role                : devqa-deepak-admin
+			    Login Type          : API
+			    Login IP            : 45.118.157.142
+			    Previous Login IP   : 54.213.100.96
+			    Login Location      : Noida-Uttar Pradesh-India (ISP : Excitel Broadband Private Limited)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : console.ec2.amazonaws.com
+			    Event Time          : 2021-05-14 15:57:20 +0000
+			    Previous Event Time : 2021-05-01 17:13:06 +0000
+			    Assumed Role        : False: : :",,,
+A-000253,,,,LOW,23865 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-12 10:10:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-12 09:30:00 to 2022-04-12 10:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 11 MB
+Variation   : 23865 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.123.25, 104.18.125.25, 104.18.121.25]: : :",,,
+A-000254,,,,LOW,44132 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-17 08:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-17 07:30:00 to 2022-04-17 08:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 10 MB
+Variation   : 44132 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.123.25, 104.18.121.25, 104.18.122.25]: : :",,,
+A-000261,,,,LOW,66516 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-25 14:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-25 14:00:00 to 2022-04-25 14:30:00
+Total Traffic  : 11 GB
+Expected Traffic  : 17 MB
+Variation   : 66516 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.123.25, 104.18.121.25, 104.18.125.25, 104.18.124.25]: : :",,,
+A-000262,,,,LOW,62460 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-26 14:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-26 14:00:00 to 2022-04-26 14:30:00
+Total Traffic  : 11 GB
+Expected Traffic  : 18 MB
+Variation   : 62460 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 10.0.36.216, 10.0.91.140]
+Top Destination IPs   : [104.18.121.25, 104.18.122.25, 104.18.123.25, 104.18.124.25, 104.18.125.25]: : :",,,
+A-000264,,,,LOW,145072 % increase in outbound traffic on destination port '443',Anomaly,,2022-04-28 12:10:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-04-28 11:30:00 to 2022-04-28 12:00:00
+Total Traffic  : 15 GB
+Expected Traffic  : 10 MB
+Variation   : 145072 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 10.0.20.219, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.125.25, 104.18.124.25, 104.18.122.25, 104.18.123.25, 104.18.121.25]: : :",,,
+A-000271,,,,LOW,29776 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-06 11:40:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-06 11:00:00 to 2022-05-06 11:30:00
+Total Traffic  : 3 GB
+Expected Traffic  : 12 MB
+Variation   : 29776 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.121.25, 104.18.122.25, 104.18.123.25]: : :",,,
+A-000273,,,,LOW,651 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-08 12:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-08 11:30:00 to 2022-05-08 12:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 603 MB
+Variation   : 651 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.15.199, 172.31.24.116, 10.0.49.106, 10.0.36.216]
+Top Destination IPs   : [104.18.122.25, 104.18.125.25, 104.18.123.25, 104.18.124.25, 104.18.121.25]: : :",,,
+A-000274,,,,LOW,32557 % increase in outbound traffic on destination port '443',Anomaly,,2022-05-10 11:40:06,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-05-10 11:00:00 to 2022-05-10 11:30:00
+Total Traffic  : 3 GB
+Expected Traffic  : 11 MB
+Variation   : 32557 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.15.199, 10.0.36.216]
+Top Destination IPs   : [104.18.121.25, 104.18.124.25, 104.18.122.25, 104.18.125.25, 104.18.123.25]: : :",,,
+A-000002,AR-509,,,LOW,Ensure IAM password policy requires minimum length of 14 or greater,Policy,"CIS 1.3,HIPAA,HIPAA final",2020-10-23 07:27:19,AWS,Armorcode-dev-qa,"'Minimum Password Length of 14 or Greater' policy not set  : 2020-10-23 07:27:16 : Not Available : 
+",Brute Force,T1110,https://attack.mitre.org/techniques/T1110/
+A-000212,AR-612,,,LOW,Ensure a log metric filter and alarm exist for changes to network gateways,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Application Layer Protocol,T1071,https://attack.mitre.org/techniques/T1071/
+A-000218,AR-601,,,MEDIUM,Ensure a log metric filter and alarm exist for unauthorized API calls,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:10,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Exploit Public-Facing Application,T1190,https://attack.mitre.org/techniques/T1190/
+A-000211,AR-1067,,,MEDIUM,Ensure a log metric filter and alarm exists for AWS Organizations changes,Policy,CIS 1.3,2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Account Manipulation,T1098,https://attack.mitre.org/techniques/T1098/
+A-000076,AR-1068,,,CRITICAL,Ensure no Network ACLs allow ingress from 0.0.0.0/0 to remote server administration ports,Policy,CIS 1.3,2021-11-09 06:04:04,AWS,Armorcode-dev-qa,"acl-06c49d48c37fc69a5 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-07-30 15:42:05 : Not Available : 
+acl-096f6135ef0f415ef contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-11-09 06:04:03 : Not Available : 
+acl-0f627705a4d939472 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-04-09 08:00:48 : Not Available : 
+acl-845dd2ef contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-01-25 07:16:51 : Not Available : 
+acl-0c807d86559a563e6 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-03-05 11:04:54 : Not Available : 
+acl-020378ecf1b432754 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-03-08 11:19:35 : Not Available : 
+acl-0b611f29642382679 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-01-25 07:16:51 : Not Available : 
+acl-031aa14bf29632799 contains ingress from 0.0.0.0/0 to port(s): (-1).  : 2021-04-09 06:59:43 : Not Available : 
+",External Remote Services,T1133,https://attack.mitre.org/techniques/T1133/
+A-000217,AR-608,,,LOW,Ensure a log metric filter and alarm exist for S3 bucket policy changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:09,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Hide Artifacts,T1564,https://attack.mitre.org/techniques/T1564/
+A-000223,AR-609,,,LOW,Ensure a log metric filter and alarm exist for AWS Config configuration changes,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:11,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Indicator Removal on Host,T1070,https://attack.mitre.org/techniques/T1070/
+A-000052,AR-101,AR-3,,CRITICAL,Ensure MFA is enabled for the 'root' account,Policy,"ACStaging,CIS 1.3,HIPAA,HIPAA final",2020-10-23 08:29:00,AWS,Armorcode-dev-qa,"MFA disabled for root account  : 2020-10-23 08:28:56 : Not Available : 
+",Account Manipulation,T1098,https://attack.mitre.org/techniques/T1098/
+A-000226,AR-602,,,MEDIUM,Ensure a log metric filter and alarm exist for Management Console sign-in without MFA,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:12,AWS,Armorcode-dev-qa,"No metric filters were found for Account: '034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000287,,,,LOW,50971 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-13 08:10:04,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-13 07:30:00 to 2022-06-13 08:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 9 MB
+Variation   : 50971 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 10.0.49.106, 172.31.11.24, 172.31.15.199]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.121.25, 104.18.124.25, 104.18.125.25]: : :",,,
+A-000288,,,,LOW,Login from a new location,Anomaly,,2022-06-14 07:07:02,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : e2836869-df26-4378-bd91-9af2ce76f58d
+			    Account Id          : 034025401910
+			    User Name           : devqa-dy-admin
+			    Login Type          : Console
+			    Login IP            : 122.161.86.20
+			    Previous Login IP   : 122.161.92.55
+			    Login Location      : Mumbai-Maharashtra-India (ISP : BHARTI)
+			    Previous Location   : Gurgaon-Haryana-India (ISP : BHARTI)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+			    Event Time          : 2022-06-14 07:04:54 +0000
+			    Previous Event Time : 2022-05-31 11:26:40 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000291,,,,LOW,Login from a new location,Anomaly,,2022-06-16 11:07:46,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 4a112b85-ca8f-4ed9-956c-46c4ce5a0530
+			    Account Id          : 034025401910
+			    User Name           : devqa-prasanna-admin
+			    Login Type          : Console
+			    Login IP            : 49.207.226.125
+			    Previous Login IP   : 52.89.105.13
+			    Login Location      : Mumbai-Maharashtra-India (ISP : ACT Fibernet)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36
+			    Event Time          : 2022-06-16 11:07:14 +0000
+			    Previous Event Time : 2022-06-15 03:44:45 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000293,,,,LOW,Frequent logins from different locations,Anomaly,,2022-06-20 11:46:57,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : 93595b3c-9e9c-412a-bc82-37ff08d9452e
+			    Account Id          : 034025401910
+			    User Name           : devqa-lk-admin
+			    Login Type          : Console
+			    Login IP            : 18.116.88.211
+			    Previous Login IP   : 152.57.169.27
+			    Login Location      : Dublin-Ohio-United States (ISP : Amazon.com, Inc.)
+			    Previous Location   : Mumbai-Maharashtra-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36
+			    Event Time          : 2022-06-20 11:45:01 +0000
+			    Previous Event Time : 2022-06-20 04:22:18 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000294,,,,LOW,168886 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-21 08:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-21 08:00:00 to 2022-06-21 08:30:00
+Total Traffic  : 17 GB
+Expected Traffic  : 10 MB
+Variation   : 168886 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.24.116, 172.31.10.21, 172.31.15.199, 172.31.24.118]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.122.25, 104.18.125.25, 104.18.121.25]: : :",,,
+A-000296,,,,LOW,8587 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-22 08:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-22 08:00:00 to 2022-06-22 08:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 26 MB
+Variation   : 8587 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.24.116, 172.31.15.199, 172.31.10.21]
+Top Destination IPs   : [104.18.121.25, 104.18.124.25, 104.18.125.25, 104.18.123.25, 104.18.174.23]: : :",,,
+A-000299,,,,LOW,48794 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-26 12:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-26 12:00:00 to 2022-06-26 12:30:00
+Total Traffic  : 5 GB
+Expected Traffic  : 11 MB
+Variation   : 48794 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.122.25, 104.18.121.25, 104.18.125.25, 104.18.123.25, 104.18.124.25]: : :",,,
+A-000300,,,,LOW,40126 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-27 12:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-27 12:00:00 to 2022-06-27 12:30:00
+Total Traffic  : 10 GB
+Expected Traffic  : 27 MB
+Variation   : 40126 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.122.25, 104.18.123.25, 104.18.121.25]: : :",,,
+A-000302,,,,LOW,38007 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-30 12:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-30 12:00:00 to 2022-06-30 12:30:00
+Total Traffic  : 9 GB
+Expected Traffic  : 23 MB
+Variation   : 38007 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.124.25, 104.18.125.25, 104.18.121.25, 104.18.122.25, 104.18.123.25]: : :",,,
+A-000301,,,,LOW,2880 % increase in outbound traffic on destination port '443',Anomaly,,2022-06-29 12:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-06-29 12:00:00 to 2022-06-29 12:30:00
+Total Traffic  : 12 GB
+Expected Traffic  : 411 MB
+Variation   : 2880 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.122.25, 104.18.121.25, 104.18.125.25, 104.18.123.25, 104.18.124.25]: : :",,,
+A-000070,AR-206,,,MEDIUM,Detect the use of an S3 bucket as a CloudFront origin without an origin access identity,Policy,ACStaging,2021-10-12 18:30:07,AWS,Armorcode-dev-qa,"Distribution : EFCGA7MNK1PVB, Domain : dmywzbnshq4xv.cloudfront.net, Origin : qa.us-west-2.armorcode.ai.s3.us-west-2.amazonaws.com : 2021-09-02 05:27:00 : Not Available : 
+Distribution : E2MFU80YX6YBGJ, Domain : duc4e58ffj1c7.cloudfront.net, Origin : devv1.us-west-2.armorcode.ai.s3.us-west-2.amazonaws.com : 2021-08-31 13:40:04 : Not Available : 
+",,,
+A-000303,,,,LOW,33311 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-06 13:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-06 12:30:00 to 2022-07-06 13:00:00
+Total Traffic  : 9 GB
+Expected Traffic  : 27 MB
+Variation   : 33311 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.125.25, 104.18.124.25, 104.18.123.25, 104.18.121.25, 104.18.122.25]: : :",,,
+A-000304,,,,LOW,1253 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-07 17:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-07 17:00:00 to 2022-07-07 17:30:00
+Total Traffic  : 2 GB
+Expected Traffic  : 167 MB
+Variation   : 1253 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.123.25, 104.18.125.25, 104.18.124.25, 104.18.122.25, 104.18.121.25]: : :",,,
+A-000026,AR-652,,,HIGH,Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389,Policy,CIS 1.3,2022-07-07 07:15:48,AWS,Armorcode-dev-qa,"launch-wizard-20(sg-018699ac48aaa82cd*) contains ingress from 0.0.0.0/0 to port 3389 for region us-east-2.""  : 2022-04-06 08:56:40 : devqa-abhinav-admin : Accepted
+launch-wizard-37(sg-01e9a2139e92096cd*) contains ingress from 0.0.0.0/0 to port 3389 for region us-east-2.""  : 2022-07-07 06:14:52 : devqa-lk-admin : 
+qa-CxServer-sg(sg-070e706ea45769813) contains ingress from 0.0.0.0/0 to port 3389 for region us-west-2.""  : 2021-12-09 13:41:54 : Not Available : Accepted
+launch-wizard-1(sg-05d4936dc7b60a335*) contains ingress from 0.0.0.0/0 to port 3389 for region us-west-2.""  : 2021-03-10 14:11:20 : Not Available : Accepted
+",External Remote Services,T1133,https://attack.mitre.org/techniques/T1133/
+A-000137,AR-651,,,HIGH,Ensure no security groups allow ingress from 0.0.0.0/0 to port 22,Policy,CIS 1.3,2022-07-07 07:15:48,AWS,Armorcode-dev-qa,"stage-coverity(sg-026d338ff3ff588ff) contains ingress from 0.0.0.0/0 to port 22 for region us-east-2.  : 2022-07-04 11:47:44 : devqa-sp-admin : 
+launch-wizard-10(sg-00747b17310bd210b*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-06-22 11:39:06 : devqa-milind : 
+armorcode-base-sg(sg-05299fe18c04803c6*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2021-12-29 07:44:30 : Not Available : 
+launch-wizard-12(sg-00e3a9f3c626f5525*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-07-04 10:46:32 : bhumita : 
+launch-wizard-37(sg-01e9a2139e92096cd*) contains ingress from 0.0.0.0/0 to port 22 for region us-east-2.  : 2022-07-07 06:14:52 : devqa-lk-admin : 
+launch-wizard-11(sg-0318c61b4f1283c8d*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-06-29 09:09:18 : devqa-milind : 
+launch-wizard-6(sg-098865ba283fce6f7*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-04-12 14:00:33 : devqa-milind : 
+launch-wizard-3(sg-01a91054a2b4f8899*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2021-12-28 15:29:39 : Not Available : 
+launch-wizard-4(sg-0e17b3f5d5e4c6872*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-04-02 14:19:10 : devqa-milind : 
+launch-wizard-7(sg-0d403bc45c4f41df9*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-05-02 09:29:00 : bhumita : 
+qa-CxServer-sg(sg-070e706ea45769813) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2021-12-09 13:41:54 : Not Available : 
+dy-test(sg-0e96e3fa0948ed91d*) contains ingress from 0.0.0.0/0 to port 22 for region us-east-2.  : 2022-01-24 06:08:39 : Not Available : 
+calculator-service(sg-046c9207098bfdb44*) contains ingress from 0.0.0.0/0 to port 22 for region us-east-2.  : 2021-09-09 15:25:34 : Not Available : Supress this alerts
+launch-wizard-5(sg-09b9aa53d90d2e7d5*) contains ingress from 0.0.0.0/0 to port 22 for region us-west-2.  : 2022-04-12 12:59:37 : devqa-milind : 
+Qualys Virtual Scanner Appliance -Pre-Authorized Scanning- HVM-2-7-29-5-AutogenByAWSMP-1(sg-0171a6778bd617220) contains ingress from 0.0.0.0/0 to port 22 for region us-east-2.  : 2022-02-08 14:38:08 : devqa-lk-admin : 
+",External Remote Services,T1133,https://attack.mitre.org/techniques/T1133/
+A-000308,,,,LOW,Login from a new location,Anomaly,,2022-07-13 05:42:44,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 266188ae-6499-4f34-b5f5-4354de64334f
+			    Account Id          : 034025401910
+			    User Name           : devqa-deepak-admin
+			    Login Type          : Console
+			    Login IP            : 27.63.32.185
+			    Previous Login IP   : 49.36.222.137
+			    Login Location      : Mumbai-Maharashtra-India (ISP : Bharti Airtel Limited)
+			    Previous Location   : Meerut-Uttar Pradesh-India (ISP : Reliance Jio Infocomm Limited)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+			    Event Time          : 2022-07-13 05:41:57 +0000
+			    Previous Event Time : 2022-04-05 06:04:28 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000309,,,,HIGH,Anomalous Activity by User(s),Anomaly,,2022-07-14 01:29:15,AWS,Armorcode-dev-qa,"devqa-navin-admin : Not Available : Not Available : 
+",,,
+A-000310,,,,LOW,30577 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-14 05:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-14 05:00:00 to 2022-07-14 05:30:00
+Total Traffic  : 10 GB
+Expected Traffic  : 34 MB
+Variation   : 30577 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.34.184]
+Top Destination IPs   : [104.18.124.25, 104.18.121.25, 104.18.123.25, 104.18.125.25, 104.18.122.25]: : :",,,
+A-000127,AR-702,,,LOW,Do not setup access keys during initial user setup for all IAM users that have a console password(Unscored),Policy,CIS 1.3,2022-07-26 11:09:48,AWS,Armorcode-dev-qa,"devqa-dy-admin : 2021-07-23 15:14:08 : Not Available : 
+devqa-lk-admin : 2022-03-09 14:30:26 : Not Available : 
+devqa-priyansh-admin : 2022-06-13 06:50:26 : Not Available : 
+bhumita : 2022-04-27 09:42:28 : Not Available : 
+devqa-darwin-admin : 2022-03-22 10:44:49 : Not Available : 
+devqa-sk-admin : 2022-05-26 10:15:31 : Not Available : 
+devqa-mayank.pande-admin : 2022-06-15 06:54:40 : Not Available : 
+devqa-aditya : 2022-04-12 04:51:30 : Not Available : 
+devqa-milind : 2022-04-02 14:19:10 : Not Available : 
+devqa-gs-admin : 2021-09-17 08:12:43 : Not Available : 
+devqa-yj-admin : 2022-07-26 11:09:47 : Not Available : 
+devqa-sp-admin : 2021-05-20 07:32:20 : Not Available : 
+devqa-navin-admin : 2022-07-11 12:14:48 : Not Available : 
+devqa-mp-admin : 2021-06-08 18:11:14 : Not Available : 
+",Valid Accounts,T1078,https://attack.mitre.org/techniques/T1078/
+A-000078,AR-1062,,,HIGH,Ensure that S3 Buckets are configured with 'Block public access (bucket settings)',Policy,CIS 1.3,2022-07-26 11:09:48,AWS,Armorcode-dev-qa,"cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:52 : bhumita : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : Accepted
+avid-cloudtrail-034025401910 : 2021-01-25 07:16:51 : Not Available : Accepted
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+armorcode : 2021-09-09 04:45:09 : devqa-mp-admin : Accepted
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : Accepted
+armorcode-cert-revocation-list : 2021-01-25 07:16:51 : Not Available : Accepted
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+docs2.armorcode.ai : 2021-10-20 08:24:05 : devqa-dy-admin : Accepted
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : Accepted
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : Accepted
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : Accepted
+elasticbeanstalk-us-east-2-034025401910 : 2021-01-25 07:16:51 : Not Available : Accepted
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : Accepted
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : Accepted
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:51 : Not Available : Accepted
+testbucketguardduty : 2022-07-25 09:31:02 : devqa-navin-admin : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : Accepted
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+ac-22-logs : 2021-08-21 10:31:42 : Not Available : Accepted
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : Accepted
+docs.armorcode.ai : 2021-05-31 11:36:35 : devqa-dy-admin : Accepted
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+elasticbeanstalk-ap-south-1-034025401910 : 2021-01-25 07:16:51 : Not Available : Accepted
+","""Search Open Websites/Domains,Exfiltration Over Web Service""","""T1593,T1567""","""https://attack.mitre.org/techniques/T1593/,https://attack.mitre.org/techniques/T1567/"""
+A-000024,AR-251,,,HIGH,Ensure S3 buckets do not allow public read/list permission,Policy,ACStaging,2022-08-02 15:52:55,AWS,Armorcode-dev-qa,"docs.armorcode.ai : 2021-05-31 11:36:35 : devqa-dy-admin : Accepted
+testbucketguardduty : 2022-08-02 15:52:54 : devqa-navin-admin : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : Accepted
+docs2.armorcode.ai : 2021-10-20 08:24:05 : devqa-dy-admin : Accepted
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:50 : Not Available : Accepted
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+",,,
+A-000114,AR-252,,,HIGH,Ensure S3 buckets do not allow public read/list bucket ACL permissions,Policy,ACStaging,2022-08-02 15:52:55,AWS,Armorcode-dev-qa,"testbucketguardduty : 2022-08-02 15:52:54 : devqa-navin-admin : 
+docs.armorcode.ai : 2021-08-02 08:27:35 : devqa-dy-admin : Accepted
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 12:05:06 : Not Available : Accepted
+",,,
+A-000314,,,,LOW,8237 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-31 08:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-31 07:30:00 to 2022-07-31 08:00:00
+Total Traffic  : 2 GB
+Expected Traffic  : 30 MB
+Variation   : 8237 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.122.25, 104.18.125.25, 104.18.121.25, 104.18.123.25, 104.18.124.25]: : :",,,
+A-000313,,,,LOW,18065 % increase in outbound traffic on destination port '443',Anomaly,,2022-07-29 13:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-07-29 12:30:00 to 2022-07-29 13:00:00
+Total Traffic  : 6 GB
+Expected Traffic  : 36 MB
+Variation   : 18065 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.24.116, 172.31.10.21, 172.31.15.199]
+Top Destination IPs   : [104.18.123.25, 104.18.122.25, 104.18.125.25, 104.18.124.25, 104.18.121.25]: : :",,,
+A-000315,,,,LOW,60424 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-01 08:40:03,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-01 08:00:00 to 2022-08-01 08:30:00
+Total Traffic  : 16 GB
+Expected Traffic  : 26 MB
+Variation   : 60424 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.10.21, 172.31.24.116, 172.31.15.199, 172.31.25.227]
+Top Destination IPs   : [104.18.122.25, 104.18.123.25, 104.18.121.25, 104.18.125.25, 104.18.124.25]: : :",,,
+A-000200,AR-503,,,LOW,Ensure credentials unused for 90 days or greater are disabled,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-08-01 13:19:26,AWS,Armorcode-dev-qa,"Access Key 2 last used by devqa-aditya on: Never.  : 2022-07-25 07:27:54 : Not Available : 
+Password last used by devqa-rs-admin on: Fri Oct 29 09:35:09 UTC 2021.  : 2022-01-26 10:18:07 : Not Available : 
+Access Key 1 last used by ses-devqa-us-east-2 on: Wed May 04 13:13:00 UTC 2022.  : 2022-08-01 13:19:25 : Not Available : 
+Access Key 1 last used by ses-smtp-armorcode-devqa on: Wed May 04 09:35:00 UTC 2022.  : 2022-08-01 10:15:55 : Not Available : 
+",Cloud Infrastructure Discovery,T1580,https://attack.mitre.org/techniques/T1580/
+A-000316,,,,LOW,57606 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-02 09:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-02 08:30:00 to 2022-08-02 09:00:00
+Total Traffic  : 19 GB
+Expected Traffic  : 34 MB
+Variation   : 57606 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [10.0.19.124, 172.31.25.227, 172.31.10.21, 172.31.24.116, 172.31.15.199]
+Top Destination IPs   : [104.18.125.25, 104.18.122.25, 104.18.121.25, 104.18.124.25, 104.18.123.25]: : :",,,
+A-000017,AR-266,,,MEDIUM,Ensure EBS volumes are encrypted,Policy,"ACStaging,CIS 1.3,HIPAA,HIPAA final",2022-08-09 09:29:20,AWS,Armorcode-dev-qa,"vol-05838250f643eab85 : 2022-07-28 18:28:06 : Not Available : 
+vol-0d7fa3da6bac6e8bc : 2022-07-28 18:28:06 : Not Available : 
+vol-00c2d8eda70a9a33f : 2022-07-25 13:38:18 : Not Available : 
+vol-0552d6639eccf6796 : 2022-07-28 18:28:06 : Not Available : 
+vol-0d0b6022795749f66 : 2022-07-28 18:28:06 : Not Available : 
+vol-02ab98974c9eef606 : 2022-07-28 18:28:06 : Not Available : 
+vol-0a8e1192100e6775f : 2021-11-08 10:40:24 : Not Available : 
+vol-014a701fab39defee : 2021-08-17 13:20:28 : Not Available : 
+vol-069b5b3f7bf855c1c : 2022-05-12 09:46:02 : Not Available : 
+vol-0101224afcdd336ef : 2022-07-28 18:28:06 : Not Available : 
+vol-03c2afd4a95de5c7b : 2022-07-28 18:28:06 : Not Available : 
+vol-01b4402dad5a75b2d : 2022-07-28 18:28:06 : Not Available : 
+vol-0df0b1c3c49f6cc4e : 2022-07-28 18:28:06 : Not Available : 
+vol-088de60c98b822782 : 2021-11-09 06:04:03 : Not Available : 
+vol-0cb7f1178f718bd8d : 2022-07-28 18:28:06 : Not Available : 
+vol-0c05f4562b2af6c48 : 2022-07-28 18:28:06 : Not Available : 
+vol-0cc7a070422896a35 : 2022-07-28 18:28:06 : Not Available : 
+vol-01aae768e1e35c632 : 2022-07-28 18:28:06 : Not Available : 
+vol-05090d92fb5973885 : 2022-07-28 18:28:06 : Not Available : 
+vol-0a681c3f4aa5a4705 : 2021-05-24 20:14:00 : Not Available : 
+vol-041840bf6532ff0ac : 2022-07-28 18:28:06 : Not Available : 
+vol-012ff5de035884ca6 : 2021-05-24 20:14:00 : Not Available : 
+vol-0ed3ea05c0d2720a5 : 2022-07-28 18:28:06 : Not Available : 
+vol-07d53f393c3bcb556 : 2022-07-28 18:28:06 : Not Available : 
+vol-0b81ae11681d5c655 : 2022-07-28 18:28:06 : Not Available : 
+vol-0c3469c6f19a7215e : 2021-08-22 18:34:58 : Not Available : 
+vol-0ee554dfd102f75ca : 2022-08-09 09:29:19 : Not Available : 
+vol-04acda0f077619f37 : 2021-08-05 15:20:57 : Not Available : 
+vol-01965d4bb3effbd9d : 2022-07-28 18:28:06 : Not Available : 
+vol-097ff1d0784ea8bda : 2022-07-28 18:28:06 : Not Available : 
+vol-0323c01f7fe76a6a0 : 2022-07-28 18:28:06 : Not Available : 
+vol-0399554ab4852547a : 2022-07-28 18:28:06 : Not Available : 
+vol-0768b1ff6cee0ec02 : 2022-07-28 18:28:06 : Not Available : 
+vol-0ee2b5effac80b38a : 2022-02-16 07:18:45 : Not Available : 
+vol-0d0af256a2fc23619 : 2022-07-27 18:50:25 : Not Available : 
+vol-0dbe847b24d88903f : 2022-07-28 18:28:06 : Not Available : 
+vol-08de221ff7a9f974f : 2021-12-24 10:05:26 : Not Available : 
+vol-0adf7bfd2ee241302 : 2022-07-14 13:50:25 : Not Available : 
+vol-00aab1ec193cd627b : 2022-07-28 18:28:06 : Not Available : 
+vol-0f926c2dbbc28a006 : 2022-07-28 18:28:06 : Not Available : 
+vol-0cf58a995b22a2726 : 2022-07-28 18:28:06 : Not Available : 
+vol-03de2ea219596c0a3 : 2022-07-28 18:28:06 : Not Available : 
+vol-0388409ae5669f6e4 : 2021-12-09 13:41:54 : Not Available : 
+vol-0ed6566f744c49f3f : 2022-07-28 18:28:06 : Not Available : 
+vol-0a98521659833a92b : 2022-07-28 18:28:06 : Not Available : 
+vol-0608cb20979e25376 : 2022-07-28 18:28:06 : Not Available : 
+vol-0264c2a530d108f76 : 2021-06-22 09:44:14 : Not Available : 
+vol-085842a068d06f051 : 2022-07-28 18:28:06 : Not Available : 
+vol-02b5cf61c90b517f9 : 2022-07-28 18:28:06 : Not Available : 
+vol-0cd1ed8b51c9e1271 : 2022-07-28 18:28:06 : Not Available : 
+vol-0c991b376ed8ab133 : 2021-09-17 16:22:36 : Not Available : 
+vol-013d7b412bd5d05d8 : 2022-07-28 18:28:06 : Not Available : 
+vol-0bc50cd61f874955a : 2022-07-28 18:28:06 : Not Available : 
+vol-088bd72e43c3ca92f : 2021-05-24 20:14:00 : Not Available : 
+vol-0861474ac68ff1c0c : 2022-07-28 18:28:06 : Not Available : 
+vol-028b2bc8ca5e93a8d : 2022-07-28 18:28:06 : Not Available : 
+",Data from Cloud Storage Object,T1530,https://attack.mitre.org/techniques/T1530/
+A-000045,AR-255,,,LOW,Ensure every S3 bucket versioning is turned on,Policy,ACStaging,2022-08-01 07:12:50,AWS,Armorcode-dev-qa,"avid-cloudtrail-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+am-terraformstate-034025401910-us-west-2 : 2021-01-19 10:16:14 : Not Available : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:12 : devqa-gs-admin : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+dev-osquery.us-west-2.armorcode.ai : 2022-08-01 07:12:47 : devqa-navin-admin : 
+runbook-s3-data-dump-preprod : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+gs-s3-data-push-test : 2020-10-23 07:27:18 : Not Available : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+armorcode-jenkins-artifacts : 2021-04-27 08:54:08 : Not Available : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+runbook-s3-preprod-temp : 2022-04-01 07:47:24 : devqa-mp-admin : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+armorcode : 2021-09-09 04:45:08 : devqa-mp-admin : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+testbucketguardduty : 2022-05-19 06:54:11 : devqa-navin-admin : 
+dev-034025401910-efs-backup : 2021-04-13 06:58:10 : Not Available : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:14 : devqa-lk-admin : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+dj.bucket.armorcode : 2020-10-23 07:27:18 : Not Available : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+elasticbeanstalk-us-east-2-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+cf-templates-acx5aqyku34j-ap-south-1 : 2022-07-15 12:08:06 : bhumita : 
+cf-templates-acx5aqyku34j-ap-northeast-3 : 2022-07-15 12:08:06 : bhumita : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:48 : devqa-mayank.pande-admin : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+qa-automation-private : 2022-05-11 17:24:00 : devqa-mp-admin : 
+cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:52 : bhumita : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:50 : Not Available : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+armorcode-034025401910-lambda-artifact : 2021-04-27 08:54:08 : Not Available : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+elasticbeanstalk-ap-south-1-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+qa-034025401910-efs-backup : 2021-04-13 09:01:26 : devqa-navin-admin : 
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : 
+armorcode-cert-revocation-list : 2021-01-13 06:33:35 : Not Available : 
+hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+",,,
+A-000038,AR-253,,,MEDIUM,Ensure encryption is turned on for S3 buckets,Policy,"ACStaging,CIS 1.3,HIPAA,HIPAA final",2022-08-01 07:12:50,AWS,Armorcode-dev-qa,"docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+dj.bucket.armorcode : 2020-10-23 07:27:16 : Not Available : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:12 : devqa-gs-admin : 
+am-users-keys : 2021-02-05 09:53:32 : Not Available : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:14 : devqa-lk-admin : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+elasticbeanstalk-us-east-2-034025401910 : 2020-10-23 07:27:16 : Not Available : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+armorcode : 2021-09-09 04:45:08 : devqa-mp-admin : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:48 : devqa-mayank.pande-admin : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+testbucketguardduty : 2022-05-19 06:54:11 : devqa-navin-admin : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+elasticbeanstalk-ap-south-1-034025401910 : 2020-10-23 07:27:16 : Not Available : 
+bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+gs-s3-data-push-test : 2020-10-23 07:27:16 : Not Available : 
+dev-osquery.us-west-2.armorcode.ai : 2022-08-01 07:12:47 : devqa-navin-admin : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+armorcode-cert-revocation-list : 2021-01-13 06:33:35 : Not Available : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+",,,
+A-000007,AR-154,,,MEDIUM,Enable access logging for S3 buckets,Policy,"ACStaging,HIPAA,HIPAA final",2022-08-01 07:12:50,AWS,Armorcode-dev-qa,"am-users-keys : 2021-02-05 09:53:32 : Not Available : 
+docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+avid-cloudtrail-034025401910 : 2020-10-23 07:27:17 : Not Available : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+armorcode-jenkins-artifacts : 2021-02-16 12:48:53 : Not Available : 
+armorcode-qa-reports : 2021-03-05 12:05:41 : Not Available : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+gs-s3-data-push-test : 2020-10-23 07:27:17 : Not Available : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:50 : Not Available : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+armorcode-dev-documents : 2021-03-15 06:58:45 : Not Available : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:48 : devqa-mayank.pande-admin : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:51 : bhumita : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:12 : devqa-gs-admin : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+qa-034025401910-efs-backup : 2021-04-13 09:01:26 : devqa-navin-admin : 
+bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+elasticbeanstalk-ap-south-1-034025401910 : 2020-10-23 07:27:17 : Not Available : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+runbook-s3-data-dump-preprod : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+armorcode-034025401910-lambda-artifact : 2021-02-12 07:23:34 : Not Available : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:14 : devqa-lk-admin : 
+armorcode-dev-reports : 2021-03-15 06:58:45 : Not Available : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+testbucketguardduty : 2022-05-19 06:54:11 : devqa-navin-admin : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+armorcode-cert-revocation-list : 2021-01-13 06:33:35 : Not Available : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+cf-templates-acx5aqyku34j-ap-south-1 : 2022-07-15 12:08:06 : bhumita : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+runbook-s3-preprod-temp : 2022-04-01 07:47:24 : devqa-mp-admin : 
+armorcode-qa-documents : 2021-03-05 12:05:41 : Not Available : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : 
+dev-034025401910-efs-backup : 2021-04-13 06:58:10 : Not Available : 
+armorcode : 2021-09-09 04:45:08 : devqa-mp-admin : 
+dev-osquery.us-west-2.armorcode.ai : 2022-08-01 07:12:47 : devqa-navin-admin : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+dj.bucket.armorcode : 2020-10-23 07:27:17 : Not Available : 
+am-terraformstate-034025401910-us-west-2 : 2021-01-19 10:16:14 : Not Available : 
+armorcodealliance-laceworkcws-43fa : 2022-01-11 12:21:00 : Not Available : 
+qa-automation-private : 2022-05-11 17:24:00 : devqa-mp-admin : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+elasticbeanstalk-us-east-2-034025401910 : 2020-10-23 07:27:17 : Not Available : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+cf-templates-acx5aqyku34j-ap-northeast-3 : 2022-07-15 12:08:06 : bhumita : 
+",,,
+A-000018,AR-201,,,MEDIUM,Ensure the default security group of every VPC restricts all traffic,Policy,"ACStaging,CIS 1.3",2021-11-09 06:04:04,AWS,Armorcode-dev-qa,"'default' security group (sg-0820299f684825bbb*) for vpcId: vpc-0aa5f20e9a6b81297 contains inbound and outbound rules for region us-west-2.  : 2021-03-05 11:04:53 : Not Available : 
+'default' security group (sg-0c7bcbbd9680278ea*) for vpcId: vpc-0f66b2f7fcfba41f8 contains [outbound] rules for region us-west-2.  : 2021-05-12 08:09:39 : Not Available : 
+'default' security group (sg-07aff063d8e50cc3f*) for vpcId: vpc-08e82e16a118333da contains [outbound] rules for region us-east-2.  : 2021-03-20 03:28:59 : Not Available : 
+'default' security group (sg-044af27e93d3cee4f*) for vpcId: vpc-0531ceee869a8847e contains inbound and outbound rules for region us-west-1.  : 2021-11-09 06:04:03 : Not Available : 
+'default' security group (sg-05c3377d682a87e17*) for vpcId: vpc-02382b3af8d889343 contains inbound and outbound rules for region us-east-1.  : 2021-07-30 15:42:05 : Not Available : 
+'default' security group (sg-098b42021a5ff4474*) for vpcId: vpc-066a955f647bc2033 contains inbound and outbound rules for region us-west-2.  : 2021-03-15 05:56:21 : devqa-navin-admin : 
+'default' security group (sg-92e672ef*) for vpcId: vpc-caa505a1 contains inbound and outbound rules for region us-east-2.  : 2020-10-23 07:27:16 : Not Available : 
+'default' security group (sg-02207a4516146d808*) for vpcId: vpc-0f8281e63cb4ca4bd contains [outbound] rules for region us-west-2.  : 2021-04-08 07:20:17 : Not Available : 
+",Exploitation of Remote Services,T1210,https://attack.mitre.org/techniques/T1210/
+A-000039,AR-1052,,,HIGH,Recommended usage of IMDS v2 instead of v1 for added security,Policy,ACStaging,2022-07-28 06:05:29,AWS,Armorcode-dev-qa,"Nginx-test-github(i-0ec05a0aad65c2847) : 2022-02-22 17:56:23 : Not Available : 
+Dependency Tracker(i-02bf6b7dd136b20a3) : 2022-05-01 16:10:41 : devqa-lk-admin : 
+Avocado-sample-ap(i-07f49bc26397ce469) : 2021-11-05 16:20:57 : devqa-dy-admin : 
+dy-test-xsoar-demisto(i-0a8995d8fe3e72085) : 2021-12-11 20:33:45 : devqa-dy-admin : 
+dev-grafana(i-038ce9c3c686188cd) : 2021-03-03 11:06:43 : Not Available : 
+Bamboo(i-04ea1eca4cb490058) : 2021-10-19 06:54:17 : devqa-dy-admin : 
+qa-ec2-oregon-cucumber-report(i-0ac09ae13ea760e5b) : 2022-05-20 11:34:30 : Not Available : 
+Avocado-Server(i-0c56226b11ffe65a5) : 2021-11-05 16:20:57 : devqa-dy-admin : 
+checkmarx-DB(i-01dd4a7ad4e14110e) : 2021-08-05 15:20:57 : Not Available : 
+github-e3-17-aug-2(i-054e88fba4d5f9e20) : 2021-08-17 09:16:24 : Not Available : 
+i-075ee1546e8d303eb(i-075ee1546e8d303eb) : 2021-11-09 06:04:03 : devqa-dy-admin : 
+dev-osquery(i-022d9027c47862528) : 2022-07-26 09:07:13 : devqa-navin-admin : 
+qa-prometheus(i-02b420d9f6450a6f0) : 2021-04-23 22:31:20 : Not Available : 
+dev-osquery-test(i-08431f157c9499154) : 2022-07-28 06:05:28 : Not Available : 
+dev-prometheus(i-0c03c25179d5d4253) : 2021-03-25 07:09:17 : Not Available : 
+dev-jenkins(i-0d411ae3161c507c2) : 2021-02-26 10:04:20 : am-stg-jenkins-s3(i-0d411ae3161c507c2) : 
+Github6(i-05c58d520db950cf7) : 2022-04-06 08:56:40 : devqa-abhinav-admin : 
+checkmarx server(i-03ddf67e29b0a6c86) : 2021-03-15 04:54:56 : Not Available : 
+",,,
+A-000319,,,,LOW,18966 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-10 08:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-10 07:30:00 to 2022-08-10 08:00:00
+Total Traffic  : 14 GB
+Expected Traffic  : 76 MB
+Variation   : 18966 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.24.116, 172.31.25.227, 172.31.30.250, 172.31.10.21, 172.31.26.224]
+Top Destination IPs   : [104.18.121.25, 104.18.125.25, 104.18.122.25, 104.18.123.25, 104.18.124.25]: : :",,,
+A-000320,,,,LOW,805 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-11 09:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-11 08:30:00 to 2022-08-11 09:00:00
+Total Traffic  : 4 GB
+Expected Traffic  : 520 MB
+Variation   : 805 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.24.116, 172.31.25.227, 172.31.10.21, 172.31.26.224, 172.31.15.199]
+Top Destination IPs   : [104.18.125.25, 104.18.122.25, 104.18.121.25, 104.18.174.23, 104.18.123.25]: : :",,,
+A-000321,,,,LOW,4232 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-12 09:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-12 09:00:00 to 2022-08-12 09:30:00
+Total Traffic  : 16 GB
+Expected Traffic  : 378 MB
+Variation   : 4232 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.24.116, 172.31.21.62, 172.31.30.250, 172.31.25.227, 172.31.10.21]
+Top Destination IPs   : [104.18.124.25, 104.18.123.25, 104.18.122.25, 142.250.191.144, 104.18.121.25]: : :",,,
+A-000041,AR-254,,,LOW,Ensure every S3 bucket has a tag,Policy,ACStaging,2022-07-26 09:07:14,AWS,Armorcode-dev-qa,"hubtest4 : 2022-05-26 03:04:41 : bhumita : 
+ac-22-logs : 2021-07-22 04:46:55 : Not Available : 
+armorcode-stage-documents : 2021-04-29 06:01:41 : Not Available : 
+elasticbeanstalk-us-east-2-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+runbook-assume-qa : 2022-03-04 10:23:59 : Not Available : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 09:01:50 : Not Available : 
+bhumitash : 2022-07-18 10:54:28 : bhumita : 
+bvnonpublic : 2022-05-25 10:44:54 : bhumita : 
+armorcode-lacework-export-qa : 2022-07-25 10:31:48 : devqa-mayank.pande-admin : 
+docs.armorcode.ai : 2021-05-31 09:25:05 : devqa-dy-admin : 
+hubtest6 : 2022-05-26 06:07:40 : bhumita : 
+armorcode : 2021-09-09 04:45:08 : devqa-mp-admin : 
+avid-cloudtrail-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+cf-templates-acx5aqyku34j-us-east-1 : 2021-09-16 15:53:29 : devqa-mayank.pande-admin : 
+armorcodealliance-laceworkcws-e210 : 2022-01-11 11:20:20 : devqa-lk-admin : 
+qa-elasticsearch-slow-query-logs : 2021-10-07 10:03:12 : devqa-gs-admin : 
+cf-templates-acx5aqyku34j-us-west-1 : 2022-05-16 09:29:57 : bhumita : 
+config-bucket-034025401910 : 2022-05-18 11:28:02 : devqa-milind : 
+am-terraformstate-034025401910-us-west-2 : 2021-01-19 10:16:14 : Not Available : 
+armorcodealliance-laceworkcws-bf22 : 2022-01-05 12:00:55 : devqa-lk-admin : 
+bvhubtest4 : 2022-05-26 03:04:41 : bhumita : 
+qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+qa-automation-private : 2022-05-11 17:24:00 : devqa-mp-admin : 
+gs-s3-data-push-test : 2020-10-23 07:27:18 : Not Available : 
+am-users-keys : 2021-02-05 09:53:32 : Not Available : 
+hubtest5 : 2022-05-26 06:07:40 : bhumita : 
+textract-console-us-west-2-69e2dc6e-ab11-45f8-a4bd-669c10bfeb33 : 2021-11-02 12:55:22 : devqa-dy-admin : 
+armorcodealliance-laceworkcws-43fa : 2022-04-06 17:05:12 : Not Available : 
+bvhubtest2 : 2022-05-25 18:53:47 : bhumita : 
+cf-templates-acx5aqyku34j-us-east-2 : 2022-05-16 10:30:52 : bhumita : 
+qa.us-west-2.armorcode.ai : 2021-03-05 12:05:41 : Not Available : 
+armorcode-jenkins-artifacts : 2021-02-16 12:48:52 : Not Available : 
+darwin-devqa-tokyo : 2022-03-23 15:14:10 : devqa-darwin-admin : 
+runbook-s3-data-dump-preprod : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+bvpublicmay : 2022-05-25 10:44:54 : Not Available : 
+runbook-s3-data-dump-production : 2022-03-11 08:17:33 : devqa-abhinav-admin : 
+inspector-s3 : 2022-05-05 09:28:12 : devqa-aditya : 
+bvhubtest3 : 2022-05-25 18:53:47 : bhumita : 
+elasticbeanstalk-ap-south-1-034025401910 : 2020-10-23 07:27:18 : Not Available : 
+cf-templates-acx5aqyku34j-ap-south-1 : 2022-07-15 12:08:06 : bhumita : 
+darwin-devqa-mumbai : 2022-03-22 11:45:47 : devqa-darwin-admin : 
+bhumitaguardduty2 : 2022-06-16 05:32:46 : bhumita : 
+cf-templates-acx5aqyku34j-us-west-2 : 2021-08-04 05:27:13 : devqa-dy-admin : 
+bvguradduty : 2022-07-15 11:00:02 : bhumita : 
+runbook-s3-preprod-temp : 2022-04-01 07:47:24 : devqa-mp-admin : 
+darwin-devqa : 2022-03-09 11:15:35 : devqa-darwin-admin : 
+docs2.armorcode.ai : 2021-08-03 08:58:20 : devqa-dy-admin : 
+bhumita28june : 2022-06-28 12:43:35 : bhumita : 
+armorcode-cert-revocation-list : 2021-01-13 06:33:35 : Not Available : 
+dev-034025401910-efs-backup : 2021-04-13 06:58:10 : Not Available : 
+armorcodealliance-laceworkcws-0415 : 2022-01-11 10:19:30 : devqa-lk-admin : 
+bvmay2 : 2022-05-25 11:45:54 : bhumita : 
+aws-cloudtrail-logs-034025401910-f0a71b68 : 2022-02-24 13:33:30 : devqa-lk-admin : 
+cf-templates-acx5aqyku34j-ap-northeast-3 : 2022-07-15 12:08:06 : bhumita : 
+aws-cloudtrail-tenable-logs-034025401910-79581a79 : 2022-02-24 12:25:14 : devqa-lk-admin : 
+",,,
+A-000323,,,,LOW,2712 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-15 10:10:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-15 09:30:00 to 2022-08-15 10:00:00
+Total Traffic  : 8 GB
+Expected Traffic  : 296 MB
+Variation   : 2712 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.21.62, 172.31.24.116, 172.31.26.224, 172.31.19.162, 172.31.15.199]
+Top Destination IPs   : [104.18.123.25, 104.18.121.25, 104.18.124.25, 104.18.122.25, 104.18.125.25]: : :",,,
+A-000222,AR-556,,,LOW,Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-02-24 14:35:10,AWS,Armorcode-dev-qa,"Access Logging disabled for Cloud Trail bucket: 'aws-cloudtrail-logs-034025401910-f0a71b68'.  : 2022-02-24 14:35:08 : Not Available : 
+Access Logging disabled for Cloud Trail bucket: 'avid-cloudtrail-034025401910'.  : 2022-02-24 14:35:08 : Not Available : 
+",,,
+A-000115,AR-267,,,HIGH,Ensure S3 buckets do not allow public write permission,Policy,ACStaging,2022-08-16 09:55:22,AWS,Armorcode-dev-qa,"qa-automation-public : 2022-05-11 17:24:00 : devqa-mp-admin : 
+testbucketguardduty : 2022-08-16 09:55:21 : devqa-navin-admin : 
+devv1.us-west-2.armorcode.ai : 2021-04-09 12:05:06 : Not Available : Accepted
+docs.armorcode.ai : 2021-08-02 08:27:35 : devqa-dy-admin : Accepted
+",,,
+A-000028,AR-1036,,,LOW,Ensure Cloudwatch encryption is enabled for all relevant log groups,Policy,ACStaging,2022-08-16 04:49:43,AWS,Armorcode-dev-qa,"Name: API-Gateway-Execution-Logs_a7s6s7t9ea/v1 region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: API-Gateway-Execution-Logs_m6rsqsp4ug/v1 region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda/aqua-cspm-security-scanne-GenerateCSPMExternalIdFu-8XAScCFEPjTb region: us-east-2 : 2021-12-28 06:22:17 : Not Available : 
+Name: /aws/rds/cluster/am-stg-aurora-us-west-2/error region: us-west-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/guardduty3 region: us-west-2 : 2022-05-12 12:48:31 : Not Available : 
+Name: /aws/aes/domains/dev-elasticsearch/index-logs region: us-west-2 : 2021-04-27 19:20:37 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: eu-west-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: eu-central-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/fortify_config_collector region: us-east-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/lambda/aqua-cspm-security-scanner-CreateCSPMKeyFunction-Xy2sVIRmEVka region: us-east-2 : 2021-12-28 06:22:17 : Not Available : 
+Name: /aws/rds/cluster/am-stagev2-aurora-cluster/error region: us-west-2 : 2021-01-22 11:59:50 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ap-south-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/dev-elasticsearch-logzio region: us-west-2 : 2022-08-09 13:34:43 : Not Available : 
+Name: /aws/lambda/coverity_to_collector region: us-west-2 : 2021-02-07 20:17:39 : Not Available : 
+Name: aws-waf-logs-qa-waf region: us-west-2 : 2022-07-01 09:11:48 : Not Available : 
+Name: dev-log_group region: us-west-2 : 2021-06-28 08:48:40 : Not Available : 
+Name: /aws/lambda/Avid-VPC-LOGS-function region: us-east-2 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/collector-devv3-reports region: us-west-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/lambda/Serverless-CloudWatch-Logs-To-S3-Exporter region: us-west-2 : 2021-10-07 11:04:33 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: us-west-2 : 2022-07-18 06:49:38 : Not Available : 
+Name: API-Gateway-Execution-Logs_a6nctqaaw8/v1 region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ap-southeast-2 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/Avid-CloudTrail-function region: us-west-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/fortify_to_collector region: us-east-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: route53querylogs region: us-east-1 : 2021-03-04 13:34:26 : Not Available : 
+Name: /aws/lambda/rdsevents region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/vendedlogs/states/NowSecureStateMachine-Logs region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/rds/cluster/am-devv3-aurora-cluster/error region: us-west-2 : 2021-01-27 11:05:31 : Not Available : 
+Name: /aws/lambda/checkmarx_config_collector region: us-west-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/lambda/guarduty12 region: us-west-2 : 2022-05-12 12:48:31 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: us-west-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda/collector-reports region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/cloudfront/function/qa-security-function region: us-east-1 : 2021-09-05 10:54:47 : Not Available : 
+Name: /aws/lambda/checkmarx_config_collector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/cloudfront/function/dev-block-IP-calls region: us-east-1 : 2021-11-01 05:19:37 : Not Available : 
+Name: API-Gateway-Execution-Logs_aews2fucw5/v1 region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: CT-Avid-LogGroup region: us-west-1 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda/collector-reports region: us-west-2 : 2021-01-20 01:38:49 : Not Available : 
+Name: /aws/lambda/TestGitGuardian region: us-west-2 : 2022-06-17 13:09:52 : Not Available : 
+Name: RDSOSMetrics region: us-west-2 : 2021-01-19 12:18:19 : Not Available : 
+Name: /aws/lambda/guardduty11 region: us-west-2 : 2022-05-12 13:49:48 : Not Available : 
+Name: /aws/aes/domains/qa-elasticsearch/search-logs region: us-west-2 : 2021-04-26 17:22:40 : Not Available : 
+Name: /aws/kinesisfirehose/PUT-S3-JF4YC region: us-west-2 : 2022-07-26 10:08:30 : Not Available : 
+Name: /aws-glue/crawlers region: us-west-2 : 2021-10-07 13:07:00 : Not Available : 
+Name: /aws/lambda/ArmorcodeAWSInfraOnboardingLambda region: us-west-2 : 2022-07-18 05:48:26 : Not Available : 
+Name: /aws/lambda/ArmorcodeGuardDutyLambda region: us-west-2 : 2022-07-19 17:32:58 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: us-west-1 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda/test-logs region: us-west-2 : 2021-02-22 19:45:10 : Not Available : 
+Name: /aws/lambda/dev_send_email region: us-west-2 : 2021-03-16 10:33:44 : Not Available : 
+Name: /aws/lambda/LogsToElasticsearch_qa-elasticsearch region: us-west-2 : 2022-06-02 14:28:23 : Not Available : 
+Name: RDSOSMetrics region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/cloudfront/function/dev-security-function region: us-east-1 : 2021-09-05 10:54:47 : Not Available : 
+Name: /aws/api-gateway/data-injection region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda-insights region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/apigateway/welcome region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: us-east-2 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/test-nowsecure-api region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/ArmorcodeAWSInfraOnboardingLambda region: ap-south-1 : 2022-07-15 14:59:57 : Not Available : 
+Name: /aws/lambda/shutdownApi region: us-west-2 : 2022-04-29 07:58:18 : Not Available : 
+Name: /aws/lambda/Avid-VPC-LOGS-function region: us-east-1 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/cloudfront/function/add-security-headers region: us-east-1 : 2021-09-04 18:37:33 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: us-west-1 : 2022-07-15 16:10:08 : Not Available : 
+Name: /aws/aes/domains/qa-elasticsearch/error-logs region: us-west-2 : 2021-06-11 09:01:13 : Not Available : 
+Name: /aws/lambda/Avid-VPC-LOGS-function region: us-west-2 : 2021-01-29 06:54:20 : Not Available : 
+Name: dev-flow-logs-group region: us-west-2 : 2021-06-28 08:48:40 : Not Available : 
+Name: /aws/lambda/sendEmail region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/rds/cluster/qa-aurora-cluster/error region: us-west-2 : 2022-07-13 08:10:50 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ca-central-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/ArmorcodeAWSInfraOnboardingLambda region: us-east-2 : 2022-07-15 13:16:44 : Not Available : 
+Name: /aws/lambda/h1_to_collector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/nowsecure_config_collector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/test-logs2 region: us-west-2 : 2021-02-23 07:55:48 : Not Available : 
+Name: /aws/ssm/AWSRunShellScriptGracefulShutdown region: us-west-2 : 2022-04-26 06:01:10 : Not Available : 
+Name: /aws/lambda/ArmorcodeAWSInfraOnboardingLambda region: ap-northeast-3 : 2022-07-15 14:59:57 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: us-east-1 : 2022-07-18 07:50:55 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: sa-east-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/ArmorcodeGuardDutyLambda region: ap-south-1 : 2022-07-19 17:32:58 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: eu-north-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/h1_config_collector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/Nops-Integration-972d-NopsLambdaLookupStack-WfS6TuKELzes region: us-west-2 : 2022-04-18 16:27:52 : Not Available : 
+Name: /aws/lambda/Avid-VPC-LOGS-function region: us-west-1 : 2021-02-08 11:37:04 : Not Available : 
+Name: /aws/aes/domains/qa-elasticsearch/index-logs region: us-west-2 : 2021-06-11 09:01:13 : Not Available : 
+Name: /aws/lambda/ArmorcodeGuardDutyLambda region: us-east-2 : 2022-07-19 17:32:58 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: us-east-2 : 2022-07-18 07:50:55 : Not Available : 
+Name: /aws/lambda/hackerOneToCollector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: qa-flow-logs-group region: us-west-2 : 2021-06-28 08:48:40 : Not Available : 
+Name: /aws/rds/cluster/qa-aurora-cluster/slowquery region: us-west-2 : 2022-07-13 08:10:50 : Not Available : 
+Name: /aws/lambda/sendEmail region: us-west-2 : 2021-02-06 19:45:11 : Not Available : 
+Name: /aws/route53/log region: us-east-1 : 2021-03-04 13:34:26 : Not Available : 
+Name: /aws/lambda/qa_send_email region: us-west-2 : 2021-03-05 17:10:18 : Not Available : 
+Name: /aws/lambda/shiv-amc-deleteme-123 region: us-west-2 : 2022-01-18 17:06:37 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: ap-south-1 : 2022-07-18 10:54:28 : Not Available : 
+Name: /aws/imagebuilder/dy-test region: us-west-2 : 2021-12-28 13:28:02 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: eu-west-3 : 2020-10-23 08:28:59 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ap-southeast-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/rds/cluster/gs-tool-mysql-database/error region: us-east-2 : 2020-10-23 07:27:19 : Not Available : 
+Name: RDSOSMetrics region: ap-south-1 : 2020-10-23 07:27:19 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ap-northeast-1 : 2020-10-23 08:28:59 : Not Available : 
+Name: VPN-Endpoint region: us-west-2 : 2021-01-12 06:07:14 : Not Available : 
+Name: /aws/aes/domains/dev-elasticsearch/search-logs region: us-west-2 : 2021-04-27 19:20:37 : Not Available : 
+Name: /aws/lambda/coverity_config_collector region: us-east-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/lambda/guardduty region: us-west-2 : 2022-05-12 09:46:02 : Not Available : 
+Name: /aws/lambda/hackerOnetoCollector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/rds/instance/dev-db/error region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: us-east-1 : 2020-10-23 07:27:19 : Not Available : 
+Name: /aws/lambda/coverity_to_collector region: us-east-2 : 2021-02-05 09:53:32 : Not Available : 
+Name: /aws/cloudfront/function/docs-auth region: us-east-1 : 2021-08-02 12:31:33 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: eu-west-2 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/imagebuilder/armorcode-base-1 region: us-west-2 : 2021-12-28 15:29:39 : Not Available : 
+Name: /aws/lambda/ArmorcodeSecurityHubLambda region: ap-northeast-3 : 2022-07-15 14:59:57 : Not Available : 
+Name: /aws/imagebuilder/armorcode-base region: us-west-2 : 2021-12-29 07:44:29 : Not Available : 
+Name: /aws/lambda/dev_checkmarx_config_collector region: us-west-2 : 2021-03-16 10:33:44 : Not Available : 
+Name: /aws/lambda/ArmorcodeInspectorLambda region: us-west-2 : 2022-07-19 17:32:58 : Not Available : 
+Name: /aws/lambda/LogsToElasticsearch_dev-elasticsearch region: us-west-2 : 2022-06-15 09:58:27 : Not Available : 
+Name: /aws/lambda/ArmorcodeRoute53OnboardingLambda region: us-west-2 : 2021-09-09 17:59:52 : Not Available : 
+Name: aws-waf-logs-dev-cloudfront-waf region: us-east-1 : 2022-06-24 10:39:59 : Not Available : 
+Name: /aws/lambda/testGracefulShutdown region: us-west-2 : 2022-04-27 11:44:11 : Not Available : 
+Name: Flowlogs-Avid-LogGroup region: ap-northeast-2 : 2020-10-23 08:28:59 : Not Available : 
+Name: /aws/lambda/checkmarx_to_collector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/nowSecureToCollector region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/cloudwatchTologzio region: us-west-2 : 2022-08-16 04:49:42 : Not Available : 
+Name: /aws/lambda/bhumita region: us-east-2 : 2022-07-15 14:59:57 : Not Available : 
+Name: /aws/lambda/sqs_enqueue region: us-east-2 : 2021-01-07 17:51:37 : Not Available : 
+Name: /aws/lambda/ElasticSearch_qa-elasticsearch region: us-west-2 : 2022-07-13 16:20:59 : Not Available : 
+Name: qa-log_group region: us-west-2 : 2021-06-28 08:48:40 : Not Available : 
+",,,
+A-000324,,,,LOW,1266 % increase in outbound traffic on destination port '443',Anomaly,,2022-08-16 10:40:02,AWS,Armorcode-dev-qa,"Account Id  : 034025401910
+Timeframe  : 2022-08-16 10:00:00 to 2022-08-16 10:30:00
+Total Traffic  : 3 GB
+Expected Traffic  : 287 MB
+Variation   : 1266 %
+increaseDestination Port   : 443
+Destination Protocol   : HTTPS
+Top Originating IPs   : [172.31.24.116, 172.31.21.62, 172.31.26.224, 172.31.30.250, 172.31.15.199]
+Top Destination IPs   : [104.18.122.25, 104.18.124.25, 104.18.121.25, 104.18.125.25, 104.18.123.25]: : :",,,
+A-000160,AR-1031,,,LOW,Ensure none of the roles have assume role permission for all the accounts,Policy,ACStaging,2021-09-15 08:00:25,AWS,Armorcode-dev-qa,"assume-discovery-role : 2021-09-10 09:08:25 : Not Available : 
+dev-bastion-server : 2021-09-10 09:08:25 : Not Available : 
+qa-backend-server : 2021-09-15 08:00:24 : Not Available : 
+dev-backend-server : 2021-09-10 09:08:25 : Not Available : 
+",,,
+A-000012,AR-202,,,MEDIUM,Ensure existing security groups do not allow incoming traffic from anywhere except for ports 80/443,Policy,ACStaging,2022-08-12 12:02:28,AWS,Armorcode-dev-qa,"launch-wizard-18(sg-011ec47168d02f416) contains ingress from 0.0.0.0/0 to port(s): (9000) for region us-east-2.  : 2022-04-21 08:39:41 : Not Available : 
+launch-wizard-35(sg-0e7224e945821c6e6) contains ingress from 0.0.0.0/0 to port(s): (9000) for region us-east-2.  : 2022-06-28 17:50:08 : Not Available : 
+launch-wizard-15(sg-02a753a199a65aa44) contains ingress from 0.0.0.0/0 to port(s): (17472,17473,9090) for region us-east-2.  : 2022-08-09 08:28:11 : Not Available : 
+dev-parser-sg20210315055428063300000009(sg-0ff1e752929d3613a) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-west-2.  : 2021-03-15 13:22:49 : Not Available : 
+qa-efs-sg20210305112251617200000001(sg-007cd7afdf1896987) contains ingress from 0.0.0.0/0 to port(s): (2049) for region us-west-2.  : 2021-03-05 12:05:41 : Not Available : 
+Github(sg-05654dd894506826d) contains ingress from 0.0.0.0/0 to port(s): (8443,122) for region us-east-2.  : 2021-03-20 04:30:27 : Not Available : 
+launch-wizard-11(sg-0318c61b4f1283c8d*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-06-29 09:09:18 : devqa-milind : 
+launch-wizard-6(sg-098865ba283fce6f7*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-04-12 14:00:33 : devqa-milind : 
+launch-wizard-34(sg-067ed5b05dde4a531) contains ingress from 0.0.0.0/0 to port(s): (17472) for region us-east-2.  : 2022-07-04 10:46:32 : devqa-navin-admin : 
+Qualys Virtual Scanner Appliance -Pre-Authorized Scanning- HVM-2-7-29-5-AutogenByAWSMP-1(sg-0171a6778bd617220) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-east-2.  : 2022-02-08 14:38:08 : devqa-lk-admin : 
+trial_appsec(sg-037c95f7350dd055a) contains ingress from 0.0.0.0/0 to port(s): (9000) for region us-east-2.  : 2022-02-16 05:15:35 : Not Available : 
+launch-wizard-2(sg-0bb3082d947d3c75b*) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-05-19 07:55:44 : Not Available : 
+launch-wizard-10(sg-09398d394ac865519) contains ingress from 0.0.0.0/0 to port(s): (1433(MS SQL Server),8080,445(Windows Shares)) for region us-east-2.  : 2022-08-12 12:02:27 : Not Available : 
+launch-wizard-2(sg-0e14a2757f3dc1ae8) contains ingress from 0.0.0.0/0 to port(s): (3000) for region us-west-2.  : 2021-10-25 11:43:16 : Not Available : 
+qa-CxServer-sg(sg-070e706ea45769813) contains ingress from 0.0.0.0/0 to port(s): (-1) for region us-west-2.  : 2021-12-09 13:41:54 : Not Available : 
+launch-wizard-4(sg-0e17b3f5d5e4c6872*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-04-02 14:19:10 : devqa-milind : 
+calculator-service(sg-046c9207098bfdb44*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-east-2.  : 2021-09-09 15:25:34 : Not Available : 
+launch-wizard-6(sg-093b2e525218ec386*) contains ingress from 0.0.0.0/0 to port(s): (8443) for region us-east-2.  : 2022-02-10 06:36:16 : devqa-lk-admin : 
+dy-test(sg-0e96e3fa0948ed91d*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-east-2.  : 2022-01-24 06:08:39 : Not Available : 
+launch-wizard-7(sg-0d403bc45c4f41df9*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-05-02 09:29:00 : bhumita : 
+launch-wizard-38(sg-0afcc110df7d1559f) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-07-11 10:12:51 : devqa-lk-admin : 
+launch-wizard-5(sg-09b9aa53d90d2e7d5*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-04-12 12:59:37 : devqa-milind : 
+launch-wizard-1(sg-05d4936dc7b60a335*) contains ingress from 0.0.0.0/0 to port(s): (3389) for region us-west-2.  : 2021-03-10 14:11:20 : Not Available : 
+launch-wizard-3(sg-01a91054a2b4f8899*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2021-12-28 15:29:39 : Not Available : 
+teamcity-sg(sg-0ef962c1f7f32b395) contains ingress from 0.0.0.0/0 to port(s): (8080,8111) for region us-east-2.  : 2021-09-28 14:49:45 : Not Available : 
+launch-wizard-7(sg-07eefdb3ac771e70d*) contains ingress from 0.0.0.0/0 to port(s): (8443) for region us-east-2.  : 2022-02-10 10:12:56 : devqa-lk-admin : 
+stage-coverity(sg-026d338ff3ff588ff) contains ingress from 0.0.0.0/0 to port(s): (17472,8080,9999,22(SSH),17473) for region us-east-2.  : 2022-07-04 14:52:31 : devqa-sp-admin : 
+launch-wizard-5(sg-00e4331cc89d1083c) contains ingress from 0.0.0.0/0 to port(s): (8080,17472,9000,17473,8081) for region us-east-2.  : 2022-08-09 08:28:11 : devqa-lk-admin : 
+dev-efs-sg20210315055841693000000001(sg-075f13e42dc04d549) contains ingress from 0.0.0.0/0 to port(s): (2049) for region us-west-2.  : 2021-03-15 06:58:45 : Not Available : 
+Bamboo security(sg-0a8606ff67ef1facf) contains ingress from 0.0.0.0/0 to port(s): (8085) for region us-east-2.  : 2021-08-09 07:17:27 : Not Available : 
+launch-wizard-10(sg-00747b17310bd210b*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-06-22 11:39:06 : devqa-milind : 
+launch-wizard-20(sg-018699ac48aaa82cd*) contains ingress from 0.0.0.0/0 to port(s): (3389) for region us-east-2.  : 2022-04-06 08:56:40 : devqa-abhinav-admin : 
+armorcode-base-sg(sg-05299fe18c04803c6*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2021-12-29 07:44:29 : Not Available : 
+launch-wizard-33(sg-0b27fa8d3d19ed629) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-07-05 09:14:31 : devqa-lk-admin : 
+stage-blackduckhub(sg-07bed3d33a3f5530d) contains ingress from 0.0.0.0/0 to port(s): (17472,17473) for region us-east-2.  : 2022-07-04 14:52:31 : devqa-yj-admin : 
+qa-parser-sg20210305112221950800000005(sg-038d877c36812467c) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-west-2.  : 2021-03-05 14:07:28 : Not Available : 
+default(sg-92e672ef*) contains ingress from 0.0.0.0/0 to port(s): (8443,122) for region us-east-2.  : 2021-05-09 16:26:29 : Not Available : 
+appsec_splunk_sg(sg-0dd28e4fa6657023b) contains ingress from 0.0.0.0/0 to port(s): (8000,8089) for region us-east-2.  : 2022-01-19 10:18:55 : Not Available : 
+launch-wizard-12(sg-00e3a9f3c626f5525*) contains ingress from 0.0.0.0/0 to port(s): (22(SSH)) for region us-west-2.  : 2022-07-04 10:46:32 : bhumita : 
+launch-wizard-39(sg-03862ca805bebea58) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-08-10 11:01:20 : devqa-lk-admin : 
+launch-wizard-27(sg-0340c4ae2a1be6432) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-08-10 10:00:05 : devqa-lk-admin : 
+partner-jenkins(sg-06390d480663ec108) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-west-2.  : 2021-06-22 11:50:15 : Not Available : 
+launch-wizard-19(sg-0496f5549fe2d00fe*) contains ingress from 0.0.0.0/0 to port(s): (8080) for region us-east-2.  : 2022-03-22 08:42:48 : Not Available : 
+launch-wizard-37(sg-01e9a2139e92096cd*) contains ingress from 0.0.0.0/0 to port(s): (17472,3780,22(SSH),17473,139,135,3389,445(Windows Shares)) for region us-east-2.  : 2022-07-07 07:15:47 : devqa-lk-admin : 
+launch-wizard-14(sg-00030fda09fc876ed) contains ingress from 0.0.0.0/0 to port(s): (8080,161,25,8443,9418) for region us-east-2.  : 2022-02-11 11:20:12 : devqa-lk-admin : 
+default(sg-05c3377d682a87e17*) contains ingress from 0.0.0.0/0 to port(s): (9080) for region us-east-1.  : 2021-07-31 18:23:37 : Not Available : 
+launch-wizard-3(sg-08e7b9f24e0f6b526*) contains ingress from 0.0.0.0/0 to port(s): (8000,8082) for region us-east-2.  : 2021-05-09 16:26:29 : Not Available : 
+",,,
+A-000001,AR-1039,,,MEDIUM,Ensure inbound public IP-address range in security-group is /24 or stricter,Policy,ACStaging,2022-08-09 12:33:28,AWS,Armorcode-dev-qa,"launch-wizard-14 (sg-00030fda09fc876ed) us-east-2 : 2022-02-11 07:15:34 : devqa-lk-admin : 
+launch-wizard-20 (sg-018699ac48aaa82cd*) us-east-2 : 2022-04-06 08:56:40 : devqa-abhinav-admin : 
+launch-wizard-18 (sg-011ec47168d02f416) us-east-2 : 2022-04-21 08:39:41 : Not Available : 
+Avocado-access (sg-092997c1a5afbb731) us-east-2 : 2021-11-05 16:20:57 : devqa-mp-admin : 
+teamcity-sg (sg-0ef962c1f7f32b395) us-east-2 : 2021-09-21 06:06:31 : Not Available : 
+calculator-service (sg-046c9207098bfdb44*) us-east-2 : 2021-09-09 15:25:34 : Not Available : 
+grafana_alb_sg20210303080759494400000002 (sg-0349a9f424805000b) us-west-2 : 2021-03-03 09:04:40 : Not Available : 
+launch-wizard-38 (sg-0afcc110df7d1559f) us-east-2 : 2022-07-11 10:12:51 : devqa-lk-admin : 
+dev-alb-int-sg20210315055428055000000002 (sg-09cde04fbec5d5e8e) us-west-2 : 2021-08-02 18:41:17 : Not Available : 
+launch-wizard-7 (sg-0d403bc45c4f41df9*) us-west-2 : 2022-05-02 09:29:00 : bhumita : 
+launch-wizard-6 (sg-098865ba283fce6f7*) us-west-2 : 2022-04-12 14:00:33 : devqa-milind : 
+qa-efs-sg20210305112251617200000001 (sg-007cd7afdf1896987) us-west-2 : 2021-03-05 12:05:41 : Not Available : 
+trial_appsec (sg-037c95f7350dd055a) us-east-2 : 2022-02-16 05:15:35 : Not Available : 
+launch-wizard-2 (sg-0e14a2757f3dc1ae8) us-west-2 : 2021-09-17 16:22:36 : Not Available : 
+launch-wizard-12 (sg-00e3a9f3c626f5525*) us-west-2 : 2022-07-04 10:46:32 : bhumita : 
+launch-wizard-15 (sg-02a753a199a65aa44) us-east-2 : 2022-02-14 10:58:13 : Not Available : 
+qa-parser-sg20210305112221950800000005 (sg-038d877c36812467c) us-west-2 : 2021-03-05 14:07:28 : Not Available : 
+launch-wizard-35 (sg-0e7224e945821c6e6) us-east-2 : 2022-06-28 17:50:08 : Not Available : 
+launch-wizard-11 (sg-0318c61b4f1283c8d*) us-west-2 : 2022-06-29 09:09:18 : devqa-milind : 
+launch-wizard-5 (sg-09b9aa53d90d2e7d5*) us-west-2 : 2022-04-12 12:59:37 : devqa-milind : 
+launch-wizard-4 (sg-0e17b3f5d5e4c6872*) us-west-2 : 2022-04-02 14:19:10 : devqa-milind : 
+drone-sg (sg-05e18ffb5952754ea*) us-east-2 : 2021-08-18 06:45:27 : Not Available : 
+launch-wizard-34 (sg-067ed5b05dde4a531) us-east-2 : 2022-06-20 06:36:58 : devqa-navin-admin : 
+launch-wizard-19 (sg-0496f5549fe2d00fe*) us-east-2 : 2022-03-22 08:42:48 : Not Available : 
+am-sg-jenkins-master-stage (sg-0ca9a5ca6de267f93) us-west-2 : 2022-08-03 10:16:28 : devqa-navin-admin : 
+qa-nginx-sg20210305112221961400000008 (sg-0925c46b93d161572) us-west-2 : 2021-03-05 13:06:34 : Not Available : 
+Qualys Virtual Scanner Appliance -Pre-Authorized Scanning- HVM-2-7-29-5-AutogenByAWSMP-1 (sg-0171a6778bd617220) us-east-2 : 2022-02-08 14:38:08 : devqa-lk-admin : 
+launch-wizard-1 (sg-05d4936dc7b60a335*) us-west-2 : 2021-03-10 14:11:20 : Not Available : 
+dy-test (sg-0e96e3fa0948ed91d*) us-east-2 : 2022-01-24 06:08:39 : Not Available : 
+dev-nginx-sg20210315055428062400000008 (sg-06aee296c13f546a6) us-west-2 : 2021-03-15 08:04:42 : Not Available : 
+launch-wizard-39 (sg-03862ca805bebea58) us-east-2 : 2022-08-09 12:33:27 : devqa-lk-admin : 
+dev-alb-pub-sg20210315070148609900000001 (sg-0dd1b428d480a2368) us-west-2 : 2021-03-15 08:04:42 : Not Available : 
+armorcode-base-sg (sg-05299fe18c04803c6*) us-west-2 : 2021-12-29 07:44:29 : Not Available : 
+stage-blackduckhub (sg-07bed3d33a3f5530d) us-east-2 : 2020-12-23 18:37:40 : devqa-yj-admin : 
+launch-wizard-10 (sg-00747b17310bd210b*) us-west-2 : 2022-06-22 11:39:06 : devqa-milind : 
+launch-wizard-3 (sg-01a91054a2b4f8899*) us-west-2 : 2021-12-28 15:29:39 : Not Available : 
+launch-wizard-37 (sg-01e9a2139e92096cd*) us-east-2 : 2022-07-07 06:14:52 : devqa-lk-admin : 
+Github (sg-05654dd894506826d) us-east-2 : 2021-02-05 09:53:32 : Not Available : 
+launch-wizard-5 (sg-00e4331cc89d1083c) us-east-2 : 2022-02-16 10:21:34 : devqa-lk-admin : 
+tcp-alb (sg-0f9a11b5a4b56bdf9) us-east-2 : 2021-05-08 13:50:20 : Not Available : 
+qa-CxServer-sg (sg-070e706ea45769813) us-west-2 : 2021-08-17 16:01:18 : Not Available : 
+stage-coverity (sg-026d338ff3ff588ff) us-east-2 : 2020-12-23 17:34:22 : devqa-sp-admin : 
+launch-wizard-36 (sg-0ce19f407b5a3ba5c*) us-east-2 : 2022-07-07 06:14:52 : devqa-lk-admin : 
+launch-wizard-10 (sg-09398d394ac865519) us-east-2 : 2022-05-05 10:29:13 : Not Available : 
+launch-wizard-21 (sg-09ab23d808775df22*) us-east-2 : 2022-04-12 10:58:03 : devqa-mp-admin : 
+qa-alb-pub-sg20210305123826427900000001 (sg-05d938ee333120807) us-west-2 : 2021-03-05 13:06:34 : Not Available : 
+Bamboo security (sg-0a8606ff67ef1facf) us-east-2 : 2021-08-09 07:17:27 : Not Available : 
+launch-wizard-33 (sg-0b27fa8d3d19ed629) us-east-2 : 2022-06-15 13:01:57 : devqa-lk-admin : 
+launch-wizard-3 (sg-08e7b9f24e0f6b526*) us-east-2 : 2020-10-23 07:27:16 : Not Available : 
+launch-wizard-7 (sg-07eefdb3ac771e70d*) us-east-2 : 2022-02-10 10:12:56 : devqa-lk-admin : 
+dev-parser-sg20210315055428063300000009 (sg-0ff1e752929d3613a) us-west-2 : 2021-03-15 13:22:49 : Not Available : 
+launch-wizard-2 (sg-0bb3082d947d3c75b*) us-east-2 : 2021-12-17 13:42:25 : Not Available : 
+launch-wizard-27 (sg-0340c4ae2a1be6432) us-east-2 : 2022-05-12 07:44:12 : devqa-lk-admin : 
+default (sg-92e672ef*) us-east-2 : 2021-04-07 09:47:19 : Not Available : 
+default (sg-05c3377d682a87e17*) us-east-1 : 2021-07-31 18:23:37 : Not Available : 
+partner-jenkins (sg-06390d480663ec108) us-west-2 : 2021-06-22 09:44:14 : Not Available : 
+appsec_splunk_sg (sg-0dd28e4fa6657023b) us-east-2 : 2021-11-16 09:21:33 : Not Available : 
+launch-wizard-6 (sg-093b2e525218ec386*) us-east-2 : 2022-02-10 05:34:11 : devqa-lk-admin : 
+dev-efs-sg20210315055841693000000001 (sg-075f13e42dc04d549) us-west-2 : 2021-03-15 06:58:45 : Not Available : 
+",,,
+A-000209,AR-305,,,MEDIUM,Ensure CMK keys with KMS origin are set to rotate on a regular schedule,Policy,"ACStaging,HIPAA,HIPAA final",2022-05-05 09:28:13,AWS,Armorcode-dev-qa,"Key Rotation not enabled for key-id: 'a3a0dadb-726b-41da-bbd5-19acb78dc264' and region: 'us-west-2'.  : 2022-05-04 10:36:23 : Not Available : 
+Key Rotation not enabled for key-id: '9d78f489-8a0b-4015-95b3-238820b330db' and region: 'us-east-2'.  : 2022-02-24 12:25:14 : Not Available : 
+",,,
+A-000210,AR-558,,,LOW,Ensure rotation for customer created CMKs is enabled,Policy,"CIS 1.3,HIPAA,HIPAA final",2022-05-05 09:28:13,AWS,Armorcode-dev-qa,"Key Rotation not enabled for key-id: 'a3a0dadb-726b-41da-bbd5-19acb78dc264' and region: 'us-west-2'.  : 2022-05-04 10:36:23 : Not Available : 
+Key Rotation not enabled for key-id: '9d78f489-8a0b-4015-95b3-238820b330db' and region: 'us-east-2'.  : 2022-02-24 12:25:15 : Not Available : 
+",Data from Cloud Storage Object,T1530,https://attack.mitre.org/techniques/T1530/
+A-000327,,,,LOW,Login from a new location,Anomaly,,2022-08-23 04:50:08,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : d8d45672-e0b7-481e-bdfa-dfe12c24e112
+			    Account Id          : 034025401910
+			    User Name           : devqa-navin-admin
+			    Login Type          : Console
+			    Login IP            : 95.91.210.52
+			    Previous Login IP   : 52.33.126.137
+			    Login Location      : Land Berlin-Germany (ISP : Vodafone Kabel Deutschland)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36
+			    Event Time          : 2022-08-23 04:48:39 +0000
+			    Previous Event Time : 2022-08-18 09:15:28 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000328,,,,LOW,Frequent logins from different locations,Anomaly,,2022-09-28 16:03:23,AWS,Armorcode-dev-qa,"Too many logins from various locations that doesn't match their historical pattern
+				Event Id            : f82de465-2bb8-477d-8846-b3483b89a4bb
+			    Account Id          : 034025401910
+			    User Name           : dev-saqeeb-admin
+			    Login Type          : Console
+			    Login IP            : 49.32.189.53
+			    Previous Login IP   : 44.238.75.58
+			    Login Location      : Mumbai-Maharashtra-India (ISP : Reliance Jio Infocomm Ltd)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36
+			    Event Time          : 2022-09-28 16:01:50 +0000
+			    Previous Event Time : 2022-09-23 04:49:29 +0000
+			    Assumed Role        : False
+			    MFA Enabled         : True: : :",,,
+A-000329,,,,HIGH,Login from a new location,Anomaly,,2022-10-03 07:47:23,AWS,Armorcode-dev-qa,"New Unrecognized Login Location
+				Event Id            : 80950c72-92fd-4bd3-aef1-0fcb9a8a6938
+				Account Id          : 034025401910
+			    Role                : devqa-mp-admin
+			    Login Type          : API
+			    Login IP            : 103.216.235.98
+			    Previous Login IP   : 54.213.4.141
+			    Login Location      : Serula-Goa-India (ISP : Starlings Wireless Communications Pvt Ltd)
+			    Previous Location   : Portland-Oregon-United States (ISP : Amazon.com, Inc.)
+			    User Agent          : aws-internal/3 aws-sdk-java/1.11.975 Linux/5.4.209-129.367.amzn2int.x86_64 OpenJDK_64-Bit_Server_VM/25.242-b08 java/1.8.0_242 vendor/Oracle_Corporation cfg/retry-mode/legacy
+			    Event Time          : 2022-10-03 07:45:32 +0000
+			    Previous Event Time : 2022-10-03 07:40:47 +0000
+			    Assumed Role        : False: : :",,,

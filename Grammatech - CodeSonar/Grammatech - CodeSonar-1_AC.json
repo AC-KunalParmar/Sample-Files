@@ -1,0 +1,65 @@
+{
+    "rowsWithString": [
+        {
+            "Score": "71",
+            "ID": "1.1",
+            "Project": "codelinish",
+            "Class": "Debug Warning (Java)",
+            "Significance": "Reliability",
+            "File": "app.java",
+            "Line Number": 11,
+            "Procedure": null,
+            "Priority": "P0: High",
+            "State": "Assigned",
+            "Finding": "None",
+            "Owner": null,
+            "Detected": "Wed Nov 23 09:46:13 2022",
+            "Language": "java",
+            "Fingerprint": "ac87c84166505beb",
+            "File Path": "c:/users/administrator/desktop/code234/myjava/src/main/java/com/linish/app.java",
+            "Categories": "JAVA.DEBUG.LOG;CWE:477;CERT-Java:ERR02-J",
+            "Project Description": "",
+            "Notes": [
+                {
+                    "author": "Linish",
+                    "changes": [
+                        {
+                            "field": "state",
+                            "from": "None",
+                            "to": "Assigned"
+                        }
+                    ],
+                    "comment": "",
+                    "created": "2022-11-23T10:39:51.692553Z",
+                    "owner_conflict": "merged",
+                    "prop_conflict": "merged",
+                    "import_author": null,
+                    "import_date": null
+                },
+                {
+                    "author": "Linish",
+                    "changes": [
+                        {
+                            "field": "priority",
+                            "from": "None",
+                            "to": "P0: High"
+                        }
+                    ],
+                    "comment": "",
+                    "created": "2022-11-23T10:40:19.183782Z",
+                    "owner_conflict": "merged",
+                    "prop_conflict": "merged",
+                    "import_author": null,
+                    "import_date": null
+                }
+            ],
+            "Rank": "29",
+            "First Detected": "Wed Nov 23 09:46:13 2022",
+            "Directory": "c:/users/administrator/desktop/code234/myjava/src/main/java/com/linish",
+            "Cluster": "ac87c84166505beb",
+            "Line Content": "<s><c>        System.out.println( </c></s><s string=\"1\"><c>&quot;Hello World!&quot;</c></s><s><c> );&#xD;\n</c></s>",
+            "Modified": "Wed Nov 23 10:40:19 2022",
+            "url": "/warninginstance/1.json"
+        }
+    ]
+}

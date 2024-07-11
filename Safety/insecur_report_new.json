@@ -1,0 +1,3687 @@
+{
+    "report_meta": {
+        "scan_target": "environment",
+        "scanned": [
+            "/home/cigar/.local/lib/python3.9/site-packages",
+            "/usr/lib/python3/dist-packages"
+        ],
+        "policy_file": null,
+        "policy_file_source": "local",
+        "api_key": false,
+        "local_database_path": null,
+        "safety_version": "2.3.1",
+        "timestamp": "2022-11-08 11:42:34",
+        "packages_found": 543,
+        "vulnerabilities_found": 48,
+        "vulnerabilities_ignored": 0,
+        "remediations_recommended": 0,
+        "telemetry": {
+            "os_type": "Linux",
+            "os_release": "6.0.0-2parrot1-amd64",
+            "os_description": "Linux-6.0.0-2parrot1-amd64-x86_64-with-glibc2.31",
+            "python_version": "3.9.2",
+            "safety_command": "check",
+            "safety_options": {
+                "output": {
+                    "--output": 1
+                }
+            },
+            "safety_version": "2.3.1",
+            "safety_source": "cli"
+        },
+        "git": {
+            "error": "not-git-repo"
+        },
+        "project": null,
+        "json_version": 1
+    },
+    "scanned_packages": {
+        "toml": {
+            "name": "toml",
+            "version": "0.10.2"
+        },
+        "safety": {
+            "name": "safety",
+            "version": "2.3.1"
+        },
+        "ruamel.yaml": {
+            "name": "ruamel.yaml",
+            "version": "0.17.21"
+        },
+        "ruamel.yaml.clib": {
+            "name": "ruamel.yaml.clib",
+            "version": "0.2.7"
+        },
+        "packaging": {
+            "name": "packaging",
+            "version": "21.3"
+        },
+        "insecure-package": {
+            "name": "insecure-package",
+            "version": "0.1.0"
+        },
+        "dparse": {
+            "name": "dparse",
+            "version": "0.6.2"
+        },
+        "click": {
+            "name": "click",
+            "version": "8.1.3"
+        },
+        "zope.interface": {
+            "name": "zope.interface",
+            "version": "5.2.0"
+        },
+        "zope.event": {
+            "name": "zope.event",
+            "version": "4.4"
+        },
+        "zipp": {
+            "name": "zipp",
+            "version": "1.0.0"
+        },
+        "yarl": {
+            "name": "yarl",
+            "version": "1.6.3"
+        },
+        "xmltodict": {
+            "name": "xmltodict",
+            "version": "0.12.0"
+        },
+        "xlsxwriter": {
+            "name": "xlsxwriter",
+            "version": "1.1.2"
+        },
+        "xdg": {
+            "name": "xdg",
+            "version": "5"
+        },
+        "xcffib": {
+            "name": "xcffib",
+            "version": "0.8.1"
+        },
+        "wxpython": {
+            "name": "wxpython",
+            "version": "4.0.7"
+        },
+        "wsproto": {
+            "name": "wsproto",
+            "version": "0.15.0"
+        },
+        "wrapt": {
+            "name": "wrapt",
+            "version": "1.12.1"
+        },
+        "wifite": {
+            "name": "wifite",
+            "version": "2.5.8"
+        },
+        "whois": {
+            "name": "whois",
+            "version": "0.8"
+        },
+        "wheel": {
+            "name": "wheel",
+            "version": "0.34.2"
+        },
+        "wfuzz": {
+            "name": "wfuzz",
+            "version": "3.1.0"
+        },
+        "werkzeug": {
+            "name": "werkzeug",
+            "version": "2.0.2"
+        },
+        "websploit": {
+            "name": "websploit",
+            "version": "4.0.4"
+        },
+        "websockets": {
+            "name": "websockets",
+            "version": "8.1"
+        },
+        "websocket-client": {
+            "name": "websocket-client",
+            "version": "0.57.0"
+        },
+        "webob": {
+            "name": "webob",
+            "version": "1.8.6"
+        },
+        "webencodings": {
+            "name": "webencodings",
+            "version": "0.5.1"
+        },
+        "wcwidth": {
+            "name": "wcwidth",
+            "version": "0.1.9"
+        },
+        "wafw00f": {
+            "name": "wafw00f",
+            "version": "2.1.0"
+        },
+        "visvis": {
+            "name": "visvis",
+            "version": "1.13.0"
+        },
+        "validators": {
+            "name": "validators",
+            "version": "0.14.2"
+        },
+        "uvloop": {
+            "name": "uvloop",
+            "version": "0.14.0"
+        },
+        "urwid": {
+            "name": "urwid",
+            "version": "2.1.2"
+        },
+        "urllib3": {
+            "name": "urllib3",
+            "version": "1.26.5"
+        },
+        "unicodecsv": {
+            "name": "unicodecsv",
+            "version": "0.14.1"
+        },
+        "ujson": {
+            "name": "ujson",
+            "version": "4.0.2"
+        },
+        "ufw": {
+            "name": "ufw",
+            "version": "0.36"
+        },
+        "uamqp": {
+            "name": "uamqp",
+            "version": "1.2.13"
+        },
+        "typing-extensions": {
+            "name": "typing-extensions",
+            "version": "3.10.0.2"
+        },
+        "traitlets": {
+            "name": "traitlets",
+            "version": "5.0.5"
+        },
+        "tqdm": {
+            "name": "tqdm",
+            "version": "4.57.0"
+        },
+        "torrequest": {
+            "name": "torrequest",
+            "version": "0.1.0"
+        },
+        "tornado": {
+            "name": "tornado",
+            "version": "6.1"
+        },
+        "tls-parser": {
+            "name": "tls-parser",
+            "version": "1.2.2"
+        },
+        "theharvester": {
+            "name": "theharvester",
+            "version": "4.2.0"
+        },
+        "texttable": {
+            "name": "texttable",
+            "version": "1.6.3"
+        },
+        "terminator": {
+            "name": "terminator",
+            "version": "2.1.0"
+        },
+        "terminaltables": {
+            "name": "terminaltables",
+            "version": "3.1.0"
+        },
+        "termcolor": {
+            "name": "termcolor",
+            "version": "1.1.0"
+        },
+        "tabulate": {
+            "name": "tabulate",
+            "version": "0.8.7"
+        },
+        "stem": {
+            "name": "stem",
+            "version": "1.8.0"
+        },
+        "sslyze": {
+            "name": "sslyze",
+            "version": "5.0.3"
+        },
+        "sshtunnel": {
+            "name": "sshtunnel",
+            "version": "0.1.4"
+        },
+        "sqlalchemy": {
+            "name": "sqlalchemy",
+            "version": "1.3.22"
+        },
+        "specan": {
+            "name": "specan",
+            "version": "0.0.0"
+        },
+        "soupsieve": {
+            "name": "soupsieve",
+            "version": "2.2.1"
+        },
+        "sortedcontainers": {
+            "name": "sortedcontainers",
+            "version": "2.1.0"
+        },
+        "six": {
+            "name": "six",
+            "version": "1.16.0"
+        },
+        "simplejson": {
+            "name": "simplejson",
+            "version": "3.17.2"
+        },
+        "shodan": {
+            "name": "shodan",
+            "version": "1.25.0"
+        },
+        "sherlock": {
+            "name": "sherlock",
+            "version": "0.14.0"
+        },
+        "setuptools": {
+            "name": "setuptools",
+            "version": "52.0.0"
+        },
+        "setproctitle": {
+            "name": "setproctitle",
+            "version": "1.2.1"
+        },
+        "semver": {
+            "name": "semver",
+            "version": "2.10.2"
+        },
+        "selenium": {
+            "name": "selenium",
+            "version": "4.0.0a1"
+        },
+        "secure": {
+            "name": "secure",
+            "version": "0.2.1"
+        },
+        "secretstorage": {
+            "name": "secretstorage",
+            "version": "3.3.1"
+        },
+        "scp": {
+            "name": "scp",
+            "version": "0.13.0"
+        },
+        "scipy": {
+            "name": "scipy",
+            "version": "1.6.0"
+        },
+        "scapy": {
+            "name": "scapy",
+            "version": "2.4.4"
+        },
+        "s3transfer": {
+            "name": "s3transfer",
+            "version": "0.3.4"
+        },
+        "s3scanner": {
+            "name": "s3scanner",
+            "version": "2.0.1"
+        },
+        "rtlsdr-scanner": {
+            "name": "rtlsdr-scanner",
+            "version": "1.3.2"
+        },
+        "rsa": {
+            "name": "rsa",
+            "version": "4.0"
+        },
+        "rq": {
+            "name": "rq",
+            "version": "1.7.0"
+        },
+        "routes": {
+            "name": "routes",
+            "version": "2.5.1"
+        },
+        "roman": {
+            "name": "roman",
+            "version": "2.0.0"
+        },
+        "rfcat": {
+            "name": "rfcat",
+            "version": "1.9.5"
+        },
+        "retrying": {
+            "name": "retrying",
+            "version": "1.3.3"
+        },
+        "requests": {
+            "name": "requests",
+            "version": "2.25.1"
+        },
+        "requests-toolbelt": {
+            "name": "requests-toolbelt",
+            "version": "0.9.1"
+        },
+        "requests-oauthlib": {
+            "name": "requests-oauthlib",
+            "version": "1.0.0"
+        },
+        "requests-futures": {
+            "name": "requests-futures",
+            "version": "1.0.0"
+        },
+        "repoze.lru": {
+            "name": "repoze.lru",
+            "version": "0.7"
+        },
+        "reportbug": {
+            "name": "reportbug",
+            "version": "7.10.3+deb11u1"
+        },
+        "redis": {
+            "name": "redis",
+            "version": "3.5.3"
+        },
+        "qrcode": {
+            "name": "qrcode",
+            "version": "6.1"
+        },
+        "pyyaml": {
+            "name": "pyyaml",
+            "version": "5.3.1"
+        },
+        "pyxdg": {
+            "name": "pyxdg",
+            "version": "0.27"
+        },
+        "pyusb": {
+            "name": "pyusb",
+            "version": "1.0.2"
+        },
+        "pytz": {
+            "name": "pytz",
+            "version": "2021.1"
+        },
+        "python-xlib": {
+            "name": "python-xlib",
+            "version": "0.29"
+        },
+        "python-xapp": {
+            "name": "python-xapp",
+            "version": "2.0.2"
+        },
+        "python-pptx": {
+            "name": "python-pptx",
+            "version": "0.6.18"
+        },
+        "python-memcached": {
+            "name": "python-memcached",
+            "version": "1.58"
+        },
+        "python-magic": {
+            "name": "python-magic",
+            "version": "0.4.20"
+        },
+        "python-libnmap": {
+            "name": "python-libnmap",
+            "version": "0.7.2"
+        },
+        "python-gvm": {
+            "name": "python-gvm",
+            "version": "21.11.0"
+        },
+        "python-dotenv": {
+            "name": "python-dotenv",
+            "version": "0.15.0"
+        },
+        "python-docx": {
+            "name": "python-docx",
+            "version": "0.8.10"
+        },
+        "python-debianbts": {
+            "name": "python-debianbts",
+            "version": "3.1.0"
+        },
+        "python-debian": {
+            "name": "python-debian",
+            "version": "0.1.39"
+        },
+        "python-dateutil": {
+            "name": "python-dateutil",
+            "version": "2.8.1"
+        },
+        "python-apt": {
+            "name": "python-apt",
+            "version": "2.2.1+parrot1"
+        },
+        "pysocks": {
+            "name": "pysocks",
+            "version": "1.7.1"
+        },
+        "pysnmp": {
+            "name": "pysnmp",
+            "version": "4.4.12"
+        },
+        "pysmi": {
+            "name": "pysmi",
+            "version": "0.3.2"
+        },
+        "pysimplesoap": {
+            "name": "pysimplesoap",
+            "version": "1.16.2"
+        },
+        "pyserial": {
+            "name": "pyserial",
+            "version": "3.5b0"
+        },
+        "pyrtlsdr": {
+            "name": "pyrtlsdr",
+            "version": "0.2.91"
+        },
+        "pyrsistent": {
+            "name": "pyrsistent",
+            "version": "0.15.5"
+        },
+        "pyqt5": {
+            "name": "pyqt5",
+            "version": "5.15.2"
+        },
+        "pyqt5-sip": {
+            "name": "pyqt5-sip",
+            "version": "12.10.1"
+        },
+        "pyppeteer": {
+            "name": "pyppeteer",
+            "version": "0.2.5"
+        },
+        "pyperclip": {
+            "name": "pyperclip",
+            "version": "1.8.0"
+        },
+        "pypdf2": {
+            "name": "pypdf2",
+            "version": "1.26.0"
+        },
+        "pyparsing": {
+            "name": "pyparsing",
+            "version": "2.4.7"
+        },
+        "pyopenssl": {
+            "name": "pyopenssl",
+            "version": "20.0.1"
+        },
+        "pyopengl": {
+            "name": "pyopengl",
+            "version": "3.1.5"
+        },
+        "pyodbc": {
+            "name": "pyodbc",
+            "version": "4.0.30"
+        },
+        "pynvim": {
+            "name": "pynvim",
+            "version": "0.4.2"
+        },
+        "pynacl": {
+            "name": "pynacl",
+            "version": "1.4.0"
+        },
+        "pymysql": {
+            "name": "pymysql",
+            "version": "0.9.3"
+        },
+        "pymssql": {
+            "name": "pymssql",
+            "version": "2.1.4"
+        },
+        "pymongo": {
+            "name": "pymongo",
+            "version": "3.11.0"
+        },
+        "pyjwt": {
+            "name": "pyjwt",
+            "version": "2.1.0"
+        },
+        "pyinotify": {
+            "name": "pyinotify",
+            "version": "0.9.6"
+        },
+        "pygraphviz": {
+            "name": "pygraphviz",
+            "version": "1.7"
+        },
+        "pygobject": {
+            "name": "pygobject",
+            "version": "3.42.2"
+        },
+        "pygments": {
+            "name": "pygments",
+            "version": "2.7.1"
+        },
+        "pygithub": {
+            "name": "pygithub",
+            "version": "1.43.7"
+        },
+        "pygeoip": {
+            "name": "pygeoip",
+            "version": "0.3.2"
+        },
+        "pyenchant": {
+            "name": "pyenchant",
+            "version": "3.2.0"
+        },
+        "pyee": {
+            "name": "pyee",
+            "version": "7.0.2"
+        },
+        "pydot": {
+            "name": "pydot",
+            "version": "1.4.2"
+        },
+        "pydantic": {
+            "name": "pydantic",
+            "version": "1.7.4"
+        },
+        "pycurl": {
+            "name": "pycurl",
+            "version": "7.43.0.6"
+        },
+        "pycryptodomex": {
+            "name": "pycryptodomex",
+            "version": "3.9.7"
+        },
+        "pycparser": {
+            "name": "pycparser",
+            "version": "2.20"
+        },
+        "pycares": {
+            "name": "pycares",
+            "version": "3.1.1"
+        },
+        "pycairo": {
+            "name": "pycairo",
+            "version": "1.16.2"
+        },
+        "pyasn1": {
+            "name": "pyasn1",
+            "version": "0.4.8"
+        },
+        "publicsuffix2": {
+            "name": "publicsuffix2",
+            "version": "2.20191221"
+        },
+        "psycopg2": {
+            "name": "psycopg2",
+            "version": "2.8.6"
+        },
+        "psutil": {
+            "name": "psutil",
+            "version": "5.8.0"
+        },
+        "protobuf": {
+            "name": "protobuf",
+            "version": "4.21.5"
+        },
+        "prompt-toolkit": {
+            "name": "prompt-toolkit",
+            "version": "3.0.14"
+        },
+        "prettytable": {
+            "name": "prettytable",
+            "version": "0.7.2"
+        },
+        "portalocker": {
+            "name": "portalocker",
+            "version": "2.2.1"
+        },
+        "ply": {
+            "name": "ply",
+            "version": "3.11"
+        },
+        "pluginbase": {
+            "name": "pluginbase",
+            "version": "1.0.0"
+        },
+        "plotly": {
+            "name": "plotly",
+            "version": "4.14.3"
+        },
+        "pkginfo": {
+            "name": "pkginfo",
+            "version": "1.4.2"
+        },
+        "pip": {
+            "name": "pip",
+            "version": "20.3.4"
+        },
+        "pillow": {
+            "name": "pillow",
+            "version": "8.1.2"
+        },
+        "pickleshare": {
+            "name": "pickleshare",
+            "version": "0.7.5"
+        },
+        "phonenumbers": {
+            "name": "phonenumbers",
+            "version": "8.12.1"
+        },
+        "pexpect": {
+            "name": "pexpect",
+            "version": "4.8.0"
+        },
+        "pefile": {
+            "name": "pefile",
+            "version": "2019.4.18"
+        },
+        "pcapy": {
+            "name": "pcapy",
+            "version": "0.11.4"
+        },
+        "passlib": {
+            "name": "passlib",
+            "version": "1.7.4"
+        },
+        "parso": {
+            "name": "parso",
+            "version": "0.8.1"
+        },
+        "parsero": {
+            "name": "parsero",
+            "version": "0.82"
+        },
+        "paramiko": {
+            "name": "paramiko",
+            "version": "2.7.2"
+        },
+        "ospd-openvas": {
+            "name": "ospd-openvas",
+            "version": "21.4.4"
+        },
+        "onboard": {
+            "name": "onboard",
+            "version": "1.4.1"
+        },
+        "olefile": {
+            "name": "olefile",
+            "version": "0.46"
+        },
+        "oauthlib": {
+            "name": "oauthlib",
+            "version": "3.1.0"
+        },
+        "numpy": {
+            "name": "numpy",
+            "version": "1.19.5"
+        },
+        "nose": {
+            "name": "nose",
+            "version": "1.3.7"
+        },
+        "networkx": {
+            "name": "networkx",
+            "version": "2.5"
+        },
+        "netifaces": {
+            "name": "netifaces",
+            "version": "0.10.9"
+        },
+        "netaddr": {
+            "name": "netaddr",
+            "version": "0.7.19"
+        },
+        "nbformat": {
+            "name": "nbformat",
+            "version": "5.1.2"
+        },
+        "nassl": {
+            "name": "nassl",
+            "version": "4.0.0"
+        },
+        "multidict": {
+            "name": "multidict",
+            "version": "5.1.0"
+        },
+        "msrestazure": {
+            "name": "msrestazure",
+            "version": "0.6.2"
+        },
+        "msrest": {
+            "name": "msrest",
+            "version": "0.6.21"
+        },
+        "msgpack": {
+            "name": "msgpack",
+            "version": "1.0.0"
+        },
+        "msal": {
+            "name": "msal",
+            "version": "1.20.0"
+        },
+        "msal-extensions": {
+            "name": "msal-extensions",
+            "version": "1.0.0"
+        },
+        "more-itertools": {
+            "name": "more-itertools",
+            "version": "4.2.0"
+        },
+        "mitmproxy": {
+            "name": "mitmproxy",
+            "version": "6.0.2"
+        },
+        "mistune": {
+            "name": "mistune",
+            "version": "0.8.4"
+        },
+        "mechanize": {
+            "name": "mechanize",
+            "version": "0.4.5"
+        },
+        "maxminddb": {
+            "name": "maxminddb",
+            "version": "2.0.3"
+        },
+        "matplotlib": {
+            "name": "matplotlib",
+            "version": "3.3.4"
+        },
+        "mate-tweak": {
+            "name": "mate-tweak",
+            "version": "21.4.2"
+        },
+        "mate-menu": {
+            "name": "mate-menu",
+            "version": "20.4.1"
+        },
+        "markupsafe": {
+            "name": "markupsafe",
+            "version": "2.0.1"
+        },
+        "markdown": {
+            "name": "markdown",
+            "version": "3.3.4"
+        },
+        "mako": {
+            "name": "mako",
+            "version": "1.1.3"
+        },
+        "lxml": {
+            "name": "lxml",
+            "version": "4.6.3"
+        },
+        "louis": {
+            "name": "louis",
+            "version": "3.23.0"
+        },
+        "logutils": {
+            "name": "logutils",
+            "version": "0.3.3"
+        },
+        "libapparmor": {
+            "name": "libapparmor",
+            "version": "2.13.6"
+        },
+        "ldapdomaindump": {
+            "name": "ldapdomaindump",
+            "version": "0.9.3"
+        },
+        "ldap3": {
+            "name": "ldap3",
+            "version": "2.8.1"
+        },
+        "knack": {
+            "name": "knack",
+            "version": "0.10.0"
+        },
+        "kiwisolver": {
+            "name": "kiwisolver",
+            "version": "1.3.1"
+        },
+        "keyring": {
+            "name": "keyring",
+            "version": "22.0.1"
+        },
+        "kaitaistruct": {
+            "name": "kaitaistruct",
+            "version": "0.9"
+        },
+        "jupyter-core": {
+            "name": "jupyter-core",
+            "version": "4.7.1"
+        },
+        "jsonschema": {
+            "name": "jsonschema",
+            "version": "3.2.0"
+        },
+        "jsondiff": {
+            "name": "jsondiff",
+            "version": "1.1.1"
+        },
+        "jmespath": {
+            "name": "jmespath",
+            "version": "0.10.0"
+        },
+        "jinja2": {
+            "name": "jinja2",
+            "version": "3.0.3"
+        },
+        "jeepney": {
+            "name": "jeepney",
+            "version": "0.6.0"
+        },
+        "jedi": {
+            "name": "jedi",
+            "version": "0.18.0"
+        },
+        "javaproperties": {
+            "name": "javaproperties",
+            "version": "0.7.0"
+        },
+        "itsdangerous": {
+            "name": "itsdangerous",
+            "version": "2.1.2"
+        },
+        "isodate": {
+            "name": "isodate",
+            "version": "0.6.0"
+        },
+        "ipython": {
+            "name": "ipython",
+            "version": "7.20.0"
+        },
+        "ipython-genutils": {
+            "name": "ipython-genutils",
+            "version": "0.2.0"
+        },
+        "ipwhois": {
+            "name": "ipwhois",
+            "version": "0.15.1"
+        },
+        "ipdb": {
+            "name": "ipdb",
+            "version": "0.13.3"
+        },
+        "invoke": {
+            "name": "invoke",
+            "version": "1.4.1"
+        },
+        "instaloader": {
+            "name": "instaloader",
+            "version": "4.9.4"
+        },
+        "importlib-metadata": {
+            "name": "importlib-metadata",
+            "version": "1.6.0"
+        },
+        "impacket": {
+            "name": "impacket",
+            "version": "0.9.22"
+        },
+        "imageio": {
+            "name": "imageio",
+            "version": "2.4.1"
+        },
+        "idna": {
+            "name": "idna",
+            "version": "2.10"
+        },
+        "hyperframe": {
+            "name": "hyperframe",
+            "version": "6.0.0"
+        },
+        "humanfriendly": {
+            "name": "humanfriendly",
+            "version": "9.1"
+        },
+        "httplib2": {
+            "name": "httplib2",
+            "version": "0.18.1"
+        },
+        "html5lib": {
+            "name": "html5lib",
+            "version": "1.1"
+        },
+        "hpack": {
+            "name": "hpack",
+            "version": "4.0.0"
+        },
+        "hashid": {
+            "name": "hashid",
+            "version": "3.1.4"
+        },
+        "h11": {
+            "name": "h11",
+            "version": "0.12.0"
+        },
+        "h2": {
+            "name": "h2",
+            "version": "4.0.0"
+        },
+        "gvm-tools": {
+            "name": "gvm-tools",
+            "version": "22.6.1"
+        },
+        "greenlet": {
+            "name": "greenlet",
+            "version": "0.4.17"
+        },
+        "gpg": {
+            "name": "gpg",
+            "version": "1.14.0-unknown"
+        },
+        "gevent": {
+            "name": "gevent",
+            "version": "20.9.0"
+        },
+        "geoip2": {
+            "name": "geoip2",
+            "version": "2.9.0"
+        },
+        "geoip": {
+            "name": "geoip",
+            "version": "1.3.2"
+        },
+        "gdal": {
+            "name": "gdal",
+            "version": "3.2.2"
+        },
+        "future": {
+            "name": "future",
+            "version": "0.18.2"
+        },
+        "flask": {
+            "name": "flask",
+            "version": "2.0.1"
+        },
+        "flask-restful": {
+            "name": "flask-restful",
+            "version": "0.3.8"
+        },
+        "flasgger": {
+            "name": "flasgger",
+            "version": "0.9.5"
+        },
+        "fabric": {
+            "name": "fabric",
+            "version": "2.5.0"
+        },
+        "exifread": {
+            "name": "exifread",
+            "version": "2.3.2"
+        },
+        "docutils": {
+            "name": "docutils",
+            "version": "0.16"
+        },
+        "dnspython": {
+            "name": "dnspython",
+            "version": "2.0.0"
+        },
+        "dnslib": {
+            "name": "dnslib",
+            "version": "0.9.14"
+        },
+        "distro": {
+            "name": "distro",
+            "version": "1.5.0"
+        },
+        "dicttoxml": {
+            "name": "dicttoxml",
+            "version": "1.7.4"
+        },
+        "dhcpig": {
+            "name": "dhcpig",
+            "version": "0.0.0"
+        },
+        "deprecated": {
+            "name": "deprecated",
+            "version": "1.2.11"
+        },
+        "defusedxml": {
+            "name": "defusedxml",
+            "version": "0.6.0"
+        },
+        "decorator": {
+            "name": "decorator",
+            "version": "4.4.2"
+        },
+        "dbus-python": {
+            "name": "dbus-python",
+            "version": "1.2.16"
+        },
+        "cycler": {
+            "name": "cycler",
+            "version": "0.10.0"
+        },
+        "cryptography": {
+            "name": "cryptography",
+            "version": "3.3.2"
+        },
+        "configobj": {
+            "name": "configobj",
+            "version": "5.0.6"
+        },
+        "colorama": {
+            "name": "colorama",
+            "version": "0.4.4"
+        },
+        "click-plugins": {
+            "name": "click-plugins",
+            "version": "1.1.1"
+        },
+        "cherrypy": {
+            "name": "cherrypy",
+            "version": "8.9.1"
+        },
+        "chardet": {
+            "name": "chardet",
+            "version": "4.0.0"
+        },
+        "cffi": {
+            "name": "cffi",
+            "version": "1.14.5"
+        },
+        "certifi": {
+            "name": "certifi",
+            "version": "2020.6.20"
+        },
+        "cerberus": {
+            "name": "cerberus",
+            "version": "1.3.2"
+        },
+        "capstone": {
+            "name": "capstone",
+            "version": "4.0.2"
+        },
+        "cairocffi": {
+            "name": "cairocffi",
+            "version": "1.2.0"
+        },
+        "brotli": {
+            "name": "brotli",
+            "version": "1.0.9"
+        },
+        "brlapi": {
+            "name": "brlapi",
+            "version": "0.8.4"
+        },
+        "botocore": {
+            "name": "botocore",
+            "version": "1.20.0"
+        },
+        "boto3": {
+            "name": "boto3",
+            "version": "1.13.14"
+        },
+        "blinker": {
+            "name": "blinker",
+            "version": "1.4"
+        },
+        "beautifulsoup4": {
+            "name": "beautifulsoup4",
+            "version": "4.9.3"
+        },
+        "bcrypt": {
+            "name": "bcrypt",
+            "version": "3.2.0"
+        },
+        "backdoor-factory": {
+            "name": "backdoor-factory",
+            "version": "0.0.0"
+        },
+        "backcall": {
+            "name": "backcall",
+            "version": "0.2.0"
+        },
+        "babel": {
+            "name": "babel",
+            "version": "2.8.0"
+        },
+        "azure-template": {
+            "name": "azure-template",
+            "version": "0.0.18b3"
+        },
+        "azure-synapse": {
+            "name": "azure-synapse",
+            "version": "0.1.1"
+        },
+        "azure-synapse-spark": {
+            "name": "azure-synapse-spark",
+            "version": "0.8.0"
+        },
+        "azure-synapse-monitoring": {
+            "name": "azure-synapse-monitoring",
+            "version": "0.3.0"
+        },
+        "azure-synapse-managedprivateendpoints": {
+            "name": "azure-synapse-managedprivateendpoints",
+            "version": "0.5.0"
+        },
+        "azure-synapse-artifacts": {
+            "name": "azure-synapse-artifacts",
+            "version": "0.12.1"
+        },
+        "azure-synapse-accesscontrol": {
+            "name": "azure-synapse-accesscontrol",
+            "version": "0.8.0"
+        },
+        "azure-servicemanagement-legacy": {
+            "name": "azure-servicemanagement-legacy",
+            "version": "0.20.7"
+        },
+        "azure-servicefabric": {
+            "name": "azure-servicefabric",
+            "version": "8.2.0.0"
+        },
+        "azure-servicebus": {
+            "name": "azure-servicebus",
+            "version": "7.6.1"
+        },
+        "azure-security-attestation": {
+            "name": "azure-security-attestation",
+            "version": "1.0.1"
+        },
+        "azure-search-documents": {
+            "name": "azure-search-documents",
+            "version": "11.3.0b9"
+        },
+        "azure-schemaregistry": {
+            "name": "azure-schemaregistry",
+            "version": "1.1.0"
+        },
+        "azure-schemaregistry-avroencoder": {
+            "name": "azure-schemaregistry-avroencoder",
+            "version": "1.0.0b4"
+        },
+        "azure-purview-scanning": {
+            "name": "azure-purview-scanning",
+            "version": "1.0.0b3"
+        },
+        "azure-purview-catalog": {
+            "name": "azure-purview-catalog",
+            "version": "1.0.0b3"
+        },
+        "azure-purview-administration": {
+            "name": "azure-purview-administration",
+            "version": "1.0.0b2"
+        },
+        "azure-multiapi-storage": {
+            "name": "azure-multiapi-storage",
+            "version": "0.10.0"
+        },
+        "azure-monitor-query": {
+            "name": "azure-monitor-query",
+            "version": "1.0.2"
+        },
+        "azure-monitor-opentelemetry-exporter": {
+            "name": "azure-monitor-opentelemetry-exporter",
+            "version": "1.0.0b6"
+        },
+        "azure-mixedreality-remoterendering": {
+            "name": "azure-mixedreality-remoterendering",
+            "version": "1.0.0b2"
+        },
+        "azure-mixedreality-authentication": {
+            "name": "azure-mixedreality-authentication",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-workloadmonitor": {
+            "name": "azure-mgmt-workloadmonitor",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-webpubsub": {
+            "name": "azure-mgmt-webpubsub",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-web": {
+            "name": "azure-mgmt-web",
+            "version": "6.1.0"
+        },
+        "azure-mgmt-vmwarecloudsimple": {
+            "name": "azure-mgmt-vmwarecloudsimple",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-videoanalyzer": {
+            "name": "azure-mgmt-videoanalyzer",
+            "version": "1.0.0b3"
+        },
+        "azure-mgmt-trafficmanager": {
+            "name": "azure-mgmt-trafficmanager",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-timeseriesinsights": {
+            "name": "azure-mgmt-timeseriesinsights",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-testbase": {
+            "name": "azure-mgmt-testbase",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-synapse": {
+            "name": "azure-mgmt-synapse",
+            "version": "2.1.0b4"
+        },
+        "azure-mgmt-support": {
+            "name": "azure-mgmt-support",
+            "version": "6.0.0"
+        },
+        "azure-mgmt-subscription": {
+            "name": "azure-mgmt-subscription",
+            "version": "3.0.0"
+        },
+        "azure-mgmt-streamanalytics": {
+            "name": "azure-mgmt-streamanalytics",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-storagesync": {
+            "name": "azure-mgmt-storagesync",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-storagepool": {
+            "name": "azure-mgmt-storagepool",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-storageimportexport": {
+            "name": "azure-mgmt-storageimportexport",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-storagecache": {
+            "name": "azure-mgmt-storagecache",
+            "version": "1.2.0"
+        },
+        "azure-mgmt-storage": {
+            "name": "azure-mgmt-storage",
+            "version": "20.0.0"
+        },
+        "azure-mgmt-sqlvirtualmachine": {
+            "name": "azure-mgmt-sqlvirtualmachine",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-sql": {
+            "name": "azure-mgmt-sql",
+            "version": "4.0.0b2"
+        },
+        "azure-mgmt-signalr": {
+            "name": "azure-mgmt-signalr",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-servicelinker": {
+            "name": "azure-mgmt-servicelinker",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-servicefabricmanagedclusters": {
+            "name": "azure-mgmt-servicefabricmanagedclusters",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-servicefabric": {
+            "name": "azure-mgmt-servicefabric",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-servicebus": {
+            "name": "azure-mgmt-servicebus",
+            "version": "7.1.0"
+        },
+        "azure-mgmt-servermanager": {
+            "name": "azure-mgmt-servermanager",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-serialconsole": {
+            "name": "azure-mgmt-serialconsole",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-securityinsight": {
+            "name": "azure-mgmt-securityinsight",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-security": {
+            "name": "azure-mgmt-security",
+            "version": "2.0.0b1"
+        },
+        "azure-mgmt-search": {
+            "name": "azure-mgmt-search",
+            "version": "8.0.0"
+        },
+        "azure-mgmt-scheduler": {
+            "name": "azure-mgmt-scheduler",
+            "version": "7.0.0b1"
+        },
+        "azure-mgmt-resourcemover": {
+            "name": "azure-mgmt-resourcemover",
+            "version": "1.1.0b2"
+        },
+        "azure-mgmt-resourcehealth": {
+            "name": "azure-mgmt-resourcehealth",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-resourcegraph": {
+            "name": "azure-mgmt-resourcegraph",
+            "version": "8.1.0b1"
+        },
+        "azure-mgmt-resourceconnector": {
+            "name": "azure-mgmt-resourceconnector",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-resource": {
+            "name": "azure-mgmt-resource",
+            "version": "21.0.0"
+        },
+        "azure-mgmt-reservations": {
+            "name": "azure-mgmt-reservations",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-relay": {
+            "name": "azure-mgmt-relay",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-regionmove": {
+            "name": "azure-mgmt-regionmove",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-redisenterprise": {
+            "name": "azure-mgmt-redisenterprise",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-redis": {
+            "name": "azure-mgmt-redis",
+            "version": "13.1.0"
+        },
+        "azure-mgmt-redhatopenshift": {
+            "name": "azure-mgmt-redhatopenshift",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-recoveryservicessiterecovery": {
+            "name": "azure-mgmt-recoveryservicessiterecovery",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-recoveryservicesbackup": {
+            "name": "azure-mgmt-recoveryservicesbackup",
+            "version": "4.1.1"
+        },
+        "azure-mgmt-recoveryservices": {
+            "name": "azure-mgmt-recoveryservices",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-rdbms": {
+            "name": "azure-mgmt-rdbms",
+            "version": "10.1.0"
+        },
+        "azure-mgmt-quota": {
+            "name": "azure-mgmt-quota",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-quantum": {
+            "name": "azure-mgmt-quantum",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-purview": {
+            "name": "azure-mgmt-purview",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-privatedns": {
+            "name": "azure-mgmt-privatedns",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-powerbiembedded": {
+            "name": "azure-mgmt-powerbiembedded",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-powerbidedicated": {
+            "name": "azure-mgmt-powerbidedicated",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-portal": {
+            "name": "azure-mgmt-portal",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-policyinsights": {
+            "name": "azure-mgmt-policyinsights",
+            "version": "1.1.0b2"
+        },
+        "azure-mgmt-peering": {
+            "name": "azure-mgmt-peering",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-orbital": {
+            "name": "azure-mgmt-orbital",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-operationsmanagement": {
+            "name": "azure-mgmt-operationsmanagement",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-oep": {
+            "name": "azure-mgmt-oep",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-notificationhubs": {
+            "name": "azure-mgmt-notificationhubs",
+            "version": "8.0.0"
+        },
+        "azure-mgmt-network": {
+            "name": "azure-mgmt-network",
+            "version": "19.3.0"
+        },
+        "azure-mgmt-netapp": {
+            "name": "azure-mgmt-netapp",
+            "version": "7.0.0"
+        },
+        "azure-mgmt-msi": {
+            "name": "azure-mgmt-msi",
+            "version": "6.0.0"
+        },
+        "azure-mgmt-monitor": {
+            "name": "azure-mgmt-monitor",
+            "version": "3.1.0"
+        },
+        "azure-mgmt-mobilenetwork": {
+            "name": "azure-mgmt-mobilenetwork",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-mixedreality": {
+            "name": "azure-mgmt-mixedreality",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-media": {
+            "name": "azure-mgmt-media",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-marketplaceordering": {
+            "name": "azure-mgmt-marketplaceordering",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-maps": {
+            "name": "azure-mgmt-maps",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-managementpartner": {
+            "name": "azure-mgmt-managementpartner",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-managementgroups": {
+            "name": "azure-mgmt-managementgroups",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-managedservices": {
+            "name": "azure-mgmt-managedservices",
+            "version": "6.0.0"
+        },
+        "azure-mgmt-maintenance": {
+            "name": "azure-mgmt-maintenance",
+            "version": "2.1.0b1"
+        },
+        "azure-mgmt-machinelearningservices": {
+            "name": "azure-mgmt-machinelearningservices",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-machinelearningcompute": {
+            "name": "azure-mgmt-machinelearningcompute",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-logz": {
+            "name": "azure-mgmt-logz",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-logic": {
+            "name": "azure-mgmt-logic",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-loganalytics": {
+            "name": "azure-mgmt-loganalytics",
+            "version": "13.0.0b2"
+        },
+        "azure-mgmt-loadtestservice": {
+            "name": "azure-mgmt-loadtestservice",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-labservices": {
+            "name": "azure-mgmt-labservices",
+            "version": "2.0.0b1"
+        },
+        "azure-mgmt-kusto": {
+            "name": "azure-mgmt-kusto",
+            "version": "2.2.0"
+        },
+        "azure-mgmt-kubernetesconfiguration": {
+            "name": "azure-mgmt-kubernetesconfiguration",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-keyvault": {
+            "name": "azure-mgmt-keyvault",
+            "version": "9.3.0"
+        },
+        "azure-mgmt-iothubprovisioningservices": {
+            "name": "azure-mgmt-iothubprovisioningservices",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-iothub": {
+            "name": "azure-mgmt-iothub",
+            "version": "2.2.0"
+        },
+        "azure-mgmt-iotcentral": {
+            "name": "azure-mgmt-iotcentral",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-imagebuilder": {
+            "name": "azure-mgmt-imagebuilder",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-hybridnetwork": {
+            "name": "azure-mgmt-hybridnetwork",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-hybridkubernetes": {
+            "name": "azure-mgmt-hybridkubernetes",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-hybridcompute": {
+            "name": "azure-mgmt-hybridcompute",
+            "version": "7.0.0"
+        },
+        "azure-mgmt-healthcareapis": {
+            "name": "azure-mgmt-healthcareapis",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-healthbot": {
+            "name": "azure-mgmt-healthbot",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-hdinsight": {
+            "name": "azure-mgmt-hdinsight",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-hanaonazure": {
+            "name": "azure-mgmt-hanaonazure",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-guestconfig": {
+            "name": "azure-mgmt-guestconfig",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-frontdoor": {
+            "name": "azure-mgmt-frontdoor",
+            "version": "1.0.1"
+        },
+        "azure-mgmt-fluidrelay": {
+            "name": "azure-mgmt-fluidrelay",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-extendedlocation": {
+            "name": "azure-mgmt-extendedlocation",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-eventhub": {
+            "name": "azure-mgmt-eventhub",
+            "version": "10.0.0"
+        },
+        "azure-mgmt-eventgrid": {
+            "name": "azure-mgmt-eventgrid",
+            "version": "10.2.0b1"
+        },
+        "azure-mgmt-elastic": {
+            "name": "azure-mgmt-elastic",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-edgeorder": {
+            "name": "azure-mgmt-edgeorder",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-edgegateway": {
+            "name": "azure-mgmt-edgegateway",
+            "version": "0.1.0"
+        },
+        "azure-mgmt-documentdb": {
+            "name": "azure-mgmt-documentdb",
+            "version": "0.1.3"
+        },
+        "azure-mgmt-dnsresolver": {
+            "name": "azure-mgmt-dnsresolver",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-dns": {
+            "name": "azure-mgmt-dns",
+            "version": "8.0.0"
+        },
+        "azure-mgmt-digitaltwins": {
+            "name": "azure-mgmt-digitaltwins",
+            "version": "6.1.0"
+        },
+        "azure-mgmt-devtestlabs": {
+            "name": "azure-mgmt-devtestlabs",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-devspaces": {
+            "name": "azure-mgmt-devspaces",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-deviceupdate": {
+            "name": "azure-mgmt-deviceupdate",
+            "version": "1.0.0b3"
+        },
+        "azure-mgmt-desktopvirtualization": {
+            "name": "azure-mgmt-desktopvirtualization",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-deploymentmanager": {
+            "name": "azure-mgmt-deploymentmanager",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-datashare": {
+            "name": "azure-mgmt-datashare",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-dataprotection": {
+            "name": "azure-mgmt-dataprotection",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-datamigration": {
+            "name": "azure-mgmt-datamigration",
+            "version": "10.0.0"
+        },
+        "azure-mgmt-datalake-store": {
+            "name": "azure-mgmt-datalake-store",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-datafactory": {
+            "name": "azure-mgmt-datafactory",
+            "version": "2.3.0"
+        },
+        "azure-mgmt-datadog": {
+            "name": "azure-mgmt-datadog",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-databricks": {
+            "name": "azure-mgmt-databricks",
+            "version": "1.1.0b1"
+        },
+        "azure-mgmt-databoxedge": {
+            "name": "azure-mgmt-databoxedge",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-databox": {
+            "name": "azure-mgmt-databox",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-customproviders": {
+            "name": "azure-mgmt-customproviders",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-costmanagement": {
+            "name": "azure-mgmt-costmanagement",
+            "version": "3.0.0"
+        },
+        "azure-mgmt-cosmosdb": {
+            "name": "azure-mgmt-cosmosdb",
+            "version": "7.0.0b3"
+        },
+        "azure-mgmt-core": {
+            "name": "azure-mgmt-core",
+            "version": "1.3.0"
+        },
+        "azure-mgmt-containerservice": {
+            "name": "azure-mgmt-containerservice",
+            "version": "18.0.0"
+        },
+        "azure-mgmt-containerregistry": {
+            "name": "azure-mgmt-containerregistry",
+            "version": "9.1.0"
+        },
+        "azure-mgmt-containerinstance": {
+            "name": "azure-mgmt-containerinstance",
+            "version": "9.1.0"
+        },
+        "azure-mgmt-consumption": {
+            "name": "azure-mgmt-consumption",
+            "version": "9.0.0"
+        },
+        "azure-mgmt-connectedvmware": {
+            "name": "azure-mgmt-connectedvmware",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-confluent": {
+            "name": "azure-mgmt-confluent",
+            "version": "2.0.0b1"
+        },
+        "azure-mgmt-confidentialledger": {
+            "name": "azure-mgmt-confidentialledger",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-compute": {
+            "name": "azure-mgmt-compute",
+            "version": "26.1.0"
+        },
+        "azure-mgmt-communication": {
+            "name": "azure-mgmt-communication",
+            "version": "1.1.0"
+        },
+        "azure-mgmt-commerce": {
+            "name": "azure-mgmt-commerce",
+            "version": "6.0.0"
+        },
+        "azure-mgmt-cognitiveservices": {
+            "name": "azure-mgmt-cognitiveservices",
+            "version": "13.1.0"
+        },
+        "azure-mgmt-chaos": {
+            "name": "azure-mgmt-chaos",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-changeanalysis": {
+            "name": "azure-mgmt-changeanalysis",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-cdn": {
+            "name": "azure-mgmt-cdn",
+            "version": "12.0.0"
+        },
+        "azure-mgmt-botservice": {
+            "name": "azure-mgmt-botservice",
+            "version": "2.0.0b1"
+        },
+        "azure-mgmt-billing": {
+            "name": "azure-mgmt-billing",
+            "version": "6.0.0"
+        },
+        "azure-mgmt-batchai": {
+            "name": "azure-mgmt-batchai",
+            "version": "7.0.0b1"
+        },
+        "azure-mgmt-batch": {
+            "name": "azure-mgmt-batch",
+            "version": "16.1.0"
+        },
+        "azure-mgmt-baremetalinfrastructure": {
+            "name": "azure-mgmt-baremetalinfrastructure",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-azurestackhci": {
+            "name": "azure-mgmt-azurestackhci",
+            "version": "6.1.0b1"
+        },
+        "azure-mgmt-azurestack": {
+            "name": "azure-mgmt-azurestack",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-azurearcdata": {
+            "name": "azure-mgmt-azurearcdata",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-azureadb2c": {
+            "name": "azure-mgmt-azureadb2c",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-avs": {
+            "name": "azure-mgmt-avs",
+            "version": "7.0.0"
+        },
+        "azure-mgmt-automation": {
+            "name": "azure-mgmt-automation",
+            "version": "1.1.0b1"
+        },
+        "azure-mgmt-automanage": {
+            "name": "azure-mgmt-automanage",
+            "version": "1.0.0b2"
+        },
+        "azure-mgmt-authorization": {
+            "name": "azure-mgmt-authorization",
+            "version": "2.0.0"
+        },
+        "azure-mgmt-attestation": {
+            "name": "azure-mgmt-attestation",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-appplatform": {
+            "name": "azure-mgmt-appplatform",
+            "version": "7.0.0"
+        },
+        "azure-mgmt-applicationinsights": {
+            "name": "azure-mgmt-applicationinsights",
+            "version": "3.0.0"
+        },
+        "azure-mgmt-appconfiguration": {
+            "name": "azure-mgmt-appconfiguration",
+            "version": "2.1.0b2"
+        },
+        "azure-mgmt-app": {
+            "name": "azure-mgmt-app",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-apimanagement": {
+            "name": "azure-mgmt-apimanagement",
+            "version": "3.0.0"
+        },
+        "azure-mgmt-alertsmanagement": {
+            "name": "azure-mgmt-alertsmanagement",
+            "version": "1.0.0"
+        },
+        "azure-mgmt-agrifood": {
+            "name": "azure-mgmt-agrifood",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-agfood": {
+            "name": "azure-mgmt-agfood",
+            "version": "1.0.0b1"
+        },
+        "azure-mgmt-advisor": {
+            "name": "azure-mgmt-advisor",
+            "version": "9.0.0"
+        },
+        "azure-messaging-webpubsubservice": {
+            "name": "azure-messaging-webpubsubservice",
+            "version": "1.0.1"
+        },
+        "azure-media-videoanalyzer-edge": {
+            "name": "azure-media-videoanalyzer-edge",
+            "version": "1.0.0b4"
+        },
+        "azure-media-analytics-edge": {
+            "name": "azure-media-analytics-edge",
+            "version": "1.0.0b2"
+        },
+        "azure-loganalytics": {
+            "name": "azure-loganalytics",
+            "version": "0.1.2"
+        },
+        "azure-keyvault": {
+            "name": "azure-keyvault",
+            "version": "4.2.0"
+        },
+        "azure-keyvault-secrets": {
+            "name": "azure-keyvault-secrets",
+            "version": "4.4.1"
+        },
+        "azure-keyvault-keys": {
+            "name": "azure-keyvault-keys",
+            "version": "4.5.1"
+        },
+        "azure-keyvault-certificates": {
+            "name": "azure-keyvault-certificates",
+            "version": "4.4.1"
+        },
+        "azure-keyvault-administration": {
+            "name": "azure-keyvault-administration",
+            "version": "4.1.1"
+        },
+        "azure-iot-modelsrepository": {
+            "name": "azure-iot-modelsrepository",
+            "version": "1.0.0b2"
+        },
+        "azure-iot-deviceupdate": {
+            "name": "azure-iot-deviceupdate",
+            "version": "1.0.0b2"
+        },
+        "azure-identity": {
+            "name": "azure-identity",
+            "version": "1.10.0b1"
+        },
+        "azure-graphrbac": {
+            "name": "azure-graphrbac",
+            "version": "0.61.1"
+        },
+        "azure-eventhub": {
+            "name": "azure-eventhub",
+            "version": "5.9.0b3"
+        },
+        "azure-eventhub-checkpointstoretable": {
+            "name": "azure-eventhub-checkpointstoretable",
+            "version": "1.0.0b1"
+        },
+        "azure-eventhub-checkpointstoreblob": {
+            "name": "azure-eventhub-checkpointstoreblob",
+            "version": "1.2.0"
+        },
+        "azure-eventhub-checkpointstoreblob-aio": {
+            "name": "azure-eventhub-checkpointstoreblob-aio",
+            "version": "1.2.0"
+        },
+        "azure-eventgrid": {
+            "name": "azure-eventgrid",
+            "version": "4.8.0"
+        },
+        "azure-digitaltwins-core": {
+            "name": "azure-digitaltwins-core",
+            "version": "1.2.0"
+        },
+        "azure-devops": {
+            "name": "azure-devops",
+            "version": "0.24.0"
+        },
+        "azure-datalake-store": {
+            "name": "azure-datalake-store",
+            "version": "0.0.51"
+        },
+        "azure-data-tables": {
+            "name": "azure-data-tables",
+            "version": "12.3.0"
+        },
+        "azure-cosmos": {
+            "name": "azure-cosmos",
+            "version": "3.1.1"
+        },
+        "azure-core": {
+            "name": "azure-core",
+            "version": "1.23.2"
+        },
+        "azure-containerregistry": {
+            "name": "azure-containerregistry",
+            "version": "1.0.1"
+        },
+        "azure-confidentialledger": {
+            "name": "azure-confidentialledger",
+            "version": "1.0.0b1"
+        },
+        "azure-communication-sms": {
+            "name": "azure-communication-sms",
+            "version": "1.1.0"
+        },
+        "azure-communication-phonenumbers": {
+            "name": "azure-communication-phonenumbers",
+            "version": "1.2.0"
+        },
+        "azure-communication-networktraversal": {
+            "name": "azure-communication-networktraversal",
+            "version": "1.1.0b1"
+        },
+        "azure-communication-identity": {
+            "name": "azure-communication-identity",
+            "version": "1.2.0"
+        },
+        "azure-communication-chat": {
+            "name": "azure-communication-chat",
+            "version": "1.2.0"
+        },
+        "azure-common": {
+            "name": "azure-common",
+            "version": "1.1.29"
+        },
+        "azure-cognitiveservices-vision-face": {
+            "name": "azure-cognitiveservices-vision-face",
+            "version": "0.6.0"
+        },
+        "azure-cognitiveservices-vision-customvision": {
+            "name": "azure-cognitiveservices-vision-customvision",
+            "version": "3.1.0"
+        },
+        "azure-cognitiveservices-vision-contentmoderator": {
+            "name": "azure-cognitiveservices-vision-contentmoderator",
+            "version": "1.0.0"
+        },
+        "azure-cognitiveservices-vision-computervision": {
+            "name": "azure-cognitiveservices-vision-computervision",
+            "version": "0.9.0"
+        },
+        "azure-cognitiveservices-search-websearch": {
+            "name": "azure-cognitiveservices-search-websearch",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-search-visualsearch": {
+            "name": "azure-cognitiveservices-search-visualsearch",
+            "version": "0.2.0"
+        },
+        "azure-cognitiveservices-search-videosearch": {
+            "name": "azure-cognitiveservices-search-videosearch",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-search-newssearch": {
+            "name": "azure-cognitiveservices-search-newssearch",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-search-imagesearch": {
+            "name": "azure-cognitiveservices-search-imagesearch",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-search-entitysearch": {
+            "name": "azure-cognitiveservices-search-entitysearch",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-search-customsearch": {
+            "name": "azure-cognitiveservices-search-customsearch",
+            "version": "0.3.0"
+        },
+        "azure-cognitiveservices-search-customimagesearch": {
+            "name": "azure-cognitiveservices-search-customimagesearch",
+            "version": "0.2.0"
+        },
+        "azure-cognitiveservices-search-autosuggest": {
+            "name": "azure-cognitiveservices-search-autosuggest",
+            "version": "0.2.0"
+        },
+        "azure-cognitiveservices-personalizer": {
+            "name": "azure-cognitiveservices-personalizer",
+            "version": "0.1.0"
+        },
+        "azure-cognitiveservices-language-textanalytics": {
+            "name": "azure-cognitiveservices-language-textanalytics",
+            "version": "0.2.1"
+        },
+        "azure-cognitiveservices-language-spellcheck": {
+            "name": "azure-cognitiveservices-language-spellcheck",
+            "version": "2.0.0"
+        },
+        "azure-cognitiveservices-language-luis": {
+            "name": "azure-cognitiveservices-language-luis",
+            "version": "0.7.0"
+        },
+        "azure-cognitiveservices-knowledge-qnamaker": {
+            "name": "azure-cognitiveservices-knowledge-qnamaker",
+            "version": "0.3.0"
+        },
+        "azure-cognitiveservices-formrecognizer": {
+            "name": "azure-cognitiveservices-formrecognizer",
+            "version": "0.1.1"
+        },
+        "azure-cognitiveservices-anomalydetector": {
+            "name": "azure-cognitiveservices-anomalydetector",
+            "version": "0.3.0"
+        },
+        "azure-cli": {
+            "name": "azure-cli",
+            "version": "2.42.0"
+        },
+        "azure-cli-telemetry": {
+            "name": "azure-cli-telemetry",
+            "version": "1.0.8"
+        },
+        "azure-cli-core": {
+            "name": "azure-cli-core",
+            "version": "2.42.0"
+        },
+        "azure-batch": {
+            "name": "azure-batch",
+            "version": "12.0.0"
+        },
+        "azure-applicationinsights": {
+            "name": "azure-applicationinsights",
+            "version": "0.1.1"
+        },
+        "azure-appconfiguration": {
+            "name": "azure-appconfiguration",
+            "version": "1.4.0"
+        },
+        "azure-ai-translation-document": {
+            "name": "azure-ai-translation-document",
+            "version": "1.0.0b7"
+        },
+        "azure-ai-textanalytics": {
+            "name": "azure-ai-textanalytics",
+            "version": "5.2.0b4"
+        },
+        "azure-ai-metricsadvisor": {
+            "name": "azure-ai-metricsadvisor",
+            "version": "1.1.0"
+        },
+        "azure-ai-language-questionanswering": {
+            "name": "azure-ai-language-questionanswering",
+            "version": "1.1.0b1"
+        },
+        "azure-ai-language-conversations": {
+            "name": "azure-ai-language-conversations",
+            "version": "1.0.0b3"
+        },
+        "azure-ai-formrecognizer": {
+            "name": "azure-ai-formrecognizer",
+            "version": "3.2.0b5"
+        },
+        "azure-ai-anomalydetector": {
+            "name": "azure-ai-anomalydetector",
+            "version": "3.0.0b6"
+        },
+        "azure-agrifood-farming": {
+            "name": "azure-agrifood-farming",
+            "version": "1.0.0b1"
+        },
+        "awscli": {
+            "name": "awscli",
+            "version": "1.19.1"
+        },
+        "avro-python3": {
+            "name": "avro-python3",
+            "version": "1.10.1"
+        },
+        "attrs": {
+            "name": "attrs",
+            "version": "20.3.0"
+        },
+        "async-timeout": {
+            "name": "async-timeout",
+            "version": "3.0.1"
+        },
+        "asn1crypto": {
+            "name": "asn1crypto",
+            "version": "1.4.0"
+        },
+        "asgiref": {
+            "name": "asgiref",
+            "version": "3.3.0"
+        },
+        "argcomplete": {
+            "name": "argcomplete",
+            "version": "1.8.1"
+        },
+        "applicationinsights": {
+            "name": "applicationinsights",
+            "version": "0.11.9"
+        },
+        "appdirs": {
+            "name": "appdirs",
+            "version": "1.4.4"
+        },
+        "apparmor": {
+            "name": "apparmor",
+            "version": "2.13.6"
+        },
+        "antlr4-python3-runtime": {
+            "name": "antlr4-python3-runtime",
+            "version": "4.9.1"
+        },
+        "aniso8601": {
+            "name": "aniso8601",
+            "version": "8.1.1"
+        },
+        "aiosqlite": {
+            "name": "aiosqlite",
+            "version": "0.16.1"
+        },
+        "aiomultiprocess": {
+            "name": "aiomultiprocess",
+            "version": "0.8.0"
+        },
+        "aiohttp": {
+            "name": "aiohttp",
+            "version": "3.7.4"
+        },
+        "aiodns": {
+            "name": "aiodns",
+            "version": "2.0.0"
+        },
+        "adblockparser": {
+            "name": "adblockparser",
+            "version": "0.7"
+        },
+        "adal": {
+            "name": "adal",
+            "version": "1.2.2"
+        }
+    },
+    "affected_packages": {
+        "insecure-package": {
+            "name": "insecure-package",
+            "version": "0.1.0",
+            "found": "/home/cigar/.local/lib/python3.9/site-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "websockets": {
+            "name": "websockets",
+            "version": "8.1",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "ujson": {
+            "name": "ujson",
+            "version": "4.0.2",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "s3scanner": {
+            "name": "s3scanner",
+            "version": "2.0.1",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "rsa": {
+            "name": "rsa",
+            "version": "4.0",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pyyaml": {
+            "name": "pyyaml",
+            "version": "5.3.1",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "python-libnmap": {
+            "name": "python-libnmap",
+            "version": "0.7.2",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pypdf2": {
+            "name": "pypdf2",
+            "version": "1.26.0",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pyjwt": {
+            "name": "pyjwt",
+            "version": "2.1.0",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pycryptodomex": {
+            "name": "pycryptodomex",
+            "version": "3.9.7",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pip": {
+            "name": "pip",
+            "version": "20.3.4",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "pillow": {
+            "name": "pillow",
+            "version": "8.1.2",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "numpy": {
+            "name": "numpy",
+            "version": "1.19.5",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "mitmproxy": {
+            "name": "mitmproxy",
+            "version": "6.0.2",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "mako": {
+            "name": "mako",
+            "version": "1.1.3",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "lxml": {
+            "name": "lxml",
+            "version": "4.6.3",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "ipython": {
+            "name": "ipython",
+            "version": "7.20.0",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "impacket": {
+            "name": "impacket",
+            "version": "0.9.22",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "imageio": {
+            "name": "imageio",
+            "version": "2.4.1",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "httplib2": {
+            "name": "httplib2",
+            "version": "0.18.1",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "gdal": {
+            "name": "gdal",
+            "version": "3.2.2",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "dnslib": {
+            "name": "dnslib",
+            "version": "0.9.14",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "babel": {
+            "name": "babel",
+            "version": "2.8.0",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        },
+        "aiohttp": {
+            "name": "aiohttp",
+            "version": "3.7.4",
+            "found": "/usr/lib/python3/dist-packages",
+            "insecure_versions": [],
+            "secure_versions": [],
+            "latest_version_without_known_vulnerabilities": null,
+            "latest_version": null,
+            "more_info_url": "https://pyup.io"
+        }
+    },
+    "announcements": [],
+    "vulnerabilities": [
+        {
+            "vulnerability_id": "25853",
+            "package_name": "insecure-package",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<0.2.0",
+            "all_vulnerable_specs": [
+                "<0.2.0"
+            ],
+            "analyzed_version": "0.1.0",
+            "advisory": "This is an insecure package with lots of exploitable security vulnerabilities.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-25853/25853/"
+        },
+        {
+            "vulnerability_id": "50473",
+            "package_name": "websockets",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<10.0",
+            "all_vulnerable_specs": [
+                "<10.0"
+            ],
+            "analyzed_version": "8.1",
+            "advisory": "Websockets 10.0 includes a fix for a DoS vulnerability.\r\nhttps://github.com/aaugustin/websockets/commit/0a935b8ec16f4430ffe638cdbfbe45f6f9d7f684",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2022-50473/50473/"
+        },
+        {
+            "vulnerability_id": "40622",
+            "package_name": "websockets",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": ">=8.0,<9.1",
+            "all_vulnerable_specs": [
+                ">=8.0,<9.1"
+            ],
+            "analyzed_version": "8.1",
+            "advisory": "Websockets before 9.1 has an Observable Timing Discrepancy on servers when HTTP Basic Authentication is enabled with basic_auth_protocol_factory(credentials=...). An attacker may be able to guess a password via a timing attack.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-33880",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-33880/40622/"
+        },
+        {
+            "vulnerability_id": "49755",
+            "package_name": "ujson",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<5.4.0",
+            "all_vulnerable_specs": [
+                "<5.4.0"
+            ],
+            "analyzed_version": "4.0.2",
+            "advisory": "Ujson 5.4.0 includes a fix for CVE-2022-31117: In versions prior to 5.4.0 an error occurring while reallocating a buffer for string decoding can cause the buffer to get freed twice. Due to how UltraJSON uses the internal decoder, this double free is impossible to trigger from Python.\r\nhttps://github.com/ultrajson/ultrajson/security/advisories/GHSA-fm67-cv37-96ff",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-31117",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-31117/49755/"
+        },
+        {
+            "vulnerability_id": "49754",
+            "package_name": "ujson",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<5.4.0",
+            "all_vulnerable_specs": [
+                "<5.4.0"
+            ],
+            "analyzed_version": "4.0.2",
+            "advisory": "Ujson 5.4.0 includes a fix for CVE-2022-31116: Incorrect handling of invalid surrogate pair characters.\r\nhttps://github.com/ultrajson/ultrajson/security/advisories/GHSA-wpqr-jcpx-745r",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-31116",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-31116/49754/"
+        },
+        {
+            "vulnerability_id": "46499",
+            "package_name": "ujson",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<=5.1.0",
+            "all_vulnerable_specs": [
+                "<=5.1.0"
+            ],
+            "analyzed_version": "4.0.2",
+            "advisory": "UltraJSON (aka ujson) through 5.1.0 has a stack-based buffer overflow in Buffer_AppendIndentUnchecked (called from encode). Exploitation can, for example, use a large amount of indentation.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-45958",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-45958/46499/"
+        },
+        {
+            "vulnerability_id": "42898",
+            "package_name": "s3scanner",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<2.0.2",
+            "all_vulnerable_specs": [
+                "<2.0.2"
+            ],
+            "analyzed_version": "2.0.1",
+            "advisory": "S3scanner 2.0.2 includes a fix for CVE-2021-32061: S3Scanner before 2.0.2 allows Directory Traversal via a crafted bucket, as demonstrated by a <Key>../ substring in a ListBucketResult element.\r\nhttps://github.com/sa7mon/S3Scanner/issues/122",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-32061",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-32061/42898/"
+        },
+        {
+            "vulnerability_id": "38414",
+            "package_name": "rsa",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<4.3",
+            "all_vulnerable_specs": [
+                "<4.3"
+            ],
+            "analyzed_version": "4.0",
+            "advisory": "Rsa 4.3 includes two security fixes:\r\n- Choose blinding factor relatively prime to N.\r\n- Reject cyphertexts (when decrypting) and signatures (when verifying) that have  been modified by prepending zero bytes. This resolves CVE-2020-13757.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2020-13757",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2020-13757/38414/"
+        },
+        {
+            "vulnerability_id": "38369",
+            "package_name": "rsa",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "==4.0",
+            "all_vulnerable_specs": [
+                "==4.0"
+            ],
+            "analyzed_version": "4.0",
+            "advisory": "Python-RSA 4.0 ignores leading '\\0' bytes during decryption of ciphertext. This could conceivably have a security-relevant impact, e.g., by helping an attacker to infer that an application uses Python-RSA, or if the length of accepted ciphertext affects application behavior (such as by causing excessive memory allocation). See CVE-2020-13757.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2020-13757",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2020-13757/38369/"
+        },
+        {
+            "vulnerability_id": "39611",
+            "package_name": "pyyaml",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<5.4",
+            "all_vulnerable_specs": [
+                "<5.4"
+            ],
+            "analyzed_version": "5.3.1",
+            "advisory": "Pyyaml version 5.4 includes a fix for CVE-2020-14343: A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.\r\nhttps://bugzilla.redhat.com/show_bug.cgi?id=1860466",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2020-14343",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2020-14343/39611/"
+        },
+        {
+            "vulnerability_id": "49148",
+            "package_name": "python-libnmap",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<=0.7.2",
+            "all_vulnerable_specs": [
+                "<=0.7.2"
+            ],
+            "analyzed_version": "0.7.2",
+            "advisory": "In python-libnmap through 0.7.2, remote command execution can occur, if used in a client application that does not validate arguments. \r\nNOTE: the vendor believes it would be unrealistic for an application to call NmapProcess with arguments taken from input data that arrived over an untrusted network, and thus the CVSS score corresponds to an unrealistic use case. None of the NmapProcess documentation implies that this is an expected use case. See CVE-2022-30284.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-30284",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-30284/49148/"
+        },
+        {
+            "vulnerability_id": "48186",
+            "package_name": "pypdf2",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<=1.27.4",
+            "all_vulnerable_specs": [
+                "<=1.27.4"
+            ],
+            "analyzed_version": "1.26.0",
+            "advisory": "PyPDF2 1.27.5 includes a fix for CVE-2022-24859: In versions prior to 1.27.5 an attacker can craft a PDF which leads to an infinite loop if PyPDF2 code attempts to get the content stream. The reason is that the last while-loop in 'ContentStream._readInlineImage' only terminates when it finds the 'EI' token, but never actually checks if the stream has already ended. Users unable to upgrade should validate PDFs prior to iterating over their content stream.\r\nhttps://github.com/py-pdf/PyPDF2/security/advisories/GHSA-xcjx-m2pj-8g79",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-24859",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-24859/48186/"
+        },
+        {
+            "vulnerability_id": "48542",
+            "package_name": "pyjwt",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": ">=1.5.0,<2.4.0",
+            "all_vulnerable_specs": [
+                ">=1.5.0,<2.4.0"
+            ],
+            "analyzed_version": "2.1.0",
+            "advisory": "PyJWT 2.4.0 includes a fix for CVE-2022-29217: An attacker submitting the JWT token can choose the used signing algorithm. The PyJWT library requires that the application chooses what algorithms are supported. The application can specify 'jwt.algorithms.get_default_algorithms()' to get support for all algorithms, or specify a single algorithm. The issue is not that big as 'algorithms=jwt.algorithms.get_default_algorithms()' has to be used. As a workaround, always be explicit with the algorithms that are accepted and expected when decoding.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-29217",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-29217/48542/"
+        },
+        {
+            "vulnerability_id": "48152",
+            "package_name": "pycryptodomex",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<3.10.3",
+            "all_vulnerable_specs": [
+                "<3.10.3"
+            ],
+            "analyzed_version": "3.9.7",
+            "advisory": "Pycryptodomex 3.10.3 improves robustness of PKCS1v1.5 decryption against timing attacks.\r\nhttps://github.com/Legrandin/pycryptodome/commit/853054937e29e6cd3dc61228be1dc768b688460b",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-41775/48152/"
+        },
+        {
+            "vulnerability_id": "47201",
+            "package_name": "pycryptodomex",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<3.11.0",
+            "all_vulnerable_specs": [
+                "<3.11.0"
+            ],
+            "analyzed_version": "3.9.7",
+            "advisory": "Pycryptodomex 3.11.0 includes a fix for the DSA construction algorithm. Modulus \"p\" primality check wasn't working.\r\nhttps://github.com/Legrandin/pycryptodome/pull/557/commits/183f8d1c7a5e145e78b86fb54da7e327a277d9c6",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-42084/47201/"
+        },
+        {
+            "vulnerability_id": "42559",
+            "package_name": "pip",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<21.1",
+            "all_vulnerable_specs": [
+                "<21.1"
+            ],
+            "analyzed_version": "20.3.4",
+            "advisory": "A flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-3572",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-3572/42559/"
+        },
+        {
+            "vulnerability_id": "40291",
+            "package_name": "pip",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<21.1",
+            "all_vulnerable_specs": [
+                "<21.1"
+            ],
+            "analyzed_version": "20.3.4",
+            "advisory": "Pip 21.1 updates its dependency 'urllib3' to v1.26.4 due to security issues.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-28363",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-28363/40291/"
+        },
+        {
+            "vulnerability_id": "40596",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.2.0",
+            "all_vulnerable_specs": [
+                "<8.2.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow version 8.2.0 includes a fix for CVE-2021-28678: For BLP data, BlpImagePlugin did not properly check that reads (after jumping to file offsets) returned data. This could lead to a DoS where the decoder could be run a large number of times on empty data.\r\nhttps://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MQHA5HAIBOYI3R6HDWCLAGFTIQP767FL/\r\nhttps://github.com/python-pillow/Pillow/pull/5377\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-28678-fix-blp-dos",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-28678",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-28678/40596/"
+        },
+        {
+            "vulnerability_id": "40594",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.2.0",
+            "all_vulnerable_specs": [
+                "<8.2.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow version 8.2.0 includes a fix for CVE-2021-28676: For FLI data, FliDecode did not properly check that the block advance was non-zero, potentially leading to an infinite loop on load.\r\nhttps://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MQHA5HAIBOYI3R6HDWCLAGFTIQP767FL/\r\nhttps://github.com/python-pillow/Pillow/pull/5377\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-28676-fix-fli-dos",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-28676",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-28676/40594/"
+        },
+        {
+            "vulnerability_id": "40592",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.2.0",
+            "all_vulnerable_specs": [
+                "<8.2.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 8.2.0 includes a fix for CVE-2021-25287: There is an out-of-bounds read in J2kDecode, in j2ku_graya_la.\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-25287-cve-2021-25288-fix-oob-read-in-jpeg2kdecode",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-25287",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-25287/40592/"
+        },
+        {
+            "vulnerability_id": "40593",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.2.0",
+            "all_vulnerable_specs": [
+                "<8.2.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 8.2.0 includes a fix for CVE-2021-25288: There is an out-of-bounds read in J2kDecode, in j2ku_gray_i.\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-25287-cve-2021-25288-fix-oob-read-in-jpeg2kdecode",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-25288",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-25288/40593/"
+        },
+        {
+            "vulnerability_id": "40595",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.2.0",
+            "all_vulnerable_specs": [
+                "<8.2.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow version 8.2.0 includes a fix for CVE-2021-28677: For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating lines while looking for a line ending. A malicious EPS file could use this to perform a DoS of Pillow in the open phase, before an image was accepted for opening.\r\nhttps://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MQHA5HAIBOYI3R6HDWCLAGFTIQP767FL/\r\nhttps://github.com/python-pillow/Pillow/pull/5377\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.2.0.html#cve-2021-28677-fix-eps-dos-on-open",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-28677",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-28677/40595/"
+        },
+        {
+            "vulnerability_id": "40965",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.3.0",
+            "all_vulnerable_specs": [
+                "<8.3.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow version 8.3.0 includes a fix for CVE-2021-34552: Pillow through 8.2.0 and PIL (also known as Python Imaging Library) through 1.1.7 allow an attacker to pass controlled parameters directly into a convert function to trigger a buffer overflow in Convert.c\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-34552",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-34552/40965/"
+        },
+        {
+            "vulnerability_id": "44525",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.0",
+            "all_vulnerable_specs": [
+                "<9.0.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 9.0.0 excludes carriage return in PDF regex to help prevent ReDoS.\r\nhttps://github.com/python-pillow/Pillow/pull/5912\r\nhttps://github.com/python-pillow/Pillow/commit/43b800d933c996226e4d7df00c33fcbe46d97363",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-44525/44525/"
+        },
+        {
+            "vulnerability_id": "44486",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.0",
+            "all_vulnerable_specs": [
+                "<9.0.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 9.0.0 includes a fix for CVE-2022-22816: path_getbbox in path.c in Pillow before 9.0.0 has a buffer over-read during initialization of ImagePath.Path.\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#fixed-imagepath-path-array-handling",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-22816",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-22816/44486/"
+        },
+        {
+            "vulnerability_id": "44524",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.0",
+            "all_vulnerable_specs": [
+                "<9.0.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 9.0.0 ensures JpegImagePlugin stops at the end of a truncated file to avoid Denial of Service attacks.\r\nhttps://github.com/python-pillow/Pillow/pull/5921",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2022-44524/44524/"
+        },
+        {
+            "vulnerability_id": "44485",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.0",
+            "all_vulnerable_specs": [
+                "<9.0.0"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 9.0.0 includes a fix for CVE-2022-22815: path_getbbox in path.c in Pillow before 9.0.0 improperly initializes ImagePath.Path.\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#fixed-imagepath-path-array-handling",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-22815",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-22815/44485/"
+        },
+        {
+            "vulnerability_id": "45356",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.1",
+            "all_vulnerable_specs": [
+                "<9.0.1"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow before 9.0.1 allows attackers to delete files because spaces in temporary pathnames are mishandled.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-24303",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-24303/45356/"
+        },
+        {
+            "vulnerability_id": "44487",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<9.0.1",
+            "all_vulnerable_specs": [
+                "<9.0.1"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "Pillow 9.0.1 includes a fix for CVE-2022-22817: PIL.ImageMath.eval in Pillow before 9.0.0 allows evaluation of arbitrary expressions, such as ones that use the Python exec method. A first patch was issued for version 9.0.0 but it did not prevent builtins available to lambda expressions.\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/9.0.1.html#security",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-22817",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-22817/44487/"
+        },
+        {
+            "vulnerability_id": "41271",
+            "package_name": "pillow",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": ">=5.2.0,<8.3.2",
+            "all_vulnerable_specs": [
+                ">=5.2.0,<8.3.2"
+            ],
+            "analyzed_version": "8.1.2",
+            "advisory": "The package pillow from 5.2.0 and before 8.3.2 is vulnerable to Regular Expression Denial of Service (ReDoS) via the getrgb function.\r\nhttps://github.com/python-pillow/Pillow/commit/9e08eb8f78fdfd2f476e1b20b7cf38683754866b\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/8.3.2.html",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-23437",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-23437/41271/"
+        },
+        {
+            "vulnerability_id": "43453",
+            "package_name": "numpy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<1.21.0rc1",
+            "all_vulnerable_specs": [
+                "<1.21.0rc1"
+            ],
+            "analyzed_version": "1.19.5",
+            "advisory": "Numpy 1.21.0rc1 includes a fix for CVE-2021-33430: A Buffer Overflow vulnerability in the PyArray_NewFromDescr_int function of ctors.c when specifying arrays of large dimensions (over 32) from Python code, which could let a malicious user cause a Denial of Service. \r\nNOTE: The vendor does not agree this is a vulnerability. In (very limited) circumstances a user may be able provoke the buffer overflow, the user is most likely already privileged to at least provoke denial of service by exhausting memory. Triggering this further requires the use of uncommon API (complicated structured dtypes), which is very unlikely to be available to an unprivileged user.\r\nhttps://github.com/numpy/numpy/issues/18939",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-33430",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-33430/43453/"
+        },
+        {
+            "vulnerability_id": "44717",
+            "package_name": "numpy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<1.22.0",
+            "all_vulnerable_specs": [
+                "<1.22.0"
+            ],
+            "analyzed_version": "1.19.5",
+            "advisory": "Numpy 1.22.0 includes a fix for CVE-2021-34141: An incomplete string comparison in the numpy.core component in NumPy before 1.22.0 allows attackers to trigger slightly incorrect copying by constructing specific string objects. NOTE: the vendor states that this reported code behavior is \"completely harmless.\"\r\nhttps://github.com/numpy/numpy/issues/18993",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-34141",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-34141/44717/"
+        },
+        {
+            "vulnerability_id": "44716",
+            "package_name": "numpy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<1.22.0",
+            "all_vulnerable_specs": [
+                "<1.22.0"
+            ],
+            "analyzed_version": "1.19.5",
+            "advisory": "Numpy 1.22.0 includes a fix for CVE-2021-41496: Buffer overflow in the array_from_pyobj function of fortranobject.c, which allows attackers to conduct a Denial of Service attacks by carefully constructing an array with negative values. \r\nNOTE: The vendor does not agree this is a vulnerability; the negative dimensions can only be created by an already privileged user (or internally).\r\nhttps://github.com/numpy/numpy/issues/19000",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-41496",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-41496/44716/"
+        },
+        {
+            "vulnerability_id": "44715",
+            "package_name": "numpy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<1.22.2",
+            "all_vulnerable_specs": [
+                "<1.22.2"
+            ],
+            "analyzed_version": "1.19.5",
+            "advisory": "Numpy 1.22.2  includes a fix for CVE-2021-41495: Null Pointer Dereference vulnerability exists in numpy.sort in NumPy in the PyArray_DescrNew function due to missing return-value validation, which allows attackers to conduct DoS attacks by repetitively creating sort arrays. \r\nNOTE: While correct that validation is missing, an error can only occur due to an exhaustion of memory. If the user can exhaust memory, they are already privileged. Further, it should be practically impossible to construct an attack which can target the memory exhaustion to occur at exactly this place.\r\nhttps://github.com/numpy/numpy/issues/19038",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-41495",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-41495/44715/"
+        },
+        {
+            "vulnerability_id": "41855",
+            "package_name": "mitmproxy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<7.0.3",
+            "all_vulnerable_specs": [
+                "<7.0.3"
+            ],
+            "analyzed_version": "6.0.2",
+            "advisory": "Mitmproxy version 7.0.3 includes a fix for CVE-2021-39214: In mitmproxy 7.0.2 and below, a malicious client or server is able to perform HTTP request smuggling attacks through mitmproxy. This means that a malicious client/server could smuggle a request/response through mitmproxy as part of another request/response's HTTP message body. While a smuggled request is still captured as part of another request's body, it does not appear in the request list and does not go through the usual mitmproxy event hooks, where users may have implemented custom access control checks or input sanitization. Unless one uses mitmproxy to protect an HTTP/1 service, no action is required.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-39214",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-39214/41855/"
+        },
+        {
+            "vulnerability_id": "48560",
+            "package_name": "mitmproxy",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<8.0.0",
+            "all_vulnerable_specs": [
+                "<8.0.0"
+            ],
+            "analyzed_version": "6.0.2",
+            "advisory": "Mitmproxy 8.0.0 includes a fix for CVE-2022-24766: Insufficient Protection against HTTP Request Smuggling.\r\nhttps://github.com/mitmproxy/mitmproxy/security/advisories/GHSA-gcx2-gvj7-pxv3",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-24766",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-24766/48560/"
+        },
+        {
+            "vulnerability_id": "50870",
+            "package_name": "mako",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<1.2.2",
+            "all_vulnerable_specs": [
+                "<1.2.2"
+            ],
+            "analyzed_version": "1.1.3",
+            "advisory": "Mako 1.2.2 includes a fix for a REDoS vulnerability.\r\nhttps://github.com/sqlalchemy/mako/issues/366",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2022-50870/50870/"
+        },
+        {
+            "vulnerability_id": "43366",
+            "package_name": "lxml",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<4.6.5",
+            "all_vulnerable_specs": [
+                "<4.6.5"
+            ],
+            "analyzed_version": "4.6.3",
+            "advisory": "Lxml 4.6.5 includes a fix for CVE-2021-43818: Prior to version 4.6.5, the HTML Cleaner in lxml.html lets certain crafted script content pass through, as well as script content in SVG files embedded using data URIs. Users that employ the HTML cleaner in a security relevant context should upgrade to lxml 4.6.5 to receive a patch.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-43818",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-43818/43366/"
+        },
+        {
+            "vulnerability_id": "50748",
+            "package_name": "lxml",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<4.9.1",
+            "all_vulnerable_specs": [
+                "<4.9.1"
+            ],
+            "analyzed_version": "4.6.3",
+            "advisory": "Lxml 4.9.1 include a fix for CVE-2022-2309: NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. Libxml2 2.9.9 and earlier versions are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serializes to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-2309",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-2309/50748/"
+        },
+        {
+            "vulnerability_id": "44634",
+            "package_name": "ipython",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": ">=7.17.0,<7.31.1",
+            "all_vulnerable_specs": [
+                ">=8.0.0a0,<8.0.1",
+                ">=7.17.0,<7.31.1",
+                ">=6.0.0a0,<7.16.3",
+                "<5.11"
+            ],
+            "analyzed_version": "7.20.0",
+            "advisory": "Ipython versions 8.0.1, 7.31.1, 7.16.3 and 5.11 include a fix for CVE-2022-21699: Affected versions are subject to an arbitrary code execution vulnerability achieved by not properly managing cross user temporary files. This vulnerability allows one user to run code as another on the same machine.\r\nhttps://github.com/ipython/ipython/security/advisories/GHSA-pq7m-3gw7-gq5x",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-21699",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-21699/44634/"
+        },
+        {
+            "vulnerability_id": "48475",
+            "package_name": "impacket",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<0.9.23",
+            "all_vulnerable_specs": [
+                "<0.9.23"
+            ],
+            "analyzed_version": "0.9.22",
+            "advisory": "Impacket 0.9.23 fixes Path Traversal vulnerability in 'smbserver.py'. See CVE-2021-31800.\r\nhttps://github.com/SecureAuthCorp/impacket/commit/99bd29e3995c254e2d6f6c2e3454e4271665955a",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-31800",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-31800/48475/"
+        },
+        {
+            "vulnerability_id": "37902",
+            "package_name": "imageio",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<2.6.0",
+            "all_vulnerable_specs": [
+                "<2.6.0"
+            ],
+            "analyzed_version": "2.4.1",
+            "advisory": "Imageio 2.6.0 fixes a code injection vulnerability for Windows users that have dcmtk installed, and where an attacker can set the filename.\r\nhttps://github.com/imageio/imageio/commit/5b398716d518cd14e8b978ea3cd8ec6c0236c1d8",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-37902/37902/"
+        },
+        {
+            "vulnerability_id": "39608",
+            "package_name": "httplib2",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<0.19.0",
+            "all_vulnerable_specs": [
+                "<0.19.0"
+            ],
+            "analyzed_version": "0.18.1",
+            "advisory": "httplib2 is a comprehensive HTTP client library for Python. In httplib2 before version 0.19.0, a malicious server which responds with long series of \"\\xa0\" characters in the \"www-authenticate\" header may cause Denial of Service (CPU burn while parsing header) of the httplib2 client accessing said server. This is fixed in version 0.19.0 which contains a new implementation of auth headers parsing using the pyparsing library. See CVE-2021-21240.",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-21240",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-21240/39608/"
+        },
+        {
+            "vulnerability_id": "42369",
+            "package_name": "gdal",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<3.4.0",
+            "all_vulnerable_specs": [
+                "<3.4.0"
+            ],
+            "analyzed_version": "3.2.2",
+            "advisory": "Gdal 3.4.0 adds netcdf patch to fix a stack read overflow vulnerability.\r\nhttps://github.com/OSGeo/gdal/commit/eec259c7c73f8bc200ff41efc8e6771472b48f86\r\nhttps://bugs.chromium.org/p/oss-fuzz/issues/detail?id=39189",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-42369/42369/"
+        },
+        {
+            "vulnerability_id": "48545",
+            "package_name": "gdal",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<3.5.0",
+            "all_vulnerable_specs": [
+                "<3.5.0"
+            ],
+            "analyzed_version": "3.2.2",
+            "advisory": "Gdal 3.5.0 fixes an out of bounds read in CPLRecodeFromWCharIconV().\r\nhttps://github.com/OSGeo/gdal/commit/26faa6e13501cc6de250f4a7ce91088f0bb7f57d",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2022-48545/48545/"
+        },
+        {
+            "vulnerability_id": "44488",
+            "package_name": "dnslib",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<0.9.17",
+            "all_vulnerable_specs": [
+                "<0.9.17"
+            ],
+            "analyzed_version": "0.9.14",
+            "advisory": "Dnslib 0.9.17 includes a fix for CVE-2022-22846: The dnslib package through 0.9.16 for Python does not verify that the ID value in a DNS reply matches an ID value in a query.\r\nhttps://github.com/paulc/dnslib/issues/30",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2022-22846",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2022-22846/44488/"
+        },
+        {
+            "vulnerability_id": "42203",
+            "package_name": "babel",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<2.9.1",
+            "all_vulnerable_specs": [
+                "<2.9.1"
+            ],
+            "analyzed_version": "2.8.0",
+            "advisory": "Babel 2.9.1 includes a fix for CVE-2021-42771: Babel.Locale in Babel before 2.9.1 allows attackers to load arbitrary locale .dat files (containing serialized Python objects) via directory traversal, leading to code execution.\r\nhttps://github.com/python-babel/babel/pull/782",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": "CVE-2021-42771",
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/CVE-2021-42771/42203/"
+        },
+        {
+            "vulnerability_id": "42692",
+            "package_name": "aiohttp",
+            "ignored": {},
+            "ignored_reason": null,
+            "ignored_expires": null,
+            "vulnerable_spec": "<3.8.0",
+            "all_vulnerable_specs": [
+                "<3.8.0"
+            ],
+            "analyzed_version": "3.7.4",
+            "advisory": "Aiohttp 3.8.0 adds validation of HTTP header keys and values to prevent header injection.\r\nhttps://github.com/aio-libs/aiohttp/issues/4818",
+            "is_transitive": false,
+            "published_date": null,
+            "fixed_versions": [],
+            "closest_versions_without_known_vulnerabilities": [],
+            "resources": [],
+            "CVE": null,
+            "severity": null,
+            "affected_versions": [],
+            "more_info_url": "https://pyup.io/vulnerabilities/PVE-2021-42692/42692/"
+        }
+    ],
+    "ignored_vulnerabilities": [],
+    "remediations": {
+        "insecure-package": {
+            "current_version": "0.1.0",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=0.1.0"
+        },
+        "websockets": {
+            "current_version": "8.1",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=8.1"
+        },
+        "ujson": {
+            "current_version": "4.0.2",
+            "vulnerabilities_found": 3,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=4.0.2"
+        },
+        "s3scanner": {
+            "current_version": "2.0.1",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=2.0.1"
+        },
+        "rsa": {
+            "current_version": "4.0",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=4.0"
+        },
+        "pyyaml": {
+            "current_version": "5.3.1",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=5.3.1"
+        },
+        "python-libnmap": {
+            "current_version": "0.7.2",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=0.7.2"
+        },
+        "pypdf2": {
+            "current_version": "1.26.0",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=1.26.0"
+        },
+        "pyjwt": {
+            "current_version": "2.1.0",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=2.1.0"
+        },
+        "pycryptodomex": {
+            "current_version": "3.9.7",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=3.9.7"
+        },
+        "pip": {
+            "current_version": "20.3.4",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=20.3.4"
+        },
+        "pillow": {
+            "current_version": "8.1.2",
+            "vulnerabilities_found": 13,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=8.1.2"
+        },
+        "numpy": {
+            "current_version": "1.19.5",
+            "vulnerabilities_found": 4,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=1.19.5"
+        },
+        "mitmproxy": {
+            "current_version": "6.0.2",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=6.0.2"
+        },
+        "mako": {
+            "current_version": "1.1.3",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=1.1.3"
+        },
+        "lxml": {
+            "current_version": "4.6.3",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=4.6.3"
+        },
+        "ipython": {
+            "current_version": "7.20.0",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=7.20.0"
+        },
+        "impacket": {
+            "current_version": "0.9.22",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=0.9.22"
+        },
+        "imageio": {
+            "current_version": "2.4.1",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=2.4.1"
+        },
+        "httplib2": {
+            "current_version": "0.18.1",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=0.18.1"
+        },
+        "gdal": {
+            "current_version": "3.2.2",
+            "vulnerabilities_found": 2,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=3.2.2"
+        },
+        "dnslib": {
+            "current_version": "0.9.14",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=0.9.14"
+        },
+        "babel": {
+            "current_version": "2.8.0",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=2.8.0"
+        },
+        "aiohttp": {
+            "current_version": "3.7.4",
+            "vulnerabilities_found": 1,
+            "recommended_version": null,
+            "other_recommended_versions": [],
+            "more_info_url": "https://pyup.io/?from=3.7.4"
+        }
+    }
+}

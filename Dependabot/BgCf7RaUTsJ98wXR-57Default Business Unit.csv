@@ -1,0 +1,13 @@
+Finding ID,Tool Finding ID,Summary,Severity,Ticket ID,"AMC Rule ",Status,Application,SubApplication,Environment,CWE,CVE,Finding Age,Found By,Scan Type,Last Changed,Compliance,Security Owner,Developer,FileName,URL
+61369321,RVA_kwDOGB3Ap85b_9MB,org.apache.logging.log4j:log4j-api : < 2.15.0 - Remote code injection in Log4j,CRITICAL,,"[1.502, 1.20, 1.400]",OPEN,P1&P1,P1&P1,Production,"400
+502
+20
+","CVE-2021-44228
+",0,Dependabot,SCA,Fri Dec 17 15:57:44 UTC 2021,N/A,Priyansh Sharma,Not Found,pom.xml,https://github.com/advisories/GHSA-jfh8-c2jp-5v3q
+61369319,RVA_kwDOGB3Ap85UZiqQ,"junit:junit : >= 4.7, < 4.13.1 - TemporaryFolder on unix-like systems does not limit access to created files",MEDIUM,,"[1.732, 1.200]",OPEN,P1&P1,P1&P1,Production,"200
+732
+","CVE-2020-15250
+",0,Dependabot,SCA,Fri Dec 17 15:57:44 UTC 2021,N/A,Priyansh Sharma,Not Found,pom.xml,https://github.com/advisories/GHSA-269g-pwp5-87pp
+61369320,RVA_kwDOGB3Ap85b-qen,org.apache.logging.log4j:log4j-api : < 2.16.0 - Incomplete fix for Apache Log4j vulnerability,MEDIUM,,[1.502],OPEN,P1&P1,P1&P1,Production,"502
+","CVE-2021-45046
+",0,Dependabot,SCA,Fri Dec 17 15:57:44 UTC 2021,N/A,Priyansh Sharma,Not Found,pom.xml,https://github.com/advisories/GHSA-7rjr-3q55-vv33

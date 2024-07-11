@@ -1,0 +1,2360 @@
+{
+  "ArtifactName": "/app",
+  "ArtifactType": "filesystem",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "config": {},
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "diff_ids": null,
+        "type": ""
+      }
+    }
+  },
+  "Results": [
+    {
+      "Class": "lang-pkgs",
+      "Packages": [
+        {
+          "ID": "antlr:antlr:2.7.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "BSD License"
+          ],
+          "Name": "antlr:antlr",
+          "Version": "2.7.7"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.13.4",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Version": "2.13.4"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-core:2.13.4",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Version": "2.13.4"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.13.4",
+            "com.fasterxml.jackson.core:jackson-core:2.13.4"
+          ],
+          "ID": "com.fasterxml.jackson.core:jackson-databind:2.13.4.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Version": "2.13.4.2"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.13.4",
+            "com.fasterxml.jackson.core:jackson-databind:2.13.4.2"
+          ],
+          "ID": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.4",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+          "Version": "2.13.4"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.13.4",
+            "com.fasterxml.jackson.core:jackson-core:2.13.4",
+            "com.fasterxml.jackson.core:jackson-databind:2.13.4.2"
+          ],
+          "ID": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+          "Version": "2.13.4"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.13.4",
+            "com.fasterxml.jackson.core:jackson-databind:2.13.4.2"
+          ],
+          "ID": "com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.4",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.fasterxml.jackson.module:jackson-module-parameter-names",
+          "Version": "2.13.4"
+        },
+        {
+          "ID": "com.fasterxml:classmate:1.5.1",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "com.fasterxml:classmate",
+          "Version": "1.5.1"
+        },
+        {
+          "DependsOn": [
+            "mysql:mysql-connector-java:8.0.32",
+            "org.springframework.boot:spring-boot-starter-data-jdbc:2.7.8",
+            "org.springframework.boot:spring-boot-starter-data-jpa:2.7.8",
+            "org.springframework.boot:spring-boot-starter-log4j2:2.7.8",
+            "org.springframework.boot:spring-boot-starter-security:2.7.8",
+            "org.springframework.boot:spring-boot-starter-validation:2.7.8",
+            "org.springframework.boot:spring-boot-starter-web:2.7.8"
+          ],
+          "ID": "com.marriott:scan-orchestrator:0.0.1-SNAPSHOT",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "com.marriott:scan-orchestrator",
+          "Version": "0.0.1-SNAPSHOT"
+        },
+        {
+          "ID": "com.sun.istack:istack-commons-runtime:3.0.12",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Distribution License - v 1.0"
+          ],
+          "Name": "com.sun.istack:istack-commons-runtime",
+          "Version": "3.0.12"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32"
+          ],
+          "ID": "com.zaxxer:HikariCP:4.0.3",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache Software License, Version 2.0"
+          ],
+          "Name": "com.zaxxer:HikariCP",
+          "Version": "4.0.3"
+        },
+        {
+          "ID": "jakarta.activation:jakarta.activation-api:1.2.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "EDL 1.0"
+          ],
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Version": "1.2.2"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:1.3.5",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "EPL 2.0",
+            "GPL2 w/ CPE"
+          ],
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Version": "1.3.5"
+        },
+        {
+          "ID": "jakarta.persistence:jakarta.persistence-api:2.2.3",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v. 2.0",
+            "Eclipse Distribution License v. 1.0"
+          ],
+          "Name": "jakarta.persistence:jakarta.persistence-api",
+          "Version": "2.2.3"
+        },
+        {
+          "ID": "jakarta.transaction:jakarta.transaction-api:1.3.3",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "EPL 2.0",
+            "GPL2 w/ CPE"
+          ],
+          "Name": "jakarta.transaction:jakarta.transaction-api",
+          "Version": "1.3.3"
+        },
+        {
+          "ID": "jakarta.validation:jakarta.validation-api:2.0.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License 2.0"
+          ],
+          "Name": "jakarta.validation:jakarta.validation-api",
+          "Version": "2.0.2"
+        },
+        {
+          "DependsOn": [
+            "jakarta.activation:jakarta.activation-api:1.2.2"
+          ],
+          "ID": "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Distribution License - v 1.0"
+          ],
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Version": "2.3.3"
+        },
+        {
+          "DependsOn": [
+            "org.hamcrest:hamcrest-core:2.2"
+          ],
+          "ID": "junit:junit:4.13.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License 1.0"
+          ],
+          "Name": "junit:junit",
+          "Version": "4.13.2"
+        },
+        {
+          "ID": "mysql:mysql-connector-java:8.0.32",
+          "Layer": {},
+          "Name": "mysql:mysql-connector-java",
+          "Version": "8.0.32"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy:1.12.22",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "net.bytebuddy:byte-buddy",
+          "Version": "1.12.22"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy-agent:1.12.22",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "net.bytebuddy:byte-buddy-agent",
+          "Version": "1.12.22"
+        },
+        {
+          "DependsOn": [
+            "org.assertj:assertj-core:3.22.0",
+            "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+            "org.junit.jupiter:junit-jupiter-migrationsupport:5.8.2",
+            "org.junit.jupiter:junit-jupiter-params:5.8.2",
+            "org.junit.vintage:junit-vintage-engine:5.8.2"
+          ],
+          "ID": "org.apache.logging.log4j:log4j-api:2.17.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Version": "2.17.2"
+        },
+        {
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.17.2",
+            "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+            "org.junit.jupiter:junit-jupiter-params:5.8.2",
+            "org.junit.vintage:junit-vintage-engine:5.8.2",
+            "org.mockito:mockito-core:4.5.1",
+            "org.mockito:mockito-junit-jupiter:4.5.1"
+          ],
+          "ID": "org.apache.logging.log4j:log4j-core:2.17.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.logging.log4j:log4j-core",
+          "Version": "2.17.2"
+        },
+        {
+          "DependsOn": [
+            "junit:junit:4.13.2",
+            "org.apache.logging.log4j:log4j-api:2.17.2"
+          ],
+          "ID": "org.apache.logging.log4j:log4j-jul:2.17.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.logging.log4j:log4j-jul",
+          "Version": "2.17.2"
+        },
+        {
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.17.2",
+            "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+            "org.junit.vintage:junit-vintage-engine:5.8.2",
+            "org.slf4j:slf4j-api:1.7.32"
+          ],
+          "ID": "org.apache.logging.log4j:log4j-slf4j-impl:2.17.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.logging.log4j:log4j-slf4j-impl",
+          "Version": "2.17.2"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-core:9.0.71",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Version": "9.0.71"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-el:9.0.71",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Version": "9.0.71"
+        },
+        {
+          "DependsOn": [
+            "org.apache.tomcat.embed:tomcat-embed-core:9.0.71"
+          ],
+          "ID": "org.apache.tomcat.embed:tomcat-embed-websocket:9.0.71",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Version": "9.0.71"
+        },
+        {
+          "ID": "org.apiguardian:apiguardian-api:1.1.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache License, Version 2.0"
+          ],
+          "Name": "org.apiguardian:apiguardian-api",
+          "Version": "1.1.2"
+        },
+        {
+          "ID": "org.aspectj:aspectjweaver:1.9.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License - v 2.0"
+          ],
+          "Name": "org.aspectj:aspectjweaver",
+          "Version": "1.9.7"
+        },
+        {
+          "ID": "org.assertj:assertj-core:3.22.0",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.assertj:assertj-core",
+          "Version": "3.22.0"
+        },
+        {
+          "DependsOn": [
+            "com.sun.istack:istack-commons-runtime:3.0.12",
+            "jakarta.xml.bind:jakarta.xml.bind-api:2.3.3"
+          ],
+          "ID": "org.glassfish.jaxb:jaxb-runtime:2.3.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Distribution License - v 1.0"
+          ],
+          "Name": "org.glassfish.jaxb:jaxb-runtime",
+          "Version": "2.3.7"
+        },
+        {
+          "ID": "org.hamcrest:hamcrest:2.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "BSD License 3"
+          ],
+          "Name": "org.hamcrest:hamcrest",
+          "Version": "2.2"
+        },
+        {
+          "DependsOn": [
+            "org.hamcrest:hamcrest:2.2"
+          ],
+          "ID": "org.hamcrest:hamcrest-core:2.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "BSD License 3"
+          ],
+          "Name": "org.hamcrest:hamcrest-core",
+          "Version": "2.2"
+        },
+        {
+          "DependsOn": [
+            "org.jboss.logging:jboss-logging:3.4.3.Final"
+          ],
+          "ID": "org.hibernate.common:hibernate-commons-annotations:5.1.2.Final",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "GNU Library General Public License v2.1",
+            "later"
+          ],
+          "Name": "org.hibernate.common:hibernate-commons-annotations",
+          "Version": "5.1.2.Final"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml:classmate:1.5.1",
+            "jakarta.validation:jakarta.validation-api:2.0.2",
+            "org.jboss.logging:jboss-logging:3.4.3.Final"
+          ],
+          "ID": "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License 2.0"
+          ],
+          "Name": "org.hibernate.validator:hibernate-validator",
+          "Version": "6.2.5.Final"
+        },
+        {
+          "DependsOn": [
+            "antlr:antlr:2.7.7",
+            "com.fasterxml:classmate:1.5.1",
+            "net.bytebuddy:byte-buddy:1.12.22",
+            "org.glassfish.jaxb:jaxb-runtime:2.3.7",
+            "org.hibernate.common:hibernate-commons-annotations:5.1.2.Final",
+            "org.jboss.logging:jboss-logging:3.4.3.Final",
+            "org.jboss:jandex:2.4.2.Final"
+          ],
+          "ID": "org.hibernate:hibernate-core:5.6.14.Final",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "GNU Library General Public License v2.1",
+            "later"
+          ],
+          "Name": "org.hibernate:hibernate-core",
+          "Version": "5.6.14.Final"
+        },
+        {
+          "ID": "org.jboss.logging:jboss-logging:3.4.3.Final",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, version 2.0"
+          ],
+          "Name": "org.jboss.logging:jboss-logging",
+          "Version": "3.4.3.Final"
+        },
+        {
+          "ID": "org.jboss:jandex:2.4.2.Final",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.jboss:jandex",
+          "Version": "2.4.2.Final"
+        },
+        {
+          "DependsOn": [
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.platform:junit-platform-commons:1.8.2",
+            "org.opentest4j:opentest4j:1.2.0"
+          ],
+          "ID": "org.junit.jupiter:junit-jupiter-api:5.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.jupiter:junit-jupiter-api",
+          "Version": "5.8.2"
+        },
+        {
+          "DependsOn": [
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.jupiter:junit-jupiter-api:5.8.2",
+            "org.junit.platform:junit-platform-engine:1.8.2"
+          ],
+          "ID": "org.junit.jupiter:junit-jupiter-engine:5.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.jupiter:junit-jupiter-engine",
+          "Version": "5.8.2"
+        },
+        {
+          "DependsOn": [
+            "junit:junit:4.13.2",
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.jupiter:junit-jupiter-api:5.8.2"
+          ],
+          "ID": "org.junit.jupiter:junit-jupiter-migrationsupport:5.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.jupiter:junit-jupiter-migrationsupport",
+          "Version": "5.8.2"
+        },
+        {
+          "DependsOn": [
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.jupiter:junit-jupiter-api:5.8.2"
+          ],
+          "ID": "org.junit.jupiter:junit-jupiter-params:5.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.jupiter:junit-jupiter-params",
+          "Version": "5.8.2"
+        },
+        {
+          "DependsOn": [
+            "org.apiguardian:apiguardian-api:1.1.2"
+          ],
+          "ID": "org.junit.platform:junit-platform-commons:1.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.platform:junit-platform-commons",
+          "Version": "1.8.2"
+        },
+        {
+          "DependsOn": [
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.platform:junit-platform-commons:1.8.2",
+            "org.opentest4j:opentest4j:1.2.0"
+          ],
+          "ID": "org.junit.platform:junit-platform-engine:1.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.platform:junit-platform-engine",
+          "Version": "1.8.2"
+        },
+        {
+          "DependsOn": [
+            "junit:junit:4.13.2",
+            "org.apiguardian:apiguardian-api:1.1.2",
+            "org.junit.platform:junit-platform-engine:1.8.2"
+          ],
+          "ID": "org.junit.vintage:junit-vintage-engine:5.8.2",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Eclipse Public License v2.0"
+          ],
+          "Name": "org.junit.vintage:junit-vintage-engine",
+          "Version": "5.8.2"
+        },
+        {
+          "DependsOn": [
+            "net.bytebuddy:byte-buddy-agent:1.12.22",
+            "net.bytebuddy:byte-buddy:1.12.22"
+          ],
+          "ID": "org.mockito:mockito-core:4.5.1",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The MIT License"
+          ],
+          "Name": "org.mockito:mockito-core",
+          "Version": "4.5.1"
+        },
+        {
+          "DependsOn": [
+            "org.mockito:mockito-core:4.5.1"
+          ],
+          "ID": "org.mockito:mockito-junit-jupiter:4.5.1",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The MIT License"
+          ],
+          "Name": "org.mockito:mockito-junit-jupiter",
+          "Version": "4.5.1"
+        },
+        {
+          "ID": "org.opentest4j:opentest4j:1.2.0",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "The Apache License, Version 2.0"
+          ],
+          "Name": "org.opentest4j:opentest4j",
+          "Version": "1.2.0"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32"
+          ],
+          "ID": "org.slf4j:jul-to-slf4j:1.7.36",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "MIT License"
+          ],
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Version": "1.7.36"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:1.7.32",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "MIT License"
+          ],
+          "Name": "org.slf4j:slf4j-api",
+          "Version": "1.7.32"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:2.7.8"
+          ],
+          "ID": "org.springframework.boot:spring-boot-autoconfigure:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "jakarta.annotation:jakarta.annotation-api:1.3.5",
+            "org.springframework.boot:spring-boot-autoconfigure:2.7.8",
+            "org.springframework.boot:spring-boot:2.7.8",
+            "org.springframework:spring-core:5.3.25",
+            "org.yaml:snakeyaml:1.30"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.aspectj:aspectjweaver:1.9.7",
+            "org.springframework.boot:spring-boot-starter:2.7.8",
+            "org.springframework:spring-aop:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-aop:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-aop",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter-jdbc:2.7.8",
+            "org.springframework.data:spring-data-jdbc:2.4.7"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-data-jdbc:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-data-jdbc",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "jakarta.persistence:jakarta.persistence-api:2.2.3",
+            "jakarta.transaction:jakarta.transaction-api:1.3.3",
+            "org.hibernate:hibernate-core:5.6.14.Final",
+            "org.springframework.boot:spring-boot-starter-aop:2.7.8",
+            "org.springframework.boot:spring-boot-starter-jdbc:2.7.8",
+            "org.springframework.data:spring-data-jpa:2.7.7",
+            "org.springframework:spring-aspects:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-data-jpa:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-data-jpa",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "com.zaxxer:HikariCP:4.0.3",
+            "org.springframework.boot:spring-boot-starter:2.7.8",
+            "org.springframework:spring-jdbc:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-jdbc:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-jdbc",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-databind:2.13.4.2",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.4",
+            "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4",
+            "com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.4",
+            "org.springframework.boot:spring-boot-starter:2.7.8",
+            "org.springframework:spring-web:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-json:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-json",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-core:2.17.2",
+            "org.apache.logging.log4j:log4j-jul:2.17.2",
+            "org.apache.logging.log4j:log4j-slf4j-impl:2.17.2",
+            "org.slf4j:jul-to-slf4j:1.7.36"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-log4j2:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-log4j2",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:2.7.8",
+            "org.springframework.security:spring-security-config:5.7.6",
+            "org.springframework.security:spring-security-web:5.7.6",
+            "org.springframework:spring-aop:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-security:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-security",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "jakarta.annotation:jakarta.annotation-api:1.3.5",
+            "org.apache.tomcat.embed:tomcat-embed-core:9.0.71",
+            "org.apache.tomcat.embed:tomcat-embed-el:9.0.71",
+            "org.apache.tomcat.embed:tomcat-embed-websocket:9.0.71"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat:2.7.8",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.apache.tomcat.embed:tomcat-embed-el:9.0.71",
+            "org.hibernate.validator:hibernate-validator:6.2.5.Final",
+            "org.springframework.boot:spring-boot-starter:2.7.8"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-validation:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-validation",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter-json:2.7.8",
+            "org.springframework.boot:spring-boot-starter-tomcat:2.7.8",
+            "org.springframework.boot:spring-boot-starter:2.7.8",
+            "org.springframework:spring-web:5.3.25",
+            "org.springframework:spring-webmvc:5.3.25"
+          ],
+          "ID": "org.springframework.boot:spring-boot-starter-web:2.7.8",
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.boot:spring-boot-starter-web",
+          "Version": "2.7.8"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework.data:spring-data-commons:2.7.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.data:spring-data-commons",
+          "Version": "2.7.7"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32",
+            "org.springframework.data:spring-data-commons:2.7.7",
+            "org.springframework.data:spring-data-relational:2.4.7",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-jdbc:5.3.25",
+            "org.springframework:spring-tx:5.3.25"
+          ],
+          "ID": "org.springframework.data:spring-data-jdbc:2.4.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.data:spring-data-jdbc",
+          "Version": "2.4.7"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32",
+            "org.springframework.data:spring-data-commons:2.7.7",
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-orm:5.3.25",
+            "org.springframework:spring-tx:5.3.25"
+          ],
+          "ID": "org.springframework.data:spring-data-jpa:2.7.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.data:spring-data-jpa",
+          "Version": "2.7.7"
+        },
+        {
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.32",
+            "org.springframework.data:spring-data-commons:2.7.7",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-tx:5.3.25"
+          ],
+          "ID": "org.springframework.data:spring-data-relational:2.4.7",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.data:spring-data-relational",
+          "Version": "2.4.7"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.security:spring-security-core:5.7.6",
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework.security:spring-security-config:5.7.6",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.security:spring-security-config",
+          "Version": "5.7.6"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.security:spring-security-crypto:5.7.6",
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-expression:5.3.25"
+          ],
+          "ID": "org.springframework.security:spring-security-core:5.7.6",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.security:spring-security-core",
+          "Version": "5.7.6"
+        },
+        {
+          "ID": "org.springframework.security:spring-security-crypto:5.7.6",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.security:spring-security-crypto",
+          "Version": "5.7.6"
+        },
+        {
+          "DependsOn": [
+            "org.springframework.security:spring-security-core:5.7.6",
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-expression:5.3.25",
+            "org.springframework:spring-web:5.3.25"
+          ],
+          "ID": "org.springframework.security:spring-security-web:5.7.6",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework.security:spring-security-web",
+          "Version": "5.7.6"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework:spring-aop:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-aop",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.aspectj:aspectjweaver:1.9.7"
+          ],
+          "ID": "org.springframework:spring-aspects:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-aspects",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework:spring-beans:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-beans",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-expression:5.3.25"
+          ],
+          "ID": "org.springframework:spring-context:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-context",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-jcl:5.3.25"
+          ],
+          "ID": "org.springframework:spring-core:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-core",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework:spring-expression:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-expression",
+          "Version": "5.3.25"
+        },
+        {
+          "ID": "org.springframework:spring-jcl:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-jcl",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-tx:5.3.25"
+          ],
+          "ID": "org.springframework:spring-jdbc:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-jdbc",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-jdbc:5.3.25",
+            "org.springframework:spring-tx:5.3.25"
+          ],
+          "ID": "org.springframework:spring-orm:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-orm",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework:spring-tx:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-tx",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-core:5.3.25"
+          ],
+          "ID": "org.springframework:spring-web:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-web",
+          "Version": "5.3.25"
+        },
+        {
+          "DependsOn": [
+            "org.springframework:spring-aop:5.3.25",
+            "org.springframework:spring-beans:5.3.25",
+            "org.springframework:spring-context:5.3.25",
+            "org.springframework:spring-core:5.3.25",
+            "org.springframework:spring-expression:5.3.25",
+            "org.springframework:spring-web:5.3.25"
+          ],
+          "ID": "org.springframework:spring-webmvc:5.3.25",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.springframework:spring-webmvc",
+          "Version": "5.3.25"
+        },
+        {
+          "ID": "org.yaml:snakeyaml:1.30",
+          "Indirect": true,
+          "Layer": {},
+          "Licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "Name": "org.yaml:snakeyaml",
+          "Version": "1.30"
+        }
+      ],
+      "Target": "pom.xml",
+      "Type": "pom",
+      "Vulnerabilities": [
+        {
+          "CVSS": {
+            "bitnami": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "ghsa": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-193"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "The fix for CVE-2023-24998 was incomplete for Apache Tomcat 11.0.0-M2 to 11.0.0-M4, 10.1.5 to 10.1.7, 9.0.71 to 9.0.73 and 8.5.85 to 8.5.87. If non-default HTTP       connector settings were used such that the maxParameterCount could be reached using query string parameters and a request was       submitted that supplied exactly maxParameterCount parameters in the query string, the limit for uploaded request parts could be bypassed with the potential for a denial of service to occur.\n\n\n\n\n",
+          "FixedVersion": "8.5.88, 9.0.74, 10.1.8",
+          "InstalledVersion": "9.0.71",
+          "LastModifiedDate": "2023-06-16T15:15:00Z",
+          "Layer": {},
+          "PkgID": "org.apache.tomcat.embed:tomcat-embed-core:9.0.71",
+          "PkgName": "org.apache.tomcat.embed:tomcat-embed-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-28709",
+          "PublishedDate": "2023-05-22T11:15:00Z",
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2023/05/22/1",
+            "https://access.redhat.com/security/cve/CVE-2023-28709",
+            "https://github.com/apache/tomcat",
+            "https://lists.apache.org/thread/7wvxonzwb7k9hx9jt3q33cmy7j97jo3j",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-28709",
+            "https://security.gentoo.org/glsa/202305-37",
+            "https://security.netapp.com/advisory/ntap-20230616-0004/",
+            "https://tomcat.apache.org/security-10.html",
+            "https://tomcat.apache.org/security-11.html",
+            "https://tomcat.apache.org/security-8.html",
+            "https://tomcat.apache.org/security-9.html",
+            "https://www.cve.org/CVERecord?id=CVE-2023-28709"
+          ],
+          "Severity": "HIGH",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Fix for CVE-2023-24998 was incomplete",
+          "VulnerabilityID": "CVE-2023-28709"
+        },
+        {
+          "CVSS": {
+            "bitnami": {
+              "V3Score": 4.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            },
+            "ghsa": {
+              "V3Score": 4.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            },
+            "nvd": {
+              "V3Score": 4.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            },
+            "redhat": {
+              "V3Score": 4.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+            }
+          },
+          "CweIDs": [
+            "CWE-523"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "When using the RemoteIpFilter with requests received from a reverse proxy via HTTP that include the X-Forwarded-Proto header set to https, session cookies created by Apache Tomcat 11.0.0-M1 to 11.0.0.-M2, 10.1.0-M1 to 10.1.5, 9.0.0-M1 to 9.0.71 and 8.5.0 to 8.5.85 did not include the secure attribute. This could result in the user agent transmitting the session cookie over an insecure channel.",
+          "FixedVersion": "10.1.6, 11.0.0, 8.5.86, 9.0.72",
+          "InstalledVersion": "9.0.71",
+          "LastModifiedDate": "2023-03-27T15:26:00Z",
+          "Layer": {},
+          "PkgID": "org.apache.tomcat.embed:tomcat-embed-core:9.0.71",
+          "PkgName": "org.apache.tomcat.embed:tomcat-embed-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-28708",
+          "PublishedDate": "2023-03-22T11:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-28708",
+            "https://bz.apache.org/bugzilla/show_bug.cgi?id=66471",
+            "https://github.com/advisories/GHSA-2c9m-w27f-53rm",
+            "https://github.com/apache/tomcat",
+            "https://github.com/apache/tomcat/commit/3b51230764da595bb19e8d0962dd8c69ab40dfab",
+            "https://github.com/apache/tomcat/commit/5b72c94e8b2c4ada63a1d91dc527bf4d8fd1f510",
+            "https://github.com/apache/tomcat/commit/c64d496dda1560b5df113be55fbfaefec349b50f",
+            "https://github.com/apache/tomcat/commit/f509bbf31fc00abe3d9f25ebfabca5e05173da5b",
+            "https://lists.apache.org/thread/hdksc59z3s7tm39x0pp33mtwdrt8qr67",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-28708",
+            "https://tomcat.apache.org/security-10.html",
+            "https://tomcat.apache.org/security-11.html",
+            "https://tomcat.apache.org/security-8.html",
+            "https://tomcat.apache.org/security-9.html",
+            "https://www.cve.org/CVERecord?id=CVE-2023-28708"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "not including the secure attribute causes information disclosure",
+          "VulnerabilityID": "CVE-2023-28708"
+        },
+        {
+          "CVSS": {
+            "bitnami": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "ghsa": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "nvd": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "redhat": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            }
+          },
+          "CweIDs": [
+            "CWE-601"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\n\nThe vulnerability is limited to the ROOT (default) web application.",
+          "FixedVersion": "10.1.13, 11.0.0-M11, 8.5.93, 9.0.80",
+          "InstalledVersion": "9.0.71",
+          "LastModifiedDate": "2023-09-21T17:15:00Z",
+          "Layer": {},
+          "PkgID": "org.apache.tomcat.embed:tomcat-embed-core:9.0.71",
+          "PkgName": "org.apache.tomcat.embed:tomcat-embed-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-41080",
+          "PublishedDate": "2023-08-25T21:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-41080",
+            "https://github.com/apache/tomcat",
+            "https://github.com/apache/tomcat/commit/4998ad745b67edeadefe541c94ed029b53933d3b",
+            "https://github.com/apache/tomcat/commit/77c0ce2d169efa248b64b992e547aad549ec906b",
+            "https://github.com/apache/tomcat/commit/bb4624a9f3e69d495182ebfa68d7983076407a27",
+            "https://github.com/apache/tomcat/commit/e3703c9abb8fe0d5602f6ba8a8f11d4b6940815a",
+            "https://lists.apache.org/thread/71wvwprtx2j2m54fovq9zr7gbm2wow2f",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-41080",
+            "https://security.netapp.com/advisory/ntap-20230921-0006/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-41080"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Open Redirect vulnerability in FORM authentication",
+          "VulnerabilityID": "CVE-2023-41080"
+        },
+        {
+          "CVSS": {
+            "bitnami": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "ghsa": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "nvd": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "redhat": {
+              "V3Score": 6.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            }
+          },
+          "CweIDs": [
+            "CWE-601"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "URL Redirection to Untrusted Site ('Open Redirect') vulnerability in FORM authentication feature Apache Tomcat.This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.0-M10, from 10.1.0-M1 through 10.0.12, from 9.0.0-M1 through 9.0.79 and from 8.5.0 through 8.5.92.\n\nThe vulnerability is limited to the ROOT (default) web application.",
+          "FixedVersion": "8.5.93, 9.0.80, 10.1.13",
+          "InstalledVersion": "9.0.71",
+          "LastModifiedDate": "2023-09-21T17:15:00Z",
+          "Layer": {},
+          "PkgID": "org.apache.tomcat.embed:tomcat-embed-websocket:9.0.71",
+          "PkgName": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-41080",
+          "PublishedDate": "2023-08-25T21:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-41080",
+            "https://github.com/apache/tomcat",
+            "https://github.com/apache/tomcat/commit/4998ad745b67edeadefe541c94ed029b53933d3b",
+            "https://github.com/apache/tomcat/commit/77c0ce2d169efa248b64b992e547aad549ec906b",
+            "https://github.com/apache/tomcat/commit/bb4624a9f3e69d495182ebfa68d7983076407a27",
+            "https://github.com/apache/tomcat/commit/e3703c9abb8fe0d5602f6ba8a8f11d4b6940815a",
+            "https://lists.apache.org/thread/71wvwprtx2j2m54fovq9zr7gbm2wow2f",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-41080",
+            "https://security.netapp.com/advisory/ntap-20230921-0006/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-41080"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Open Redirect vulnerability in FORM authentication",
+          "VulnerabilityID": "CVE-2023-41080"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "In Spring Boot versions 3.0.0 - 3.0.6, 2.7.0 - 2.7.11, 2.6.0 - 2.6.14, 2.5.0 - 2.5.14 and older unsupported versions, there is potential for a denial-of-service (DoS) attack if Spring MVC is used together with a reverse proxy cache.",
+          "FixedVersion": "2.7.12, 3.0.7, 2.5.15, 2.6.15",
+          "InstalledVersion": "2.7.8",
+          "LastModifiedDate": "2023-07-03T16:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework.boot:spring-boot-autoconfigure:2.7.8",
+          "PkgName": "org.springframework.boot:spring-boot-autoconfigure",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20883",
+          "PublishedDate": "2023-05-26T17:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20883",
+            "https://github.com/advisories/GHSA-xf96-w227-r7c4",
+            "https://github.com/spring-projects/spring-boot",
+            "https://github.com/spring-projects/spring-boot/commit/418dd1ba5bdad79b55a043000164bfcbda2acd78",
+            "https://github.com/spring-projects/spring-boot/issues/35552",
+            "https://github.com/spring-projects/spring-boot/releases/tag/v2.5.15",
+            "https://github.com/spring-projects/spring-boot/releases/tag/v2.6.15",
+            "https://github.com/spring-projects/spring-boot/releases/tag/v2.7.12",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20883",
+            "https://security.netapp.com/advisory/ntap-20230703-0008/",
+            "https://spring.io/security/cve-2023-20883",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20883"
+          ],
+          "Severity": "HIGH",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Spring Boot Welcome Page DoS Vulnerability",
+          "VulnerabilityID": "CVE-2023-20883"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 9.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "nvd": {
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using \"**\" as a pattern in Spring Security configuration \nfor WebFlux creates a mismatch in pattern matching between Spring \nSecurity and Spring WebFlux, and the potential for a security bypass.\n\n",
+          "FixedVersion": "5.6.12, 5.7.10, 5.8.5, 6.0.5, 6.1.2",
+          "InstalledVersion": "5.7.6",
+          "LastModifiedDate": "2023-08-14T19:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework.security:spring-security-config:5.7.6",
+          "PkgName": "org.springframework.security:spring-security-config",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-34034",
+          "PublishedDate": "2023-07-19T15:15:00Z",
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-34034",
+            "https://ossindex.sonatype.org/vulnerability/CVE-2023-34034",
+            "https://security.netapp.com/advisory/ntap-20230814-0008/",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-5777893",
+            "https://spring.io/security/cve-2023-34034"
+          ],
+          "Severity": "CRITICAL",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Access Control Bypass in Spring Security-TRH",
+          "VulnerabilityID": "CVE-2023-34034"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 9.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "nvd": {
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using \"**\" as a pattern in Spring Security configuration \nfor WebFlux creates a mismatch in pattern matching between Spring \nSecurity and Spring WebFlux, and the potential for a security bypass.\n\n",
+          "FixedVersion": "5.6.12, 5.7.10, 5.8.5, 6.0.5, 6.1.2",
+          "InstalledVersion": "5.7.6",
+          "LastModifiedDate": "2023-08-14T19:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework.security:spring-security-core:5.7.6",
+          "PkgName": "org.springframework.security:spring-security-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-34034",
+          "PublishedDate": "2023-07-19T15:15:00Z",
+          "References": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-34034",
+            "https://ossindex.sonatype.org/vulnerability/CVE-2023-34034",
+            "https://security.netapp.com/advisory/ntap-20230814-0008/",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-5777893",
+            "https://spring.io/security/cve-2023-34034"
+          ],
+          "Severity": "CRITICAL",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Access Control Bypass in Spring Security",
+          "VulnerabilityID": "CVE-2023-34034"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            },
+            "nvd": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            },
+            "redhat": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            }
+          },
+          "CweIDs": [
+            "CWE-459"
+          ],
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Description": "In Spring Security, versions 5.7.x prior to 5.7.8, versions 5.8.x prior to 5.8.3, and versions 6.0.x prior to 6.0.3, the logout support does not properly clean the security context if using serialized versions. Additionally, it is not possible to explicitly save an empty security context to the HttpSessionSecurityContextRepository. This vulnerability can keep users authenticated even after they performed logout. Users of affected versions should apply the following mitigation. 5.7.x users should upgrade to 5.7.8. 5.8.x users should upgrade to 5.8.3. 6.0.x users should upgrade to 6.0.3.",
+          "FixedVersion": "5.7.8, 5.8.3, 6.0.3",
+          "InstalledVersion": "5.7.6",
+          "LastModifiedDate": "2023-08-23T18:34:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework.security:spring-security-core:5.7.6",
+          "PkgName": "org.springframework.security:spring-security-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20862",
+          "PublishedDate": "2023-04-19T20:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20862",
+            "https://github.com/spring-projects/spring-security",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20862",
+            "https://security.netapp.com/advisory/ntap-20230526-0002/",
+            "https://spring.io/security/cve-2023-20862",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20862"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "ghsa",
+          "Status": "fixed",
+          "Title": "Empty SecurityContext Is Not Properly Saved Upon Logout",
+          "VulnerabilityID": "CVE-2023-20862"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            },
+            "nvd": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            },
+            "redhat": {
+              "V3Score": 6.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+            }
+          },
+          "CweIDs": [
+            "CWE-459"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "In Spring Security, versions 5.7.x prior to 5.7.8, versions 5.8.x prior to 5.8.3, and versions 6.0.x prior to 6.0.3, the logout support does not properly clean the security context if using serialized versions. Additionally, it is not possible to explicitly save an empty security context to the HttpSessionSecurityContextRepository. This vulnerability can keep users authenticated even after they performed logout. Users of affected versions should apply the following mitigation. 5.7.x users should upgrade to 5.7.8. 5.8.x users should upgrade to 5.8.3. 6.0.x users should upgrade to 6.0.3.",
+          "FixedVersion": "5.7.8, 5.8.3, 6.0.3",
+          "InstalledVersion": "5.7.6",
+          "LastModifiedDate": "2023-08-23T18:34:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework.security:spring-security-web:5.7.6",
+          "PkgName": "org.springframework.security:spring-security-web",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20862",
+          "PublishedDate": "2023-04-19T20:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20862",
+            "https://github.com/spring-projects/spring-security",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20862",
+            "https://security.netapp.com/advisory/ntap-20230526-0002/",
+            "https://spring.io/security/cve-2023-20862",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20862"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Empty SecurityContext Is Not Properly Saved Upon Logout",
+          "VulnerabilityID": "CVE-2023-20862"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 5.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            }
+          },
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "In Spring Framework versions 6.0.0 - 6.0.6, 5.3.0 - 5.3.25, 5.2.0.RELEASE - 5.2.22.RELEASE, and older unsupported versions, it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition.",
+          "FixedVersion": "5.3.26, 6.0.7, 5.2.23.RELEASE",
+          "InstalledVersion": "5.3.25",
+          "LastModifiedDate": "2023-04-20T09:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework:spring-core:5.3.25",
+          "PkgName": "org.springframework:spring-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20861",
+          "PublishedDate": "2023-03-23T21:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20861",
+            "https://github.com/advisories/GHSA-564r-hj7v-mcr5",
+            "https://github.com/spring-projects/spring-framework",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20861",
+            "https://security.netapp.com/advisory/ntap-20230420-0007/",
+            "https://spring.io/blog/2023/03/20/spring-framework-6-0-7-and-5-3-26-fix-cve-2023-20860-and-cve-2023-20861",
+            "https://spring.io/security/cve-2023-20861",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20861"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Spring Expression DoS Vulnerability",
+          "VulnerabilityID": "CVE-2023-20861"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-917"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "In spring framework versions prior to 5.2.24 release+ ,5.3.27+ and 6.0.8+ , it is possible for a user to provide a specially crafted SpEL expression that may cause a denial-of-service (DoS) condition.",
+          "FixedVersion": "5.3.27, 6.0.8, 5.2.24.RELEASE",
+          "InstalledVersion": "5.3.25",
+          "LastModifiedDate": "2023-04-21T18:04:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework:spring-core:5.3.25",
+          "PkgName": "org.springframework:spring-core",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20863",
+          "PublishedDate": "2023-04-13T20:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20863",
+            "https://github.com/advisories/GHSA-wxqc-pxw9-g2p8",
+            "https://github.com/spring-projects/spring-framework",
+            "https://github.com/spring-projects/spring-framework/commit/b73f5fcac22555f844cf27a7eeb876cb9d7f7f7e",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20863",
+            "https://spring.io/security/cve-2023-20863",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20863"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Spring Expression DoS Vulnerability",
+          "VulnerabilityID": "CVE-2023-20863"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "nvd": {
+              "V2Score": 7.5,
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "redhat": {
+              "V2Score": 6.8,
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-502"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Pivotal Spring Framework through 5.3.16 suffers from a potential remote code execution (RCE) issue if used for Java deserialization of untrusted data. Depending on how the library is implemented within a product, this issue may or not occur, and authentication may be required. NOTE: the vendor's position is that untrusted data is not an intended use case. The product's behavior will not be changed because some users rely on deserialization of trusted data.",
+          "FixedVersion": "6.0.0",
+          "InstalledVersion": "5.3.25",
+          "LastModifiedDate": "2023-04-20T09:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework:spring-web:5.3.25",
+          "PkgName": "org.springframework:spring-web",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-1000027",
+          "PublishedDate": "2020-01-02T23:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2016-1000027",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2016-1000027",
+            "https://github.com/advisories/GHSA-4wrc-f8pq-fpqp",
+            "https://github.com/spring-projects/spring-framework",
+            "https://github.com/spring-projects/spring-framework/commit/2b051b8b321768a4cfef83077db65c6328ffd60f",
+            "https://github.com/spring-projects/spring-framework/commit/5cbe90b2cd91b866a5a9586e460f311860e11cfa",
+            "https://github.com/spring-projects/spring-framework/issues/21680",
+            "https://github.com/spring-projects/spring-framework/issues/24434",
+            "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-1231625331",
+            "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-579669626",
+            "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-582313417",
+            "https://github.com/spring-projects/spring-framework/issues/24434#issuecomment-744519525",
+            "https://jira.spring.io/browse/SPR-17143?redirect=false",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-1000027",
+            "https://raw.githubusercontent.com/distributedweaknessfiling/cvelist/master/2016/1000xxx/CVE-2016-1000027.json",
+            "https://security-tracker.debian.org/tracker/CVE-2016-1000027",
+            "https://security.netapp.com/advisory/ntap-20230420-0009/",
+            "https://spring.io/blog/2022/05/11/spring-framework-5-3-20-and-5-2-22-available-now",
+            "https://support.contrastsecurity.com/hc/en-us/articles/4402400830612-Spring-web-Java-Deserialization-CVE-2016-1000027",
+            "https://www.cve.org/CVERecord?id=CVE-2016-1000027",
+            "https://www.tenable.com/security/research/tra-2016-20"
+          ],
+          "Severity": "CRITICAL",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "spring: HttpInvokerServiceExporter readRemoteInvocation method untrusted java deserialization",
+          "VulnerabilityID": "CVE-2016-1000027"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 9.1,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "nvd": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "redhat": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            }
+          },
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Spring Framework running version 6.0.0 - 6.0.6 or 5.3.0 - 5.3.25 using \"**\" as a pattern in Spring Security configuration with the mvcRequestMatcher creates a mismatch in pattern matching between Spring Security and Spring MVC, and the potential for a security bypass.",
+          "FixedVersion": "5.3.26, 6.0.7",
+          "InstalledVersion": "5.3.25",
+          "LastModifiedDate": "2023-05-05T20:15:00Z",
+          "Layer": {},
+          "PkgID": "org.springframework:spring-webmvc:5.3.25",
+          "PkgName": "org.springframework:spring-webmvc",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-20860",
+          "PublishedDate": "2023-03-27T22:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-20860",
+            "https://github.com/advisories/GHSA-7phw-cxx7-q9vq",
+            "https://github.com/spring-projects/spring-framework",
+            "https://github.com/spring-projects/spring-framework/commit/202fa5cdb3a3d0cfe6967e85fa167d978244f28a",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-20860",
+            "https://security.netapp.com/advisory/ntap-20230505-0006/",
+            "https://spring.io/blog/2023/03/20/spring-framework-6-0-7-and-5-3-26-fix-cve-2023-20860-and-cve-2023-20861",
+            "https://spring.io/security/cve-2023-20860",
+            "https://www.cve.org/CVERecord?id=CVE-2023-20860"
+          ],
+          "Severity": "HIGH",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Security Bypass With Un-Prefixed Double Wildcard Pattern",
+          "VulnerabilityID": "CVE-2023-20860"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 8.3,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L"
+            },
+            "nvd": {
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "redhat": {
+              "V3Score": 9.8,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-502"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "SnakeYaml's Constructor() class does not restrict types which can be instantiated during deserialization. Deserializing yaml content provided by an attacker can lead to remote code execution. We recommend using SnakeYaml's SafeConsturctor when parsing untrusted content to restrict deserialization. We recommend upgrading to version 2.0 and beyond.\n",
+          "FixedVersion": "2.0",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-08-18T14:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-1471",
+          "PublishedDate": "2022-12-01T11:15:00Z",
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2022:9058",
+            "https://access.redhat.com/security/cve/CVE-2022-1471",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/commits/5014df1a36f50aca54405bb8433bc99a8847f758",
+            "https://bitbucket.org/snakeyaml/snakeyaml/commits/acc44099f5f4af26ff86b4e4e4cc1c874e2dc5c4",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64581479",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64634374",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/561/cve-2022-1471-vulnerability-in#comment-64876314",
+            "https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471",
+            "https://bitbucket.org/snakeyaml/snakeyaml/wiki/Changes",
+            "https://bugzilla.redhat.com/2150009",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2150009",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-1471",
+            "https://errata.almalinux.org/8/ALSA-2022-9058.html",
+            "https://errata.rockylinux.org/RLSA-2022:9058",
+            "https://github.com/google/security-research/security/advisories/GHSA-mjmj-j48q-9wg2",
+            "https://github.com/mbechler/marshalsec",
+            "https://groups.google.com/g/kubernetes-security-announce/c/mwrakFaEdnc",
+            "https://linux.oracle.com/cve/CVE-2022-1471.html",
+            "https://linux.oracle.com/errata/ELSA-2022-9058-1.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-1471",
+            "https://security.netapp.com/advisory/ntap-20230818-0015/",
+            "https://snyk.io/blog/unsafe-deserialization-snakeyaml-java-cve-2022-1471/",
+            "https://www.cve.org/CVERecord?id=CVE-2022-1471",
+            "https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf?raw=true"
+          ],
+          "Severity": "CRITICAL",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Constructor Deserialization Remote Code Execution",
+          "VulnerabilityID": "CVE-2022-1471"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 7.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-776"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "The package org.yaml:snakeyaml from 0 and before 1.31 are vulnerable to Denial of Service (DoS) due missing to nested depth limitation for collections.",
+          "FixedVersion": "1.31",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-08-08T14:22:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-25857",
+          "PublishedDate": "2022-08-30T05:15:00Z",
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2022:6820",
+            "https://access.redhat.com/security/cve/CVE-2022-25857",
+            "https://bitbucket.org/snakeyaml/snakeyaml/commits/fc300780da21f4bb92c148bc90257201220cf174",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/525",
+            "https://bugzilla.redhat.com/2126789",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2126789",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-25857",
+            "https://errata.almalinux.org/8/ALSA-2022-6820.html",
+            "https://errata.rockylinux.org/RLSA-2022:6820",
+            "https://github.com/snakeyaml/snakeyaml",
+            "https://github.com/snakeyaml/snakeyaml/commit/fc300780da21f4bb92c148bc90257201220cf174",
+            "https://linux.oracle.com/cve/CVE-2022-25857.html",
+            "https://linux.oracle.com/errata/ELSA-2022-6820.html",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-25857",
+            "https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-2806360",
+            "https://ubuntu.com/security/notices/USN-5944-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-25857"
+          ],
+          "Severity": "HIGH",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Denial of Service due to missing nested depth limitation for collections",
+          "VulnerabilityID": "CVE-2022-25857"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+          "FixedVersion": "1.31",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-05-21T22:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-38749",
+          "PublishedDate": "2022-09-05T10:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-38749",
+            "https://arxiv.org/pdf/2306.05534.pdf",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/525/got-stackoverflowerror-for-many-open",
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47024",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38749",
+            "https://github.com/advisories/GHSA-c4r9-r8fh-9vj2",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-38749",
+            "https://security.gentoo.org/glsa/202305-28",
+            "https://ubuntu.com/security/notices/USN-5944-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-38749"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Uncaught exception in org.yaml.snakeyaml.composer.Composer.composeSequenceNode",
+          "VulnerabilityID": "CVE-2022-38749"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 5.5,
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 5.5,
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 5.5,
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+          "FixedVersion": "1.31",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-05-21T22:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-38750",
+          "PublishedDate": "2022-09-05T10:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-38750",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/526/stackoverflow-oss-fuzz-47027",
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47027",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38750",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-38750",
+            "https://security.gentoo.org/glsa/202305-28",
+            "https://ubuntu.com/security/notices/USN-5944-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-38750"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Uncaught exception in org.yaml.snakeyaml.constructor.BaseConstructor.constructObject",
+          "VulnerabilityID": "CVE-2022-38750"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stackoverflow.",
+          "FixedVersion": "1.31",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-05-21T22:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-38751",
+          "PublishedDate": "2022-09-05T10:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-38751",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/530/stackoverflow-oss-fuzz-47039",
+            "https://bitbucket.org/snakeyaml/snakeyaml/src/master/src/test/java/org/yaml/snakeyaml/issues/issue530/Fuzzy47039Test.java",
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47039",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-38751",
+            "https://lists.debian.org/debian-lts-announce/2022/10/msg00001.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-38751",
+            "https://security.gentoo.org/glsa/202305-28",
+            "https://ubuntu.com/security/notices/USN-5944-1",
+            "https://www.cve.org/CVERecord?id=CVE-2022-38751"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Uncaught exception in java.base/java.util.regex.Pattern$Ques.match",
+          "VulnerabilityID": "CVE-2022-38751"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Using snakeYAML to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack-overflow.",
+          "FixedVersion": "1.32",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-05-21T22:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-38752",
+          "PublishedDate": "2022-09-05T10:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-38752",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/531/stackoverflow-oss-fuzz-47081",
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=47081",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-38752",
+            "https://security.gentoo.org/glsa/202305-28",
+            "https://www.cve.org/CVERecord?id=CVE-2022-38752"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "Uncaught exception in java.base/java.util.ArrayList.hashCode",
+          "VulnerabilityID": "CVE-2022-38752"
+        },
+        {
+          "CVSS": {
+            "ghsa": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            },
+            "nvd": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            },
+            "redhat": {
+              "V3Score": 6.5,
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+            }
+          },
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "DataSource": {
+            "ID": "glad",
+            "Name": "GitLab Advisory Database Community",
+            "URL": "https://gitlab.com/gitlab-org/advisories-community"
+          },
+          "Description": "Those using Snakeyaml to parse untrusted YAML files may be vulnerable to Denial of Service attacks (DOS). If the parser is running on user supplied input, an attacker may supply content that causes the parser to crash by stack overflow. This effect may support a denial of service attack.",
+          "FixedVersion": "1.32",
+          "InstalledVersion": "1.30",
+          "LastModifiedDate": "2023-07-06T04:15:00Z",
+          "Layer": {},
+          "PkgID": "org.yaml:snakeyaml:1.30",
+          "PkgName": "org.yaml:snakeyaml",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-41854",
+          "PublishedDate": "2022-11-11T13:15:00Z",
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2022-41854",
+            "https://bitbucket.org/snakeyaml/snakeyaml",
+            "https://bitbucket.org/snakeyaml/snakeyaml/commits/e230a1758842beec93d28eddfde568c21774780a",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/531/",
+            "https://bitbucket.org/snakeyaml/snakeyaml/issues/543/stackoverflow-oss-fuzz-50355",
+            "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50355",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3DDXEXXWAZGF5AVHIPGFPXIWL6TSMKJE/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7MKE4XWRXTH32757H7QJU4ACS67DYDCR/",
+            "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSPAJ5Y45A4ZDION2KN5RDWLHK4XKY2J/",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-41854",
+            "https://www.cve.org/CVERecord?id=CVE-2022-41854"
+          ],
+          "Severity": "MEDIUM",
+          "SeveritySource": "nvd",
+          "Status": "fixed",
+          "Title": "DoS via stack overflow",
+          "VulnerabilityID": "CVE-2022-41854"
+        }
+      ]
+    },
+    {
+      "Class": "config",
+      "MisconfSummary": {
+        "Exceptions": 0,
+        "Failures": 1,
+        "Successes": 25
+      },
+      "Misconfigurations": [
+        {
+          "AVDID": "AVD-DS-0026",
+          "CauseMetadata": {
+            "Code": {
+              "Lines": null
+            },
+            "Provider": "Dockerfile",
+            "Service": "general"
+          },
+          "Description": "You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.",
+          "ID": "DS026",
+          "Layer": {},
+          "Message": "Add HEALTHCHECK instruction in your Dockerfile",
+          "Namespace": "builtin.dockerfile.DS026",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds026",
+          "Query": "data.builtin.dockerfile.DS026.deny",
+          "References": [
+            "https://blog.aquasec.com/docker-security-best-practices",
+            "https://avd.aquasec.com/misconfig/ds026"
+          ],
+          "Resolution": "Add HEALTHCHECK instruction in Dockerfile",
+          "Severity": "LOW",
+          "Status": "FAIL",
+          "Title": "No HEALTHCHECK defined",
+          "Type": "Dockerfile Security Check"
+        }
+      ],
+      "Target": "Dockerfile",
+      "Type": "dockerfile"
+    },
+    {
+      "Class": "secret",
+      "Secrets": [
+        {
+          "Category": "Code Generic",
+          "Code": {
+            "Lines": [
+              {
+                "Annotation": "",
+                "Content": "        \", branch='\" + getBranch() + \"'\" +",
+                "FirstCause": false,
+                "Highlighted": "        \", branch='\" + getBranch() + \"'\" +",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 107,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \", headSha='\" + getHeadSha() + \"'\" +",
+                "FirstCause": false,
+                "Highlighted": "        \", headSha='\" + getHeadSha() + \"'\" +",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 108,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \", gitAuthToken='********'\" +",
+                "FirstCause": true,
+                "Highlighted": "        \", gitAuthToken='********'\" +",
+                "IsCause": true,
+                "LastCause": true,
+                "Number": 109,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \", language='\" + getLanguage() + \"'\" +",
+                "FirstCause": false,
+                "Highlighted": "        \", language='\" + getLanguage() + \"'\" +",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 110,
+                "Truncated": false
+              }
+            ]
+          },
+          "EndLine": 109,
+          "Layer": {},
+          "Match": "        \", gitAuthToken='********'\" +",
+          "RuleID": "code-generic-credential",
+          "Severity": "HIGH",
+          "StartLine": 109,
+          "Title": "Code Generic Credential"
+        }
+      ],
+      "Target": "src/main/java/com/marriott/scanorchestrator/entity/CodeQLDetail.java"
+    },
+    {
+      "Class": "secret",
+      "Secrets": [
+        {
+          "Category": "Code Generic",
+          "Code": {
+            "Lines": [
+              {
+                "Annotation": "",
+                "Content": "        \", branch='\" + getBranch() + \"'\" +",
+                "FirstCause": false,
+                "Highlighted": "        \", branch='\" + getBranch() + \"'\" +",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 116,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \", headSha='\" + getHeadSha() + \"'\" +",
+                "FirstCause": false,
+                "Highlighted": "        \", headSha='\" + getHeadSha() + \"'\" +",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 117,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \", gitAuthToken='********'\" +",
+                "FirstCause": true,
+                "Highlighted": "        \", gitAuthToken='********'\" +",
+                "IsCause": true,
+                "LastCause": true,
+                "Number": 118,
+                "Truncated": false
+              },
+              {
+                "Annotation": "",
+                "Content": "        \"}\";",
+                "FirstCause": false,
+                "Highlighted": "        \"}\";",
+                "IsCause": false,
+                "LastCause": false,
+                "Number": 119,
+                "Truncated": false
+              }
+            ]
+          },
+          "EndLine": 118,
+          "Layer": {},
+          "Match": "        \", gitAuthToken='********'\" +",
+          "RuleID": "code-generic-credential",
+          "Severity": "HIGH",
+          "StartLine": 118,
+          "Title": "Code Generic Credential"
+        }
+      ],
+      "Target": "src/main/java/com/marriott/scanorchestrator/entity/CodeQLPreDetail.java"
+    }
+  ],
+  "SchemaVersion": 2
+}

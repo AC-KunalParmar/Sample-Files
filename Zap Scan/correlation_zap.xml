@@ -1,0 +1,1976 @@
+<?xml version="1.0"?><OWASPZAPReport version="2.10.0" generated="Fri, 25 Jun 2021 12:18:21">
+<site name="https://aus5.mozilla.org" host="aus5.mozilla.org" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>90011</pluginid>
+  <alertRef>90011</alertRef>
+  <alert>Charset Mismatch </alert>
+  <name>Charset Mismatch </name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;This check identifies responses where the HTTP Content-Type header declares a charset different from the charset defined by the body of the HTML or XML. When there&apos;s a charset mismatch between the HTTP header and content body Web browsers can be forced into an undesirable content-sniffing mode to determine the content&apos;s correct character set.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;An attacker could manipulate content on the page to be interpreted in an encoding of their choice. For example, if an attacker can control content at the beginning of the page, they could inject script using UTF-7 encoded text and manipulate some browsers into interpreting that text.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://aus5.mozilla.org/update/3/GMP/89.0.1/20210614221319/WINNT_x86_64-msvc-x64/en-US/release/Windows_NT%2010.0.0.0.19043.1052%20(x64)/default/default/update.xml</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Force UTF-8 for all text content in both the HTTP header and meta tags in HTML or encoding declarations in XML.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;There was a charset mismatch between the HTTP Header and the XML encoding declaration: [utf-8] and [null] do not match.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Character_set_handling_and_detection&lt;/p&gt;</reference>
+  <cweid>436</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://aus5.mozilla.org/update/3/GMP/89.0.1/20210614221319/WINNT_x86_64-msvc-x64/en-US/release/Windows_NT%2010.0.0.0.19043.1052%20(x64)/default/default/update.xml</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>public, max-age=90</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="http://3.138.126.137:8080" host="3.138.126.137" port="8080" ssl="false"><alerts><alertitem>
+  <pluginid>40018</pluginid>
+  <alertRef>40018</alertRef>
+  <alert>SQL Injection</alert>
+  <name>SQL Injection</name>
+  <riskcode>3</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>High (Medium)</riskdesc>
+  <desc>&lt;p&gt;SQL injection may be possible.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>http://3.138.126.137:8080/test?name=TestUser1%27+or+%271%27%3D%271%22%27+AND+%271%27%3D%271%27+--+</uri>
+  <method>GET</method>
+  <param>name</param>
+  <attack>TestUser1&apos; or &apos;1&apos;=&apos;1&quot;&apos; OR &apos;1&apos;=&apos;1&apos; -- </attack>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Do not trust client side input, even if there is client side validation in place.  &lt;/p&gt;&lt;p&gt;In general, type check all data on the server side.&lt;/p&gt;&lt;p&gt;If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by &apos;?&apos;&lt;/p&gt;&lt;p&gt;If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.&lt;/p&gt;&lt;p&gt;If database Stored Procedures can be used, use them.&lt;/p&gt;&lt;p&gt;Do *not* concatenate strings into queries in the stored procedure, or use &apos;exec&apos;, &apos;exec immediate&apos;, or equivalent functionality!&lt;/p&gt;&lt;p&gt;Do not create dynamic SQL queries using simple string concatenation.&lt;/p&gt;&lt;p&gt;Escape all data received from the client.&lt;/p&gt;&lt;p&gt;Apply an &apos;allow list&apos; of allowed characters, or a &apos;deny list&apos; of disallowed characters in user input.&lt;/p&gt;&lt;p&gt;Apply the principle of least privilege by using the least privileged database user possible.&lt;/p&gt;&lt;p&gt;In particular, avoid using the &apos;sa&apos; or &apos;db-owner&apos; database users. This does not eliminate SQL injection, but minimizes its impact.&lt;/p&gt;&lt;p&gt;Grant the minimum database access that is necessary for the application.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The page results were successfully manipulated using the boolean conditions [TestUser1&apos; or &apos;1&apos;=&apos;1&quot;&apos; AND &apos;1&apos;=&apos;1&apos; -- ] and [TestUser1&apos; or &apos;1&apos;=&apos;1&quot;&apos; OR &apos;1&apos;=&apos;1&apos; -- ]&lt;/p&gt;&lt;p&gt;The parameter value being modified was NOT stripped from the HTML output for the purposes of the comparison&lt;/p&gt;&lt;p&gt;Data was NOT returned for the original parameter.&lt;/p&gt;&lt;p&gt;The vulnerability was detected by successfully retrieving more data than originally returned, by manipulating the parameter&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html&lt;/p&gt;</reference>
+  <cweid>89</cweid>
+  <wascid>19</wascid>
+  <sourceid>1</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>http://3.138.126.137:8080/test?name=TestUser1%27%20or%20%271%27=%271%22</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10023</pluginid>
+  <alertRef>10023</alertRef>
+  <alert>Information Disclosure - Debug Error Messages</alert>
+  <name>Information Disclosure - Debug Error Messages</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The response appeared to contain common error messages returned by platforms such as ASP.NET, and Web-servers such as IIS and Apache. You can configure the list of common debug messages.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>http://3.138.126.137:8080/test?name=TestUser1%27</uri>
+  <method>GET</method>
+  <evidence>Internal Server Error</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Disable debugging messages before pushing to production.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>90022</pluginid>
+  <alertRef>90022</alertRef>
+  <alert>Application Error Disclosure</alert>
+  <name>Application Error Disclosure</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>http://3.138.126.137:8080/test?name=TestUser1%27</uri>
+  <method>GET</method>
+  <evidence>HTTP/1.1 500</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://googleads.g.doubleclick.net" host="googleads.g.doubleclick.net" port="443" ssl="true"><alerts></alerts></site><site name="https://adservice.google.co.in" host="adservice.google.co.in" port="443" ssl="true"><alerts></alerts></site><site name="https://play.google.com" host="play.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>Cache-Control</param>
+  <evidence>private</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10010</pluginid>
+  <alertRef>10010</alertRef>
+  <alert>Cookie No HttpOnly Flag</alert>
+  <name>Cookie No HttpOnly Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the HttpOnly flag is set for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-community/HttpOnly&lt;/p&gt;</reference>
+  <cweid>1004</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>90033</pluginid>
+  <alertRef>90033</alertRef>
+  <alert>Loosely Scoped Cookie</alert>
+  <name>Loosely Scoped Cookie</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Always scope cookies to a FQDN (Fully Qualified Domain Name).&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The origin domain used for comparison was: &lt;/p&gt;&lt;p&gt;play.google.com&lt;/p&gt;&lt;p&gt;SIDCC=AJi4QfG4lq9brc8bprZkIIZTktWsriQ0siwO3wWJwrYEq9cFzoW1wgo1poz-cD8SkJXoRMSi5Q&lt;/p&gt;&lt;p&gt;__Secure-3PSIDCC=AJi4QfEcl9u9QMdWfxSwEYa0Bgm1uuciX6-oIBd9A3UZHxMr4YGXSbBHkxELVJDtt-I9X5PBqg&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/rfc6265#section-4.1&lt;/p&gt;&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies&lt;/p&gt;</reference>
+  <cweid>565</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie with SameSite Attribute None</alert>
+  <name>Cookie with SameSite Attribute None</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10011</pluginid>
+  <alertRef>10011</alertRef>
+  <alert>Cookie Without Secure Flag</alert>
+  <name>Cookie Without Secure Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;</reference>
+  <cweid>614</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10024</pluginid>
+  <alertRef>10024</alertRef>
+  <alert>Information Disclosure - Sensitive Information in URL</alert>
+  <name>Information Disclosure - Sensitive Information in URL</name>
+  <riskcode>0</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Informational (Medium)</riskdesc>
+  <desc>&lt;p&gt;The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>OPTIONS</method>
+  <param>authuser</param>
+  <evidence>authuser</evidence>
+  </instance>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>authuser</param>
+  <evidence>authuser</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Do not pass sensitive information in URIs.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The URL contains potentially sensitive information. The following string was found via the pattern: user&lt;/p&gt;&lt;p&gt;authuser&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <evidence>175237375</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;175237375, which evaluates to: 1975-07-22 10:32:55&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie without SameSite Attribute</alert>
+  <name>Cookie without SameSite Attribute</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://play.google.com/log?format=json&amp;hasfast=true&amp;authuser=0</uri>
+  <method>POST</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://adservice.google.com" host="adservice.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>90033</pluginid>
+  <alertRef>90033</alertRef>
+  <alert>Loosely Scoped Cookie</alert>
+  <name>Loosely Scoped Cookie</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://adservice.google.com/adsid/google/si?gadsid=AORoGNTlE9xQrIk5N7RdPbapi34QbW8_ImpUOph-w4IASBrCavqaOV6xLeSAeF1S3fnRv_Kc0vfmutT548Xa7Wg</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Always scope cookies to a FQDN (Fully Qualified Domain Name).&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The origin domain used for comparison was: &lt;/p&gt;&lt;p&gt;adservice.google.com&lt;/p&gt;&lt;p&gt;ANID=AHWqTUlFv8UC7UMQjXOmcypMBhXyVoYlr1uV86CYlKhQsq0SExAKz2MDW0_SjLz-&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/rfc6265#section-4.1&lt;/p&gt;&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies&lt;/p&gt;</reference>
+  <cweid>565</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie with SameSite Attribute None</alert>
+  <name>Cookie with SameSite Attribute None</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://adservice.google.com/adsid/google/si?gadsid=AORoGNTlE9xQrIk5N7RdPbapi34QbW8_ImpUOph-w4IASBrCavqaOV6xLeSAeF1S3fnRv_Kc0vfmutT548Xa7Wg</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://ssl.gstatic.com" host="ssl.gstatic.com" port="443" ssl="true"><alerts></alerts></site><site name="https://ogs.google.com" host="ogs.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>private, max-age=0</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10055</pluginid>
+  <alertRef>10055</alertRef>
+  <alert>CSP: Wildcard Directive</alert>
+  <name>CSP: Wildcard Directive</name>
+  <riskcode>2</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Medium (Medium)</riskdesc>
+  <desc>&lt;p&gt;The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: &lt;/p&gt;&lt;p&gt;style-src, img-src, connects-src, frame-src, frame-ancestors, font-src, media-src, manifest-src, prefetch-src, form-action&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>script-src &apos;nonce-82NaGJ84EDZzApgK0DKYqQ&apos; &apos;unsafe-inline&apos;;object-src &apos;none&apos;;base-uri &apos;self&apos;;report-uri /_/OneGoogleWidgetUi/cspreport;worker-src &apos;self&apos;</evidence>
+  </instance>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>script-src &apos;nonce-82NaGJ84EDZzApgK0DKYqQ&apos; &apos;self&apos; https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.gstatic.com https://www.google-analytics.com;report-uri /_/OneGoogleWidgetUi/cspreport;frame-ancestors https://www.google.com</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;http://www.w3.org/TR/CSP2/&lt;/p&gt;&lt;p&gt;http://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;http://caniuse.com/#search=content+security+policy&lt;/p&gt;&lt;p&gt;http://content-security-policy.com/&lt;/p&gt;&lt;p&gt;https://github.com/shapesecurity/salvation&lt;/p&gt;&lt;p&gt;https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10011</pluginid>
+  <alertRef>10011</alertRef>
+  <alert>Cookie Without Secure Flag</alert>
+  <name>Cookie Without Secure Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;</reference>
+  <cweid>614</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10055</pluginid>
+  <alertRef>10055</alertRef>
+  <alert>CSP: script-src unsafe-inline</alert>
+  <name>CSP: script-src unsafe-inline</name>
+  <riskcode>2</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Medium (Medium)</riskdesc>
+  <desc>&lt;p&gt;script-src includes unsafe-inline.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>script-src &apos;nonce-82NaGJ84EDZzApgK0DKYqQ&apos; &apos;unsafe-inline&apos;;object-src &apos;none&apos;;base-uri &apos;self&apos;;report-uri /_/OneGoogleWidgetUi/cspreport;worker-src &apos;self&apos;</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;http://www.w3.org/TR/CSP2/&lt;/p&gt;&lt;p&gt;http://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;http://caniuse.com/#search=content+security+policy&lt;/p&gt;&lt;p&gt;http://content-security-policy.com/&lt;/p&gt;&lt;p&gt;https://github.com/shapesecurity/salvation&lt;/p&gt;&lt;p&gt;https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10010</pluginid>
+  <alertRef>10010</alertRef>
+  <alert>Cookie No HttpOnly Flag</alert>
+  <name>Cookie No HttpOnly Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the HttpOnly flag is set for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-community/HttpOnly&lt;/p&gt;</reference>
+  <cweid>1004</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>2064406253</evidence>
+  </instance>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>170602696</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;2064406253, which evaluates to: 2035-06-02 19:40:53&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10055</pluginid>
+  <alertRef>10055</alertRef>
+  <alert>CSP: Notices</alert>
+  <name>CSP: Notices</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;Warnings:&lt;/p&gt;&lt;p&gt;The report-uri directive has ben deprecated in favor of the new report-to directive&lt;/p&gt;&lt;p&gt;The report-uri directive has ben deprecated in favor of the new report-to directive&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>script-src &apos;nonce-82NaGJ84EDZzApgK0DKYqQ&apos; &apos;self&apos; https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.gstatic.com https://www.google-analytics.com;report-uri /_/OneGoogleWidgetUi/cspreport;frame-ancestors https://www.google.com</evidence>
+  </instance>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>script-src &apos;nonce-82NaGJ84EDZzApgK0DKYqQ&apos; &apos;unsafe-inline&apos;;object-src &apos;none&apos;;base-uri &apos;self&apos;;report-uri /_/OneGoogleWidgetUi/cspreport;worker-src &apos;self&apos;</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;http://www.w3.org/TR/CSP2/&lt;/p&gt;&lt;p&gt;http://www.w3.org/TR/CSP/&lt;/p&gt;&lt;p&gt;http://caniuse.com/#search=content+security+policy&lt;/p&gt;&lt;p&gt;http://content-security-policy.com/&lt;/p&gt;&lt;p&gt;https://github.com/shapesecurity/salvation&lt;/p&gt;&lt;p&gt;https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10017</pluginid>
+  <alertRef>10017</alertRef>
+  <alert>Cross-Domain JavaScript Source File Inclusion</alert>
+  <name>Cross-Domain JavaScript Source File Inclusion</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The page includes one or more script files from a third-party domain.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <param>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</param>
+  <evidence>&lt;script noCollect src=&quot;https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp&quot; async id=&quot;base-js&quot; nonce=&quot;82NaGJ84EDZzApgK0DKYqQ&quot;&gt;&lt;/script&gt;</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure JavaScript source files are loaded from only trusted sources, and the sources can&apos;t be controlled by end users of the application.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>829</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10027</pluginid>
+  <alertRef>10027</alertRef>
+  <alert>Information Disclosure - Suspicious Comments</alert>
+  <name>Information Disclosure - Suspicious Comments</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>SELECT</evidence>
+  </instance>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The following pattern was used: \bSELECT\b and was detected in the element starting with: &quot;&lt;script nonce=&quot;82NaGJ84EDZzApgK0DKYqQ&quot;&gt;(function(){/*&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Copyright The Closure Library Authors.&lt;/p&gt;&lt;p&gt; SPDX-License-Identifier: Apache-&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie without SameSite Attribute</alert>
+  <name>Cookie without SameSite Attribute</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie with SameSite Attribute None</alert>
+  <name>Cookie with SameSite Attribute None</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>90033</pluginid>
+  <alertRef>90033</alertRef>
+  <alert>Loosely Scoped Cookie</alert>
+  <name>Loosely Scoped Cookie</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://ogs.google.com/u/0/widget/app?bc=1&amp;origin=https%3A%2F%2Fwww.google.com&amp;cn=app&amp;pid=1&amp;spid=1&amp;hl=en</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Always scope cookies to a FQDN (Fully Qualified Domain Name).&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The origin domain used for comparison was: &lt;/p&gt;&lt;p&gt;ogs.google.com&lt;/p&gt;&lt;p&gt;SIDCC=AJi4QfGqV8AcLERKU3cuqepIJ9IYB920_FVRBcy-aMJ-hnR4Xay0SLcfTl7OHtmYj7YQUH1agQ&lt;/p&gt;&lt;p&gt;__Secure-3PSIDCC=AJi4QfFo2g6ufyHt5qO7_qDv7P6gx7x0j9vU_ta-dnWr4wcz4TkYo6UXwHO3wga8LhVTgpiWeQ&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/rfc6265#section-4.1&lt;/p&gt;&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies&lt;/p&gt;</reference>
+  <cweid>565</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://lh3.googleusercontent.com" host="lh3.googleusercontent.com" port="443" ssl="true"><alerts></alerts></site><site name="https://apis.google.com" host="apis.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>1732584193</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>1518500249</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>1859775393</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>271733878</evidence>
+  </instance>
+  </instances>
+  <count>4</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;1732584193, which evaluates to: 2024-11-26 06:53:13&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10098</pluginid>
+  <alertRef>10098</alertRef>
+  <alert>Cross-Domain Misconfiguration</alert>
+  <name>Cross-Domain Misconfiguration</name>
+  <riskcode>2</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Medium (Medium)</riskdesc>
+  <desc>&lt;p&gt;Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://apis.google.com/js/api.js</uri>
+  <method>GET</method>
+  <evidence>Access-Control-Allow-Origin: *</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).&lt;/p&gt;&lt;p&gt;Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://www.hpenterprisesecurity.com/vulncat/en/vulncat/vb/html5_overly_permissive_cors_policy.html&lt;/p&gt;</reference>
+  <cweid>264</cweid>
+  <wascid>14</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10027</pluginid>
+  <alertRef>10027</alertRef>
+  <alert>Information Disclosure - Suspicious Comments</alert>
+  <name>Information Disclosure - Suspicious Comments</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>where</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>query</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.7yBiF1UUXzY.O/m=gapi_iframes,googleapis_client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-pEDm0pqtBuZIKGpxOGTcQloIhJw/cb=gapi.loaded_0</uri>
+  <method>GET</method>
+  <evidence>db</evidence>
+  </instance>
+  </instances>
+  <count>4</count>
+  <solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The following pattern was used: \bWHERE\b and was detected 3 times, the first in the element starting with: &quot;_.Gm=function(a,b,c,d){this.Vf=!1;this.Ci=a;this.FC=b;this.Rj=c;this.Ia=d;this.FL=this.Ia.Og();this.ud=this.Ia.lb();this.SV=this&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://fonts.gstatic.com" host="fonts.gstatic.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10098</pluginid>
+  <alertRef>10098</alertRef>
+  <alert>Cross-Domain Misconfiguration</alert>
+  <name>Cross-Domain Misconfiguration</name>
+  <riskcode>2</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Medium (Medium)</riskdesc>
+  <desc>&lt;p&gt;Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://fonts.gstatic.com/s/googlesans/v14/4UaGrENHsxJlGDuGo1OIlL3Owp4.woff2</uri>
+  <method>GET</method>
+  <evidence>Access-Control-Allow-Origin: *</evidence>
+  </instance>
+  <instance>
+  <uri>https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2</uri>
+  <method>GET</method>
+  <evidence>Access-Control-Allow-Origin: *</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).&lt;/p&gt;&lt;p&gt;Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://www.hpenterprisesecurity.com/vulncat/en/vulncat/vb/html5_overly_permissive_cors_policy.html&lt;/p&gt;</reference>
+  <cweid>264</cweid>
+  <wascid>14</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://id.google.com" host="id.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie with SameSite Attribute None</alert>
+  <name>Cookie with SameSite Attribute None</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://id.google.com/verify/AHGvNoxsMb1YuMK6DKoa9mW8vfuMgpz4dEKJIxXD7q5Nky06qEuOJFUQ_yjlhl9YK-jbHccGfPIDSbCygybUeQCAYMSNl0HFvg1OXl15-BHaRUtVq_mg-cc</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>90033</pluginid>
+  <alertRef>90033</alertRef>
+  <alert>Loosely Scoped Cookie</alert>
+  <name>Loosely Scoped Cookie</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://id.google.com/verify/AHGvNoxsMb1YuMK6DKoa9mW8vfuMgpz4dEKJIxXD7q5Nky06qEuOJFUQ_yjlhl9YK-jbHccGfPIDSbCygybUeQCAYMSNl0HFvg1OXl15-BHaRUtVq_mg-cc</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Always scope cookies to a FQDN (Fully Qualified Domain Name).&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The origin domain used for comparison was: &lt;/p&gt;&lt;p&gt;id.google.com&lt;/p&gt;&lt;p&gt;NID=217=pODc-GEG1kdQUH5pv9gvoXBKAOwhpMv2svtLNmnnt78umomsUMQsvCXbOTmgFyf1eIIs0B3ZaKxLv_BQoP9Yh_kJ1olA1Hmjozo0kxT8bDENxNKSDdiWMAEC105mm1aPPqLSC197hMXtMxQRYp-9gc_f2P7PxXoE1ITCYNkkboQ2lmuaDB6LnX8OWWHDUXWNnyWIymXi0cTnXRtmkPrY9G30TJxRBfDqPqrMdAe5EKs44iTSQKVIQOnBI0MfenILzvV2PrTNOTpb5ORGr7zmT5v08OOPoYBPmR3kwwgzMHaT&lt;/p&gt;&lt;p&gt;SNID=APx-0P3PeURPz_y5qjLb-QWXOE3mGUxCOsmXfE_P9Qd8b1ehqDOwSLzDxfGUUDOQcGgSD0Wg2xlBHffoTxtzdXubXaU2lQ&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/rfc6265#section-4.1&lt;/p&gt;&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies&lt;/p&gt;</reference>
+  <cweid>565</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://www.gstatic.com" host="www.gstatic.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>1518500249</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>1732584193</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>271733878</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>124712974</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>50242228</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>203522521</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>2147483647</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>1732584193</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>1859775393</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>175237375</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>1342177279</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>2147483647</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>48185015</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>175237375</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>1859775393</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>271733878</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>135376338</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>1518500249</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>106627163</evidence>
+  </instance>
+  </instances>
+  <count>19</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;1518500249, which evaluates to: 2018-02-13 11:07:29&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10027</pluginid>
+  <alertRef>10027</alertRef>
+  <alert>Information Disclosure - Suspicious Comments</alert>
+  <name>Information Disclosure - Suspicious Comments</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>db</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>where</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>db</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>select</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>SELECT</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>user</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/am=WAAAAQ/d=1/excm=_b,_tp,appwidgetauthview/ed=1/dg=0/wt=2/rs=AM-SdHvLv4dUiiMJT57vWWgUptQo9djWnA/m=_b,_tp</uri>
+  <method>GET</method>
+  <evidence>select</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=_b,_tp/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=byfTOb,lsjVmc,LEikZe</uri>
+  <method>GET</method>
+  <evidence>select</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>User</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.en.VoGllg0TnUA.es5.O/ck=boq-one-google.OneGoogleWidgetUi.xMnkIMrpMOc.L.F4.O/am=WAAAAQ/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,appwidgetauthview/ed=1/wt=2/rs=AM-SdHuvHm4uGJPZ9GBBck_rpp3K89DjpQ/m=n73qwf,ws9Tlc,IZT63,e5qFLc,GkRiKb,UUJqVe,O1Gjze,xUdipf,blwjVc,fKUV3e,aurFic,COQbmf,U0aPgd,ZwDk9d,V3dDOb,mI3LFb,O6y8ed,NpD4ec,PrPYRd,iWP1Yb,MpJwZc,O8k1Cd,NwH0H,OmgaI,HLo3Ef,x60fie,xiqEse,lazG7b,XVMNvd,L1AAkb,KUM7Z,lfpdyf,lKZxSd,s39S4,lwddkf,gychg,w9hDv,RMhBfe,qCSYWe,SdcwHb,aW3pY,YLQSd,PQaYAf,pw70Gc,EFQ78c,Ulmmrd,ZfAoz,mdR7q,CBlRxf,MdUzUe,xQtZb,lPKSwe,QIhFr,JNoxi,MI6k7c,kjKdXe,pB6Zqd,rHjpXd,yDVVkb,SF3gsd,hKSk3e,iTsyac,hc6Ubd,KG2eXe,SpsfSb,tfTN8c,o02Jie,VwDzFe,zbML3c,HDvRde,Uas9Hd,BVgquf,A7fCU,lsPsHb,UgAtXe,aDfbSd,yA4AGd,pjICDe</uri>
+  <method>GET</method>
+  <evidence>db</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.gstatic.com/og/_/js/k=og.qtm.en_US.yoD6WPnvqKw.O/rt=j/m=qabr,qgl,q_d,qdid,qcwid,qapid/exm=qaaw,qadd,qaid,qein,qhaw,qhbr,qhch,qhga,qhid,qhin,qhpr/d=1/ed=1/rs=AA2YrTsUUSONS92GNS7z5POxtVRsKo8CAg</uri>
+  <method>GET</method>
+  <evidence>query</evidence>
+  </instance>
+  </instances>
+  <count>14</count>
+  <solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The following pattern was used: \bDB\b and was detected 8 times, the first in the element starting with: &quot;_.$a=function(a){Array.isArray(a)?Object.freeze(a):(Object.freeze(a.j),a.i&amp;&amp;Object.freeze(a.i))};_.bb=function(a){return null!==&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://classify-client.services.mozilla.com" host="classify-client.services.mozilla.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://classify-client.services.mozilla.com/api/v1/classify_client/</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://shavar.services.mozilla.com" host="shavar.services.mozilla.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://shavar.services.mozilla.com/downloads?client=navclient-auto-ffox&amp;appver=89.0&amp;pver=2.2</uri>
+  <method>POST</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://www.google.com" host="www.google.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>416666667</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  <evidence>379896422</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>2147483647</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>21600000</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>27091342</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>32960741</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>20987714</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=cdos,cr,csi,d,dpf,hsm,jsa/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,XMgU6d,aa,abd,async,bgd,dvl,eN4qad,fk3mof,foot,iD8Yk,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c?xjs=s1</uri>
+  <method>GET</method>
+  <evidence>106627163</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>15872052</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>314159265</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>48448350</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>271733878</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>370081973</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>1518500249</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>1732584193</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>2139095040</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>11152231</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>24375332</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>21571239</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>1859775393</evidence>
+  </instance>
+  </instances>
+  <count>33</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;416666667, which evaluates to: 1983-03-16 18:14:27&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/complete/search?client=firefox&amp;q=3.138.126.137+%3A</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?client=firefox&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>6</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie with SameSite Attribute None</alert>
+  <name>Cookie with SameSite Attribute None</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set with its SameSite attribute set to &quot;none&quot;, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?cs=1</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?&amp;atyp=i&amp;biw=1280&amp;bih=555&amp;dpr=1.5&amp;ei=NnvVYJj3LaTgz7sPtYG8sAE</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>7</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>private, max-age=0</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>private, max-age=3600</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>no-cache, must-revalidate</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>no-cache, must-revalidate</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>private</evidence>
+  </instance>
+  </instances>
+  <count>5</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10027</pluginid>
+  <alertRef>10027</alertRef>
+  <alert>Information Disclosure - Suspicious Comments</alert>
+  <name>Information Disclosure - Suspicious Comments</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=CnSW2d,Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,WlNQGd,XMgU6d,aa,abd,async,bgd,cdos,cr,csi,d,dpf,dvl,eN4qad,fk3mof,foot,hsm,iD8Yk,jsa,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=DPreE,EufiNb,T6sTsf,VD4Qme,hiU8Ie,lpfstd,nabPbb,uiNkee,xj7LNb?xjs=s2</uri>
+  <method>GET</method>
+  <evidence>select</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>Db</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=cdos,cr,csi,d,dpf,hsm,jsa/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,XMgU6d,aa,abd,async,bgd,dvl,eN4qad,fk3mof,foot,iD8Yk,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c?xjs=s1</uri>
+  <method>GET</method>
+  <evidence>SELECT</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=cdos,cr,csi,d,dpf,hsm,jsa/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,XMgU6d,aa,abd,async,bgd,dvl,eN4qad,fk3mof,foot,iD8Yk,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c?xjs=s1</uri>
+  <method>GET</method>
+  <evidence>query</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>SELECT</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>query</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/m=cdos,cr,dpf,hsm,jsa,d,csi/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/ed=1/dg=2/rs=ACT90oGTBmFCQLWX9Q8alIen4fC_KPkoUw</uri>
+  <method>GET</method>
+  <evidence>username</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=cdos,cr,csi,d,dpf,hsm,jsa/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,XMgU6d,aa,abd,async,bgd,dvl,eN4qad,fk3mof,foot,iD8Yk,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c?xjs=s1</uri>
+  <method>GET</method>
+  <evidence>Db</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/xjs/_/js/k=xjs.s.en_GB.2NgwvujiT9A.O/ck=xjs.s.qIYvDHroJG4.L.F4.O/am=QhkAAQAAAAAA8AfgAYyACRAAAAAYgwAAAAAAABQCEJDsDgUAAFPmJWCAEIIABPgQAPwxCogAAgAAACawDgDnPwgAuAQuYQAAAAAAAASgJZBRKkAiIIAAAAAAxNSCKR4QAEAB/d=1/exm=cdos,cr,csi,d,dpf,hsm,jsa/ed=1/dg=2/rs=ACT90oFDvOp2yZKAKo96Xu47NpwBIJzcmA/m=Eox39d,KVWnye,MB3mMb,NBZ7u,O8k1Cd,OG6ZHd,RL6dv,T7XTS,URQPYc,XMgU6d,aa,abd,async,bgd,dvl,eN4qad,fk3mof,foot,iD8Yk,kyn,lli,m6a0l,mUpTid,mu,o02Jie,pB6Zqd,pkeO3b,qik19b,rHjpXd,sb_wiz,sf,tIj4fb,tl,xz7cCd,zbML3c?xjs=s1</uri>
+  <method>GET</method>
+  <evidence>from</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>db</evidence>
+  </instance>
+  </instances>
+  <count>11</count>
+  <solution>&lt;p&gt;Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The following pattern was used: \bFROM\b and was detected 22 times, the first in the element starting with: &quot;s_wc=function(a){if(!s_lc.has(a)){var b=s_Sda(a),c=s_pc(document.body,b,function(d){s_oc(c);s_lc.delete(a);s_yda(a.split(&quot;.&quot;)[0]&quot;, see evidence field for the suspicious comment/snippet.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>90033</pluginid>
+  <alertRef>90033</alertRef>
+  <alert>Loosely Scoped Cookie</alert>
+  <name>Loosely Scoped Cookie</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?&amp;atyp=i&amp;biw=1280&amp;bih=555&amp;dpr=1.5&amp;ei=NnvVYJj3LaTgz7sPtYG8sAE</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?cs=1</uri>
+  <method>GET</method>
+  </instance>
+  </instances>
+  <count>7</count>
+  <solution>&lt;p&gt;Always scope cookies to a FQDN (Fully Qualified Domain Name).&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The origin domain used for comparison was: &lt;/p&gt;&lt;p&gt;www.google.com&lt;/p&gt;&lt;p&gt;1P_JAR=2021-06-25-06&lt;/p&gt;&lt;p&gt;SIDCC=AJi4QfEUMk5gqeTZjmLRTTmyzA8BdFj7S6rQUr0nQprSZf1w-MBWBUj7qgyGVTdL_MhkJYIcXw&lt;/p&gt;&lt;p&gt;__Secure-3PSIDCC=AJi4QfFShfdV9qdMwZlxmRBb3HdMsQw42TxjTqwFdFbvKANsL7mrMH5hvGtCjfd_ZrYA5xKrWQ&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/rfc6265#section-4.1&lt;/p&gt;&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;&lt;p&gt;http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies&lt;/p&gt;</reference>
+  <cweid>565</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10011</pluginid>
+  <alertRef>10011</alertRef>
+  <alert>Cookie Without Secure Flag</alert>
+  <name>Cookie Without Secure Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>5</count>
+  <solution>&lt;p&gt;Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html&lt;/p&gt;</reference>
+  <cweid>614</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10054</pluginid>
+  <alertRef>10054</alertRef>
+  <alert>Cookie without SameSite Attribute</alert>
+  <name>Cookie without SameSite Attribute</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &apos;cross-site&apos; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  </instances>
+  <count>5</count>
+  <solution>&lt;p&gt;Ensure that the SameSite attribute is set to either &apos;lax&apos; or ideally &apos;strict&apos; for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site&lt;/p&gt;</reference>
+  <cweid>1275</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10010</pluginid>
+  <alertRef>10010</alertRef>
+  <alert>Cookie No HttpOnly Flag</alert>
+  <name>Cookie No HttpOnly Flag</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/async/bgasy?ei=NnvVYJj3LaTgz7sPtYG8sAE&amp;client=firefox-b-d&amp;yv=3&amp;async=_fmt:jspb</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>1P_JAR</param>
+  <evidence>Set-Cookie: 1P_JAR</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?cs=1</uri>
+  <method>GET</method>
+  <param>1P_JAR</param>
+  <evidence>Set-Cookie: 1P_JAR</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/compressiontest/gzip.html</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>SIDCC</param>
+  <evidence>Set-Cookie: SIDCC</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <param>1P_JAR</param>
+  <evidence>Set-Cookie: 1P_JAR</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/client_204?&amp;atyp=i&amp;biw=1280&amp;bih=555&amp;dpr=1.5&amp;ei=NnvVYJj3LaTgz7sPtYG8sAE</uri>
+  <method>GET</method>
+  <param>1P_JAR</param>
+  <evidence>Set-Cookie: 1P_JAR</evidence>
+  </instance>
+  </instances>
+  <count>9</count>
+  <solution>&lt;p&gt;Ensure that the HttpOnly flag is set for all cookies.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://owasp.org/www-community/HttpOnly&lt;/p&gt;</reference>
+  <cweid>1004</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10202</pluginid>
+  <alertRef>10202</alertRef>
+  <alert>Absence of Anti-CSRF Tokens</alert>
+  <name>Absence of Anti-CSRF Tokens</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;No Anti-CSRF tokens were found in a HTML submission form.&lt;/p&gt;&lt;p&gt;A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;CSRF attacks are effective in a number of situations, including:&lt;/p&gt;&lt;p&gt;    * The victim has an active session on the target site.&lt;/p&gt;&lt;p&gt;    * The victim is authenticated via HTTP auth on the target site.&lt;/p&gt;&lt;p&gt;    * The victim is on the same local network as the target site.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;CSRF has primarily been used to perform an action against a target site using the victim&apos;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/search?client=firefox-b-d&amp;q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22</uri>
+  <method>GET</method>
+  <evidence>&lt;form class=&quot;tsf&quot; action=&quot;/search&quot; id=&quot;tsf&quot; data-submitfalse=&quot;q&quot; method=&quot;GET&quot; name=&quot;f&quot; role=&quot;search&quot;&gt;</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Phase: Architecture and Design&lt;/p&gt;&lt;p&gt;Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.&lt;/p&gt;&lt;p&gt;For example, use anti-CSRF packages such as the OWASP CSRFGuard.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Implementation&lt;/p&gt;&lt;p&gt;Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Architecture and Design&lt;/p&gt;&lt;p&gt;Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).&lt;/p&gt;&lt;p&gt;Note that this can be bypassed using XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.&lt;/p&gt;&lt;p&gt;Note that this can be bypassed using XSS.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Use the ESAPI Session Management control.&lt;/p&gt;&lt;p&gt;This control includes a component for CSRF.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Do not use the GET method for any request that triggers a state change.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Phase: Implementation&lt;/p&gt;&lt;p&gt;Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: &quot;client&quot; &quot;ei&quot; &quot;iflsig&quot; &quot;q&quot; &quot;safe&quot; &quot;sxsrf&quot; ].&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/Cross-Site-Request-Forgery&lt;/p&gt;&lt;p&gt;http://cwe.mitre.org/data/definitions/352.html&lt;/p&gt;</reference>
+  <cweid>352</cweid>
+  <wascid>9</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10024</pluginid>
+  <alertRef>10024</alertRef>
+  <alert>Information Disclosure - Sensitive Information in URL</alert>
+  <name>Information Disclosure - Sensitive Information in URL</name>
+  <riskcode>0</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Informational (Medium)</riskdesc>
+  <desc>&lt;p&gt;The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://www.google.com/complete/search?q&amp;cp=0&amp;client=gws-wiz&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;nolsbt=1&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>authuser</param>
+  <evidence>authuser</evidence>
+  </instance>
+  <instance>
+  <uri>https://www.google.com/complete/search?q=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;cp=0&amp;client=desktop-gws-wiz-on-focus-serp&amp;xssi=t&amp;gs_ri=gws-wiz&amp;hl=en-IN&amp;authuser=0&amp;pq=%22http%3A%2F%2Flocalhost%3A8080%2Ftest%3Fname%3DTestUser1%27%2520or%2520%271%27%3D%271%22&amp;psi=NnvVYJj3LaTgz7sPtYG8sAE.1624603451758&amp;ofp=EAE&amp;dpr=1.5</uri>
+  <method>GET</method>
+  <param>authuser</param>
+  <evidence>authuser</evidence>
+  </instance>
+  </instances>
+  <count>2</count>
+  <solution>&lt;p&gt;Do not pass sensitive information in URIs.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;The URL contains potentially sensitive information. The following string was found via the pattern: user&lt;/p&gt;&lt;p&gt;authuser&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://normandy.cdn.mozilla.net" host="normandy.cdn.mozilla.net" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://normandy.cdn.mozilla.net/api/v1/</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>public, max-age=30</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://getpocket.cdn.mozilla.net" host="getpocket.cdn.mozilla.net" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10096</pluginid>
+  <alertRef>10096</alertRef>
+  <alert>Timestamp Disclosure - Unix</alert>
+  <name>Timestamp Disclosure - Unix</name>
+  <riskcode>0</riskcode>
+  <confidence>1</confidence>
+  <riskdesc>Informational (Low)</riskdesc>
+  <desc>&lt;p&gt;A timestamp was disclosed by the application/web server - Unix&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624103836</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624380714</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1285352755</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624118554</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1623946269</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1620363600</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>20210614</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624349190</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1623924000</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>149346090</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>13765181</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624374055</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624176420</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>34939176</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624078800</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1623661224</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624010657</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1624251600</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1623819600</evidence>
+  </instance>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <evidence>1623420900</evidence>
+  </instance>
+  </instances>
+  <count>33</count>
+  <solution>&lt;p&gt;Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;1624103836, which evaluates to: 2021-06-19 17:27:16&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://projects.webappsec.org/w/page/13246936/Information%20Leakage&lt;/p&gt;</reference>
+  <cweid>200</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>s-maxage=900,public</evidence>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+<alertitem>
+  <pluginid>10021</pluginid>
+  <alertRef>10021</alertRef>
+  <alert>X-Content-Type-Options Header Missing</alert>
+  <name>X-Content-Type-Options Header Missing</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &apos;nosniff&apos;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&amp;consumer_key=40249-e88c401e1b1f2242d9e441c4&amp;locale_lang=en-US&amp;region=IN&amp;count=30</uri>
+  <method>GET</method>
+  <param>X-Content-Type-Options</param>
+  </instance>
+  </instances>
+  <count>1</count>
+  <solution>&lt;p&gt;Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &apos;nosniff&apos; for all web pages.&lt;/p&gt;&lt;p&gt;If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.&lt;/p&gt;</solution>
+  <otherinfo>&lt;p&gt;This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.&lt;/p&gt;&lt;p&gt;At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.&lt;/p&gt;</otherinfo>
+  <reference>&lt;p&gt;http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx&lt;/p&gt;&lt;p&gt;https://owasp.org/www-community/Security_Headers&lt;/p&gt;</reference>
+  <cweid>693</cweid>
+  <wascid>15</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site><site name="https://safebrowsing.googleapis.com" host="safebrowsing.googleapis.com" port="443" ssl="true"><alerts></alerts></site><site name="https://push.services.mozilla.com" host="push.services.mozilla.com" port="443" ssl="true"><alerts></alerts></site><site name="https://img-getpocket.cdn.mozilla.net" host="img-getpocket.cdn.mozilla.net" port="443" ssl="true"><alerts></alerts></site><site name="https://incoming.telemetry.mozilla.org" host="incoming.telemetry.mozilla.org" port="443" ssl="true"><alerts></alerts></site><site name="https://firefox.settings.services.mozilla.com" host="firefox.settings.services.mozilla.com" port="443" ssl="true"><alerts><alertitem>
+  <pluginid>10015</pluginid>
+  <alertRef>10015</alertRef>
+  <alert>Incomplete or No Cache-control Header Set</alert>
+  <name>Incomplete or No Cache-control Header Set</name>
+  <riskcode>1</riskcode>
+  <confidence>2</confidence>
+  <riskdesc>Low (Medium)</riskdesc>
+  <desc>&lt;p&gt;The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.&lt;/p&gt;</desc>
+  <instances>
+  <instance>
+  <uri>https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/ms-language-packs/records/cfr-v1-en-US</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>max-age=3600</evidence>
+  </instance>
+  <instance>
+  <uri>https://firefox.settings.services.mozilla.com/v1/</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  </instance>
+  <instance>
+  <uri>https://firefox.settings.services.mozilla.com/v1/buckets/monitor/collections/changes/changeset?collection=nimbus-desktop-defaults&amp;bucket=main&amp;_expected=0</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>max-age=3600</evidence>
+  </instance>
+  <instance>
+  <uri>https://firefox.settings.services.mozilla.com/v1/buckets/monitor/collections/changes/changeset?collection=hijack-blocklists&amp;bucket=main&amp;_expected=0</uri>
+  <method>GET</method>
+  <param>Cache-Control</param>
+  <evidence>max-age=3600</evidence>
+  </instance>
+  </instances>
+  <count>4</count>
+  <solution>&lt;p&gt;Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.&lt;/p&gt;</solution>
+  <reference>&lt;p&gt;https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching&lt;/p&gt;&lt;p&gt;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control&lt;/p&gt;</reference>
+  <cweid>525</cweid>
+  <wascid>13</wascid>
+  <sourceid>3</sourceid>
+</alertitem>
+</alerts></site></OWASPZAPReport>

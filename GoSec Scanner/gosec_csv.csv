@@ -1,0 +1,2251 @@
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/stringutils.go,11,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"10: 	for i := range b {
+11: 		b[i] = letters[rand.Intn(len(letters))] //nolint: gosec // G404: Use of weak random number generator (math/rand instead of crypto/rand)
+12: 	}
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/namesgenerator/names-generator.go,849,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"848: 	if retry > 0 {
+849: 		name += strconv.Itoa(rand.Intn(10)) //nolint:gosec // G404: Use of weak random number generator (math/rand instead of crypto/rand)
+850: 	}
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/namesgenerator/names-generator.go,843,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"842: begin:
+843: 	name := left[rand.Intn(len(left))] + ""_"" + right[rand.Intn(len(right))] //nolint:gosec // G404: Use of weak random number generator (math/rand instead of crypto/rand)
+844: 	if name == ""boring_wozniak"" /* Steve Wozniak is not boring */ {
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/namesgenerator/names-generator.go,843,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"842: begin:
+843: 	name := left[rand.Intn(len(left))] + ""_"" + right[rand.Intn(len(right))] //nolint:gosec // G404: Use of weak random number generator (math/rand instead of crypto/rand)
+844: 	if name == ""boring_wozniak"" /* Steve Wozniak is not boring */ {
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/resolver.go,217,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"216: 	for i := len(addr) - 1; i > 0; i-- {
+217: 		r := rand.Intn(i + 1) // nolint:gosec // gosec complains about the use of rand here. It should be fine.
+218: 		addr[i], addr[r] = addr[r], addr[i]
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/cluster.go,246,Use of weak random number generator (math/rand instead of crypto/rand),HIGH,MEDIUM,"245: 	// Use a random stagger to avoid synchronizing
+246: 	randStagger := time.Duration(uint64(rnd.Int63()) % uint64(stagger)) //nolint:gosec // gosec complains about the use of rand here. It should be fine.
+247: 	select {
+",CWE-338
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/splunk/splunk.go,173,TLS MinVersion too low.,HIGH,HIGH,"172: 	// FIXME set minimum TLS version for splunk (see https://github.com/moby/moby/issues/42443)
+173: 	tlsConfig := &tls.Config{} //nolint: gosec // G402: TLS MinVersion too low.
+174: 
+",CWE-295
+/Users/bhumita/gosec-demo/docker-ce/components/cli/opts/opts.go,409,Potential uncontrolled memory consumption in Rat.SetString (CVE-2022-23772),HIGH,LOW,"408: func ParseCPUs(value string) (int64, error) {
+409: 	cpu, ok := new(big.Rat).SetString(value)
+410: 	if !ok {
+",CWE-190
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/awslogs/cloudwatchlogs.go,67,Potential hardcoded credentials,HIGH,LOW,"66: 
+67: 	credentialsEndpoint = ""http://169.254.170.2""
+68: 
+",CWE-798
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/awslogs/cloudwatchlogs.go,42,Potential hardcoded credentials,HIGH,LOW,"41: 	multilinePatternKey    = ""awslogs-multiline-pattern""
+42: 	credentialsEndpointKey = ""awslogs-credentials-endpoint""
+43: 	forceFlushIntervalKey  = ""awslogs-force-flush-interval-seconds""
+",CWE-798
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/credentials/native_store.go,10,Potential hardcoded credentials,HIGH,LOW,"9: const (
+10: 	remoteCredentialsPrefix = ""docker-credential-""
+11: 	tokenUsername           = ""<token>""
+",CWE-798
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/service/opts.go,917,Potential hardcoded credentials,HIGH,LOW,"916: const (
+917: 	flagCredentialSpec          = ""credential-spec""
+918: 	flagPlacementPref           = ""placement-pref""
+",CWE-798
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,113,Subprocess launched with variable,MEDIUM,HIGH,"112: 	}
+113: 	cmd := exec.Command(binary, confPath)
+114: 	cmd.Stdout = c.stdout
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,223,Subprocess launched with variable,MEDIUM,HIGH,"222: 	sourcePath := filepath.Join(""github.com"", ""docker"", ""docker"", ""testutil"", ""fixtures"", ""plugin"", ""basic"")
+223: 	cmd := exec.Command(goBin, ""build"", ""-o"", installPath, sourcePath)
+224: 	cmd.Env = append(os.Environ(), ""CGO_ENABLED=0"", ""GO111MODULE=off"")
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/load/frozen.go,89,Subprocess launched with variable,MEDIUM,HIGH,"88: 	}
+89: 	tarCmd := exec.Command(tar, ""-cC"", frozenImgDir, ""."")
+90: 	out, err := tarCmd.StdoutPipe()
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakestorage/fixtures.go,74,Subprocess launched with variable,MEDIUM,HIGH,"73: 
+74: 	if out, err := exec.Command(cpCmd, ""../contrib/httpserver/Dockerfile"", filepath.Join(tmp, ""Dockerfile"")).CombinedOutput(); err != nil {
+75: 		t.Fatalf(""could not build http server: %v"", string(out))
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakestorage/fixtures.go,69,Subprocess launched with variable,MEDIUM,HIGH,"68: 	} else {
+69: 		if out, err := exec.Command(cpCmd, ""../contrib/httpserver/httpserver"", filepath.Join(tmp, ""httpserver"")).CombinedOutput(); err != nil {
+70: 			t.Fatalf(""could not copy http server: %v"", string(out))
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakestorage/fixtures.go,58,Subprocess launched with variable,MEDIUM,HIGH,"57: 
+58: 		cmd := exec.Command(goCmd, ""build"", ""-o"", filepath.Join(tmp, ""httpserver""), ""github.com/docker/docker/contrib/httpserver"")
+59: 		cmd.Env = append(os.Environ(), []string{
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/daemon/daemon.go,394,Subprocess launched with variable,MEDIUM,HIGH,"393: 	d.args = append(d.args, providedArgs...)
+394: 	d.cmd = exec.Command(dockerdBinary, d.args...)
+395: 	d.cmd.Env = append(os.Environ(), ""DOCKER_SERVICE_PREFER_OFFLINE_IMAGE=1"")
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,213,Subprocess launched with variable,MEDIUM,HIGH,"212: 
+213: 	return cmdStream(exec.CommandContext(ctx, unpigzPath, ""-d"", ""-c""), buf)
+214: }
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,186,Subprocess launched with variable,MEDIUM,HIGH,"185: 
+186: 	cmd := exec.Command(binaryName, args...)
+187: 	// redirect containerd logs to docker logs
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/top_unix.go,172,Subprocess launched with variable,MEDIUM,HIGH,"171: 		// so retry without it
+172: 		output, err = exec.Command(""ps"", args...).Output()
+173: 		if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/info_unix.go,196,Subprocess launched with variable,MEDIUM,HIGH,"195: 	defaultInitBinary := daemon.configStore.GetInitPath()
+196: 	if rv, err := exec.Command(defaultInitBinary, ""--version"").Output(); err == nil {
+197: 		if ver, commit, err := parseInitVersion(string(rv)); err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/info_unix.go,179,Subprocess launched with variable,MEDIUM,HIGH,"178: 	defaultRuntimeBinary := daemon.configStore.GetRuntime(defaultRuntime).Path
+179: 	if rv, err := exec.Command(defaultRuntimeBinary, ""--version"").Output(); err == nil {
+180: 		if _, ver, commit, err := parseRuntimeVersion(string(rv)); err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/info_unix.go,65,Subprocess launched with variable,MEDIUM,HIGH,"64: 	defaultInitBinary := daemon.configStore.GetInitPath()
+65: 	if rv, err := exec.Command(defaultInitBinary, ""--version"").Output(); err == nil {
+66: 		if _, commit, err := parseInitVersion(string(rv)); err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/info_unix.go,48,Subprocess launched with variable,MEDIUM,HIGH,"47: 	defaultRuntimeBinary := daemon.configStore.GetRuntime(v.DefaultRuntime).Path
+48: 	if rv, err := exec.Command(defaultRuntimeBinary, ""--version"").Output(); err == nil {
+49: 		if _, _, commit, err := parseRuntimeVersion(string(rv)); err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,104,Subprocess launched with variable,MEDIUM,HIGH,"103: 
+104: 	out, err := exec.Command(blkid, dev).CombinedOutput()
+105: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,75,Subprocess launched with variable,MEDIUM,HIGH,"74: 
+75: 	out, err := exec.Command(pvDisplay, dev).CombinedOutput()
+76: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,56,Subprocess launched with variable,MEDIUM,HIGH,"55: 
+56: 	out, err := exec.Command(lvmScan).CombinedOutput()
+57: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils_darwin.go,15,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"14: 
+15: 	cmd := exec.Command(""lsof"", ""-p"", strconv.Itoa(pid))
+16: 
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,190,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"189: 
+190: 	return cmdStream(exec.CommandContext(ctx, args[0], args[1:]...), archive)
+191: }
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/top_unix.go,168,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"167: 	pids := psPidsArg(procs)
+168: 	output, err := exec.Command(""ps"", append(args, pids)...).Output()
+169: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,212,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"211: 	}
+212: 	out, err = exec.Command(""lvcreate"", ""--wipesignatures"", ""y"", ""-n"", ""thinpoolmeta"", ""docker"", ""--extents"", fmt.Sprintf(""%d%%VG"", cfg.ThinpMetaPercent)).CombinedOutput()
+213: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,208,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"207: 
+208: 	out, err = exec.Command(""lvcreate"", ""--wipesignatures"", ""y"", ""-n"", ""thinpool"", ""docker"", ""--extents"", fmt.Sprintf(""%d%%VG"", cfg.ThinpPercent)).CombinedOutput()
+209: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,203,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"202: 
+203: 	out, err = exec.Command(""vgcreate"", ""docker"", cfg.Device).CombinedOutput()
+204: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,198,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"197: 
+198: 	out, err := exec.Command(""pvcreate"", ""-f"", cfg.Device).CombinedOutput()
+199: 	if err != nil {
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli-plugins/manager/manager.go,181,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"180: 		}
+181: 		cmd := exec.Command(plugin.Path, args...)
+182: 		// Using dockerCli.{In,Out,Err}() here results in a hang until something is input.
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli-plugins/manager/candidate.go,22,Subprocess launched with a potential tainted input or cmd arguments,MEDIUM,HIGH,"21: func (c *candidate) Metadata() ([]byte, error) {
+22: 	return exec.Command(c.path, MetadataSubcommandName).Output()
+23: }
+",CWE-78
+/Users/bhumita/gosec-demo/docker-ce/components/engine/volume/local/local.go,86,Potential file inclusion via variable,MEDIUM,HIGH,"85: 		optsFilePath := filepath.Join(rootDirectory, name, ""opts.json"")
+86: 		if b, err := os.ReadFile(optsFilePath); err == nil {
+87: 			opts := optsConfig{}
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,99,Potential file inclusion via variable,MEDIUM,HIGH,"98: 	confPath := filepath.Join(tmp, ""config.yaml"")
+99: 	config, err := os.Create(confPath)
+100: 	assert.NilError(t, err)
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,194,Potential file inclusion via variable,MEDIUM,HIGH,"193: 			}
+194: 			f, err := os.Create(filepath.Join(inPath, ""rootfs"", m.Destination))
+195: 			if err != nil && !os.IsExist(err) {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/load/frozen.go,161,Potential file inclusion via variable,MEDIUM,HIGH,"160: func readFrozenImageList(dockerfilePath string, images []string) (map[string]string, error) {
+161: 	f, err := os.Open(dockerfilePath)
+162: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/registry/registry.go,77,Potential file inclusion via variable,MEDIUM,HIGH,"76: 			logrus.Debugf(""crt: %s"", filepath.Join(directory, f.Name()))
+77: 			data, err := os.ReadFile(filepath.Join(directory, f.Name()))
+78: 			if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/manager.go,270,Potential file inclusion via variable,MEDIUM,HIGH,"269: 	p := filepath.Join(pm.config.Root, id, configFileName)
+270: 	dt, err := os.ReadFile(p)
+271: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/system/process_unix.go,34,Potential file inclusion via variable,MEDIUM,HIGH,"33: 	statPath := fmt.Sprintf(""/proc/%d/stat"", pid)
+34: 	dataBytes, err := os.ReadFile(statPath)
+35: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/system/filesys_unix.go,53,Potential file inclusion via variable,MEDIUM,HIGH,"52: func OpenFileSequential(name string, flag int, perm os.FileMode) (*os.File, error) {
+53: 	return os.OpenFile(name, flag, perm)
+54: }
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/system/filesys_unix.go,44,Potential file inclusion via variable,MEDIUM,HIGH,"43: func OpenSequential(name string) (*os.File, error) {
+44: 	return os.Open(name)
+45: }
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/system/filesys_unix.go,36,Potential file inclusion via variable,MEDIUM,HIGH,"35: func CreateSequential(name string) (*os.File, error) {
+36: 	return os.Create(name)
+37: }
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/stack/stackdump.go,29,Potential file inclusion via variable,MEDIUM,HIGH,"28: 		var err error
+29: 		f, err = os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0666)
+30: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/plugins/discovery.go,131,Potential file inclusion via variable,MEDIUM,HIGH,"130: func readPluginJSONInfo(name, path string) (*Plugin, error) {
+131: 	f, err := os.Open(path)
+132: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/plugins/discovery.go,112,Potential file inclusion via variable,MEDIUM,HIGH,"111: func readPluginInfo(name, path string) (*Plugin, error) {
+112: 	content, err := os.ReadFile(path)
+113: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/pidfile/pidfile.go,22,Potential file inclusion via variable,MEDIUM,HIGH,"21: func checkPIDFileAlreadyExists(path string) error {
+22: 	if pidByte, err := os.ReadFile(path); err == nil {
+23: 		pidString := strings.TrimSpace(string(pidByte))
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/ioutils/fswriters.go,138,Potential file inclusion via variable,MEDIUM,HIGH,"137: func (ws *AtomicWriteSet) FileWriter(name string, flag int, perm os.FileMode) (io.WriteCloser, error) {
+138: 	f, err := os.OpenFile(filepath.Join(ws.root, name), flag, perm)
+139: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/idtools/idtools.go,206,Potential file inclusion via variable,MEDIUM,HIGH,"205: 
+206: 	subidFile, err := os.Open(path)
+207: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,486,Potential file inclusion via variable,MEDIUM,HIGH,"485: 			}
+486: 			f, err := os.OpenFile(path, os.O_CREATE, 0755)
+487: 			if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/filenotify/poller.go,51,Potential file inclusion via variable,MEDIUM,HIGH,"50: 
+51: 	f, err := os.Open(name)
+52: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/diff.go,186,Potential file inclusion via variable,MEDIUM,HIGH,"185: 				}
+186: 				tmpFile, err := os.Open(filepath.Join(aufsTempdir, linkBasename))
+187: 				if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1248,Potential file inclusion via variable,MEDIUM,HIGH,"1247: 
+1248: 			srcF, err := os.Open(src)
+1249: 			if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1180,Potential file inclusion via variable,MEDIUM,HIGH,"1179: func (archiver *Archiver) UntarPath(src, dst string) error {
+1180: 	archive, err := os.Open(src)
+1181: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,113,Potential file inclusion via variable,MEDIUM,HIGH,"112: func IsArchivePath(path string) bool {
+113: 	file, err := os.Open(path)
+114: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,444,Potential file inclusion via variable,MEDIUM,HIGH,"443: func copyFile(src, dst string) error {
+444: 	sBytes, err := os.ReadFile(src)
+445: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,435,Potential file inclusion via variable,MEDIUM,HIGH,"434: 
+435: 	f, err = os.Create(path)
+436: 	if err == nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,315,Potential file inclusion via variable,MEDIUM,HIGH,"314: 	} else {
+315: 		h, err := os.ReadFile(hashFile)
+316: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/resolvconf/resolvconf.go,107,Potential file inclusion via variable,MEDIUM,HIGH,"106: func GetSpecific(path string) (*File, error) {
+107: 	resolv, err := os.ReadFile(path)
+108: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,201,Potential file inclusion via variable,MEDIUM,HIGH,"200: 
+201: 	old, err := os.ReadFile(path)
+202: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,158,Potential file inclusion via variable,MEDIUM,HIGH,"157: 	}
+158: 	old, err := os.Open(path)
+159: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,130,Potential file inclusion via variable,MEDIUM,HIGH,"129: func mergeRecords(path string, recs []Record) ([]byte, error) {
+130: 	f, err := os.Open(path)
+131: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/config/config.go,74,Potential file inclusion via variable,MEDIUM,HIGH,"73: 	}
+74: 	data, err := os.ReadFile(tomlCfgFile)
+75: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,150,Potential file inclusion via variable,MEDIUM,HIGH,"149: 	path := filepath.Join(r.stateDir, configFile)
+150: 	f, err := os.OpenFile(path, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, 0600)
+151: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,120,Potential file inclusion via variable,MEDIUM,HIGH,"119: 	pidFile := filepath.Join(r.stateDir, pidFile)
+120: 	f, err := os.OpenFile(pidFile, os.O_RDWR, 0600)
+121: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,145,Potential file inclusion via variable,MEDIUM,HIGH,"144: 	defer tsw.Close()
+145: 	tdf, err := os.Open(tarDataFile)
+146: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,60,Potential file inclusion via variable,MEDIUM,HIGH,"59: 
+60: 	f, err := os.Create(newTarDataPath)
+61: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,27,Potential file inclusion via variable,MEDIUM,HIGH,"26: 
+27: 	tarDataFile, err := os.Open(oldTarDataPath)
+28: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,413,Potential file inclusion via variable,MEDIUM,HIGH,"412: 		chainFile := filepath.Join(dir, ""cache-id"")
+413: 		contentBytes, err := os.ReadFile(chainFile)
+414: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,332,Potential file inclusion via variable,MEDIUM,HIGH,"331: 			chainFile := filepath.Join(fms.root, string(algorithm), fi.Name(), ""cache-id"")
+332: 			contentBytes, err := os.ReadFile(chainFile)
+333: 			if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,261,Potential file inclusion via variable,MEDIUM,HIGH,"260: 	manifestFileName := filepath.Join(tempDir, manifestFileName)
+261: 	f, err := os.OpenFile(manifestFileName, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
+262: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,243,Potential file inclusion via variable,MEDIUM,HIGH,"242: 		reposFile := filepath.Join(tempDir, legacyRepositoriesFileName)
+243: 		rf, err := os.OpenFile(reposFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
+244: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,279,Potential file inclusion via variable,MEDIUM,HIGH,"278: 	}
+279: 	imageJSON, err := os.ReadFile(configPath)
+280: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,239,Potential file inclusion via variable,MEDIUM,HIGH,"238: 	}
+239: 	repositoriesFile, err := os.Open(repositoriesPath)
+240: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,76,Potential file inclusion via variable,MEDIUM,HIGH,"75: 		}
+76: 		config, err := os.ReadFile(configPath)
+77: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,49,Potential file inclusion via variable,MEDIUM,HIGH,"48: 	}
+49: 	manifestFile, err := os.Open(manifestPath)
+50: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/fs.go,161,Potential file inclusion via variable,MEDIUM,HIGH,"160: 	}
+161: 	bytes, err := os.ReadFile(filepath.Join(s.metadataDir(dgst), key))
+162: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/splunk/splunk.go,187,Potential file inclusion via variable,MEDIUM,HIGH,"186: 	if caPath, ok := info.Config[splunkCAPathKey]; ok {
+187: 		caCert, err := os.ReadFile(caPath)
+188: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/file_unix.go,13,Potential file inclusion via variable,MEDIUM,HIGH,"12: func open(name string) (*os.File, error) {
+13: 	return os.Open(name)
+14: }
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/file_unix.go,9,Potential file inclusion via variable,MEDIUM,HIGH,"8: func openFile(name string, flag int, perm os.FileMode) (*os.File, error) {
+9: 	return os.OpenFile(name, flag, perm)
+10: }
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/driver.go,306,Potential file inclusion via variable,MEDIUM,HIGH,"305: func isEmptyDir(name string) bool {
+306: 	f, err := os.Open(name)
+307: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,141,Potential file inclusion via variable,MEDIUM,HIGH,"140: 	p := filepath.Join(root, ""setup-config.json"")
+141: 	b, err := os.ReadFile(p)
+142: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/config/config.go,413,Potential file inclusion via variable,MEDIUM,HIGH,"412: func getConflictFreeConfiguration(configFile string, flags *pflag.FlagSet) (*Config, error) {
+413: 	b, err := os.ReadFile(configFile)
+414: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/cluster/utils.go,12,Potential file inclusion via variable,MEDIUM,HIGH,"11: func loadPersistentState(root string) (*nodeStartConfig, error) {
+12: 	dt, err := os.ReadFile(filepath.Join(root, stateFile))
+13: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/contrib/apparmor/main.go,45,Potential file inclusion via variable,MEDIUM,HIGH,"44: 
+45: 	f, err := os.OpenFile(apparmorProfilePath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
+46: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/container.go,217,Potential file inclusion via variable,MEDIUM,HIGH,"216: 
+217: 	f, err := os.Open(pth)
+218: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/container.go,141,Potential file inclusion via variable,MEDIUM,HIGH,"140: 
+141: 	jsonSource, err := os.Open(pth)
+142: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/copy.go,411,Potential file inclusion via variable,MEDIUM,HIGH,"410: 	tmpFileName = filepath.Join(tmpDir, tmpFileName)
+411: 	tmpFile, err := os.OpenFile(tmpFileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0600)
+412: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/opts/file.go,25,Potential file inclusion via variable,MEDIUM,HIGH,"24: func parseKeyValueFile(filename string, emptyFn func(string) (string, bool)) ([]string, error) {
+25: 	fh, err := os.Open(filename)
+26: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/man/generate.go,88,Potential file inclusion via variable,MEDIUM,HIGH,"87: 
+88: 		content, err = ioutil.ReadFile(fullpath)
+89: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/man/generate.go,77,Potential file inclusion via variable,MEDIUM,HIGH,"76: 
+77: 		content, err := ioutil.ReadFile(fullpath)
+78: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/docs/yaml/yaml.go,95,Potential file inclusion via variable,MEDIUM,HIGH,"94: 	filename := filepath.Join(dir, basename)
+95: 	f, err := os.Create(filename)
+96: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/docs/yaml/generate.go,79,Potential file inclusion via variable,MEDIUM,HIGH,"78: 		fullPath := filepath.Join(path, mdFile)
+79: 		content, err := ioutil.ReadFile(fullPath)
+80: 		if os.IsNotExist(err) {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/manifest/store/store.go,50,Potential file inclusion via variable,MEDIUM,HIGH,"49: func (s *fsStore) getFromFilename(ref reference.Reference, filename string) (types.ImageManifest, error) {
+50: 	bytes, err := ioutil.ReadFile(filename)
+51: 	switch {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/tlsdata.go,90,Potential file inclusion via variable,MEDIUM,HIGH,"89: 	if keyPath != """" {
+90: 		if key, err = ioutil.ReadFile(keyPath); err != nil {
+91: 			return nil, err
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/tlsdata.go,85,Potential file inclusion via variable,MEDIUM,HIGH,"84: 	if certPath != """" {
+85: 		if cert, err = ioutil.ReadFile(certPath); err != nil {
+86: 			return nil, err
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/tlsdata.go,80,Potential file inclusion via variable,MEDIUM,HIGH,"79: 	if caPath != """" {
+80: 		if ca, err = ioutil.ReadFile(caPath); err != nil {
+81: 			return nil, err
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/store/metadatastore.go,61,Potential file inclusion via variable,MEDIUM,HIGH,"60: 	contextDir := s.contextDir(id)
+61: 	bytes, err := ioutil.ReadFile(filepath.Join(contextDir, metaFile))
+62: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/kubernetes/save.go,66,Potential file inclusion via variable,MEDIUM,HIGH,"65: 	if path != """" {
+66: 		return ioutil.ReadFile(path)
+67: 	}
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/config.go,139,Potential file inclusion via variable,MEDIUM,HIGH,"138: 	filename = filepath.Join(getHomeDir(), oldConfigfile)
+139: 	if file, err := os.Open(filename); err == nil {
+140: 		printLegacyFileWarning = true
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/config.go,124,Potential file inclusion via variable,MEDIUM,HIGH,"123: 	// Try happy path first - latest config file
+124: 	if file, err := os.Open(filename); err == nil {
+125: 		defer file.Close()
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/trust/signer_add.go,121,Potential file inclusion via variable,MEDIUM,HIGH,"120: 		// Read public key bytes from PEM file, limit to 1 KiB
+121: 		pubKeyFile, err := os.OpenFile(pubKeyPath, os.O_RDONLY, 0666)
+122: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/trust/key_load.go,83,Potential file inclusion via variable,MEDIUM,HIGH,"82: 
+83: 	from, err := os.OpenFile(keyPath, os.O_RDONLY, notary.PrivExecPerms)
+84: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/swarm/opts.go,198,Potential file inclusion via variable,MEDIUM,HIGH,"197: 		case ""cacert"":
+198: 			cacontents, err := ioutil.ReadFile(value)
+199: 			if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/swarm/opts.go,143,Potential file inclusion via variable,MEDIUM,HIGH,"142: func (p *PEMFile) Set(value string) error {
+143: 	contents, err := ioutil.ReadFile(value)
+144: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/stack/loader/loader.go,137,Potential file inclusion via variable,MEDIUM,HIGH,"136: 	} else {
+137: 		bytes, err = ioutil.ReadFile(filename)
+138: 	}
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/plugin/create.go,30,Potential file inclusion via variable,MEDIUM,HIGH,"29: func validateConfig(path string) error {
+30: 	dt, err := os.Open(filepath.Join(path, ""config.json""))
+31: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build_session.go,63,Potential file inclusion via variable,MEDIUM,HIGH,"62: 
+63: 		dt, err := ioutil.ReadFile(sessionFile)
+64: 		if err == nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build_buildkit.go,156,Potential file inclusion via variable,MEDIUM,HIGH,"155: 			} else {
+156: 				f, err := os.Create(outFile)
+157: 				if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/dockerignore.go,16,Potential file inclusion via variable,MEDIUM,HIGH,"15: 
+16: 	f, err := os.Open(filepath.Join(contextDir, "".dockerignore""))
+17: 	switch {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,130,Potential file inclusion via variable,MEDIUM,HIGH,"129: 
+130: 	f, err := os.Create(filepath.Join(dockerfileDir, DefaultDockerfileName))
+131: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,80,Potential file inclusion via variable,MEDIUM,HIGH,"79: 		if !f.IsDir() {
+80: 			currentFile, err := os.Open(filePath)
+81: 			if err != nil && os.IsPermission(err) {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/import.go,36,Potential file inclusion via variable,MEDIUM,HIGH,"35: 	} else {
+36: 		f, err := os.Open(source)
+37: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/export.go,63,Potential file inclusion via variable,MEDIUM,HIGH,"62: 	} else {
+63: 		f, err := os.OpenFile(dest, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0600)
+64: 		if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/create.go,183,Potential file inclusion via variable,MEDIUM,HIGH,"182: 
+183: 	f, err := os.Create(path)
+184: 	if err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/basic/basic.go,25-28,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"24: 	mux := http.NewServeMux()
+25: 	server := http.Server{
+26: 		Addr:    l.Addr().String(),
+27: 		Handler: http.NewServeMux(),
+28: 	}
+29: 	mux.HandleFunc(""/Plugin.Activate"", func(w http.ResponseWriter, r *http.Request) {
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,94,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"93: 	logrus.Infof(""Starting the diagnostic server listening on %d for commands"", port)
+94: 	srv := &http.Server{Addr: fmt.Sprintf(""%s:%d"", ip, port), Handler: s}
+95: 	s.srv = srv
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/volumes/cmd/dummy/main.go,14-17,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"13: 
+14: 	server := http.Server{
+15: 		Addr:    l.Addr().String(),
+16: 		Handler: http.NewServeMux(),
+17: 	}
+18: 	server.Serve(l)
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/dummy/main.go,14-17,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"13: 
+14: 	server := http.Server{
+15: 		Addr:    l.Addr().String(),
+16: 		Handler: http.NewServeMux(),
+17: 	}
+18: 	server.Serve(l)
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/main.go,17-20,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"16: 
+17: 	server := http.Server{
+18: 		Addr:    l.Addr().String(),
+19: 		Handler: mux,
+20: 	}
+21: 	server.Serve(l)
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/close_on_start/main.go,42-45,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"41: 	})
+42: 	server := http.Server{
+43: 		Addr:    l.Addr().String(),
+44: 		Handler: mux,
+45: 	}
+46: 
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/server.go,59-61,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"58: 		httpServer := &HTTPServer{
+59: 			srv: &http.Server{
+60: 				Addr: addr,
+61: 			},
+62: 			l: listener,
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/cli/e2e/plugin/basic/basic.go,25-28,Potential Slowloris Attack because ReadHeaderTimeout is not configured in the http.Server,MEDIUM,LOW,"24: 	mux := http.NewServeMux()
+25: 	server := http.Server{
+26: 		Addr:    l.Addr().String(),
+27: 		Handler: http.NewServeMux(),
+28: 	}
+29: 	mux.HandleFunc(""/Plugin.Activate"", func(w http.ResponseWriter, r *http.Request) {
+",CWE-400
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/cmd/diagnostic/main.go,119,Potential HTTP request made with variable url,MEDIUM,MEDIUM,"118: 
+119: 	resp, err := http.Get(path) //nolint:gosec // G107: Potential HTTP request made with variable url
+120: 	if err != nil {
+",CWE-88
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/copy.go,366,Potential DoS vulnerability via decompression bomb,MEDIUM,MEDIUM,"365: 			//nolint:gosec // G110: Potential DoS vulnerability via decompression bomb (gosec)
+366: 			if _, err = io.Copy(rebasedTar, srcTar); err != nil {
+367: 				w.CloseWithError(err)
+",CWE-409
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/tarsum/tarsum.go,249,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"248: 
+249: 			ts.currentFile = path.Join(""."", path.Join(""/"", currentHeader.Name))
+250: 			if err := ts.encodeHeader(currentHeader); err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/diff.go,212,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"211: 	for _, hdr := range dirs {
+212: 		path := filepath.Join(dest, hdr.Name)
+213: 		if err := system.Chtimes(path, hdr.AccessTime, hdr.ModTime); err != nil {
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/diff.go,116,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"115: 		}
+116: 		path := filepath.Join(dest, hdr.Name)
+117: 		rel, err := filepath.Rel(dest, path)
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1112,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"1111: 	for _, hdr := range dirs {
+1112: 		path := filepath.Join(dest, hdr.Name)
+1113: 
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1048,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"1047: 
+1048: 		path := filepath.Join(dest, hdr.Name)
+1049: 		rel, err := filepath.Rel(dest, path)
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,695,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"694: 		// e.g. /extractDir/path/to/symlink 	-> ../2/file	= /extractDir/path/2/file
+695: 		targetPath := filepath.Join(filepath.Dir(path), hdr.Linkname)
+696: 
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,683,File traversal when extracting zip/tar archive,MEDIUM,HIGH,"682: 	case tar.TypeLink:
+683: 		targetPath := filepath.Join(extractDir, hdr.Linkname)
+684: 		// check for hardlink breakout
+",CWE-22
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakecontext/context.go,37,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"36: 	}
+37: 	if err := os.Chmod(tmp, 0755); err != nil {
+38: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/daemon/daemon.go,142,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"141: 	if d.rootlessUser != nil {
+142: 		if err := os.Chmod(SockRoot, 0777); err != nil {
+143: 			return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/stack/stackdump.go,29,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"28: 		var err error
+29: 		f, err = os.OpenFile(path, os.O_CREATE|os.O_WRONLY, 0666)
+30: 		if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,486,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"485: 			}
+486: 			f, err := os.OpenFile(path, os.O_CREATE, 0755)
+487: 			if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/driver.go,40,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"39: 
+40: 		f, err := os.OpenFile(req.File, syscall.O_RDONLY, 0700)
+41: 		if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,261,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"260: 	manifestFileName := filepath.Join(tempDir, manifestFileName)
+261: 	f, err := os.OpenFile(manifestFileName, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
+262: 	if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,243,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"242: 		reposFile := filepath.Join(tempDir, legacyRepositoriesFileName)
+243: 		rf, err := os.OpenFile(reposFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, 0644)
+244: 		if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/contrib/apparmor/main.go,45,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"44: 
+45: 	f, err := os.OpenFile(apparmorProfilePath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0644)
+46: 	if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/trust/signer_add.go,121,Expect file permissions to be 0600 or less,MEDIUM,HIGH,"120: 		// Read public key bytes from PEM file, limit to 1 KiB
+121: 		pubKeyFile, err := os.OpenFile(pubKeyPath, os.O_RDONLY, 0666)
+122: 		if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,191,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"190: 		} else {
+191: 			if err := os.MkdirAll(filepath.Join(inPath, ""rootfs"", filepath.Dir(m.Destination)), 0755); err != nil {
+192: 				return nil, errors.Wrap(err, ""error preparing plugin mount destination dir"")
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,168,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"167: 	}
+168: 	if err := os.MkdirAll(filepath.Join(inPath, ""rootfs"", filepath.Dir(p.Entrypoint[0])), 0755); err != nil {
+169: 		return nil, errors.Wrap(err, ""error creating plugin rootfs dir"")
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,88,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"87: 	inPath := filepath.Join(tmpDir, ""plugin"")
+88: 	if err := os.MkdirAll(inPath, 0755); err != nil {
+89: 		return errors.Wrap(err, ""error creating plugin root"")
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/basic/basic.go,16,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"15: 	}
+16: 	if err := os.MkdirAll(p, 0755); err != nil {
+17: 		panic(err)
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakecontext/context.go,94,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"93: 	if dirpath != ""."" {
+94: 		if err := os.MkdirAll(dirpath, 0755); err != nil {
+95: 			return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/daemon/daemon.go,112,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"111: 	daemonRoot := filepath.Join(daemonFolder, ""root"")
+112: 	if err := os.MkdirAll(daemonRoot, 0755); err != nil {
+113: 		return nil, errors.Wrapf(err, ""failed to create daemon root %q"", daemonRoot)
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/manager.go,241,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"240: 
+241: 						if err := os.MkdirAll(propRoot, 0755); err != nil {
+242: 							logrus.Errorf(""failed to create PropagatedMount directory at %s: %v"", propRoot, err)
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,483,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"482: 			}
+483: 			if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+484: 				return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,481,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"480: 			if isDir {
+481: 				return os.MkdirAll(path, 0755)
+482: 			}
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,253,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"252: func (fms *fileMetadataStore) SetMountParent(mount string, parent ChainID) error {
+253: 	if err := os.MkdirAll(fms.getMountDirectory(mount), 0755); err != nil {
+254: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,246,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"245: func (fms *fileMetadataStore) SetInitID(mount string, init string) error {
+246: 	if err := os.MkdirAll(fms.getMountDirectory(mount), 0755); err != nil {
+247: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,239,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"238: func (fms *fileMetadataStore) SetMountID(mount string, mountID string) error {
+239: 	if err := os.MkdirAll(fms.getMountDirectory(mount), 0755); err != nil {
+240: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,129,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"128: 	finalDir := fm.store.getLayerDirectory(layer)
+129: 	if err := os.MkdirAll(filepath.Dir(finalDir), 0755); err != nil {
+130: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,70,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"69: 	tmpDir := filepath.Join(fms.root, ""tmp"")
+70: 	if err := os.MkdirAll(tmpDir, 0755); err != nil {
+71: 		return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,350,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"349: 	outDir := filepath.Join(s.outDir, legacyImg.ID)
+350: 	if err := os.Mkdir(outDir, 0755); err != nil {
+351: 		return distribution.Descriptor{}, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/metadata/metadata.go,60,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"59: 	path := store.path(namespace, key)
+60: 	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+61: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/devmapper/device_setup.go,178,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"177: 
+178: 	err := os.MkdirAll(lvmProfileDir, 0755)
+179: 	if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/checkpoint.go,111,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"110: 
+111: 	if err := os.MkdirAll(checkpointDir, 0755); err != nil {
+112: 		return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/contrib/apparmor/main.go,41,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"40: 	// make sure /etc/apparmor.d exists
+41: 	if err := os.MkdirAll(path.Dir(apparmorProfilePath), 0755); err != nil {
+42: 		log.Fatal(err)
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/e2e/plugin/basic/basic.go,16,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"15: 	}
+16: 	if err := os.MkdirAll(p, 0755); err != nil {
+17: 		panic(err)
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/docs/yaml/generate.go,36,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"35: 
+36: 	if err := os.MkdirAll(opts.target, 0755); err != nil {
+37: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/manifest/store/store.go,145,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"144: 	path := filepath.Join(s.root, makeFilesafeName(transaction))
+145: 	return os.MkdirAll(path, 0755)
+146: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/store/tlsstore.go,30,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"29: 	parentOfRoot := filepath.Dir(s.root)
+30: 	if err := os.MkdirAll(parentOfRoot, 0755); err != nil {
+31: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/store/metadatastore.go,31,Expect directory permissions to be 0750 or less,MEDIUM,HIGH,"30: 	contextDir := s.contextDir(contextdirOf(meta.Name))
+31: 	if err := os.MkdirAll(contextDir, 0755); err != nil {
+32: 		return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,165,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"164: 	}
+165: 	if err := os.WriteFile(filepath.Join(inPath, ""config.json""), configJSON, 0644); err != nil {
+166: 		return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fakecontext/context.go,98,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"97: 	}
+98: 	return os.WriteFile(fp, content, 0644)
+99: 
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/plugins/pluginrpc-gen/main.go,81,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"80: 	errorOut(""error formatting generated source:\n""+buf.String(), err)
+81: 	errorOut(""error writing file"", os.WriteFile(*outputFile, src, 0644))
+82: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/pidfile/pidfile.go,42,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"41: 	}
+42: 	if err := os.WriteFile(path, []byte(fmt.Sprintf(""%d"", os.Getpid())), 0644); err != nil {
+43: 		return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,337,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"336: 	}
+337: 	err = os.WriteFile(sb.config.resolvConfPath, newRC.Content, 0644) //nolint:gosec // gosec complains about perms here, which must be 0644 in this case
+338: 	if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/resolvconf/resolvconf.go,294,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"293: 
+294: 	return &File{Content: content.Bytes(), Hash: hash}, os.WriteFile(path, content.Bytes(), 0644)
+295: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,206,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"205: 	var re = regexp.MustCompile(fmt.Sprintf(""(\\S*)(\\t%s)(\\s|\\.)"", regexp.QuoteMeta(hostname)))
+206: 	return os.WriteFile(path, re.ReplaceAll(old, []byte(IP+""$2""+""$3"")), 0644)
+207: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,191,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"190: 	}
+191: 	return os.WriteFile(path, buf.Bytes(), 0644)
+192: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,126,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"125: 
+126: 	return os.WriteFile(path, b, 0644)
+127: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,110,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"109: 
+110: 	return os.WriteFile(path, content.Bytes(), 0644)
+111: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,213,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"212: 
+213: 	err = os.WriteFile(filepath.Join(r.stateDir, pidFile), []byte(fmt.Sprintf(""%d"", r.daemonPid)), 0660)
+214: 	if err != nil {
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,256,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"255: 	}
+256: 	return os.WriteFile(fms.getMountFilename(mount, ""parent""), []byte(digest.Digest(parent).String()), 0644)
+257: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,249,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"248: 	}
+249: 	return os.WriteFile(fms.getMountFilename(mount, ""init-id""), []byte(init), 0644)
+250: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,242,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"241: 	}
+242: 	return os.WriteFile(fms.getMountFilename(mount, ""mount-id""), []byte(mountID), 0644)
+243: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,364,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"363: 
+364: 	if err := os.WriteFile(filepath.Join(outDir, legacyConfigFileName), imageConfig, 0644); err != nil {
+365: 		return distribution.Descriptor{}, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,355,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"354: 	// todo: why is this version file here?
+355: 	if err := os.WriteFile(filepath.Join(outDir, legacyVersionFileName), []byte(""1.0""), 0644); err != nil {
+356: 		return distribution.Descriptor{}, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,333,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"332: 	configFile := filepath.Join(s.outDir, id.Digest().Hex()+"".json"")
+333: 	if err := os.WriteFile(configFile, img.RawJSON(), 0644); err != nil {
+334: 		return nil, err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/runtime_unix.go,104,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"103: 			content := fmt.Sprintf(""#!/bin/sh\n%s %s $@\n"", rt.Path, strings.Join(rt.Args, "" ""))
+104: 			if err := os.WriteFile(script, []byte(content), 0700); err != nil {
+105: 				return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/container_unix.go,63,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"62: 	container.HostnamePath = hostnamePath
+63: 	return os.WriteFile(container.HostnamePath, []byte(container.Config.Hostname+""\n""), 0644)
+64: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/manifest/store/store.go,140,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"139: 	}
+140: 	return ioutil.WriteFile(filename, bytes, 0644)
+141: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/store/metadatastore.go,38,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"37: 	}
+38: 	return ioutil.WriteFile(filepath.Join(contextDir, metaFile), bytes, 0644)
+39: }
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build_buildkit.go,369,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"368: 		imageID = strings.TrimSpace(imageID)
+369: 		if err := ioutil.WriteFile(options.imageIDFile, []byte(imageID), 0666); err != nil {
+370: 			return errors.Wrap(err, ""cannot write image ID file"")
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build.go,439,Expect WriteFile permissions to be 0600 or less,MEDIUM,HIGH,"438: 		}
+439: 		if err := ioutil.WriteFile(options.imageIDFile, []byte(imageID), 0666); err != nil {
+440: 			return err
+",CWE-276
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,101,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"100: 	assert.NilError(t, err)
+101: 	defer config.Close()
+102: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/load/frozen.go,165,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"164: 	}
+165: 	defer f.Close()
+166: 	ls := make(map[string]string)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/environment/environment.go,187,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"186: 	if f, err := os.Open(""/sys/module/user_namespace/parameters/enable""); err == nil {
+187: 		defer f.Close()
+188: 		b := make([]byte, 1)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/reference/store.go,328,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"327: 	}
+328: 	defer f.Close()
+329: 	if err := json.NewDecoder(f).Decode(&store); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/stack/stackdump.go,33,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"32: 		}
+33: 		defer f.Close()
+34: 		defer f.Sync()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/plugins/discovery.go,135,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"134: 	}
+135: 	defer f.Close()
+136: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/idtools/idtools.go,210,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"209: 	}
+210: 	defer subidFile.Close()
+211: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,451,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"450: 	}
+451: 	defer df.Close()
+452: 	return io.Copy(df, sf)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,443,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"442: 	}
+443: 	defer sf.Close()
+444: 	if err := os.Remove(cleanDst); err != nil && !os.IsNotExist(err) {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/filenotify/poller.go,148,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"147: func (w *filePoller) watch(f *os.File, lastFi os.FileInfo, chClose chan struct{}) {
+148: 	defer f.Close()
+149: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/diff.go,190,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"189: 				}
+190: 				defer tmpFile.Close()
+191: 				srcData = tmpFile
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1252,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"1251: 			}
+1252: 			defer srcF.Close()
+1253: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1184,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"1183: 	}
+1184: 	defer archive.Close()
+1185: 	options := &TarOptions{
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,117,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"116: 	}
+117: 	defer file.Close()
+118: 	rdr, err := DecompressStream(file)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/resolver_unix.go,53,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"52: 	}
+53: 	defer f.Close() //nolint:gosec
+54: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,134,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"133: 	}
+134: 	defer f.Close()
+135: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,154,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"153: 	}
+154: 	defer f.Close()
+155: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,127,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"126: 	}
+127: 	defer f.Close()
+128: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,149,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"148: 	}
+149: 	defer tdf.Close()
+150: 	_, err = io.Copy(tsw, tdf)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,64,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"63: 	}
+64: 	defer f.Close()
+65: 	mfz := gzip.NewWriter(f)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,31,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"30: 	}
+31: 	defer tarDataFile.Close()
+32: 	uncompressed, err := gzip.NewReader(tarDataFile)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,243,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"242: 	}
+243: 	defer repositoriesFile.Close()
+244: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,56,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"55: 	}
+56: 	defer manifestFile.Close()
+57: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,502,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"501: 	}
+502: 	defer cf.Close()
+503: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,363,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"362: 	}
+363: 	defer currentFile.Close()
+364: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/driver.go,310,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"309: 	}
+310: 	defer f.Close()
+311: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/contrib/apparmor/main.go,49,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"48: 	}
+49: 	defer f.Close()
+50: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/container.go,224,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"223: 	}
+224: 	defer f.Close()
+225: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/container.go,145,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"144: 	}
+145: 	defer jsonSource.Close()
+146: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/opts/file.go,29,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"28: 	}
+29: 	defer fh.Close()
+30: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/docs/yaml/yaml.go,99,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"98: 	}
+99: 	defer f.Close()
+100: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/config.go,141,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"140: 		printLegacyFileWarning = true
+141: 		defer file.Close()
+142: 		if err := configFile.LegacyLoadFromReader(file); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/config.go,125,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"124: 	if file, err := os.Open(filename); err == nil {
+125: 		defer file.Close()
+126: 		err = configFile.LoadFromReader(file)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/trust/signer_add.go,125,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"124: 		}
+125: 		defer pubKeyFile.Close()
+126: 		// limit to
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/trust/key_load.go,87,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"86: 	}
+87: 	defer from.Close()
+88: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/import.go,66,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"65: 		}
+66: 		defer file.Close()
+67: 		in = file
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/dockerignore.go,23,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"22: 	}
+23: 	defer f.Close()
+24: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,134,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"133: 	}
+134: 	defer f.Close()
+135: 	if _, err := io.Copy(f, rc); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/import.go,40,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"39: 		}
+40: 		defer f.Close()
+41: 		reader = f
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/export.go,67,"Deferring unsafe method ""Close"" on type ""*os.File""",MEDIUM,HIGH,"66: 		}
+67: 		defer f.Close()
+68: 		writer = f
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/system/init.go,14,Use of unsafe calls should be audited,LOW,HIGH,"13: 	// chtimes initialization
+14: 	if unsafe.Sizeof(syscall.Timespec{}.Nsec) == 8 {
+15: 		// This is a 64 bit timespec
+",CWE-242
+/Users/bhumita/gosec-demo/docker-ce/components/engine/volume/testutils/testutils.go,167,Errors unhandled.,LOW,HIGH,"166: 		}
+167: 		w.Write([]byte(""{}""))
+168: 	})
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/volume/service/store.go,712,Errors unhandled.,LOW,HIGH,"711: 		if vol == nil {
+712: 			s.purge(ctx, name)
+713: 			return nil, errNoSuchVolume
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/volume/service/store.go,556,Errors unhandled.,LOW,HIGH,"555: 	// doesn't exist, so purge it from the cache
+556: 	s.purge(ctx, name)
+557: 	return nil, nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/volume/local/local.go,169,Errors unhandled.,LOW,HIGH,"168: 		if err != nil {
+169: 			os.RemoveAll(filepath.Dir(path))
+170: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,217,Errors unhandled.,LOW,HIGH,"216: 		os.Rename(tempFile.Name(), blobFilename)
+217: 		os.Remove(tempFile.Name())
+218: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,216,Errors unhandled.,LOW,HIGH,"215: 	return func() {
+216: 		os.Rename(tempFile.Name(), blobFilename)
+217: 		os.Remove(tempFile.Name())
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,211,Errors unhandled.,LOW,HIGH,"210: 		// FIXME(vdemeester) use a defer/clean func
+211: 		os.Remove(tempFile.Name())
+212: 		t.Fatalf(""unable to move data blob: %s"", err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,203,Errors unhandled.,LOW,HIGH,"202: 	assert.NilError(t, err, ""unable to get temporary blob file"")
+203: 	tempFile.Close()
+204: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,169,Errors unhandled.,LOW,HIGH,"168: 	r.cmd.Process.Wait()
+169: 	os.RemoveAll(r.dir)
+170: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,168,Errors unhandled.,LOW,HIGH,"167: 	r.cmd.Process.Kill()
+168: 	r.cmd.Process.Wait()
+169: 	os.RemoveAll(r.dir)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,167,Errors unhandled.,LOW,HIGH,"166: func (r *V2) Close() {
+167: 	r.cmd.Process.Kill()
+168: 	r.cmd.Process.Wait()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,152,Errors unhandled.,LOW,HIGH,"151: 	}
+152: 	resp.Body.Close()
+153: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,118,Errors unhandled.,LOW,HIGH,"117: 		// FIXME(vdemeester) use a defer/clean func
+118: 		os.RemoveAll(tmp)
+119: 		t.Fatal(err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/registry/registry.go,105,Errors unhandled.,LOW,HIGH,"104: 		// FIXME(vdemeester) use a defer/clean func
+105: 		os.RemoveAll(tmp)
+106: 		t.Fatal(err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/plugin.go,199,Errors unhandled.,LOW,HIGH,"198: 			if f != nil {
+199: 				f.Close()
+200: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/plugin/basic/basic.go,33,Errors unhandled.,LOW,HIGH,"32: 	})
+33: 	server.Serve(l)
+34: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/fixtures/load/frozen.go,97,Errors unhandled.,LOW,HIGH,"96: 	tarCmd.Stderr = errBuf
+97: 	tarCmd.Start()
+98: 	defer tarCmd.Wait()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/daemon/daemon.go,494,Errors unhandled.,LOW,HIGH,"493: 	defer func() {
+494: 		d.logFile.Close()
+495: 		d.cmd = nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/testutil/daemon/daemon.go,465,Errors unhandled.,LOW,HIGH,"464: 
+465: 			resp.Body.Close()
+466: 			if resp.StatusCode != http.StatusOK {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/registry/resumable/resumablerequestreader.go,93,Errors unhandled.,LOW,HIGH,"92: 	if r.currentResponse != nil {
+93: 		r.currentResponse.Body.Close()
+94: 		r.currentResponse = nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/manager.go,248,Errors unhandled.,LOW,HIGH,"247: 
+248: 			pm.save(p)
+249: 			requiresManualRestore := !pm.config.LiveRestoreEnabled && p.IsEnabled()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/executor/containerd/containerd.go,161,Errors unhandled.,LOW,HIGH,"160: 			io.Copy(stderr, iop.Stderr)
+161: 			stderr.Close()
+162: 			rio.wg.Done()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/executor/containerd/containerd.go,160,Errors unhandled.,LOW,HIGH,"159: 		go func() {
+160: 			io.Copy(stderr, iop.Stderr)
+161: 			stderr.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/executor/containerd/containerd.go,156,Errors unhandled.,LOW,HIGH,"155: 			io.Copy(stdout, iop.Stdout)
+156: 			stdout.Close()
+157: 			rio.wg.Done()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/plugin/executor/containerd/containerd.go,155,Errors unhandled.,LOW,HIGH,"154: 		go func() {
+155: 			io.Copy(stdout, iop.Stdout)
+156: 			stdout.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/truncindex/truncindex.go,54,Errors unhandled.,LOW,HIGH,"53: 	for _, id := range ids {
+54: 		idx.addID(id)
+55: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/tarsum/versioning.go,28,Errors unhandled.,LOW,HIGH,"27: 	for _, elem := range v1TarHeaderSelect(h) {
+28: 		w.Write([]byte(elem[0] + elem[1]))
+29: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/tarsum/tarsum.go,281,Errors unhandled.,LOW,HIGH,"280: 	}
+281: 	ts.writer.Flush()
+282: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/tarsum/tarsum.go,260,Errors unhandled.,LOW,HIGH,"259: 			}
+260: 			ts.writer.Flush()
+261: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/progress/progressreader.go,64,Errors unhandled.,LOW,HIGH,"63: 	if last || p.current == p.size || p.rateLimiter.Allow() {
+64: 		p.out.WriteProgress(Progress{ID: p.id, Action: p.action, Current: p.current, Total: p.size, LastUpdate: last})
+65: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/progress/progress.go,92,Errors unhandled.,LOW,HIGH,"91: func Aux(out Output, a interface{}) {
+92: 	out.WriteProgress(Progress{Aux: a})
+93: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/progress/progress.go,80,Errors unhandled.,LOW,HIGH,"79: func Message(out Output, id, message string) {
+80: 	out.WriteProgress(Progress{ID: id, Message: message})
+81: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/progress/progress.go,69,Errors unhandled.,LOW,HIGH,"68: func Update(out Output, id, action string) {
+69: 	out.WriteProgress(Progress{ID: id, Action: action})
+70: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/pools/pools.go,132,Errors unhandled.,LOW,HIGH,"131: 		if writeCloser, ok := w.(io.WriteCloser); ok {
+132: 			writeCloser.Close()
+133: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/pools/pools.go,130,Errors unhandled.,LOW,HIGH,"129: 	return ioutils.NewWriteCloserWrapper(w, func() error {
+130: 		buf.Flush()
+131: 		if writeCloser, ok := w.(io.WriteCloser); ok {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/pools/pools.go,91,Errors unhandled.,LOW,HIGH,"90: 		if readCloser, ok := r.(io.ReadCloser); ok {
+91: 			readCloser.Close()
+92: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/plugins/client.go,190,Errors unhandled.,LOW,HIGH,"189: 			b, err := io.ReadAll(resp.Body)
+190: 			resp.Body.Close()
+191: 			cancelRequest()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/ioutils/readers.go,117,Errors unhandled.,LOW,HIGH,"116: 		}
+117: 		in.Close()
+118: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/ioutils/fswriters.go,68,Errors unhandled.,LOW,HIGH,"67: 	if err := w.f.Sync(); err != nil {
+68: 		w.f.Close()
+69: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/ioutils/fswriters.go,64,Errors unhandled.,LOW,HIGH,"63: 		if retErr != nil || w.writeErr != nil {
+64: 			os.Remove(w.f.Name())
+65: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/fileutils/fileutils.go,490,Errors unhandled.,LOW,HIGH,"489: 			}
+490: 			f.Close()
+491: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/filenotify/poller.go,119,Errors unhandled.,LOW,HIGH,"118: 	for name := range w.watches {
+119: 		w.remove(name)
+120: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/filenotify/poller.go,65,Errors unhandled.,LOW,HIGH,"64: 	if _, exists := w.watches[name]; exists {
+65: 		f.Close()
+66: 		return fmt.Errorf(""watch exists"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/filenotify/poller.go,57,Errors unhandled.,LOW,HIGH,"56: 	if err != nil {
+57: 		f.Close()
+58: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/containerfs/archiver.go,178,Errors unhandled.,LOW,HIGH,"177: 	if retErr != nil {
+178: 		r.CloseWithError(retErr)
+179: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/diff_unix.go,65,Errors unhandled.,LOW,HIGH,"64: 	size, err := archive.UnpackLayer(""/"", os.Stdin, options)
+65: 	os.RemoveAll(tmpDir)
+66: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/diff_unix.go,63,Errors unhandled.,LOW,HIGH,"62: 
+63: 	os.Setenv(""TMPDIR"", tmpDir)
+64: 	size, err := archive.UnpackLayer(""/"", os.Stdin, options)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/archive_unix.go,114,Errors unhandled.,LOW,HIGH,"113: 		// pending on write pipe forever
+114: 		io.Copy(io.Discard, decompressedArchive)
+115: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/archive_unix.go,108,Errors unhandled.,LOW,HIGH,"107: 	}
+108: 	w.Close()
+109: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/archive_unix.go,105,Errors unhandled.,LOW,HIGH,"104: 	if err := json.NewEncoder(w).Encode(options); err != nil {
+105: 		w.Close()
+106: 		return fmt.Errorf(""Untar json encode to pipe failed: %v"", err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/chrootarchive/archive_unix.go,99,Errors unhandled.,LOW,HIGH,"98: 	if err := cmd.Start(); err != nil {
+99: 		w.Close()
+100: 		return fmt.Errorf(""Untar error on re-exec cmd: %v"", err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/broadcaster/unbuffered.go,44,Errors unhandled.,LOW,HIGH,"43: 	for _, sw := range w.writers {
+44: 		sw.Close()
+45: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/authorization/response.go,165,Errors unhandled.,LOW,HIGH,"164: 
+165: 	rm.FlushAll()
+166: 	flusher.Flush()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/authorization/response.go,148,Errors unhandled.,LOW,HIGH,"147: 	rm.hijacked = true
+148: 	rm.FlushAll()
+149: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/authorization/authz.go,125,Errors unhandled.,LOW,HIGH,"124: 
+125: 	rm.FlushAll()
+126: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/copy.go,330,Errors unhandled.,LOW,HIGH,"329: 				rebasedTar.Close()
+330: 				w.Close()
+331: 				return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/copy.go,329,Errors unhandled.,LOW,HIGH,"328: 				// Signals end of archive.
+329: 				rebasedTar.Close()
+330: 				w.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1389,Errors unhandled.,LOW,HIGH,"1388: 		archive.Close()
+1389: 		os.Remove(archive.File.Name())
+1390: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1388,Errors unhandled.,LOW,HIGH,"1387: 	if err != nil || archive.read == archive.Size {
+1388: 		archive.Close()
+1389: 		os.Remove(archive.File.Name())
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1327,Errors unhandled.,LOW,HIGH,"1326: 		} else {
+1327: 			pipeW.Close()
+1328: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,1288,Errors unhandled.,LOW,HIGH,"1287: 	if err != nil {
+1288: 		r.CloseWithError(err)
+1289: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,874-983,Errors unhandled.,LOW,HIGH,"873: 			walkRoot := getWalkRoot(srcPath, include)
+874: 			filepath.Walk(walkRoot, func(filePath string, f os.FileInfo, err error) error {
+875: 				if err != nil {
+876: 					logrus.Errorf(""Tar: Can't stat file %s to tar: %s"", srcPath, err)
+877: 					return nil
+878: 				}
+879: 
+880: 				relFilePath, err := filepath.Rel(srcPath, filePath)
+881: 				if err != nil || (!options.IncludeSourceDir && relFilePath == ""."" && f.IsDir()) {
+882: 					// Error getting relative path OR we are looking
+883: 					// at the source directory path. Skip in both situations.
+884: 					return nil
+885: 				}
+886: 
+887: 				if options.IncludeSourceDir && include == ""."" && relFilePath != ""."" {
+888: 					relFilePath = strings.Join([]string{""."", relFilePath}, string(filepath.Separator))
+889: 				}
+890: 
+891: 				skip := false
+892: 
+893: 				// If ""include"" is an exact match for the current file
+894: 				// then even if there's an ""excludePatterns"" pattern that
+895: 				// matches it, don't skip it. IOW, assume an explicit 'include'
+896: 				// is asking for that file no matter what - which is true
+897: 				// for some files, like .dockerignore and Dockerfile (sometimes)
+898: 				if include != relFilePath {
+899: 					for len(parentDirs) != 0 {
+900: 						lastParentDir := parentDirs[len(parentDirs)-1]
+901: 						if strings.HasPrefix(relFilePath, lastParentDir+string(os.PathSeparator)) {
+902: 							break
+903: 						}
+904: 						parentDirs = parentDirs[:len(parentDirs)-1]
+905: 						parentMatchInfo = parentMatchInfo[:len(parentMatchInfo)-1]
+906: 					}
+907: 
+908: 					var matchInfo fileutils.MatchInfo
+909: 					if len(parentMatchInfo) != 0 {
+910: 						skip, matchInfo, err = pm.MatchesUsingParentResults(relFilePath, parentMatchInfo[len(parentMatchInfo)-1])
+911: 					} else {
+912: 						skip, matchInfo, err = pm.MatchesUsingParentResults(relFilePath, fileutils.MatchInfo{})
+913: 					}
+914: 					if err != nil {
+915: 						logrus.Errorf(""Error matching %s: %v"", relFilePath, err)
+916: 						return err
+917: 					}
+918: 
+919: 					if f.IsDir() {
+920: 						parentDirs = append(parentDirs, relFilePath)
+921: 						parentMatchInfo = append(parentMatchInfo, matchInfo)
+922: 					}
+923: 				}
+924: 
+925: 				if skip {
+926: 					// If we want to skip this file and its a directory
+927: 					// then we should first check to see if there's an
+928: 					// excludes pattern (e.g. !dir/file) that starts with this
+929: 					// dir. If so then we can't skip this dir.
+930: 
+931: 					// Its not a dir then so we can just return/skip.
+932: 					if !f.IsDir() {
+933: 						return nil
+934: 					}
+935: 
+936: 					// No exceptions (!...) in patterns so just skip dir
+937: 					if !pm.Exclusions() {
+938: 						return filepath.SkipDir
+939: 					}
+940: 
+941: 					dirSlash := relFilePath + string(filepath.Separator)
+942: 
+943: 					for _, pat := range pm.Patterns() {
+944: 						if !pat.Exclusion() {
+945: 							continue
+946: 						}
+947: 						if strings.HasPrefix(pat.String()+string(filepath.Separator), dirSlash) {
+948: 							// found a match - so can't skip this dir
+949: 							return nil
+950: 						}
+951: 					}
+952: 
+953: 					// No matching exclusion dir so just skip dir
+954: 					return filepath.SkipDir
+955: 				}
+956: 
+957: 				if seen[relFilePath] {
+958: 					return nil
+959: 				}
+960: 				seen[relFilePath] = true
+961: 
+962: 				// Rename the base resource.
+963: 				if rebaseName != """" {
+964: 					var replacement string
+965: 					if rebaseName != string(filepath.Separator) {
+966: 						// Special case the root directory to replace with an
+967: 						// empty string instead so that we don't end up with
+968: 						// double slashes in the paths.
+969: 						replacement = rebaseName
+970: 					}
+971: 
+972: 					relFilePath = strings.Replace(relFilePath, include, replacement, 1)
+973: 				}
+974: 
+975: 				if err := ta.addTarFile(filePath, relFilePath); err != nil {
+976: 					logrus.Errorf(""Can't add file %s to tar: %s"", filePath, err)
+977: 					// if pipe is broken, stop writing tar stream to it
+978: 					if err == io.ErrClosedPipe {
+979: 						return err
+980: 					}
+981: 				}
+982: 				return nil
+983: 			})
+984: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/pkg/archive/archive.go,383,Errors unhandled.,LOW,HIGH,"382: 
+383: 		pipeWriter.Close()
+384: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/opts/ip.go,20,Errors unhandled.,LOW,HIGH,"19: 	}
+20: 	o.Set(defaultVal)
+21: 	return o
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,437,Errors unhandled.,LOW,HIGH,"436: 	if err == nil {
+437: 		f.Close()
+438: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/sandbox_dns_unix.go,349,Errors unhandled.,LOW,HIGH,"348: 	if err = tmpHashFile.Chmod(filePerm); err != nil {
+349: 		tmpHashFile.Close()
+350: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/portmapper/mapper.go,161,Errors unhandled.,LOW,HIGH,"160: 		// need to undo the iptables rules before we return
+161: 		m.userlandProxy.Stop()
+162: 		pm.DeleteForwardingTableEntry(m.proto, hostIP, allocatedHostPort, containerIP.String(), containerPort)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/nodemgmt.go,114,Errors unhandled.,LOW,HIGH,"113: 			logrus.Infof(""Node %s/%s, is the new incarnation of the shutdown node %s/%s"", mn.Name, mn.Addr, name, node.Addr)
+114: 			nDB.changeNodeState(name, nodeLeftState)
+115: 			return true
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/nodemgmt.go,106,Errors unhandled.,LOW,HIGH,"105: 			logrus.Infof(""Node %s/%s, is the new incarnation of the failed node %s/%s"", mn.Name, mn.Addr, name, node.Addr)
+106: 			nDB.changeNodeState(name, nodeLeftState)
+107: 			return true
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/nodemgmt.go,98,Errors unhandled.,LOW,HIGH,"97: 			logrus.Infof(""Node %s/%s, is the new incarnation of the active node %s/%s"", mn.Name, mn.Addr, name, node.Addr)
+98: 			nDB.changeNodeState(name, nodeLeftState)
+99: 			return true
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,417,Errors unhandled.,LOW,HIGH,"416: func dbNetworkStats(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+417: 	r.ParseForm()
+418: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,369,Errors unhandled.,LOW,HIGH,"368: func dbGetTable(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+369: 	r.ParseForm()
+370: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,337,Errors unhandled.,LOW,HIGH,"336: func dbLeaveNetwork(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+337: 	r.ParseForm()
+338: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,305,Errors unhandled.,LOW,HIGH,"304: func dbJoinNetwork(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+305: 	r.ParseForm()
+306: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,259,Errors unhandled.,LOW,HIGH,"258: func dbGetEntry(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+259: 	r.ParseForm()
+260: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,222,Errors unhandled.,LOW,HIGH,"221: func dbDeleteEntry(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+222: 	r.ParseForm()
+223: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,174,Errors unhandled.,LOW,HIGH,"173: func dbUpdateEntry(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+174: 	r.ParseForm()
+175: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,125,Errors unhandled.,LOW,HIGH,"124: func dbCreateEntry(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+125: 	r.ParseForm()
+126: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,102,Errors unhandled.,LOW,HIGH,"101: func dbClusterPeers(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+102: 	r.ParseForm()
+103: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,68,Errors unhandled.,LOW,HIGH,"67: func dbPeers(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+68: 	r.ParseForm()
+69: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/networkdbdiagnostic.go,35,Errors unhandled.,LOW,HIGH,"34: func dbJoin(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+35: 	r.ParseForm()
+36: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/networkdb/cluster.go,356,Errors unhandled.,LOW,HIGH,"355: 	logrus.Debugf(""Initiating bulk sync with node %s after reconnect"", node.Name)
+356: 	nDB.bulkSync([]string{node.Name}, true)
+357: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/netutils/utils.go,106,Errors unhandled.,LOW,HIGH,"105: 	if ip == nil {
+106: 		rand.Read(hw[2:])
+107: 	} else {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/structures.go,242,Errors unhandled.,LOW,HIGH,"241: 		dstAspace.subnets[k] = &PoolData{}
+242: 		v.CopyTo(dstAspace.subnets[k])
+243: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/structures.go,202,Errors unhandled.,LOW,HIGH,"201: 			k := SubnetKey{}
+202: 			k.FromString(ks)
+203: 			aSpace.subnets[k] = v
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/allocator.go,620,Errors unhandled.,LOW,HIGH,"619: 			if config.Range == nil {
+620: 				a.retrieveBitmask(k, config.Pool)
+621: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/allocator.go,124,Errors unhandled.,LOW,HIGH,"123: 	}
+124: 	a.updateBitMasks(aSpace)
+125: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/allocator.go,117,Errors unhandled.,LOW,HIGH,"116: 	// Retrieve this address space's configuration and bitmasks from the datastore
+117: 	a.refresh(as)
+118: 	a.Lock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/ipam/allocator.go,66,Errors unhandled.,LOW,HIGH,"65: 	} {
+66: 		a.initializeAddressSpace(aspc.as, aspc.ds)
+67: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/etchosts/etchosts.go,187,Errors unhandled.,LOW,HIGH,"186: 	}
+187: 	old.Close()
+188: 	if err := s.Err(); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint_info.go,447,Errors unhandled.,LOW,HIGH,"446: 		// In any case for posterity please if you figure this out document it or check the error
+447: 		json.Unmarshal(tb, &tStaticRoute) // nolint:errcheck
+448: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint_info.go,140,Errors unhandled.,LOW,HIGH,"139: 	// TODO(cpuguy83): linter noticed we don't check the error here... no idea why but it seems like it could introduce problems if we start checking
+140: 	json.Unmarshal(rb, &routes) // nolint:errcheck
+141: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,225,Errors unhandled.,LOW,HIGH,"224: 	var myAliases []string
+225: 	json.Unmarshal(ma, &myAliases) // nolint:errcheck
+226: 	ep.myAliases = myAliases
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,220,Errors unhandled.,LOW,HIGH,"219: 	var ingressPorts []*PortConfig
+220: 	json.Unmarshal(pc, &ingressPorts) // nolint:errcheck
+221: 	ep.ingressPorts = ingressPorts
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,215,Errors unhandled.,LOW,HIGH,"214: 	var svcAliases []string
+215: 	json.Unmarshal(sal, &svcAliases) // nolint:errcheck
+216: 	ep.svcAliases = svcAliases
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,136,Errors unhandled.,LOW,HIGH,"135: 	cb, _ := json.Marshal(epMap[""sandbox""])
+136: 	json.Unmarshal(cb, &ep.sandboxID) // nolint:errcheck
+137: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,132,Errors unhandled.,LOW,HIGH,"131: 	var tPorts []types.TransportPort
+132: 	json.Unmarshal(tb, &tPorts) // nolint:errcheck
+133: 	ep.exposedPorts = tPorts
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,128,Errors unhandled.,LOW,HIGH,"127: 	jb, _ := json.Marshal(epMap[""joinInfo""])
+128: 	json.Unmarshal(jb, &ep.joinInfo) // nolint:errcheck
+129: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/endpoint.go,125,Errors unhandled.,LOW,HIGH,"124: 	ib, _ := json.Marshal(epMap[""ep_iface""])
+125: 	json.Unmarshal(ib, &ep.iface) // nolint:errcheck
+126: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,178,Errors unhandled.,LOW,HIGH,"177: 		log.Info(""stack trace done"")
+178: 		HTTPReply(w, CommandSucceed(&StringCmd{Info: fmt.Sprintf(""goroutine stacks written to %s"", path)}), json) // nolint:errcheck
+179: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,175,Errors unhandled.,LOW,HIGH,"174: 		log.WithError(err).Error(""failed to write goroutines dump"")
+175: 		HTTPReply(w, FailCommand(err), json) // nolint:errcheck
+176: 	} else {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,165,Errors unhandled.,LOW,HIGH,"164: func stackTrace(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+165: 	r.ParseForm() // nolint:errcheck
+166: 	_, json := ParseHTTPFormOptions(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,161,Errors unhandled.,LOW,HIGH,"160: 	log.Info(""ready done"")
+161: 	HTTPReply(w, CommandSucceed(&StringCmd{Info: ""OK""}), json) // nolint:errcheck
+162: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,155,Errors unhandled.,LOW,HIGH,"154: func ready(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+155: 	r.ParseForm() // nolint:errcheck
+156: 	_, json := ParseHTTPFormOptions(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,150,Errors unhandled.,LOW,HIGH,"149: 		}
+150: 		HTTPReply(w, CommandSucceed(&StringCmd{Info: result}), json) // nolint:errcheck
+151: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,137,Errors unhandled.,LOW,HIGH,"136: func help(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+137: 	r.ParseForm() // nolint:errcheck
+138: 	_, json := ParseHTTPFormOptions(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,133,Errors unhandled.,LOW,HIGH,"132: 
+133: 	HTTPReply(w, rsp, json) // nolint:errcheck
+134: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,125,Errors unhandled.,LOW,HIGH,"124: func notImplemented(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+125: 	r.ParseForm() // nolint:errcheck
+126: 	_, json := ParseHTTPFormOptions(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/diagnostic/server.go,111,Errors unhandled.,LOW,HIGH,"110: 
+111: 	s.srv.Shutdown(context.Background()) // nolint:errcheck
+112: 	s.srv = nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/datastore/datastore.go,652,Errors unhandled.,LOW,HIGH,"651: 		// happen in cache.
+652: 		ds.cache.del(kvObject, kvObject.Skip())
+653: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/datastore/datastore.go,596,Errors unhandled.,LOW,HIGH,"595: 		// happen in cache.
+596: 		ds.cache.del(kvObject, kvObject.Skip())
+597: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/cmd/networkdb-test/dummyclient/dummyClient.go,57,Errors unhandled.,LOW,HIGH,"56: func watchTableEntries(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+57: 	r.ParseForm() // nolint:errcheck
+58: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/cmd/networkdb-test/dummyclient/dummyClient.go,32,Errors unhandled.,LOW,HIGH,"31: func watchTable(ctx interface{}, w http.ResponseWriter, r *http.Request) {
+32: 	r.ParseForm() // nolint:errcheck
+33: 	diagnostic.DebugHTTPForm(r)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/cmd/diagnostic/main.go,202,Errors unhandled.,LOW,HIGH,"201: 				}
+202: 				resp.Body.Close()
+203: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libnetwork/cmd/diagnostic/main.go,38,Errors unhandled.,LOW,HIGH,"37: 	}
+38: 	body.Close()
+39: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,277,Errors unhandled.,LOW,HIGH,"276: 
+277: 			os.RemoveAll(r.GRPC.Address)
+278: 			if err := r.startContainerd(); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/libcontainerd/supervisor/remote_daemon.go,241,Errors unhandled.,LOW,HIGH,"240: 		// cleanup some files
+241: 		os.Remove(filepath.Join(r.stateDir, pidFile))
+242: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/migration.go,99,Errors unhandled.,LOW,HIGH,"98: 				ls.layerL.Lock()
+99: 				ls.releaseLayer(p)
+100: 				ls.layerL.Unlock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/layer_store.go,733,Errors unhandled.,LOW,HIGH,"732: 		} else {
+733: 			pw.Close()
+734: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/layer_store.go,540,Errors unhandled.,LOW,HIGH,"539: 				ls.layerL.Lock()
+540: 				ls.releaseLayer(p)
+541: 				ls.layerL.Unlock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/layer_store.go,303,Errors unhandled.,LOW,HIGH,"302: 				ls.layerL.Lock()
+303: 				ls.releaseLayer(p)
+304: 				ls.layerL.Unlock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/layer_store.go,268,Errors unhandled.,LOW,HIGH,"267: 	// allocated by NewInputTarStream above are always released
+268: 	io.Copy(io.Discard, rdr) // ignore error as reader may be closed
+269: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,233,Errors unhandled.,LOW,HIGH,"232: 	return ioutils.NewReadCloserWrapper(f, func() error {
+233: 		f.Close()
+234: 		return fz.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,228,Errors unhandled.,LOW,HIGH,"227: 	if err != nil {
+228: 		fz.Close()
+229: 		return nil, err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/filestore.go,122,Errors unhandled.,LOW,HIGH,"121: 	return ioutils.NewWriteCloserWrapper(wc, func() error {
+122: 		wc.Close()
+123: 		return f.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/layer/empty.go,22,Errors unhandled.,LOW,HIGH,"21: 	tarWriter := tar.NewWriter(buf)
+22: 	tarWriter.Close()
+23: 	return io.NopCloser(buf), nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/volumes/cmd/dummy/main.go,18,Errors unhandled.,LOW,HIGH,"17: 	}
+18: 	server.Serve(l)
+19: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/dummy/main.go,18,Errors unhandled.,LOW,HIGH,"17: 	}
+18: 	server.Serve(l)
+19: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/main.go,21,Errors unhandled.,LOW,HIGH,"20: 	}
+21: 	server.Serve(l)
+22: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/driver.go,84,Errors unhandled.,LOW,HIGH,"83: 	}
+84: 	json.NewEncoder(w).Encode(&res)
+85: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/driver.go,69-71,Errors unhandled.,LOW,HIGH,"68: 	mux.HandleFunc(""/LogDriver.Capabilities"", func(w http.ResponseWriter, r *http.Request) {
+69: 		json.NewEncoder(w).Encode(&capabilitiesResponse{
+70: 			Cap: struct{ ReadLogs bool }{ReadLogs: false},
+71: 		})
+72: 	})
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/discard/driver.go,62,Errors unhandled.,LOW,HIGH,"61: 		if f := d.logs[req.File]; f != nil {
+62: 			f.Close()
+63: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/close_on_start/main.go,47,Errors unhandled.,LOW,HIGH,"46: 
+47: 	server.Serve(l)
+48: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/plugin/logging/cmd/close_on_start/main.go,37,Errors unhandled.,LOW,HIGH,"36: 		// file or, for example, the plugin has crashed.
+37: 		f.Close()
+38: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration/internal/requirement/requirement.go,24,Errors unhandled.,LOW,HIGH,"23: 	if resp != nil {
+24: 		resp.Body.Close()
+25: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/integration-cli/cli/build/build.go,19,Errors unhandled.,LOW,HIGH,"18: 			// FIXME(vdemeester) we should not ignore the error here…
+19: 			closer.Close()
+20: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,271,Errors unhandled.,LOW,HIGH,"270: 
+271: 	f.Close()
+272: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,267,Errors unhandled.,LOW,HIGH,"266: 	if err := json.NewEncoder(f).Encode(manifest); err != nil {
+267: 		f.Close()
+268: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,253,Errors unhandled.,LOW,HIGH,"252: 
+253: 		rf.Close()
+254: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,249,Errors unhandled.,LOW,HIGH,"248: 		if err := json.NewEncoder(rf).Encode(reposLegacy); err != nil {
+249: 			rf.Close()
+250: 			return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/save.go,56,Errors unhandled.,LOW,HIGH,"55: 		if rErr != nil {
+56: 			l.releaseLayerReferences(imgDescr)
+57: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,264,Errors unhandled.,LOW,HIGH,"263: 			}
+264: 			l.setLoadedTag(ref, imgID.Digest(), outStream)
+265: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,149,Errors unhandled.,LOW,HIGH,"148: 	if imageRefCount == 0 {
+149: 		outStream.Write([]byte(imageIDsStr))
+150: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,132,Errors unhandled.,LOW,HIGH,"131: 			l.setLoadedTag(ref, imgID.Digest(), outStream)
+132: 			outStream.Write([]byte(fmt.Sprintf(""Loaded image: %s\n"", reference.FamiliarString(ref))))
+133: 			imageRefCount++
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/tarexport/load.go,131,Errors unhandled.,LOW,HIGH,"130: 			}
+131: 			l.setLoadedTag(ref, imgID.Digest(), outStream)
+132: 			outStream.Write([]byte(fmt.Sprintf(""Loaded image: %s\n"", reference.FamiliarString(ref))))
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/store.go,250,Errors unhandled.,LOW,HIGH,"249: 	delete(is.images, id)
+250: 	is.fs.Delete(id.Digest())
+251: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/image/store.go,240,Errors unhandled.,LOW,HIGH,"239: 	for id := range imageMeta.children {
+240: 		is.fs.DeleteMetadata(id.Digest(), ""parent"")
+241: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/xfer/download.go,340,Errors unhandled.,LOW,HIGH,"339: 					d.err = err
+340: 					downloadReader.Close()
+341: 					return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/xfer/download.go,332,Errors unhandled.,LOW,HIGH,"331: 					d.err = errors.New(""layer registration cancelled"")
+332: 					downloadReader.Close()
+333: 					return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/push_v2.go,476,Errors unhandled.,LOW,HIGH,"475: 	nn, err := layerUpload.ReadFrom(tee)
+476: 	reader.Close()
+477: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/push_v2.go,468,Errors unhandled.,LOW,HIGH,"467: 	default:
+468: 		reader.Close()
+469: 		return distribution.Descriptor{}, xfer.DoNotRetry{Err: fmt.Errorf(""unsupported layer media type %s"", m)}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/push_v2.go,462,Errors unhandled.,LOW,HIGH,"461: 		defer func(closer io.Closer) {
+462: 			closer.Close()
+463: 			<-compressionDone
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/push.go,160,Errors unhandled.,LOW,HIGH,"159: 		} else {
+160: 			pipeWriter.Close()
+161: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/pull_v2.go,294,Errors unhandled.,LOW,HIGH,"293: 	if ld.tmpFile != nil {
+294: 		ld.tmpFile.Close()
+295: 		if err := os.RemoveAll(ld.tmpFile.Name()); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/pull_v2.go,283,Errors unhandled.,LOW,HIGH,"282: 	return ioutils.NewReadCloserWrapper(tmpFile, func() error {
+283: 		tmpFile.Close()
+284: 		err := os.RemoveAll(tmpFile.Name())
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/pull_v2.go,269,Errors unhandled.,LOW,HIGH,"268: 	if err != nil {
+269: 		tmpFile.Close()
+270: 		if err := os.Remove(tmpFile.Name()); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/distribution/pull_v2.go,173,Errors unhandled.,LOW,HIGH,"172: 
+173: 			ld.tmpFile.Close()
+174: 			if err := os.Remove(ld.tmpFile.Name()); err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/stats/collector_unix.go,39,Errors unhandled.,LOW,HIGH,"38: 		s.bufReader.Reset(nil)
+39: 		f.Close()
+40: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/runtime_unix.go,73,Errors unhandled.,LOW,HIGH,"72: 	// Remove old temp directory if any
+73: 	os.RemoveAll(runtimeDir + ""-old"")
+74: 	tmpDir, err := ioutils.TempDir(daemon.configStore.Root, ""gen-runtimes"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/rename.go,69,Errors unhandled.,LOW,HIGH,"68: 			container.NetworkSettings.IsAnonymousEndpoint = oldIsAnonymousEndpoint
+69: 			daemon.reserveName(container.ID, oldName)
+70: 			for k, v := range links {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/metrics.go,141,Errors unhandled.,LOW,HIGH,"140: 	if daemon.metricsPluginListener != nil {
+141: 		daemon.metricsPluginListener.Close()
+142: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/templates/templates.go,17,Errors unhandled.,LOW,HIGH,"16: 		enc.SetEscapeHTML(false)
+17: 		enc.Encode(v)
+18: 		// Remove the trailing new line added by the encoder
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/splunk/splunk.go,634,Errors unhandled.,LOW,HIGH,"633: 		pools.Copy(io.Discard, resp.Body)
+634: 		resp.Body.Close()
+635: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/splunk/splunk.go,534,Errors unhandled.,LOW,HIGH,"533: 		pools.Copy(io.Discard, resp.Body)
+534: 		resp.Body.Close()
+535: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,717,Errors unhandled.,LOW,HIGH,"716: 			if size < oldSize { // truncated
+717: 				f.Seek(0, 0)
+718: 				return nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,652,Errors unhandled.,LOW,HIGH,"651: 	handleMustClose := func(evictErr error) {
+652: 		f.Close()
+653: 		dec.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,628,Errors unhandled.,LOW,HIGH,"627: 	handleRotate := func() error {
+628: 		f.Close()
+629: 		fileWatcher.Remove(name)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,621,Errors unhandled.,LOW,HIGH,"620: 	defer func() {
+621: 		f.Close()
+622: 		dec.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,524,Errors unhandled.,LOW,HIGH,"523: 	if err != nil {
+524: 		rs.Close()
+525: 		rErr := os.Remove(rs.Name())
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,451,Errors unhandled.,LOW,HIGH,"450: 		for _, f := range files {
+451: 			f.Close()
+452: 			if strings.HasSuffix(f.Name(), tmpLogfileSuffix) {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,394,Errors unhandled.,LOW,HIGH,"393: 			for _, f := range files {
+394: 				f.Close()
+395: 				fileName := f.Name()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,304,Errors unhandled.,LOW,HIGH,"303: 	defer func() {
+304: 		outFile.Close()
+305: 		if retErr != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/logger/loggerutils/logfile.go,290,Errors unhandled.,LOW,HIGH,"289: 	defer func() {
+290: 		file.Close()
+291: 		if retErr == nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/kill.go,112,Errors unhandled.,LOW,HIGH,"111: 				if s.Err() != nil {
+112: 					daemon.handleContainerExit(container, nil)
+113: 				}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/images/image_import.go,136,Errors unhandled.,LOW,HIGH,"135: 	i.LogImageEvent(id.String(), id.String(), ""import"")
+136: 	outStream.Write(streamformatter.FormatStatus("""", id.String()))
+137: 	return nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/images/image_import.go,80,Errors unhandled.,LOW,HIGH,"79: 		}
+80: 		outStream.Write(streamformatter.FormatStatus("""", ""Downloading from %s"", u))
+81: 		progressOutput := streamformatter.NewJSONProgressOutput(outStream, true)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/images/image_import.go,67,Errors unhandled.,LOW,HIGH,"66: 	} else {
+67: 		inConfig.Close()
+68: 		if len(strings.Split(src, ""://"")) == 1 {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/images/image_commit.go,22,Errors unhandled.,LOW,HIGH,"21: 		if rwTar != nil {
+22: 			rwTar.Close()
+23: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/images/image_builder.go,72,Errors unhandled.,LOW,HIGH,"71: 	if err != nil {
+72: 		rwLayer.Release()
+73: 		return nil, err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/vfs/driver.go,53,Errors unhandled.,LOW,HIGH,"52: 
+53: 	setupDriverQuota(d)
+54: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/fsdiff.go,94,Errors unhandled.,LOW,HIGH,"93: 		err := archive.Close()
+94: 		driver.Put(id)
+95: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/fsdiff.go,69,Errors unhandled.,LOW,HIGH,"68: 			err := archive.Close()
+69: 			driver.Put(id)
+70: 			return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/graphdriver/fsdiff.go,58,Errors unhandled.,LOW,HIGH,"57: 		if err != nil {
+58: 			driver.Put(id)
+59: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/daemon.go,1299,Errors unhandled.,LOW,HIGH,"1298: 		if runtime.GOOS != ""windows"" {
+1299: 			daemon.Unmount(container)
+1300: 			return fmt.Errorf(""Error: driver %s is returning inconsistent paths for container %s ('%s' then '%s')"",
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/daemon.go,806,Errors unhandled.,LOW,HIGH,"805: 	} else {
+806: 		os.Setenv(""TMPDIR"", realTmp)
+807: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/daemon.go,804,Errors unhandled.,LOW,HIGH,"803: 		os.Setenv(""TEMP"", realTmp)
+804: 		os.Setenv(""TMP"", realTmp)
+805: 	} else {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/daemon.go,803,Errors unhandled.,LOW,HIGH,"802: 		}
+803: 		os.Setenv(""TEMP"", realTmp)
+804: 		os.Setenv(""TMP"", realTmp)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/container_operations.go,816,Errors unhandled.,LOW,HIGH,"815: 
+816: 		updateSandboxNetworkSettings(container, sb)
+817: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/container_operations.go,597,Errors unhandled.,LOW,HIGH,"596: 			}
+597: 			updateSandboxNetworkSettings(container, sb)
+598: 			defer func() {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/commit.go,142,Errors unhandled.,LOW,HIGH,"141: 	if c.Pause && !container.IsPaused() {
+142: 		daemon.containerPause(container)
+143: 		defer daemon.containerUnpause(container)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/cluster/utils.go,19,Errors unhandled.,LOW,HIGH,"18: 		if os.IsNotExist(err) {
+19: 			clearPersistentState(root)
+20: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/cluster/noderunner.go,262,Errors unhandled.,LOW,HIGH,"261: 			n.config.JoinInProgress = false
+262: 			savePersistentState(n.cluster.root, n.config)
+263: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/cluster/noderunner.go,171,Errors unhandled.,LOW,HIGH,"170: 	n.config = conf
+171: 	savePersistentState(n.cluster.root, conf)
+172: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/cluster/cluster.go,236,Errors unhandled.,LOW,HIGH,"235: 			actualLocalAddr, _, _ = net.SplitHostPort(localHostPort)
+236: 			conn.Close()
+237: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/checkpoint.go,75,Errors unhandled.,LOW,HIGH,"74: 	if err != nil {
+75: 		os.RemoveAll(checkpointDir)
+76: 		return fmt.Errorf(""Cannot checkpoint container %s: %s"", name, err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/attach.go,159,Errors unhandled.,LOW,HIGH,"158: 			defer logrus.Debug(""Closing buffered stdin pipe"")
+159: 			io.Copy(w, stdin)
+160: 		}(cfg.Stdin)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/archive.go,447,Errors unhandled.,LOW,HIGH,"446: 		container.DetachAndUnmount(daemon.LogVolumeEvent)
+447: 		daemon.Unmount(container)
+448: 		container.Unlock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/archive.go,410,Errors unhandled.,LOW,HIGH,"409: 			// unmount the container's rootfs
+410: 			daemon.Unmount(container)
+411: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/archive.go,256,Errors unhandled.,LOW,HIGH,"255: 		container.DetachAndUnmount(daemon.LogVolumeEvent)
+256: 		daemon.Unmount(container)
+257: 		container.Unlock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/daemon/archive.go,202,Errors unhandled.,LOW,HIGH,"201: 			// unmount the container's rootfs
+202: 			daemon.Unmount(container)
+203: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/contrib/docker-device-tool/device_tool.go,68,Errors unhandled.,LOW,HIGH,"67: 	if *flDebug {
+68: 		os.Setenv(""DEBUG"", ""1"")
+69: 		logrus.SetLevel(logrus.DebugLevel)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/streams.go,126,Errors unhandled.,LOW,HIGH,"125: 			}
+126: 			r.Close()
+127: 			c.wg.Done()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,150,Errors unhandled.,LOW,HIGH,"149: 			if cfg.CStderr != nil {
+150: 				cfg.CStderr.Close()
+151: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,147,Errors unhandled.,LOW,HIGH,"146: 			if cfg.CStdout != nil {
+147: 				cfg.CStdout.Close()
+148: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,144,Errors unhandled.,LOW,HIGH,"143: 			if cfg.CStdin != nil {
+144: 				cfg.CStdin.Close()
+145: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,108,Errors unhandled.,LOW,HIGH,"107: 			}
+108: 			streamPipe.Close()
+109: 		}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,106,Errors unhandled.,LOW,HIGH,"105: 			if cfg.Stdin != nil {
+106: 				cfg.Stdin.Close()
+107: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,78,Errors unhandled.,LOW,HIGH,"77: 					if cfg.CStderr != nil {
+78: 						cfg.CStderr.Close()
+79: 					}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,75,Errors unhandled.,LOW,HIGH,"74: 					if cfg.CStdout != nil {
+75: 						cfg.CStdout.Close()
+76: 					}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/container/stream/attach.go,71,Errors unhandled.,LOW,HIGH,"70: 				if cfg.CloseStdin && !cfg.TTY {
+71: 					cfg.CStdin.Close()
+72: 				} else {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/dockerd/trap/testfiles/main.go,39,Errors unhandled.,LOW,HIGH,"38: 		case ""QUIT"":
+39: 			p.Signal(sigmap[s])
+40: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/dockerd/trap/testfiles/main.go,36,Errors unhandled.,LOW,HIGH,"35: 			} else {
+36: 				p.Signal(sigmap[s])
+37: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/dockerd/trap/testfiles/main.go,33,Errors unhandled.,LOW,HIGH,"32: 				for {
+33: 					p.Signal(sigmap[s])
+34: 				}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/udp_proxy.go,155,Errors unhandled.,LOW,HIGH,"154: 	for _, conn := range proxy.connTrackTable {
+155: 		conn.Close()
+156: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/udp_proxy.go,151,Errors unhandled.,LOW,HIGH,"150: func (proxy *UDPProxy) Close() {
+151: 	proxy.listener.Close()
+152: 	proxy.connTrackLock.Lock()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/udp_proxy.go,85,Errors unhandled.,LOW,HIGH,"84: 	for {
+85: 		proxyConn.SetReadDeadline(time.Now().Add(UDPConnTrackTimeout))
+86: 	again:
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/udp_proxy.go,80,Errors unhandled.,LOW,HIGH,"79: 		proxy.connTrackLock.Unlock()
+80: 		proxyConn.Close()
+81: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,88,Errors unhandled.,LOW,HIGH,"87: // Close stops forwarding the traffic.
+88: func (proxy *TCPProxy) Close() { proxy.listener.Close() }
+89: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,69,Errors unhandled.,LOW,HIGH,"68: 	client.Close()
+69: 	backend.Close()
+70: 	<-finish
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,68,Errors unhandled.,LOW,HIGH,"67: 	}
+68: 	client.Close()
+69: 	backend.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,50,Errors unhandled.,LOW,HIGH,"49: 		from.CloseRead()
+50: 		to.CloseWrite()
+51: 		wg.Done()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,49,Errors unhandled.,LOW,HIGH,"48: 		io.Copy(to, from)
+49: 		from.CloseRead()
+50: 		to.CloseWrite()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,48,Errors unhandled.,LOW,HIGH,"47: 	var broker = func(to, from *net.TCPConn) {
+48: 		io.Copy(to, from)
+49: 		from.CloseRead()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/tcp_proxy.go,42,Errors unhandled.,LOW,HIGH,"41: 		log.Printf(""Can't forward traffic to backend tcp/%v: %s\n"", proxy.backendAddr, err)
+42: 		client.Close()
+43: 		return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/sctp_proxy.go,54,Errors unhandled.,LOW,HIGH,"53: 		from.Close()
+54: 		to.Close()
+55: 		wg.Done()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/sctp_proxy.go,53,Errors unhandled.,LOW,HIGH,"52: 		io.Copy(to, from)
+53: 		from.Close()
+54: 		to.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/sctp_proxy.go,52,Errors unhandled.,LOW,HIGH,"51: 	var broker = func(to, from net.Conn) {
+52: 		io.Copy(to, from)
+53: 		from.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/main.go,27,Errors unhandled.,LOW,HIGH,"26: 	fmt.Fprint(f, ""0\n"")
+27: 	f.Close()
+28: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cmd/docker-proxy/main.go,22,Errors unhandled.,LOW,HIGH,"21: 		fmt.Fprintf(f, ""1\n%s"", err)
+22: 		f.Close()
+23: 		os.Exit(1)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/request.go,269,Errors unhandled.,LOW,HIGH,"268: 		io.CopyN(io.Discard, response.body, 512)
+269: 		response.body.Close()
+270: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/request.go,268,Errors unhandled.,LOW,HIGH,"267: 		// Drain up to 512 bytes and close the body to let the Transport reuse the connection
+268: 		io.CopyN(io.Discard, response.body, 512)
+269: 		response.body.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/request.go,179,Errors unhandled.,LOW,HIGH,"178: 			} else {
+179: 				f.Close()
+180: 				err = errors.Wrap(err, ""This error may indicate that the docker daemon is not running."")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/plugin_install.go,59,Errors unhandled.,LOW,HIGH,"58: 		if options.Disabled {
+59: 			pw.Close()
+60: 			return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/hijack.go,97,Errors unhandled.,LOW,HIGH,"96: 		if resp.StatusCode != http.StatusSwitchingProtocols {
+97: 			resp.Body.Close()
+98: 			return nil, fmt.Errorf(""unable to upgrade to %s, received %d"", proto, resp.StatusCode)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/hijack.go,82,Errors unhandled.,LOW,HIGH,"81: 		tcpConn.SetKeepAlive(true)
+82: 		tcpConn.SetKeepAlivePeriod(30 * time.Second)
+83: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/client/hijack.go,81,Errors unhandled.,LOW,HIGH,"80: 	if tcpConn, ok := conn.(*net.TCPConn); ok {
+81: 		tcpConn.SetKeepAlive(true)
+82: 		tcpConn.SetKeepAlivePeriod(30 * time.Second)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cli/debug/debug.go,19,Errors unhandled.,LOW,HIGH,"18: func Disable() {
+19: 	os.Setenv(""DEBUG"", """")
+20: 	logrus.SetLevel(logrus.InfoLevel)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/cli/debug/debug.go,12,Errors unhandled.,LOW,HIGH,"11: func Enable() {
+12: 	os.Setenv(""DEBUG"", ""1"")
+13: 	logrus.SetLevel(logrus.DebugLevel)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/remotecontext/remote.go,61,Errors unhandled.,LOW,HIGH,"60: 	body, err := io.ReadAll(resp.Body)
+61: 	resp.Body.Close()
+62: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/remotecontext/remote.go,37,Errors unhandled.,LOW,HIGH,"36: 	if err != nil {
+37: 		response.Body.Close()
+38: 		return """", nil, errors.Wrapf(err, ""error detecting content type for remote %s"", remoteURL)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/remotecontext/archive.go,62,Errors unhandled.,LOW,HIGH,"61: 		if err != nil {
+62: 			tsc.Close()
+63: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/copy.go,440,Errors unhandled.,LOW,HIGH,"439: 
+440: 	tmpFile.Close()
+441: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/copy.go,421,Errors unhandled.,LOW,HIGH,"420: 	if _, err = io.Copy(tmpFile, progressReader); err != nil {
+421: 		tmpFile.Close()
+422: 		return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/copy.go,401,Errors unhandled.,LOW,HIGH,"400: 		if err != nil {
+401: 			os.RemoveAll(tmpDir)
+402: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/copy.go,175,Errors unhandled.,LOW,HIGH,"174: 	for _, path := range o.tmpPaths {
+175: 		os.RemoveAll(path)
+176: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/dockerfile/containerbackend.go,65,Errors unhandled.,LOW,HIGH,"64: 			c.backend.ContainerKill(cID, 0)
+65: 			c.removeContainer(cID, stdout)
+66: 			cancelErrCh <- errCancelled
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/builder-next/reqbodyhandler.go,38,Errors unhandled.,LOW,HIGH,"37: 		h.mu.Unlock()
+38: 		rc.Close()
+39: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/builder-next/adapters/snapshot/leasemanager.go,102,Errors unhandled.,LOW,HIGH,"101: 	if load {
+102: 		l.s.getLayer(sID, true)
+103: 		if _, ok := l.s.chainID(sID); ok {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/builder/builder-next/adapters/containerimage/pull.go,265,Errors unhandled.,LOW,HIGH,"264: 		defer func() {
+265: 			resolveProgressDone(err)
+266: 		}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/types/client.go,123,Errors unhandled.,LOW,HIGH,"122: func (h *HijackedResponse) Close() {
+123: 	h.Conn.Close()
+124: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/router/system/system_routes.go,269,Errors unhandled.,LOW,HIGH,"268: 	err := json.NewDecoder(r.Body).Decode(&config)
+269: 	r.Body.Close()
+270: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/router/grpc/grpc_routes.go,39,Errors unhandled.,LOW,HIGH,"38: 	conn.Write([]byte{})
+39: 	resp.Write(conn)
+40: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/router/grpc/grpc_routes.go,38,Errors unhandled.,LOW,HIGH,"37: 	// set raw mode
+38: 	conn.Write([]byte{})
+39: 	resp.Write(conn)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/router/container/exec.go,136,Errors unhandled.,LOW,HIGH,"135: 		}
+136: 		stdout.Write([]byte(err.Error() + ""\r\n""))
+137: 		logrus.Errorf(""Error running exec %s in container: %v"", execName, err)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/engine/api/server/router/container/container_routes.go,598,Errors unhandled.,LOW,HIGH,"597: 		// set raw mode
+598: 		conn.Write([]byte{})
+599: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/templates/templates.go,17,Errors unhandled.,LOW,HIGH,"16: 		enc.SetEscapeHTML(false)
+17: 		enc.Encode(v)
+18: 		// Remove the trailing new line added by the encoder
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/opts/ip.go,20,Errors unhandled.,LOW,HIGH,"19: 	}
+20: 	o.Set(defaultVal)
+21: 	return o
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/man/generate.go,69,Errors unhandled.,LOW,HIGH,"68: 		if cmd.HasSubCommands() {
+69: 			loadLongDescription(cmd, filepath.Join(path, cmd.Name()))
+70: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/e2e/plugin/basic/basic.go,33,Errors unhandled.,LOW,HIGH,"32: 	})
+33: 	server.Serve(l)
+34: }
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/debug/debug.go,19,Errors unhandled.,LOW,HIGH,"18: func Disable() {
+19: 	os.Setenv(""DEBUG"", """")
+20: 	logrus.SetLevel(logrus.InfoLevel)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/debug/debug.go,12,Errors unhandled.,LOW,HIGH,"11: func Enable() {
+12: 	os.Setenv(""DEBUG"", ""1"")
+13: 	logrus.SetLevel(logrus.DebugLevel)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/context/store/store.go,136,Errors unhandled.,LOW,HIGH,"135: 	res, err := s.meta.get(contextdirOf(name))
+136: 	patchErrContextName(err, name)
+137: 	return res, err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/config/configfile/file.go,203,Errors unhandled.,LOW,HIGH,"202: 	defer func() {
+203: 		temp.Close()
+204: 		if retErr != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/utils.go,39,Errors unhandled.,LOW,HIGH,"38: 	if err = os.Rename(tmpPath, outfile); err != nil {
+39: 		os.Remove(tmpPath)
+40: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/utils.go,34,Errors unhandled.,LOW,HIGH,"33: 	if err != nil {
+34: 		os.Remove(tmpPath)
+35: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/system/version.go,227,Errors unhandled.,LOW,HIGH,"226: 	t.Write([]byte(""\n""))
+227: 	t.Flush()
+228: 	return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/system/version.go,226,Errors unhandled.,LOW,HIGH,"225: 	err := tmpl.Execute(t, vd)
+226: 	t.Write([]byte(""\n""))
+227: 	t.Flush()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/system/prune.go,146,Errors unhandled.,LOW,HIGH,"145: 	var buffer bytes.Buffer
+146: 	t.Execute(&buffer, map[string][]string{""warnings"": warnings, ""filters"": filters})
+147: 	return buffer.String()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/plugin/create.go,37,Errors unhandled.,LOW,HIGH,"36: 	err = json.NewDecoder(dt).Decode(&m)
+37: 	dt.Close()
+38: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,442,Errors unhandled.,LOW,HIGH,"441: 		compressWriter.Close()
+442: 		pipeWriter.Close()
+443: 	}()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,376,Errors unhandled.,LOW,HIGH,"375: 	file, err := ioutil.ReadAll(dockerfileCtx)
+376: 	dockerfileCtx.Close()
+377: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,244,Errors unhandled.,LOW,HIGH,"243: 	body, err := ioutil.ReadAll(resp.Body)
+244: 	resp.Body.Close()
+245: 	if err != nil {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,172,Errors unhandled.,LOW,HIGH,"171: 		err := tar.Close()
+172: 		os.RemoveAll(dockerfileDir)
+173: 		return err
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,126,Errors unhandled.,LOW,HIGH,"125: 		if err != nil {
+126: 			os.RemoveAll(dockerfileDir)
+127: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build/context.go,84,Errors unhandled.,LOW,HIGH,"83: 			}
+84: 			currentFile.Close()
+85: 		}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build.go,543,Errors unhandled.,LOW,HIGH,"542: 				tarWriter.Close()
+543: 				pipeWriter.Close()
+544: 				return
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/image/build.go,542,Errors unhandled.,LOW,HIGH,"541: 				// Signals end of archive.
+542: 				tarWriter.Close()
+543: 				pipeWriter.Close()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,82,Errors unhandled.,LOW,HIGH,"81: 	} else {
+82: 		c.buffer.WriteTo(c.Output)
+83: 	}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,80,Errors unhandled.,LOW,HIGH,"79: 		c.buffer.WriteTo(t)
+80: 		t.Flush()
+81: 	} else {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,79,Errors unhandled.,LOW,HIGH,"78: 		t.Write([]byte(""\n""))
+79: 		c.buffer.WriteTo(t)
+80: 		t.Flush()
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,78,Errors unhandled.,LOW,HIGH,"77: 		buffer.WriteTo(t)
+78: 		t.Write([]byte(""\n""))
+79: 		c.buffer.WriteTo(t)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,77,Errors unhandled.,LOW,HIGH,"76: 		tmpl.Funcs(templates.HeaderFunctions).Execute(buffer, subContext.FullHeader())
+77: 		buffer.WriteTo(t)
+78: 		t.Write([]byte(""\n""))
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/formatter.go,76,Errors unhandled.,LOW,HIGH,"75: 		buffer := bytes.NewBufferString("""")
+76: 		tmpl.Funcs(templates.HeaderFunctions).Execute(buffer, subContext.FullHeader())
+77: 		buffer.WriteTo(t)
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/disk_usage.go,236,Errors unhandled.,LOW,HIGH,"235: 	}
+236: 	ctx.Output.Write([]byte(""\nLocal Volumes space usage:\n\n""))
+237: 	for _, v := range duc.Volumes {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/disk_usage.go,224,Errors unhandled.,LOW,HIGH,"223: 	}
+224: 	ctx.Output.Write([]byte(""\nContainers space usage:\n\n""))
+225: 	for _, c := range duc.Containers {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/formatter/disk_usage.go,212,Errors unhandled.,LOW,HIGH,"211: 	}
+212: 	ctx.Output.Write([]byte(""Images space usage:\n\n""))
+213: 	for _, img := range duc.Images {
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/update.go,41,Errors unhandled.,LOW,HIGH,"40: 	}
+41: 	tw.Flush()
+42: 	buf.WriteString(""\nExample:\n\n$ docker context update my-context --description \""some description\"" --docker \""host=tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file\""\n"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/update.go,34,Errors unhandled.,LOW,HIGH,"33: 	}
+34: 	tw.Flush()
+35: 	buf.WriteString(""\nKubernetes endpoint config:\n\n"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/create.go,42,Errors unhandled.,LOW,HIGH,"41: 	}
+42: 	tw.Flush()
+43: 	buf.WriteString(""\nExample:\n\n$ docker context create my-context --description \""some description\"" --docker \""host=tcp://myserver:2376,ca=~/ca-file,cert=~/cert-file,key=~/key-file\""\n"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/context/create.go,35,Errors unhandled.,LOW,HIGH,"34: 	}
+35: 	tw.Flush()
+36: 	buf.WriteString(""\nKubernetes endpoint config:\n\n"")
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/tty.go,92,Errors unhandled.,LOW,HIGH,"91: 			for range sigchan {
+92: 				resizeTty(ctx, cli, id, isExec)
+93: 			}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/tty.go,81,Errors unhandled.,LOW,HIGH,"80: 				if prevW != w || prevH != h {
+81: 					resizeTty(ctx, cli, id, isExec)
+82: 				}
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/top.go,55,Errors unhandled.,LOW,HIGH,"54: 	}
+55: 	w.Flush()
+56: 	return nil
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/hijack.go,90,Errors unhandled.,LOW,HIGH,"89: 		restoreOnce.Do(func() {
+90: 			restoreTerminal(h.streams, h.inputStream)
+91: 		})
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/create.go,152,Errors unhandled.,LOW,HIGH,"151: 	}
+152: 	cid.file.Close()
+153: 
+",CWE-703
+/Users/bhumita/gosec-demo/docker-ce/components/cli/cli/command/container/attach.go,167,Errors unhandled.,LOW,HIGH,"166: 	// require the user to manually resize or hit enter.
+167: 	resizeTtyTo(ctx, dockerCli.Client(), containerID, height+1, width+1, false)
+168: 
+",CWE-703

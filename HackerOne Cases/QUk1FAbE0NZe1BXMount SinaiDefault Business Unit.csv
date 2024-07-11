@@ -1,0 +1,44 @@
+Finding ID,Description,Severity,Status,Accept Risk : Resurface Date,Summary," Finding Score  ",CVE,Scan ID,Base score,Exploitability score,Impact score,CWE,Finding Age,Found On,Due Date,Domain,Domain  Status,Subdomain,Subdomain  Version,Environment,Team,Owner,Security Owner,Engagements,Ticket ID,Ticket Status,Source,Scan Type,Vendor,Tool Finding ID,Tool  Severity,Tool Finding  Category,armorcodeCategory,Tags,Component Name,Component Affected Version,Component Fix Version,Fixability,Exploit Maturity,Repository,File Name,Developer,URL/Endpoint,Image Name,Twistlock Origin Type,Twistlock Source,"AMC Rule    ",Compliance,Last Changed,Last Mitigated Date,XRay Path,XRay Impacted Artifact
+109292529,"**Title :PII disclosure via unauthenticated access in https://apps.mountsinai.org**
+**Submitted**: 08/23/2022 08:50:38
+
+**By** : [Cosmin](https://hackerone.com/inhibitor181?type=user)
+**Triaged**: 02/08/2023 23:01:17
+
+**CVSS** : 8.6
+## Report: 
+## Summary:
+I have noticed that after someones registers for a course from https://apps.mountsinai.org/app/mchregister/mshCourseSchedule/listedCourses they are redirected to a page at https://apps.mountsinai.org/app/mchregister/courseRegistration/enrollmentPayment/[ID] where the given PII is reflected back in the response. Because this endpoint does not impose any sort of ownership validation, everyone can access that data :
+- names
+- email
+- address
+- phone
+- other details
+
+You can also cancel the registration, hence the integrity impact.
+
+A lot of PII is disclosed, hence I think that this issue is a critical one
+
+## Steps To Reproduce:
+1. Go to https://apps.mountsinai.org/app/mchregister/mshCourseSchedule/listedCourses and register for a course
+2. You should be redirected to a page like https://apps.mountsinai.org/app/mchregister/courseRegistration/enrollmentPayment/[ID] 
+3. In another browser access the same link from step 2 and you should see the patient's PII
+
+Feel free to use my registration at https://apps.mountsinai.org/app/mchregister/courseRegistration/enrollmentPayment/362169
+
+## Supporting Material/References:
+Screenshot attached
+
+## Impact
+
+PII disclosure + registration cancelling for courses :
+- names
+- email
+- address
+- phone
+- other details
+
+**Weakness** : [Insecure Direct Object Reference (IDOR)](https://cwe.mitre.org/data/definitions/639.html)
+The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value identifying the data.
+**H1 Triaged** : true
+",High,Confirm,N/A,PII disclosure via unauthenticated access in https://apps.mountsinai.org,1.7,[],3803519,N/A,N/A,N/A,[639],241 Days,Tue Aug 23 08:50:38 UTC 2022,Thu Sep 22 08:50:38 UTC 2022,HackerOne,Active,BugBounty,N/A,Production,Appsec,N/A,N/A,N/A,,,HackerOne,Bug Bounty,N/A,1677570,High,Vulnerability,Vulnerability,bbp,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Not Found,N/A,N/A,N/A,N/A,[1.639],,Mon Mar 20 18:29:27 UTC 2023,N/A,N/A,N/A

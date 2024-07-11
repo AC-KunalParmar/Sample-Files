@@ -1,0 +1,378 @@
+{
+  "version": "1.2.0",
+  "plugins_used": [
+    {
+      "name": "ArtifactoryDetector"
+    },
+    {
+      "name": "AWSKeyDetector"
+    },
+    {
+      "name": "AzureStorageKeyDetector"
+    },
+    {
+      "name": "Base64HighEntropyString",
+      "limit": 4.5
+    },
+    {
+      "name": "BasicAuthDetector"
+    },
+    {
+      "name": "CloudantDetector"
+    },
+    {
+      "name": "GitHubTokenDetector"
+    },
+    {
+      "name": "HexHighEntropyString",
+      "limit": 3.0
+    },
+    {
+      "name": "IbmCloudIamDetector"
+    },
+    {
+      "name": "IbmCosHmacDetector"
+    },
+    {
+      "name": "JwtTokenDetector"
+    },
+    {
+      "name": "KeywordDetector",
+      "keyword_exclude": ""
+    },
+    {
+      "name": "MailchimpDetector"
+    },
+    {
+      "name": "NpmDetector"
+    },
+    {
+      "name": "PrivateKeyDetector"
+    },
+    {
+      "name": "SendGridDetector"
+    },
+    {
+      "name": "SlackDetector"
+    },
+    {
+      "name": "SoftlayerDetector"
+    },
+    {
+      "name": "SquareOAuthDetector"
+    },
+    {
+      "name": "StripeDetector"
+    },
+    {
+      "name": "TwilioKeyDetector"
+    }
+  ],
+  "filters_used": [
+    {
+      "path": "detect_secrets.filters.allowlist.is_line_allowlisted"
+    },
+    {
+      "path": "detect_secrets.filters.common.is_ignored_due_to_verification_policies",
+      "min_level": 2
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_indirect_reference"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_likely_id_string"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_lock_file"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_not_alphanumeric_string"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_potential_uuid"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_prefixed_with_dollar_sign"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_sequential_string"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_swagger_file"
+    },
+    {
+      "path": "detect_secrets.filters.heuristic.is_templated_secret"
+    }
+  ],
+  "results": {
+    "brokencrystals/.env": [
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/.env",
+        "hashed_secret": "997a601af0dd96a3000b0523a0adf947d34a3d15",
+        "is_verified": false,
+        "line_number": 9
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/.env",
+        "hashed_secret": "856f205f666161148c305ccdb2a97a169e9cbd75",
+        "is_verified": false,
+        "line_number": 10
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/.env",
+        "hashed_secret": "7e7ab4105accd7b1721c206bd770f4a92217bde3",
+        "is_verified": false,
+        "line_number": 13
+      }
+    ],
+    "brokencrystals/config/keys/bc_private.key": [
+      {
+        "type": "Private Key",
+        "filename": "brokencrystals/config/keys/bc_private.key",
+        "hashed_secret": "1348b145fa1a555461c1b790a2f66614781091e9",
+        "is_verified": false,
+        "line_number": 1
+      }
+    ],
+    "brokencrystals/config/keys/jku.json": [
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "883bdcad6e98de8528dbc6a41e0141da5014bd01",
+        "is_verified": false,
+        "line_number": 2
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "7591bf676f7d78a6fbcc3ef06e82c9500d14e823",
+        "is_verified": false,
+        "line_number": 4
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "68b7899c75e8cdc08dd18958136ef3e030ee0dee",
+        "is_verified": false,
+        "line_number": 5
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "afd2ebc94ef544fc73a550c71f7d5f0818418119",
+        "is_verified": false,
+        "line_number": 9
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "5009d34fd8bc4755def2745148f15108fc0f109e",
+        "is_verified": false,
+        "line_number": 10
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "0f075253abddcf1f372b0f1ec388e0a8b56ea3ac",
+        "is_verified": false,
+        "line_number": 12
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jku.json",
+        "hashed_secret": "b20e12e6bb2eb567a9ec3662f19a02e240895217",
+        "is_verified": false,
+        "line_number": 13
+      }
+    ],
+    "brokencrystals/config/keys/jwk.json": [
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "883bdcad6e98de8528dbc6a41e0141da5014bd01",
+        "is_verified": false,
+        "line_number": 4
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "7591bf676f7d78a6fbcc3ef06e82c9500d14e823",
+        "is_verified": false,
+        "line_number": 6
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "68b7899c75e8cdc08dd18958136ef3e030ee0dee",
+        "is_verified": false,
+        "line_number": 7
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "afd2ebc94ef544fc73a550c71f7d5f0818418119",
+        "is_verified": false,
+        "line_number": 11
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "5009d34fd8bc4755def2745148f15108fc0f109e",
+        "is_verified": false,
+        "line_number": 12
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "0f075253abddcf1f372b0f1ec388e0a8b56ea3ac",
+        "is_verified": false,
+        "line_number": 14
+      },
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.json",
+        "hashed_secret": "b20e12e6bb2eb567a9ec3662f19a02e240895217",
+        "is_verified": false,
+        "line_number": 15
+      }
+    ],
+    "brokencrystals/config/keys/jwk.key.pem": [
+      {
+        "type": "Private Key",
+        "filename": "brokencrystals/config/keys/jwk.key.pem",
+        "hashed_secret": "1348b145fa1a555461c1b790a2f66614781091e9",
+        "is_verified": false,
+        "line_number": 1
+      }
+    ],
+    "brokencrystals/config/keys/jwk.pub.json": [
+      {
+        "type": "Base64 High Entropy String",
+        "filename": "brokencrystals/config/keys/jwk.pub.json",
+        "hashed_secret": "b20e12e6bb2eb567a9ec3662f19a02e240895217",
+        "is_verified": false,
+        "line_number": 7
+      }
+    ],
+    "brokencrystals/config/keys/jwtRS256.key": [
+      {
+        "type": "Private Key",
+        "filename": "brokencrystals/config/keys/jwtRS256.key",
+        "hashed_secret": "be4fc4886bd949b369d5e092eb87494f12e57e5b",
+        "is_verified": false,
+        "line_number": 1
+      }
+    ],
+    "brokencrystals/docker-compose.yml": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/docker-compose.yml",
+        "hashed_secret": "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",
+        "is_verified": false,
+        "line_number": 75
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/docker-compose.yml",
+        "hashed_secret": "d14697e20cc4b4b1123038a21b563b5d36a13607",
+        "is_verified": false,
+        "line_number": 107
+      }
+    ],
+    "brokencrystals/keycloak/imports/realm-export.json": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/keycloak/imports/realm-export.json",
+        "hashed_secret": "d1081e351fbebe0deb0c2867d5f731c8f9cc3fd8",
+        "is_verified": false,
+        "line_number": 432
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/keycloak/imports/realm-export.json",
+        "hashed_secret": "1777570b6c10b8613bbd5f8bfa87d9e914ae0e16",
+        "is_verified": false,
+        "line_number": 437
+      }
+    ],
+    "brokencrystals/src/auth/auth.controller.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/auth/auth.controller.ts",
+        "hashed_secret": "7dcc58788d35c9ae783613cf43451b133b7f8e7c",
+        "is_verified": false,
+        "line_number": 273
+      }
+    ],
+    "brokencrystals/src/auth/auth.module.config.properties.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/auth/auth.module.config.properties.ts",
+        "hashed_secret": "c78b3166ca812e5e28276df5ed4101a60e98e7e3",
+        "is_verified": false,
+        "line_number": 2
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/auth/auth.module.config.properties.ts",
+        "hashed_secret": "86c89694a660ef3c39164f6d7054a07a962892c5",
+        "is_verified": false,
+        "line_number": 4
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/auth/auth.module.config.properties.ts",
+        "hashed_secret": "56fd73c03ac9c6a3bc2711eb1ffe74453889d2a1",
+        "is_verified": false,
+        "line_number": 6
+      }
+    ],
+    "brokencrystals/src/file/cloud.providers.metadata.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/file/cloud.providers.metadata.ts",
+        "hashed_secret": "5ffe533b830f08a0326348a9160afafc8ada44db",
+        "is_verified": false,
+        "line_number": 105
+      }
+    ],
+    "brokencrystals/src/keycloak/keycloak.config.properties.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/keycloak/keycloak.config.properties.ts",
+        "hashed_secret": "e90e7faa9176a2452342eb351630583ed0ca33a6",
+        "is_verified": false,
+        "line_number": 5
+      },
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/keycloak/keycloak.config.properties.ts",
+        "hashed_secret": "79ad404bd3f6f7e58770dc011359f138f194b21d",
+        "is_verified": false,
+        "line_number": 7
+      }
+    ],
+    "brokencrystals/src/orm/orm.module.config.properties.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/orm/orm.module.config.properties.ts",
+        "hashed_secret": "cca3442570b5c68c5dbbc01eab6330533519a331",
+        "is_verified": false,
+        "line_number": 5
+      }
+    ],
+    "brokencrystals/src/test/auth.spec.ts": [
+      {
+        "type": "Secret Keyword",
+        "filename": "brokencrystals/src/test/auth.spec.ts",
+        "hashed_secret": "d033e22ae348aeb5660fc2140aec35850c4da997",
+        "is_verified": false,
+        "line_number": 10
+      }
+    ]
+  },
+  "generated_at": "2022-07-11T17:58:42Z"
+}

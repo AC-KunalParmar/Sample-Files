@@ -1,0 +1,1669 @@
+Scan Source,IP,DNS,NetBIOS,OS Group,OS Group Details,OS,QID,Title,Priority,Severity,Port,Protocol,First Detected,Last Detected,CVE ID,Threat,Impact,Solution,Results,Age,Age Bucket,SLA Status,Public Exploit Available,OS/Non-OS,Patch/Config,New?,Tags
+On Prem - Internal,10.80.110.18,dmi13cel06a.core.pimcocloud.net,,Undefined,Undefined_Linux,EulerOS / Ubuntu / Fedora / Tiny Core Linux / Linux 3.x / IBM / FortiSOAR,38172,SSL Certificate - Improper Usage Vulnerability,Medium,2,443,tcp,44253,44688,,"An SSL Certificate associates an entity (person, organization, host, etc.) with a Public Key. In an SSL connection, the client authenticates the remote server using the server's Certificate and extracts the Public Key in the Certificate to establish the secure connection.
+ 
+The basicConstraints section of the certificate may specify if it is a Certificate Authority (CA) certificate. Also, the keyUsage field in the X509v3 extensions section of the certificate, if present, may restrict the usage of the certificate.
+ 
+In general, a server public key should not be used for Certificate or CRL signing, a client or CA certificate should be not used as a server certificate.","If the keyUsage or the basicConstraint field is designated as a critical parameter in the certificate, the client may abort the communication if the usage validation fails.",Please install a server certificate with correct usage.,"Certificate #0 C=US,ST=California,L=Redwood_City,O=Oracle_Corporation,OU=Oracle_Exadata,CN=dmi13cel06a.core.pimcocloud.net is not suitable for CRL signing.#",437,6. 1-2 Years,Outside SLA,No,Non-OS,Config,No,A
+On Prem - Internal,144.77.86.34,prodpmcf226.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,376187,Apache Log4j 1.2 Remote Code Execution Vulnerability,Critical,4,,,44688,44688,CVE-2021-4104,"Apache Log4j is a Java-based logging utility. It is part of the Apache Logging Services, a project of the Apache Software Foundation. 
+The JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration. 
+ The attacker can provide TopicBindingName and TopicConnectionFactoryBindingName configurations causing JMSAppender to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-44228. 
+
+ Affected versions: 
+Log4j version 1.2  
+
+ QID Detection: (Authenticated) - Linux 
+This detection is based on querying the OS package managers on the target. If the target has a log4j package with a version in 1.2, the target is flagged as potentially vulnerable. 
+
+QID Detection: (Authenticated) - Windows 
+On Windows system, the QID identifies vulnerable instance of log4j via WMI to check log4j included in the running processes via command-line.",Successful exploitation of this vulnerability could lead to  remote code execution (RCE) on the target.,"Customers are advised to upgrade their Log4j to the version in 2.16. If updating the version is not possible, please refer to the mitigations mentioned here Log4j (https://logging.apache.org/log4j/2.x/security.html). Workaround: Audit your logging configuration to ensure it has no JMSAppender configured. Log4j 1.2 configurations without JMSAppender are not impacted by this vulnerability. 
+Log4j 1.x does not have Lookups, so the risk is lower. Applications using Log4j 1.x are only vulnerable to this attack when they use JNDI in their configuration. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Log4j 1.2 (https://logging.apache.org/log4j/2.x/security.html#)","PATH	VERSION	JMS_CLASS_STATUS	BASE_DIR
+/base/symphony/sym7211/wlp/usr/shared/resources/rest/3.7/log4j-1.2.16.jar	1.2.16	JMSAppender CLASS FOUND	/base/symphony/sym7211
+/base/symphony/sym7211/gui/3.7/lib/log4j-1.2.16.jar	1.2.16	JMSAppender CLASS FOUND	/base/symphony/sym7211
+/base/symphony/sym7211/3.7/hostfactory/providers/common/lib/log4j-1.2.16.jar	1.2.16	JMSAppender CLASS FOUND	/base/symphony/sym7211
+/base/symphony/old_sym721/3.7/hostfactory/providers/common/lib/log4j-1.2.16.jar	1.2.16	JMSAppender CLASS FOUND	/base/symphony/old_sym721
+/base/symphony/sym7211/perf/3.7/lib/log4j-1.2.16.jar	1.2.16	JMSAppender CLASS FOUND	/base/symphony/sym7211#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,B
+On Prem - Internal,10.140.114.138,,,Undefined,Undefined_Linux,Ubuntu / Tiny Core Linux / Linux 2.6.x,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Medium,1,443,tcp,44226,44688,,"The scan target supports version 1.1 of the TLS protocol. That version is in the process of being deprecated and is no longer recommended. Instead the newer versions 1.2 and/or 1.3 should be used. The TLSv1.1 protocol itself does not have any currently exploitable vulnerabilities. However some vendor implementations of TLSv1.1 have weaknesses which may be exploitable. 
+This QID is posted as potential, when servers require client certificates and we cannot complete the handshake. 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","Supporting TLSv1.1 by itself does not necessarily have any harmful consequences, but it is no longer considered best practice because of bad past experience with some vendor implementations of TLSv1.1.","Disable the use of TLSv1.1 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1_1
+
+If the test is successful, then the target support TLSv1.1",TLSv1.1 is supported#,464,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,C
+On Prem - Internal,10.155.62.140,clv335pl-5fad99.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,372508,Oracle Java SE Critical Patch Update - April 2020,Critical,4,,,44688,44688,"CVE-2020-2803, CVE-2020-2805, CVE-2019-18197, CVE-2020-2816, CVE-2020-2781, CVE-2020-2830, CVE-2020-2767, CVE-2020-2800, CVE-2020-2778, CVE-2020-2764, CVE-2020-2754, CVE-2020-2755, CVE-2020-2773, CVE-2020-2756, CVE-2020-2757","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE:  versions 7u251, 8u241, 11.0.6, 14; Java SE Embedded: 8u241 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA) 
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,D
+On Prem - Internal,10.155.54.176,clv235bl-d2978f.core.pimcocloud.net,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.9,371528,Oracle Java SE Critical Patch Update - January 2019,Critical,4,,,44415,44688,"CVE-2018-11212, CVE-2019-2426, CVE-2019-2449, CVE-2019-2422","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for January 2019 contains 5 new security fixes for Oracle Java SE. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions prior to 7u211, 8u201 and 11.0.2.
+ 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 11.0.2, Java 8 Update 201 or later, Java SE JDK and JRE 7 Update 211) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU January 2019 (https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html#AppendixJAVA) and Oracle Doc ID 2485170.1 (https://support.oracle.com/rs?type=doc&id=2485170.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2485170.1 (https://support.oracle.com/rs?type=doc&id=2485170.1)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/base/vendor/CA/AUTOSYS/jre/bin/java	1.8.0_112-b15	Enhanced
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",275,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,E
+On Prem - Internal,144.77.119.70,vmw10amer-p2281.pimco.imswest.sscims.com,VMW10AMER-P2281,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375729,Oracle Java SE Critical Patch Update - July 2021 (CPUJUL2021),Serious,3,,,44416,44688,"CVE-2021-2388, CVE-2021-2369, CVE-2021-2432, CVE-2021-2341","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u301, 8u291, 11.0.11, 16.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - July 2021 (https://www.oracle.com/security-alerts/cpujul2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - July 2021 (https://www.oracle.com/security-alerts/cpujul2021.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",274,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,F
+On Prem - Internal,10.155.12.25,clv435pw-e9fbb0.core.pimcocloud.net,CLV435PW-E9FBB0,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,90019,Detected LanMan/NTLMv1 Authentication method,Critical,4,,,44443,44688,,"This system currently uses LanMan or NTLMv1 Authentication. 
+
+QID Detection Logic: (Authenticated) 
+Operating System: Windows
+The QID checks for the registry keys HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa value 'LMCompatibilityLevel' is not equal to ""3"". 
+The QID checks for the NoLMHash keys: 
+1) For Windows 2000 SP2 and later,if key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\NoLMHash is missing: 
+2) For Windows XP and Windows 2003, if key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\NoLMHash is not equal to '1':","LanMan or NTLMv1 Authentication is a weak method for encrypting passwords.
+Unauthorized users can sniff the network and guess LanMan Authentication-encrypted passwords to obtain complete access to the target.","We recommended that you only use the NTLM Authentication method. Please note, however, that disabling the LM Hash (LanMan) will render the system incompatible with other systems, such as Windows 95/98.
+ 
+To disable LM Hash and NTLMv1, locate the following registry key, and then set the REG_DWORD 'LMCompatibilityLevel' entry to '3':
+ 
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa
+ 
+Implement the NoLMHash Policy by: 
+1) For Windows 2000 SP2 and later, locate the following registry key and add the key 'NoLMHash': 
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa 
+2) For Windows XP and Windows 2003, locate the following registry key, and then set the REG_DWORD 'NoLMHash' entry to '1': 
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa 
+
+Please refer LAN Manager authentication level (https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level#countermeasure) and Prevent Windows from storing a LAN manager hash (https://support.microsoft.com/en-us/help/299656/how-to-prevent-windows-from-storing-a-lan-manager-hash-of-your-passwor) for more details.",HKLM\System\CurrentControlSet\Control\Lsa LMCompatibilityLevel = 1#,247,5. 180-365 Days,Outside SLA,No,OS,Config,No,G
+On Prem - Internal,144.77.69.59,vmh001d9.pimco.imswest.sscims.com,VMH001D9,Windows Server,Windows_Server_2008,Windows Server 2008 R2 Enterprise 64 bit Edition Service Pack 1,90043,SMB Signing Disabled or SMB Signing Not Required,Serious,3,,,43820,44687,,"This host does not seem to be using SMB (Server Message Block) signing. SMB signing is a security mechanism in the SMB protocol and is also known as security signatures. SMB signing is designed to help improve the security of the SMB protocol.
+ 
+SMB signing adds security to a network using NetBIOS, avoiding man-in-the-middle attacks.
+ 
+When SMB signing is enabled on both the client and server SMB sessions are authenticated between the machines on a packet by packet basis. 
+
+QID Detection Logic: 
+This checks from the registry value of RequireSecuritySignature and EnableSecuritySignature form  HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanWorkStation\Parameters for client  and HKEY_LOCAL_MACHINE\System\CurrentControlSetServices\LanmanServer\Parameters for servers to check if SMB signing is required or enabled or disabled. 
+
+Note: On 5/28/2020 the QID was updated to check for client SMB signing behavior via the registry key HKEY_LOCAL_MACHINE\SystemCurrent\ControlSetServices\LanmanWorkStation\Parameters. The complete detection logic is explained above.","Unauthorized users sniffing the network could catch many challenge/response exchanges and replay the whole thing to grab particular session keys, and then authenticate on the Domain Controller.","Without SMB signing, a device could intercept SMB network packets from an originating computer, alter their contents, and broadcast them to the destination computer. Since, digitally signing the packets enables the recipient of the packets to confirm their point of origination and their authenticity, it is recommended that SMB signing is enabled and required.
+ 
+Please refer to Microsoft's article 887429 (http://support.microsoft.com/kb/887429) and The Basics of SMB Signing (covering both SMB1 and SMB2) (https://docs.microsoft.com/en-us/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2)  for information on enabling SMB signing. 
+ 
+For Windows Server 2008 R2, Windows Server 2012, please refer to Microsoft's article Require SMB Security Signatures (http://technet.microsoft.com/en-us/library/cc731957.aspx) for information on enabling SMB signing. For group policies please refer to Microsoft's article Modify Security Policies in Default Domain Controllers Policy (http://technet.microsoft.com/en-us/library/cc731654)
+ 
+For UNIX systems 
+
+To require samba clients running ""smbclient"" to use packet signing, add the following to the ""[global]"" section of the Samba configuration file:  
+
+client signing = mandatory",HKLM\System\CurrentControlSet\Services\LanManWorkstation\Parameters requiresecuritysignature = 0#,870,7. 2+ Years,Outside SLA,No,OS,Config,No,H
+On Prem - Internal,144.77.102.31,vma001p168.pimco.imswest.sscims.com,VMA001P168,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,373156,Oracle Java SE Critical Patch Update - July 2020(CPUJUL2020),Critical,4,,,44045,44688,"CVE-2020-14664, CVE-2020-14583, CVE-2020-14593, CVE-2020-14562, CVE-2020-14621, CVE-2020-14556, CVE-2020-14573, CVE-2020-14581, CVE-2020-14578, CVE-2020-14579, CVE-2020-14577","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 8u251, 11.0.7 and 14.0.1 and prior; Java SE Embedded: 8u251 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Successful exploit allows unauthenticated attacker with network access via multiple protocols to compromise Java SE.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_201\bin\wsdetect.dll file version is 8.0.2010.9
+C:\Program Files\Java\jdk1.8.0_201\jre\bin\wsdetect.dll file version is 8.0.2010.9#",645,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,I
+On Prem - Internal,10.80.96.203,msw10nb-00eec3.pimco.imswest.sscims.com,MSW10NB-00EEC3,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,376252,Oracle Java Standard Edition (SE) Critical Patch Update - January 2022 (CPUJAN2022),Serious,3,,,44674,44687,"CVE-2022-21349, CVE-2022-21291, CVE-2022-21305, CVE-2022-21277, CVE-2022-21360, CVE-2022-21365, CVE-2022-21366, CVE-2022-21282, CVE-2022-21296, CVE-2022-21299, CVE-2022-21271, CVE-2022-21283, CVE-2022-21293, CVE-2022-21294, CVE-2022-21340, CVE-2022-21341, CVE-2022-21248","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.13, 17.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2022 (https://www.oracle.com/security-alerts/cpujan2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2022 (https://www.oracle.com/security-alerts/cpujan2022.html)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",16,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,J
+On Prem - Internal,10.97.24.191,vmw10emea-p0352.pimco.imswest.sscims.com,VMW10EMEA-P0352,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Medium,1,3389,tcp,44618,44688,,"The scan target supports version 1.1 of the TLS protocol. That version is in the process of being deprecated and is no longer recommended. Instead the newer versions 1.2 and/or 1.3 should be used. The TLSv1.1 protocol itself does not have any currently exploitable vulnerabilities. However some vendor implementations of TLSv1.1 have weaknesses which may be exploitable. 
+This QID is posted as potential, when servers require client certificates and we cannot complete the handshake. 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","Supporting TLSv1.1 by itself does not necessarily have any harmful consequences, but it is no longer considered best practice because of bad past experience with some vendor implementations of TLSv1.1.","Disable the use of TLSv1.1 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1_1
+
+If the test is successful, then the target support TLSv1.1",TLSv1.1 is supported#,72,3. 46-90 Days,Inside SLA,No,Non-OS,Patch,No,K
+On Prem - Internal,10.155.48.106,clv235bl-56f3a1.core.pimcocloud.net,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.9,370371,Oracle Java SE Critical Patch Update - April 2017,Critical,5,,,44254,44688,"CVE-2017-3512, CVE-2017-3514, CVE-2017-3511, CVE-2017-3526, CVE-2017-3509, CVE-2017-3533, CVE-2017-3544, CVE-2017-3539","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for  April 2017 contains 8 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u141 and earlier, 7u131 and earlier, 8u121 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 131 or later, Java SE JDK and JRE 7 Update 141, Java SE JDK and JRE 6 Update 151) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU April 2017 (http://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html#AppendixJAVA) and Oracle Doc ID 2253297.1 (https://support.oracle.com/rs?type=doc&id=2253297.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2253297.1 (https://support.oracle.com/rs?type=doc&id=2253297.1)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/base/vendor/appdynamics/agent/machine/jre/bin/java	1.8.0_111-b14	Enhanced
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",436,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,L
+On Prem - Internal,10.155.195.2,bda65node02-adm.core.pimcocloud.net,,Unix/Linux,Linux_OEL,Oracle Enterprise Linux 6.10,122741,Oracle Java SE Critical Patch Update - October 2014,Critical,5,,,44198,44689,"CVE-2014-6513, CVE-2014-6532, CVE-2014-6503, CVE-2014-6456, CVE-2014-6562, CVE-2014-6485, CVE-2014-6492, CVE-2014-6493, CVE-2014-4288, CVE-2014-6466, CVE-2014-6458, CVE-2014-6468, CVE-2014-6506, CVE-2014-6511, CVE-2014-6476, CVE-2014-6515, CVE-2014-6504, CVE-2014-6519, CVE-2014-6517, CVE-2014-6531, CVE-2014-6512, CVE-2014-6457, CVE-2014-6527, CVE-2014-6502, CVE-2014-6558","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for October 2014 contains 25 new security fixes across multiple Java SE products and sub-products. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 5.0u71 and earlier, 6u81 and earlier, 7u67 and earlier, 8u20 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 25, Java SE JDK and JRE 7 Update 71, Java SE JDK and JRE 6 Update 85, Java SE JDK and JRE 5.0 Update 75) to resolve these issues. Refer to vendor advisory Oracle Java SE CPU October 2014 (http://www.oracle.com/technetwork/topics/security/cpuoct2014-1972960.html) and Oracle Doc ID 1931846.1 (https://support.oracle.com/rs?type=doc&id=1931846.1) to obtain more details.
+ 
+Updates for Java 5 and Java 6 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5 and Java 6.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Java SE CPU October 2014: Oracle Java (http://www.oracle.com/technetwork/java/javase/downloads/index.html)","Install Location	Version	Detection Type
+/base/vendor/oracle/lx-x86_64/product/11.2.0.4/client_1/jdk/bin/java	1.5.0_51-b10	Enhanced
+/base/vendor/oracle/lx-x86_64/product/11.2.0.4/client_1/jdk/jre/bin/java	1.5.0_51-b10	Enhanced#",492,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,M
+On Prem - Internal,10.98.25.66,vmw10apac-p0502.pimco.imswest.sscims.com,VMW10APAC-P0502,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,376026,Microsoft Visual Studio Code Elevation of Privilege Vulnerability - November 2021,Serious,3,,,44626,44688,CVE-2021-42322,"Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. 
+ Affected Versions: 
+Visual studio code prior to version 1.62.1 
+
+ QID Detection Logic(Authenticated): 
+This QID checks for the vulnerable versions of Visual Studio Code.",Visual Studio Code is prone to  Elevation of Privilege Vulnerability.,"Customers are advised to refer to CVE-2021-42322 (https://code.visualstudio.com/updates/v1_62) for more information pertaining to this vulnerability. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  CVE-2021-42322 (https://code.visualstudio.com/updates/v1_62)",C:\Program Files\Microsoft VS Code\Code.exe  Version is  1.56.1.0#,64,3. 46-90 Days,Inside SLA,No,Non-OS,Patch,Yes,N
+Laptops - External,192.168.1.233,l-w011718312854,L-W011718312854,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 2009,376042,NVIDIA GPU Display Driver Multiple Vulnerabilities (November 2021),Critical,3,,,44551,44687,"CVE-2021-1115, CVE-2021-1116, CVE-2021-1117","NVIDIA has released a software security update for NVIDIA GPU Display Driver. This update addresses issues that may lead to denial of service, escalation of privileges, data tampering, or information disclosure. 
+
+Affected versions:  
+GeForce All versions prior to 472.39 
+GeForce All versions prior to 496.49 
+Studio All drivers versions prior to 472.39 
+NVIDIA RTX/Quadro, NVS All driver versions 496.49 
+NVIDIA RTX/Quadro, NVS All driver versions prior to 472.39 
+NVIDIA RTX/Quadro, NVS All driver versions prior to 463.15 
+NVIDIA RTX/Quadro, NVS All driver versions prior to T392.68 
+Tesla All driver versions prior to 472.50 
+Tesla  All driver versions prior to 463.15 
+Tesla All driver versions prior to 453.23 
+Tesla All driver versions prior to 427.60 
+
+QID detection logic (authenticated): 
+The QID checks for vulnerable versions of nvcpl.dll.","Successful exploitation by a local user can get elevated privileges to modify display configuration data, which may result in denial of service of the display.","Customers are advised to download the fixes from NVIDIA Driver Downloads (http://www.nvidia.com/Download/index.aspx) page.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  5230 (https://nvidia.custhelp.com/app/answers/detail/a_id/5230)",%windir%\System32\nvcpl.dll  Version is  8.17.14.6140#,139,4. 91-180 Days,Outside SLA,No,Non-OS,Patch,No,O
+On Prem - Internal,10.155.217.67,clv3v5pl-26b999.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,370161,Oracle Java SE Critical Patch Update - October 2016,Critical,5,,,44689,44689,"CVE-2016-5556, CVE-2016-5568, CVE-2016-5582, CVE-2016-5573, CVE-2016-5597, CVE-2016-5554, CVE-2016-5542","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for April 2016 contains 7 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u121 and earlier, 7u111 and earlier, 8u102 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 111 or later, Java SE JDK and JRE 7 Update 121, Java SE JDK and JRE 6 Update 131) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU October 2016 (http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html) and Oracle Doc ID 2190513.1 (https://support.oracle.com/rs?type=doc&id=2190513.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Java SE CPU October 2016: Oracle Java (http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",1,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,P
+On Prem - Internal,144.77.77.35,prodpmal1.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 6.10,122362,Oracle Java SE Critical Patch Update - July 2014,Critical,5,,,44688,44688,"CVE-2014-4227, CVE-2014-4219, CVE-2014-2490, CVE-2014-4216, CVE-2014-4247, CVE-2014-2483, CVE-2014-4223, CVE-2014-4262, CVE-2014-4209, CVE-2014-4265, CVE-2014-4220, CVE-2014-4218, CVE-2014-4252, CVE-2014-4266, CVE-2014-4268, CVE-2014-4264, CVE-2014-4221, CVE-2014-4244, CVE-2014-4263, CVE-2014-4208","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for July 2014 contains 20 new security fixes across multiple Java SE products and sub-products. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 5.0u65 and earlier, 6u75 and earlier, 7u60 and earlier, 8u5 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 11, Java SE JDK and JRE 7 Update 65, Java SE JDK and JRE 6 Update 81, Java SE JDK and JRE 5.0 Update 71) to resolve these issues. Refer to vendor advisory Oracle Java SE CPU July 2014 (http://www.oracle.com/technetwork/topics/security/cpujul2014-1972956.html) and Oracle Doc ID 1900468.1 (https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=315212211638411&id=1900468.1&_afrWindowMode=0&_adf.ctrl-state=12vxl1xs56_4) to obtain more details.
+ 
+Updates for Java 5 and Java 6 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5 and Java 6.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Java SE CPU July 2014 (JAVA) (http://www.oracle.com/technetwork/java/javase/downloads/index.html)","Install Location	Version	Detection Type
+/opt/CA/WorkloadAutomationAE/SystemAgent/WA_AGENT_PAL1/jre/bin/java	1.7.0_51-b13	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,Q
+On Prem - Internal,144.77.102.118,vma001p200.pimco.imswest.sscims.com,VMA001P200,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,91889,Microsoft .NET Framework Denial of Service (DoS) Vulnerability for April 2022,Serious,3,,,44667,44688,CVE-2022-26832,"A denial of service vulnerability exist in Microsoft .Net Framework. 
+Following KBs are covered in this detection: 
+KB5012117 
+KB5012118 
+KB5012120 
+KB5012121 
+KB5012123 
+KB5012324 
+KB5012325 
+KB5012326 
+KB5012327 
+KB5012328 
+KB5012329 
+KB5012330 
+KB5012331 
+KB5012332 
+
+This security update is rated Important for supported versions of Microsoft .NET Framework. 
+.NET Framework 3.5, 3.5.1, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 and 4.8 
+QID Detection Logic (Authenticated): 
+- Checks for vulnerable version of System.web.dll for .Net Framework",Successful exploitation allows attacker to cause denial of service vulnerability.,"Customers are advised to refer to CVE-2022-26832 (https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-26832) for more details pertaining to this vulnerability. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  CVE-2022-26832 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26832)","KB5012326 or KB5012331 is not installed 
+%windir%\Microsoft.NET\Framework64\v2.0.50727\System.web.dll Version is 2.0.50727.8955
+%windir%\Microsoft.NET\Framework\v2.0.50727\System.web.dll Version is 2.0.50727.8955
+%windir%\Microsoft.NET\Framework64\v4.0.30319\System.web.dll Version is 4.0.30319.36720
+%windir%\Microsoft.NET\Framework\v4.0.30319\System.web.dll Version is 4.0.30319.36720#",23,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,R
+Laptops - External,192.168.1.159,uk-w-0471547949,UK-W-0471547949,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1909,91824,Microsoft Windows Security Update for October 2021,Urgent,4,,,44488,44689,"CVE-2021-41346, CVE-2021-41345, CVE-2021-41361, CVE-2021-36953, CVE-2021-40455, CVE-2021-41347, CVE-2021-36970, CVE-2021-41343, CVE-2021-41342, CVE-2021-41357, CVE-2021-41340, CVE-2021-41339, CVE-2021-41338, CVE-2021-41337, CVE-2021-41335, CVE-2021-41334, CVE-2021-41332, CVE-2021-41331, CVE-2021-41330, CVE-2021-26442, CVE-2021-26441, CVE-2021-40489, CVE-2021-40488, CVE-2021-40478, CVE-2021-40477, CVE-2021-40476, CVE-2021-40475, CVE-2021-40470, CVE-2021-40467, CVE-2021-40466, CVE-2021-40465, CVE-2021-40468, CVE-2021-40463, CVE-2021-40464, CVE-2021-40462, CVE-2021-40460, CVE-2021-40461, CVE-2021-40456, CVE-2021-40449, CVE-2021-40450, CVE-2021-40454, CVE-2021-40443, CVE-2021-38663, CVE-2021-38662","Microsoft releases the security update for Windows October 2021 
+The KB Articles associated with the update: 
+KB5006670 (https://support.microsoft.com/en-in/help/5006670) 
+KB5006675 (https://support.microsoft.com/en-in/help/5006675) 
+KB5006674 (https://support.microsoft.com/en-in/help/5006674) 
+KB5006669 (https://support.microsoft.com/en-in/help/5006669) 
+KB5006699 (https://support.microsoft.com/en-in/help/5006699) 
+KB5006743 (https://support.microsoft.com/en-in/help/5006743) 
+KB5006728 (https://support.microsoft.com/en-in/help/5006728) 
+KB5006714 (https://support.microsoft.com/en-in/help/5006714) 
+KB5006729 (https://support.microsoft.com/en-in/help/5006729) 
+KB5006739 (https://support.microsoft.com/en-in/help/5006739) 
+KB5006732 (https://support.microsoft.com/en-in/help/5006732) 
+KB5006736 (https://support.microsoft.com/en-in/help/5006736) 
+KB5006715 (https://support.microsoft.com/en-in/help/5006715) 
+KB5006667 (https://support.microsoft.com/en-in/help/5006667) 
+KB5006672 (https://support.microsoft.com/en-in/help/5006672) 
+
+
+ This QID checks for the file version of ntoskrnl.exe
+ The following versions of ntoskrnl.exe and Win32k.sys with their corresponding KBs are verified: 
+KB5006670-10.0.19041.1288 
+KB5006675-10.0.10240.19086 
+KB5006674-10.0.22000.258 
+KB5006669-10.0.14393.4704 
+KB5006699-10.0.20348.288 
+KB5006743-6.1.7601.25740 
+KB5006728-6.1.7601.25740 
+KB5006714-6.3.9600.20144 
+KB5006729-6.3.9600.20143 
+KB5006739-6.2.9200.23489 
+KB5006732-6.2.9200.23489 
+KB5006736-6.0.6003.21251 
+KB5006715-6.0.6003.21251 
+KB5006667-10.0.18362.1854 
+KB5006672-10.0.17763.2237","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the KB5006670 (https://support.microsoft.com/en-in/help/5006670) 
+KB5006675 (https://support.microsoft.com/en-in/help/5006675) 
+KB5006674 (https://support.microsoft.com/en-in/help/5006674) 
+KB5006669 (https://support.microsoft.com/en-in/help/5006669) 
+KB5006699 (https://support.microsoft.com/en-in/help/5006699) 
+KB5006743 (https://support.microsoft.com/en-in/help/5006743) 
+KB5006728 (https://support.microsoft.com/en-in/help/5006728) 
+KB5006714 (https://support.microsoft.com/en-in/help/5006714) 
+KB5006729 (https://support.microsoft.com/en-in/help/5006729) 
+KB5006739 (https://support.microsoft.com/en-in/help/5006739) 
+KB5006732 (https://support.microsoft.com/en-in/help/5006732) 
+KB5006736 (https://support.microsoft.com/en-in/help/5006736) 
+KB5006715 (https://support.microsoft.com/en-in/help/5006715) 
+KB5006667 (https://support.microsoft.com/en-in/help/5006667) 
+KB5006672 (https://support.microsoft.com/en-in/help/5006672) 
+
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5006670 (https://support.microsoft.com/en-in/help/5006670)  KB5006675 (https://support.microsoft.com/en-in/help/5006675)  KB5006674 (https://support.microsoft.com/en-in/help/5006674)  KB5006669 (https://support.microsoft.com/en-in/help/5006669)  KB5006699 (https://support.microsoft.com/en-in/help/5006699)  KB5006743 (https://support.microsoft.com/en-in/help/5006743)  KB5006728 (https://support.microsoft.com/en-in/help/5006728)  KB5006714 (https://support.microsoft.com/en-in/help/5006714)  KB5006729 (https://support.microsoft.com/en-in/help/5006729)  KB5006739 (https://support.microsoft.com/en-in/help/5006739)  KB5006732 (https://support.microsoft.com/en-in/help/5006732)  KB5006736 (https://support.microsoft.com/en-in/help/5006736)  KB5006715 (https://support.microsoft.com/en-in/help/5006715)  KB5006667 (https://support.microsoft.com/en-in/help/5006667)  KB5006672 (https://support.microsoft.com/en-in/help/5006672)","KB5006667 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.18362.1801#",202,5. 180-365 Days,Outside SLA,Yes,OS,Patch,No,S
+On Prem - Internal,10.245.6.16,vme081r07c.pimco.imswest.sscims.com,VME081R07C,Windows Server,Windows_Server_2008,Windows Server 2008 R2 Enterprise 64 bit Edition Service Pack 1,376442,VMware Tools Denial of Service (DoS) Vulnerability (VMSA-2022-0007),Critical,4,,,44626,44688,CVE-2022-22943,"VMware Tools is a suite of utilities that enhances the performance of the virtual machine guest operating system and improves management of the virtual machine running on VMware. 
+
+Affected Versions: 
+VMware Tools version from 10.x.x to 11.x.x. 
+
+QID Detection Logic:(Authenticated) 
+It checks for vulnerable version of VMware tools.","A malicious actor with local administrative privileges in the Windows guest OS, where VMware Tools is installed, may be able to execute code with system privileges in the Windows guest OS due to an uncontrolled search path element.","To remediate this issue update to VMware Tools version VMware Tools  12.0.0 (https://docs.vmware.com/en/VMware-Tools/12.0/rn/VMware-Tools-1200-Release-Notes.html) 
+
+For more information please visit VMware advisory VMSA-2022-0007 (https://www.vmware.com/security/advisories/VMSA-2022-0007.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  VMware Tools for Windows 12.0.0 (https://docs.vmware.com/en/VMware-Tools/12.0/rn/VMware-Tools-1200-Release-Notes.html)",C:\Program Files\VMware\VMware Tools\\vmtoolsd.exe  Version is  11.2.5.26209#,64,3. 46-90 Days,Outside SLA,No,Non-OS,Patch,Yes,T
+Laptops - External,192.168.1.118,l-023303375057,L-023303375057,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1803,91609,Microsoft Windows Security Update for March 2020,Urgent,5,,,44011,44687,"CVE-2020-0645, CVE-2020-0684, CVE-2020-0690, CVE-2020-0762, CVE-2020-0763, CVE-2020-0769, CVE-2020-0770, CVE-2020-0771, CVE-2020-0772, CVE-2020-0773, CVE-2020-0774, CVE-2020-0775, CVE-2020-0776, CVE-2020-0777, CVE-2020-0778, CVE-2020-0779, CVE-2020-0780, CVE-2020-0781, CVE-2020-0783, CVE-2020-0785, CVE-2020-0786, CVE-2020-0787, CVE-2020-0788, CVE-2020-0791, CVE-2020-0793, CVE-2020-0797, CVE-2020-0798, CVE-2020-0799, CVE-2020-0800, CVE-2020-0801, CVE-2020-0802, CVE-2020-0803, CVE-2020-0804, CVE-2020-0806, CVE-2020-0807, CVE-2020-0808, CVE-2020-0809, CVE-2020-0810, CVE-2020-0814, CVE-2020-0819, CVE-2020-0820, CVE-2020-0822, CVE-2020-0832, CVE-2020-0834, CVE-2020-0840, CVE-2020-0841, CVE-2020-0842, CVE-2020-0843, CVE-2020-0844, CVE-2020-0845, CVE-2020-0847, CVE-2020-0849, CVE-2020-0853, CVE-2020-0854, CVE-2020-0857, CVE-2020-0858, CVE-2020-0859, CVE-2020-0860, CVE-2020-0861, CVE-2020-0863, CVE-2020-0864, CVE-2020-0865, CVE-2020-0866, CVE-2020-0867, CVE-2020-0868, CVE-2020-0869, CVE-2020-0871, CVE-2020-0874, CVE-2020-0876, CVE-2020-0877, CVE-2020-0879, CVE-2020-0880, CVE-2020-0881, CVE-2020-0882, CVE-2020-0883, CVE-2020-0885, CVE-2020-0887, CVE-2020-0896, CVE-2020-0897, CVE-2020-0898","Microsoft releases the security update for Windows March 2020 
+The KB Articles associated with the update: 
+KB4538461 (https://support.microsoft.com/en-us/help/4538461) 
+KB4540694 (https://support.microsoft.com/en-us/help/4540694) 
+KB4541505 (https://support.microsoft.com/en-us/help/4541505) 
+KB4540693 (https://support.microsoft.com/en-us/help/4540693) 
+KB4540673 (https://support.microsoft.com/en-us/help/4540673) 
+KB4541504 (https://support.microsoft.com/en-us/help/4541504) 
+KB4541500 (https://support.microsoft.com/en-us/help/4541500) 
+KB4540689 (https://support.microsoft.com/en-us/help/4540689) 
+KB4541510 (https://support.microsoft.com/en-us/help/4541510) 
+KB4541506 (https://support.microsoft.com/en-us/help/4541506) 
+KB4540688 (https://support.microsoft.com/en-us/help/4540688) 
+KB4541509 (https://support.microsoft.com/en-us/help/4541509) 
+KB4540681 (https://support.microsoft.com/en-us/help/4540681) 
+KB4540670 (https://support.microsoft.com/en-us/help/4540670) 
+ QID Detection Logic:  This QID checks for the file version of ntoskrnl.exe
+ The following versions of ""ntoskrnl.exe"" with their corresponding KBs are verified: 
+KB4538461 - 10.0.17763.1098 
+KB4540694 - 6.2.9200.23009 
+KB4541505 - 6.3.9600.19665 
+KB4540693 - 10.0.10240.18519 
+KB4540673 - 10.0.18362.719 
+KB4541504 - 6.0.6003.20749 
+KB4541500 - 6.1.7601.24549 
+KB4540689 - 10.0.17134.1365 
+KB4541510 - 6.2.9200.23009 
+KB4541506 - 6.0.6003.20749 
+KB4540688 - 6.1.7601.24549 
+KB4541509 - 6.3.9600.19665 
+KB4540681 - 10.0.16299.1747 
+KB4540670 - 10.0.14393.3564",An attacker who successfully exploited this vulnerability could gain the same user rights as the local user. Users whose accounts are configured to have fewer user rights on the system could be less impacted than users who operate with administrative user rights.,"Please refer to the Security Update Guide (https://portal.msrc.microsoft.com/en-us/security-guidance) for more information pertaining to these vulnerabilities. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Security Update Guide: WIndows (https://portal.msrc.microsoft.com/en-us/security-guidance)","KB4540689 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.17134.1246#",679,6. 1-2 Years,Outside SLA,Yes,OS,Patch,Yes,U
+On Prem - Internal,10.155.62.144,clv335pl-342745.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,375964,Oracle Java SE Critical Patch Update - October 2021 (CPUOCT2021),Critical,4,,,44688,44688,"CVE-2021-3517, CVE-2021-35560, CVE-2021-35567, CVE-2021-35550, CVE-2021-3522, CVE-2021-35586, CVE-2021-35564, CVE-2021-35556, CVE-2021-35559, CVE-2021-35561, CVE-2021-35578, CVE-2021-35603, CVE-2021-35588","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u311, 8u301, 11.0.12, 17 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","This Critical Patch Update contains 15 new security patches for Oracle Java SE. 13 of these vulnerabilities may be remotely exploitable without authentication, i.e., may be exploited over a network without requiring user credentials","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,V
+Laptops - External,192.168.0.52,uk-bk-480254,UK-BK-480254,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1909,110338,Microsoft Office and Microsoft Office Services and Web Apps Security Update September 2019,Urgent,4,,,44023,44689,"CVE-2019-1246, CVE-2019-1257, CVE-2019-1259, CVE-2019-1260, CVE-2019-1261, CVE-2019-1262, CVE-2019-1263, CVE-2019-1264, CVE-2019-1295, CVE-2019-1296, CVE-2019-1297","Microsoft has released September 2019 security updates to fix multiple security vulnerabilities. 
+This security update contains the following KBs: 
+
+KB4475611 
+KB4475591 
+KB4475599 
+KB4484098 
+KB4475590 
+KB4475605 
+KB4475596 
+KB4484099 
+KB4475594 
+KB4464557 
+KB4475574 
+KB4475579 
+KB4475566 
+KB4475607 
+KB4475583 
+KB4464566 
+KB4461631 
+KB4475589 
+KB4464548 
+ 
+
+QID Detection Logic: 
+This authenticated QID checks the file versions from above Microsoft KB article with the versions on affected office system.",Successful exploitation allows an attacker to execute code remotely.,"Refer to Microsoft Security Guidance (https://portal.msrc.microsoft.com/en-us/security-guidance) for more details pertaining to this vulnerability. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Office and Microsoft Office Services and Web Apps Security Update September 2019 (https://portal.msrc.microsoft.com/en-us/security-guidance)","Office ClicktoRun or Office 365 SEPTEMBER 2019 Update is not installed  
+C:\Program Files\Microsoft Office\root\Office16\GRAPH.EXE  Version is  16.0.8326.2059#",667,6. 1-2 Years,Outside SLA,Yes,Non-OS,Patch,No,W
+On Prem - Internal,10.155.189.25,vme331pw-4a80b7.pimco.imswest.sscims.com,VME331PW-4A80B7,Windows Server,Windows_Server_2016,Windows Server 2016 Standard 64 bit Edition Version 1607,38170,SSL Certificate - Subject Common Name Does Not Match Server FQDN,Medium,2,1993,tcp,44352,44688,,"An SSL Certificate associates an entity (person, organization, host, etc.) with a Public Key. In an SSL connection, the client authenticates the remote server using the server's Certificate and extracts the Public Key in the Certificate to establish the secure connection.
+ 
+A certificate whose Subject commonName or subjectAltName does not match the server FQDN offers only encryption without authentication.
+ 
+Please note that a false positive reporting of this vulnerability is possible in the following case:
+ If the common name of the certificate uses a wildcard such as *.somedomainname.com and the reverse DNS resolution of the target IP is not configured. In this case there is no way for Qualys to associate the wildcard common name to the IP. Adding a reverse DNS lookup entry to the target IP will solve this problem.","A man-in-the-middle attacker can exploit this vulnerability in tandem with a DNS cache poisoning attack to lure the client to another server, and then steal all the encryption communication.",Please install a server certificate whose Subject commonName or subjectAltName matches the server FQDN.,"Certificate #0 CN=owa.pimco.com,O=state_street_investment_manager_solutions\,_LLC,L=BOSTON,ST=Massachusetts,C=US (owa.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.de.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.jp.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.au.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.uk.pimco.com) and IP (10.155.189.25) don't match
+(autodiscover.sg.pimco.com) and IP (10.155.189.25) don't match
+(owa-ny-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-jp-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-lb-mun.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-uk-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-au-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa-sg-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(cas-cisco-lb.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(email.pimco.com) and IP (10.155.189.25) don't match
+(email2.pimco.com) and IP (10.155.189.25) don't match
+(webmail.pimco.com) doesn't resolve
+(mi-na-async-prod.pimco.imswest.sscims.com) and IP (10.155.189.25) don't match
+(owa.pimco.com) and IP (10.155.189.25) don't match#",338,5. 180-365 Days,Outside SLA,No,Non-OS,Config,No,X
+Laptops - External,192.168.0.43,l-w029415703354,L-W029415703354,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 21H2,105171,Windows Explorer Autoplay Not Disabled for Default User,Serious,2,,,44656,44690,,The setting that prevents applications from any drive to be automatically executed when no user is logged in is not enabled on the host.,An attacker may be able to run an unauthorized application.,"Make sure that the value NoDriveTypeAutoRun is defined under this registry key:
+ 
+HKU\DEFAULT\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer","%windir%\explorer.exe   found 
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoAutorun is missing. 
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoDriveTypeAutoRun is missing. 
+HKU\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoDriveTypeAutoRun is missing.#",34,2. 31-45 Days,Inside SLA,No,Non-OS,Config,No,Y
+On Prem - Internal,10.155.63.52,clv035pw-1654a3.core.pimcocloud.net,CLV035PW-1654A3,Windows Workstation,Windows_Workstation_7,Windows 7 Enterprise 64 bit Edition Service Pack 1,370495,IBM MQ Java Runtime Vulnerability (swg22001630),Medium,2,,,43786,44688,CVE-2016-3485,"IBM MQ is a message oriented middleware that allows independent and non-concurrent applications on a distributed system to communicate with each other.  
+IBM MQ is vulnerable to a unspecified Java Runtime which can allow local users to compromise the integrity of the system. 
+
+Affected Version: 
+IBM MQ 9.0.x 
+WebSphere MQ 8.0.x 
+WebSphere MQ 7.5.x 
+WebSphere MQ 7.1.x 
+
+QID Detection Logic (authenticated): 
+The QID checks for the Registry Key ""HKLM\SOFTWARE\IBM\MQSeries\CurrentVersion"" value ""VRMF"" to see if the system is running a vulnerable version of IBM MQ or not.",Successful exploitation of the vulnerabilities may allow local users to compromise the integrity of the system.,"Please refer to IBM advisory swg22001630 (https://www-01.ibm.com/support/docview.wss?uid=swg22001630) for further information. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  swg22001630 (http://www-01.ibm.com/support/docview.wss?uid=swg22001630)",HKLM\SOFTWARE\Wow6432Node\IBM\MQSeries\CurrentVersion VRMF = 7.5.0.0#,904,7. 2+ Years,Outside SLA,No,Non-OS,Patch,No,Z
+AWS - External,10.238.104.196,riskcalc-prod-monitoring-1,,Unix/Linux,Linux_Ubuntu,Ubuntu Linux 20.04.3,198748,Ubuntu Security Notification for Bash Vulnerability (USN-5380-1),Urgent,4,,,44672,44690,CVE-2019-18276,Bash did not properly drop privilegeswhen the binary had the setuid bit enabled.,An attacker couldpossibly use this issue to escalate privileges.,"Refer to Ubuntu security advisory USN-5380-1 (https://ubuntu.com/security/notices/USN-5380-1) for updates and patch information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  USN-5380-1: Ubuntu Linux (https://ubuntu.com/security/notices/USN-5380-1)","Package	Installed Version	Required Version
+bash	5.0-6ubuntu1.1	5.0-6ubuntu1.2#",18,1. 0-30 Days,Inside SLA,No,OS,Patch,Yes,A
+On Prem - Internal,10.155.42.60,clv235dw-0e6217.core.pimcocloud.net,CLV235DW-0E6217,Windows Server,Windows_Server_2016,Windows Server 2016 Standard 64 bit Edition Version 1607,91846,Microsoft Windows Security Update for December 2021,Critical,4,,,44569,44688,"CVE-2021-43893, CVE-2021-43880, CVE-2021-43248, CVE-2021-43247, CVE-2021-43246, CVE-2021-43245, CVE-2021-43244, CVE-2021-43243, CVE-2021-43240, CVE-2021-43239, CVE-2021-43238, CVE-2021-43237, CVE-2021-43236, CVE-2021-43235, CVE-2021-43234, CVE-2021-43233, CVE-2021-43232, CVE-2021-43231, CVE-2021-43230, CVE-2021-43229, CVE-2021-43228, CVE-2021-43227, CVE-2021-43226, CVE-2021-43224, CVE-2021-43223, CVE-2021-43222, CVE-2021-43217, CVE-2021-43216, CVE-2021-43215, CVE-2021-43214, CVE-2021-41360, CVE-2021-41333, CVE-2021-40453, CVE-2021-40452, CVE-2021-40441, CVE-2021-43219, CVE-2021-43207","Microsoft Windows Security Update - December 2021
+
+The KB Articles associated with the update: 
+KB5008263 (https://support.microsoft.com/en-in/help/5008263) 
+KB5008285 (https://support.microsoft.com/en-in/help/5008285) 
+KB5008277 (https://support.microsoft.com/en-in/help/5008277) 
+KB5008255 (https://support.microsoft.com/en-in/help/5008255) 
+KB5008244 (https://support.microsoft.com/en-in/help/5008244) 
+KB5008282 (https://support.microsoft.com/en-in/help/5008282) 
+KB5008274 (https://support.microsoft.com/en-in/help/5008274) 
+KB5008271 (https://support.microsoft.com/en-in/help/5008271) 
+KB5008207 (https://support.microsoft.com/en-in/help/5008207) 
+KB5008230 (https://support.microsoft.com/en-in/help/5008230) 
+KB5008212 (https://support.microsoft.com/en-in/help/5008212) 
+KB5008215 (https://support.microsoft.com/en-in/help/5008215) 
+KB5008223 (https://support.microsoft.com/en-in/help/5008223) 
+KB5008206 (https://support.microsoft.com/en-in/help/5008206) 
+KB5008210 (https://support.microsoft.com/en-in/help/5008210) 
+KB5008218 (https://support.microsoft.com/en-in/help/5008218) 
+
+ This QID checks for the file version of ntoskrnl.exe
+ The following versions of ntoskrnl.exe with their corresponding KBs are verified:","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the KB5008263 (https://support.microsoft.com/en-in/help/5008263) 
+KB5008285 (https://support.microsoft.com/en-in/help/5008285) 
+KB5008277 (https://support.microsoft.com/en-in/help/5008277) 
+KB5008255 (https://support.microsoft.com/en-in/help/5008255) 
+KB5008244 (https://support.microsoft.com/en-in/help/5008244) 
+KB5008282 (https://support.microsoft.com/en-in/help/5008282) 
+KB5008274 (https://support.microsoft.com/en-in/help/5008274) 
+KB5008271 (https://support.microsoft.com/en-in/help/5008271) 
+KB5008207 (https://support.microsoft.com/en-in/help/5008207) 
+KB5008230 (https://support.microsoft.com/en-in/help/5008230) 
+KB5008212 (https://support.microsoft.com/en-in/help/5008212) 
+KB5008215 (https://support.microsoft.com/en-in/help/5008215) 
+KB5008223 (https://support.microsoft.com/en-in/help/5008223) 
+KB5008206 (https://support.microsoft.com/en-in/help/5008206) 
+KB5008210 (https://support.microsoft.com/en-in/help/5008210) 
+KB5008218 (https://support.microsoft.com/en-in/help/5008218) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5008263 (https://support.microsoft.com/en-in/help/5008263)  KB5008285 (https://support.microsoft.com/en-in/help/5008285)  KB5008277 (https://support.microsoft.com/en-in/help/5008277)  KB5008255 (https://support.microsoft.com/en-in/help/5008255)  KB5008244 (https://support.microsoft.com/en-in/help/5008244)  KB5008282 (https://support.microsoft.com/en-in/help/5008282)  KB5008274 (https://support.microsoft.com/en-in/help/5008274)  KB5008271 (https://support.microsoft.com/en-in/help/5008271)  KB5008207 (https://support.microsoft.com/en-in/help/5008207)  KB5008230 (https://support.microsoft.com/en-in/help/5008230)  KB5008212 (https://support.microsoft.com/en-in/help/5008212)  KB5008215 (https://support.microsoft.com/en-in/help/5008215)  KB5008223 (https://support.microsoft.com/en-in/help/5008223)  KB5008206 (https://support.microsoft.com/en-in/help/5008206)  KB5008210 (https://support.microsoft.com/en-in/help/5008210)  KB5008218 (https://support.microsoft.com/en-in/help/5008218)","KB5008207 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.14393.4770#",121,4. 91-180 Days,Outside SLA,No,OS,Patch,No,B
+On Prem - Internal,144.77.29.81,prodpmattr3.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 6.10,374873,Oracle Java SE Critical Patch Update - January 2021 (CPUJAN2021),Serious,3,,,44688,44688,CVE-2020-14803,"Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u281, 8u271, 11.0.9, 15.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2021 (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2021: Java (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA)","Install Location	Version	Detection Type
+/opt/CA/WorkloadAutomationAE/SystemAgent/WA_AGENT_PATTR3/jre/bin/java	1.7.0_51-b13	Enhanced
+/usr/openv/java/jre/bin/java	1.8.0_131-b11	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,C
+On Prem - Internal,144.77.29.155,devpmsym2.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,374873,Oracle Java SE Critical Patch Update - January 2021 (CPUJAN2021),Serious,3,,,44688,44688,CVE-2020-14803,"Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u281, 8u271, 11.0.9, 15.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2021 (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2021: Java (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA)","Install Location	Version	Detection Type
+/opt/CA/WorkloadAutomationAE/SystemAgent/WA_AGENT_DSYM2/jre/bin/java	1.7.0_51-b13	Enhanced
+/usr/openv/java/jre/bin/java	1.8.0_131-b11	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,D
+On Prem - Internal,172.27.192.72,sep700b4f7b4241.pimco.imswest.sscims.com,,Undefined,Undefined_Linux,Ubuntu / Tiny Core Linux / Linux 2.6.x,38170,SSL Certificate - Subject Common Name Does Not Match Server FQDN,Medium,2,443,tcp,43785,44688,,"An SSL Certificate associates an entity (person, organization, host, etc.) with a Public Key. In an SSL connection, the client authenticates the remote server using the server's Certificate and extracts the Public Key in the Certificate to establish the secure connection.
+ 
+A certificate whose Subject commonName or subjectAltName does not match the server FQDN offers only encryption without authentication.
+ 
+Please note that a false positive reporting of this vulnerability is possible in the following case:
+ If the common name of the certificate uses a wildcard such as *.somedomainname.com and the reverse DNS resolution of the target IP is not configured. In this case there is no way for Qualys to associate the wildcard common name to the IP. Adding a reverse DNS lookup entry to the target IP will solve this problem.","A man-in-the-middle attacker can exploit this vulnerability in tandem with a DNS cache poisoning attack to lure the client to another server, and then steal all the encryption communication.",Please install a server certificate whose Subject commonName or subjectAltName matches the server FQDN.,"Certificate #0 CN=CP-8865-SEP700B4F7B4241,OU=CTG,O=Cisco_Systems_Inc.,serialNumber=PID:CP-8865_SN:FCH2242FZAS (CP-8865-SEP700B4F7B4241) doesn't resolve#",905,7. 2+ Years,Outside SLA,No,Non-OS,Config,No,E
+On Prem - Internal,10.155.233.21,vmw10amer-p5055.pimco.imswest.sscims.com,VMW10AMER-P5055,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375395,IBM MQ DOS Vulnerability(303559),Medium,2,,,44535,44688,CVE-2018-1371,"The IBM MQ Appliance is a hardware product that provides IBM MQ ready installed and ready to use. The main use of IBM MQ is to send or exchange messages. One application puts a message on a queue on one computer, and another application gets the same message from another queue on a different computer. 
+
+CVE-2018-1371: An IBM MQ client connecting to an MQ queue manager can cause a SIGSEGV in the amqrmppa channel process terminating it. 
+
+Affected Versions: 
+IBM MQ V 8.0.0.8 
+IBM MQ V9 LTS 9.0.0.2 
+IBM MQ version 9.0.4 
+
+QID Detection Logic: (Authenticated)  
+Operating System: Linux 
+The QID runs the command ""/opt/mqm/bin/dspmqver -v | grep -A3 '^Name'"" and ""/usr/mqm/bin/dspmqver -v | grep -A3 '^Name'"" (for AIX only) to see if the system is running a vulnerable version of IBM MQ or not. 
+
+Operating System: Windows 
+It checks for vulnerable IBM MQ/WebSphere MQ versions.",Successful exploitation of this vulnerability could leads to cause Denial of service and may crash the process.,"The vendor has released a fix to resolve the issue, please refer to 303559 (https://www.ibm.com/support/pages/node/303559) for more information. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  303559 (https://www.ibm.com/support/pages/node/303559)","C:\Program Files\IBM\MQ\bin\runmqdnm.exe  Version is  9.0.4.0
+C:\Program Files\IBM\MQ\bin\runmqdnm.exe  Version is  9.0.4.0#",155,4. 91-180 Days,Inside SLA,No,Non-OS,Patch,No,F
+On Prem - Internal,10.80.113.34,dmi33db02i.pimco.imswest.sscims.com,,Undefined,Undefined_Linux,Ubuntu / Linux 3.x,38169,SSL Certificate - Self-Signed Certificate,Medium,2,443,tcp,44618,44687,,"An SSL Certificate associates an entity (person, organization, host, etc.) with a Public Key. In an SSL connection, the client authenticates the remote server using the server's Certificate and extracts the Public Key in the Certificate to establish the secure connection.
+ 
+The client can trust that the Server Certificate belongs to the server only if it is signed by a mutually trusted third-party Certificate Authority (CA). Self-signed certificates are created generally for testing purposes or to avoid paying third-party CAs. These should not be used on any production or critical servers.
+ 
+By exploiting this vulnerability, an attacker can impersonate the server by presenting a fake self-signed certificate. If the client knows that the server does not have a trusted certificate, it will accept this spoofed certificate and communicate with the remote server.","By exploiting this vulnerability, an attacker can launch a man-in-the-middle attack.",Please install a server certificate signed by a trusted third-party Certificate Authority.,"Certificate #0 CN=ORACLESP-2116XLD00X,OU=Oracle_Integrated_Lights_Out_Manager,O=Oracle_America\,_Inc,L=Redwood_Shores,ST=California,C=US  is a self signed certificate.#",72,3. 46-90 Days,Inside SLA,No,Non-OS,Config,No,G
+On Prem - Internal,10.155.184.88,clv335pw-3a563b.core.pimcocloud.net,CLV335PW-3A563B,Windows Server,Windows_Server_2016,Windows Server 2016 Standard 64 bit Edition Version 1607,105171,Windows Explorer Autoplay Not Disabled for Default User,Medium,2,,,44254,44688,,The setting that prevents applications from any drive to be automatically executed when no user is logged in is not enabled on the host.,An attacker may be able to run an unauthorized application.,"Make sure that the value NoDriveTypeAutoRun is defined under this registry key:
+ 
+HKU\DEFAULT\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer","%windir%\explorer.exe found
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoAutorun is missing.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoDriveTypeAutoRun is missing.
+HKU\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer NoDriveTypeAutoRun is missing.#",436,6. 1-2 Years,Outside SLA,No,Non-OS,Config,No,H
+On Prem - Internal,10.155.216.146,clv3v5pl-b1b41a.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.6,239392,Red Hat Update for dhcp (RHSA-2021:2357),Critical,4,,,44689,44689,CVE-2021-25217,"The Dynamic Host Configuration Protocol (DHCP) is a protocol that allows individual devices on an IP network to get their own network configuration information, including an IP address, a subnet mask, and a broadcast address. The dhcp packages provide a relay agent and ISC DHCP service required to enable and administer DHCP on a network. Security Fix(es): dhcp: stack-based buffer overflow when parsing statements with colon-separated hex digits in config or lease files in dhcpd and dhclient (CVE-2021-25217)
+ Affected Products:   Red Hat Enterprise Linux Server 7 x86_64 Red Hat Enterprise Linux Workstation 7 x86_64 Red Hat Enterprise Linux Desktop 7 x86_64 Red Hat Enterprise Linux for IBM z Systems 7 s390x Red Hat Enterprise Linux for Power, big endian 7 ppc64 Red Hat Enterprise Linux for Scientific Computing 7 x86_64 Red Hat Enterprise Linux for Power, little endian 7 ppc64le  Note: The preceding description block is extracted directly from the security advisory. Using automation, we have attempted to clean and format it as much as possible without introducing additional issues.","On successful exploitation, it could allow an attacker to execute code.","Upgrade to the latest packages which contain a patch. Refer to Applying Package Updates to RHEL system (https://access.redhat.com/articles/11258) for details. 
+                        Refer to Red Hat security advisory RHSA-2021:2357 (https://access.redhat.com/errata/RHSA-2021:2357) to address this issue and obtain more information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  RHSA-2021:2357: Red Hat Enterprise Linux (https://access.redhat.com/errata/RHSA-2021:2357?language=en)","Package	Installed Version	Required Version
+dhclient	4.2.5-68.el7_5.1.x86_64	4.2.5-83.el7_9.1
+dhcp-common	4.2.5-68.el7_5.1.x86_64	4.2.5-83.el7_9.1
+dhcp-libs	4.2.5-68.el7_5.1.x86_64	4.2.5-83.el7_9.1#",1,1. 0-30 Days,Inside SLA,No,OS,Patch,No,I
+On Prem - Internal,10.155.236.208,vmw10amer-p3835.pimco.imswest.sscims.com,VMW10AMER-P3835,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,91881,Microsoft Visual Studio Security Update for April 2022,Serious,3,,,44667,44688,"CVE-2022-24765, CVE-2022-24513, CVE-2022-24767","Microsoft has released security Updates for Visual Studio which resolves Remote Code Execution and Denial of Service vulnerability. 
+
+Affected Software:  
+Microsoft Visual Studio 2019 version 16.7 (includes 16.0 - 16.6) 
+Microsoft Visual Studio 2019 version 16.9 (includes 16.0 - 16.8) 
+Microsoft Visual Studio 2019 version 16.11 (includes 16.0 - 16.10) 
+Microsoft Visual Studio 2017 Version 17.0 
+Microsoft Visual Studio 2017 Version 17.1  and
+Microsoft VIsual Studio for Mac prior to 8.10.22.11  
+
+  QID Detection Logic: Authenticated  
+ This QID detects vulnerable versions of Microsoft Visual Studio by checking the file version of the Visual Studio.",Microsoft Visual Studio is prone to Elevation of Privilege Vulnerabilities,"Customers are advised to refer to CVE-2022-24765 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24765), CVE-2022-24513 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24513)  and CVE-2022-24767 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24767) for more information pertaining to these vulnerabilities.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  CVE-2022-24765 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24765)  CVE-2022-24513 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24513)  CVE-2022-24767 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24767)",C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe Version is 16.6.30320.27#,23,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,J
+On Prem - Internal,144.77.89.66,devpmmqv9.pimco.imswest.sscims.com,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.9,370161,Oracle Java SE Critical Patch Update - October 2016,Critical,5,,,44198,44688,"CVE-2016-5556, CVE-2016-5568, CVE-2016-5582, CVE-2016-5573, CVE-2016-5597, CVE-2016-5554, CVE-2016-5542","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for April 2016 contains 7 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u121 and earlier, 7u111 and earlier, 8u102 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 111 or later, Java SE JDK and JRE 7 Update 121, Java SE JDK and JRE 6 Update 131) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU October 2016 (http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html) and Oracle Doc ID 2190513.1 (https://support.oracle.com/rs?type=doc&id=2190513.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Java SE CPU October 2016: Oracle Java (http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html)","Install Location	Version	Detection Type
+/opt/CA/WorkloadAutomationAE/SystemAgent/WA_AGENT_DMQ9/jre/bin/java	1.7.0_51-b13	Enhanced
+/usr/openv/java/jre/bin/java	1.8.0_31-b13	Enhanced#",492,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,K
+On Prem - Internal,10.155.237.242,vmw10amer-p4075.pimco.imswest.sscims.com,VMW10AMER-P4075,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,373540,Oracle Java SE Critical Patch Update - October 2020 (CPUOCT2020),Serious,3,,,44380,44688,"CVE-2020-14803, CVE-2020-14792, CVE-2020-14781, CVE-2020-14782, CVE-2020-14797, CVE-2020-14779, CVE-2020-14796, CVE-2020-14798","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u271, 8u261, 11.0.8, 15 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - October 2020: JAVA (https://www.oracle.com/security-alerts/cpuoct2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",310,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,L
+On Prem - Internal,10.155.43.76,clv235dl-45100d.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.6,238736,Red Hat Update for expat (RHSA-2020:3952),Serious,3,,,44688,44688,"CVE-2018-20843, CVE-2019-15903","Expat is a C library for parsing XML documents. Security Fix(es): expat: large number of colons in input makes parser consume high amount of resources, leading to DoS (CVE-2018-20843) expat: heap-based buffer over-read via crafted XML input (CVE-2019-15903) Affected Products:                 Red Hat Enterprise Linux Server 7 x86_64                           Red Hat Enterprise Linux Workstation 7 x86_64                           Red Hat Enterprise Linux Desktop 7 x86_64                           Red Hat Enterprise Linux for IBM z Systems 7 s390x                           Red Hat Enterprise Linux for Power, big endian 7 ppc64                           Red Hat Enterprise Linux for Scientific Computing 7 x86_64                           Red Hat Enterprise Linux for Power, little endian 7 ppc64le",On successful exploitation it could allow an attacker to execute code.,"Upgrade to the latest packages which contain a patch. Refer to Applying Package Updates to RHEL system (https://access.redhat.com/articles/11258) for details. 
+                        Refer to Red Hat security advisory RHSA-2020:3952 (https://access.redhat.com/errata/RHSA-2020:3952) to address this issue and obtain more information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  RHSA-2020:3952: Red Hat Enterprise Linux (https://access.redhat.com/errata/RHSA-2020:3952)","Package	Installed Version	Required Version
+expat	2.1.0-10.el7_3.x86_64	2.1.0-12.el7#",2,1. 0-30 Days,Inside SLA,No,OS,Patch,No,M
+On Prem - Internal,172.21.86.6,nb-19-1013-4.pimco.imswest.sscims.com,NB-19-1013-4,Windows Workstation,Windows_Workstation_7,Windows 7 Enterprise 64 bit Edition Service Pack 1,372163,Oracle Java SE Critical Patch Update - October 2019,Critical,4,,,43785,44689,"CVE-2019-2949, CVE-2019-2989, CVE-2019-2958, CVE-2019-11068, CVE-2019-2977, CVE-2019-2975, CVE-2019-2999, CVE-2019-2996, CVE-2019-2987, CVE-2019-2962, CVE-2019-2988, CVE-2019-2992, CVE-2019-2964, CVE-2019-2973, CVE-2019-2981, CVE-2019-2978, CVE-2019-2894, CVE-2019-2983, CVE-2019-2933, CVE-2019-2945","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 7u231, 8u221, 11.0.4, 13; Java SE Embedded: 8u211 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates (Java SE JDK and JRE 13.0.1, 11.0.5, Java 8 Update 231 or later, Java SE JDK and JRE 7 Update 241) to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - October 2019 (https://www.oracle.com/technetwork/security-advisory/cpuoct2019-5072832.html#AppendixJAVA) and Oracle Doc ID 2589853.1 (https://support.oracle.com/rs?type=doc&id=2589853.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2589853.1 (https://support.oracle.com/rs?type=doc&id=2589853.1)","C:\Program Files\Java\jre1.8.0_221\bin\wsdetect.dll file version is 8.0.2210.11
+C:\Program Files (x86)\Java\jre1.8.0_221\bin\wsdetect.dll file version is 8.0.2210.11#",905,7. 2+ Years,Outside SLA,No,Non-OS,Patch,No,N
+On Prem - Internal,144.77.43.181,prodpmiq46.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,370087,Oracle Java SE Critical Patch Update - July 2016,Critical,4,,,44688,44688,"CVE-2016-3587, CVE-2016-3606, CVE-2016-3598, CVE-2016-3610, CVE-2016-3552, CVE-2016-3511, CVE-2016-3503, CVE-2016-3498, CVE-2016-3500, CVE-2016-3508, CVE-2016-3458, CVE-2016-3550, CVE-2016-3485","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for April 2016 contains 9 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u115 and earlier, 7u101 and earlier, 8u92 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 101 or later, Java SE JDK and JRE 7 Update 111, Java SE JDK and JRE 6 Update 121) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU July 2016 (http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html) and Oracle Doc ID 2153042.1 (https://support.oracle.com/rs?type=doc&id=2153042.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Java SE CPU July 2016: Oracle Java (http://www.oracle.com/technetwork/java/javase/downloads/index.html)","Install Location	Version	Detection Type
+/usr/openv/java/jre/bin/java	1.8.0_31-b13	Enhanced#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,No,O
+On Prem - Internal,10.82.97.124,msw10lv-637f3b.pimco.imswest.sscims.com,MSW10LV-637F3B,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,91851,Microsoft Windows Security Update for January 2022,Critical,4,,,44688,44688,"CVE-2022-21913, CVE-2022-21901, CVE-2022-21902, CVE-2022-21900, CVE-2022-21897, CVE-2022-21888, CVE-2022-21885, CVE-2022-21884, CVE-2022-21963, CVE-2022-21962, CVE-2022-21928, CVE-2022-21925, CVE-2022-21924, CVE-2022-21959, CVE-2022-21899, CVE-2022-21898, CVE-2022-21958, CVE-2022-21880, CVE-2022-21881, CVE-2022-21882, CVE-2022-21874, CVE-2022-21905, CVE-2022-21906, CVE-2022-21907, CVE-2022-21912, CVE-2022-21910, CVE-2022-21908, CVE-2022-21904, CVE-2022-21903, CVE-2022-21960, CVE-2022-21896, CVE-2022-21894, CVE-2022-21893, CVE-2022-21892, CVE-2022-21961, CVE-2022-21879, CVE-2022-21878, CVE-2022-21887, CVE-2022-21964, CVE-2022-21876, CVE-2022-21875, CVE-2022-21877, CVE-2022-21873, CVE-2022-21870, CVE-2022-21872, CVE-2022-21868, CVE-2022-21869, CVE-2022-21867, CVE-2022-21866, CVE-2022-21864, CVE-2022-21865, CVE-2022-21863, CVE-2022-21862, CVE-2022-21861, CVE-2022-21859, CVE-2022-21860, CVE-2022-21858, CVE-2022-21857, CVE-2022-21839, CVE-2022-21838, CVE-2022-21836, CVE-2022-21835, CVE-2022-21834, CVE-2022-21833, CVE-2022-21915, CVE-2022-21914, CVE-2022-21895, CVE-2022-21916, CVE-2022-21918, CVE-2022-21919, CVE-2021-36976, CVE-2021-22947, CVE-2022-21852, CVE-2022-21851, CVE-2022-21850, CVE-2022-21871, CVE-2022-21920, CVE-2022-21922, CVE-2022-21921, CVE-2022-21847","Microsoft Windows Security Update - January 2022
+
+The KB Articles associated with the update: 
+KB5009543 (https://support.microsoft.com/en-in/help/5009543) 
+KB5009555 (https://support.microsoft.com/en-in/help/5009555) 
+KB5009557 (https://support.microsoft.com/en-in/help/5009557) 
+KB5009545 (https://support.microsoft.com/en-in/help/5009545) 
+KB5009624 (https://support.microsoft.com/en-in/help/5009624) 
+KB5009595 (https://support.microsoft.com/en-in/help/5009595) 
+KB5009586 (https://support.microsoft.com/en-in/help/5009586) 
+KB5009619 (https://support.microsoft.com/en-in/help/5009619) 
+KB5009610 (https://support.microsoft.com/en-in/help/5009610) 
+KB5009621 (https://support.microsoft.com/en-in/help/5009621) 
+KB5009546 (https://support.microsoft.com/en-in/help/5009546) 
+KB5009585 (https://support.microsoft.com/en-in/help/5009585) 
+KB5009566 (https://support.microsoft.com/en-in/help/5009566) 
+KB5009627 (https://support.microsoft.com/en-in/help/5009627) 
+KB5009601 (https://support.microsoft.com/en-in/help/5009601) 
+
+ This QID checks for the file version of ntoskrnl.exe
+ The following versions of ntoskrnl.exe with their corresponding KBs are verified: 
+KB5009543 - 10.0.19041.1466 
+KB5009555 - 10.0.20348.469 
+KB5009557 - 10.0.17763.2452 
+KB5009545 - 10.0.18362.2037 
+KB5009624 - 6.3.9600.20237 
+KB5009595 - 6.3.9600.20237 
+KB5009586 - 6.2.9200.23581 
+KB5009619 - 6.2.9200.23581 
+KB5009610 - 6.1.7601.25827 
+KB5009621 - 6.1.7601.25827 
+KB5009546 - 10.0.14393.4886 
+KB5009585 - 10.0.10240.19177 
+KB5009566 - 10.0.22000.434 
+KB5009627 - 6.0.6003.21348 
+KB5009601 - 6.0.6003.21348","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the KB5009543 (https://support.microsoft.com/en-in/help/5009543) 
+KB5009555 (https://support.microsoft.com/en-in/help/5009555) 
+KB5009557 (https://support.microsoft.com/en-in/help/5009557) 
+KB5009545 (https://support.microsoft.com/en-in/help/5009545) 
+KB5009624 (https://support.microsoft.com/en-in/help/5009624) 
+KB5009595 (https://support.microsoft.com/en-in/help/5009595) 
+KB5009586 (https://support.microsoft.com/en-in/help/5009586) 
+KB5009619 (https://support.microsoft.com/en-in/help/5009619) 
+KB5009610 (https://support.microsoft.com/en-in/help/5009610) 
+KB5009621 (https://support.microsoft.com/en-in/help/5009621) 
+KB5009546 (https://support.microsoft.com/en-in/help/5009546) 
+KB5009585 (https://support.microsoft.com/en-in/help/5009585) 
+KB5009566 (https://support.microsoft.com/en-in/help/5009566) 
+KB5009627 (https://support.microsoft.com/en-in/help/5009627) 
+KB5009601 (https://support.microsoft.com/en-in/help/5009601) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5009543 (https://support.microsoft.com/en-in/help/5009543)  KB5009555 (https://support.microsoft.com/en-in/help/5009555)  KB5009557 (https://support.microsoft.com/en-in/help/5009557)  KB5009545 (https://support.microsoft.com/en-in/help/5009545)  KB5009624 (https://support.microsoft.com/en-in/help/5009624)  KB5009595 (https://support.microsoft.com/en-in/help/5009595)  KB5009586 (https://support.microsoft.com/en-in/help/5009586)  KB5009619 (https://support.microsoft.com/en-in/help/5009619)  KB5009610 (https://support.microsoft.com/en-in/help/5009610)  KB5009621 (https://support.microsoft.com/en-in/help/5009621)  KB5009546 (https://support.microsoft.com/en-in/help/5009546)  KB5009585 (https://support.microsoft.com/en-in/help/5009585)  KB5009566 (https://support.microsoft.com/en-in/help/5009566)  KB5009627 (https://support.microsoft.com/en-in/help/5009627)  KB5009601 (https://support.microsoft.com/en-in/help/5009601)","KB5009557 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.17763.2114#",2,1. 0-30 Days,Inside SLA,No,OS,Patch,Yes,P
+On Prem - Internal,10.98.27.85,vmw10apac-p0698.pimco.imswest.sscims.com,VMW10APAC-P0698,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,376389,Adobe Creative Cloud Desktop Application Multiple Vulnerabilities (APSB22-11),Serious,3,,,44626,44688,CVE-2022-23202,"Adobe Creative Cloud license lets you install apps on more than one computer and activate (sign in) on two. However, you can use your apps on only one computer at a time. This update fixes security bugs in Adobe Creative Cloud Desktop Application. 
+
+Affected Versions:  
+Creative Cloud Desktop Application (Installer) 2.7.0.13 and earlier version",Successful exploitation of the vulnerability will lead to Arbitrary code execution.,"The vendor has released a patch Creative Cloud Desktop Application(Installer) version 2.7.0.15 
+For more information please visit APSB22-11 (https://helpx.adobe.com/security/products/creative-cloud/apsb22-11.html).
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  APSB22-11 (https://helpx.adobe.com/security/products/creative-cloud/apsb22-11.html)",C:\Program Files (x86)\Adobe\Adobe Creative Cloud\Utils\Creative Cloud Desktop App.exe  Version is  5.5.0.617#,64,3. 46-90 Days,Inside SLA,No,Non-OS,Patch,Yes,Q
+On Prem - Internal,10.155.186.90,clv335pw-19c791.core.pimcocloud.net,CLV335PW-19C791,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,376546,Oracle Java Standard Edition (SE) Critical Patch Update - April 2022 (CPUAPR2022),Serious,3,,,44674,44688,"CVE-2022-0778, CVE-2022-21476, CVE-2022-21426, CVE-2022-21496, CVE-2022-21434, CVE-2022-21443","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.14, 17.0.2, 18 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,16,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,R
+On Prem - Internal,10.80.73.247,clv235dw-e083f2.core.pimcocloud.net,CLV235DW-E083F2,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,90882,Windows Remote Desktop Protocol Weak Encryption Method Allowed,Serious,3,3389,tcp,44568,44687,,"Remote Desktop Protocol is a protocol by which Terminal Service provides desktop level access to a remote user.  It can be used to remotely log in and interact with a Windows machine. 
+Since RDP transfers sensitive information about the user and the system, it can be configured to use encryption to provide privacy and integrity for its sessions. It is possible to configure RDP to use encryption algorithms that are considered insecure, such as RC4 40bit and RC4 56 bit.",If an attacker has access to the network traffic with RDP sessions using weak encryption methods it's possible to bruteforce the encryption parameters and compromise privacy of the RDP session.,"RDP needs to be configured to use strong encryption methods or use SSL as the privacy and integrity provider. 
+To configure RDP encryption methods 'Terminal Services Configuration' or 'Remote Desktop Session Host Configuration' snap-in can be launched in mmc.exe. 
+In 'Terminal Services Configuration' or 'Remote Desktop Session Host Configuration' properties dialog box General tab for the Encryption Level 'High' should be selected.
+ 
+On Windows XP the RDP configuration can be found under  Computer Configuration\Administrative Templates\Windows Components\Terminal Services and User Configuration\Administrative Templates\Windows Components\Terminal Services.  Under Encryption and Security item, double click on 'Set client connection encryption level' and enable the policy and select high for the 'Encryption level'. 
+For more details on configuration on 2008 R2 systems see Configure Server Authentication and Encryption Levels (http://technet.microsoft.com/en-us/library/cc770833.aspx). 
+For more detail on disabling RC4 see Microsoft Update for Disabling RC4 (https://technet.microsoft.com/library/security/2868725). 
+For details on supporting TLS 1.1 and TLS1.2 for Remote Desktop Services see Update to add RDS support for TLS 1.1 and TLS 1.2 in Windows 7 or Windows Server 2008 R2 (https://support.microsoft.com/en-us/kb/3080079). 
+For more details on configuration on windows server 2012 and 2012 R2 systems see  Management (how to) changes for RDS in Windows Server 2012 and 2012R2 (https://social.technet.microsoft.com/wiki/contents/articles/20684.management-how-to-changes-for-rds-in-windows-server-2012-and-2012r2.aspx).","RDP Supported Encryption methods:  RC4(40 bit),RC4(56 bit)#",122,4. 91-180 Days,Outside SLA,No,OS,Config,No,S
+On Prem - Internal,144.77.43.167,prodpmiq44.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.9,371749,Oracle Java SE Critical Patch Update - April 2019,Critical,4,,,44688,44688,"CVE-2019-2699, CVE-2019-2697, CVE-2019-2698, CVE-2019-2602, CVE-2019-2684","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK are exposed to five remotely exploitable vulnerabilities that affect various components.  
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 7u211, 8u202, 11.0.2, 12 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates (Java SE JDK and JRE 11.0.3, Java 8 Update 211 or later, Java SE JDK and JRE 7 Update 221) to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU April 2019 (https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html#AppendixJAVA) and Oracle Doc ID 2518941.1 (https://support.oracle.com/rs?type=doc&id=2518941.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2518941.1 (https://support.oracle.com/rs?type=doc&id=2518941.1)","Install Location	Version	Detection Type
+/usr/openv/java/jre/bin/java	1.8.0_31-b13	Enhanced#",2,1. 0-30 Days,Inside SLA,Yes,Non-OS,Patch,No,T
+On Prem - Internal,10.155.191.83,clv335pw-ee299d.core.pimcocloud.net,CLV335PW-EE299D,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,370371,Oracle Java SE Critical Patch Update - April 2017,Critical,5,,,44443,44688,"CVE-2017-3512, CVE-2017-3514, CVE-2017-3511, CVE-2017-3526, CVE-2017-3509, CVE-2017-3533, CVE-2017-3544, CVE-2017-3539","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for  April 2017 contains 8 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u141 and earlier, 7u131 and earlier, 8u121 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 131 or later, Java SE JDK and JRE 7 Update 141, Java SE JDK and JRE 6 Update 151) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU April 2017 (http://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html#AppendixJAVA) and Oracle Doc ID 2253297.1 (https://support.oracle.com/rs?type=doc&id=2253297.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2253297.1 (https://support.oracle.com/rs?type=doc&id=2253297.1)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,247,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,U
+On Prem - Internal,10.155.232.234,vmw10amer-p3052.pimco.imswest.sscims.com,VMW10AMER-P3052,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,372508,Oracle Java SE Critical Patch Update - April 2020,Critical,4,,,44023,44688,"CVE-2020-2803, CVE-2020-2805, CVE-2019-18197, CVE-2020-2816, CVE-2020-2781, CVE-2020-2830, CVE-2020-2767, CVE-2020-2800, CVE-2020-2778, CVE-2020-2764, CVE-2020-2754, CVE-2020-2755, CVE-2020-2773, CVE-2020-2756, CVE-2020-2757","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE:  versions 7u251, 8u241, 11.0.6, 14; Java SE Embedded: 8u241 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA) 
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",667,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,V
+On Prem - Internal,144.77.117.61,vmw10amer-p2277.pimco.imswest.sscims.com,VMW10AMER-P2277,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,373540,Oracle Java SE Critical Patch Update - October 2020 (CPUOCT2020),Serious,3,,,44136,44688,"CVE-2020-14803, CVE-2020-14792, CVE-2020-14781, CVE-2020-14782, CVE-2020-14797, CVE-2020-14779, CVE-2020-14796, CVE-2020-14798","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u271, 8u261, 11.0.8, 15 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - October 2020: JAVA (https://www.oracle.com/security-alerts/cpuoct2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",554,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,W
+Laptops - External,192.168.0.27,nb-w-184857,NB-W-184857,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 21H1,375961,Palo Alto Networks GlobalProtect App Portal gateway Buffer Overflow Vulnerability (GPC-13039),Critical,3,,,44536,44690,CVE-2021-3057,"The GlobalProtect app provides a simple way to extend the enterprise security policies out to mobile endpoints. 
+
+Affected Versions : 
+GlobalProtect app version 5.2 prior to version 5.2.8 on Windows 
+GlobalProtect app versions 5.1.X on Windows 
+GlobalProtect app  versions 5.0.X on Windows 
+
+QID Detection Logic (Authenticated): 
+This checks for vulnerable version of PanGPS.exe file",A denial-of-service (DoS) vulnerability in Palo Alto Networks GlobalProtect app on Windows systems allows a limited Windows user to send specifically-crafted input to the GlobalProtect app that results in a Windows blue screen of death (BSOD) error..,"Refer to Palo Alto security advisory GPC-13039  (https://security.paloaltonetworks.com/CVE-2021-3057) for updates and patch information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  GPC-13039 (https://security.paloaltonetworks.com/CVE-2021-3057)",C:\Program Files\Palo Alto Networks\GlobalProtect\PanGPA.exe  Version is  5.2.7.37#,154,4. 91-180 Days,Outside SLA,No,Non-OS,Patch,No,X
+On Prem - Internal,10.233.4.71,vme071p00d.pimco.imswest.sscims.com,VME071P00D,Windows Server,Windows_Server_2008,Windows Server 2008 R2 Enterprise 64 bit Edition Service Pack 1,375665,VMware Tools Local Privilege Escalation Vulnerability (VMSA-2021-0013),Serious,3,,,44485,44688,CVE-2021-21999,"VMware Tools is a suite of utilities that enhances the performance of the virtual machine guest operating system and improves management of the virtual machine running on VMware. 
+
+
+Affected Versions: 
+VMware Tools version from 11.0.0 prior to 11.2.6. 
+
+QID Detection Logic:(Authenticated) 
+It checks for vulnerable version of VMware tools.",An attacker with normal access to a virtual machine may exploit this issue by placing a malicious file renamed as `openssl.cnf' in an unrestricted directory which would allow code to be executed with elevated privileges.,"To remediate this issue update to VMware Tools version VMware Tools  11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html) 
+
+For more information please visit VMware advisory VMSA-2021-0013 (https://www.vmware.com/security/advisories/VMSA-2021-0013.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  VMware Tools for Windows 11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html)",C:\Program Files\VMware\VMware Tools\\vmtoolsd.exe  Version is  11.2.5.26209#,205,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,Yes,Y
+On Prem - Internal,10.82.97.79,msw10lv-63829f.pimco.imswest.sscims.com,MSW10LV-63829F,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,91872,Microsoft Windows Elevation of Privilege Vulnerability for March 2022,Critical,4,,,44688,44688,CVE-2022-21967,"Microsoft Windows Security Update -  March 2022 
+
+The KB Articles associated with the update: 
+KB5011495 (https://support.microsoft.com/en-in/help/5011495) 
+KB5011491 (https://support.microsoft.com/en-in/help/5011491) 
+KB5011487 (https://support.microsoft.com/en-in/help/5011487) 
+KB5011493 (https://support.microsoft.com/en-in/help/5011493) 
+KB5011485 (https://support.microsoft.com/en-in/help/5011485) 
+KB5011503 (https://support.microsoft.com/en-in/help/5011503)","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the KB5011495 (https://support.microsoft.com/en-in/help/5011495) 
+KB5011491 (https://support.microsoft.com/en-in/help/5011491) 
+KB5011487 (https://support.microsoft.com/en-in/help/5011487) 
+KB5011493 (https://support.microsoft.com/en-in/help/5011493) 
+KB5011485 (https://support.microsoft.com/en-in/help/5011485) 
+KB5011503 (https://support.microsoft.com/en-in/help/5011503) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5011495 (https://support.microsoft.com/en-in/help/5011495)  KB5011491 (https://support.microsoft.com/en-in/help/5011491)  KB5011487 (https://support.microsoft.com/en-in/help/5011487)  KB5011493 (https://support.microsoft.com/en-in/help/5011493)  KB5011485 (https://support.microsoft.com/en-in/help/5011485)  KB5011503 (https://support.microsoft.com/en-in/help/5011503)","KB5011503 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.17763.2114#",2,1. 0-30 Days,Inside SLA,No,OS,Patch,Yes,Z
+On Prem - Internal,10.155.54.171,clv235bl-2f5a8d.core.pimcocloud.net,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.9,372013,Oracle Java SE Critical Patch Update - July 2019,Critical,4,,,44380,44688,"CVE-2019-7317, CVE-2019-2821, CVE-2019-2762, CVE-2019-2769, CVE-2019-2745, CVE-2019-2816, CVE-2019-2842, CVE-2019-2786, CVE-2019-2818, CVE-2019-2766","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK are exposed to five remotely exploitable vulnerabilities that affect various components.  
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 7u221, 8u212, 11.0.3, 12.0.1; Java SE Embedded: 8u211 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates (Java SE JDK and JRE 12.0.2, 11.0.4, Java 8 Update 221 or later, Java SE JDK and JRE 7 Update 231) to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - July 2019 (https://www.oracle.com/technetwork/security-advisory/cpujul2019-5072835.html#AppendixJAVA) and Oracle Doc ID 2552042.1 (https://support.oracle.com/rs?type=doc&id=2552042.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2552042.1 (https://support.oracle.com/rs?type=doc&id=2552042.1)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",310,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,A
+On Prem - Internal,10.80.25.111,clv335pw-c03f17.core.pimcocloud.net,CLV335PW-C03F17,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,91889,Microsoft .NET Framework Denial of Service (DoS) Vulnerability for April 2022,Serious,3,,,44667,44688,CVE-2022-26832,"A denial of service vulnerability exist in Microsoft .Net Framework. 
+Following KBs are covered in this detection: 
+KB5012117 
+KB5012118 
+KB5012120 
+KB5012121 
+KB5012123 
+KB5012324 
+KB5012325 
+KB5012326 
+KB5012327 
+KB5012328 
+KB5012329 
+KB5012330 
+KB5012331 
+KB5012332 
+
+This security update is rated Important for supported versions of Microsoft .NET Framework. 
+.NET Framework 3.5, 3.5.1, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 and 4.8 
+QID Detection Logic (Authenticated): 
+- Checks for vulnerable version of System.web.dll for .Net Framework",Successful exploitation allows attacker to cause denial of service vulnerability.,"Customers are advised to refer to CVE-2022-26832 (https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-26832) for more details pertaining to this vulnerability. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  CVE-2022-26832 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26832)","KB5012326 or KB5012331 is not installed 
+%windir%\Microsoft.NET\Framework64\v2.0.50727\System.web.dll Version is 2.0.50727.8955
+%windir%\Microsoft.NET\Framework\v2.0.50727\System.web.dll Version is 2.0.50727.8955
+%windir%\Microsoft.NET\Framework64\v4.0.30319\System.web.dll Version is 4.8.4465.0
+%windir%\Microsoft.NET\Framework\v4.0.30319\System.web.dll Version is 4.8.4465.0#",23,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,B
+On Prem - Internal,10.155.210.40,,,Virtualization,Virtualization_ESXi,VMware ESXi 6.7.0 build 17499825,38170,SSL Certificate - Subject Common Name Does Not Match Server FQDN,Medium,2,443,tcp,44535,44689,,"An SSL Certificate associates an entity (person, organization, host, etc.) with a Public Key. In an SSL connection, the client authenticates the remote server using the server's Certificate and extracts the Public Key in the Certificate to establish the secure connection.
+ 
+A certificate whose Subject commonName or subjectAltName does not match the server FQDN offers only encryption without authentication.
+ 
+Please note that a false positive reporting of this vulnerability is possible in the following case:
+ If the common name of the certificate uses a wildcard such as *.somedomainname.com and the reverse DNS resolution of the target IP is not configured. In this case there is no way for Qualys to associate the wildcard common name to the IP. Adding a reverse DNS lookup entry to the target IP will solve this problem.","A man-in-the-middle attacker can exploit this vulnerability in tandem with a DNS cache poisoning attack to lure the client to another server, and then steal all the encryption communication.",Please install a server certificate whose Subject commonName or subjectAltName matches the server FQDN.,"Certificate #0 emailAddress=vmca@vmware.com,CN=csv0v5hpc1n011.core.pimcocloud.net,OU=VMware_Engineering,O=VMware,L=Palo_Alto,ST=California,C=US (csv0v5hpc1n011.core.pimcocloud.net) and IP (10.155.210.40) don't match
+(csv0v5hpc1n011.core.pimcocloud.net) and IP (10.155.210.40) don't match#",155,4. 91-180 Days,Inside SLA,No,Non-OS,Config,No,C
+AWS - External,10.238.52.104,admin-matador-prod-1,,Unix/Linux,Linux_Ubuntu,Ubuntu Linux 20.04.3,198697,Ubuntu Security Notification for libxml2 Vulnerability (USN-5324-1),Urgent,4,,,44635,44690,CVE-2022-23308,Libxml2 incorrectly handled certain xml files.,"Anattacker could use this issue to cause libxml2 to crash, resulting in adenial of service, or possibly execute arbitrary code.","Refer to Ubuntu security advisory USN-5324-1 (https://ubuntu.com/security/notices/USN-5324-1) for updates and patch information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  USN-5324-1: Ubuntu Linux (https://ubuntu.com/security/notices/USN-5324-1)","Package	Installed Version	Required Version
+libxml2-dev	2.9.10+dfsg-5ubuntu0.20.04.1	2.9.10+dfsg-5ubuntu0.20.04.2
+libxml2	2.9.10+dfsg-5ubuntu0.20.04.1	2.9.10+dfsg-5ubuntu0.20.04.2#",55,3. 46-90 Days,Outside SLA,No,OS,Patch,No,D
+On Prem - Internal,10.155.52.188,clv235bw-96e6a0.core.pimcocloud.net,CLV235BW-96E6A0,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,376442,VMware Tools Denial of Service (DoS) Vulnerability (VMSA-2022-0007),Critical,4,,,44625,44688,CVE-2022-22943,"VMware Tools is a suite of utilities that enhances the performance of the virtual machine guest operating system and improves management of the virtual machine running on VMware. 
+
+Affected Versions: 
+VMware Tools version from 10.x.x to 11.x.x. 
+
+QID Detection Logic:(Authenticated) 
+It checks for vulnerable version of VMware tools.","A malicious actor with local administrative privileges in the Windows guest OS, where VMware Tools is installed, may be able to execute code with system privileges in the Windows guest OS due to an uncontrolled search path element.","To remediate this issue update to VMware Tools version VMware Tools  12.0.0 (https://docs.vmware.com/en/VMware-Tools/12.0/rn/VMware-Tools-1200-Release-Notes.html) 
+
+For more information please visit VMware advisory VMSA-2022-0007 (https://www.vmware.com/security/advisories/VMSA-2022-0007.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  VMware Tools for Windows 12.0.0 (https://docs.vmware.com/en/VMware-Tools/12.0/rn/VMware-Tools-1200-Release-Notes.html)",C:\Program Files\VMware\VMware Tools\\vmtoolsd.exe  Version is  11.2.5.26209#,65,3. 46-90 Days,Outside SLA,No,Non-OS,Patch,No,E
+On Prem - Internal,10.80.72.101,vma201dw-b1c7bc.pimco.imswest.sscims.com,VMA201DW-B1C7BC,Windows Server,Windows_Server_2016,Windows Server 2016 Standard 64 bit Edition Version 1607,375665,VMware Tools Local Privilege Escalation Vulnerability (VMSA-2021-0013),Serious,3,,,44379,44688,CVE-2021-21999,"VMware Tools is a suite of utilities that enhances the performance of the virtual machine guest operating system and improves management of the virtual machine running on VMware. 
+
+
+Affected Versions: 
+VMware Tools version from 11.0.0 prior to 11.2.6. 
+
+QID Detection Logic:(Authenticated) 
+It checks for vulnerable version of VMware tools.",An attacker with normal access to a virtual machine may exploit this issue by placing a malicious file renamed as `openssl.cnf' in an unrestricted directory which would allow code to be executed with elevated privileges.,"To remediate this issue update to VMware Tools version VMware Tools  11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html) 
+
+For more information please visit VMware advisory VMSA-2021-0013 (https://www.vmware.com/security/advisories/VMSA-2021-0013.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  VMware Tools for Windows 11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html)",C:\Program Files\VMware\VMware Tools\\vmtoolsd.exe  Version is  11.2.5.26209#,311,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,F
+On Prem - Internal,172.21.81.60,nb-18-1157-5.pimco.imswest.sscims.com,NB-18-1157-5,Windows Workstation,Windows_Workstation_7,Windows 7 Enterprise 64 bit Edition Service Pack 1,90954,Windows Update For Credentials Protection and Management (Microsoft Security Advisory 2871997),Serious,3,,,43785,44688,,"Microsoft is announcing the availability of an update that improves credential protection and domain authentication controls to reduce credential theft. This update provides additional protection for the Local Security Authority (LSA), adds a restricted admin mode for Credential Security Support Provider (CredSSP), introduces support for the protected account-restricted domain user category, and enforces stricter authentication policies. 
+ 
+This update is designed to reduce the effectiveness of the Pass the hash attack.
+ 
+Affected Versions: 
+Windows 8, Windows RT, Windows Server 2012, Windows 7, and Windows Server 2008 R2 
+Note: 
+After you install this security update, you can control how installed WDigest credentials can be saved by using a registry setting. To prevent WDigest credentials from being stored in memory, a Group Policy setting can be applied to the ""UseLogonCredential"" registry entry under the following subkey: ""HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\SecurityProviders\WDigest"". If the UseLogonCredential value is set to 0, WDigest will not store credentials in memory.","If this vulnerability is successfully exploited, attackers can steal credentials of the system.","The vendor has released advisories and updates to fix these vulnerabilities. Refer to the following link for further details:
+Microsoft Security Advisory 2871997 (https://technet.microsoft.com/library/security/2871997)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Security Advisory 2871997 (https://technet.microsoft.com/library/security/2871997)",HKLM\System\CurrentControlSet\Control\SecurityProviders\WDigest UseLogonCredential is missing.#,905,7. 2+ Years,Outside SLA,No,OS,Patch,No,G
+On Prem - Internal,10.155.234.8,vmw10amer-p0778.pimco.imswest.sscims.com,VMW10AMER-P0778,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375620,Adobe Creative Cloud Desktop Application Multiple Vulnerabilities (APSB21-41),Serious,3,,,44380,44687,"CVE-2021-28633, CVE-2021-28594","Adobe Creative Cloud license lets you install apps on more than one computer and activate (sign in) on two. However, you can use your apps on only one computer at a time. This update fixes security bugs in Adobe Creative Cloud Desktop Application. 
+
+Affected Versions:  
+Creative Cloud Desktop Application (Installer) 2.4 and earlier version 
+
+QID Detection Logic (authenticated): 
+Operating System: Windows 
+The QID checks vulnerable version of file ""Creative Cloud Desktop App.exe"".",Successful exploitation of the vulnerability will lead to Creation of Temporary File in Directory with Incorrect Permissions.,"The vendor has released a patch Creative Cloud Desktop Application(Installer) version 2.5 
+For more information please visit APSB21-41 (https://helpx.adobe.com/security/products/creative-cloud/apsb21-41.html).
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  ASPB21-41 (https://helpx.adobe.com/security/products/creative-cloud/apsb21-41.html)",C:\Program Files (x86)\Adobe\Adobe Creative Cloud\Utils\Creative Cloud Desktop App.exe  Version is  4.7.0.400#,310,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,H
+Laptops - External,192.168.1.20,minint-am0g9lb,MININT-AM0G9LB,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1909,91785,Microsoft Windows Print Spooler Remote Code Execution Vulnerability (PrintNightmare),Urgent,4,,,44685,44688,CVE-2021-34527,"The Print Spooler is software built into the Windows operating system that temporarily stores print jobs in the computer's memory until the printer is ready to print them. 
+
+A remote code execution vulnerability exists when the Windows Print Spooler service improperly performs privileged file operations. An attacker who successfully exploited this vulnerability could run arbitrary code with SYSTEM privileges. An attacker could then install programs,view, change, or delete data or create new accounts with full user rights. 
+
+QID Detection Logic (authenticated): 
+Detection will flag when Spooler service is running (and ""Allow Print Spooler to accept client connections"" policy is not set to Disable) and the patches are missing. The following KBs and file version(of file spoolsv.exe) are checked: 
+
+KB5004947 - 10.0.17763.2029 
+KB5004946 - 10.0.18363.1646 
+KB5004945 - 10.0.19041.1803 
+KB5004948 - 10.0.14393.4470 
+KB5004950 - 10.0.10240.18969 
+KB5004953 - 6.1.7601.25633 
+KB5004951 - 6.1.7601.25633 
+KB5004954 - 6.3.9600.20046 
+KB5004958 - 6.3.9600.20046 
+KB5004960 - 6.2.9200.23383 
+KB5004956 - 6.2.9200.23383 
+KB5004955 - 6.0.6003.21138 
+KB5004959 - 6.0.6003.21138",Successful exploitation allows an attacker to execute arbitrary code with SYSTEM privileges.,"Please refer to the Security Update Guide (https://portal.msrc.microsoft.com/en-us/security-guidance). Workaround: Determine if the Print Spooler service is running: 
+Run the following: 
+Get-Service -Name Spooler 
+If the Print Spooler is running or if the service is not set to disabled, select one of the following options to either disable the Print Spooler service, or to Disable inbound remote printing through Group Policy: 
+
+Option 1 - Disable the Print Spooler service: 
+If disabling the Print Spooler service is appropriate for your enterprise, use the following PowerShell commands:
+Stop-Service -Name Spooler -Force 
+Set-Service -Name Spooler -StartupType Disabled 
+Impact of workaround: Disabling the Print Spooler service disables the ability to print both locally and remotely. 
+
+Option 2 - Disable inbound remote printing through Group Policy: 
+You can also configure the settings via Group Policy as follows: 
+Computer Configuration / Administrative Templates / Printers 
+Disable the ""Allow Print Spooler to accept client connections:"" policy to block remote attacks. 
+Impact of workaround This policy will block the remote attack vector by preventing inbound remote printing operations. The system will no longer function as a print server, but local printing to a directly attached device will still be possible. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  CVE-2021-34527 (https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527)","Spooler = SERVICE_RUNNING 
+KB5004946 is not installed  
+%windir%\system32\spoolsv.exe  Version is  10.0.18362.476#",5,1. 0-30 Days,Inside SLA,Yes,OS,Patch,Yes,I
+Laptops - External,192.168.1.6,nb-w-292353,NB-W-292353,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1903,372014,Microsoft Teams AppLocker Bypass Code Execution Vulnerability,Critical,3,,,44008,44690,,"Microsoft Teams contains a vulnerability that allows execution of arbitrary code by bypassing AppLocker settings. The updater component implemented in Teams is based on the Squirrel framework, and accepts arguments such as ""update"", ""updateRollback"". These allow an attacker to point to an controlled resource, downloading arbitrary files and executing them under the security context of the logged in user. 
+Affected Version: 
+Microsoft Teams version prior to 1.3.0.362 
+QID Detection Logic(Auth): 
+QID checks for the vulnerable version of Teams in  ""\AppData\Local\Microsoft\Teams\current"" .",Successful exploitation allows an attacker to execute arbitrary code under the security context of the currently logged in user.,"Customers are advised to update the Microsoft Teams version 1.3.0.362 (https://www.microsoft.com/en-in/microsoft-365/microsoft-teams/download-app) or later. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Teams version 1.3.0.362 (https://www.microsoft.com/en-in/microsoft-365/microsoft-teams/download-app)",%systemdrive%\Users\Administrator\AppData\Local\Microsoft\Teams\current\Teams.exe  Version is  1.2.0.34161#,682,6. 1-2 Years,Outside SLA,Yes,Non-OS,Patch,Yes,J
+On Prem - Internal,10.140.252.249,,,Network,Network_Cisco_Nexus,Cisco NX-OS 7.0(3)I4(1),316464,Cisco NX-OS Software Remote Package Manager Command Injection Vulnerability(cisco-sa-20190515-nxos-rpm-injec),Serious,3,,,44170,44689,CVE-2019-1732,"A vulnerability in the Remote Package Manager (RPM) subsystem of Cisco NX-OS Software could allow an authenticated, local attacker with administrator credentials to leverage a time-of-check, time-of-use (TOCTOU) race condition to corrupt local variables, which could lead to arbitrary command injection. 
+
+The vulnerability is due to the lack of a proper locking mechanism on critical variables that need to stay static until used. 
+
+ QID Detection Logic(Authenticated)  
+It checks for vulnerable version of Cisco NX-OS using show version Command.",A successful exploit could allow the attacker to perform arbitrary command injection.,"Customers are advised to refer to cisco-sa-20190515-nxos-rpm-injec (https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190515-nxos-rpm-injec) for more information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  cisco-sa-20190515-nxos-rpm-injec (https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190515-nxos-rpm-injec)","Cisco NX-OS Version on target is 7.0(3)I4(1)
+
+Cisco Nexus Operating System (NX-OS) Software
+TAC support: http://www.cisco.com/tac
+Copyright (C) 2002-2016, Cisco and/or its affiliates.
+All rights reserved.
+The copyrights to certain works contained in this software are
+owned by other third parties and used and distributed under their own
+licenses, such as open source.  This software is provided ""as is,"" and unless
+otherwise stated, there is no warranty, express or implied, including but not
+limited to warranties of merchantability and fitness for a particular purpose.
+Certain components of this software are licensed under
+the GNU General Public License (GPL) version 2.0 or 
+GNU General Public License (GPL) version 3.0  or the GNU
+Lesser General Public License (LGPL) Version 2.1 or 
+Lesser General Public License (LGPL) Version 2.0. 
+A copy of each such license is available at
+http://www.opensource.org/licenses/gpl-2.0.php and
+http://opensource.org/licenses/gpl-3.0.html and
+http://www.opensource.org/licenses/lgpl-2.1.php and
+http://www.gnu.org/licenses/old-licenses/library.txt.
+
+Software
+BIOS: version 07.51
+NXOS: version 7.0(3)I4(1)
+BIOS compile time:  02/15/2016
+NXOS image file is: bootflash:///nxos.7.0.3.I4.1.bin
+NXOS compile time:  5/15/2016 20:00:00 [05/15/2016 23:24:30]
+
+
+Hardware
+cisco Nexus9000 C9396PX Chassis 
+Intel(R) Core(TM) i3- CPU @ 2.50GHz with 16401852 kB of memory.
+Processor Board ID SAL2026SGRW
+
+Device name: NCSCNJPDRSA503B
+bootflash:   53298520 kB
+Kernel uptime is 2077 day(s), 6 hour(s), 43 minute(s), 53 second(s)
+
+Last reset 
+Reason: Unknown
+System version: 7.0(3)I4(1)
+Service: 
+
+plugin
+Core Plugin, Ethernet Plugin
+
+Active Package(s):#",520,6. 1-2 Years,Outside SLA,No,OS,Patch,No,K
+On Prem - Internal,10.155.189.128,clv335pw-5e382e.core.pimcocloud.net,CLV335PW-5E382E,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,376546,Oracle Java Standard Edition (SE) Critical Patch Update - April 2022 (CPUAPR2022),Serious,3,,,44674,44688,"CVE-2022-0778, CVE-2022-21476, CVE-2022-21426, CVE-2022-21496, CVE-2022-21434, CVE-2022-21443","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.14, 17.0.2, 18 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,16,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,L
+Laptops - External,192.168.1.74,ny-w-4574553,NY-W-4574553,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 1709,110390,Microsoft Office and Microsoft Office Services and Web Apps Security Update September 2021,Urgent,4,,,44454,44689,"CVE-2021-38655, CVE-2021-38650, CVE-2021-38654, CVE-2021-38653, CVE-2021-38658, CVE-2021-38646, CVE-2021-38660, CVE-2021-38657, CVE-2021-38656, CVE-2021-38659","Microsoft has released September 2021 security updates to fix multiple security vulnerabilities. 
+This security update contains the following: 
+MacOS Release Notes (https://support.microsoft.com/kb/5001949)  
+Office Click-2-Run and Office 365 Release Notes (https://support.microsoft.com/kb/5001986)  
+KB5001999 (https://support.microsoft.com/kb/5001999) 
+KB4484103 (https://support.microsoft.com/kb/4484103) 
+KB5002005 (https://support.microsoft.com/kb/5002005) 
+KB5001997 (https://support.microsoft.com/kb/5001997) 
+KB4484108 (https://support.microsoft.com/kb/4484108) 
+KB5002007 (https://support.microsoft.com/kb/5002007) 
+KB5001958 (https://support.microsoft.com/kb/5001958) 
+KB5002003 (https://support.microsoft.com/kb/5002003) 
+KB5002014 (https://support.microsoft.com/kb/5002014) 
+KB5002009 (https://support.microsoft.com/kb/5002009) 
+KB5002014 (https://support.microsoft.com/kb/5002014) 
+
+QID Detection Logic: 
+This authenticated QID checks the file versions from the Microsoft advisory with the versions on the affected office system. 
+
+Note: Office click-2-run and Office 365 installations need to be updated manually or need to be set to automatic update. There is no direct download for the patch.",Successful exploitation allows an attacker to execute code remotely.,"Refer to Microsoft Security Guidance (https://msrc.microsoft.com/update-guide/en-us) for more details pertaining to this vulnerability. 
+
+MacOS Release Notes (https://support.microsoft.com/kb/5001949)  
+Office Click-2-Run and Office 365 Release Notes (https://support.microsoft.com/kb/5001986)  
+KB5001999 (https://support.microsoft.com/kb/5001999) 
+KB4484103 (https://support.microsoft.com/kb/4484103) 
+KB5002005 (https://support.microsoft.com/kb/5002005) 
+KB5001997 (https://support.microsoft.com/kb/5001997) 
+KB4484108 (https://support.microsoft.com/kb/4484108) 
+KB5002007 (https://support.microsoft.com/kb/5002007) 
+KB5001958 (https://support.microsoft.com/kb/5001958) 
+KB5002003 (https://support.microsoft.com/kb/5002003) 
+KB5002014 (https://support.microsoft.com/kb/5002014) 
+KB5002009 (https://support.microsoft.com/kb/5002009) 
+KB5002014 (https://support.microsoft.com/kb/5002014) 
+
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Office and Microsoft Office Services and Web Apps Security Update September 2021 (https://msrc.microsoft.com/update-guide/en-us)","Office ClicktoRun or Office 365 SEPTEMBER 2021 Update is not installed  
+C:\Program Files\Microsoft Office\root\Office16\GRAPH.EXE  Version is  16.0.8431.2153#",236,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,M
+On Prem - Internal,10.155.235.169,vmw10amer-p1218.pimco.imswest.sscims.com,VMW10AMER-P1218,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,91879,Microsoft Windows Security Update for April 2022,Critical,4,,,44667,44688,"CVE-2022-26917, CVE-2022-26790, CVE-2022-26916, CVE-2022-26786, CVE-2022-26915, CVE-2022-26831, CVE-2022-26789, CVE-2022-26828, CVE-2022-26827, CVE-2022-26802, CVE-2022-26807, CVE-2022-26803, CVE-2022-26801, CVE-2022-26787, CVE-2022-26796, CVE-2022-26798, CVE-2022-26797, CVE-2022-24549, CVE-2022-26919, CVE-2022-26810, CVE-2022-26808, CVE-2022-26918, CVE-2022-26809, CVE-2022-26904, CVE-2022-26920, CVE-2022-26795, CVE-2022-26794, CVE-2022-26792, CVE-2022-26791, CVE-2022-26793, CVE-2022-26788, CVE-2022-26830, CVE-2022-26914, CVE-2022-24544, CVE-2022-24545, CVE-2022-24496, CVE-2022-24493, CVE-2022-24541, CVE-2022-24492, CVE-2022-24540, CVE-2022-24539, CVE-2022-24538, CVE-2022-24490, CVE-2022-24489, CVE-2022-24537, CVE-2022-24488, CVE-2022-24487, CVE-2022-24486, CVE-2022-24534, CVE-2022-24485, CVE-2022-24533, CVE-2022-24484, CVE-2022-24481, CVE-2022-24479, CVE-2022-24527, CVE-2022-24474, CVE-2022-24521, CVE-2022-23268, CVE-2022-26903, CVE-2022-24550, CVE-2022-24547, CVE-2022-24499, CVE-2022-26784, CVE-2022-26783, CVE-2022-26785, CVE-2022-24498, CVE-2022-24546, CVE-2022-24495, CVE-2022-24494, CVE-2022-24542, CVE-2022-24483, CVE-2022-24532, CVE-2022-24528, CVE-2022-23257, CVE-2022-21983, CVE-2022-22009, CVE-2022-22008, CVE-2022-24543, CVE-2022-24500, CVE-2022-24530","Microsoft Windows Security Update -  April 2022 
+
+The KB Articles associated with the update: 
+5012647 (https://support.microsoft.com/en-in/help/5012647) 
+5012592 (https://support.microsoft.com/en-in/help/5012592) 
+5012599 (https://support.microsoft.com/en-in/help/5012599) 
+5012604 (https://support.microsoft.com/en-in/help/5012604) 
+5012658 (https://support.microsoft.com/en-in/help/5012658) 
+5012632 (https://support.microsoft.com/en-in/help/5012632) 
+5012670 (https://support.microsoft.com/en-in/help/5012670) 
+5012653 (https://support.microsoft.com/en-in/help/5012653) 
+5012639 (https://support.microsoft.com/en-in/help/5012639) 
+5012650 (https://support.microsoft.com/en-in/help/5012650) 
+5012666 (https://support.microsoft.com/en-in/help/5012666) 
+5011552 (https://support.microsoft.com/en-in/help/5011552) 
+5011529 (https://support.microsoft.com/en-in/help/5011529) 
+5012596 (https://support.microsoft.com/en-in/help/5012596) 
+5012591 (https://support.microsoft.com/en-in/help/5012591) 
+5012626 (https://support.microsoft.com/en-in/help/5012626) 
+5012649 (https://support.microsoft.com/en-in/help/5012649) 
+
+ This QID checks for the file version of ntoskrnl.exe","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the 5012647 (https://support.microsoft.com/en-in/help/5012647) 
+5012592 (https://support.microsoft.com/en-in/help/5012592) 
+5012599 (https://support.microsoft.com/en-in/help/5012599) 
+5012604 (https://support.microsoft.com/en-in/help/5012604) 
+5012658 (https://support.microsoft.com/en-in/help/5012658) 
+5012632 (https://support.microsoft.com/en-in/help/5012632) 
+5012670 (https://support.microsoft.com/en-in/help/5012670) 
+5012653 (https://support.microsoft.com/en-in/help/5012653) 
+5012639 (https://support.microsoft.com/en-in/help/5012639) 
+5012650 (https://support.microsoft.com/en-in/help/5012650) 
+5012666 (https://support.microsoft.com/en-in/help/5012666) 
+5011552 (https://support.microsoft.com/en-in/help/5011552) 
+5011529 (https://support.microsoft.com/en-in/help/5011529) 
+5012596 (https://support.microsoft.com/en-in/help/5012596) 
+5012591 (https://support.microsoft.com/en-in/help/5012591) 
+5012626 (https://support.microsoft.com/en-in/help/5012626) 
+5012649 (https://support.microsoft.com/en-in/help/5012649) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5012647 (https://support.microsoft.com/en-in/help/5012647)  KB5012592 (https://support.microsoft.com/en-in/help/5012592)  KB5012599 (https://support.microsoft.com/en-in/help/5012599)  KB5012604 (https://support.microsoft.com/en-in/help/5012604)  KB5012658 (https://support.microsoft.com/en-in/help/5012658)  KB5012632 (https://support.microsoft.com/en-in/help/5012632)  KB5012670 (https://support.microsoft.com/en-in/help/5012670)  KB5012653 (https://support.microsoft.com/en-in/help/5012653)  KB5012639 (https://support.microsoft.com/en-in/help/5012639)  KB5012650 (https://support.microsoft.com/en-in/help/5012650)  KB5012666 (https://support.microsoft.com/en-in/help/5012666)  KB5011552 (https://support.microsoft.com/en-in/help/5011552)  KB5011529 (https://support.microsoft.com/en-in/help/5011529)  KB5012596 (https://support.microsoft.com/en-in/help/5012596)  KB5012591 (https://support.microsoft.com/en-in/help/5012591)  KB5012626 (https://support.microsoft.com/en-in/help/5012626)  KB5012649 (https://support.microsoft.com/en-in/help/5012649)","KB5012647 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.17763.2686#",23,1. 0-30 Days,Inside SLA,No,OS,Patch,Yes,N
+On Prem - Internal,144.77.245.170,uk-bk-b5202.pimco.imswest.sscims.com,UK-BK-B5202,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375964,Oracle Java SE Critical Patch Update - October 2021 (CPUOCT2021),Critical,4,,,44597,44688,"CVE-2021-3517, CVE-2021-35560, CVE-2021-35567, CVE-2021-35550, CVE-2021-3522, CVE-2021-35586, CVE-2021-35564, CVE-2021-35556, CVE-2021-35559, CVE-2021-35561, CVE-2021-35578, CVE-2021-35603, CVE-2021-35588","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u311, 8u301, 11.0.12, 17 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","This Critical Patch Update contains 15 new security patches for Oracle Java SE. 13 of these vulnerabilities may be remotely exploitable without authentication, i.e., may be exploited over a network without requiring user credentials","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",93,4. 91-180 Days,Outside SLA,No,Non-OS,Patch,No,O
+Laptops - External,192.168.0.159,l-w-12695511657,L-W-12695511657,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 21H2,91870,Microsoft Windows Security Update for March 2022,Urgent,4,,,44630,44689,"CVE-2022-23293, CVE-2022-23288, CVE-2022-24525, CVE-2022-24503, CVE-2022-24455, CVE-2022-24454, CVE-2022-24459, CVE-2022-24502, CVE-2022-23299, CVE-2022-23298, CVE-2022-23294, CVE-2022-23290, CVE-2022-23285, CVE-2022-23284, CVE-2022-23291, CVE-2022-24460, CVE-2022-23281, CVE-2022-23297, CVE-2022-23296, CVE-2022-24508, CVE-2022-24507, CVE-2022-23253, CVE-2022-21990, CVE-2022-21975, CVE-2022-23286, CVE-2022-23287, CVE-2022-24505, CVE-2022-23283, CVE-2022-21977, CVE-2022-22010","Microsoft Windows Security Update -  March 2022 
+
+The KB Articles associated with the update: 
+KB5011491 (https://support.microsoft.com/en-in/help/5011491) 
+KB5011487 (https://support.microsoft.com/en-in/help/5011487) 
+KB5011493 (https://support.microsoft.com/en-in/help/5011493) 
+KB5011495 (https://support.microsoft.com/en-in/help/5011495) 
+KB5011485 (https://support.microsoft.com/en-in/help/5011485) 
+KB5011503 (https://support.microsoft.com/en-in/help/5011503) 
+KB5011534 (https://support.microsoft.com/en-in/help/5011534) 
+KB5011525 (https://support.microsoft.com/en-in/help/5011525) 
+KB5011564 (https://support.microsoft.com/en-in/help/5011564) 
+KB5011497 (https://support.microsoft.com/en-in/help/5011497) 
+KB5011560 (https://support.microsoft.com/en-in/help/5011560) 
+KB5011535 (https://support.microsoft.com/en-in/help/5011535) 
+KB5011527 (https://support.microsoft.com/en-in/help/5011527) 
+KB5011552 (https://support.microsoft.com/en-in/help/5011552) 
+KB5011529 (https://support.microsoft.com/en-in/help/5011529) 
+
+
+
+ This QID checks for the file version of ntoskrnl.exe","Successful exploit could compromise Confidentiality, Integrity and Availability","Please refer to the KB5011491 (https://support.microsoft.com/en-in/help/5011491) 
+KB5011487 (https://support.microsoft.com/en-in/help/5011487) 
+KB5011493 (https://support.microsoft.com/en-in/help/5011493) 
+KB5011495 (https://support.microsoft.com/en-in/help/5011495) 
+KB5011485 (https://support.microsoft.com/en-in/help/5011485) 
+KB5011503 (https://support.microsoft.com/en-in/help/5011503) 
+KB5011534 (https://support.microsoft.com/en-in/help/5011534) 
+KB5011525 (https://support.microsoft.com/en-in/help/5011525) 
+KB5011564 (https://support.microsoft.com/en-in/help/5011564) 
+KB5011497 (https://support.microsoft.com/en-in/help/5011497) 
+KB5011560 (https://support.microsoft.com/en-in/help/5011560) 
+KB5011535 (https://support.microsoft.com/en-in/help/5011535) 
+KB5011527 (https://support.microsoft.com/en-in/help/5011527) 
+KB5011552 (https://support.microsoft.com/en-in/help/5011552) 
+KB5011529 (https://support.microsoft.com/en-in/help/5011529) 
+
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  KB5011491 (https://support.microsoft.com/en-in/help/5011491)  KB5011487 (https://support.microsoft.com/en-in/help/5011487)  KB5011493 (https://support.microsoft.com/en-in/help/5011493)  KB5011495 (https://support.microsoft.com/en-in/help/5011495)  KB5011485 (https://support.microsoft.com/en-in/help/5011485)  KB5011503 (https://support.microsoft.com/en-in/help/5011503)  KB5011534 (https://support.microsoft.com/en-in/help/5011534)  KB5011525 (https://support.microsoft.com/en-in/help/5011525)  KB5011564 (https://support.microsoft.com/en-in/help/5011564)  KB5011497 (https://support.microsoft.com/en-in/help/5011497)  KB5011560 (https://support.microsoft.com/en-in/help/5011560)  KB5011535 (https://support.microsoft.com/en-in/help/5011535)  KB5011527 (https://support.microsoft.com/en-in/help/5011527)  KB5011552 (https://support.microsoft.com/en-in/help/5011552)  KB5011529 (https://support.microsoft.com/en-in/help/5011529)","KB5011487 is not installed 
+%windir%\system32\ntoskrnl.exe  Version is  10.0.19041.1415#",60,3. 46-90 Days,Outside SLA,No,OS,Patch,No,P
+On Prem - Internal,10.155.50.134,clv235bw-91836c.core.pimcocloud.net,CLV235BW-91836C,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,371749,Oracle Java SE Critical Patch Update - April 2019,Critical,4,,,44170,44688,"CVE-2019-2699, CVE-2019-2697, CVE-2019-2698, CVE-2019-2602, CVE-2019-2684","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK are exposed to five remotely exploitable vulnerabilities that affect various components.  
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 7u211, 8u202, 11.0.2, 12 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates (Java SE JDK and JRE 11.0.3, Java 8 Update 211 or later, Java SE JDK and JRE 7 Update 221) to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU April 2019 (https://www.oracle.com/technetwork/security-advisory/cpuapr2019-5072813.html#AppendixJAVA) and Oracle Doc ID 2518941.1 (https://support.oracle.com/rs?type=doc&id=2518941.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2518941.1 (https://support.oracle.com/rs?type=doc&id=2518941.1)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,520,6. 1-2 Years,Outside SLA,Yes,Non-OS,Patch,No,Q
+On Prem - Internal,144.77.110.14,vmw10amer-p4944.pimco.imswest.sscims.com,VMW10AMER-P4944,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,376252,Oracle Java Standard Edition (SE) Critical Patch Update - January 2022 (CPUJAN2022),Serious,3,,,44590,44688,"CVE-2022-21349, CVE-2022-21291, CVE-2022-21305, CVE-2022-21277, CVE-2022-21360, CVE-2022-21365, CVE-2022-21366, CVE-2022-21282, CVE-2022-21296, CVE-2022-21299, CVE-2022-21271, CVE-2022-21283, CVE-2022-21293, CVE-2022-21294, CVE-2022-21340, CVE-2022-21341, CVE-2022-21248","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.13, 17.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2022 (https://www.oracle.com/security-alerts/cpujan2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2022 (https://www.oracle.com/security-alerts/cpujan2022.html)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",100,4. 91-180 Days,Outside SLA,No,Non-OS,Patch,No,R
+On Prem - Internal,172.21.89.32,nb-20-1124-4.pimco.imswest.sscims.com,NB-20-1124-4,Windows Workstation,Windows_Workstation_7,Windows 7 Enterprise 64 bit Edition Service Pack 1,90473,Microsoft Visual Basic Runtime Extended Files Remote Code Execution Vulnerability (MS08-070),Critical,4,,,44486,44689,"CVE-2008-4252, CVE-2008-4253, CVE-2008-4254, CVE-2008-4255, CVE-2008-4256, CVE-2008-3704","A remote code execution vulnerability exists in DataGrid, FlexGrid, Hierarchical Flexgrid, Windows Common, Charts and Masked Edit ActiveX controls for Visual Basic 6.
+ 
+An attacker can exploit this vulnerability by constructing a specially-crafted web page and making the user visit this page.",An attacker who successfully exploits this vulnerability could gain the same user rights as the logged-on user.,"Refer to MS08-070 (https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-070) for more information. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  MS08-070: Microsoft Office Project 2003 Service Pack 3 (http://download.windowsupdate.com/msdownload/update/software/secu/2008/10/vb6cntrls11_d66139b6c780b42f36640a2196277ee5c5b12718.cab)  MS08-070: Microsoft Office Project 2007 (http://download.windowsupdate.com/msdownload/update/software/secu/2008/10/mscomct2_4ef3172913b5150360b297fd3f95722a56640cd7.cab)
+
+Virtual Patches:
+Trend Micro Virtual Patching(http://www.trendmicro.com/vulnerabilitycontrols)
+Virtual Patch #1002708: Microsoft Visual Studio 'Msmask32.ocx' ActiveX Control Remote Buffer Overflow
+Virtual Patch #1003126: Masked Edit Control Memory Corruption Vulnerability
+Virtual Patch #1003109: DataGrid ActiveX Control Memory Corruption
+Virtual Patch #1003111: FlexGrid ActiveX Control Memory Corruption
+Virtual Patch #1003112: Restrict IE ActiveX Controls For MS08-070
+Virtual Patch #1003125: Hierarchical FlexGrid Control Memory Corruption Vulnerability
+Virtual Patch #1003123: Windows Common AVI Parsing Overflow
+Virtual Patch #1003122: Charts Control Memory Corruption Vulnerability","Visual Basic 6
+HKLM\SOFTWARE\WOW6432node\Microsoft\Visual Basic\6.0 exists
+HKLM\SOFTWARE\Microsoft\Updates\VB6\KB926857 Installed is missing.
+%windir%\System32\msmask32.ocx version is  6.0.84.18 .#",204,5. 180-365 Days,Outside SLA,Yes,OS,Patch,Yes,S
+On Prem - Internal,10.155.53.142,clv235bw-44b16c.core.pimcocloud.net,CLV235BW-44B16C,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,375665,VMware Tools Local Privilege Escalation Vulnerability (VMSA-2021-0013),Serious,3,,,44380,44688,CVE-2021-21999,"VMware Tools is a suite of utilities that enhances the performance of the virtual machine guest operating system and improves management of the virtual machine running on VMware. 
+
+
+Affected Versions: 
+VMware Tools version from 11.0.0 prior to 11.2.6. 
+
+QID Detection Logic:(Authenticated) 
+It checks for vulnerable version of VMware tools.",An attacker with normal access to a virtual machine may exploit this issue by placing a malicious file renamed as `openssl.cnf' in an unrestricted directory which would allow code to be executed with elevated privileges.,"To remediate this issue update to VMware Tools version VMware Tools  11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html) 
+
+For more information please visit VMware advisory VMSA-2021-0013 (https://www.vmware.com/security/advisories/VMSA-2021-0013.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  VMware Tools for Windows 11.2.6 (https://docs.vmware.com/en/VMware-Tools/11.2/rn/VMware-Tools-1126-Release-Notes.html)",C:\Program Files\VMware\VMware Tools\\vmtoolsd.exe  Version is  11.2.5.26209#,310,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,T
+On Prem - Internal,144.77.89.31,betapmwsv14.pimco.imswest.sscims.com,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 6.10,370280,Oracle Java SE Critical Patch Update - January 2017,Critical,5,,,44688,44688,"CVE-2016-2183, CVE-2016-5546, CVE-2016-5547, CVE-2016-5548, CVE-2016-5549, CVE-2016-5552, CVE-2016-8328, CVE-2017-3231, CVE-2017-3241, CVE-2017-3252, CVE-2017-3253, CVE-2017-3259, CVE-2017-3260, CVE-2017-3261, CVE-2017-3262, CVE-2017-3272, CVE-2017-3289","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for  January 2017 contains 16 new security fixes across multiple Java SE products and sub-products.
+ 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 6u131 and earlier, 7u121 and earlier, 8u112 and earlier.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 8 Update 121 or later, Java SE JDK and JRE 7 Update 131, Java SE JDK and JRE 6 Update 141) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU January 2017 (http://www.oracle.com/technetwork/security-advisory/cpujan2017-2881727.html#AppendixJAVA) and Oracle Doc ID 2219954.1 (https://support.oracle.com/rs?type=doc&id=2219954.1) to obtain more details.
+ 
+Updates for Java 5, Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 5 and Java 6 only for customers who have purchased Java support or have Oracle products that require Java 5, Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2017 (Java) (http://www.oracle.com/technetwork/security-advisory/cpujan2017-2881727.html#AppendixJAVA)  Oracle Critical Patch Update Advisory - January 2017 (Java) (https://support.oracle.com/rs?type=doc&id=2219954.1)","Install Location	Version	Detection Type
+/base/vendor/jdk/lx-x86_64/1.6.0_33/bin/java	1.6.0_33-b03	Enhanced
+/base/vendor/jdk/lx-x86_64/1.6.0_33/jre/bin/java	1.6.0_33-b03	Enhanced
+/base/vendor/jdk/lx-x86_64/7u67/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/lx-x86_64/7u67/jre/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/lx-x86_64/7u76/bin/java	1.7.0_76-b13	Enhanced
+/base/vendor/jdk/lx-x86_64/7u76/jre/bin/java	1.7.0_76-b13	Enhanced
+/base/vendor/jdk/lx-x86_64/8u102/bin/java	1.8.0_102-b14	Enhanced
+/base/vendor/jdk/lx-x86_64/8u102/jre/bin/java	1.8.0_102-b14	Enhanced
+/base/vendor/jdk/lx-x86_64/8u20/bin/java	1.8.0_20-b26	Enhanced
+/base/vendor/jdk/lx-x86_64/8u20/jre/bin/java	1.8.0_20-b26	Enhanced
+/base/vendor/jdk/lx-x86_64/8u40/bin/java	1.8.0_40-b25	Enhanced
+/base/vendor/jdk/lx-x86_64/8u40/jre/bin/java	1.8.0_40-b25	Enhanced
+/base/vendor/jdk/lx-x86_64/8u92/bin/java	1.8.0_92-b14	Enhanced
+/base/vendor/jdk/lx-x86_64/8u92/jre/bin/java	1.8.0_92-b14	Enhanced
+/base/vendor/jdk/lx-x86_64/jdk1.7.0_60/bin/java	1.7.0_60-b19	Enhanced
+/base/vendor/jdk/lx-x86_64/jdk1.7.0_60/jre/bin/java	1.7.0_60-b19	Enhanced
+/base/vendor/jdk/sol-sparc_32/7u67/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/sol-sparc_32/7u67/jre/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/sol-sparc_64/7u67/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/sol-sparc_64/7u67/jre/bin/java	1.7.0_67-b01	Enhanced
+/base/vendor/jdk/sol-sparc_64/8u20/bin/java	1.8.0_20-b26	Enhanced
+/base/vendor/jdk/sol-sparc_64/8u20/jre/bin/java	1.8.0_20-b26	Enhanced
+/opt/CA/WorkloadAutomationAE/SystemAgent/WA_AGENT_BWSV14/jre/bin/java	1.7.0_51-b13	Enhanced
+/usr/openv/java/jre/bin/java	1.8.0_31-b13	Enhanced#",2,1. 0-30 Days,Inside SLA,Yes,Non-OS,Patch,No,U
+On Prem - Internal,10.140.105.240,,,Network,Network_Cisco_IOS,"Cisco IOS 15.0(2)SE11, RELEASE SOFTWARE (fc3)",316205,Cisco IOS and IOS XE Software Smart Install Remote Code Execution Vulnerability (cisco-sa-20180328-smi2),Critical,4,,,44681,44688,CVE-2018-0171,"A vulnerability in the Smart Install feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition, or to execute arbitrary code on an affected device. 
+
+The vulnerability is due to improper validation of packet data. An attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port 4786.  
+
+ 
+QID Detection Logic (Authenticated): 
+The check matches Cisco IOS XE version retrieved via Unix Auth using ""show version"" command.  
+QID Detection Logic (Unauthenticated): 
+The check matches Cisco IOS XE version retrieved via SNMP or TCP/IP Fingerprint or NTP or Telnet.","A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following impacts:
+
+Triggering a reload of the device
+Allowing the attacker to execute arbitrary code on the device
+Causing an indefinite loop on the affected device that triggers a watchdog crash","Refer to Cisco advisory cisco-sa-20180328-smi2 (https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2) for updates and patch information.
+ 
+
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  cisco-sa-20180328-smi2: Cisco IOS and IOS XE (https://software.cisco.com/download/navigator.html?mdfid=281458045)","OS obtained: Cisco IOS 15.0(2)SE11, RELEASE SOFTWARE (fc3)#",9,1. 0-30 Days,Inside SLA,Yes,OS,Patch,Yes,V
+On Prem - Internal,172.22.56.58,,,Undefined,Undefined_Linux,Ubuntu / Tiny Core Linux / Linux 2.6.x,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Medium,1,443,tcp,44626,44688,,"The scan target supports version 1.1 of the TLS protocol. That version is in the process of being deprecated and is no longer recommended. Instead the newer versions 1.2 and/or 1.3 should be used. The TLSv1.1 protocol itself does not have any currently exploitable vulnerabilities. However some vendor implementations of TLSv1.1 have weaknesses which may be exploitable. 
+This QID is posted as potential, when servers require client certificates and we cannot complete the handshake. 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","Supporting TLSv1.1 by itself does not necessarily have any harmful consequences, but it is no longer considered best practice because of bad past experience with some vendor implementations of TLSv1.1.","Disable the use of TLSv1.1 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1_1
+
+If the test is successful, then the target support TLSv1.1",TLSv1.1 is supported#,64,3. 46-90 Days,Inside SLA,No,Non-OS,Patch,Yes,W
+On Prem - Internal,144.77.114.76,msw10nb-d55a0d.pimco.imswest.sscims.com,MSW10NB-D55A0D,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375964,Oracle Java SE Critical Patch Update - October 2021 (CPUOCT2021),Critical,4,,,44541,44688,"CVE-2021-3517, CVE-2021-35560, CVE-2021-35567, CVE-2021-35550, CVE-2021-3522, CVE-2021-35586, CVE-2021-35564, CVE-2021-35556, CVE-2021-35559, CVE-2021-35561, CVE-2021-35578, CVE-2021-35603, CVE-2021-35588","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u311, 8u301, 11.0.12, 17 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","This Critical Patch Update contains 15 new security patches for Oracle Java SE. 13 of these vulnerabilities may be remotely exploitable without authentication, i.e., may be exploited over a network without requiring user credentials","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - October 2021 (https://www.oracle.com/security-alerts/cpuoct2021.html)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",149,4. 91-180 Days,Outside SLA,No,Non-OS,Patch,Yes,X
+Laptops - External,10.19.100.109,sg-w-490557,SG-W-490557,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise 64 bit Edition Version 21H1,110327,Microsoft Office and Microsoft Office Services and Web Apps Security Update December 2018,Urgent,4,,,44035,44690,"CVE-2018-8580, CVE-2018-8587, CVE-2018-8597, CVE-2018-8598, CVE-2018-8627, CVE-2018-8628, CVE-2018-8635, CVE-2018-8636, CVE-2018-8650","Microsoft released security updates in December 2018 to fix multiple security vulnerabilities. 
+This security update contains the following KBs: 
+KB2597975 
+KB2965312 
+KB4011207 
+KB4011680 
+KB4092472 
+KB4461465 
+KB4461481 
+KB4461521 
+KB4461532 
+KB4461541 
+KB4461542 
+KB4461544 
+KB4461549 
+KB4461551 
+KB4461556 
+KB4461558 
+KB4461559 
+KB4461565 
+KB4461566 
+KB4461569 
+KB4461570 
+KB4461576 
+KB4461577 
+KB4461580 
+ 
+QID Detection Logic: 
+This authenticated QID checks the file versions from above Microsoft KB article with the versions on affected office system.",Successful exploitation allows an attacker to execute arbitrary code.,"Refer to Microsoft Security Guidance (https://portal.msrc.microsoft.com/en-us/security-guidance) for more details pertaining to this vulnerability. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Microsoft Office and Microsoft Office Services and Web Apps Security Update December 2018 (https://portal.msrc.microsoft.com/en-us/security-guidance)","HKLM\SOFTWARE\Microsoft\Office\ClickToRun\Configuration UpdateChannel = http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114 
+Office Semi-Annual Channel December 2018 is not installed  
+C:\Program Files\Microsoft Office\root\VFS\ProgramFilesCommonX64\Microsoft Shared\OFFICE16\MSO.DLL  Version is  16.0.8431.2153#",655,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,Yes,Y
+AWS - External,10.238.59.204,ip-10-238-59-204.us-west-2.compute.internal,,Unix/Linux,Linux_Amazon,Amazon Linux 2,353127,Amazon Linux Security Advisory for glibc : ALAS2-2022-1736,Urgent,5,,,44593,44690,CVE-2021-33574,"The mq_notify function in the gnu c library (aka glibc) has a use-after-free.  It may use the notification thread attributes object (passed through its struct sigevent parameter) after it has been freed by the caller, leading to a denial of service (application crash) or possibly unspecified other impact. ( ( CVE-2021-33574 (https://access.redhat.com/security/cve/CVE-2021-33574)) </P>   Note: The preceding description block is extracted directly from the security advisory. Using automation, we have attempted to clean and format it as much as possible without introducing additional issues.","Successful exploitation of this vulnerability could lead to a securitybreach or could affect integrity, availability, and confidentiality.","Please refer to Amazon advisory: ALAS2-2022-1736 (https://alas.aws.amazon.com/AL2/ALAS-2022-1736.html) for affected packages and patching details, or update with your package manager.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  ALAS2-2022-1736: Amazon Linux 2 (https://alas.aws.amazon.com/AL2/ALAS-2022-1736.html)","Package	Installed Version	Required Version
+glibc	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-common	2.26-55.amzn2.x86_64	2.26-57.amzn2
+libcrypt	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-headers	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-minimal-langpack	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-locale-source	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-all-langpacks	2.26-55.amzn2.x86_64	2.26-57.amzn2
+glibc-devel	2.26-55.amzn2.x86_64	2.26-57.amzn2#",97,4. 91-180 Days,Outside SLA,No,OS,Patch,No,Z
+On Prem - Internal,10.155.234.149,vmw10amer-p5247.pimco.imswest.sscims.com,VMW10AMER-P5247,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,372508,Oracle Java SE Critical Patch Update - April 2020,Critical,4,,,43953,44688,"CVE-2020-2803, CVE-2020-2805, CVE-2019-18197, CVE-2020-2816, CVE-2020-2781, CVE-2020-2830, CVE-2020-2767, CVE-2020-2800, CVE-2020-2778, CVE-2020-2764, CVE-2020-2754, CVE-2020-2755, CVE-2020-2773, CVE-2020-2756, CVE-2020-2757","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE:  versions 7u251, 8u241, 11.0.6, 14; Java SE Embedded: 8u241 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA) 
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2020 (https://www.oracle.com/security-alerts/cpuapr2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",737,7. 2+ Years,Outside SLA,No,Non-OS,Patch,No,A
+On Prem - Internal,10.140.118.75,,,Undefined,Undefined_Linux,Ubuntu / Tiny Core Linux / Linux 2.6.x,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Medium,1,8443,tcp,44226,44688,,"The scan target supports version 1.1 of the TLS protocol. That version is in the process of being deprecated and is no longer recommended. Instead the newer versions 1.2 and/or 1.3 should be used. The TLSv1.1 protocol itself does not have any currently exploitable vulnerabilities. However some vendor implementations of TLSv1.1 have weaknesses which may be exploitable. 
+This QID is posted as potential, when servers require client certificates and we cannot complete the handshake. 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","Supporting TLSv1.1 by itself does not necessarily have any harmful consequences, but it is no longer considered best practice because of bad past experience with some vendor implementations of TLSv1.1.","Disable the use of TLSv1.1 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1_1
+
+If the test is successful, then the target support TLSv1.1",TLSv1.1 is supported#,464,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,B
+On Prem - Internal,10.155.43.177,clv235dw-048c79.core.pimcocloud.net,CLV235DW-048C79,Windows Server,Windows_Server_2016,Windows Server 2016 Standard 64 bit Edition Version 1607,375784,Google Chrome Prior To 92.0.4515.159 Multiple Vulnerabilities,Critical,4,,,44506,44688,"CVE-2021-30598, CVE-2021-30599, CVE-2021-30600, CVE-2021-30601, CVE-2021-30602, CVE-2021-30603, CVE-2021-30604","Google Chrome is a web browser for multiple platforms developed by Google. 
+Affected Versions: Google Chrome Prior to 92.0.4515.159 
+QID Detection Logic(Authenticated): This QID checks for vulnerable versions of Google Chrome on Windows, Linux and MAC OS.",Successful exploitation allows an attacker to compromise the system.,"Customers are advised to upgrade to latest version 92.0.4515.159 For further details refer to Google Chrome 92.0.4515.159 (https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop.html)
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Google Chrome 92.0.4515.159 (https://chromereleases.googleblog.com/2021/08/stable-channel-update-for-desktop.html)",%ProgramFiles%\Google\Chrome\Application\92.0.4515.107\chrome.dll file version is 92.0.4515.107#,184,5. 180-365 Days,Outside SLA,No,Non-OS,Patch,No,C
+On Prem - Internal,10.155.51.125,clv235bl-fc8796.core.pimcocloud.net,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.6,238736,Red Hat Update for expat (RHSA-2020:3952),Serious,3,,,44135,44688,"CVE-2018-20843, CVE-2019-15903","Expat is a C library for parsing XML documents. Security Fix(es): expat: large number of colons in input makes parser consume high amount of resources, leading to DoS (CVE-2018-20843) expat: heap-based buffer over-read via crafted XML input (CVE-2019-15903) Affected Products:                 Red Hat Enterprise Linux Server 7 x86_64                           Red Hat Enterprise Linux Workstation 7 x86_64                           Red Hat Enterprise Linux Desktop 7 x86_64                           Red Hat Enterprise Linux for IBM z Systems 7 s390x                           Red Hat Enterprise Linux for Power, big endian 7 ppc64                           Red Hat Enterprise Linux for Scientific Computing 7 x86_64                           Red Hat Enterprise Linux for Power, little endian 7 ppc64le",On successful exploitation it could allow an attacker to execute code.,"Upgrade to the latest packages which contain a patch. Refer to Applying Package Updates to RHEL system (https://access.redhat.com/articles/11258) for details. 
+                        Refer to Red Hat security advisory RHSA-2020:3952 (https://access.redhat.com/errata/RHSA-2020:3952) to address this issue and obtain more information.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  RHSA-2020:3952: Red Hat Enterprise Linux (https://access.redhat.com/errata/RHSA-2020:3952)","Package	Installed Version	Required Version
+expat	2.1.0-10.el7_3.x86_64	2.1.0-12.el7#",555,6. 1-2 Years,Outside SLA,No,OS,Patch,No,D
+AWS - External,10.238.96.194,riskcalc-dev-infra-1,,Unix/Linux,Linux_Ubuntu,Ubuntu Linux 20.04.3,198484,Ubuntu Security Notification for GNU cpio Vulnerability (USN-5064-1),Critical,3,,,44454,44690,CVE-2021-38185,"Cpio incorrectly handled certain pattern files.   Note: The preceding description block is extracted directly from the security advisory. Using automation, we have attempted to clean and format it as much as possible without introducing additional issues.","a remote attacker could use this issue to cause cpio to crash, resulting in a denial of service, or possibly execute arbitrary code..","Refer to Ubuntu advisory: USN-5064-1 (https://ubuntu.com/security/notices/USN-5064-1) for affected packages and patching details, or update with your package manager.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  USN-5064-1: Ubuntu Linux (https://ubuntu.com/security/notices/USN-5064-1)","Package	Installed Version	Required Version
+cpio	2.13+dfsg-2	2.13+dfsg-2ubuntu0.3#",236,5. 180-365 Days,Outside SLA,No,OS,Patch,No,E
+On Prem - Internal,10.98.27.131,vmw10apac-p1213.pimco.imswest.sscims.com,VMW10APAC-P1213,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,372333,Oracle Java SE Critical Patch Update - January 2020,Critical,4,,,44627,44688,"CVE-2020-2604, CVE-2019-16168, CVE-2019-13117, CVE-2019-13118, CVE-2020-2601, CVE-2020-2585, CVE-2020-2655, CVE-2020-2593, CVE-2020-2654, CVE-2020-2590, CVE-2020-2659, CVE-2020-2583","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE:  versions 7u241, 8u231, 11.0.5, 13.0.1; Java SE Embedded: 8u231 and prior 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.","Successful exploitation allows an unauthenticated, remote attacker to execute arbitrary code on the targeted system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - January 2020 (https://www.oracle.com/security-alerts/cpujan2020.html#AppendixJAVA) and Oracle Doc ID 2617684.1 (https://support.oracle.com/rs?type=doc&id=2617684.1) to obtain more details.
+ 
+Updates for Java 7 are no longer available to the public. Oracle offers updates to Java 7 only for customers who have purchased Java support or have Oracle products that require Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2617684.1 (https://www.oracle.com/security-alerts/cpujan2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",63,3. 46-90 Days,Outside SLA,No,Non-OS,Patch,Yes,F
+On Prem - Internal,10.176.132.226,ntnx-nxv041pc03-cvm.pimco.imswest.sscims.com,,Undefined,Undefined_Linux,Ubuntu / Linux 2.x,11,Hidden RPC Services,Medium,2,,,43953,44688,,"The Portmapper/Rpcbind listens on port 111 and stores an updated list of registered RPC services running on the server (RPC name, version and port number). It acts as a ""gateway"" for clients wanting to connect to any RPC daemon. 
+ 
+When the portmapper/rpcbind is removed or firewalled, standard RPC client programs fail to obtain the portmapper list.  However, by sending carefully crafted packets, it's possible to determine which RPC programs are listening on which port. This technique is known as direct RPC scanning. It's used to bypass portmapper/rpcbind in order to find RPC programs running on a port (TCP or UDP ports). On Linux servers, RPC services are typically listening on privileged ports (below 1024), whereas on Solaris, RPC services are on temporary ports (starting with port 32700).","Unauthorized users can build a list of RPC services running on the host. If they discover vulnerable RPC services on the host, they then can exploit them.",Firewalling the portmapper port or removing the portmapper service is not sufficient to prevent unauthorized users from accessing the RPC daemons. You should remove all RPC services that are not strictly required on this host.,"Name	Program	Version	Protocol	Port
+portmap/rpcbind	100000	2-4	tcp	111
+nfs	100003	3	tcp	2049#",737,7. 2+ Years,Outside SLA,No,Non-OS,Config,No,G
+On Prem - Internal,10.155.185.45,clv335pw-4e1a06.core.pimcocloud.net,CLV335PW-4E1A06,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,371265,Oracle Java SE Critical Patch Update - October 2018,Critical,5,,,44254,44688,"CVE-2018-3183, CVE-2018-3209, CVE-2018-3169, CVE-2018-3149, CVE-2018-3211, CVE-2018-3180, CVE-2018-3214, CVE-2018-3157, CVE-2018-3150, CVE-2018-13785, CVE-2018-3136, CVE-2018-3139","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for October 2018 contains 12 new security fixes for Oracle Java SE. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions prior to 6u211, 7u201, 8u191 and 11.0.1.
+ 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 11.0.1, Java 8 Update 191 or later, Java SE JDK and JRE 7 Update 201, Java SE JDK and JRE 6 Update 211) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU October 2018 (https://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html#AppendixJAVA) and Oracle Doc ID 2455624.1 (https://support.oracle.com/rs?type=doc&id=2455624.1) to obtain more details.
+ 
+Updates for Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 6 and Java 7 only for customers who have purchased Java support or have Oracle products that require Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2455624.1 (https://support.oracle.com/rs?type=doc&id=2455624.1)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,436,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,H
+On Prem - Internal,10.82.50.73,vmw10amer-p3131.pimco.imswest.sscims.com,VMW10AMER-P3131,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,373156,Oracle Java SE Critical Patch Update - July 2020(CPUJUL2020),Critical,4,,,44254,44688,"CVE-2020-14664, CVE-2020-14583, CVE-2020-14593, CVE-2020-14562, CVE-2020-14621, CVE-2020-14556, CVE-2020-14573, CVE-2020-14581, CVE-2020-14578, CVE-2020-14579, CVE-2020-14577","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions Java SE: 8u251, 11.0.7 and 14.0.1 and prior; Java SE Embedded: 8u251 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Successful exploit allows unauthenticated attacker with network access via multiple protocols to compromise Java SE.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Java SE CPU - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - July 2020 (https://www.oracle.com/security-alerts/cpujul2020.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",436,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,I
+On Prem - Internal,172.21.86.24,nb-19-1016-4.pimco.imswest.sscims.com,NB-19-1016-4,Windows Workstation,Windows_Workstation_7,Windows 7 Enterprise 64 bit Edition Service Pack 1,90044,Allowed Null Session,Serious,3,,,43785,44689,"CVE-2002-1117, CVE-2000-1200","It is possible to log into the target host using a NULL session. 
+Windows NT has a feature allowing anonymous users to obtain domain user names and the share list. Windows NT ACL editor requires the Domain Controllers to return a list of account names. 
+
+We check for ""HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\LSA  RestrictAnonymous"" as well as ""HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters RestrictNullSessAccess"" = 0 as Microsoft has stated that ""Remote access to the registry may still be possible after you follow the steps in this article if the RestrictNullSessAccess registry value has been created and is set to 0. This value allows remote access to the registry by using a null session. The value overrides other explicit restrictive settings.""","Unauthorized users can establish a null session and obtain sensitive information, such as usernames and/or the share list, which could be used in further attacks against the host.","To disable or restrict null session, please refer to Microsoft TechNet : RestrictNullSessAccess (https://technet.microsoft.com/en-us/library/cc957461.aspx) for further details.",HKLM\SYSTEM\CurrentControlSet\Control\LSA RestrictAnonymous = 0#,905,7. 2+ Years,Outside SLA,No,OS,Config,No,J
+On Prem - Internal,10.155.53.171,clv235bw-43210c.core.pimcocloud.net,CLV235BW-43210C,Windows Server,Windows_Server_2012,Windows Server 2012 R2 Standard 64 bit Edition,374873,Oracle Java SE Critical Patch Update - January 2021 (CPUJAN2021),Serious,3,,,44317,44688,CVE-2020-14803,"Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u281, 8u271, 11.0.9, 15.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2021 (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2021: Java (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA)",C:\Program Files\Java\jre1.8.0_121\bin\wsdetect.dll file version is 8.0.1210.13#,373,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,K
+On Prem - Internal,10.140.97.7,,,Undefined,Undefined_Linux,Ubuntu / Tiny Core Linux / Linux 2.6.x,45242,Remote Management Service Accepting Unencrypted Credentials Detected(HTTP),Serious,3,,,44674,44688,,"A remote management service that accepts unencrypted credentials was detected on the target host.
+ 
+Services like HTTP with basic auth are checked.","A malicious individual can easily intercept unencrypted passwords during transmission using a ""network sniffer"" and use this data to gain unauthorized access.","If possible, use alternate services that provide encryption. 
+Using strong cryptography, render all authentication credentials (such as passwords/phrases) unreadable during transmission.","Service Name: HTTP on TCP port 80.
+HTTP Service Accepting Basic Auth Credentials Detected#",16,1. 0-30 Days,Inside SLA,No,Non-OS,Config,Yes,L
+On Prem - Internal,10.98.27.103,vmw10apac-p0019.pimco.imswest.sscims.com,VMW10APAC-P0019,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,376546,Oracle Java Standard Edition (SE) Critical Patch Update - April 2022 (CPUAPR2022),Serious,3,,,44688,44688,"CVE-2022-0778, CVE-2022-21476, CVE-2022-21426, CVE-2022-21496, CVE-2022-21434, CVE-2022-21443","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.14, 17.0.2, 18 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",2,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,M
+On Prem - Internal,10.155.235.87,vmw10amer-p5107.pimco.imswest.sscims.com,VMW10AMER-P5107,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,375395,IBM MQ DOS Vulnerability(303559),Medium,2,,,44536,44688,CVE-2018-1371,"The IBM MQ Appliance is a hardware product that provides IBM MQ ready installed and ready to use. The main use of IBM MQ is to send or exchange messages. One application puts a message on a queue on one computer, and another application gets the same message from another queue on a different computer. 
+
+CVE-2018-1371: An IBM MQ client connecting to an MQ queue manager can cause a SIGSEGV in the amqrmppa channel process terminating it. 
+
+Affected Versions: 
+IBM MQ V 8.0.0.8 
+IBM MQ V9 LTS 9.0.0.2 
+IBM MQ version 9.0.4 
+
+QID Detection Logic: (Authenticated)  
+Operating System: Linux 
+The QID runs the command ""/opt/mqm/bin/dspmqver -v | grep -A3 '^Name'"" and ""/usr/mqm/bin/dspmqver -v | grep -A3 '^Name'"" (for AIX only) to see if the system is running a vulnerable version of IBM MQ or not. 
+
+Operating System: Windows 
+It checks for vulnerable IBM MQ/WebSphere MQ versions.",Successful exploitation of this vulnerability could leads to cause Denial of service and may crash the process.,"The vendor has released a fix to resolve the issue, please refer to 303559 (https://www.ibm.com/support/pages/node/303559) for more information. 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  303559 (https://www.ibm.com/support/pages/node/303559)","C:\Program Files\IBM\MQ\bin\runmqdnm.exe  Version is  9.0.4.0
+C:\Program Files\IBM\MQ\bin\runmqdnm.exe  Version is  9.0.4.0#",154,4. 91-180 Days,Inside SLA,No,Non-OS,Patch,No,N
+On Prem - External,8.23.149.11,,,Windows Server,Windows_Server_2012,Windows 2012,38628,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server supports Transport Layer Security (TLSv1.0),Critical,3,443,tcp,44618,44687,,"TLS is capable of using a multitude of ciphers (algorithms) to create the public and private key pairs. 
+For example if TLSv1.0 uses either the RC4 stream cipher, or a block cipher in CBC mode. 
+RC4 is known to have biases and the block cipher in CBC mode is vulnerable to the POODLE attack. 
+
+TLSv1.0, if configured to use the same cipher suites as SSLv3, includes a means by which a TLS implementation can downgrade the connection to SSL v3.0, thus weakening security. 
+
+A POODLE-type (https://blog.qualys.com/ssllabs/2014/12/08/poodle-bites-tls) attack could also be launched directly at TLS without negotiating a downgrade. 
+
+  This QID is an automatic PCI FAIL in accordance with the PCI standards.  
+
+Further details can be found under:  
+PCI: ASV Program Guide v3.1 (page 27) (https://www.pcisecuritystandards.org/documents/ASV_Program_Guide_v3.1.pdf) 
+PCI: Use of SSL Early TLS and ASV Scans (https://www.pcisecuritystandards.org/documents/Use-of-SSL-Early-TLS-and-ASV-Scans.pdf)
+ 
+ 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","An attacker can exploit cryptographic flaws to conduct man-in-the-middle type attacks or to decryption communications. 
+For example: An attacker could force a downgrade from the TLS protocol to the older SSLv3.0 protocol and exploit the POODLE vulnerability, read secure communications or maliciously modify messages. 
+A POODLE-type (https://blog.qualys.com/ssllabs/2014/12/08/poodle-bites-tls) attack could also be launched directly at TLS without negotiating a downgrade.","Disable the use of TLSv1.0 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1
+
+If the test is successful, then the target support TLSv1",TLSv1.0 is supported#,72,3. 46-90 Days,Outside SLA,No,Non-OS,Patch,No,O
+On Prem - Internal,10.155.238.131,vmw10amer-p3302.pimco.imswest.sscims.com,VMW10AMER-P3302,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,374873,Oracle Java SE Critical Patch Update - January 2021 (CPUJAN2021),Serious,3,,,44667,44688,CVE-2020-14803,"Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u281, 8u271, 11.0.9, 15.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2021 (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2021: Java (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11#",23,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,P
+On Prem - Internal,10.155.201.14,pimcloudchef-lv.core.pimcocloud.net,,Unix/Linux,CatchAll,Red Hat Enterprise Linux Server 7.6,376546,Oracle Java Standard Edition (SE) Critical Patch Update - April 2022 (CPUAPR2022),Serious,3,,,44689,44689,"CVE-2022-0778, CVE-2022-21476, CVE-2022-21426, CVE-2022-21496, CVE-2022-21434, CVE-2022-21443","Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u331, 8u321, 11.0.14, 17.0.2, 18 and prior 
+
+QID Detection Logic (Authenticated): 
+Operating System: Windows 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll. 
+
+QID Detection Logic (Authenticated): 
+Operating System: Linux 
+This QID checks product version from the java binary.","Successful exploitation could allow an attacker to affect the confidentiality, integrity and availability of data on the target system.","The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - April 2022 (https://www.oracle.com/security-alerts/cpuapr2022.html)","Install Location	Version	Detection Type
+/opt/opscode/embedded/jre/bin/java	1.8.0_162-b12	Enhanced
+/opt/opscode/embedded/jre/jre/bin/java	1.8.0_162-b12	Enhanced#",1,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,Q
+On Prem - Internal,10.155.57.60,pypimco-cache-beta.core.pimcocloud.net,,Unix/Linux,Linux_RHEL,Red Hat Enterprise Linux Server 7.9,371079,Oracle Java SE Critical Patch Update - July 2018,Critical,5,,,44254,44688,"CVE-2018-2938, CVE-2018-2964, CVE-2018-2941, CVE-2018-2942, CVE-2018-2972, CVE-2018-2973, CVE-2018-2940, CVE-2018-2952","Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages.
+ 
+JRE and JDK are exposed to multiple vulnerabilities that affect various components. Oracle's Java Critical Patch Update for July 2018 contains 8 new security fixes for Oracle Java SE. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions prior to 6u201, 7u191, 8u181 and 10.0.2.
+ 
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dl or verify.dll.",Exploitation could allow an attacker to take complete control of an affected system.,"The vendor released updates (Java SE JDK and JRE 10.0.2, Java 8 Update 181 or later, Java SE JDK and JRE 7 Update 191, Java SE JDK and JRE 6 Update 201) to resolve these issues. 
+ 
+Refer to vendor advisory Oracle Java SE CPU July 2018 (http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html#AppendixJAVA) and Oracle Doc ID 2420122.1 (https://support.oracle.com/rs?type=doc&id=2420122.1) to obtain more details.
+ 
+Updates for Java 6 and Java 7 are no longer available to the public. Oracle offers updates to Java 6 and Java 7 only for customers who have purchased Java support or have Oracle products that require Java 6 and Java 7.
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Doc ID 2420122.1  (https://support.oracle.com/rs?type=doc&id=2420122.1)","Install Location	Version	Detection Type
+/usr/lib/jvm/jdk1.7.0_79/bin/java	1.7.0_79-b15	Default
+/usr/lib/jvm/jdk1.7.0_79/jre/bin/java	1.7.0_79-b15	Enhanced#",436,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,R
+On Prem - Internal,10.155.233.112,vmw10amer-p2400.pimco.imswest.sscims.com,VMW10AMER-P2400,Windows Workstation,Windows_Workstation_10,Windows 10 Enterprise LTSC 2019 64 bit Edition Version 1809,374873,Oracle Java SE Critical Patch Update - January 2021 (CPUJAN2021),Serious,3,,,44226,44687,CVE-2020-14803,"Oracle Java Runtime Environment (JRE) is a platform that supports the execution of programs that are developed using the Java programming language. The JRE platform also supports Java Applets, which can be loaded from Web pages. 
+Oracle Java JRE and JDK contain multiple remotely exploitable vulnerabilities that affect various components. 
+
+Affected Versions: 
+Oracle Java JDK and JRE, versions 7u281, 8u271, 11.0.9, 15.0.1 and prior 
+
+QID Detection Logic (Authenticated): 
+This QID checks for the file or product version of jvm.dll or wsdetect.dll or verify.dll.",Exploitation could allow an attacker to impact the confidentiality of an affected system.,"The vendor has released updates to resolve these issues. 
+ 
+Customers are advised to refer to vendor advisory Oracle Critical Patch Update Advisory - January 2021 (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA) 
+ Patch: 
+Following are links for downloading patches to fix the vulnerabilities:
+  Oracle Critical Patch Update Advisory - January 2021: Java (https://www.oracle.com/security-alerts/cpujan2021.html#AppendixJAVA)","C:\Program Files\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files (x86)\Java\jre1.8.0_231\bin\wsdetect.dll file version is 8.0.2310.11
+C:\Program Files\Java\jdk1.8.0_201\jre\bin\wsdetect.dll file version is 8.0.2010.9
+C:\Program Files (x86)\Java\jdk1.8.0_201\jre\bin\wsdetect.dll file version is 8.0.2010.9#",464,6. 1-2 Years,Outside SLA,No,Non-OS,Patch,No,S
+On Prem - Internal,10.80.14.55,irvpimhpemscm010.pimco.imswest.sscims.com,,Other,CatchAll,,38794,Secure Sockets Layer/Transport Layer Security (SSL/TLS) Server Supports Transport Layer Security (TLSv1.1),Medium,1,771,tcp,44689,44689,,"The scan target supports version 1.1 of the TLS protocol. That version is in the process of being deprecated and is no longer recommended. Instead the newer versions 1.2 and/or 1.3 should be used. The TLSv1.1 protocol itself does not have any currently exploitable vulnerabilities. However some vendor implementations of TLSv1.1 have weaknesses which may be exploitable. 
+This QID is posted as potential, when servers require client certificates and we cannot complete the handshake. 
+
+NOTE: On March 31, 2021 Transport Layer Security (TLS) versions 1.0 (RFC 2246) and 1.1 (RFC 4346) are formally deprecated.
+Refer to Deprecating TLS 1.0 and TLS 1.1 (https://tools.ietf.org/html/rfc8996)","Supporting TLSv1.1 by itself does not necessarily have any harmful consequences, but it is no longer considered best practice because of bad past experience with some vendor implementations of TLSv1.1.","Disable the use of TLSv1.1 protocol in favor of a cryptographically stronger protocol such as TLSv1.2.
+The following openssl commands can be used to do a manual test:
+openssl s_client -connect ip:port -tls1_1
+
+If the test is successful, then the target support TLSv1.1",TLSv1.1 is supported#,1,1. 0-30 Days,Inside SLA,No,Non-OS,Patch,Yes,T

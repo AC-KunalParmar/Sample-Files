@@ -1,0 +1,4044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.2" version="1" serialNumber="urn:uuid:7f9a4e41-bcc6-42d2-b871-6193d76e735b">
+  <metadata>
+    <timestamp>2021-06-09T15:49:50-04:00</timestamp>
+    <tools>
+      <tool>
+        <vendor>anchore</vendor>
+        <name>syft</name>
+        <version>v0.17.0-SNAPSHOT-ff47c67</version>
+      </tool>
+    </tools>
+    <component type="file">
+      <name>./keycloak</name>
+      <version></version>
+    </component>
+  </metadata>
+  <components>
+    <component type="library">
+      <name>@babel/cli</name>
+      <version>7.8.4</version>
+      <purl>pkg:npm/@babel%2Fcli@7.8.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/code-frame</name>
+      <version>7.0.0</version>
+      <purl>pkg:npm/@babel%2Fcode-frame@7.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@babel/compat-data</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fcompat-data@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/core</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fcore@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/generator</name>
+      <version>7.3.4</version>
+      <purl>pkg:npm/@babel%2Fgenerator@7.3.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-annotate-as-pure</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-annotate-as-pure@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-builder-binary-assignment-operator-visitor</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-builder-binary-assignment-operator-visitor@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-builder-react-jsx</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-builder-react-jsx@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-builder-react-jsx-experimental</name>
+      <version>7.12.4</version>
+      <purl>pkg:npm/@babel%2Fhelper-builder-react-jsx-experimental@7.12.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-call-delegate</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fhelper-call-delegate@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-compilation-targets</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fhelper-compilation-targets@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-create-class-features-plugin</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fhelper-create-class-features-plugin@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-create-regexp-features-plugin</name>
+      <version>7.8.8</version>
+      <purl>pkg:npm/@babel%2Fhelper-create-regexp-features-plugin@7.8.8</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-define-map</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-define-map@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-explode-assignable-expression</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-explode-assignable-expression@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-function-name</name>
+      <version>7.1.0</version>
+      <purl>pkg:npm/@babel%2Fhelper-function-name@7.1.0</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-get-function-arity</name>
+      <version>7.0.0</version>
+      <purl>pkg:npm/@babel%2Fhelper-get-function-arity@7.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-hoist-variables</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-hoist-variables@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-member-expression-to-functions</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-member-expression-to-functions@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-module-imports</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-module-imports@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-module-transforms</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fhelper-module-transforms@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-optimise-call-expression</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-optimise-call-expression@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-plugin-utils</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-plugin-utils@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-regex</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-regex@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-remap-async-to-generator</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-remap-async-to-generator@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-replace-supers</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fhelper-replace-supers@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-simple-access</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-simple-access@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-split-export-declaration</name>
+      <version>7.0.0</version>
+      <purl>pkg:npm/@babel%2Fhelper-split-export-declaration@7.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-validator-identifier</name>
+      <version>7.10.4</version>
+      <purl>pkg:npm/@babel%2Fhelper-validator-identifier@7.10.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helper-wrap-function</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fhelper-wrap-function@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/helpers</name>
+      <version>7.8.4</version>
+      <purl>pkg:npm/@babel%2Fhelpers@7.8.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/highlight</name>
+      <version>7.0.0</version>
+      <purl>pkg:npm/@babel%2Fhighlight@7.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@babel/parser</name>
+      <version>7.3.4</version>
+      <purl>pkg:npm/@babel%2Fparser@7.3.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-async-generator-functions</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-async-generator-functions@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-class-properties</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-class-properties@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-dynamic-import</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-dynamic-import@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-json-strings</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-json-strings@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-nullish-coalescing-operator</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-nullish-coalescing-operator@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-object-rest-spread</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-object-rest-spread@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-optional-catch-binding</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-optional-catch-binding@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-optional-chaining</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-optional-chaining@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-proposal-unicode-property-regex</name>
+      <version>7.8.8</version>
+      <purl>pkg:npm/@babel%2Fplugin-proposal-unicode-property-regex@7.8.8</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-async-generators</name>
+      <version>7.8.4</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-async-generators@7.8.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-dynamic-import</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-dynamic-import@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-json-strings</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-json-strings@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-jsx</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-jsx@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-nullish-coalescing-operator</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-nullish-coalescing-operator@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-object-rest-spread</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-object-rest-spread@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-optional-catch-binding</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-optional-catch-binding@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-optional-chaining</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-optional-chaining@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-top-level-await</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-top-level-await@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-syntax-typescript</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-syntax-typescript@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-arrow-functions</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-arrow-functions@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-async-to-generator</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-async-to-generator@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-block-scoped-functions</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-block-scoped-functions@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-block-scoping</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-block-scoping@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-classes</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-classes@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-computed-properties</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-computed-properties@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-destructuring</name>
+      <version>7.8.8</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-destructuring@7.8.8</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-dotall-regex</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-dotall-regex@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-duplicate-keys</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-duplicate-keys@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-exponentiation-operator</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-exponentiation-operator@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-for-of</name>
+      <version>7.8.6</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-for-of@7.8.6</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-function-name</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-function-name@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-literals</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-literals@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-member-expression-literals</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-member-expression-literals@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-modules-amd</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-modules-amd@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-modules-commonjs</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-modules-commonjs@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-modules-systemjs</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-modules-systemjs@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-modules-umd</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-modules-umd@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-named-capturing-groups-regex</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-named-capturing-groups-regex@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-new-target</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-new-target@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-object-super</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-object-super@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-parameters</name>
+      <version>7.8.8</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-parameters@7.8.8</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-property-literals</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-property-literals@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-react-display-name</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-react-display-name@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-react-jsx</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-react-jsx@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-react-jsx-self</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-react-jsx-self@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-react-jsx-source</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-react-jsx-source@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-regenerator</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-regenerator@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-reserved-words</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-reserved-words@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-shorthand-properties</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-shorthand-properties@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-spread</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-spread@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-sticky-regex</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-sticky-regex@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-template-literals</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-template-literals@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-typeof-symbol</name>
+      <version>7.8.4</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-typeof-symbol@7.8.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-typescript</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-typescript@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/plugin-transform-unicode-regex</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fplugin-transform-unicode-regex@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/preset-env</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fpreset-env@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/preset-react</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fpreset-react@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/preset-typescript</name>
+      <version>7.8.3</version>
+      <purl>pkg:npm/@babel%2Fpreset-typescript@7.8.3</purl>
+    </component>
+    <component type="library">
+      <name>@babel/runtime</name>
+      <version>7.8.7</version>
+      <purl>pkg:npm/@babel%2Fruntime@7.8.7</purl>
+    </component>
+    <component type="library">
+      <name>@babel/template</name>
+      <version>7.2.2</version>
+      <purl>pkg:npm/@babel%2Ftemplate@7.2.2</purl>
+    </component>
+    <component type="library">
+      <name>@babel/traverse</name>
+      <version>7.3.4</version>
+      <purl>pkg:npm/@babel%2Ftraverse@7.3.4</purl>
+    </component>
+    <component type="library">
+      <name>@babel/types</name>
+      <version>7.3.4</version>
+      <purl>pkg:npm/@babel%2Ftypes@7.3.4</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/babel-utils</name>
+      <version>0.6.10</version>
+      <purl>pkg:npm/@emotion%2Fbabel-utils@0.6.10</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/hash</name>
+      <version>0.6.6</version>
+      <purl>pkg:npm/@emotion%2Fhash@0.6.6</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/memoize</name>
+      <version>0.6.6</version>
+      <purl>pkg:npm/@emotion%2Fmemoize@0.6.6</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/serialize</name>
+      <version>0.9.1</version>
+      <purl>pkg:npm/@emotion%2Fserialize@0.9.1</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/stylis</name>
+      <version>0.7.1</version>
+      <purl>pkg:npm/@emotion%2Fstylis@0.7.1</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/unitless</name>
+      <version>0.6.7</version>
+      <purl>pkg:npm/@emotion%2Funitless@0.6.7</purl>
+    </component>
+    <component type="library">
+      <name>@emotion/utils</name>
+      <version>0.8.2</version>
+      <purl>pkg:npm/@emotion%2Futils@0.8.2</purl>
+    </component>
+    <component type="library">
+      <name>@fortawesome/fontawesome-common-types</name>
+      <version>0.2.28</version>
+      <purl>pkg:npm/@fortawesome%2Ffontawesome-common-types@0.2.28</purl>
+    </component>
+    <component type="library">
+      <name>@fortawesome/free-brands-svg-icons</name>
+      <version>5.13.0</version>
+      <purl>pkg:npm/@fortawesome%2Ffree-brands-svg-icons@5.13.0</purl>
+    </component>
+    <component type="library">
+      <name>@npmcli/move-file</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/@npmcli%2Fmove-file@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>@patternfly/react-core</name>
+      <version>3.153.3</version>
+      <purl>pkg:npm/@patternfly%2Freact-core@3.153.3</purl>
+    </component>
+    <component type="library">
+      <name>@patternfly/react-icons</name>
+      <version>3.15.16</version>
+      <purl>pkg:npm/@patternfly%2Freact-icons@3.15.16</purl>
+    </component>
+    <component type="library">
+      <name>@patternfly/react-styles</name>
+      <version>3.7.14</version>
+      <purl>pkg:npm/@patternfly%2Freact-styles@3.7.14</purl>
+    </component>
+    <component type="library">
+      <name>@patternfly/react-tokens</name>
+      <version>2.8.12</version>
+      <purl>pkg:npm/@patternfly%2Freact-tokens@2.8.12</purl>
+    </component>
+    <component type="library">
+      <name>@rollup/plugin-commonjs</name>
+      <version>11.0.2</version>
+      <purl>pkg:npm/@rollup%2Fplugin-commonjs@11.0.2</purl>
+    </component>
+    <component type="library">
+      <name>@rollup/plugin-json</name>
+      <version>4.1.0</version>
+      <purl>pkg:npm/@rollup%2Fplugin-json@4.1.0</purl>
+    </component>
+    <component type="library">
+      <name>@rollup/plugin-node-resolve</name>
+      <version>7.1.3</version>
+      <purl>pkg:npm/@rollup%2Fplugin-node-resolve@7.1.3</purl>
+    </component>
+    <component type="library">
+      <name>@rollup/plugin-replace</name>
+      <version>2.3.4</version>
+      <purl>pkg:npm/@rollup%2Fplugin-replace@2.3.4</purl>
+    </component>
+    <component type="library">
+      <name>@rollup/pluginutils</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/@rollup%2Fpluginutils@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>@sindresorhus/is</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/@sindresorhus%2Fis@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>@szmarczak/http-timer</name>
+      <version>4.0.5</version>
+      <purl>pkg:npm/@szmarczak%2Fhttp-timer@4.0.5</purl>
+    </component>
+    <component type="library">
+      <name>@types/c3</name>
+      <version>0.6.4</version>
+      <purl>pkg:npm/@types%2Fc3@0.6.4</purl>
+    </component>
+    <component type="library">
+      <name>@types/cacheable-request</name>
+      <version>6.0.1</version>
+      <purl>pkg:npm/@types%2Fcacheable-request@6.0.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3</name>
+      <version>4.13.2</version>
+      <purl>pkg:npm/@types%2Fd3@4.13.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-array</name>
+      <version>1.2.7</version>
+      <purl>pkg:npm/@types%2Fd3-array@1.2.7</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-axis</name>
+      <version>1.0.12</version>
+      <purl>pkg:npm/@types%2Fd3-axis@1.0.12</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-brush</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/@types%2Fd3-brush@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-chord</name>
+      <version>1.0.9</version>
+      <purl>pkg:npm/@types%2Fd3-chord@1.0.9</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-collection</name>
+      <version>1.0.8</version>
+      <purl>pkg:npm/@types%2Fd3-collection@1.0.8</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-color</name>
+      <version>1.2.2</version>
+      <purl>pkg:npm/@types%2Fd3-color@1.2.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-dispatch</name>
+      <version>1.0.7</version>
+      <purl>pkg:npm/@types%2Fd3-dispatch@1.0.7</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-drag</name>
+      <version>1.2.3</version>
+      <purl>pkg:npm/@types%2Fd3-drag@1.2.3</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-dsv</name>
+      <version>1.0.36</version>
+      <purl>pkg:npm/@types%2Fd3-dsv@1.0.36</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-ease</name>
+      <version>1.0.9</version>
+      <purl>pkg:npm/@types%2Fd3-ease@1.0.9</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-force</name>
+      <version>1.2.1</version>
+      <purl>pkg:npm/@types%2Fd3-force@1.2.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-format</name>
+      <version>1.3.1</version>
+      <purl>pkg:npm/@types%2Fd3-format@1.3.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-geo</name>
+      <version>1.11.1</version>
+      <purl>pkg:npm/@types%2Fd3-geo@1.11.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-hierarchy</name>
+      <version>1.1.6</version>
+      <purl>pkg:npm/@types%2Fd3-hierarchy@1.1.6</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-interpolate</name>
+      <version>1.3.1</version>
+      <purl>pkg:npm/@types%2Fd3-interpolate@1.3.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-path</name>
+      <version>1.0.8</version>
+      <purl>pkg:npm/@types%2Fd3-path@1.0.8</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-polygon</name>
+      <version>1.0.7</version>
+      <purl>pkg:npm/@types%2Fd3-polygon@1.0.7</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-quadtree</name>
+      <version>1.0.7</version>
+      <purl>pkg:npm/@types%2Fd3-quadtree@1.0.7</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-queue</name>
+      <version>3.0.8</version>
+      <purl>pkg:npm/@types%2Fd3-queue@3.0.8</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-random</name>
+      <version>1.1.2</version>
+      <purl>pkg:npm/@types%2Fd3-random@1.1.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-request</name>
+      <version>1.0.5</version>
+      <purl>pkg:npm/@types%2Fd3-request@1.0.5</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-scale</name>
+      <version>1.0.14</version>
+      <purl>pkg:npm/@types%2Fd3-scale@1.0.14</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-selection</name>
+      <version>1.4.1</version>
+      <purl>pkg:npm/@types%2Fd3-selection@1.4.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-shape</name>
+      <version>1.3.2</version>
+      <purl>pkg:npm/@types%2Fd3-shape@1.3.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-time</name>
+      <version>1.0.10</version>
+      <purl>pkg:npm/@types%2Fd3-time@1.0.10</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-time-format</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/@types%2Fd3-time-format@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-timer</name>
+      <version>1.0.9</version>
+      <purl>pkg:npm/@types%2Fd3-timer@1.0.9</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-transition</name>
+      <version>1.1.6</version>
+      <purl>pkg:npm/@types%2Fd3-transition@1.1.6</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-voronoi</name>
+      <version>1.1.9</version>
+      <purl>pkg:npm/@types%2Fd3-voronoi@1.1.9</purl>
+    </component>
+    <component type="library">
+      <name>@types/d3-zoom</name>
+      <version>1.7.4</version>
+      <purl>pkg:npm/@types%2Fd3-zoom@1.7.4</purl>
+    </component>
+    <component type="library">
+      <name>@types/estree</name>
+      <version>0.0.39</version>
+      <purl>pkg:npm/@types%2Festree@0.0.39</purl>
+    </component>
+    <component type="library">
+      <name>@types/geojson</name>
+      <version>7946.0.7</version>
+      <purl>pkg:npm/@types%2Fgeojson@7946.0.7</purl>
+    </component>
+    <component type="library">
+      <name>@types/history</name>
+      <version>4.7.2</version>
+      <purl>pkg:npm/@types%2Fhistory@4.7.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/http-cache-semantics</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/@types%2Fhttp-cache-semantics@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@types/keyv</name>
+      <version>3.1.1</version>
+      <purl>pkg:npm/@types%2Fkeyv@3.1.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/node</name>
+      <version>13.9.8</version>
+      <purl>pkg:npm/@types%2Fnode@13.9.8</purl>
+    </component>
+    <component type="library">
+      <name>@types/parse-json</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/@types%2Fparse-json@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@types/prop-types</name>
+      <version>15.7.3</version>
+      <purl>pkg:npm/@types%2Fprop-types@15.7.3</purl>
+    </component>
+    <component type="library">
+      <name>@types/q</name>
+      <version>1.5.2</version>
+      <purl>pkg:npm/@types%2Fq@1.5.2</purl>
+    </component>
+    <component type="library">
+      <name>@types/react</name>
+      <version>16.9.23</version>
+      <purl>pkg:npm/@types%2Freact@16.9.23</purl>
+    </component>
+    <component type="library">
+      <name>@types/react-dom</name>
+      <version>16.9.5</version>
+      <purl>pkg:npm/@types%2Freact-dom@16.9.5</purl>
+    </component>
+    <component type="library">
+      <name>@types/react-router</name>
+      <version>4.4.1</version>
+      <purl>pkg:npm/@types%2Freact-router@4.4.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/react-router-dom</name>
+      <version>4.3.1</version>
+      <purl>pkg:npm/@types%2Freact-router-dom@4.3.1</purl>
+    </component>
+    <component type="library">
+      <name>@types/resolve</name>
+      <version>0.0.8</version>
+      <purl>pkg:npm/@types%2Fresolve@0.0.8</purl>
+    </component>
+    <component type="library">
+      <name>@types/responselike</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/@types%2Fresponselike@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>@typescript-eslint/eslint-plugin</name>
+      <version>1.4.2</version>
+      <purl>pkg:npm/@typescript-eslint%2Feslint-plugin@1.4.2</purl>
+    </component>
+    <component type="library">
+      <name>@typescript-eslint/parser</name>
+      <version>1.4.2</version>
+      <purl>pkg:npm/@typescript-eslint%2Fparser@1.4.2</purl>
+    </component>
+    <component type="library">
+      <name>@typescript-eslint/typescript-estree</name>
+      <version>1.4.2</version>
+      <purl>pkg:npm/@typescript-eslint%2Ftypescript-estree@1.4.2</purl>
+    </component>
+    <component type="library">
+      <name>abbrev</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/abbrev@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>acorn</name>
+      <version>6.4.1</version>
+      <purl>pkg:npm/acorn@6.4.1</purl>
+    </component>
+    <component type="library">
+      <name>acorn-jsx</name>
+      <version>5.0.1</version>
+      <purl>pkg:npm/acorn-jsx@5.0.1</purl>
+    </component>
+    <component type="library">
+      <name>addressable</name>
+      <version>2.4.0</version>
+      <purl>pkg:gem/addressable@2.4.0</purl>
+    </component>
+    <component type="library">
+      <name>aggregate-error</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/aggregate-error@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>ajv</name>
+      <version>6.10.0</version>
+      <purl>pkg:npm/ajv@6.10.0</purl>
+    </component>
+    <component type="library">
+      <name>alphanum-sort</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/alphanum-sort@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>angular</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-cookies</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular-cookies@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-loader</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular-loader@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-resource</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular-resource@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-route</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular-route@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-sanitize</name>
+      <version>1.8.0</version>
+      <purl>pkg:npm/angular-sanitize@1.8.0</purl>
+    </component>
+    <component type="library">
+      <name>angular-translate</name>
+      <version>2.18.2</version>
+      <purl>pkg:npm/angular-translate@2.18.2</purl>
+    </component>
+    <component type="library">
+      <name>angular-translate-loader-url</name>
+      <version>2.18.2</version>
+      <purl>pkg:npm/angular-translate-loader-url@2.18.2</purl>
+    </component>
+    <component type="library">
+      <name>angular-treeview</name>
+      <version>0.1.5</version>
+      <purl>pkg:npm/angular-treeview@0.1.5</purl>
+    </component>
+    <component type="library">
+      <name>angular-ui-select2</name>
+      <version>0.0.5</version>
+      <purl>pkg:npm/angular-ui-select2@0.0.5</purl>
+    </component>
+    <component type="library">
+      <name>ansi-escapes</name>
+      <version>3.2.0</version>
+      <purl>pkg:npm/ansi-escapes@3.2.0</purl>
+    </component>
+    <component type="library">
+      <name>ansi-regex</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/ansi-regex@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>ansi-styles</name>
+      <version>3.2.1</version>
+      <purl>pkg:npm/ansi-styles@3.2.1</purl>
+    </component>
+    <component type="library">
+      <name>anymatch</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/anymatch@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>argparse</name>
+      <version>1.0.10</version>
+      <purl>pkg:npm/argparse@1.0.10</purl>
+    </component>
+    <component type="library">
+      <name>aria-query</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/aria-query@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>arr-diff</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/arr-diff@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>arr-flatten</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/arr-flatten@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>arr-union</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/arr-union@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>array-includes</name>
+      <version>3.0.3</version>
+      <purl>pkg:npm/array-includes@3.0.3</purl>
+    </component>
+    <component type="library">
+      <name>array-unique</name>
+      <version>0.3.2</version>
+      <purl>pkg:npm/array-unique@0.3.2</purl>
+    </component>
+    <component type="library">
+      <name>assign-symbols</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/assign-symbols@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>ast-types-flow</name>
+      <version>0.0.7</version>
+      <purl>pkg:npm/ast-types-flow@0.0.7</purl>
+    </component>
+    <component type="library">
+      <name>astral-regex</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/astral-regex@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>async-each</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/async-each@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>atob</name>
+      <version>2.1.2</version>
+      <purl>pkg:npm/atob@2.1.2</purl>
+    </component>
+    <component type="library">
+      <name>attr-accept</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/attr-accept@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>autofill-event</name>
+      <version>0.0.1</version>
+      <purl>pkg:npm/autofill-event@0.0.1</purl>
+    </component>
+    <component type="library">
+      <name>axobject-query</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/axobject-query@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>babel-eslint</name>
+      <version>9.0.0</version>
+      <purl>pkg:npm/babel-eslint@9.0.0</purl>
+    </component>
+    <component type="library">
+      <name>babel-plugin-dynamic-import-node</name>
+      <version>2.3.0</version>
+      <purl>pkg:npm/babel-plugin-dynamic-import-node@2.3.0</purl>
+    </component>
+    <component type="library">
+      <name>babel-plugin-emotion</name>
+      <version>9.2.11</version>
+      <purl>pkg:npm/babel-plugin-emotion@9.2.11</purl>
+    </component>
+    <component type="library">
+      <name>babel-plugin-macros</name>
+      <version>2.8.0</version>
+      <purl>pkg:npm/babel-plugin-macros@2.8.0</purl>
+    </component>
+    <component type="library">
+      <name>babel-plugin-syntax-jsx</name>
+      <version>6.18.0</version>
+      <purl>pkg:npm/babel-plugin-syntax-jsx@6.18.0</purl>
+    </component>
+    <component type="library">
+      <name>balanced-match</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/balanced-match@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>balanced-match</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/balanced-match@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>base</name>
+      <version>0.11.2</version>
+      <purl>pkg:npm/base@0.11.2</purl>
+    </component>
+    <component type="library">
+      <name>base64-js</name>
+      <version>1.3.0</version>
+      <purl>pkg:npm/base64-js@1.3.0</purl>
+    </component>
+    <component type="library">
+      <name>big.js</name>
+      <version>5.2.2</version>
+      <purl>pkg:npm/big.js@5.2.2</purl>
+    </component>
+    <component type="library">
+      <name>binary-extensions</name>
+      <version>1.13.1</version>
+      <purl>pkg:npm/binary-extensions@1.13.1</purl>
+    </component>
+    <component type="library">
+      <name>bindings</name>
+      <version>1.5.0</version>
+      <purl>pkg:npm/bindings@1.5.0</purl>
+    </component>
+    <component type="library">
+      <name>boolbase</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/boolbase@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap</name>
+      <version>3.4.1</version>
+      <purl>pkg:npm/bootstrap@3.4.1</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-datepicker</name>
+      <version>1.9.0</version>
+      <purl>pkg:npm/bootstrap-datepicker@1.9.0</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-sass</name>
+      <version>3.4.1</version>
+      <purl>pkg:npm/bootstrap-sass@3.4.1</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-select</name>
+      <version>1.12.2</version>
+      <purl>pkg:npm/bootstrap-select@1.12.2</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-slider</name>
+      <version>9.10.0</version>
+      <purl>pkg:npm/bootstrap-slider@9.10.0</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-switch</name>
+      <version>3.3.4</version>
+      <purl>pkg:npm/bootstrap-switch@3.3.4</purl>
+    </component>
+    <component type="library">
+      <name>bootstrap-touchspin</name>
+      <version>3.1.1</version>
+      <purl>pkg:npm/bootstrap-touchspin@3.1.1</purl>
+    </component>
+    <component type="library">
+      <name>brace-expansion</name>
+      <version>1.1.11</version>
+      <purl>pkg:npm/brace-expansion@1.1.11</purl>
+    </component>
+    <component type="library">
+      <name>brace-expansion</name>
+      <version>1.1.11</version>
+      <purl>pkg:npm/brace-expansion@1.1.11</purl>
+    </component>
+    <component type="library">
+      <name>braces</name>
+      <version>2.3.2</version>
+      <purl>pkg:npm/braces@2.3.2</purl>
+    </component>
+    <component type="library">
+      <name>browserslist</name>
+      <version>4.9.1</version>
+      <purl>pkg:npm/browserslist@4.9.1</purl>
+    </component>
+    <component type="library">
+      <name>buffer-from</name>
+      <version>0.1.2</version>
+      <purl>pkg:npm/buffer-from@0.1.2</purl>
+    </component>
+    <component type="library">
+      <name>builtin-modules</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/builtin-modules@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>builtins</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/builtins@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>c3</name>
+      <version>0.4.24</version>
+      <purl>pkg:npm/c3@0.4.24</purl>
+    </component>
+    <component type="library">
+      <name>cacache</name>
+      <version>15.0.5</version>
+      <purl>pkg:npm/cacache@15.0.5</purl>
+    </component>
+    <component type="library">
+      <name>cache-base</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/cache-base@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>cacheable-lookup</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/cacheable-lookup@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>cacheable-request</name>
+      <version>7.0.1</version>
+      <purl>pkg:npm/cacheable-request@7.0.1</purl>
+    </component>
+    <component type="library">
+      <name>cachedir</name>
+      <version>2.3.0</version>
+      <purl>pkg:npm/cachedir@2.3.0</purl>
+    </component>
+    <component type="library">
+      <name>caller-callsite</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/caller-callsite@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>caller-path</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/caller-path@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>callsites</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/callsites@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>camel-case</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/camel-case@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>camelcase</name>
+      <version>5.3.1</version>
+      <purl>pkg:npm/camelcase@5.3.1</purl>
+    </component>
+    <component type="library">
+      <name>caniuse-api</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/caniuse-api@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>caniuse-lite</name>
+      <version>1.0.30001035</version>
+      <purl>pkg:npm/caniuse-lite@1.0.30001035</purl>
+    </component>
+    <component type="library">
+      <name>chalk</name>
+      <version>2.4.2</version>
+      <purl>pkg:npm/chalk@2.4.2</purl>
+    </component>
+    <component type="library">
+      <name>chardet</name>
+      <version>0.7.0</version>
+      <purl>pkg:npm/chardet@0.7.0</purl>
+    </component>
+    <component type="library">
+      <name>chokidar</name>
+      <version>2.1.8</version>
+      <purl>pkg:npm/chokidar@2.1.8</purl>
+    </component>
+    <component type="library">
+      <name>chownr</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/chownr@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>class-utils</name>
+      <version>0.3.6</version>
+      <purl>pkg:npm/class-utils@0.3.6</purl>
+    </component>
+    <component type="library">
+      <name>clean-stack</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/clean-stack@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>cli-cursor</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/cli-cursor@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>cli-spinners</name>
+      <version>2.5.0</version>
+      <purl>pkg:npm/cli-spinners@2.5.0</purl>
+    </component>
+    <component type="library">
+      <name>cli-width</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/cli-width@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>clone</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/clone@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>clone-response</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/clone-response@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>coa</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/coa@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>collection-visit</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/collection-visit@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>color</name>
+      <version>3.1.2</version>
+      <purl>pkg:npm/color@3.1.2</purl>
+    </component>
+    <component type="library">
+      <name>color-convert</name>
+      <version>1.9.3</version>
+      <purl>pkg:npm/color-convert@1.9.3</purl>
+    </component>
+    <component type="library">
+      <name>color-name</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/color-name@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>color-string</name>
+      <version>1.5.3</version>
+      <purl>pkg:npm/color-string@1.5.3</purl>
+    </component>
+    <component type="library">
+      <name>colorator</name>
+      <version>1.1.0</version>
+      <purl>pkg:gem/colorator@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>commander</name>
+      <version>2.19.0</version>
+      <purl>pkg:npm/commander@2.19.0</purl>
+    </component>
+    <component type="library">
+      <name>component-emitter</name>
+      <version>1.3.0</version>
+      <purl>pkg:npm/component-emitter@1.3.0</purl>
+    </component>
+    <component type="library">
+      <name>concat-map</name>
+      <version>0.0.1</version>
+      <purl>pkg:npm/concat-map@0.0.1</purl>
+    </component>
+    <component type="library">
+      <name>concat-map</name>
+      <version>0.0.1</version>
+      <purl>pkg:npm/concat-map@0.0.1</purl>
+    </component>
+    <component type="library">
+      <name>concat-with-sourcemaps</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/concat-with-sourcemaps@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>confusing-browser-globals</name>
+      <version>1.0.6</version>
+      <purl>pkg:npm/confusing-browser-globals@1.0.6</purl>
+    </component>
+    <component type="library">
+      <name>contains-path</name>
+      <version>0.1.0</version>
+      <purl>pkg:npm/contains-path@0.1.0</purl>
+    </component>
+    <component type="library">
+      <name>convert-source-map</name>
+      <version>1.7.0</version>
+      <purl>pkg:npm/convert-source-map@1.7.0</purl>
+    </component>
+    <component type="library">
+      <name>copy-descriptor</name>
+      <version>0.1.1</version>
+      <purl>pkg:npm/copy-descriptor@0.1.1</purl>
+    </component>
+    <component type="library">
+      <name>cordova-android</name>
+      <version>6.4.0</version>
+      <purl>pkg:npm/cordova-android@6.4.0</purl>
+    </component>
+    <component type="library">
+      <name>cordova-plugin-browsertab</name>
+      <version>0.2.0</version>
+      <purl>pkg:npm/cordova-plugin-browsertab@0.2.0</purl>
+    </component>
+    <component type="library">
+      <name>cordova-plugin-compat</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/cordova-plugin-compat@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>cordova-plugin-deeplinks</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/cordova-plugin-deeplinks@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>cordova-plugin-whitelist</name>
+      <version>1.3.3</version>
+      <purl>pkg:npm/cordova-plugin-whitelist@1.3.3</purl>
+    </component>
+    <component type="library">
+      <name>core-js</name>
+      <version>2.6.11</version>
+      <purl>pkg:npm/core-js@2.6.11</purl>
+    </component>
+    <component type="library">
+      <name>core-js-compat</name>
+      <version>3.6.4</version>
+      <purl>pkg:npm/core-js-compat@3.6.4</purl>
+    </component>
+    <component type="library">
+      <name>core-util-is</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/core-util-is@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>cosmiconfig</name>
+      <version>6.0.0</version>
+      <purl>pkg:npm/cosmiconfig@6.0.0</purl>
+    </component>
+    <component type="library">
+      <name>create-emotion</name>
+      <version>9.2.12</version>
+      <purl>pkg:npm/create-emotion@9.2.12</purl>
+    </component>
+    <component type="library">
+      <name>create-emotion-server</name>
+      <version>9.2.12</version>
+      <purl>pkg:npm/create-emotion-server@9.2.12</purl>
+    </component>
+    <component type="library">
+      <name>cross-spawn</name>
+      <version>6.0.5</version>
+      <purl>pkg:npm/cross-spawn@6.0.5</purl>
+    </component>
+    <component type="library">
+      <name>css</name>
+      <version>2.2.4</version>
+      <purl>pkg:npm/css@2.2.4</purl>
+    </component>
+    <component type="library">
+      <name>css-color-names</name>
+      <version>0.0.4</version>
+      <purl>pkg:npm/css-color-names@0.0.4</purl>
+    </component>
+    <component type="library">
+      <name>css-declaration-sorter</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/css-declaration-sorter@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>css-modules-loader-core</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/css-modules-loader-core@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>css-select</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/css-select@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>css-select-base-adapter</name>
+      <version>0.1.1</version>
+      <purl>pkg:npm/css-select-base-adapter@0.1.1</purl>
+    </component>
+    <component type="library">
+      <name>css-selector-tokenizer</name>
+      <version>0.7.2</version>
+      <purl>pkg:npm/css-selector-tokenizer@0.7.2</purl>
+    </component>
+    <component type="library">
+      <name>css-tree</name>
+      <version>1.0.0-alpha.37</version>
+      <purl>pkg:npm/css-tree@1.0.0-alpha.37</purl>
+    </component>
+    <component type="library">
+      <name>css-what</name>
+      <version>3.2.1</version>
+      <purl>pkg:npm/css-what@3.2.1</purl>
+    </component>
+    <component type="library">
+      <name>cssesc</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/cssesc@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>cssnano</name>
+      <version>4.1.10</version>
+      <purl>pkg:npm/cssnano@4.1.10</purl>
+    </component>
+    <component type="library">
+      <name>cssnano-preset-default</name>
+      <version>4.0.7</version>
+      <purl>pkg:npm/cssnano-preset-default@4.0.7</purl>
+    </component>
+    <component type="library">
+      <name>cssnano-util-get-arguments</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/cssnano-util-get-arguments@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>cssnano-util-get-match</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/cssnano-util-get-match@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>cssnano-util-raw-cache</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/cssnano-util-raw-cache@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>cssnano-util-same-parent</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/cssnano-util-same-parent@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>csso</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/csso@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>cssom</name>
+      <version>0.3.8</version>
+      <purl>pkg:npm/cssom@0.3.8</purl>
+    </component>
+    <component type="library">
+      <name>cssstyle</name>
+      <version>0.3.1</version>
+      <purl>pkg:npm/cssstyle@0.3.1</purl>
+    </component>
+    <component type="library">
+      <name>csstype</name>
+      <version>2.5.7</version>
+      <purl>pkg:npm/csstype@2.5.7</purl>
+    </component>
+    <component type="library">
+      <name>d3</name>
+      <version>3.5.17</version>
+      <purl>pkg:npm/d3@3.5.17</purl>
+    </component>
+    <component type="library">
+      <name>damerau-levenshtein</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/damerau-levenshtein@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>datatables.net</name>
+      <version>1.10.21</version>
+      <purl>pkg:npm/datatables.net@1.10.21</purl>
+    </component>
+    <component type="library">
+      <name>datatables.net-bs</name>
+      <version>1.10.21</version>
+      <purl>pkg:npm/datatables.net-bs@1.10.21</purl>
+    </component>
+    <component type="library">
+      <name>datatables.net-colreorder</name>
+      <version>1.5.2</version>
+      <purl>pkg:npm/datatables.net-colreorder@1.5.2</purl>
+    </component>
+    <component type="library">
+      <name>datatables.net-colreorder-bs</name>
+      <version>1.3.3</version>
+      <purl>pkg:npm/datatables.net-colreorder-bs@1.3.3</purl>
+    </component>
+    <component type="library">
+      <name>datatables.net-select</name>
+      <version>1.2.7</version>
+      <purl>pkg:npm/datatables.net-select@1.2.7</purl>
+    </component>
+    <component type="library">
+      <name>decamelize</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/decamelize@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>decode-uri-component</name>
+      <version>0.2.0</version>
+      <purl>pkg:npm/decode-uri-component@0.2.0</purl>
+    </component>
+    <component type="library">
+      <name>decompress-response</name>
+      <version>5.0.0</version>
+      <purl>pkg:npm/decompress-response@5.0.0</purl>
+    </component>
+    <component type="library">
+      <name>deep-is</name>
+      <version>0.1.3</version>
+      <purl>pkg:npm/deep-is@0.1.3</purl>
+    </component>
+    <component type="library">
+      <name>deepmerge</name>
+      <version>4.2.2</version>
+      <purl>pkg:npm/deepmerge@4.2.2</purl>
+    </component>
+    <component type="library">
+      <name>defaults</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/defaults@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>defer-to-connect</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/defer-to-connect@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>define-properties</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/define-properties@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>define-property</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/define-property@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>doctrine</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/doctrine@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>dom-serializer</name>
+      <version>0.2.2</version>
+      <purl>pkg:npm/dom-serializer@0.2.2</purl>
+    </component>
+    <component type="library">
+      <name>domelementtype</name>
+      <version>1.3.1</version>
+      <purl>pkg:npm/domelementtype@1.3.1</purl>
+    </component>
+    <component type="library">
+      <name>domutils</name>
+      <version>1.7.0</version>
+      <purl>pkg:npm/domutils@1.7.0</purl>
+    </component>
+    <component type="library">
+      <name>dot-prop</name>
+      <version>5.2.0</version>
+      <purl>pkg:npm/dot-prop@5.2.0</purl>
+    </component>
+    <component type="library">
+      <name>drmonty-datatables-colvis</name>
+      <version>1.1.2</version>
+      <purl>pkg:npm/drmonty-datatables-colvis@1.1.2</purl>
+    </component>
+    <component type="library">
+      <name>duplexer2</name>
+      <version>0.1.4</version>
+      <purl>pkg:npm/duplexer2@0.1.4</purl>
+    </component>
+    <component type="library">
+      <name>duplexer3</name>
+      <version>0.1.4</version>
+      <purl>pkg:npm/duplexer3@0.1.4</purl>
+    </component>
+    <component type="library">
+      <name>electron-to-chromium</name>
+      <version>1.3.378</version>
+      <purl>pkg:npm/electron-to-chromium@1.3.378</purl>
+    </component>
+    <component type="library">
+      <name>emoji-regex</name>
+      <version>7.0.3</version>
+      <purl>pkg:npm/emoji-regex@7.0.3</purl>
+    </component>
+    <component type="library">
+      <name>emojis-list</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/emojis-list@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>emotion</name>
+      <version>9.2.12</version>
+      <purl>pkg:npm/emotion@9.2.12</purl>
+    </component>
+    <component type="library">
+      <name>emotion-server</name>
+      <version>9.2.12</version>
+      <purl>pkg:npm/emotion-server@9.2.12</purl>
+    </component>
+    <component type="library">
+      <name>end-of-stream</name>
+      <version>1.4.4</version>
+      <purl>pkg:npm/end-of-stream@1.4.4</purl>
+    </component>
+    <component type="library">
+      <name>enhanced-resolve</name>
+      <version>4.3.0</version>
+      <purl>pkg:npm/enhanced-resolve@4.3.0</purl>
+    </component>
+    <component type="library">
+      <name>entities</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/entities@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>eonasdan-bootstrap-datetimepicker</name>
+      <version>4.17.47</version>
+      <purl>pkg:npm/eonasdan-bootstrap-datetimepicker@4.17.47</purl>
+    </component>
+    <component type="library">
+      <name>errno</name>
+      <version>0.1.7</version>
+      <purl>pkg:npm/errno@0.1.7</purl>
+    </component>
+    <component type="library">
+      <name>error-ex</name>
+      <version>1.3.2</version>
+      <purl>pkg:npm/error-ex@1.3.2</purl>
+    </component>
+    <component type="library">
+      <name>es-abstract</name>
+      <version>1.13.0</version>
+      <purl>pkg:npm/es-abstract@1.13.0</purl>
+    </component>
+    <component type="library">
+      <name>es-module-lexer</name>
+      <version>0.3.26</version>
+      <purl>pkg:npm/es-module-lexer@0.3.26</purl>
+    </component>
+    <component type="library">
+      <name>es-to-primitive</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/es-to-primitive@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>es6-object-assign</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/es6-object-assign@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>escape-string-regexp</name>
+      <version>1.0.5</version>
+      <purl>pkg:npm/escape-string-regexp@1.0.5</purl>
+    </component>
+    <component type="library">
+      <name>eslint</name>
+      <version>5.15.1</version>
+      <purl>pkg:npm/eslint@5.15.1</purl>
+    </component>
+    <component type="library">
+      <name>eslint-config-react-app</name>
+      <version>3.0.8</version>
+      <purl>pkg:npm/eslint-config-react-app@3.0.8</purl>
+    </component>
+    <component type="library">
+      <name>eslint-import-resolver-node</name>
+      <version>0.3.2</version>
+      <purl>pkg:npm/eslint-import-resolver-node@0.3.2</purl>
+    </component>
+    <component type="library">
+      <name>eslint-module-utils</name>
+      <version>2.3.0</version>
+      <purl>pkg:npm/eslint-module-utils@2.3.0</purl>
+    </component>
+    <component type="library">
+      <name>eslint-plugin-flowtype</name>
+      <version>2.50.3</version>
+      <purl>pkg:npm/eslint-plugin-flowtype@2.50.3</purl>
+    </component>
+    <component type="library">
+      <name>eslint-plugin-import</name>
+      <version>2.16.0</version>
+      <purl>pkg:npm/eslint-plugin-import@2.16.0</purl>
+    </component>
+    <component type="library">
+      <name>eslint-plugin-jsx-a11y</name>
+      <version>6.2.1</version>
+      <purl>pkg:npm/eslint-plugin-jsx-a11y@6.2.1</purl>
+    </component>
+    <component type="library">
+      <name>eslint-plugin-react</name>
+      <version>7.12.4</version>
+      <purl>pkg:npm/eslint-plugin-react@7.12.4</purl>
+    </component>
+    <component type="library">
+      <name>eslint-scope</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/eslint-scope@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>eslint-utils</name>
+      <version>1.4.2</version>
+      <purl>pkg:npm/eslint-utils@1.4.2</purl>
+    </component>
+    <component type="library">
+      <name>eslint-visitor-keys</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/eslint-visitor-keys@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>espree</name>
+      <version>5.0.1</version>
+      <purl>pkg:npm/espree@5.0.1</purl>
+    </component>
+    <component type="library">
+      <name>esprima</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/esprima@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>esquery</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/esquery@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>esrecurse</name>
+      <version>4.2.1</version>
+      <purl>pkg:npm/esrecurse@4.2.1</purl>
+    </component>
+    <component type="library">
+      <name>estraverse</name>
+      <version>4.2.0</version>
+      <purl>pkg:npm/estraverse@4.2.0</purl>
+    </component>
+    <component type="library">
+      <name>estree-walker</name>
+      <version>0.6.1</version>
+      <purl>pkg:npm/estree-walker@0.6.1</purl>
+    </component>
+    <component type="library">
+      <name>esutils</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/esutils@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>eventemitter3</name>
+      <version>4.0.7</version>
+      <purl>pkg:npm/eventemitter3@4.0.7</purl>
+    </component>
+    <component type="library">
+      <name>expand-brackets</name>
+      <version>2.1.4</version>
+      <purl>pkg:npm/expand-brackets@2.1.4</purl>
+    </component>
+    <component type="library">
+      <name>extend-shallow</name>
+      <version>3.0.2</version>
+      <purl>pkg:npm/extend-shallow@3.0.2</purl>
+    </component>
+    <component type="library">
+      <name>external-editor</name>
+      <version>3.0.3</version>
+      <purl>pkg:npm/external-editor@3.0.3</purl>
+    </component>
+    <component type="library">
+      <name>extglob</name>
+      <version>2.0.4</version>
+      <purl>pkg:npm/extglob@2.0.4</purl>
+    </component>
+    <component type="library">
+      <name>fast-deep-equal</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/fast-deep-equal@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>fast-json-stable-stringify</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/fast-json-stable-stringify@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>fast-levenshtein</name>
+      <version>2.0.6</version>
+      <purl>pkg:npm/fast-levenshtein@2.0.6</purl>
+    </component>
+    <component type="library">
+      <name>fastparse</name>
+      <version>1.1.2</version>
+      <purl>pkg:npm/fastparse@1.1.2</purl>
+    </component>
+    <component type="library">
+      <name>ffi</name>
+      <version>1.9.14</version>
+      <purl>pkg:gem/ffi@1.9.14</purl>
+    </component>
+    <component type="library">
+      <name>figures</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/figures@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>file-entry-cache</name>
+      <version>5.0.1</version>
+      <purl>pkg:npm/file-entry-cache@5.0.1</purl>
+    </component>
+    <component type="library">
+      <name>file-selector</name>
+      <version>0.1.12</version>
+      <purl>pkg:npm/file-selector@0.1.12</purl>
+    </component>
+    <component type="library">
+      <name>file-uri-to-path</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/file-uri-to-path@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>filesaver</name>
+      <version>0.0.13</version>
+      <purl>pkg:npm/filesaver@0.0.13</purl>
+    </component>
+    <component type="library">
+      <name>fill-range</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/fill-range@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>find-package-json</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/find-package-json@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>find-root</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/find-root@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>find-up</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/find-up@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>flat-cache</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/flat-cache@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>flatted</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/flatted@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>focus-trap</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/focus-trap@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>font-awesome</name>
+      <version>4.7.0</version>
+      <purl>pkg:npm/font-awesome@4.7.0</purl>
+    </component>
+    <component type="library">
+      <name>font-awesome-sass</name>
+      <version>4.7.0</version>
+      <purl>pkg:npm/font-awesome-sass@4.7.0</purl>
+    </component>
+    <component type="library">
+      <name>for-in</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/for-in@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>forwardable-extended</name>
+      <version>2.6.0</version>
+      <purl>pkg:gem/forwardable-extended@2.6.0</purl>
+    </component>
+    <component type="library">
+      <name>fragment-cache</name>
+      <version>0.2.1</version>
+      <purl>pkg:npm/fragment-cache@0.2.1</purl>
+    </component>
+    <component type="library">
+      <name>fs-minipass</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/fs-minipass@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>fs-readdir-recursive</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/fs-readdir-recursive@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>fs.realpath</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/fs.realpath@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>fs.realpath</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/fs.realpath@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>fsevents</name>
+      <version>1.2.11</version>
+      <purl>pkg:npm/fsevents@1.2.11</purl>
+    </component>
+    <component type="library">
+      <name>function-bind</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/function-bind@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>functional-red-black-tree</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/functional-red-black-tree@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>generic-names</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/generic-names@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>gensync</name>
+      <version>1.0.0-beta.1</version>
+      <purl>pkg:npm/gensync@1.0.0-beta.1</purl>
+    </component>
+    <component type="library">
+      <name>get-stream</name>
+      <version>5.2.0</version>
+      <purl>pkg:npm/get-stream@5.2.0</purl>
+    </component>
+    <component type="library">
+      <name>get-value</name>
+      <version>2.0.6</version>
+      <purl>pkg:npm/get-value@2.0.6</purl>
+    </component>
+    <component type="library">
+      <name>glob</name>
+      <version>7.1.2</version>
+      <purl>pkg:npm/glob@7.1.2</purl>
+    </component>
+    <component type="library">
+      <name>glob</name>
+      <version>7.1.3</version>
+      <purl>pkg:npm/glob@7.1.3</purl>
+    </component>
+    <component type="library">
+      <name>glob-parent</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/glob-parent@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>globals</name>
+      <version>11.11.0</version>
+      <purl>pkg:npm/globals@11.11.0</purl>
+    </component>
+    <component type="library">
+      <name>google-code-prettify</name>
+      <version>1.0.5</version>
+      <purl>pkg:npm/google-code-prettify@1.0.5</purl>
+    </component>
+    <component type="library">
+      <name>got</name>
+      <version>10.7.0</version>
+      <purl>pkg:npm/got@10.7.0</purl>
+    </component>
+    <component type="library">
+      <name>graceful-fs</name>
+      <version>4.1.15</version>
+      <purl>pkg:npm/graceful-fs@4.1.15</purl>
+    </component>
+    <component type="library">
+      <name>has</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/has@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>has-ansi</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/has-ansi@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>has-flag</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/has-flag@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>has-symbols</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/has-symbols@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>has-value</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/has-value@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>has-values</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/has-values@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>hasha</name>
+      <version>5.2.2</version>
+      <purl>pkg:npm/hasha@5.2.2</purl>
+    </component>
+    <component type="library">
+      <name>hex-color-regex</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/hex-color-regex@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>history</name>
+      <version>4.7.2</version>
+      <purl>pkg:npm/history@4.7.2</purl>
+    </component>
+    <component type="library">
+      <name>hoist-non-react-statics</name>
+      <version>2.5.5</version>
+      <purl>pkg:npm/hoist-non-react-statics@2.5.5</purl>
+    </component>
+    <component type="library">
+      <name>hosted-git-info</name>
+      <version>2.8.9</version>
+      <purl>pkg:npm/hosted-git-info@2.8.9</purl>
+    </component>
+    <component type="library">
+      <name>hsl-regex</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/hsl-regex@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>hsla-regex</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/hsla-regex@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>html-comment-regex</name>
+      <version>1.1.2</version>
+      <purl>pkg:npm/html-comment-regex@1.1.2</purl>
+    </component>
+    <component type="library">
+      <name>html-tokenize</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/html-tokenize@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>http-cache-semantics</name>
+      <version>4.1.0</version>
+      <purl>pkg:npm/http-cache-semantics@4.1.0</purl>
+    </component>
+    <component type="library">
+      <name>iconv-lite</name>
+      <version>0.4.24</version>
+      <purl>pkg:npm/iconv-lite@0.4.24</purl>
+    </component>
+    <component type="library">
+      <name>icss-replace-symbols</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/icss-replace-symbols@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>ignore</name>
+      <version>4.0.6</version>
+      <purl>pkg:npm/ignore@4.0.6</purl>
+    </component>
+    <component type="library">
+      <name>import-cwd</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/import-cwd@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>import-fresh</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/import-fresh@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>import-from</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/import-from@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>imurmurhash</name>
+      <version>0.1.4</version>
+      <purl>pkg:npm/imurmurhash@0.1.4</purl>
+    </component>
+    <component type="library">
+      <name>indent-string</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/indent-string@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>indexes-of</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/indexes-of@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>infer-owner</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/infer-owner@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>inflight</name>
+      <version>1.0.6</version>
+      <purl>pkg:npm/inflight@1.0.6</purl>
+    </component>
+    <component type="library">
+      <name>inflight</name>
+      <version>1.0.6</version>
+      <purl>pkg:npm/inflight@1.0.6</purl>
+    </component>
+    <component type="library">
+      <name>inherits</name>
+      <version>2.0.3</version>
+      <purl>pkg:npm/inherits@2.0.3</purl>
+    </component>
+    <component type="library">
+      <name>inherits</name>
+      <version>2.0.3</version>
+      <purl>pkg:npm/inherits@2.0.3</purl>
+    </component>
+    <component type="library">
+      <name>ini</name>
+      <version>1.3.8</version>
+      <purl>pkg:npm/ini@1.3.8</purl>
+    </component>
+    <component type="library">
+      <name>inquirer</name>
+      <version>6.2.2</version>
+      <purl>pkg:npm/inquirer@6.2.2</purl>
+    </component>
+    <component type="library">
+      <name>interpret</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/interpret@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>invariant</name>
+      <version>2.2.4</version>
+      <purl>pkg:npm/invariant@2.2.4</purl>
+    </component>
+    <component type="library">
+      <name>is-absolute-url</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/is-absolute-url@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>is-accessor-descriptor</name>
+      <version>0.1.6</version>
+      <purl>pkg:npm/is-accessor-descriptor@0.1.6</purl>
+    </component>
+    <component type="library">
+      <name>is-arrayish</name>
+      <version>0.2.1</version>
+      <purl>pkg:npm/is-arrayish@0.2.1</purl>
+    </component>
+    <component type="library">
+      <name>is-binary-path</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/is-binary-path@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>is-builtin-module</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/is-builtin-module@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-callable</name>
+      <version>1.1.4</version>
+      <purl>pkg:npm/is-callable@1.1.4</purl>
+    </component>
+    <component type="library">
+      <name>is-color-stop</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/is-color-stop@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>is-core-module</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/is-core-module@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>is-data-descriptor</name>
+      <version>0.1.4</version>
+      <purl>pkg:npm/is-data-descriptor@0.1.4</purl>
+    </component>
+    <component type="library">
+      <name>is-date-object</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/is-date-object@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>is-descriptor</name>
+      <version>0.1.6</version>
+      <purl>pkg:npm/is-descriptor@0.1.6</purl>
+    </component>
+    <component type="library">
+      <name>is-directory</name>
+      <version>0.3.1</version>
+      <purl>pkg:npm/is-directory@0.3.1</purl>
+    </component>
+    <component type="library">
+      <name>is-extendable</name>
+      <version>0.1.1</version>
+      <purl>pkg:npm/is-extendable@0.1.1</purl>
+    </component>
+    <component type="library">
+      <name>is-extglob</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/is-extglob@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>is-fullwidth-code-point</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/is-fullwidth-code-point@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-glob</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/is-glob@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>is-module</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/is-module@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-number</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/is-number@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-obj</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/is-obj@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-plain-object</name>
+      <version>2.0.4</version>
+      <purl>pkg:npm/is-plain-object@2.0.4</purl>
+    </component>
+    <component type="library">
+      <name>is-promise</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/is-promise@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>is-reference</name>
+      <version>1.2.1</version>
+      <purl>pkg:npm/is-reference@1.2.1</purl>
+    </component>
+    <component type="library">
+      <name>is-regex</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/is-regex@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>is-resolvable</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/is-resolvable@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>is-stream</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/is-stream@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-svg</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/is-svg@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>is-symbol</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/is-symbol@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>is-windows</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/is-windows@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>isarray</name>
+      <version>0.0.1</version>
+      <purl>pkg:npm/isarray@0.0.1</purl>
+    </component>
+    <component type="library">
+      <name>isexe</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/isexe@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>isobject</name>
+      <version>3.0.1</version>
+      <purl>pkg:npm/isobject@3.0.1</purl>
+    </component>
+    <component type="library">
+      <name>jekyll</name>
+      <version>3.3.0</version>
+      <purl>pkg:gem/jekyll@3.3.0</purl>
+    </component>
+    <component type="library">
+      <name>jekyll-sass-converter</name>
+      <version>1.4.0</version>
+      <purl>pkg:gem/jekyll-sass-converter@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>jekyll-watch</name>
+      <version>1.5.0</version>
+      <purl>pkg:gem/jekyll-watch@1.5.0</purl>
+    </component>
+    <component type="library">
+      <name>jest-worker</name>
+      <version>24.9.0</version>
+      <purl>pkg:npm/jest-worker@24.9.0</purl>
+    </component>
+    <component type="library">
+      <name>jquery</name>
+      <version>3.5.1</version>
+      <purl>pkg:npm/jquery@3.5.1</purl>
+    </component>
+    <component type="library">
+      <name>jquery-match-height</name>
+      <version>0.7.2</version>
+      <purl>pkg:npm/jquery-match-height@0.7.2</purl>
+    </component>
+    <component type="library">
+      <name>js-tokens</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/js-tokens@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>js-yaml</name>
+      <version>3.13.1</version>
+      <purl>pkg:npm/js-yaml@3.13.1</purl>
+    </component>
+    <component type="library">
+      <name>jsesc</name>
+      <version>2.5.2</version>
+      <purl>pkg:npm/jsesc@2.5.2</purl>
+    </component>
+    <component type="library">
+      <name>json-buffer</name>
+      <version>3.0.1</version>
+      <purl>pkg:npm/json-buffer@3.0.1</purl>
+    </component>
+    <component type="library">
+      <name>json-parse-better-errors</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/json-parse-better-errors@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>json-schema-traverse</name>
+      <version>0.4.1</version>
+      <purl>pkg:npm/json-schema-traverse@0.4.1</purl>
+    </component>
+    <component type="library">
+      <name>json-stable-stringify-without-jsonify</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/json-stable-stringify-without-jsonify@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>json5</name>
+      <version>2.1.2</version>
+      <purl>pkg:npm/json5@2.1.2</purl>
+    </component>
+    <component type="library">
+      <name>jsonschema</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/jsonschema@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>jsx-ast-utils</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/jsx-ast-utils@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>keyv</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/keyv@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>kind-of</name>
+      <version>6.0.3</version>
+      <purl>pkg:npm/kind-of@6.0.3</purl>
+    </component>
+    <component type="library">
+      <name>kramdown</name>
+      <version>1.12.0</version>
+      <purl>pkg:gem/kramdown@1.12.0</purl>
+    </component>
+    <component type="library">
+      <name>leven</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/leven@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>levenary</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/levenary@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>levn</name>
+      <version>0.3.0</version>
+      <purl>pkg:npm/levn@0.3.0</purl>
+    </component>
+    <component type="library">
+      <name>lines-and-columns</name>
+      <version>1.1.6</version>
+      <purl>pkg:npm/lines-and-columns@1.1.6</purl>
+    </component>
+    <component type="library">
+      <name>liquid</name>
+      <version>3.0.6</version>
+      <purl>pkg:gem/liquid@3.0.6</purl>
+    </component>
+    <component type="library">
+      <name>listen</name>
+      <version>3.0.8</version>
+      <purl>pkg:gem/listen@3.0.8</purl>
+    </component>
+    <component type="library">
+      <name>load-json-file</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/load-json-file@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>loader-utils</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/loader-utils@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>locate-path</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/locate-path@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>lodash</name>
+      <version>4.17.21</version>
+      <purl>pkg:npm/lodash@4.17.21</purl>
+    </component>
+    <component type="library">
+      <name>lodash.camelcase</name>
+      <version>4.3.0</version>
+      <purl>pkg:npm/lodash.camelcase@4.3.0</purl>
+    </component>
+    <component type="library">
+      <name>lodash.memoize</name>
+      <version>4.1.2</version>
+      <purl>pkg:npm/lodash.memoize@4.1.2</purl>
+    </component>
+    <component type="library">
+      <name>lodash.unescape</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/lodash.unescape@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>lodash.uniq</name>
+      <version>4.5.0</version>
+      <purl>pkg:npm/lodash.uniq@4.5.0</purl>
+    </component>
+    <component type="library">
+      <name>log-symbols</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/log-symbols@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>loose-envify</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/loose-envify@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>lower-case</name>
+      <version>1.1.4</version>
+      <purl>pkg:npm/lower-case@1.1.4</purl>
+    </component>
+    <component type="library">
+      <name>lowercase-keys</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/lowercase-keys@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>lru-cache</name>
+      <version>6.0.0</version>
+      <purl>pkg:npm/lru-cache@6.0.0</purl>
+    </component>
+    <component type="library">
+      <name>magic-string</name>
+      <version>0.25.7</version>
+      <purl>pkg:npm/magic-string@0.25.7</purl>
+    </component>
+    <component type="library">
+      <name>make-dir</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/make-dir@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>map-cache</name>
+      <version>0.2.2</version>
+      <purl>pkg:npm/map-cache@0.2.2</purl>
+    </component>
+    <component type="library">
+      <name>map-visit</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/map-visit@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>mdn-data</name>
+      <version>2.0.4</version>
+      <purl>pkg:npm/mdn-data@2.0.4</purl>
+    </component>
+    <component type="library">
+      <name>memory-fs</name>
+      <version>0.5.0</version>
+      <purl>pkg:npm/memory-fs@0.5.0</purl>
+    </component>
+    <component type="library">
+      <name>mercenary</name>
+      <version>0.3.6</version>
+      <purl>pkg:gem/mercenary@0.3.6</purl>
+    </component>
+    <component type="library">
+      <name>merge-stream</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/merge-stream@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>micromatch</name>
+      <version>3.1.10</version>
+      <purl>pkg:npm/micromatch@3.1.10</purl>
+    </component>
+    <component type="library">
+      <name>mimic-fn</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/mimic-fn@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>mimic-response</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/mimic-response@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>minimatch</name>
+      <version>3.0.4</version>
+      <purl>pkg:npm/minimatch@3.0.4</purl>
+    </component>
+    <component type="library">
+      <name>minimatch</name>
+      <version>3.0.4</version>
+      <purl>pkg:npm/minimatch@3.0.4</purl>
+    </component>
+    <component type="library">
+      <name>minimist</name>
+      <version>1.2.5</version>
+      <purl>pkg:npm/minimist@1.2.5</purl>
+    </component>
+    <component type="library">
+      <name>minimist</name>
+      <version>1.2.5</version>
+      <purl>pkg:npm/minimist@1.2.5</purl>
+    </component>
+    <component type="library">
+      <name>minipass</name>
+      <version>3.1.3</version>
+      <purl>pkg:npm/minipass@3.1.3</purl>
+    </component>
+    <component type="library">
+      <name>minipass-collect</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/minipass-collect@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>minipass-flush</name>
+      <version>1.0.5</version>
+      <purl>pkg:npm/minipass-flush@1.0.5</purl>
+    </component>
+    <component type="library">
+      <name>minipass-pipeline</name>
+      <version>1.2.4</version>
+      <purl>pkg:npm/minipass-pipeline@1.2.4</purl>
+    </component>
+    <component type="library">
+      <name>minizlib</name>
+      <version>2.1.2</version>
+      <purl>pkg:npm/minizlib@2.1.2</purl>
+    </component>
+    <component type="library">
+      <name>mixin-deep</name>
+      <version>1.3.2</version>
+      <purl>pkg:npm/mixin-deep@1.3.2</purl>
+    </component>
+    <component type="library">
+      <name>mkdirp</name>
+      <version>0.5.5</version>
+      <purl>pkg:npm/mkdirp@0.5.5</purl>
+    </component>
+    <component type="library">
+      <name>mkdirp</name>
+      <version>0.5.5</version>
+      <purl>pkg:npm/mkdirp@0.5.5</purl>
+    </component>
+    <component type="library">
+      <name>mkpath</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/mkpath@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>moment</name>
+      <version>2.27.0</version>
+      <purl>pkg:npm/moment@2.27.0</purl>
+    </component>
+    <component type="library">
+      <name>moment-timezone</name>
+      <version>0.4.1</version>
+      <purl>pkg:npm/moment-timezone@0.4.1</purl>
+    </component>
+    <component type="library">
+      <name>ms</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/ms@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>multipipe</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/multipipe@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>mute-stream</name>
+      <version>0.0.7</version>
+      <purl>pkg:npm/mute-stream@0.0.7</purl>
+    </component>
+    <component type="library">
+      <name>nan</name>
+      <version>2.14.0</version>
+      <purl>pkg:npm/nan@2.14.0</purl>
+    </component>
+    <component type="library">
+      <name>nanomatch</name>
+      <version>1.2.13</version>
+      <purl>pkg:npm/nanomatch@1.2.13</purl>
+    </component>
+    <component type="library">
+      <name>natural-compare</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/natural-compare@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>ng-file-upload</name>
+      <version>12.2.13</version>
+      <purl>pkg:npm/ng-file-upload@12.2.13</purl>
+    </component>
+    <component type="library">
+      <name>nice-try</name>
+      <version>1.0.5</version>
+      <purl>pkg:npm/nice-try@1.0.5</purl>
+    </component>
+    <component type="library">
+      <name>no-case</name>
+      <version>2.3.2</version>
+      <purl>pkg:npm/no-case@2.3.2</purl>
+    </component>
+    <component type="library">
+      <name>node-releases</name>
+      <version>1.1.52</version>
+      <purl>pkg:npm/node-releases@1.1.52</purl>
+    </component>
+    <component type="library">
+      <name>node-version-compare</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/node-version-compare@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>nopt</name>
+      <version>1.0.10</version>
+      <purl>pkg:npm/nopt@1.0.10</purl>
+    </component>
+    <component type="library">
+      <name>normalize-package-data</name>
+      <version>2.5.0</version>
+      <purl>pkg:npm/normalize-package-data@2.5.0</purl>
+    </component>
+    <component type="library">
+      <name>normalize-path</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/normalize-path@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>normalize-url</name>
+      <version>3.3.0</version>
+      <purl>pkg:npm/normalize-url@3.3.0</purl>
+    </component>
+    <component type="library">
+      <name>nth-check</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/nth-check@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>object-assign</name>
+      <version>4.1.1</version>
+      <purl>pkg:npm/object-assign@4.1.1</purl>
+    </component>
+    <component type="library">
+      <name>object-copy</name>
+      <version>0.1.0</version>
+      <purl>pkg:npm/object-copy@0.1.0</purl>
+    </component>
+    <component type="library">
+      <name>object-inspect</name>
+      <version>1.7.0</version>
+      <purl>pkg:npm/object-inspect@1.7.0</purl>
+    </component>
+    <component type="library">
+      <name>object-keys</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/object-keys@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>object-visit</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/object-visit@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>object.assign</name>
+      <version>4.1.0</version>
+      <purl>pkg:npm/object.assign@4.1.0</purl>
+    </component>
+    <component type="library">
+      <name>object.fromentries</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/object.fromentries@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>object.getownpropertydescriptors</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/object.getownpropertydescriptors@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>object.pick</name>
+      <version>1.3.0</version>
+      <purl>pkg:npm/object.pick@1.3.0</purl>
+    </component>
+    <component type="library">
+      <name>object.values</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/object.values@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>once</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/once@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>once</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/once@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>onetime</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/onetime@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>optionator</name>
+      <version>0.8.2</version>
+      <purl>pkg:npm/optionator@0.8.2</purl>
+    </component>
+    <component type="library">
+      <name>ora</name>
+      <version>3.4.0</version>
+      <purl>pkg:npm/ora@3.4.0</purl>
+    </component>
+    <component type="library">
+      <name>os-tmpdir</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/os-tmpdir@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>p-cancelable</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/p-cancelable@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>p-event</name>
+      <version>4.2.0</version>
+      <purl>pkg:npm/p-event@4.2.0</purl>
+    </component>
+    <component type="library">
+      <name>p-finally</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/p-finally@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>p-limit</name>
+      <version>1.3.0</version>
+      <purl>pkg:npm/p-limit@1.3.0</purl>
+    </component>
+    <component type="library">
+      <name>p-locate</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/p-locate@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>p-map</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/p-map@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>p-queue</name>
+      <version>2.4.2</version>
+      <purl>pkg:npm/p-queue@2.4.2</purl>
+    </component>
+    <component type="library">
+      <name>p-timeout</name>
+      <version>3.2.0</version>
+      <purl>pkg:npm/p-timeout@3.2.0</purl>
+    </component>
+    <component type="library">
+      <name>p-try</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/p-try@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>parent-module</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/parent-module@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>parse-json</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/parse-json@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>pascalcase</name>
+      <version>0.1.1</version>
+      <purl>pkg:npm/pascalcase@0.1.1</purl>
+    </component>
+    <component type="library">
+      <name>path-dirname</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/path-dirname@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>path-exists</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/path-exists@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>path-is-absolute</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/path-is-absolute@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>path-is-absolute</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/path-is-absolute@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>path-is-inside</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/path-is-inside@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>path-key</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/path-key@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>path-parse</name>
+      <version>1.0.6</version>
+      <purl>pkg:npm/path-parse@1.0.6</purl>
+    </component>
+    <component type="library">
+      <name>path-to-regexp</name>
+      <version>1.7.0</version>
+      <purl>pkg:npm/path-to-regexp@1.7.0</purl>
+    </component>
+    <component type="library">
+      <name>path-type</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/path-type@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>pathutil</name>
+      <version>0.14.0</version>
+      <purl>pkg:gem/pathutil@0.14.0</purl>
+    </component>
+    <component type="library">
+      <name>patternfly</name>
+      <version>3.59.4</version>
+      <purl>pkg:npm/patternfly@3.59.4</purl>
+    </component>
+    <component type="library">
+      <name>patternfly-bootstrap-combobox</name>
+      <version>1.1.7</version>
+      <purl>pkg:npm/patternfly-bootstrap-combobox@1.1.7</purl>
+    </component>
+    <component type="library">
+      <name>patternfly-bootstrap-treeview</name>
+      <version>2.1.10</version>
+      <purl>pkg:npm/patternfly-bootstrap-treeview@2.1.10</purl>
+    </component>
+    <component type="library">
+      <name>picomatch</name>
+      <version>2.2.2</version>
+      <purl>pkg:npm/picomatch@2.2.2</purl>
+    </component>
+    <component type="library">
+      <name>pify</name>
+      <version>2.3.0</version>
+      <purl>pkg:npm/pify@2.3.0</purl>
+    </component>
+    <component type="library">
+      <name>pkg-dir</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/pkg-dir@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>plist</name>
+      <version>3.0.1</version>
+      <purl>pkg:npm/plist@3.0.1</purl>
+    </component>
+    <component type="library">
+      <name>popper.js</name>
+      <version>1.16.1</version>
+      <purl>pkg:npm/popper.js@1.16.1</purl>
+    </component>
+    <component type="library">
+      <name>posix-character-classes</name>
+      <version>0.1.1</version>
+      <purl>pkg:npm/posix-character-classes@0.1.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss</name>
+      <version>7.0.27</version>
+      <purl>pkg:npm/postcss@7.0.27</purl>
+    </component>
+    <component type="library">
+      <name>postcss-calc</name>
+      <version>7.0.2</version>
+      <purl>pkg:npm/postcss-calc@7.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-colormin</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/postcss-colormin@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>postcss-convert-values</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-convert-values@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-discard-comments</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-discard-comments@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-discard-duplicates</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-discard-duplicates@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-discard-empty</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-discard-empty@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-discard-overridden</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-discard-overridden@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-load-config</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/postcss-load-config@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-merge-longhand</name>
+      <version>4.0.11</version>
+      <purl>pkg:npm/postcss-merge-longhand@4.0.11</purl>
+    </component>
+    <component type="library">
+      <name>postcss-merge-rules</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/postcss-merge-rules@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>postcss-minify-font-values</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-minify-font-values@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-minify-gradients</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-minify-gradients@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-minify-params</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-minify-params@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-minify-selectors</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-minify-selectors@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-modules</name>
+      <version>1.5.0</version>
+      <purl>pkg:npm/postcss-modules@1.5.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-modules-extract-imports</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/postcss-modules-extract-imports@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-modules-local-by-default</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/postcss-modules-local-by-default@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-modules-scope</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/postcss-modules-scope@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-modules-values</name>
+      <version>1.3.0</version>
+      <purl>pkg:npm/postcss-modules-values@1.3.0</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-charset</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-normalize-charset@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-display-values</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-display-values@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-positions</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-positions@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-repeat-style</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-repeat-style@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-string</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-string@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-timing-functions</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-timing-functions@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-unicode</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-normalize-unicode@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-url</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-normalize-url@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-normalize-whitespace</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-normalize-whitespace@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-ordered-values</name>
+      <version>4.1.2</version>
+      <purl>pkg:npm/postcss-ordered-values@4.1.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-reduce-initial</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/postcss-reduce-initial@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>postcss-reduce-transforms</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-reduce-transforms@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-selector-parser</name>
+      <version>6.0.2</version>
+      <purl>pkg:npm/postcss-selector-parser@6.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-svgo</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/postcss-svgo@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>postcss-unique-selectors</name>
+      <version>4.0.1</version>
+      <purl>pkg:npm/postcss-unique-selectors@4.0.1</purl>
+    </component>
+    <component type="library">
+      <name>postcss-value-parser</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/postcss-value-parser@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>prelude-ls</name>
+      <version>1.1.2</version>
+      <purl>pkg:npm/prelude-ls@1.1.2</purl>
+    </component>
+    <component type="library">
+      <name>private</name>
+      <version>0.1.8</version>
+      <purl>pkg:npm/private@0.1.8</purl>
+    </component>
+    <component type="library">
+      <name>process-nextick-args</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/process-nextick-args@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>progress</name>
+      <version>2.0.3</version>
+      <purl>pkg:npm/progress@2.0.3</purl>
+    </component>
+    <component type="library">
+      <name>promise-inflight</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/promise-inflight@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>promise.series</name>
+      <version>0.2.0</version>
+      <purl>pkg:npm/promise.series@0.2.0</purl>
+    </component>
+    <component type="library">
+      <name>prop-types</name>
+      <version>15.6.2</version>
+      <purl>pkg:npm/prop-types@15.6.2</purl>
+    </component>
+    <component type="library">
+      <name>prop-types-extra</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/prop-types-extra@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>prr</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/prr@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>pump</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/pump@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>punycode</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/punycode@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>q</name>
+      <version>1.5.1</version>
+      <purl>pkg:npm/q@1.5.1</purl>
+    </component>
+    <component type="library">
+      <name>randombytes</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/randombytes@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>rb-fsevent</name>
+      <version>0.9.8</version>
+      <purl>pkg:gem/rb-fsevent@0.9.8</purl>
+    </component>
+    <component type="library">
+      <name>rb-inotify</name>
+      <version>0.9.7</version>
+      <purl>pkg:gem/rb-inotify@0.9.7</purl>
+    </component>
+    <component type="library">
+      <name>rcue</name>
+      <version>3.48.1</version>
+      <purl>pkg:npm/rcue@3.48.1</purl>
+    </component>
+    <component type="library">
+      <name>react</name>
+      <version>npm:@pika/react@16.13.1</version>
+      <purl>pkg:npm/react@npm:@pika%2Freact@16.13.1</purl>
+    </component>
+    <component type="library">
+      <name>react-dom</name>
+      <version>npm:@pika/react-dom@16.13.1</version>
+      <purl>pkg:npm/react-dom@npm:@pika%2Freact-dom@16.13.1</purl>
+    </component>
+    <component type="library">
+      <name>react-dropzone</name>
+      <version>9.0.0</version>
+      <purl>pkg:npm/react-dropzone@9.0.0</purl>
+    </component>
+    <component type="library">
+      <name>react-is</name>
+      <version>16.13.1</version>
+      <purl>pkg:npm/react-is@16.13.1</purl>
+    </component>
+    <component type="library">
+      <name>react-router</name>
+      <version>4.3.1</version>
+      <purl>pkg:npm/react-router@4.3.1</purl>
+    </component>
+    <component type="library">
+      <name>react-router-dom</name>
+      <version>4.3.1</version>
+      <purl>pkg:npm/react-router-dom@4.3.1</purl>
+    </component>
+    <component type="library">
+      <name>read-pkg</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/read-pkg@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>read-pkg-up</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/read-pkg-up@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>readable-stream</name>
+      <version>1.0.34</version>
+      <purl>pkg:npm/readable-stream@1.0.34</purl>
+    </component>
+    <component type="library">
+      <name>readdirp</name>
+      <version>2.2.1</version>
+      <purl>pkg:npm/readdirp@2.2.1</purl>
+    </component>
+    <component type="library">
+      <name>rechoir</name>
+      <version>0.6.2</version>
+      <purl>pkg:npm/rechoir@0.6.2</purl>
+    </component>
+    <component type="library">
+      <name>regenerate</name>
+      <version>1.4.0</version>
+      <purl>pkg:npm/regenerate@1.4.0</purl>
+    </component>
+    <component type="library">
+      <name>regenerate-unicode-properties</name>
+      <version>8.2.0</version>
+      <purl>pkg:npm/regenerate-unicode-properties@8.2.0</purl>
+    </component>
+    <component type="library">
+      <name>regenerator-runtime</name>
+      <version>0.13.5</version>
+      <purl>pkg:npm/regenerator-runtime@0.13.5</purl>
+    </component>
+    <component type="library">
+      <name>regenerator-transform</name>
+      <version>0.14.4</version>
+      <purl>pkg:npm/regenerator-transform@0.14.4</purl>
+    </component>
+    <component type="library">
+      <name>regex-not</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/regex-not@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>regexpp</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/regexpp@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>regexpu-core</name>
+      <version>4.7.0</version>
+      <purl>pkg:npm/regexpu-core@4.7.0</purl>
+    </component>
+    <component type="library">
+      <name>regjsgen</name>
+      <version>0.5.1</version>
+      <purl>pkg:npm/regjsgen@0.5.1</purl>
+    </component>
+    <component type="library">
+      <name>regjsparser</name>
+      <version>0.6.4</version>
+      <purl>pkg:npm/regjsparser@0.6.4</purl>
+    </component>
+    <component type="library">
+      <name>remove-trailing-separator</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/remove-trailing-separator@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>repeat-element</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/repeat-element@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>repeat-string</name>
+      <version>1.6.1</version>
+      <purl>pkg:npm/repeat-string@1.6.1</purl>
+    </component>
+    <component type="library">
+      <name>requireindex</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/requireindex@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>resolve</name>
+      <version>1.10.0</version>
+      <purl>pkg:npm/resolve@1.10.0</purl>
+    </component>
+    <component type="library">
+      <name>resolve-from</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/resolve-from@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>resolve-pathname</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/resolve-pathname@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>resolve-url</name>
+      <version>0.2.1</version>
+      <purl>pkg:npm/resolve-url@0.2.1</purl>
+    </component>
+    <component type="library">
+      <name>responselike</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/responselike@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>restore-cursor</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/restore-cursor@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>ret</name>
+      <version>0.1.15</version>
+      <purl>pkg:npm/ret@0.1.15</purl>
+    </component>
+    <component type="library">
+      <name>rgb-regex</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/rgb-regex@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>rgba-regex</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/rgba-regex@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>rimraf</name>
+      <version>2.6.2</version>
+      <purl>pkg:npm/rimraf@2.6.2</purl>
+    </component>
+    <component type="library">
+      <name>rimraf</name>
+      <version>2.6.3</version>
+      <purl>pkg:npm/rimraf@2.6.3</purl>
+    </component>
+    <component type="library">
+      <name>rollup</name>
+      <version>2.33.2</version>
+      <purl>pkg:npm/rollup@2.33.2</purl>
+    </component>
+    <component type="library">
+      <name>rollup-plugin-babel</name>
+      <version>4.4.0</version>
+      <purl>pkg:npm/rollup-plugin-babel@4.4.0</purl>
+    </component>
+    <component type="library">
+      <name>rollup-plugin-postcss</name>
+      <version>2.5.0</version>
+      <purl>pkg:npm/rollup-plugin-postcss@2.5.0</purl>
+    </component>
+    <component type="library">
+      <name>rollup-plugin-terser</name>
+      <version>5.3.1</version>
+      <purl>pkg:npm/rollup-plugin-terser@5.3.1</purl>
+    </component>
+    <component type="library">
+      <name>rollup-pluginutils</name>
+      <version>2.8.2</version>
+      <purl>pkg:npm/rollup-pluginutils@2.8.2</purl>
+    </component>
+    <component type="library">
+      <name>rouge</name>
+      <version>1.11.1</version>
+      <purl>pkg:gem/rouge@1.11.1</purl>
+    </component>
+    <component type="library">
+      <name>run-async</name>
+      <version>2.3.0</version>
+      <purl>pkg:npm/run-async@2.3.0</purl>
+    </component>
+    <component type="library">
+      <name>rxjs</name>
+      <version>6.4.0</version>
+      <purl>pkg:npm/rxjs@6.4.0</purl>
+    </component>
+    <component type="library">
+      <name>safe-buffer</name>
+      <version>5.1.2</version>
+      <purl>pkg:npm/safe-buffer@5.1.2</purl>
+    </component>
+    <component type="library">
+      <name>safe-identifier</name>
+      <version>0.3.1</version>
+      <purl>pkg:npm/safe-identifier@0.3.1</purl>
+    </component>
+    <component type="library">
+      <name>safe-regex</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/safe-regex@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>safe_yaml</name>
+      <version>1.0.4</version>
+      <purl>pkg:gem/safe_yaml@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>safename</name>
+      <version>0.0.4</version>
+      <purl>pkg:npm/safename@0.0.4</purl>
+    </component>
+    <component type="library">
+      <name>safer-buffer</name>
+      <version>2.1.2</version>
+      <purl>pkg:npm/safer-buffer@2.1.2</purl>
+    </component>
+    <component type="library">
+      <name>sass</name>
+      <version>3.4.22</version>
+      <purl>pkg:gem/sass@3.4.22</purl>
+    </component>
+    <component type="library">
+      <name>sax</name>
+      <version>1.2.4</version>
+      <purl>pkg:npm/sax@1.2.4</purl>
+    </component>
+    <component type="library">
+      <name>sax</name>
+      <version>1.2.4</version>
+      <purl>pkg:npm/sax@1.2.4</purl>
+    </component>
+    <component type="library">
+      <name>select2</name>
+      <version>3.5.1</version>
+      <purl>pkg:npm/select2@3.5.1</purl>
+    </component>
+    <component type="library">
+      <name>semver</name>
+      <version>5.5.0</version>
+      <purl>pkg:npm/semver@5.5.0</purl>
+    </component>
+    <component type="library">
+      <name>serialize-javascript</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/serialize-javascript@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>set-value</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/set-value@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>shebang-command</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/shebang-command@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>shebang-regex</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/shebang-regex@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>shelljs</name>
+      <version>0.8.4</version>
+      <purl>pkg:npm/shelljs@0.8.4</purl>
+    </component>
+    <component type="library">
+      <name>shx</name>
+      <version>0.3.2</version>
+      <purl>pkg:npm/shx@0.3.2</purl>
+    </component>
+    <component type="library">
+      <name>signal-exit</name>
+      <version>3.0.2</version>
+      <purl>pkg:npm/signal-exit@3.0.2</purl>
+    </component>
+    <component type="library">
+      <name>simple-swizzle</name>
+      <version>0.2.2</version>
+      <purl>pkg:npm/simple-swizzle@0.2.2</purl>
+    </component>
+    <component type="library">
+      <name>slash</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/slash@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>slice-ansi</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/slice-ansi@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>snapdragon</name>
+      <version>0.8.2</version>
+      <purl>pkg:npm/snapdragon@0.8.2</purl>
+    </component>
+    <component type="library">
+      <name>snapdragon-node</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/snapdragon-node@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>snapdragon-util</name>
+      <version>3.0.1</version>
+      <purl>pkg:npm/snapdragon-util@3.0.1</purl>
+    </component>
+    <component type="library">
+      <name>snowpack</name>
+      <version>1.7.1</version>
+      <purl>pkg:npm/snowpack@1.7.1</purl>
+    </component>
+    <component type="library">
+      <name>source-map</name>
+      <version>0.5.7</version>
+      <purl>pkg:npm/source-map@0.5.7</purl>
+    </component>
+    <component type="library">
+      <name>source-map-resolve</name>
+      <version>0.5.3</version>
+      <purl>pkg:npm/source-map-resolve@0.5.3</purl>
+    </component>
+    <component type="library">
+      <name>source-map-support</name>
+      <version>0.5.19</version>
+      <purl>pkg:npm/source-map-support@0.5.19</purl>
+    </component>
+    <component type="library">
+      <name>source-map-url</name>
+      <version>0.4.0</version>
+      <purl>pkg:npm/source-map-url@0.4.0</purl>
+    </component>
+    <component type="library">
+      <name>sourcemap-codec</name>
+      <version>1.4.8</version>
+      <purl>pkg:npm/sourcemap-codec@1.4.8</purl>
+    </component>
+    <component type="library">
+      <name>spdx-correct</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/spdx-correct@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>spdx-exceptions</name>
+      <version>2.2.0</version>
+      <purl>pkg:npm/spdx-exceptions@2.2.0</purl>
+    </component>
+    <component type="library">
+      <name>spdx-expression-parse</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/spdx-expression-parse@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>spdx-license-ids</name>
+      <version>3.0.3</version>
+      <purl>pkg:npm/spdx-license-ids@3.0.3</purl>
+    </component>
+    <component type="library">
+      <name>split-string</name>
+      <version>3.1.0</version>
+      <purl>pkg:npm/split-string@3.1.0</purl>
+    </component>
+    <component type="library">
+      <name>sprintf-js</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/sprintf-js@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>ssri</name>
+      <version>8.0.1</version>
+      <purl>pkg:npm/ssri@8.0.1</purl>
+    </component>
+    <component type="library">
+      <name>stable</name>
+      <version>0.1.8</version>
+      <purl>pkg:npm/stable@0.1.8</purl>
+    </component>
+    <component type="library">
+      <name>static-extend</name>
+      <version>0.1.2</version>
+      <purl>pkg:npm/static-extend@0.1.2</purl>
+    </component>
+    <component type="library">
+      <name>string-hash</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/string-hash@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>string-width</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/string-width@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>string.prototype.trimleft</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/string.prototype.trimleft@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>string.prototype.trimright</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/string.prototype.trimright@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>string_decoder</name>
+      <version>0.10.31</version>
+      <purl>pkg:npm/string_decoder@0.10.31</purl>
+    </component>
+    <component type="library">
+      <name>strip-ansi</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/strip-ansi@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>strip-bom</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/strip-bom@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>strip-json-comments</name>
+      <version>2.0.1</version>
+      <purl>pkg:npm/strip-json-comments@2.0.1</purl>
+    </component>
+    <component type="library">
+      <name>style-inject</name>
+      <version>0.3.0</version>
+      <purl>pkg:npm/style-inject@0.3.0</purl>
+    </component>
+    <component type="library">
+      <name>stylehacks</name>
+      <version>4.0.3</version>
+      <purl>pkg:npm/stylehacks@4.0.3</purl>
+    </component>
+    <component type="library">
+      <name>stylis</name>
+      <version>3.5.4</version>
+      <purl>pkg:npm/stylis@3.5.4</purl>
+    </component>
+    <component type="library">
+      <name>stylis-rule-sheet</name>
+      <version>0.0.10</version>
+      <purl>pkg:npm/stylis-rule-sheet@0.0.10</purl>
+    </component>
+    <component type="library">
+      <name>supports-color</name>
+      <version>5.5.0</version>
+      <purl>pkg:npm/supports-color@5.5.0</purl>
+    </component>
+    <component type="library">
+      <name>svgo</name>
+      <version>1.3.2</version>
+      <purl>pkg:npm/svgo@1.3.2</purl>
+    </component>
+    <component type="library">
+      <name>tabbable</name>
+      <version>3.1.2</version>
+      <purl>pkg:npm/tabbable@3.1.2</purl>
+    </component>
+    <component type="library">
+      <name>table</name>
+      <version>5.2.3</version>
+      <purl>pkg:npm/table@5.2.3</purl>
+    </component>
+    <component type="library">
+      <name>tapable</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/tapable@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>tar</name>
+      <version>6.0.5</version>
+      <purl>pkg:npm/tar@6.0.5</purl>
+    </component>
+    <component type="library">
+      <name>terser</name>
+      <version>4.8.0</version>
+      <purl>pkg:npm/terser@4.8.0</purl>
+    </component>
+    <component type="library">
+      <name>text-security</name>
+      <version>2.0.0-alpha.2</version>
+      <purl>pkg:npm/text-security@2.0.0-alpha.2</purl>
+    </component>
+    <component type="library">
+      <name>text-table</name>
+      <version>0.2.0</version>
+      <purl>pkg:npm/text-table@0.2.0</purl>
+    </component>
+    <component type="library">
+      <name>through</name>
+      <version>2.3.8</version>
+      <purl>pkg:npm/through@2.3.8</purl>
+    </component>
+    <component type="library">
+      <name>through2</name>
+      <version>0.4.2</version>
+      <purl>pkg:npm/through2@0.4.2</purl>
+    </component>
+    <component type="library">
+      <name>timsort</name>
+      <version>0.3.0</version>
+      <purl>pkg:npm/timsort@0.3.0</purl>
+    </component>
+    <component type="library">
+      <name>tippy.js</name>
+      <version>5.1.2</version>
+      <purl>pkg:npm/tippy.js@5.1.2</purl>
+    </component>
+    <component type="library">
+      <name>tmp</name>
+      <version>0.0.33</version>
+      <purl>pkg:npm/tmp@0.0.33</purl>
+    </component>
+    <component type="library">
+      <name>to-fast-properties</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/to-fast-properties@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>to-object-path</name>
+      <version>0.3.0</version>
+      <purl>pkg:npm/to-object-path@0.3.0</purl>
+    </component>
+    <component type="library">
+      <name>to-readable-stream</name>
+      <version>2.1.0</version>
+      <purl>pkg:npm/to-readable-stream@2.1.0</purl>
+    </component>
+    <component type="library">
+      <name>to-regex</name>
+      <version>3.0.2</version>
+      <purl>pkg:npm/to-regex@3.0.2</purl>
+    </component>
+    <component type="library">
+      <name>to-regex-range</name>
+      <version>2.1.1</version>
+      <purl>pkg:npm/to-regex-range@2.1.1</purl>
+    </component>
+    <component type="library">
+      <name>touch</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/touch@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>trim-right</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/trim-right@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>tslib</name>
+      <version>1.9.3</version>
+      <purl>pkg:npm/tslib@1.9.3</purl>
+    </component>
+    <component type="library">
+      <name>tsutils</name>
+      <version>3.9.1</version>
+      <purl>pkg:npm/tsutils@3.9.1</purl>
+    </component>
+    <component type="library">
+      <name>type-check</name>
+      <version>0.3.2</version>
+      <purl>pkg:npm/type-check@0.3.2</purl>
+    </component>
+    <component type="library">
+      <name>type-fest</name>
+      <version>0.10.0</version>
+      <purl>pkg:npm/type-fest@0.10.0</purl>
+    </component>
+    <component type="library">
+      <name>typescript</name>
+      <version>3.8.3</version>
+      <purl>pkg:npm/typescript@3.8.3</purl>
+    </component>
+    <component type="library">
+      <name>unicode-canonical-property-names-ecmascript</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/unicode-canonical-property-names-ecmascript@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>unicode-match-property-ecmascript</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/unicode-match-property-ecmascript@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>unicode-match-property-value-ecmascript</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/unicode-match-property-value-ecmascript@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>unicode-property-aliases-ecmascript</name>
+      <version>1.1.0</version>
+      <purl>pkg:npm/unicode-property-aliases-ecmascript@1.1.0</purl>
+    </component>
+    <component type="library">
+      <name>union-value</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/union-value@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>uniq</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/uniq@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>uniqs</name>
+      <version>2.0.0</version>
+      <purl>pkg:npm/uniqs@2.0.0</purl>
+    </component>
+    <component type="library">
+      <name>unique-filename</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/unique-filename@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>unique-slug</name>
+      <version>2.0.2</version>
+      <purl>pkg:npm/unique-slug@2.0.2</purl>
+    </component>
+    <component type="library">
+      <name>unquote</name>
+      <version>1.1.1</version>
+      <purl>pkg:npm/unquote@1.1.1</purl>
+    </component>
+    <component type="library">
+      <name>unset-value</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/unset-value@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>upath</name>
+      <version>1.2.0</version>
+      <purl>pkg:npm/upath@1.2.0</purl>
+    </component>
+    <component type="library">
+      <name>upper-case</name>
+      <version>1.1.3</version>
+      <purl>pkg:npm/upper-case@1.1.3</purl>
+    </component>
+    <component type="library">
+      <name>uri-js</name>
+      <version>4.2.2</version>
+      <purl>pkg:npm/uri-js@4.2.2</purl>
+    </component>
+    <component type="library">
+      <name>urix</name>
+      <version>0.1.0</version>
+      <purl>pkg:npm/urix@0.1.0</purl>
+    </component>
+    <component type="library">
+      <name>use</name>
+      <version>3.1.1</version>
+      <purl>pkg:npm/use@3.1.1</purl>
+    </component>
+    <component type="library">
+      <name>util-deprecate</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/util-deprecate@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>util.promisify</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/util.promisify@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>validate-npm-package-license</name>
+      <version>3.0.4</version>
+      <purl>pkg:npm/validate-npm-package-license@3.0.4</purl>
+    </component>
+    <component type="library">
+      <name>validate-npm-package-name</name>
+      <version>3.0.0</version>
+      <purl>pkg:npm/validate-npm-package-name@3.0.0</purl>
+    </component>
+    <component type="library">
+      <name>value-equal</name>
+      <version>0.4.0</version>
+      <purl>pkg:npm/value-equal@0.4.0</purl>
+    </component>
+    <component type="library">
+      <name>vendors</name>
+      <version>1.0.4</version>
+      <purl>pkg:npm/vendors@1.0.4</purl>
+    </component>
+    <component type="library">
+      <name>warning</name>
+      <version>4.0.2</version>
+      <purl>pkg:npm/warning@4.0.2</purl>
+    </component>
+    <component type="library">
+      <name>wcwidth</name>
+      <version>1.0.1</version>
+      <purl>pkg:npm/wcwidth@1.0.1</purl>
+    </component>
+    <component type="library">
+      <name>which</name>
+      <version>1.3.1</version>
+      <purl>pkg:npm/which@1.3.1</purl>
+    </component>
+    <component type="library">
+      <name>wordwrap</name>
+      <version>1.0.0</version>
+      <purl>pkg:npm/wordwrap@1.0.0</purl>
+    </component>
+    <component type="library">
+      <name>wrappy</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/wrappy@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>wrappy</name>
+      <version>1.0.2</version>
+      <purl>pkg:npm/wrappy@1.0.2</purl>
+    </component>
+    <component type="library">
+      <name>write</name>
+      <version>1.0.3</version>
+      <purl>pkg:npm/write@1.0.3</purl>
+    </component>
+    <component type="library">
+      <name>xml2js</name>
+      <version>0.4.19</version>
+      <purl>pkg:npm/xml2js@0.4.19</purl>
+    </component>
+    <component type="library">
+      <name>xmlbuilder</name>
+      <version>9.0.7</version>
+      <purl>pkg:npm/xmlbuilder@9.0.7</purl>
+    </component>
+    <component type="library">
+      <name>xmldom</name>
+      <version>0.1.27</version>
+      <purl>pkg:npm/xmldom@0.1.27</purl>
+    </component>
+    <component type="library">
+      <name>xtend</name>
+      <version>2.1.2</version>
+      <purl>pkg:npm/xtend@2.1.2</purl>
+    </component>
+    <component type="library">
+      <name>yallist</name>
+      <version>4.0.0</version>
+      <purl>pkg:npm/yallist@4.0.0</purl>
+    </component>
+    <component type="library">
+      <name>yaml</name>
+      <version>1.8.2</version>
+      <purl>pkg:npm/yaml@1.8.2</purl>
+    </component>
+    <component type="library">
+      <name>yargs-parser</name>
+      <version>16.1.0</version>
+      <purl>pkg:npm/yargs-parser@16.1.0</purl>
+    </component>
+  </components>
+</bom>
